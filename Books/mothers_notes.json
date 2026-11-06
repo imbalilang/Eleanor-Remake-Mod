@@ -1,0 +1,194 @@
+{
+  "id": "mothers_notes",
+  "title": "Mother's Research Notes",
+  "background": "notebook_manual",
+  "width": 628,
+  "height": 804,
+  "posX": -450,
+  "posY": 0,
+  "chrome": [
+    {
+      "type": "button",
+      "id": "close",
+      "action": "close",
+      "x": 297,
+      "y": 2.5,
+      "w": 14,
+      "h": 15
+    },
+    {
+      "type": "button",
+      "id": "flip_left",
+      "action": "flip_left",
+      "x": 124,
+      "y": 380,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "type": "button",
+      "id": "flip_right",
+      "action": "flip_right",
+      "x": 176,
+      "y": 380.5,
+      "w": 14,
+      "h": 15
+    },
+    {
+      "type": "text",
+      "id": "page_indicator",
+      "action": "page_indicator",
+      "style": "page_number",
+      "align": "center",
+      "valign": "middle",
+      "x": 140.5,
+      "y": 374,
+      "w": 33,
+      "h": 25
+    }
+  ],
+  "pages": [
+    {
+      "name": "Nutrifruit",
+      "elements": [
+        {
+          "type": "text",
+          "x": 28,
+          "y": 49,
+          "w": 262,
+          "h": 24,
+          "text": "Nutrifruit: Suppression Log",
+          "translations": {
+            "zh": "营养果：压制记录"
+          },
+          "style": "title",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 36,
+          "y": 92,
+          "w": 246,
+          "h": 240,
+          "text": "Pastel's seed division found that the Nutrifruit strain could feed three times as many people per harvest. Instead of releasing it, the board ordered the strain suppressed. A controlled food supply is a controlled population.",
+          "translations": {
+            "zh": "帕斯特种子部门发现，营养果每季产量足以养活三倍的人口。董事会没有公开，而是下令封存该品系。控制食物，就是控制人口。"
+          },
+          "style": "body",
+          "wrap": true,
+          "autoHeight": true
+        },
+        {
+          "type": "text",
+          "x": 36,
+          "y": 340,
+          "w": 246,
+          "h": 25,
+          "text": "Filed under: agricultural security. Access: director level.",
+          "translations": {
+            "zh": "归档类别：农业安全。访问权限：董事级。"
+          },
+          "style": "caption",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "name": "The Frame-Up",
+      "elements": [
+        {
+          "type": "text",
+          "x": 28,
+          "y": 49,
+          "w": 262,
+          "h": 24,
+          "text": "The Frame-Up",
+          "translations": {
+            "zh": "伪造的罪名"
+          },
+          "style": "title",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 36,
+          "y": 92,
+          "w": 246,
+          "h": 240,
+          "text": "The embezzlement records were fabricated from three shell accounts. The signature on the transfer order belongs to a director who has never set foot in the hydroponics farm. My mother's name was added last.",
+          "translations": {
+            "zh": "贪污记录由三个空壳账户拼接而成。转账令上的签名属于一位从未踏进水培农场的董事。我母亲的名字，是最后才被加进去的。"
+          },
+          "style": "body",
+          "wrap": true,
+          "autoHeight": true
+        },
+        {
+          "type": "text",
+          "x": 36,
+          "y": 340,
+          "w": 246,
+          "h": 25,
+          "text": "The drive contains the raw ledger. Pastel needs it back before the next supply review.",
+          "translations": {
+            "zh": "U盘里是原始账本。帕斯特必须在下次配给审查前把它拿回去。"
+          },
+          "style": "body",
+          "wrap": true,
+          "autoHeight": true
+        }
+      ]
+    },
+    {
+      "name": "A Note",
+      "elements": [
+        {
+          "type": "text",
+          "x": 28,
+          "y": 49,
+          "w": 262,
+          "h": 24,
+          "text": "A Note from Her Mother",
+          "translations": {
+            "zh": "母亲留下的便条"
+          },
+          "style": "title",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 36,
+          "y": 92,
+          "w": 246,
+          "h": 200,
+          "text": "Eleanor, if you are reading this, I am sorry I taught you to be proud instead of careful. Find someone who knows how to keep a secret, and hold on to them. The station is colder than it looks. — Mom",
+          "translations": {
+            "zh": "埃莉诺，如果你读到这些，我很抱歉教会你骄傲，却没教会你小心。去找一个懂得保守秘密的人，然后抓紧他。这个空间站，比你看到的更冷。——妈妈"
+          },
+          "style": "body",
+          "wrap": true,
+          "autoHeight": true
+        },
+        {
+          "type": "text",
+          "x": 36,
+          "y": 320,
+          "w": 246,
+          "h": 40,
+          "text": "A copy of the drive's notes. Keep it somewhere no one else can reach.",
+          "translations": {
+            "zh": "U盘资料的副本。放在别人够不到的地方。"
+          },
+          "style": "caption",
+          "wrap": true
+        }
+      ]
+    }
+  ],
+  "item": {
+    "id": "eleanor_romance.mothers_notes",
+    "name": "母亲的研究笔记 / Mother's Research Notes",
+    "description": "A copy of the evidence hidden in the drive. It smells faintly of hydroponic nutrient solution. 一份从U盘里复制的证据，闻起来还有淡淡的水培营养液味。",
+    "value": 0
+  }
+}

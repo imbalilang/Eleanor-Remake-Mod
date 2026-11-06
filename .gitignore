@@ -1,0 +1,17 @@
+# Build outputs
+bin/
+obj/
+dist/
+*.user
+*.suo
+
+# Deployed build artifacts
+EleanorRomance.dll
+EleanorRomance.deps.json
+
+# Game-derived reference images (not authored for this mod)
+Art/v0.6/references_local/
+
+# OS
+Thumbs.db
+.DS_Store
