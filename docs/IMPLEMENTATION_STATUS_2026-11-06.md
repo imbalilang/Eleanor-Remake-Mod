@@ -53,19 +53,43 @@ mod has passed a full playthrough.
 | Route C | weapon purchase is a real weapon sale; food purchase is a real food sale |
 | Route D | betrayal/exit choices close romance and skip the normal ending branches |
 
+Vanilla rewards restored or kept:
+
+- `self_refilling_neuroactive_perfume` (value 1000, 5 uses, auto-refill 3)
+  is granted at the end of routes A/B and as Eleanor's parting gift on route C.
+  Friends also receive it; route D does not.
+- `PlantList.FreeNutrifruit()` runs on route B and route C; route A returns the
+  research and therefore does not free the seeds.
+- The warning visit now offers the vanilla two-choice gift again: portable
+  water purifier (durability 75) or pheromone perfume (3 uses), plus decline.
+- Restored: the return-route 300 credits appear as a three-way choice after the
+  reunion (accept +300 / pass to the mother and daughter for +1 affection /
+  refuse for +1 affection). The hardship food sale again uses
+  `tradeReputationMultiplier = 2.0`.
+- Endgame reward D: a romance-confirmed route A/B completion sets
+  `ScavAssist`; a Harmony postfix on `ScavHelper.GetMaxScavAttempts` adds +2
+  attempts, but only when the vanilla result is above zero (so maimed/zero
+  states are respected). Route C/D and friends do not receive it.
+
 ## 4. Portrait compatibility
 
 `src/PortraitCompat.cs` detects the portrait replacement mod
 `少女当铺 / Maiden's Pawnshop` by manifest ID `cute_portraits` or Workshop ID
 `3829696854`.
 
-- When enabled, it reads that mod's `cp_portrait_<key>` sprites and registers
-  gender-tagged aliases in `SpriteDict`, then assigns them to our named clients.
-  Eleanor's raw keys contain no `male`/`female` token, so the bridge uses a
-  `_female` alias to keep the game's gender helper correct.
-- When absent or disabled, `Resolve()` returns the original vanilla keys.
-- Both Eleanor and the named NPCs (Lydia, mother, fake uncle, thug, officer,
-  archivist) go through this resolver.
+- Eleanor and the generic NPCs use the beauty mod's `cp_portrait_<key>` sprites
+  when it is enabled, and vanilla keys when it is absent.
+- **Lydia and Mother are the exception (plan B):** they always use our own
+  dedicated portraits, never CutePortraits' generic upper-district women.
+  - No CutePortraits: `er_portrait_lydia_female_vanilla` /
+    `er_portrait_mother_female_vanilla`
+  - CutePortraits enabled: `er_portrait_lydia_female_beauty` /
+    `er_portrait_mother_female_beauty`
+  - Missing file fallback: generic `femaleUpper3` / `femaleUpper6` only.
+- The four Lydia/Mother portrait files have been replaced with final, distinct
+  288×212 RGBA artworks. The locket and bracelet icons are also final 64×64
+  16-colour assets. Delivery and checks: `Art/v0.6/ART_DELIVERY.md` and
+  `Art/v0.6/asset_validation.json`.
 - This is a soft dependency: no CutePortraits types are referenced directly at
   compile time; detection uses `ModLoader.Mods` and `LoadedMod.Sprites`.
 
@@ -81,6 +105,12 @@ bash build.sh
 `build.sh` now builds to `bin/Release`, keeps a `dist/rollback_*` copy, removes
 stale deployed textures, copies the DLL/manifest/CSV/textures/README, and fails
 if the DLL or CSV is empty.
+
+The F9 debug toolkit (`DebugTools.cs`) adds chapter-jump presets for every
+critical node, a state printer, a resource preset (+10000 credits / max
+reputation), old-save prompt testing, epilogue testing, and a next-chapter
+button. It requires `dev.txt` next to the game executable and is enabled after
+a restart. Full walkthrough: `docs/TESTING_CONSOLE.md`.
 
 ## 6. Verified in this pass
 
@@ -106,14 +136,17 @@ if the DLL or CSV is empty.
 5. **KnewTrapUnwarned** is inferred from accepting/inspecting the crate. There
    is no separate "I read the stolen tag" event; the explicit inspect choice is
    a flavour distinction, not a fully separate evidence state.
-6. **Mother/Lydia portraits** use fixed vanilla sprite keys as placeholders.
-   Replace with the finished art when available.
-7. **Bracelet icon** is a generated placeholder, not a style-approved asset.
-8. **Balance values** (30 reputation, 120-1200 rescue costs, 300-600 protection
+6. **Portrait and item art are delivered**, but the in-game counter-scale,
+   portrait position, and the two CutePortraits on/off states still need a
+   visual pass.
+7. **Balance values** (30 reputation, 120-1200 rescue costs, 300-600 protection
    costs) are provisional and need a normal run to check accessibility.
-9. **Route C/D and epilogue** need save/load and interruption tests.
-10. **Scenario "Old Echo"** is registered but experimental; it starts chapter 1
-    on day 5 (no affection/reputation skip) and has not been played.
+8. **Route C/D and epilogue** need save/load and interruption tests.
+9. **Early Start scenario** is available from the new-game screen and starts
+    chapter 1 on day 12 (11 days earlier than normal mode), keeping the same
+    relative chapter gaps and the same 19-day investigator-fund window. It has
+    not been played; early-game stock/cash and reputation availability still
+    need a balance pass.
 
 ## 8. Recommended next tests
 

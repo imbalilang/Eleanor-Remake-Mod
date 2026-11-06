@@ -150,7 +150,9 @@ namespace EleanorRomance
 
         public static int StoryOffset()
         {
-            return RomanceState.ScenarioBoost ? 18 : 0;
+            // Early Start begins on day 12 instead of day 23: shift the whole
+            // chapter schedule by 11 days while keeping the same relative gaps.
+            return RomanceState.ScenarioBoost ? 11 : 0;
         }
 
         public static int StoryDay(int day)
@@ -171,10 +173,17 @@ namespace EleanorRomance
             RomanceState.EpilogueDone = true;
             RomanceState.LastEpilogueDay = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;
 
-            if ((RomanceState.Route == 1 || RomanceState.Route == 2)
+            bool partnerEnding = (RomanceState.Route == 1 || RomanceState.Route == 2)
                 && RomanceState.MotherState == 1
-                && RomanceState.RomanceConfirmed
-                && !RomanceState.TrueUnlocked)
+                && RomanceState.RomanceConfirmed;
+
+            if (partnerEnding)
+            {
+                // Endgame reward D: Eleanor helps at the dumping ground.
+                RomanceState.ScavAssist = true;
+            }
+
+            if (partnerEnding && !RomanceState.TrueUnlocked)
             {
                 RomanceState.TrueUnlocked = true;
                 MetaProgress.UnlockTrueEnding();

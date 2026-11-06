@@ -460,10 +460,22 @@ namespace EleanorRomance
             {
                 // She offers a small existing item as thanks.  Each branch ends
                 // with her leaving line and only then commits the chapter.
-                Dialogue takeGift = StoryEngine.Build(StoryV06Content.B_C04_B009);
-                StoryEngine.Tail(takeGift).SetEndAction(() =>
+                Dialogue purifierGift = StoryEngine.Build(StoryV06Content.B_C04_B009);
+                StoryEngine.Tail(purifierGift).SetEndAction(() =>
                 {
-                    StoryEngine.GiveToPlayer("portable_water_purifier");
+                    StoryEngine.GiveToPlayer("portable_water_purifier", item =>
+                    {
+                        int max = DurabilityHelper.GetMaxDurability(item);
+                        DurabilityHelper.SetDurability(item, 75, max, max);
+                    });
+                    Advance(5, 6);
+                    StoryEngine.Dismiss();
+                });
+                Dialogue perfumeGift = StoryEngine.Build(StoryV06Content.B_C04_B009);
+                StoryEngine.Tail(perfumeGift).SetEndAction(() =>
+                {
+                    StoryEngine.GiveToPlayer("pheromone_perfume",
+                        item => UseCountHelper.SetCurrentUseCount(item, 3));
                     Advance(5, 6);
                     StoryEngine.Dismiss();
                 });
@@ -474,8 +486,10 @@ namespace EleanorRomance
                     StoryEngine.Dismiss();
                 });
                 StoryEngine.AddChoices(tell, Prompt("er_prompt_gift"),
-                    new StoryEngine.Choice(L.Get("er_choice_take_gift"), L.Get("er_choice_take_gift_desc"),
-                        takeGift, null),
+                    new StoryEngine.Choice(L.Get("er_choice_gift_purifier"), L.Get("er_choice_gift_purifier_desc"),
+                        purifierGift, null),
+                    new StoryEngine.Choice(L.Get("er_choice_gift_perfume"), L.Get("er_choice_gift_perfume_desc"),
+                        perfumeGift, null),
                     new StoryEngine.Choice(L.Get("er_choice_no_gift"), L.Get("er_choice_no_gift_desc"),
                         noGift, null));
             }
@@ -594,6 +608,7 @@ namespace EleanorRomance
             client.clientBuyingTagList.Add("BREVAGE");
             client.SetBudget(40);
             client.isBargainAvailable = false;
+            client.tradeReputationMultiplier = 2.0; // vanilla Eleanor4 parity
 
             bool foodGiven = false;
             client.onItemBought = (item, paid) =>
@@ -757,7 +772,7 @@ namespace EleanorRomance
 
         private static StoreClient CreateLydiaChapter()
         {
-            StoreClient client = NewNpcClient("lydia1", L.Get("er_name_lydia"), ModConstants.LydiaSprite, FactionKind.Upper);
+            StoreClient client = NewNpcClient("lydia1", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
             client.clientIntent = StoreClient.ClientIntent.SELL;
             client.SetWholesale(45);
             client.isBargainAvailable = false;
@@ -1171,30 +1186,59 @@ namespace EleanorRomance
                 StoryEngine.Append(root, StoryV06Content.B_C16_B003);
                 StoryEngine.Append(root, StoryV06Content.B_C16_B004);
                 StoryEngine.Append(root, StoryV06Content.B_C16_B005);
+                StoryEngine.Tail(root).SetEndAction(() =>
+                {
+                    RomanceState.MotherState = 1;
+                    RomanceState.DriveState = 4;
+                    StoryEngine.TryFreeNutrifruit();
+                    Advance(17, 18);
+                    StoryEngine.Dismiss();
+                });
             }
             else
             {
                 root = StoryEngine.Build(StoryV06Content.B_C16_B001);
                 StoryEngine.Append(root, StoryV06Content.B_C16_B003);
-            }
 
-            StoryEngine.Tail(root).SetEndAction(() =>
-            {
-                if (protectionRoute)
-                {
-                    RomanceState.MotherState = 1;
-                    RomanceState.DriveState = 4;
-                    StoryEngine.TryFreeNutrifruit();
-                }
-                else
+                Action completeReturn = () =>
                 {
                     RomanceState.Route = 1;
                     RomanceState.MotherState = 1;
                     RomanceState.DriveState = 3;
-                }
-                Advance(17, 18);
-                StoryEngine.Dismiss();
-            });
+                    Advance(17, 18);
+                    StoryEngine.Dismiss();
+                };
+
+                Dialogue acceptCompensation = StoryEngine.Text(
+                    L.Get("er_name_narrator"), L.Get("er_line_comp_accept"));
+                StoryEngine.Tail(acceptCompensation).SetEndAction(() =>
+                {
+                    StoryEngine.AddCredit(300);
+                    completeReturn();
+                });
+
+                Dialogue familyCompensation = StoryEngine.Text(L.Eleanor, L.Get("er_line_comp_family"));
+                StoryEngine.Tail(familyCompensation).SetEndAction(() =>
+                {
+                    RomanceState.AddAffection(1);
+                    completeReturn();
+                });
+
+                Dialogue refuseCompensation = StoryEngine.Text(L.Eleanor, L.Get("er_line_comp_refuse"));
+                StoryEngine.Tail(refuseCompensation).SetEndAction(() =>
+                {
+                    RomanceState.AddAffection(1);
+                    completeReturn();
+                });
+
+                StoryEngine.AddChoices(root, Prompt("er_prompt_return_compensation"),
+                    new StoryEngine.Choice(L.Get("er_choice_comp_accept"), L.Get("er_choice_comp_accept_desc"),
+                        acceptCompensation, null),
+                    new StoryEngine.Choice(L.Get("er_choice_comp_family"), L.Get("er_choice_comp_family_desc"),
+                        familyCompensation, null),
+                    new StoryEngine.Choice(L.Get("er_choice_comp_refuse"), L.Get("er_choice_comp_refuse_desc"),
+                        refuseCompensation, null));
+            }
 
             client.mainDialogue = root;
             client.CompleteClientCreation();
@@ -1207,7 +1251,7 @@ namespace EleanorRomance
 
         private static StoreClient CreateMotherChapter()
         {
-            StoreClient client = NewNpcClient("mother", L.Get("er_name_mother"), ModConstants.MotherSprite, FactionKind.Upper);
+            StoreClient client = NewNpcClient("mother", L.Get("er_name_mother"), MotherSpriteKey(), FactionKind.Upper);
             client.clientIntent = StoreClient.ClientIntent.BUY;
             client.clientBuyingTagList.Add("HOUSEHOLD_GOOD");
             client.SetBudget(220);
@@ -1396,7 +1440,7 @@ namespace EleanorRomance
 
         private static StoreClient CreateLydiaSecondChapter()
         {
-            StoreClient client = NewNpcClient("lydia2", L.Get("er_name_lydia"), ModConstants.LydiaSprite, FactionKind.Upper);
+            StoreClient client = NewNpcClient("lydia2", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
             client.clientIntent = StoreClient.ClientIntent.BUY;
             client.clientBuyingTagList.Add(TypeHelper.LUXURY_ITEM);
             client.clientBuyingTagList.Add(TypeHelper.ART);
@@ -1529,7 +1573,16 @@ namespace EleanorRomance
             Dialogue root = StoryEngine.Chain(StoryV06Content.B_C23_B001, StoryV06Content.B_C23_B002);
             StoryEngine.Append(root, lover ? StoryV06Content.B_C23_B003 : StoryV06Content.B_C23_B004);
             Dialogue tail = StoryEngine.Tail(root);
-            Dialogue closing = tail.NextDialogue().SetText(L.Get("er_name_narrator"), L.Get("er_line_core_end"));
+            Dialogue gift = tail.NextDialogue().SetText(L.Eleanor, L.Get("er_line_end_perfume"));
+            gift.SetStartAction(StoryEngine.GiveSelfRefillingPerfume);
+            Dialogue beforeClosing = gift;
+            if (lover)
+            {
+                beforeClosing = gift.NextDialogue()
+                    .SetText(L.Eleanor, L.Get("er_line_scav_assist"));
+            }
+            Dialogue closing = beforeClosing.NextDialogue()
+                .SetText(L.Get("er_name_narrator"), L.Get("er_line_core_end"));
             closing.SetEndAction(() =>
             {
                 StoryDirector.CompleteCore();
@@ -1567,6 +1620,7 @@ namespace EleanorRomance
             StoryEngine.Tail(root).SetEndAction(() =>
             {
                 RomanceState.MotherState = 2;
+                StoryEngine.FreeNutrifruitForLeak();
                 Advance(102, 103);
                 StoryEngine.Dismiss();
             });
@@ -1634,7 +1688,7 @@ namespace EleanorRomance
 
         private static StoreClient CreateRouteC6()
         {
-            StoreClient client = NewNpcClient("rc6", L.Get("er_name_lydia"), ModConstants.LydiaSprite, FactionKind.Upper);
+            StoreClient client = NewNpcClient("rc6", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
             Dialogue root = StoryEngine.Build(StoryV06Content.B_RC_B010);
             StoryEngine.Tail(root).SetEndAction(() =>
             {
@@ -1674,6 +1728,10 @@ namespace EleanorRomance
             FinishWhenLeaving(client, 108, 300, () =>
             {
                 Dialogue dialogue = StoryEngine.Build(StoryV06Content.B_RC_B015);
+                Dialogue gift = StoryEngine.Tail(dialogue)
+                    .NextDialogue()
+                    .SetText(L.Get("er_name_narrator"), L.Get("er_line_leak_perfume"));
+                gift.SetStartAction(StoryEngine.GiveSelfRefillingPerfume);
                 return Head(dialogue);
             }, () => RomanceState.WorkState = 3);
             client.CompleteClientCreation();
@@ -1870,6 +1928,22 @@ namespace EleanorRomance
         // ------------------------------------------------------------------
         // Utility
         // ------------------------------------------------------------------
+
+        private static string LydiaSpriteKey()
+        {
+            return PortraitCompat.ResolveCharacter(
+                ModConstants.LydiaPortraitVanilla,
+                ModConstants.LydiaPortraitBeauty,
+                ModConstants.LydiaSprite);
+        }
+
+        private static string MotherSpriteKey()
+        {
+            return PortraitCompat.ResolveCharacter(
+                ModConstants.MotherPortraitVanilla,
+                ModConstants.MotherPortraitBeauty,
+                ModConstants.MotherSprite);
+        }
 
         private static Dialogue Head(Dialogue dialogue)
         {

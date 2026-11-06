@@ -9,10 +9,14 @@ namespace EleanorRomance
             try
             {
                 ModHelper.RemoveStartingScenarios(ModConstants.ModId);
-                if (!VersionGate.IsSupported || !MetaProgress.IsTrueEndingUnlocked())
+                if (!VersionGate.IsSupported)
                 {
                     return;
                 }
+
+                // Early Start is intentionally available from the first run.
+                // It starts Eleanor on day 12 instead of the vanilla day 23 and
+                // keeps ordinary games on the original schedule.
 
                 ModHelper.AddStartingScenario(
                     ModConstants.ModId,

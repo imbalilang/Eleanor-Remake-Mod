@@ -1,5 +1,5 @@
-# Eleanor: Upper District, Lower Heart
-# 上层区千金与下层区当铺
+# Eleanor Story Expand
+# 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展
 
 《深空当铺：可能是偷的 / Probably Stolen》Eleanor 个人剧情线重制 MOD。
 
@@ -19,6 +19,14 @@
 - 路线丁“生意做到这里”：擅自处置数据盘、收私钱、瞒着她公开或正常退出，关系结束。
 - 朋友路线：可以救人而不恋爱；不会撤销救援成果。
 
+## 开局时间
+
+- **普通模式**：第 23 天开始，保留原版 Eleanor 剧情节奏。
+- **提前开场（可选）**：新游戏选择 `Eleanor Story Expand · 提前开场（第 12 天）`。
+  - 完整 24 章剧情从第 12 天开始，日程整体前移 11 天，约第 48 天收束。
+  - 相对节奏与原版一致：调查款、声望门槛和章节间隔的可用天数不变。
+  - 适合想早点进入 Eleanor 线的玩家；平衡仍在实机验证中。
+
 ## 行为与状态
 
 - `RomanceState` 分开记录母亲状态、研究/数据盘去向、恋爱状态、工作去向与行为事实，不再用一个 true_ending 布尔值承担所有含义。
@@ -30,6 +38,22 @@
 - 恋爱必须双方明确同意；朋友路线与“慢一点”都不会扣好感或撤销救援成果。
 - 第 60 天后只有低频日常，不提供固定每周送钱/声望的提款效果。
 
+## 终局奖励
+
+- **自我补充的神经活性香水**：原版 Eleanor9 的纪念物，已恢复为终局奖励。母亲生还路线（甲/乙）在核心收束时获得；路线丙在离别时留下同一瓶香水。价值 1000、5 次使用、会自动补充，可自用或出售。
+- **营养果种子解锁**：路线乙和路线丙按原版规则解除种子限制；路线甲研究被收回，不解除。
+- 朋友路线也能收到香水；路线丁（背叛/退出）没有终局纪念物。
+- **拾荒协助**：恋爱确认的路线甲/乙在收束后获得 Eleanor 的协助，拾荒次数 **+2**；路线丙/丁与朋友路线不追加。该效果通过 `ScavHelper.GetMaxScavAttempts` 的 Harmony postfix 生效，并尊重原版致残/0 次拾荒状态。
+- 警告谢礼恢复原版二选一：便携净水器 / 信息素香水 / 婉拒。
+
+## 原版数值效果对齐
+
+- **归还路线 300 信用点**：路线甲母女确认安全后出现明确选择。
+  - 收下：+300 信用点。
+  - 转交母女当生活费：玩家不入账，+1 好感。
+  - 拒绝：玩家不入账，+1 好感。
+- **食物援助 2 倍交易声望**：困境章节恢复原版 `tradeReputationMultiplier = 2.0`。
+
 ## 安装
 
 ### 本地安装
@@ -40,7 +64,7 @@
 <游戏根目录>\Mods\EleanorRomance\
 ```
 
-进入游戏 → 改装件 / Mods → 启用 `Eleanor: Upper District, Lower Heart` → 按提示重启。
+进入游戏 → 改装件 / Mods → 启用 `Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展` → 按提示重启。
 
 ### 创意工坊
 
@@ -68,6 +92,14 @@ bash build.sh                    # 构建到 bin/Release，再部署到 Mods/Ele
 
 `build.sh` 会在覆盖安装目录前保留一份 `dist/rollback_*` 备份，并检查 DLL 与 CSV 非空。
 
+## 开发测试（F9）
+
+- 游戏根目录存在 `dev.txt` 时启用 F9 调试面板和 F8 控制台；已为本机创建该文件，重启游戏后生效。
+- F9 → Command 中有章节跳转预设：假叔叔、警告、救援、调查款、数据盘、威胁、方向、准备、团聚、表白、收束、路线丙/丁、后日谈等。
+- `测试：准备资源` 会加 10000 信用点并拉满全部声望；`测试：打印当前剧情状态` 可查看章节、路线、母亲、数据盘、恋爱和 ScavAssist。
+- 完整测试步骤、每个按钮设置的状态和验收清单见 `docs/TESTING_CONSOLE.md`。
+- 调试跳章直接改状态，不能替代正常周目的经济/日程验收；请使用独立测试存档。
+
 ## 本地化状态
 
 - 简体中文：v0.6 全部剧情/对白与 UI/系统键已生成（1,039 条）。
@@ -78,12 +110,15 @@ bash build.sh                    # 构建到 bin/Release，再部署到 Mods/Ele
 ## 美术与立绘兼容
 
 - 检测美化 MOD `少女当铺 / Maiden's Pawnshop`（Workshop ID **3829696854**，manifest ID `cute_portraits`）。
-  - 已启用：优先使用其 `cp_portrait_*` 美化立绘。Eleanor、Lydia、母亲、假叔叔、黑市打手、治安部警官、档案员都会切换到美化版本。
-  - 未安装或未启用：自动回退原版立绘，不报错、不改变剧情逻辑。
-- 实现位于 `src/PortraitCompat.cs`：从 CutePortraits 的 `LoadedMod.Sprites` 读取美化 Sprite，并在 `SpriteDict` 中注册带性别标记的别名，避免 Eleanor 被误判为中性。
-- 新增物品图标：吊坠、上层区手工镯（当前为占位图）。
-- Lydia 与母亲的基础 sprite key 为 `femaleUpper3` / `femaleUpper6`；美化版对应 `cp_portrait_femaleUpper3` / `cp_portrait_femaleUpper6`。
-- `preview.png` 仍为占位封面。
+  - Eleanor、假叔叔、黑市打手、治安部警官、档案员、合作买家：启用少女当铺时使用其 `cp_portrait_*` 美化立绘；未启用时回退原版。
+  - **Lydia 与母亲按方案 B：始终使用本 MOD 自己的专有形象，不使用少女当铺的通用上层区女性立绘。**
+    - 无少女当铺：`er_portrait_lydia_female_vanilla` / `er_portrait_mother_female_vanilla`
+    - 有少女当铺：`er_portrait_lydia_female_beauty` / `er_portrait_mother_female_beauty`
+    - 如果对应文件尚未交付，才回退到通用 `femaleUpper3` / `femaleUpper6` 作为防崩溃兜底。
+- 实现位于 `src/PortraitCompat.cs`：从 CutePortraits 的 `LoadedMod.Sprites` 读取美化 Sprite；从本 MOD 的 `LoadedMod.Sprites` 读取 Lydia/母亲双版本 Sprite，并注册到 `SpriteDict`。Eleanor 使用带性别标记的别名，避免被误判为中性。
+- 莉迪亚/母亲四张立绘已替换为正式美术；`_vanilla` 与 `_beauty` 是两套不同成图，分别用于无少女当铺/有少女当铺环境。规格与校验见 `Art/v0.6/ART_DELIVERY.md`、`asset_validation.json`。
+- 物品图标已替换为正式 16 色像素图：吊坠、上层区手工镯。
+- `preview.png` 已使用 `workshop_cover_master.png` 生成的 768×768 版本。
 
 ## 兼容与限制
 

@@ -19,6 +19,7 @@ namespace EleanorRomance
         public const string BeautyModId = "cute_portraits";
         public const ulong BeautyWorkshopId = 3829696854UL;
         public const string BeautyKeyPrefix = "cp_portrait_";
+        public const string LocalPortraitPrefix = "er_portrait_";
 
         private static LoadedMod beautyMod;
 
@@ -57,7 +58,8 @@ namespace EleanorRomance
         public static string Resolve(string vanillaKey)
         {
             if (string.IsNullOrEmpty(vanillaKey)) return vanillaKey;
-            if (vanillaKey.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)) return vanillaKey;
+            if (vanillaKey.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)
+                || vanillaKey.StartsWith(LocalPortraitPrefix, StringComparison.Ordinal)) return vanillaKey;
 
             LoadedMod mod = FindBeautyMod();
             if (mod == null) return vanillaKey;
@@ -70,12 +72,33 @@ namespace EleanorRomance
         }
 
         /// <summary>
+        /// Dual-version custom portraits for Lydia and Mother.  The beauty key
+        /// is used when CutePortraits is active; the vanilla key is used
+        /// otherwise.  If the requested local sprite has not been delivered yet,
+        /// fall back to the generic key (which may itself be beautified).
+        /// </summary>
+        public static string ResolveCharacter(string vanillaKey, string beautyKey, string fallbackKey)
+        {
+            string chosen = IsBeautyActive ? beautyKey : vanillaKey;
+            if (EnsureLocalPortrait(chosen)) return chosen;
+            return Resolve(fallbackKey);
+        }
+
+        /// <summary>
         /// Safety net for SpriteDict rebuilds and direct cp_portrait_* lookups.
         /// Called by a GetSprite prefix; does nothing outside the beauty prefix.
         /// </summary>
         public static void EnsureKey(string key)
         {
-            if (string.IsNullOrEmpty(key) || !key.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)) return;
+            if (string.IsNullOrEmpty(key)) return;
+
+            if (key.StartsWith(LocalPortraitPrefix, StringComparison.Ordinal))
+            {
+                EnsureLocalPortrait(key);
+                return;
+            }
+
+            if (!key.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)) return;
 
             LoadedMod mod = FindBeautyMod();
             if (mod == null || mod.Sprites == null) return;
@@ -86,6 +109,48 @@ namespace EleanorRomance
                 sourceKey = key.Substring(0, key.Length - "_female".Length);
             }
             EnsureSprite(mod, sourceKey, key);
+        }
+
+        private static bool EnsureLocalPortrait(string key)
+        {
+            try
+            {
+                if (SpriteDict.Instance == null || SpriteDict.Instance.spriteDictionary == null) return false;
+                if (SpriteDict.Instance.spriteDictionary.ContainsKey(key)) return true;
+
+                LoadedMod mod = FindOurMod();
+                if (mod == null || mod.Sprites == null) return false;
+
+                Sprite sprite;
+                if (!mod.Sprites.TryGetValue(key, out sprite) || sprite == null) return false;
+
+                SpriteDict.Instance.spriteDictionary[key] = sprite;
+                StoryDirector.Log("Local portrait bridged: " + key);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Local portrait bridge failed for " + key + ": " + ex);
+                return false;
+            }
+        }
+
+        private static LoadedMod FindOurMod()
+        {
+            try
+            {
+                if (ModLoader.Mods == null) return null;
+                foreach (LoadedMod mod in ModLoader.Mods)
+                {
+                    if (mod == null || !mod.IsEnabled || mod.Manifest == null) continue;
+                    if (mod.Manifest.ID == ModConstants.ModId) return mod;
+                }
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Local mod detection failed: " + ex);
+            }
+            return null;
         }
 
         /// <summary>

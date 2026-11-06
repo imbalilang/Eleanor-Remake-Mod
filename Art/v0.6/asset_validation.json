@@ -1,0 +1,155 @@
+[
+  {
+    "file": "er_portrait_lydia_female_beauty.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 63,
+    "bbox": [
+      80,
+      54,
+      207,
+      212
+    ],
+    "connected_components": [
+      13852
+    ],
+    "sha256": "7b17c4bbbf837deba353cbd363bd13f5be374dd40ee0fccd6d66d9fb53dd74e4",
+    "development_copy_identical": true
+  },
+  {
+    "file": "er_portrait_lydia_female_vanilla.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 48,
+    "bbox": [
+      78,
+      54,
+      209,
+      212
+    ],
+    "connected_components": [
+      13298
+    ],
+    "sha256": "3ea4c54e86417945065da4aed61d3d7bc905d34f2b32cb94d47843aa4807c9fc",
+    "development_copy_identical": true
+  },
+  {
+    "file": "er_portrait_mother_female_beauty.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 64,
+    "bbox": [
+      80,
+      54,
+      207,
+      212
+    ],
+    "connected_components": [
+      13016
+    ],
+    "sha256": "c31f55f025cde777b0fff8d0cbeba87ec617b4ce57b32fcd0260aa902c3076cc",
+    "development_copy_identical": true
+  },
+  {
+    "file": "er_portrait_mother_female_vanilla.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 47,
+    "bbox": [
+      73,
+      54,
+      214,
+      212
+    ],
+    "connected_components": [
+      12858
+    ],
+    "sha256": "0e77deb98b97c3e5c053386da8cd277336bb494282a12e88d1c70febcea4e4a5",
+    "development_copy_identical": true
+  },
+  {
+    "file": "eleanor_bracelet.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 16,
+    "bbox": [
+      6,
+      18,
+      58,
+      45
+    ],
+    "connected_components": [
+      702
+    ],
+    "sha256": "40610a6776f0a198aef8ca2b3fc7f691cfc99cccf7e6b2e5e5b1396ab7c65c3c",
+    "development_copy_identical": true
+  },
+  {
+    "file": "eleanor_locket.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 16,
+    "bbox": [
+      14,
+      5,
+      49,
+      59
+    ],
+    "connected_components": [
+      794
+    ],
+    "sha256": "f985fa3420f781248644399fa3ec3120ffd52bf17089e208e3490aa7cd774291",
+    "development_copy_identical": true
+  },
+  {
+    "file": "preview_steam_768.png",
+    "size": [
+      768,
+      768
+    ],
+    "bytes": 859455,
+    "below_1MB": true
+  }
+]

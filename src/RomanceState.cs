@@ -329,6 +329,18 @@ namespace EleanorRomance
             set => SetBool("locket_given", value);
         }
 
+        public static bool PerfumeGiven
+        {
+            get => GetBool("perfume_given", false);
+            set => SetBool("perfume_given", value);
+        }
+
+        public static bool ScavAssist
+        {
+            get => GetBool("scav_assist", false);
+            set => SetBool("scav_assist", value);
+        }
+
         public static bool LydiaFairBracelet
         {
             get => GetBool("lydia_fair_bracelet", false);
@@ -419,7 +431,7 @@ namespace EleanorRomance
             Chapter = 0;
             PendingChapter = 0;
             Affection = 0;
-            NextVisitDay = scenarioBoost ? 5 : 23;
+            NextVisitDay = scenarioBoost ? 12 : 23;
             LastQueuedDay = -1;
             FairDeals = 0;
             Discounts = 0;
@@ -459,6 +471,8 @@ namespace EleanorRomance
             LocketWithEleanor = true;
             LocketSold = false;
             LocketGiven = false;
+            PerfumeGiven = false;
+            ScavAssist = false;
             LydiaFairBracelet = false;
             LydiaVisited = false;
             EpilogueDone = false;

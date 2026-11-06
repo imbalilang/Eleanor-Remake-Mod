@@ -39,6 +39,25 @@ namespace EleanorRomance
         }
     }
 
+    [HarmonyPatch(typeof(ScavHelper), nameof(ScavHelper.GetMaxScavAttempts))]
+    internal static class Patch_ScavAttempts
+    {
+        private static void Postfix(ref int __result)
+        {
+            try
+            {
+                if (RomanceState.StoryActive && RomanceState.ScavAssist && __result > 0)
+                {
+                    __result += 2;
+                }
+            }
+            catch (Exception ex)
+            {
+                ModEntry.LogError("Scav attempt bonus failed: " + ex);
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(GameOverUIManager), nameof(GameOverUIManager.DisplayUI))]
     internal static class Patch_GameOverDisplayUI
     {

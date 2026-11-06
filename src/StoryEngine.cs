@@ -340,12 +340,35 @@ namespace EleanorRomance
             }
         }
 
-        public static bool GiveToPlayer(string itemId)
+        /// <summary>
+        /// Vanilla Eleanor9's keepsake, restored as the endgame reward for the
+        /// mother-alive routes and as Eleanor's parting gift on route C.
+        /// </summary>
+        public static void GiveSelfRefillingPerfume()
+        {
+            if (RomanceState.PerfumeGiven) return;
+            try
+            {
+                if (GiveToPlayer("self_refilling_neuroactive_perfume",
+                    item => ItemFeatureHelper.SetSecondHand(item)))
+                {
+                    RomanceState.PerfumeGiven = true;
+                    StoryDirector.Log("Self-refilling perfume granted as the endgame keepsake.");
+                }
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Self-refilling perfume grant failed: " + ex);
+            }
+        }
+
+        public static bool GiveToPlayer(string itemId, Action<GameItem> prepare = null)
         {
             try
             {
                 GameItem item = ItemSpawner.Spawn(itemId);
                 if (item == null) return false;
+                prepare?.Invoke(item);
 
                 GraphUtils.TryAcceptAll(EmporiumEntry.Instance.invElement, item);
                 if (item.parentInventory == null)
@@ -369,14 +392,32 @@ namespace EleanorRomance
         public static void TryFreeNutrifruit()
         {
             if (RomanceState.DriveState != 4) return;
+            FreeNutrifruitOnce("route B");
+        }
+
+        /// <summary>Route C publishes the research; apply the vanilla leak world effect.</summary>
+        public static void FreeNutrifruitForLeak()
+        {
+            FreeNutrifruitOnce("route C");
+        }
+
+        private static void FreeNutrifruitOnce(string source)
+        {
             try
             {
+                if (PlayerStore.Instance != null
+                    && PlayerStore.Instance.storeClientData != null
+                    && PlayerStore.Instance.storeClientData.nutrifruitSeedsFreed)
+                {
+                    return;
+                }
+
                 PlantList.FreeNutrifruit();
-                StoryDirector.Log("Nutrifruit seed restriction lifted for route B.");
+                StoryDirector.Log("Nutrifruit seed restriction lifted (" + source + ").");
             }
             catch (Exception ex)
             {
-                StoryDirector.LogError("FreeNutrifruit failed: " + ex);
+                StoryDirector.LogError("FreeNutrifruit failed (" + source + "): " + ex);
             }
         }
     }
