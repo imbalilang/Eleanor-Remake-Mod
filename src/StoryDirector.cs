@@ -16,6 +16,8 @@ namespace EleanorRomance
         public static void OnGameLoadedInit()
         {
             VersionGate.Refresh();
+            PortraitCompat.Refresh();
+            PortraitCompat.SanitizeLoadedClients();
             RomanceState.InitializeForSave();
 
             if (RomanceState.Initialized && !RomanceState.OldBlocked
@@ -52,6 +54,8 @@ namespace EleanorRomance
 
             try
             {
+                PortraitCompat.SanitizeLoadedClients();
+
                 if (RomanceState.OldBlocked)
                 {
                     TryQueueOldSavePrompt(manager);

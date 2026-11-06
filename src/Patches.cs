@@ -30,6 +30,15 @@ namespace EleanorRomance
         }
     }
 
+    [HarmonyPatch(typeof(SpriteDict), nameof(SpriteDict.GetSprite))]
+    internal static class Patch_SpriteDictGetSprite
+    {
+        private static void Prefix(string key)
+        {
+            PortraitCompat.EnsureKey(key);
+        }
+    }
+
     [HarmonyPatch(typeof(GameOverUIManager), nameof(GameOverUIManager.DisplayUI))]
     internal static class Patch_GameOverDisplayUI
     {

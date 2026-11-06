@@ -53,7 +53,23 @@ mod has passed a full playthrough.
 | Route C | weapon purchase is a real weapon sale; food purchase is a real food sale |
 | Route D | betrayal/exit choices close romance and skip the normal ending branches |
 
-## 4. Build and deployment
+## 4. Portrait compatibility
+
+`src/PortraitCompat.cs` detects the portrait replacement mod
+`少女当铺 / Maiden's Pawnshop` by manifest ID `cute_portraits` or Workshop ID
+`3829696854`.
+
+- When enabled, it reads that mod's `cp_portrait_<key>` sprites and registers
+  gender-tagged aliases in `SpriteDict`, then assigns them to our named clients.
+  Eleanor's raw keys contain no `male`/`female` token, so the bridge uses a
+  `_female` alias to keep the game's gender helper correct.
+- When absent or disabled, `Resolve()` returns the original vanilla keys.
+- Both Eleanor and the named NPCs (Lydia, mother, fake uncle, thug, officer,
+  archivist) go through this resolver.
+- This is a soft dependency: no CutePortraits types are referenced directly at
+  compile time; detection uses `ModLoader.Mods` and `LoadedMod.Sprites`.
+
+## 5. Build and deployment
 
 ```bash
 python tools/parse_v06.py
@@ -66,14 +82,14 @@ bash build.sh
 stale deployed textures, copies the DLL/manifest/CSV/textures/README, and fails
 if the DLL or CSV is empty.
 
-## 5. Verified in this pass
+## 6. Verified in this pass
 
 - `dotnet build -c Release`: 0 warnings, 0 errors.
 - `check_project.py`: no missing Chinese or English keys, no invalid block references.
 - `zh.csv`: 1,039 keys. `en.csv`: 1,039 keys; Chinese and English keys match one-for-one.
 - The mod DLL and resources deploy to `Mods/EleanorRomance`.
 
-## 6. Not verified / known gaps
+## 7. Not verified / known gaps
 
 1. **No full playthrough.** The game was launched once through Steam, but the
    local mod was disabled in the loader UI; no run was played. All runtime
@@ -99,7 +115,7 @@ if the DLL or CSV is empty.
 10. **Scenario "Old Echo"** is registered but experimental; it starts chapter 1
     on day 5 (no affection/reputation skip) and has not been played.
 
-## 7. Recommended next tests
+## 8. Recommended next tests
 
 1. New save, days 23-30: food/household/belongings sales, uncle accept/report,
    warning, trap arrest, rescue, hardship.

@@ -75,7 +75,7 @@ namespace EleanorRomance
             {
                 identifier = Prefix + id,
                 displayName = L.Eleanor,
-                spriteName = string.IsNullOrEmpty(sprite) ? "eleanor1" : sprite,
+                spriteName = PortraitCompat.Resolve(string.IsNullOrEmpty(sprite) ? "eleanor1" : sprite),
                 clientIntent = intent,
                 nonShootable = true,
                 arrestable = false,
@@ -98,7 +98,7 @@ namespace EleanorRomance
             {
                 identifier = Prefix + id,
                 displayName = name,
-                spriteName = sprite,
+                spriteName = PortraitCompat.Resolve(sprite),
                 clientIntent = StoreClient.ClientIntent.DIALOGUE,
                 nonShootable = true,
                 arrestable = false,
@@ -1357,11 +1357,12 @@ namespace EleanorRomance
         {
             try
             {
+                string buyerSprite = PortraitCompat.Resolve(SpriteDict.GetRandomUpperFemaleSpriteName());
                 StoreClient buyer = new StoreClient
                 {
                     identifier = Prefix + "coop_buyer",
                     displayName = L.Get("er_name_upper_buyer"),
-                    spriteName = SpriteDict.GetRandomUpperFemaleSpriteName(),
+                    spriteName = buyerSprite,
                     clientIntent = StoreClient.ClientIntent.BUY,
                     nonShootable = true,
                     arrestable = false,

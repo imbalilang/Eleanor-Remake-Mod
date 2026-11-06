@@ -75,11 +75,14 @@ bash build.sh                    # 构建到 bin/Release，再部署到 Mods/Ele
 - 其他语言回退英文。
 - 英文为人工意译，优先保持人物语气和可读性，不逐字直译；后续可按母语审校意见微调。
 
-## 美术
+## 美术与立绘兼容
 
-- 复用原版 Eleanor 立绘键（eleanor1/2/3/scav/rev），自动兼容 CutePortraits 等立绘替换 MOD。
+- 检测美化 MOD `少女当铺 / Maiden's Pawnshop`（Workshop ID **3829696854**，manifest ID `cute_portraits`）。
+  - 已启用：优先使用其 `cp_portrait_*` 美化立绘。Eleanor、Lydia、母亲、假叔叔、黑市打手、治安部警官、档案员都会切换到美化版本。
+  - 未安装或未启用：自动回退原版立绘，不报错、不改变剧情逻辑。
+- 实现位于 `src/PortraitCompat.cs`：从 CutePortraits 的 `LoadedMod.Sprites` 读取美化 Sprite，并在 `SpriteDict` 中注册带性别标记的别名，避免 Eleanor 被误判为中性。
 - 新增物品图标：吊坠、上层区手工镯（当前为占位图）。
-- Lydia 与母亲的立绘暂用固定原版 sprite key（`femaleUpper3` / `femaleUpper6`），正式美术到位后替换。
+- Lydia 与母亲的基础 sprite key 为 `femaleUpper3` / `femaleUpper6`；美化版对应 `cp_portrait_femaleUpper3` / `cp_portrait_femaleUpper6`。
 - `preview.png` 仍为占位封面。
 
 ## 兼容与限制
