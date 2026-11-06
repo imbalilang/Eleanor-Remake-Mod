@@ -58,6 +58,23 @@ def load_dialogue_en(root: str) -> dict:
     return out
 
 
+def write_mod_csv(path: str, table: dict) -> None:
+    """Write the format the game's ModLoader actually parses.
+
+    ModLoader splits at the first comma and does NOT strip quotes from the
+    key, but ParseCsvValue strips the surrounding quotes from the value.
+    Therefore keys must be unquoted and values should be quoted with inner
+    quotes doubled.
+    """
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        for key in sorted(table):
+            if "," in key or "\n" in key or "\r" in key:
+                raise ValueError(f"Illegal key for mod CSV: {key!r}")
+            value = str(table[key])
+            value = value.replace("\r", "").replace("\n", "\\n").replace('"', '""')
+            f.write(f'{key},"{value}"\n')
+
+
 def main() -> int:
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     content_path = os.path.join(root, "Content", "story_v06.json")
@@ -136,14 +153,8 @@ def main() -> int:
 
     missing_en = sorted(set(zh) - set(all_en))
     os.makedirs(os.path.join(root, "Localization"), exist_ok=True)
-    with open(os.path.join(root, "Localization", "zh.csv"), "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\n")
-        for k in sorted(all_zh):
-            w.writerow([k, all_zh[k]])
-    with open(os.path.join(root, "Localization", "en.csv"), "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\n")
-        for k in sorted(all_en):
-            w.writerow([k, all_en[k]])
+    write_mod_csv(os.path.join(root, "Localization", "zh.csv"), all_zh)
+    write_mod_csv(os.path.join(root, "Localization", "en.csv"), all_en)
 
     print(f"Wrote {out_cs}")
     print(f"Wrote Localization/zh.csv ({len(all_zh)} keys)")
