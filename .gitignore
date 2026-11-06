@@ -15,3 +15,7 @@ Art/v0.6/references_local/
 # OS
 Thumbs.db
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
