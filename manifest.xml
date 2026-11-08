@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Manifest>
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>0.6.0</ModVersion>
-  <Description>A v0.6 remake of Eleanor's personal storyline: the upper-district heiress, the pawnshop owner of the lower levels, and the choices that decide who gets to survive. 全年龄恋爱剧情重制：23 章核心线、路线甲乙丙丁、朋友线与母亲下层区团聚。</Description>
+  <ModVersion>0.77</ModVersion>
+  <Description>v0.77 fixes speaker attribution in dialogue bubbles and history: arresting officers use their native channel; narration, guests, the purchasing manager, notices and news retain their own names. Other mods and customer identities remain untouched. Full Chinese/English support. v0.77 修正对白与记录的发言归属：拘捕中的治安员使用原版专用通道，旁白、来宾、采购行管事、通知和新闻按各自身份显示。仅处理本MOD对白，不修改顾客身份或其他MOD，完整中英支持。</Description>
   <GameVersions>
     <Version>0.46</Version>
     <Version>0.46D</Version>

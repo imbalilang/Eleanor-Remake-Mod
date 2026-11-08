@@ -1,0 +1,49 @@
+[h1]Eleanor Story Expand[/h1]
+[h2]上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展[/h2]
+
+“呵，你们下层区管这种地方叫‘商店’啊？”
+
+她是上层区最大水培农场前负责人的独女。母亲被以挪用公款罪关押，家族一夜崩塌，她跌进自己曾最看不起的下层区。
+
+你，是这里的一家当铺老板。
+
+靠识货、开价、留证和承担风险，先成为她愿意信任的人。你们可以成为平等的恋人、继续做朋友，也可以选择一份双方说清条件的侍从约定。她的骄傲、判断与救母决心始终保留。
+
+[h2]0.68修复：模组界面启动报错[/h2]
+修复0.67启用时的空引用。王尔德项目改在存档对象就绪后注册，保留已付款记录与待演出结果，不重复扣费。已补充启动与读档回归。
+
+[h2]0.67新增：侍从恋爱与上层区归来[/h2]
+[list]
+[*][b]一份有边界的约定。[/b]在调查款凑齐的节点探索新提议；只有最后确认才支付800信用点预付工钱。她自筹的调查款独立保留，母亲与研究的决定另行商量。
+[*][b]上层区归来篇。[/b]新增阅读第24～28章：合法通行、第一单、上层区采购商、公开亮相与约定到期。她接受介绍和支持，也要靠自己的业务与交付，让上面的人记住“埃莉诺”。
+[*][b]王尔德的四项筹备。[/b]安顿、通行与正装、第一单、自己的事业；部分项目可用派系人脉减少现金。复用原版升级报价和王尔德抵付，项目可延期，沿用本局经营与终局规则；未完成筹备不取消已有恋爱或救母结果。
+[*][b]乙线独立复核。[/b]保护与研究交付完成后，第23章追加回执，七日后安排撤案新闻。侍从、普通恋爱与朋友均可推进，不需要购买归来项目。
+[*][b]两种女仆立绘。[/b]未启用少女当铺时使用原版画风，启用时使用美化画风；私人场景换装，正式业务与危机沿用常服。
+[*][b]旧800停线档续接。[/b]符合已核对状态的旧存档会收到重谈序章，可选择新路线或继续原关系；不补扣旧800，不重置物品和世界进度。
+[/list]
+
+[h2]人物与经营[/h2]
+[list]
+[*]她仍然挑剔、嘴硬，也会在真正被帮助时别扭地道谢。公平收购、让利、压价，以及该不该提醒她的判断，都会留下影响。
+[*]假叔叔、黑市打手、治安部、帕斯泰尔、营养果、水培农场沿用原作设定。保释、现金援助与警告谢礼复用原版机制。
+[*]普通模式从第23天开始；可选0点开局特性“旧日回想”提前到第12天，不额外赠送好感或声望。
+[*]原有23章核心线、甲乙丙丁、平等恋爱、朋友线与后日谈保留。新侍从线为可选分支。
+[*]简体中文 / English，全年龄。中英各2019条对白、界面和系统文本。
+[*]兼容少女当铺（3829696854）；莉迪亚、母亲与女仆装使用本MOD持有的双画风资源。
+[/list]
+
+[h2]存档与更新[/h2]
+已使用本MOD的受支持存档保留进度；符合条件的旧800停线档自然续接。已推进原版埃莉诺故事的存档仍默认保护，可选择保留原线或重置后接管。更新前请保留存档副本；新增字段不保证向旧版本降级兼容。
+
+你的选择会改变故事的走向。最后会走到哪里，进店之后，你自己判断。
+
+[i]v0.68 · 经营费用与节奏仍可根据实际游玩反馈调整。[/i]
+
+[h2]English[/h2]
+Version 0.68 fixes the mod-menu startup exception introduced in 0.67 by deferring Wilde project registration until the native store is ready. Paid projects retain their history without another charge.
+
+A fuller remake of Eleanor's storyline, built around real shopkeeping, trust and difficult choices. The original equal romance, friendship and mother/research branches remain available.
+
+Version 0.67 adds an optional attendant romance and five Upper Level return chapters. Agree on clear terms, prepare four projects through Wilde's native upgrade interface, and help Eleanor establish a business under her own name. Preparations can wait and do not cancel an existing romance or rescue result. The protected-research route also gains an independent case review for all relationship paths.
+
+Includes original-style and Maiden's Pawnshop-style maid portraits, full Chinese/English text, and precise continuation for supported legacy saves stalled after the old 800-credit choice, without retroactive charges. Normal start on day 23; optional early-start perk on day 12. All-ages. Back up saves before updating; downgrading is not guaranteed.

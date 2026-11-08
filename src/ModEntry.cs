@@ -20,33 +20,48 @@ namespace EleanorRomance
 
         public void OnEnable()
         {
+            DialogueSpeakers.Enabled=true;
             if (!subscribed)
             {
                 ModHook.OnModItemDirectoryInit += Items.Register;
-                ModHook.OnGameLoadedInit += StoryDirector.OnGameLoadedInit;
+                ModHook.OnGameLoadedEarly += StoryDirector.OnGameLoadedEarly;
+                ModHook.OnGameLoadedInit += Items.BeginLoad;
+                // The native registration API touches the lazy PlayerStore singleton.
+                // LoadGame has an existing store here, before save deserialization.
+                ModHook.OnGameLoadedInit += MaidProjects.Register;
+                ModHook.OnGameLoadedEarly += Items.RepairLoadedShapes;
                 ModHook.OnNewGameStarted += StoryDirector.OnNewGameStarted;
-                ModHook.OnGenerateCustomerVeryEarly += StoryDirector.OnGenerateCustomerVeryEarly;
+                // Native urgent scripted clients/events are resolved before this hook.
+                ModHook.OnGenerateCustomerEarly += StoryDirector.OnGenerateCustomerVeryEarly;
                 subscribed = true;
             }
 
             DebugTools.Register();
-            ScenarioRegistration.RegisterIfUnlocked();
+            StartingPerkRegistration.Register();
+            ScavAssistance.Register();
             log?.Log("Eleanor Romance enabled.");
         }
 
         public void OnDisable()
         {
+            DialogueSpeakers.Enabled=false;
             if (subscribed)
             {
                 ModHook.OnModItemDirectoryInit -= Items.Register;
-                ModHook.OnGameLoadedInit -= StoryDirector.OnGameLoadedInit;
+                ModHook.OnGameLoadedEarly -= StoryDirector.OnGameLoadedEarly;
+                ModHook.OnGameLoadedInit -= Items.BeginLoad;
+                ModHook.OnGameLoadedInit -= MaidProjects.Register;
+                ModHook.OnGameLoadedEarly -= Items.RepairLoadedShapes;
                 ModHook.OnNewGameStarted -= StoryDirector.OnNewGameStarted;
-                ModHook.OnGenerateCustomerVeryEarly -= StoryDirector.OnGenerateCustomerVeryEarly;
+                ModHook.OnGenerateCustomerEarly -= StoryDirector.OnGenerateCustomerVeryEarly;
                 subscribed = false;
             }
 
             DebugTools.Unregister();
-            ScenarioRegistration.Unregister();
+            Items.BeginLoad();
+            StartingPerkRegistration.Unregister();
+            ScavAssistance.Unregister();
+            MaidProjects.Unregister();
             log?.Log("Eleanor Romance disabled.");
         }
 

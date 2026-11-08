@@ -1,0 +1,49 @@
+{
+  "assets": [
+    {
+      "file": "Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+      "variant": "beauty",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colors": 64,
+      "alpha_bbox": [
+        77,
+        54,
+        210,
+        212
+      ],
+      "sha256": "31f51e5f176b9f1d6adb7670d00faf175f3bcd3dd15105b6fda546e715b39ab2",
+      "visual_review": "Native-size sprite inspected against the corresponding game/mod reference; in-game scale pending user verification."
+    },
+    {
+      "file": "Textures\\Items\\er_portrait_eleanor_maid_female_vanilla.png",
+      "variant": "vanilla",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colors": 48,
+      "alpha_bbox": [
+        89,
+        54,
+        199,
+        212
+      ],
+      "sha256": "4a1c8e92438543712f3ad07c0ccc8c037cc1b9fb77f6a7ced1f6c5296aaa80ed",
+      "visual_review": "Native-size sprite inspected against the corresponding game/mod reference; in-game scale pending user verification."
+    }
+  ],
+  "distinct_variants": true
+}

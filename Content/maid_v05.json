@@ -1,0 +1,6023 @@
+{
+  "version": 7,
+  "source": "docs\\全流程攻略_纯阅读版_大小姐侍从恋爱线_设计稿_v0.7.txt",
+  "blocks": [
+    {
+      "id": "legacy_b002",
+      "label": "到店",
+      "source_line": 87,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天只卖货。价钱照常算，别的不谈。",
+          "source_line": 90
+        },
+        {
+          "speaker": "Player",
+          "text": "摆上来。",
+          "source_line": 93
+        }
+      ]
+    },
+    {
+      "id": "legacy_b004",
+      "label": "正常成交",
+      "source_line": 98,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "行。",
+          "source_line": 101
+        }
+      ]
+    },
+    {
+      "id": "legacy_b005",
+      "label": "未成交",
+      "source_line": 103,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "不收就算了。我又不是只有你这一家可去。",
+          "source_line": 106
+        }
+      ]
+    },
+    {
+      "id": "legacy_b006",
+      "label": "交易后",
+      "source_line": 108,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "*把东西收好，手停在包带上，没有马上走*",
+          "source_line": 111
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "侦探开始查母亲的案子了。他说，查到的东西可能比我想的大。",
+          "source_line": 114
+        },
+        {
+          "speaker": "Player",
+          "text": "大到什么程度？",
+          "source_line": 117
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "大到光知道真相不够。",
+          "source_line": 120
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "就算查清楚是谁害了她——救人要门路，回上面要本钱。这些我一样都没有。",
+          "source_line": 123
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你别接话。我不是来跟你说这个的。",
+          "source_line": 126
+        }
+      ]
+    },
+    {
+      "id": "legacy_b008",
+      "label": "选择一：收回，再提一次",
+      "source_line": 133,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "那天的话，我收回。换个说法：查清以后，我帮你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你那天说的是“以后得听我的”，还有“不只是生意上”。我没听错。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "没听错。是我说错了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "换个好听的说法，条件就不算数了？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那些不算。今天谈的，你不答应，也不妨碍你继续查。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她看了你一会儿，把刚收好的包重新放下。手仍压在包带上。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "借的钱，我还不起。白给的，我不要。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那就来做事。认货、记账、跑腿。我帮你处理你一个人办不了的事。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你办得了？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "办不办得了，一件一件看。做不到的，我先告诉你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……先说差事。那天那些话，别以为我已经忘了。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "legacy_b011",
+      "label": "选项一：约定成立",
+      "source_line": 210,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "那就先照这样试。差事我会做，你说能办的事，我也会看着。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "好。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "别现在就摆出使唤人的样子。我还没见你办成什么。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "侦探有消息，先带过来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……这个可以。我也正想找个地方，把他说的那些事摊开看看。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把包背起来。这次没有在门口回头，走出去几步，才放慢了脚步。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "legacy_b012",
+      "label": "选项二：收回提议",
+      "source_line": 242,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "……你最好不是专门想看我会不会答应。",
+          "source_line": 245
+        },
+        {
+          "speaker": "Player",
+          "text": "不是。是我又想得太远了。",
+          "source_line": 248
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这回说话总算像个人了。",
+          "source_line": 251
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "侦探有消息，我照样过来。",
+          "source_line": 254
+        }
+      ]
+    },
+    {
+      "id": "legacy_b013",
+      "label": "选择二：收回，不再提",
+      "source_line": 256,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "那天是我说错了。调查的事你自己安排，有需要就来。",
+          "source_line": 259
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……还知道先认错。",
+          "source_line": 262
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。那件事就到此为止。以后有话直说，别再让我猜你说的“听你的”到底包括什么。",
+          "source_line": 265
+        },
+        {
+          "speaker": "Player",
+          "text": "有事一起商量。",
+          "source_line": 268
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。侦探有消息，我会过来。",
+          "source_line": 271
+        }
+      ]
+    },
+    {
+      "id": "m11_b001",
+      "label": "到店：正常凑齐",
+      "source_line": 285,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "好了，给侦探查母亲案子的八百，凑齐了。",
+          "source_line": 288
+        },
+        {
+          "speaker": "Player",
+          "text": "再数一遍。",
+          "source_line": 291
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "已经数了三遍了！八百，一个不少。",
+          "source_line": 294
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以前这就是账单上的一行字。现在你随便指一笔，我都能告诉你是怎么挣来的。",
+          "source_line": 297
+        },
+        {
+          "speaker": "Player",
+          "text": "包括那块你坚持不是废料的东西？",
+          "source_line": 300
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "它拆出来的材料卖了钱。你可以不喜欢它，但请尊重它的贡献。",
+          "source_line": 303
+        }
+      ]
+    },
+    {
+      "id": "m11_b002",
+      "label": "最迟第42天，由她自行补齐时替换到店段",
+      "source_line": 305,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "侦探查母亲案子的钱凑齐了。另一家收了剩下的货，短工那边也肯预支一点。",
+          "source_line": 308
+        },
+        {
+          "speaker": "Player",
+          "text": "接下来几天呢？",
+          "source_line": 311
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "照样干活。钱可以预支，活又不会自己干完。",
+          "source_line": 314
+        }
+      ]
+    },
+    {
+      "id": "m11_b003",
+      "label": "若已卖掉吊坠补款，追加",
+      "source_line": 316,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "吊坠也卖了。别盯着我的领口看，我自己都还没习惯。",
+          "source_line": 319
+        },
+        {
+          "speaker": "Player",
+          "text": "知道卖给谁了吗？",
+          "source_line": 322
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "知道。先办母亲的事。别因为我舍不得，就把别的全耽误了。",
+          "source_line": 325
+        }
+      ]
+    },
+    {
+      "id": "m11_b004",
+      "label": "共同对白",
+      "source_line": 327,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "侦探明天开始查。他答应先找工作记录，不直接去公司问人。",
+          "source_line": 330
+        },
+        {
+          "speaker": "Player",
+          "text": "查到以后呢？",
+          "source_line": 333
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……什么以后？",
+          "source_line": 336
+        },
+        {
+          "speaker": "Player",
+          "text": "查到是谁害了她。然后呢？",
+          "source_line": 339
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "然后就……拿给法院看。",
+          "source_line": 342
+        },
+        {
+          "speaker": "Player",
+          "text": "法院会看吗？",
+          "source_line": 345
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "*手指停在那叠钱上*",
+          "source_line": 348
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我不知道。我连上层区的门都进不去，请不起律师，也不认识还肯接我通讯的人。",
+          "source_line": 351
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我只知道先查。查清楚了，总会有下一步。",
+          "source_line": 354
+        }
+      ]
+    },
+    {
+      "id": "m11_b006",
+      "label": "选择二：她不要施舍",
+      "source_line": 364,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "下一步，我可以帮你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "帮我？借钱，还是白给？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "也可以来这里做事。认货、记账、跑腿。你的案子，我帮着想办法。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你是缺人，还是专门给我找个收钱的理由？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "有活。你做不做得好，我照样会说。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "柜台我会擦。东西我也在学。可你能帮到哪一步？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "救人要核手续，办事要找对人。我做生意，经手过这些。不能保证的，不给你算进去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我不想听“总会有办法”。那句话我自己也会说。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那就一件一件办。你看结果。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她低头看着那叠自己凑来的钱，拇指在最上面一张的折痕上压了几下。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我先听条件。听完不答应，你也别换一副脸。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你照常来卖货。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m11_b007",
+      "label": "她开出条件",
+      "source_line": 432,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "先说期限。你帮我重新走进上层区，我替你做事。用我自己的名字回去，不是靠别人给我留个空位。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "通行证不算完。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "对。别人肯留下我，得因为我做得好。不是因为我是谁家的女儿。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "还有，调查、短工和母亲的事，时间归我。临时有事，我会告诉你，不能一叫就得放下。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "店里的事提前安排。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "母亲和研究不在约定里。盘交给谁，路怎么走，得另外商量。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你要知道每一步。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说的是一起商量。别把“告诉我”当成已经替我决定了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "一起商量。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……还有。你那种像要人叫主人的口气，先收起来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "先看我办事。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我会看的。哪天觉得是在拿我抵账，我就走。差事可以谈，别的别急着往里面添。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m11_b008",
+      "label": "追加：预付的工钱",
+      "source_line": 482,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "我这边也有一条。*把一叠钱放在她那叠旁边* 八百，预付的工钱。",
+          "source_line": 485
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说了不要你白给——",
+          "source_line": 488
+        },
+        {
+          "speaker": "Player",
+          "text": "不是白给，是工钱。你母亲出来要吃药，要有地方住。上工前先结一笔，这是规矩。",
+          "source_line": 491
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "哪里的规矩？",
+          "source_line": 494
+        },
+        {
+          "speaker": "Player",
+          "text": "我这家店的。",
+          "source_line": 497
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你可真会挑说法。",
+          "source_line": 500
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "侦探的钱，我自己付。这是我挣的，谁也别想替。",
+          "source_line": 503
+        },
+        {
+          "speaker": "Player",
+          "text": "本来就是你的。",
+          "source_line": 506
+        }
+      ]
+    },
+    {
+      "id": "m11_b011",
+      "label": "选项一：成交",
+      "source_line": 519,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把两叠钱分开。给侦探的装进旧信封，你给的那叠拿起来，又放回柜台。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "上工的日子，先说好。母亲那边有消息，我得去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "明天先去见侦探。消息带来，再排。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这钱……是留给她吃药、找住处的。不是我查案的钱不够。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "两笔账，分开放。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她这才把你给的那叠单独收好，手指在包扣上停了一下。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "活我不会赖。你答应的，也别只剩一句话。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "知道。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……那明天见。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m11_b012",
+      "label": "选项二：收回提议",
+      "source_line": 566,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "还是算了。你按自己的安排去查。",
+          "source_line": 569
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你最好不是专门想看我肯不肯收这笔钱。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "是我想得太远了。",
+          "source_line": 575
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "远倒不远。就是你说话的方式太气人。",
+          "source_line": 578
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "明天有消息，我照样过来。",
+          "source_line": 581
+        }
+      ]
+    },
+    {
+      "id": "m12_b001",
+      "label": "到店",
+      "source_line": 593,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "侦探查到东西了。我看了一夜，还是有些地方拿不准。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "先看看门口。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "绕过路了，交接的地方也换了。别以为只有你知道小心。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "坐。把拿不准的摊开。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m12_b002",
+      "label": "读取研究",
+      "source_line": 613,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "数据盘藏在母亲以前的实验室里。侦探打不开，有密码。",
+          "source_line": 616
+        },
+        {
+          "speaker": "Player",
+          "text": "你知道？",
+          "source_line": 619
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我的生日。她总说这样不会忘。明明跟她说过多少次，不该拿这个当密码。",
+          "source_line": 622
+        }
+      ]
+    },
+    {
+      "id": "m12_b003",
+      "label": "叙述",
+      "source_line": 624,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "……是营养果的基因研究。",
+          "source_line": 628
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她找到了让普通营养果重新结籽的方法。种下去，收获以后还能留种。",
+          "source_line": 631
+        },
+        {
+          "speaker": "Player",
+          "text": "就不用每次都向帕斯泰尔买了。",
+          "source_line": 634
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这里还有要求她停掉试验的记录。然后是权限被收回，再然后……就是那项指控。",
+          "source_line": 637
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她没有挪用过什么钱。她只是碰了他们最不想让人碰的生意。",
+          "source_line": 640
+        },
+        {
+          "speaker": "Player",
+          "text": "这些能说明动机。要让他们放人，还得另想办法。",
+          "source_line": 643
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我知道。可至少这一次，我手里不只是一句“我母亲不会那么做”。",
+          "source_line": 646
+        }
+      ]
+    },
+    {
+      "id": "m12_b006",
+      "label": "选择一：他看住盘",
+      "source_line": 659,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "盘先放我这儿。我能看住柜台，比你带着它跑短工稳妥。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "保管归保管。交给谁，得我点头。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "写在这张收条上。你来取，随时还你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把收条读了一遍，又看了一眼你留在柜台上的手，才慢慢松开盘。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我会来看的。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "来。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m12_b007",
+      "label": "选择二：让她贴身带着",
+      "source_line": 679,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "你贴身带着。有人来店里问，我先应付。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你拿自己的店挡在前面？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "他们知道你常来。换一家，也抹不掉这件事。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "有人来，第一时间告诉我。别自己谈好了，再让我照办。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "包括他们开的价。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……好。盘我带着。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m12_b008",
+      "label": "共同后续：第一件差事",
+      "source_line": 705,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "还有，你把几样小零件混在一起了。标签也掉了一张。",
+          "source_line": 708
+        },
+        {
+          "speaker": "Player",
+          "text": "看得出区别？",
+          "source_line": 711
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你上次收我的货挑了那么久，我又不是光顾着生气。",
+          "source_line": 714
+        },
+        {
+          "speaker": "Player",
+          "text": "那就分开。拿不准的留着问我。",
+          "source_line": 717
+        }
+      ]
+    },
+    {
+      "id": "m12_b009",
+      "label": "叙述",
+      "source_line": 719,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把小零件分开，拿起其中一件，犹豫了一下，放到你面前。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这个外壳换过。标签上的价没改。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "里面也看。只换壳，不一定坏。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我还没说它坏。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那就先别放进坏的那堆。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她看了看那堆东西，把手里的零件拿回来，重新摆在灯下。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你把怎么看的说清楚。我下次自己看。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m12_b004",
+      "label": "关系过渡修订",
+      "source_line": null,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "看盘之前，还有件事。那个冒充叔叔的人送箱子来，我当时已经看出不对，没有提醒你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她的手停在包口。刚抽出一半的资料，又被她按了回去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你现在才说？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "是。我当时该告诉你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我还在想，是不是我自己什么都看不出来。你就在这里看着。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "对不起。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "一句对不起，我就得把盘拿出来，接着听你安排？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "不用。你可以带走。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……以后危险也好，难听的话也好，先告诉我。别再替我挑哪些能听。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m12_b005",
+      "label": "关系过渡修订",
+      "source_line": null,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "盘我带着。后面的事照谈，店里的约定先到这里。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你不欠我什么。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那就记住。以后说话，也照这句来。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m13_b001",
+      "label": "到店",
+      "source_line": 754,
+      "lines": [
+        {
+          "speaker": "Thug",
+          "text": "老板，最近跟埃莉诺走得挺近啊。就是那个从上层区下来的姑娘。",
+          "source_line": 757
+        }
+      ]
+    },
+    {
+      "id": "m13_b002",
+      "label": "若假叔叔此前被捕，追加",
+      "source_line": 759,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "有人把你弄出来了？",
+          "source_line": 762
+        },
+        {
+          "speaker": "Thug",
+          "text": "所以你应该明白，我不是自己来找事的。",
+          "source_line": 765
+        }
+      ]
+    },
+    {
+      "id": "m13_b003",
+      "label": "共同对白",
+      "source_line": 767,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "有话就说。",
+          "source_line": null
+        },
+        {
+          "speaker": "Thug",
+          "text": "她有个数据盘。先把盘交来，放人的地方自然有人通知。她母亲能活着到下层区。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "先交货，再等你给地址？",
+          "source_line": null
+        },
+        {
+          "speaker": "Thug",
+          "text": "你还想跟谁核？拖下去，她母亲能不能等，就不好说了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "谁办放人，什么时候见到人，写清楚再来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Thug",
+          "text": "办成了给你三百。开店的，别把自己的钱也挡在外面。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那三百也写上。她得知道你想买我做什么。",
+          "source_line": null
+        },
+        {
+          "speaker": "Thug",
+          "text": "听说她现在替你做事。你开口，总比我们好使。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我没替她答应。",
+          "source_line": null
+        },
+        {
+          "speaker": "Thug",
+          "text": "那就快点带话。她母亲可等不起。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m13_b006",
+      "label": "第12章选择二追加：盘不在店里",
+      "source_line": 814,
+      "lines": [
+        {
+          "speaker": "Thug",
+          "text": "*往柜台后面扫了一眼* 东西不在你这儿？",
+          "source_line": 817
+        },
+        {
+          "speaker": "Player",
+          "text": "我这儿什么都有。就是没有你要的。",
+          "source_line": 820
+        }
+      ]
+    },
+    {
+      "id": "m13_b007",
+      "label": "若建立了举报记录或可信接洽，追加",
+      "source_line": 822,
+      "lines": [
+        {
+          "speaker": "Thug",
+          "text": "她的名字，你的名字，都会记在上面。想清楚。",
+          "source_line": 825
+        },
+        {
+          "speaker": "Player",
+          "text": "你带来的话，也一起记上。",
+          "source_line": 828
+        }
+      ]
+    },
+    {
+      "id": "m13_b008",
+      "label": "若只是让对方离开",
+      "source_line": 830,
+      "lines": [
+        {
+          "speaker": "Thug",
+          "text": "别让她等太久。她母亲可等不起。",
+          "source_line": 833
+        }
+      ]
+    },
+    {
+      "id": "m14_b001",
+      "label": "到店",
+      "source_line": 844,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天先做哪件？你上次说的那几样——",
+          "source_line": 847
+        },
+        {
+          "speaker": "Player",
+          "text": "先坐下。黑市来了个人，为了你母亲和那张研究数据盘。",
+          "source_line": 850
+        }
+      ]
+    },
+    {
+      "id": "m14_b002",
+      "label": "叙述",
+      "source_line": 852,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "你把对方说过的话按顺序写给她看，连那三百信用点也没有略去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "先交盘，才告诉我去哪接人。……可至少他们肯谈了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "这个人能不能办放人，你知道吗？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我可以去问。只要能见到肯办事的人——",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "带着盘去，还是带着这张纸去？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你是不是觉得我一着急，就什么都听不进去？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我怕你到了那里，能换地方的只有他们。盘一收，下一句还得等他们说。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把写着“先交盘”的地方折进去，又展开，指尖没有离开那一行。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那我现在能做什么？坐在这里等，母亲就会出来吗？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "去核她的关押记录、办手续的人和能见人的地方。原件先别拿去。你去问的每一句，都还能退回来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "用药记录我有。接药的人签过名字，我能认。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "就从那个名字开始。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……这一步我去做。回来要是只问到一句“再等等”，我们还得换办法。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m14_b003",
+      "label": "有实际保护条件时",
+      "source_line": 879,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "有渠道可以申请转移看护。先交能受理的材料，确认谁接手，再谈公开。",
+          "source_line": 882
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她的用药记录我去找，身份资料也在。哪些不能漏，我知道。",
+          "source_line": 885
+        }
+      ]
+    },
+    {
+      "id": "m14_b004",
+      "label": "暂无保护条件时",
+      "source_line": 887,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "我没有能保证她安全的门路。现在先谈交盘换人，更稳妥。",
+          "source_line": 890
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那就别为了让我安心，假装已经安排好了。我宁愿听实话。",
+          "source_line": 893
+        }
+      ]
+    },
+    {
+      "id": "m14_b005",
+      "label": "共同后续",
+      "source_line": 895,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "你答应过我一个上层区。现在我只想先见到她。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "先办这一件。能做到哪一步，我告诉你哪一步。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……别再只说“放心”。我怕我真的会照着那两个字等下去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "有结果，就摊在这里看。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。这次先照你说的来。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m14_b007",
+      "label": "明确选择：路线甲",
+      "source_line": 926,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "先救你母亲。研究交回去，但交付前要把放人手续和接人的地方核清楚。",
+          "source_line": 929
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。我不想拿她去赌。",
+          "source_line": 932
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以后她要是问起来，我来解释。你不用一个人把这件事背下来。",
+          "source_line": 935
+        }
+      ]
+    },
+    {
+      "id": "m14_b008",
+      "label": "明确选择：路线乙",
+      "source_line": 937,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "先申请保护。人安全了，再处理研究。保护办不成，我们就退回换人的方案。",
+          "source_line": 940
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "明白。没确认的事，先不当它已经发生。",
+          "source_line": 943
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你以前挑我的货，也是这么说的——没验过，别先算进价里。",
+          "source_line": 946
+        }
+      ]
+    },
+    {
+      "id": "m14_b009",
+      "label": "明确选择：路线丙",
+      "source_line": 948,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "也可以现在就公开。但没有保护，他们可能真的会杀了她。我保证不了能救回来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "让我想一想。这件事，不能只因为你说有这条路，我就往前走。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m14_b010",
+      "label": "路线丙二次确认",
+      "source_line": 956,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我想好了。研究送去报社。",
+          "source_line": 959
+        },
+        {
+          "speaker": "Player",
+          "text": "确定不等保护的消息？",
+          "source_line": 962
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "确定。妈妈做这些，不是为了让它永远锁在一个盘里。",
+          "source_line": 965
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "但别告诉我她一定会没事。我会当真的。",
+          "source_line": 968
+        }
+      ]
+    },
+    {
+      "id": "m14_b011",
+      "label": "明确选择：正常退出",
+      "source_line": 970,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "我想清楚了。调查我不再参与，店里的约定也到这里。",
+          "source_line": 973
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……",
+          "source_line": 976
+        },
+        {
+          "speaker": "Player",
+          "text": "盘还你。之后的事，我不能再答应你。",
+          "source_line": 979
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你答应过我一个上层区。",
+          "source_line": 982
+        },
+        {
+          "speaker": "Player",
+          "text": "我知道。所以才现在说，不等到办砸了再说。",
+          "source_line": 985
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "*把盘收好，很久没说话*",
+          "source_line": 988
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……好。至少你没装作扛得住。",
+          "source_line": 991
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "后面的事，我自己去办。",
+          "source_line": 994
+        }
+      ]
+    },
+    {
+      "id": "m14_b013",
+      "label": "共同收束：甲、乙、丙",
+      "source_line": 999,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "今天店里的事先放着。把要问的写好，回去休息。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "明天的短工，我不能推。资料我会带，但得晚一点。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那就晚一点。这里等得起。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我还以为你又要说，先照你安排的来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "时间是你留的。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我记着呢。你也记着就好。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m15_b001",
+      "label": "到店",
+      "source_line": 1023,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "接母亲出来要用的资料带来了。每一份都看过，日期也对上了。",
+          "source_line": 1026
+        },
+        {
+          "speaker": "Player",
+          "text": "放这边。你吃过了？",
+          "source_line": 1029
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "吃过。你呢？",
+          "source_line": 1032
+        },
+        {
+          "speaker": "Player",
+          "text": "等会儿。",
+          "source_line": 1035
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "上次你也是这句。",
+          "source_line": 1038
+        }
+      ]
+    },
+    {
+      "id": "m15_b002",
+      "label": "路线甲：核实交换",
+      "source_line": 1040,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "药单上的名字对上了。可是接人的地方，他们临时换了一处。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你去了？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "走到一半，回来了。那人说盘不带去，就别想见到下一位。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把折皱的记录放下，纸角被手指捏得很软。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我差一点就去了。你可以说“早告诉过你了”。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你带回来了。现在还能接着谈。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "原来的办理人，我找到了。他肯让我核放人手续，不经过那个传话的。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "名字、时间、地点分开记。办手续的确认了，我们再定交付。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你帮我再看一遍。尤其是他说可以省掉的那两项。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m15_b003",
+      "label": "路线乙：保护正在办理",
+      "source_line": 1054,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "保护申请要的资料带齐了。接手的人还没确认。我本来想，先把研究送去，免得又拖。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "研究一送，谁还替你等那个确认？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……又是先交东西，再等别人开口。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "药单放最上面。我去核渠道，你核接手的人。两边对上，才算办成。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她不能停的药，我单独抄了。接手的人答不出来，就不能只拿张通知让我放心。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "就照这个问。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m15_b004",
+      "label": "路线乙：保护未落实，替换上段",
+      "source_line": 1065,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "保护这一步先不算办成。今天我们没有能确认的接手安排。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "资料都准备了，还是不行？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "所以不能先送研究。按之前留的办法，改谈交盘换人，先核放人手续。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我不喜欢这个办法。可你现在说，总比让我等一个根本没办成的消息强。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m15_b005",
+      "label": "共同后续",
+      "source_line": 1073,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她从包里取出一份包好的食物，放在资料旁边，伸手推过去，又停在半途。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "多买了一份。钱照算，别又说替我留到工钱里。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "多少？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……算了，先吃。我要借这块地方把资料排完。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我看完这页。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我等你看。你别看漏。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m15_b006",
+      "label": "叙述",
+      "source_line": 1105,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把同一处日期指给你，等你看过，才在旁边打了一个小勾。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "这处你已经核过了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我知道。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "还不放心？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你也看一遍，我才敢往下算。就今天。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m16_b001",
+      "label": "路线甲：交换成功",
+      "source_line": 1129,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我见到母亲了。就在核过的那个地方，办理的人也没换。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "已经接出来了？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。我先见到她，确认了用药和手续，才把盘交过去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那个传话的还想把我领到别处。我没跟。他最后只能让开。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你自己核住了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……要是那天带着盘直接去，我连该找谁问她在哪儿，都不知道。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "现在知道了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她先问我瘦了多少。我准备了那么多话，她一句就全打乱了。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m16_b002",
+      "label": "路线甲追加：那三百",
+      "source_line": 1149,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "那三百，他们派人送到店里来了。",
+          "source_line": 1153
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你收了？",
+          "source_line": 1156
+        },
+        {
+          "speaker": "Player",
+          "text": "原样退回去了。让他带句话：这笔买卖，我这儿不做。",
+          "source_line": 1159
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "*愣了一下* 我还以为你会说，拿去给我母亲买药。",
+          "source_line": 1162
+        },
+        {
+          "speaker": "Player",
+          "text": "药钱有正经来路。那笔钱上，写着你母亲的价码。",
+          "source_line": 1165
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你那天说，我不是那个价。",
+          "source_line": 1168
+        },
+        {
+          "speaker": "Player",
+          "text": "她也不是。",
+          "source_line": 1171
+        }
+      ]
+    },
+    {
+      "id": "m16_b003",
+      "label": "路线乙：保护完成",
+      "source_line": 1173,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲安全转移了。我见过她，接手的人也把药单一项项对给我看了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "用药接上了？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "接上了。那张受理通知先来的时候，我还想催你赶紧送研究。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "后来我去核，才发现接人的时间还没定。我那时要是先送出去……",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你等到了确认。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "因为你让我把那张通知再看一遍。……这次我记住了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她见面就嫌我药单抄得太小。除了她，没人会刚见面就挑这个。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那就先安顿好她，再按商量好的处理研究。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。次序没忘。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m16_b004",
+      "label": "共同对白",
+      "source_line": 1190,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我本来想，进门先跟你把手续说清楚，再说后面的安排。",
+          "source_line": 1193
+        },
+        {
+          "speaker": "Player",
+          "text": "现在也能说。",
+          "source_line": 1196
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……说不出来。",
+          "source_line": 1199
+        },
+        {
+          "speaker": "Player",
+          "text": "过来。",
+          "source_line": 1202
+        }
+      ]
+    },
+    {
+      "id": "m16_b005",
+      "label": "叙述",
+      "source_line": 1204,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她绕到柜台边，停了一步。你张开手，她终于靠过来，额头抵在你肩上。刚想说话，呼吸先乱了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……让我站一会儿。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "站着吧。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我刚才一路都在想，回来要先告诉你哪一件。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "她回来了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……嗯。她回来了。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m16_b006",
+      "label": "稍后的共同收束",
+      "source_line": 1225,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "刚才那样，不许学给别人听。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "回去陪她。这里今天不用你做事。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那明天呢？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你想来就来。袖子先收一收，上次差点扫掉东西。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……知道。衣服我自己改，不许你先替我订。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "住处的事，我去找王尔德问问办法。你们母女总得有个能长住的地方。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她已经出来了。后面这些，你还打算管？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我答应的，又不只有接人。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我先回去。明天的事，明天再说。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m16_b007",
+      "label": "关系过渡修订",
+      "source_line": null,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "还有箱子的事。我没忘。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我知道。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这次谁来了，说了什么，哪一步没办成，你都告诉我了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我好几次想怪你拖着不办，最后又只能回来找你看。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "下次也照这样。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……下次有危险，还是先说。别等我问。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m17_b001",
+      "label": "到店",
+      "source_line": 1276,
+      "lines": [
+        {
+          "speaker": "Mother",
+          "text": "你好。我来买些日用品。埃莉诺说，不用挑最好看的，先挑结实的。",
+          "source_line": 1279
+        },
+        {
+          "speaker": "Player",
+          "text": "她以前可不这么挑。",
+          "source_line": 1282
+        },
+        {
+          "speaker": "Mother",
+          "text": "她现在会替我挑了，还嫌我挑得慢。",
+          "source_line": 1285
+        },
+        {
+          "speaker": "Player",
+          "text": "她今天没来？",
+          "source_line": 1288
+        },
+        {
+          "speaker": "Mother",
+          "text": "去办事了。出门前把来这里的路跟我说了两遍。",
+          "source_line": 1291
+        }
+      ]
+    },
+    {
+      "id": "m17_b003",
+      "label": "新档实付八百",
+      "source_line": 1295,
+      "lines": [
+        {
+          "speaker": "Mother",
+          "text": "她说，调查的钱是她自己挣的。你给的那笔，是预付的工钱。",
+          "source_line": 1298
+        }
+      ]
+    },
+    {
+      "id": "m17_b004",
+      "label": "旧档豁免：替换上一句",
+      "source_line": 1300,
+      "lines": [
+        {
+          "speaker": "Mother",
+          "text": "她说，调查的钱是她自己挣的。后来她回来找你，把帮忙的条件重新谈清楚了。",
+          "source_line": 1303
+        }
+      ]
+    },
+    {
+      "id": "m17_b005",
+      "label": "共同对白",
+      "source_line": 1305,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "嗯。我们谈了条件。",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "她讲过。哪些日子来，哪些事不能替她决定，记得很清楚。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你担心她？",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "她现在出门，常说“先去问问老板”。说完又补一句，是有事情要核。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "她问得也仔细。",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "我问她，是每件都拿不准，还是有人一起看过，她才放心。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "她怎么说？",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "嫌我问得太多，出去了一趟。回来又问，明天还有没有事要她做。",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "后面的事，让她自己想。我刚回来，不急着替她解释。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m17_b006",
+      "label": "路线甲追加",
+      "source_line": 1337,
+      "lines": [
+        {
+          "speaker": "Mother",
+          "text": "研究交回去，我舍不得。可她不必因为把我接回来，天天向我解释。",
+          "source_line": 1340
+        },
+        {
+          "speaker": "Player",
+          "text": "她怕你失望。",
+          "source_line": 1343
+        },
+        {
+          "speaker": "Mother",
+          "text": "那你替我告诉她：灯买回来还没装，人都在这儿了，先把眼前的日子过起来。",
+          "source_line": 1346
+        }
+      ]
+    },
+    {
+      "id": "m17_b007",
+      "label": "路线乙追加",
+      "source_line": 1348,
+      "lines": [
+        {
+          "speaker": "Mother",
+          "text": "复查和研究的事，我会继续跟进。你们已经替我跑了很多路。",
+          "source_line": 1351
+        },
+        {
+          "speaker": "Player",
+          "text": "她还列了一张要办的事。",
+          "source_line": 1354
+        },
+        {
+          "speaker": "Mother",
+          "text": "我看见了。那张纸上，你的店占了好几行。",
+          "source_line": 1357
+        }
+      ]
+    },
+    {
+      "id": "m17_b008",
+      "label": "实际交易结束后",
+      "source_line": 1359,
+      "lines": [
+        {
+          "speaker": "Mother",
+          "text": "就这些。按平常的价结。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "她特意交代的？",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "她说，别把家里的账也混进工钱里。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "算得挺清。",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "……她以前也爱说自己算得清。真到要拿主意的时候，又会在门口站一会儿。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我不催她。",
+          "source_line": null
+        },
+        {
+          "speaker": "Mother",
+          "text": "那就好。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m18_b002",
+      "label": "叙述",
+      "source_line": 1395,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她穿着平日的衣服，把袖口折进里面，用两针缝住。进门时先看了一眼柜台边那把空椅子。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "改的衣服还没取。今天先这样，不会再扫到东西了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "坐。先看这批。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……母亲那边今天没事。我把能做的都做完，才过来的。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "我还没问。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我先说。省得你又让我回去。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m18_b003",
+      "label": "叙述",
+      "source_line": 1428,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "这几个我看过了。价也写了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "拿给我。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你一伸手，我就又想把标签翻回去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "怕我挑？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我自己算的时候，明明觉得没错。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那就把怎么算的也说一遍。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m18_b004",
+      "label": "普通交易",
+      "source_line": 1440,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "先把我自己的货卖了，再给你干活。货款和工钱是两回事。",
+          "source_line": 1443
+        },
+        {
+          "speaker": "Player",
+          "text": "摆上来。",
+          "source_line": 1446
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "损坏的我放在旁边了，别混着估。",
+          "source_line": 1449
+        },
+        {
+          "speaker": "Player",
+          "text": "现在倒知道替我省事了。",
+          "source_line": 1452
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我是在替自己争一个公道价。",
+          "source_line": 1455
+        }
+      ]
+    },
+    {
+      "id": "m18_b005",
+      "label": "正常成交",
+      "source_line": 1457,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "行。跟我算的差不多。",
+          "source_line": 1460
+        }
+      ]
+    },
+    {
+      "id": "m18_b006",
+      "label": "未成交",
+      "source_line": 1462,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天不合适，我带去别处问。你这儿的活，我答应了就会做。",
+          "source_line": 1465
+        }
+      ]
+    },
+    {
+      "id": "m18_b007",
+      "label": "共同后续：笔",
+      "source_line": 1467,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "这张我写高了。只看见换过壳，没算里面的损耗。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "改回来。另一张你挑出的毛病，我没看见。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……那张也给我。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "笔就在手边。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "知道。我自己拿。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她拿起笔，先改错的那张，再把两张核过的并排放好。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m18_b008",
+      "label": "叙述",
+      "source_line": 1496,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "有一家想把整批都给我，便宜些。我本来准备答应。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "现在呢？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "想拿来一起看。……你没空，我就晚点再来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "先问清能不能分开验。你记的价也带来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她应完，又把包带拿起来，像是想立刻走。停了一会儿，才重新放下。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我发现我现在什么事，都想先来问你。这个习惯……得让我想想。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m18_b009",
+      "label": "追加：项目一已付，安顿结果尚未播放",
+      "source_line": 1508,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "还有住处的事。王尔德那边的人来过了。",
+          "source_line": 1512
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "新地方不大，可灯能看清字，母亲的东西也不用全堆在床边了。她让我告诉你——",
+          "source_line": 1515
+        },
+        {
+          "speaker": "Player",
+          "text": "别把店掏空？",
+          "source_line": 1518
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你怎么知道？",
+          "source_line": 1521
+        },
+        {
+          "speaker": "Player",
+          "text": "猜的。",
+          "source_line": 1524
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她还说，你算账的样子，比我刚来时像样多了。这句我原样带到，不负责解释。",
+          "source_line": 1527
+        }
+      ]
+    },
+    {
+      "id": "m18_b010",
+      "label": "离店",
+      "source_line": 1529,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "那批货的事，我先去问。下回带记录来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "拿不准就留着问。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……别说得这么顺口。我还在试着自己拿主意。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m19_b001",
+      "label": "到店",
+      "source_line": 1550,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她换上了改好的深色裙子，白围裙收得平整，头饰别得很端正。站在柜台前，手却不知道该压在裙边，还是放到桌上。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "袖口又改过一回。认货、搬东西都试了，不会碍事。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "那批货问过了？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "能分开验。我照你说的问了以后，对方把两件拿走，重新开了价。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "剩下的也照验。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我知道。写了自己的价，没先答应。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把记录放到你手边。这次没有用手盖住。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m19_b002",
+      "label": "若此前明知陷阱却未提醒，且尚未和解，先播放",
+      "source_line": 1567,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "还有件事得先说清楚。那个冒充叔叔的人送来的箱子，你当时已经知道不对。",
+          "source_line": 1570
+        },
+        {
+          "speaker": "Player",
+          "text": "知道。我应该告诉你。",
+          "source_line": 1573
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "后来你做的事，我都记得。但别拿你帮过我，或者那份约定，把这件事盖过去。",
+          "source_line": 1576
+        },
+        {
+          "speaker": "Player",
+          "text": "不会。是我当时做错了。对不起。",
+          "source_line": 1579
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……以后有事先告诉我。难听的也告诉我。我不想做最后一个知道的人。",
+          "source_line": 1582
+        }
+      ]
+    },
+    {
+      "id": "m19_b005",
+      "label": "叙述",
+      "source_line": 1590,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把核过的纸对齐，放下笔，没有立刻去拿包。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "前阵子，你让我先别交盘。我那时候，真想过自己拿去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你后来回来了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。后来母亲出来了，我以为就不用每件事都来找你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "可那批货，还有那两张标签……我先想的，还是拿来让你看一遍。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "你自己也看出了不少。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我知道。我不是想让你替我全做了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我是……你拿过主意以后，我能把手里的事做下去，不用一边做，一边猜还有哪里没看见。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她低头抚了一下围裙的折痕，又很快把手拿开。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m19_b006",
+      "label": "关系过渡修订",
+      "source_line": null,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "刚谈约定的时候，我不肯听你那种使唤人的口气。你记得吧。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "记得。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在也不是每一句都肯。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "知道。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "可有些事，我想先听你的。不是因为收了那笔工钱。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她像是想行一个礼，指尖刚碰到裙边，又放开。站了片刻，才重新抬起眼。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……主人。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m19_b007",
+      "label": "关系过渡修订",
+      "source_line": null,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "以前叫你那个称呼，我还可以说，是约定里写着。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在这句话，我得自己认。有些事，我就是想先听你的。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "听见了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "别用那种像早就知道的表情看我。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m19_b008",
+      "label": "关系过渡修订",
+      "source_line": null,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "听见了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你别接着逗。我刚才差点又改回去了。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "今天的东西，先放这边。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她应得很轻。收包时又回头看了一眼那叠记录，像是还不习惯自己刚刚说过的话。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m20_b001",
+      "label": "到店与合作",
+      "source_line": 1656,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天带了个生意消息来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "说。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "有人找能用的旧设备和材料。我说你这里可以看，没保证有货，也没许折扣。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "让他自己来。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。……我就是先来告诉你。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m20_b003",
+      "label": "成交后",
+      "source_line": 1676,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我介绍来买旧设备的那位客人，来过了？",
+          "source_line": 1679
+        },
+        {
+          "speaker": "Player",
+          "text": "来过。东西看了，价钱也谈了。",
+          "source_line": 1682
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我问的是我的眼光，不是让你给我对账！",
+          "source_line": 1685
+        }
+      ]
+    },
+    {
+      "id": "m20_b004",
+      "label": "未成交",
+      "source_line": 1687,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我介绍来买旧设备的那个人，没谈成就算了。别因为是我叫来的，就非得把货卖给他。",
+          "source_line": 1690
+        }
+      ]
+    },
+    {
+      "id": "m20_b005",
+      "label": "共同对白",
+      "source_line": 1692,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "今天的差事算做完了。",
+          "source_line": 1695
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……嗯。",
+          "source_line": 1698
+        },
+        {
+          "speaker": "Player",
+          "text": "你从进门起就在找时机。说吧，我听着。",
+          "source_line": 1701
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你看出来了？",
+          "source_line": 1704
+        },
+        {
+          "speaker": "Player",
+          "text": "同一块柜台，你擦了三遍。",
+          "source_line": 1707
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你别说话。让我先说完，不然我可能就不说了。",
+          "source_line": 1710
+        }
+      ]
+    },
+    {
+      "id": "m20_b006",
+      "label": "她先开口",
+      "source_line": 1712,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲出来以后，我给自己找过好多理由。做工，学认货，把你帮过的事一点点还上。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "可东西明明已经会看了，我还是想拿来给你看。没事要问，也会想店里今天忙不忙。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "所以才把同一块柜台擦三遍？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "让你先听完。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "上次那个称呼，我在路上想了很久。说完以后，又想了一路。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我愿意听你拿主意。也愿意替你照看这里。可我不是只想把差事做好。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把手从抹布上拿开，终于没有再去碰柜台上任何一件东西。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我喜欢你。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "想做你的恋人。也想继续在这里，做那个你能叫过来、能放心交代事情的人。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这次我想清楚了。不是你拿那笔钱，替我定的。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m20_b008",
+      "label": "选择一：主从恋爱确认",
+      "source_line": 1757,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "听明白了。做我的侍从，也做我的恋人。",
+          "source_line": 1760
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你回答得这么快，我准备了一晚上的话还没说完。",
+          "source_line": 1763
+        },
+        {
+          "speaker": "Player",
+          "text": "那就留着。以后慢慢说给我听。",
+          "source_line": 1766
+        },
+        {
+          "speaker": "Player",
+          "text": "过来。",
+          "source_line": 1769
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这次又要做什么？",
+          "source_line": 1772
+        },
+        {
+          "speaker": "Player",
+          "text": "牵你的手。",
+          "source_line": 1775
+        }
+      ]
+    },
+    {
+      "id": "m20_b009",
+      "label": "叙述",
+      "source_line": 1777,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把手递过来，握住以后，才慢慢呼出一口气。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那就好好牵。别一看见东西没摆正，就松开。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "还有条件？",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那个称呼，只许私下。这条我要现在说清楚。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "好。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "上层区那一半也还在。别以为我答应做恋人，你就能赖掉。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "不赖。",
+          "source_line": null
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她松开一点手，提起裙边。这回把那个礼慢慢行完，脸却别到了一旁。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……主人。今天的差事，还听你的。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "m20_b010",
+      "label": "选择二：转为普通恋人",
+      "source_line": 1804,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "我也喜欢你。约定作废吧，我们就做恋人。",
+          "source_line": 1807
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "作废？……那上层区那一半呢？",
+          "source_line": 1810
+        },
+        {
+          "speaker": "Player",
+          "text": "你想回去，凭你自己的名字也能回去。用不着拿差事来换。",
+          "source_line": 1813
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你对我还真有信心。",
+          "source_line": 1816
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。那以后我叫你的名字。你也别装没听见。",
+          "source_line": 1819
+        }
+      ]
+    },
+    {
+      "id": "m20_b011",
+      "label": "选择三：朋友",
+      "source_line": 1821,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "你对我很重要。但我想我们还是做朋友。",
+          "source_line": 1824
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……知道了。",
+          "source_line": 1827
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那约定也到这里吧。我不想一边当你的侍从，一边装作今天什么都没说过。",
+          "source_line": 1830
+        },
+        {
+          "speaker": "Player",
+          "text": "上层区的事——",
+          "source_line": 1833
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我自己去。我现在知道该从哪里开始了，这一点要谢谢你。",
+          "source_line": 1836
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以后有货，我还会来。价钱不合适，照样跟你争。",
+          "source_line": 1839
+        }
+      ]
+    },
+    {
+      "id": "m21_b001",
+      "label": "到店",
+      "source_line": 1851,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "我本来只是来买东西的。",
+          "source_line": 1854
+        },
+        {
+          "speaker": "Player",
+          "text": "现在呢？",
+          "source_line": 1857
+        },
+        {
+          "speaker": "Lydia",
+          "text": "现在想先问一句。埃莉诺真那么叫你？",
+          "source_line": 1860
+        },
+        {
+          "speaker": "Player",
+          "text": "她跟你说的？",
+          "source_line": 1863
+        },
+        {
+          "speaker": "Lydia",
+          "text": "前阵子我问她为什么急着走。她说，“主人还不知道我今天晚点过去”。",
+          "source_line": 1866
+        },
+        {
+          "speaker": "Lydia",
+          "text": "说完她自己也愣住了。然后让我别大惊小怪。",
+          "source_line": 1869
+        },
+        {
+          "speaker": "Player",
+          "text": "你做到了吗？",
+          "source_line": 1872
+        },
+        {
+          "speaker": "Lydia",
+          "text": "没有。",
+          "source_line": 1875
+        }
+      ]
+    },
+    {
+      "id": "m21_b002",
+      "label": "正常交易中",
+      "source_line": 1877,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "以前出门，别人替她提的袋子歪了一点她都要挑。现在跟我说，你忙起来就忘吃饭，笔也乱放。",
+          "source_line": 1880
+        },
+        {
+          "speaker": "Player",
+          "text": "她现在照样挑。",
+          "source_line": 1883
+        },
+        {
+          "speaker": "Lydia",
+          "text": "听出来了。可她挑完，是真的会去管。",
+          "source_line": 1886
+        }
+      ]
+    },
+    {
+      "id": "m21_b003",
+      "label": "新档实付八百",
+      "source_line": 1888,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "我问她，是不是那笔钱还没还完。她说那是工钱，又不是借款，叫我别什么都往欠债上猜。",
+          "source_line": 1891
+        }
+      ]
+    },
+    {
+      "id": "m21_b004",
+      "label": "旧档豁免：替换上一句",
+      "source_line": 1893,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "我问她，是不是欠了你什么。她说没有，是后来自己回来，把条件一条一条重新谈的。",
+          "source_line": 1896
+        }
+      ]
+    },
+    {
+      "id": "m21_b005",
+      "label": "若第9章按实际价值收购镯子，追加",
+      "source_line": 1898,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "那只镯子，我后来找人看过。你当时给的价确实公道。",
+          "source_line": 1901
+        },
+        {
+          "speaker": "Lydia",
+          "text": "她听我承认这句，比听人夸她自己还得意。",
+          "source_line": 1904
+        }
+      ]
+    },
+    {
+      "id": "m21_b006",
+      "label": "共同后续：上面的风声",
+      "source_line": 1906,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "上面已经有人在传了。说她在下层区，给一个开当铺的当侍女。",
+          "source_line": 1909
+        },
+        {
+          "speaker": "Player",
+          "text": "你怎么说？",
+          "source_line": 1912
+        },
+        {
+          "speaker": "Lydia",
+          "text": "我说，她还跟那个老板谈恋爱。说一半留一半，听着就像专门给人添堵。",
+          "source_line": 1915
+        },
+        {
+          "speaker": "Player",
+          "text": "他们什么反应？",
+          "source_line": 1918
+        },
+        {
+          "speaker": "Lydia",
+          "text": "跟我第一次听见差不多。你可以稍微得意一下，别这么明显。",
+          "source_line": 1921
+        },
+        {
+          "speaker": "Lydia",
+          "text": "不过我是认真的。她说要靠自己的名字回去。真到那天，会有人当着她的面，拿这件事做文章。",
+          "source_line": 1924
+        },
+        {
+          "speaker": "Player",
+          "text": "她准备好了。",
+          "source_line": 1927
+        },
+        {
+          "speaker": "Lydia",
+          "text": "……你倒比她还笃定。",
+          "source_line": 1930
+        }
+      ]
+    },
+    {
+      "id": "m21_b007",
+      "label": "离店",
+      "source_line": 1932,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "东西就这些。别因为我认识你的侍从，就给我开个看不懂的价。",
+          "source_line": 1935
+        },
+        {
+          "speaker": "Player",
+          "text": "她交代过，熟人照常算。",
+          "source_line": 1938
+        },
+        {
+          "speaker": "Lydia",
+          "text": "……她现在可真会替你说话。",
+          "source_line": 1941
+        }
+      ]
+    },
+    {
+      "id": "m22_b001",
+      "label": "路线甲：母女的生活",
+      "source_line": 1952,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲找到一点能做的活，跟种植有关，规模不大，她倒看得很认真。",
+          "source_line": 1955
+        },
+        {
+          "speaker": "Player",
+          "text": "你去帮她？",
+          "source_line": 1958
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "会去。她不让我整天守着，说我站在旁边，只会忍不住挑她的毛病。",
+          "source_line": 1961
+        }
+      ]
+    },
+    {
+      "id": "m22_b002",
+      "label": "路线乙：研究与复查",
+      "source_line": 1963,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "营养果重新结籽的研究，有回音了。不是明天大家就能吃上自己种的果子，还得试，还得有人肯做。",
+          "source_line": 1966
+        },
+        {
+          "speaker": "Player",
+          "text": "你母亲呢？",
+          "source_line": 1969
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "忙着配合复查，也忙着跟收到资料的人解释。她现在嫌一天不够长。",
+          "source_line": 1972
+        }
+      ]
+    },
+    {
+      "id": "m22_b003",
+      "label": "共同对白",
+      "source_line": 1974,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "莉迪亚说，她能在上面替我找份差事。我问做什么，她说，先有个位置，具体的以后再说。",
+          "source_line": 1977
+        },
+        {
+          "speaker": "Player",
+          "text": "你不会接。",
+          "source_line": 1980
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你怎么知道？",
+          "source_line": 1983
+        },
+        {
+          "speaker": "Player",
+          "text": "你要的不是一个位置。是让他们记住你的名字。",
+          "source_line": 1986
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……对。我想回去，可不是这样回去。",
+          "source_line": 1989
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她是好意，我知道。可我不想坐在一个连自己该做什么都不知道的位置上，每个月等人看她的面子给我发钱。",
+          "source_line": 1992
+        },
+        {
+          "speaker": "Player",
+          "text": "有人愿意介绍，不是坏事。",
+          "source_line": 1995
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我没拒绝介绍。她肯替我找愿意看样品的人，我当然去。可下一次，人家得是因为东西好、交货准，才来找我。",
+          "source_line": 1998
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我们说好的，是用我自己的名字。",
+          "source_line": 2001
+        },
+        {
+          "speaker": "Player",
+          "text": "那就照说好的来。",
+          "source_line": 2004
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。……所以那一半，你得接着欠着。",
+          "source_line": 2007
+        }
+      ]
+    },
+    {
+      "id": "m22_b004",
+      "label": "主从恋爱已确认",
+      "source_line": 2009,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "莉迪亚上次是不是来问你了？",
+          "source_line": 2012
+        },
+        {
+          "speaker": "Player",
+          "text": "问你是不是真那么叫我。",
+          "source_line": 2015
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我就知道。她听我说漏嘴那会儿的表情，像是我把整个上层区都输给了你。",
+          "source_line": 2018
+        },
+        {
+          "speaker": "Player",
+          "text": "你怎么解释的？",
+          "source_line": 2021
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说，你让我认货的时候会讲清楚理由；有人来威胁，你也没有把我推出去。至于我为什么喜欢你，她用不着看一份报告才肯接受。",
+          "source_line": 2024
+        },
+        {
+          "speaker": "Player",
+          "text": "没提我讨嫌？",
+          "source_line": 2027
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "提了。那部分她听得最认真。",
+          "source_line": 2030
+        }
+      ]
+    },
+    {
+      "id": "m22_b005",
+      "label": "可选实际回赠：她仍持有吊坠",
+      "source_line": 2032,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "还有这个。我一直戴着，想给你。",
+          "source_line": 2036
+        },
+        {
+          "speaker": "Player",
+          "text": "你母亲的吊坠？",
+          "source_line": 2039
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她知道。她说，别哪天又说自己没认真想过。",
+          "source_line": 2042
+        },
+        {
+          "speaker": "Player",
+          "text": "你想过了？",
+          "source_line": 2045
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "想过。她现在能亲口叫我的名字了。这个，我想放在另一个会等我回来的人那里。",
+          "source_line": 2048
+        }
+      ]
+    },
+    {
+      "id": "m22_b006",
+      "label": "接受",
+      "source_line": 2050,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "我收着。",
+          "source_line": 2053
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "别混进待售的东西里。这个没有价签。",
+          "source_line": 2056
+        }
+      ]
+    },
+    {
+      "id": "m22_b007",
+      "label": "婉拒实物、请她继续佩戴",
+      "source_line": 2058,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "你继续戴着。你的意思我记得。",
+          "source_line": 2061
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。那你每次看见它，都得记得，不许装作我没送过。",
+          "source_line": 2064
+        }
+      ]
+    },
+    {
+      "id": "m22_b008",
+      "label": "若吊坠此前已售，替换实物回赠",
+      "source_line": 2066,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我想过把吊坠找回来。现在还没有。",
+          "source_line": 2069
+        },
+        {
+          "speaker": "Player",
+          "text": "不用急。",
+          "source_line": 2072
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。我不是今天非得拿出一件东西，才能把话说清楚。",
+          "source_line": 2075
+        }
+      ]
+    },
+    {
+      "id": "m23_b001",
+      "label": "到店",
+      "source_line": 2088,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天没带调查的消息，也没有谁托我传条件。",
+          "source_line": 2091
+        },
+        {
+          "speaker": "Player",
+          "text": "那是来做什么的？",
+          "source_line": 2094
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你自己想。",
+          "source_line": 2097
+        },
+        {
+          "speaker": "Player",
+          "text": "来看主人？",
+          "source_line": 2100
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……这不是挺能想明白的吗。",
+          "source_line": 2103
+        }
+      ]
+    },
+    {
+      "id": "m23_b002",
+      "label": "普通经营后的短聊",
+      "source_line": 2105,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "你这儿还是有好多东西摆得不好看。",
+          "source_line": 2108
+        },
+        {
+          "speaker": "Player",
+          "text": "当初是谁说这种地方不算商店的？",
+          "source_line": 2111
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我。你要我认几次？",
+          "source_line": 2114
+        },
+        {
+          "speaker": "Player",
+          "text": "现在呢？",
+          "source_line": 2117
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在也算不上漂亮。灯还是那盏灯，柜台这个角还是会磨袖口。",
+          "source_line": 2120
+        },
+        {
+          "speaker": "Player",
+          "text": "那还来？",
+          "source_line": 2123
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "来。我的主人在这里，难道让我去别人的店擦柜台？",
+          "source_line": 2126
+        }
+      ]
+    },
+    {
+      "id": "m23_b003",
+      "label": "终局纪念物",
+      "source_line": 2128,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "给你留了这个。香水，会自己补满。别一闻见就问卖多少钱。",
+          "source_line": 2131
+        },
+        {
+          "speaker": "Player",
+          "text": "你不留着？",
+          "source_line": 2134
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "想闻的时候，我来找你就行。",
+          "source_line": 2137
+        }
+      ]
+    },
+    {
+      "id": "m23_b005",
+      "label": "恋爱协助",
+      "source_line": 2142,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "拾荒那边，我也会帮你留意。哪里还有东西，哪些人说话不算数，我现在也认得一些了。",
+          "source_line": 2145
+        },
+        {
+          "speaker": "Player",
+          "text": "那我以后能省点力。",
+          "source_line": 2148
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "是让你少走冤枉路，不是让你什么都不管。",
+          "source_line": 2151
+        }
+      ]
+    },
+    {
+      "id": "m23_b006",
+      "label": "乙线追加：复核回执",
+      "source_line": 2153,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "差点忘了。*把一张折好的纸放在柜台上* 母亲的复核材料，正式递进去了。",
+          "source_line": 2157
+        },
+        {
+          "speaker": "Player",
+          "text": "这次给回执了？",
+          "source_line": 2160
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "给了。调查报告、转移记录、研究交出去时的签收，一样没少。日期我让他们当面写清楚，省得下次又说找不到。",
+          "source_line": 2163
+        },
+        {
+          "speaker": "Player",
+          "text": "留好。",
+          "source_line": 2166
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "当然。母亲的清白，不能只剩谁口头答应过的一句话。",
+          "source_line": 2169
+        }
+      ]
+    },
+    {
+      "id": "m23_b007",
+      "label": "专属收束",
+      "source_line": 2171,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "今天的事做完了。过来。",
+          "source_line": 2174
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你现在说这句，我都分不清后面是活儿，还是别的。",
+          "source_line": 2177
+        },
+        {
+          "speaker": "Player",
+          "text": "别的。",
+          "source_line": 2180
+        }
+      ]
+    },
+    {
+      "id": "m23_b008",
+      "label": "叙述",
+      "source_line": 2182,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她走到柜台边，你握住她的手。她抬头看了你一会儿，先靠了过来，在你唇上轻轻碰了一下。",
+          "source_line": 2183
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这次不用你吩咐。",
+          "source_line": 2186
+        },
+        {
+          "speaker": "Player",
+          "text": "学得很快。",
+          "source_line": 2189
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "少用你验货的那种语气。",
+          "source_line": 2192
+        },
+        {
+          "speaker": "Player",
+          "text": "喜欢你。",
+          "source_line": 2195
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……这句可以。我也喜欢你，主人。",
+          "source_line": 2198
+        }
+      ]
+    },
+    {
+      "id": "m23_b009",
+      "label": "中点：她要回去",
+      "source_line": 2200,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "还有件事。今天不说，我怕自己又往后拖。",
+          "source_line": 2203
+        },
+        {
+          "speaker": "Player",
+          "text": "说吧。",
+          "source_line": 2206
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以前我总觉得，只要回到上面，这里的事就都可以当作没发生过。",
+          "source_line": 2209
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在我还是想回去。但不是为了忘掉这里。",
+          "source_line": 2212
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我想让上面那些人看清楚——我在下层区学会了认货、算账、自己挣饭钱。我想用这个名字走回去，不用躲着谁，也不用把你藏起来。",
+          "source_line": 2215
+        },
+        {
+          "speaker": "Player",
+          "text": "那就开始准备。王尔德那里有一份清单。",
+          "source_line": 2218
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你又先想好了。",
+          "source_line": 2221
+        },
+        {
+          "speaker": "Player",
+          "text": "答应你的那一半，总得有人记着。",
+          "source_line": 2224
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我自己的那部分，我会做好。你也别为了赶进度，把店都赔进去。",
+          "source_line": 2227
+        },
+        {
+          "speaker": "Player",
+          "text": "怕主人破产？",
+          "source_line": 2230
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "怕你把给我的承诺，写成一张你自己都不看的账单。",
+          "source_line": 2233
+        }
+      ]
+    },
+    {
+      "id": "m23_b010",
+      "label": "叙述",
+      "source_line": 2235,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她走到门口，回头看了你一眼。\n“那一天来之前，我还是你的侍从。”她说，“所以你得好好欠着。”",
+          "source_line": 2236
+        }
+      ]
+    },
+    {
+      "id": "m24_b001",
+      "label": "到店与立绘",
+      "source_line": 2287,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "别那样看我。刚拿着王尔德办的通行证去过上层区，没来得及换衣服就下来了。",
+          "source_line": 2291
+        },
+        {
+          "speaker": "Player",
+          "text": "很适合你。",
+          "source_line": 2294
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "当然适合。这是照着上层区的规矩做的。袖口的扣子，领口的高度，一样都不能错。",
+          "source_line": 2297
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以前这种衣服，我衣柜里有一整排。现在就这一件，我穿的时候连坐下都小心。",
+          "source_line": 2300
+        },
+        {
+          "speaker": "Player",
+          "text": "进去了？",
+          "source_line": 2303
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "进去了。先看货，等会儿我慢慢跟你说。",
+          "source_line": 2306
+        }
+      ]
+    },
+    {
+      "id": "m24_b002",
+      "label": "检查口",
+      "source_line": 2308,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "检查口的人把我的材料翻了很久。翻到一半，抬头问我：“你就是那个挪用公款案的女儿？”",
+          "source_line": 2311
+        },
+        {
+          "speaker": "Player",
+          "text": "你怎么答的？",
+          "source_line": 2314
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说我叫埃莉诺，材料上写着。",
+          "source_line": 2317
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他又问：“听说你在下层区，给一个开当铺的当侍女？”",
+          "source_line": 2320
+        },
+        {
+          "speaker": "Player",
+          "text": "……",
+          "source_line": 2323
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "旁边有人笑出了声。是以前常来我家吃饭的一个人，我小时候还叫过他叔叔。",
+          "source_line": 2326
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你知道最好笑的是什么吗？我那时候一点都不慌。",
+          "source_line": 2329
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我站在那里，就想起你验货的样子。人家说得再好听，你只看东西。东西没毛病，话就不用回。",
+          "source_line": 2332
+        }
+      ]
+    },
+    {
+      "id": "m24_b003",
+      "label": "下城区人情结算时",
+      "source_line": 2334,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "你托的那位熟人，前一天就把我的材料递进去了。每一项手续经了谁的手，他都记着名字。",
+          "source_line": 2337
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "检查口那人查到一半，看见经手人的名字，脸色就变了。后面那几页，他翻得飞快。",
+          "source_line": 2340
+        },
+        {
+          "speaker": "Player",
+          "text": "那位熟人说什么了？",
+          "source_line": 2343
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他说，“当铺老板托的事，下城区没人想办砸”。……你在下面到底欠了多少人情，又攒了多少？",
+          "source_line": 2346
+        }
+      ]
+    },
+    {
+      "id": "m24_b004",
+      "label": "纯现金结算时",
+      "source_line": 2348,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "所有手续都是按正常程序走的，每一页都盖了章，费用一笔一笔写着。",
+          "source_line": 2351
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他翻来翻去，找不到一处能挑的毛病，最后只能把证件推回给我。",
+          "source_line": 2354
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你说过，东西没毛病，价钱就硬气。原来手续也是一样。",
+          "source_line": 2357
+        }
+      ]
+    },
+    {
+      "id": "m24_b005",
+      "label": "共同后续",
+      "source_line": 2359,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "他最后说了一句：“欢迎回来，埃莉诺小姐。”",
+          "source_line": 2362
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "走之前，那个检查员还想跟我套近乎。我说今天赶时间，有人在下面等我。",
+          "source_line": 2365
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他愣在那儿的样子，跟我第一天在你这儿看见价签的时候差不多。",
+          "source_line": 2368
+        },
+        {
+          "speaker": "Player",
+          "text": "那个检查员，叫什么名字？",
+          "source_line": 2371
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你问这个干什么？",
+          "source_line": 2374
+        },
+        {
+          "speaker": "Player",
+          "text": "记下来。以后他的东西，我这儿不收。",
+          "source_line": 2377
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你这人还记仇。",
+          "source_line": 2380
+        },
+        {
+          "speaker": "Player",
+          "text": "记账。",
+          "source_line": 2383
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "*没忍住，笑了一声* ……那就记着吧。",
+          "source_line": 2386
+        },
+        {
+          "speaker": "Player",
+          "text": "那条路长吗？",
+          "source_line": 2389
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "很长。我以前从来不觉得它有那么长。",
+          "source_line": 2392
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "有人认出我，先问母亲，再问我现在靠什么过日子。我说，我在下层区做事。老板识货，账也比他们算得清楚。",
+          "source_line": 2395
+        }
+      ]
+    },
+    {
+      "id": "m24_b006",
+      "label": "甲线追加",
+      "source_line": 2397,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲还是不能回去。我问得很清楚，我的通行复核，不等于她的流放撤销。",
+          "source_line": 2400
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她说，我能进去，把该办的事办了就行。别为了等她，连自己的路也停下。",
+          "source_line": 2403
+        }
+      ]
+    },
+    {
+      "id": "m24_b007",
+      "label": "乙线追加",
+      "source_line": 2405,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲的案子还在复核。上面有人问起，我只说已经确认的部分，没替后面的事打包票。",
+          "source_line": 2408
+        }
+      ]
+    },
+    {
+      "id": "m24_b008",
+      "label": "乙线已撤案：替换上一句",
+      "source_line": 2410,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲的正式通知我也带着。有人问起，我就递给他看。她的清白已经说清楚了；我的生意，还得我自己做。",
+          "source_line": 2413
+        },
+        {
+          "speaker": "Player",
+          "text": "收好。一步一步来。",
+          "source_line": 2416
+        }
+      ]
+    },
+    {
+      "id": "m24_b009",
+      "label": "约定还没到",
+      "source_line": 2418,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "通行证上是你的名字。约定——",
+          "source_line": 2421
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "还没到。",
+          "source_line": 2424
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "证件上写的是我的名字。可他们嘴里叫的，还是“那个案子的女儿”，还是“当铺的侍女”。",
+          "source_line": 2427
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说过的回去，不是拿到一张通行证。是让他们提起我的时候，说的就是埃莉诺。",
+          "source_line": 2430
+        },
+        {
+          "speaker": "Player",
+          "text": "那就接着来。",
+          "source_line": 2433
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。……所以你还欠着。",
+          "source_line": 2436
+        }
+      ]
+    },
+    {
+      "id": "m24_b010",
+      "label": "离店前",
+      "source_line": 2438,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "主人，我问你。这身好看，还是那身好看？",
+          "source_line": 2441
+        },
+        {
+          "speaker": "Player",
+          "text": "这身是穿给上面的人看的。",
+          "source_line": 2444
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那身呢？",
+          "source_line": 2447
+        },
+        {
+          "speaker": "Player",
+          "text": "穿给我看的。",
+          "source_line": 2450
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……算你答对。",
+          "source_line": 2453
+        }
+      ]
+    },
+    {
+      "id": "m25_b001",
+      "label": "到店，使用常服",
+      "source_line": 2465,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天先别说话。看这个。",
+          "source_line": 2468
+        }
+      ]
+    },
+    {
+      "id": "m25_b002",
+      "label": "叙述",
+      "source_line": 2470,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把一个小包放在柜台上，解开，里面是一支收拾干净的螺丝刀，刀头没有崩口，握柄重新紧固过，旁边附着一张写满字的标签。",
+          "source_line": 2471
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这是第一单的样品。上层区有户人家要翻修种植间，要一批靠得住的旧设备和材料。",
+          "source_line": 2474
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "新货贵，旧货他们不敢买。上面的人都觉得，下层区来的东西，十有八九是偷的。",
+          "source_line": 2477
+        },
+        {
+          "speaker": "Player",
+          "text": "那你怎么让他们敢买？",
+          "source_line": 2480
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "来路、成色、修过哪里、换过什么，全写在标签上。哪件是谁从哪片拾荒区找出来的，我都记着。",
+          "source_line": 2483
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "货从下面来，验货在下面，买家在上面。两头都得懂，这生意才做得成。",
+          "source_line": 2486
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你先验。像你以前验我的货那样。",
+          "source_line": 2489
+        }
+      ]
+    },
+    {
+      "id": "m25_b003",
+      "label": "叙述",
+      "source_line": 2491,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "你拿起螺丝刀，翻过来，看刀头，看握柄的接合处，看她标签上写的每一条。她站在柜台对面，没有出声。",
+          "source_line": 2492
+        },
+        {
+          "speaker": "Player",
+          "text": "……",
+          "source_line": 2495
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你在找毛病。",
+          "source_line": 2498
+        },
+        {
+          "speaker": "Player",
+          "text": "找不到。",
+          "source_line": 2501
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "*很慢地吸了一口气，又很慢地吐出来*",
+          "source_line": 2504
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这句话，我等了好久。",
+          "source_line": 2507
+        },
+        {
+          "speaker": "Player",
+          "text": "得意了？",
+          "source_line": 2510
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "得意。你不许说我。",
+          "source_line": 2513
+        }
+      ]
+    },
+    {
+      "id": "m25_b004",
+      "label": "这一单的麻烦",
+      "source_line": 2515,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "交货之前，有人去跟那户人家说，我的货是从当铺收来的赃物。",
+          "source_line": 2518
+        },
+        {
+          "speaker": "Player",
+          "text": "谁？",
+          "source_line": 2521
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "一家做了很多年旧货生意的上层区商行。以前我家也找他们买过东西。",
+          "source_line": 2524
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那户人家来问我。我就把每一件的来路记录摆出来，一页一页给他们看。",
+          "source_line": 2527
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "最后他们问那家商行：你们的货，能拿出一样的记录吗？",
+          "source_line": 2530
+        },
+        {
+          "speaker": "Player",
+          "text": "拿得出吗？",
+          "source_line": 2533
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "拿不出。",
+          "source_line": 2536
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "合同是我签的。签的是我自己的名字。",
+          "source_line": 2539
+        }
+      ]
+    },
+    {
+      "id": "m25_b005",
+      "label": "上层区人情结算时，追加",
+      "source_line": 2541,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "带我去见那户人家的介绍人，是看在你的面子上才来的。他说，“那位当铺老板的眼光，上面也有人听说过”。",
+          "source_line": 2544
+        }
+      ]
+    },
+    {
+      "id": "m25_b006",
+      "label": "纯现金结算时，追加",
+      "source_line": 2546,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "训练、样品、试做，你一笔都没替我省。所以那些人挑了一晚上，也挑不出一处偷工减料。",
+          "source_line": 2549
+        }
+      ]
+    },
+    {
+      "id": "m25_b007",
+      "label": "甲线说明",
+      "source_line": 2551,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "用的都是能正常买到的设备和现有种子，不碰已经交回去的研究。母亲教我的基础知识，倒是全用上了。",
+          "source_line": 2554
+        }
+      ]
+    },
+    {
+      "id": "m25_b008",
+      "label": "乙线说明",
+      "source_line": 2556,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "公开研究那边在试种，也来问过我采购的事。我做的是核验和供货，不会把母亲的研究写成我的。",
+          "source_line": 2559
+        }
+      ]
+    },
+    {
+      "id": "m25_b009",
+      "label": "共同后续",
+      "source_line": 2561,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "训练的钱没白花。",
+          "source_line": 2564
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "不止是训练。",
+          "source_line": 2567
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我第一次来卖拾荒的东西，你让我先报价，再告诉我哪里报错了。我现在做的，就是那天学的东西。",
+          "source_line": 2570
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "所以这一单，有你的一半。",
+          "source_line": 2573
+        },
+        {
+          "speaker": "Player",
+          "text": "一半太多了。",
+          "source_line": 2576
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说一半就是一半。……正经夸我做成的事，会很难吗，主人？",
+          "source_line": 2579
+        },
+        {
+          "speaker": "Player",
+          "text": "做得很好。",
+          "source_line": 2582
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……这还差不多。",
+          "source_line": 2585
+        }
+      ]
+    },
+    {
+      "id": "m26_b001",
+      "label": "到店",
+      "source_line": 2596,
+      "lines": [
+        {
+          "speaker": "Buyer",
+          "text": "这就是那家当铺？……比我想的小。",
+          "source_line": 2600
+        },
+        {
+          "speaker": "Player",
+          "text": "买还是卖？",
+          "source_line": 2603
+        },
+        {
+          "speaker": "Buyer",
+          "text": "都不是。我来谈生意。",
+          "source_line": 2606
+        },
+        {
+          "speaker": "Buyer",
+          "text": "上面最近有个新供货人，叫埃莉诺。货干净，记录全，价钱也公道。我们几家都在打听，她的货到底从哪里来。",
+          "source_line": 2609
+        },
+        {
+          "speaker": "Buyer",
+          "text": "打听来打听去，都打听到你这儿。",
+          "source_line": 2612
+        },
+        {
+          "speaker": "Player",
+          "text": "所以？",
+          "source_line": 2615
+        },
+        {
+          "speaker": "Buyer",
+          "text": "所以我想直接跟你谈。货你供，我收，中间不用再经她的手。",
+          "source_line": 2618
+        },
+        {
+          "speaker": "Buyer",
+          "text": "你一个下层区开当铺的，跟着她能分到多少？我给你开她的两倍。",
+          "source_line": 2621
+        }
+      ]
+    },
+    {
+      "id": "m26_b003",
+      "label": "选择一",
+      "source_line": 2628,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "我这儿的货，按我这儿的价卖。她的生意，不归我卖。",
+          "source_line": 2631
+        },
+        {
+          "speaker": "Buyer",
+          "text": "两倍也不行？",
+          "source_line": 2634
+        },
+        {
+          "speaker": "Player",
+          "text": "十倍也不归我。",
+          "source_line": 2637
+        }
+      ]
+    },
+    {
+      "id": "m26_b004",
+      "label": "选择二",
+      "source_line": 2639,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "想要她的货，就上去跟她谈。我这儿只是她那条路的一头。",
+          "source_line": 2642
+        },
+        {
+          "speaker": "Buyer",
+          "text": "她要是不肯降价呢？",
+          "source_line": 2645
+        },
+        {
+          "speaker": "Player",
+          "text": "那就说明你给的价不对。",
+          "source_line": 2648
+        }
+      ]
+    },
+    {
+      "id": "m26_b005",
+      "label": "共同后续",
+      "source_line": 2650,
+      "lines": [
+        {
+          "speaker": "Buyer",
+          "text": "*笑了一声，把一张名片收回口袋*",
+          "source_line": 2653
+        },
+        {
+          "speaker": "Buyer",
+          "text": "她说得果然没错。",
+          "source_line": 2656
+        },
+        {
+          "speaker": "Player",
+          "text": "她说什么了？",
+          "source_line": 2659
+        },
+        {
+          "speaker": "Buyer",
+          "text": "我先去找的她。我说，你不降价，我就绕过你，去找你下面的人。",
+          "source_line": 2662
+        },
+        {
+          "speaker": "Buyer",
+          "text": "她说，“你去。他不会绕过我。”",
+          "source_line": 2665
+        },
+        {
+          "speaker": "Buyer",
+          "text": "我还以为她在虚张声势。",
+          "source_line": 2668
+        },
+        {
+          "speaker": "Player",
+          "text": "现在呢？",
+          "source_line": 2671
+        },
+        {
+          "speaker": "Buyer",
+          "text": "现在我知道，上面为什么都在打听你是谁了。",
+          "source_line": 2674
+        },
+        {
+          "speaker": "Buyer",
+          "text": "今天就当我是来买东西的。你照常开价。",
+          "source_line": 2677
+        }
+      ]
+    },
+    {
+      "id": "m26_b007",
+      "label": "离店",
+      "source_line": 2682,
+      "lines": [
+        {
+          "speaker": "Buyer",
+          "text": "下回我上去，会按她的价谈。",
+          "source_line": 2685
+        },
+        {
+          "speaker": "Buyer",
+          "text": "顺便说一句，老板。她跟人介绍自己的供货人，从来不说“下层区一家当铺”。她说的是“我信得过的人”。",
+          "source_line": 2688
+        }
+      ]
+    },
+    {
+      "id": "m27_b002",
+      "label": "到店，使用上层区常服立绘",
+      "source_line": 2703,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "结束了。我是说，王尔德帮着筹备的那场亮相，今天办完了。",
+          "source_line": 2706
+        },
+        {
+          "speaker": "Player",
+          "text": "怎么样？",
+          "source_line": 2709
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "来了很多人。比我想的多。",
+          "source_line": 2712
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "样品摆在最前面，记录摆在旁边。有人一进门就去看衣服和首饰，看了两眼，又回头去看那些记录。",
+          "source_line": 2715
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "后来有人一直问到最后。问下一批货什么时候能到，问能不能签长期。",
+          "source_line": 2718
+        }
+      ]
+    },
+    {
+      "id": "m27_b003",
+      "label": "乙线且正式撤案已完成：追加",
+      "source_line": 2720,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲来了。",
+          "source_line": 2723
+        },
+        {
+          "speaker": "Player",
+          "text": "她能上去了？",
+          "source_line": 2726
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "能了。正式通知下来的时候，她把那张纸看了很久。今天出门前，又拿出来看了一遍。",
+          "source_line": 2729
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她站在最后一排，从头听到尾。我说错了一个数，她在下面皱眉头。……跟以前在农场的时候一模一样。",
+          "source_line": 2732
+        }
+      ]
+    },
+    {
+      "id": "m27_b004",
+      "label": "乙线且仍在复核：替换以上母亲出席段",
+      "source_line": 2734,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲没有来。正式结果还没下来，她说案子了结之前，不想站到人前去。",
+          "source_line": 2737
+        },
+        {
+          "speaker": "Player",
+          "text": "你跟她讲过今天的事了？",
+          "source_line": 2740
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "昨晚先对着她讲了一遍。她挑了三个地方，今天真的都有人问到。等通知下来，我再带她去看。",
+          "source_line": 2743
+        }
+      ]
+    },
+    {
+      "id": "m27_b005",
+      "label": "甲线追加",
+      "source_line": 2745,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲还是不能上去。前一天晚上，她让我在屋子里对着她讲了一遍，挑出了三个地方。",
+          "source_line": 2748
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今天那三个地方，都有人问到了。",
+          "source_line": 2751
+        }
+      ]
+    },
+    {
+      "id": "m27_b006",
+      "label": "条件",
+      "source_line": 2753,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "然后有个人来找我。上层区最大的几家采购行之一，管事的亲自来的。",
+          "source_line": 2756
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他给的合同，比我现在所有的单子加起来都大。",
+          "source_line": 2759
+        },
+        {
+          "speaker": "Player",
+          "text": "条件呢？",
+          "source_line": 2762
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你猜得到。",
+          "source_line": 2765
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他说，把下层区那家当铺从供货和合作名单上拿掉。上面的人不喜欢跟当铺打交道，何况外面还有些不好听的传言。",
+          "source_line": 2768
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……跟莉迪亚当初一样。那时候是“别再提你母亲的案子”，今天是“别再提那家当铺”。",
+          "source_line": 2771
+        },
+        {
+          "speaker": "Player",
+          "text": "你怎么说？",
+          "source_line": 2774
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "当着所有人的面说的。",
+          "source_line": 2777
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "“我的货从哪里来，谁替我验过，谁出的第一笔本钱，名单上一个字都不删。您嫌当铺，可以去找别人谈。”",
+          "source_line": 2780
+        },
+        {
+          "speaker": "Player",
+          "text": "然后？",
+          "source_line": 2783
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "然后整个屋子都安静了。",
+          "source_line": 2786
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "再然后，站在后面的一个人走过来，说他愿意签。又过了一会儿，第二个人也来了。",
+          "source_line": 2789
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那个管事的走的时候，脸色比我第一次吃营养果还难看。",
+          "source_line": 2792
+        }
+      ]
+    },
+    {
+      "id": "m27_b007",
+      "label": "上层区人情结算时，追加",
+      "source_line": 2794,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "来的那些人，有一半是你的人情请来的。有人跟我说，“替那位老板来捧个场”。",
+          "source_line": 2797
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我跟他们说，场不用捧。来了，就看货。",
+          "source_line": 2800
+        }
+      ]
+    },
+    {
+      "id": "m27_b008",
+      "label": "下城区人情结算时，追加",
+      "source_line": 2802,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "有人当场问我，货源稳不稳。我说，下城区的拾荒人和货主，有一半认得我主……认得我的合作人。",
+          "source_line": 2805
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你没听见。我改口了。",
+          "source_line": 2808
+        },
+        {
+          "speaker": "Player",
+          "text": "听见了。",
+          "source_line": 2811
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……那你就当没听见。在场的人里，只有莉迪亚笑出了声。",
+          "source_line": 2814
+        }
+      ]
+    },
+    {
+      "id": "m27_b009",
+      "label": "纯现金结算时，追加",
+      "source_line": 2816,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "场地、样品、往来安排，你一笔都没省。没人能说这场亮相是靠谁的面子撑起来的。",
+          "source_line": 2819
+        }
+      ]
+    },
+    {
+      "id": "m27_b010",
+      "label": "莉迪亚",
+      "source_line": 2821,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "莉迪亚也在。散场以后她跑过来，第一句话不是夸我。",
+          "source_line": 2824
+        },
+        {
+          "speaker": "Player",
+          "text": "那是什么？",
+          "source_line": 2827
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她说，“他们刚才一直在叫你的名字”。",
+          "source_line": 2830
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我这才发现。一整天，没有一个人叫我“那个案子的女儿”。",
+          "source_line": 2833
+        }
+      ]
+    },
+    {
+      "id": "m27_b011",
+      "label": "共同收束",
+      "source_line": 2835,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "那约定——",
+          "source_line": 2838
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你别说。",
+          "source_line": 2841
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "下次来，我自己说。约定是我开的条件，到期也该由我来说。",
+          "source_line": 2844
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今天我得先回去，把这身衣服换了。",
+          "source_line": 2847
+        },
+        {
+          "speaker": "Player",
+          "text": "换成哪身？",
+          "source_line": 2850
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你说呢。",
+          "source_line": 2853
+        }
+      ]
+    },
+    {
+      "id": "m28_b002",
+      "label": "叙述",
+      "source_line": 2870,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她在门口站了一会儿，像第一次穿这套衣服来时一样，先看清店里有没有别的客人，才走到柜台前。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今天有件正事要说。说完，我还想在你这儿待一会儿。",
+          "source_line": 2874
+        },
+        {
+          "speaker": "Player",
+          "text": "说。",
+          "source_line": 2877
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我开的条件，你还记得吗？",
+          "source_line": 2880
+        },
+        {
+          "speaker": "Player",
+          "text": "到你用自己的名字，重新走进上层区的那天。",
+          "source_line": 2883
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那天到了。",
+          "source_line": 2886
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "他们记下了我的名字。说起我的时候，后面不接母亲的案子，也不接谁家的侍女。就是埃莉诺。",
+          "source_line": 2889
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你答应我的那一半，做到了。",
+          "source_line": 2892
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "所以——你答应的事做到了。我欠你的工，也做完了。",
+          "source_line": 2895
+        },
+        {
+          "speaker": "Player",
+          "text": "嗯。",
+          "source_line": 2898
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你就只说一个“嗯”？",
+          "source_line": 2901
+        },
+        {
+          "speaker": "Player",
+          "text": "是你说要由你来说的。",
+          "source_line": 2904
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……",
+          "source_line": 2907
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那份约定，两清了。可我今天来，不是要跟你道别。",
+          "source_line": 2910
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今天我在上面推掉了一张很好的桌子。有人想请我吃饭，谈下一季的单子。",
+          "source_line": 2913
+        },
+        {
+          "speaker": "Player",
+          "text": "为什么推？",
+          "source_line": 2916
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我说今天已经有安排了。",
+          "source_line": 2919
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你就没有别的要问的？比如，工钱和承诺都算清了，我为什么还穿着这身衣服来？",
+          "source_line": 2922
+        },
+        {
+          "speaker": "Player",
+          "text": "为什么？",
+          "source_line": 2925
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "因为这回，没人拿约定等着我。",
+          "source_line": 2928
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以前穿来，我总还想着自己欠了什么。今天没有那些了，我还是想穿给你看。",
+          "source_line": 2931
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我能去上层区任何一家店，能跟任何一个人谈生意，能推掉任何一张桌子。",
+          "source_line": 2934
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我选这里。",
+          "source_line": 2937
+        }
+      ]
+    },
+    {
+      "id": "m28_b003",
+      "label": "叙述",
+      "source_line": 2939,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她走到你身边。这回不用再把围裙上的折痕抚平，也没有把伸向裙边的手收回去。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "主人。",
+          "source_line": 2943
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "不是以前没地方去，只能留在这里的时候。是现在。你听清楚。",
+          "source_line": 2946
+        }
+      ]
+    },
+    {
+      "id": "m28_b005",
+      "label": "选择一",
+      "source_line": 2954,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "那就重新约一次。这回，没有期限。",
+          "source_line": 2957
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……条件我来开。",
+          "source_line": 2960
+        },
+        {
+          "speaker": "Player",
+          "text": "开吧。",
+          "source_line": 2963
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "第一，不许拿那个称呼逗进店的人。这条不变。",
+          "source_line": 2966
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "第二，我在上面的事，你不许替我做主。你在下面的事，我会管——管到你嫌烦为止。",
+          "source_line": 2969
+        },
+        {
+          "speaker": "Player",
+          "text": "那拿主意呢？",
+          "source_line": 2972
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "一起拿。我又不是不讲理。",
+          "source_line": 2975
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "第三，每天吃饭。我会检查。",
+          "source_line": 2978
+        },
+        {
+          "speaker": "Player",
+          "text": "还有吗？",
+          "source_line": 2981
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "没有期限。……你自己说的。",
+          "source_line": 2984
+        }
+      ]
+    },
+    {
+      "id": "m28_b006",
+      "label": "选择二",
+      "source_line": 2986,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "听清楚了。我的大小姐，过来。",
+          "source_line": 2989
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "已经很近了。",
+          "source_line": 2992
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……算了，还能再近一点。",
+          "source_line": 2995
+        }
+      ]
+    },
+    {
+      "id": "m28_b007",
+      "label": "选择三",
+      "source_line": 2997,
+      "lines": [
+        {
+          "speaker": "Player",
+          "text": "既然是你自己选的，这声主人，我就当真了。",
+          "source_line": 3000
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你倒是听得很认真。",
+          "source_line": 3003
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那就记牢了。",
+          "source_line": 3006
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "人前，叫你的名字。",
+          "source_line": 3009
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "没人的时候——",
+          "source_line": 3012
+        }
+      ]
+    },
+    {
+      "id": "m28_b008",
+      "label": "叙述",
+      "source_line": 3014,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她停了一下，像是故意要让你等。",
+          "source_line": 3015
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "主人。",
+          "source_line": 3018
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这回是我自己定的。谁也改不了，你也不行。",
+          "source_line": 3021
+        }
+      ]
+    },
+    {
+      "id": "m28_b010",
+      "label": "叙述",
+      "source_line": 3025,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她靠进你怀里，裙边轻轻碰过柜台。这套衣服是她拿旧裙子、用自己挣的钱改出来的。第一次穿来时，她连手放在哪里都拿不准，那个礼也没有行完。如今她买得起贵得多的衣服，来见你时，却还是挑了这一套。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "有人说，我现在比以前还难请。",
+          "source_line": 3029
+        },
+        {
+          "speaker": "Player",
+          "text": "是吗？",
+          "source_line": 3032
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "对别人是。",
+          "source_line": 3035
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你叫我，我就来。",
+          "source_line": 3038
+        }
+      ]
+    },
+    {
+      "id": "m28_b011",
+      "label": "结尾叙述",
+      "source_line": 3040,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她第一次走进这家当铺的时候，说这种地方算不上商店，连柜台都不愿意多碰一下。\n后来她在这里认货、算账、擦柜台，把笔放到你顺手的那一边，把换过壳的零件单独挑出来，一次次在门口回头说“明天见，主人”。\n如今上层区重新记住了她的名字。有人等她的答复，有人请她看样品，也有人愿意把一笔正经生意交到她手上。谈起那位下层区的当铺老板，她从来不肯让人用一句“碰巧帮过忙”轻轻带过。\n你没有搬去上层区。当铺照常开门，柜台边仍有她熟悉的位置。\n有时她带着正式事务回来；有时换好那套衣服，等最后一位客人离开，才走到你身边。\n她能独自走进那些曾经对她关上的门。她也知道，自己愿意向谁低下头，再抬起眼睛，叫一声主人。",
+          "source_line": 3041
+        }
+      ]
+    },
+    {
+      "id": "world_b003",
+      "label": "正式结果：沿用既有新闻展示",
+      "source_line": 3069,
+      "lines": [
+        {
+          "speaker": "News",
+          "text": "空间站最大水培农场前负责人挪用公款案经复核，原判决正式撤销。原案相关指控与程序问题将另行调查。",
+          "source_line": 3072
+        },
+        {
+          "speaker": "News",
+          "text": "营养果自主结籽试种继续推进。研究人员表示，将继续公开核验已有试种记录。",
+          "source_line": 3075
+        }
+      ]
+    },
+    {
+      "id": "world_b004",
+      "label": "结果后下一安全短聊：主从恋爱、普通恋爱与朋友均可使用",
+      "source_line": 3077,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲那桩案子，撤销原判的正式通知拿到了。她先看自己的名字，又把最后那行看了一遍。",
+          "source_line": 3081
+        },
+        {
+          "speaker": "Player",
+          "text": "她说什么？",
+          "source_line": 3084
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "什么也没说。过了很久，才说晚上想做顿像样的饭。去拿碗的时候，拿了三只。",
+          "source_line": 3087
+        },
+        {
+          "speaker": "Player",
+          "text": "那我得早点关店。",
+          "source_line": 3090
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。她让我告诉你，别带东西。人来就行。",
+          "source_line": 3093
+        }
+      ]
+    },
+    {
+      "id": "world_b005",
+      "label": "若第27章已完成且当时母亲未出席，追加",
+      "source_line": 3095,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "下次我带她上去看那间展示室。不是补哪场应酬，就是想让她看看，我把事情做成了什么样。",
+          "source_line": 3098
+        }
+      ]
+    },
+    {
+      "id": "wait_b001",
+      "label": "第一段：钱还没齐",
+      "source_line": 3109,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "别为了赶这件事，把店里该留的钱也交了。",
+          "source_line": 3112
+        },
+        {
+          "speaker": "Player",
+          "text": "钱还差一些。",
+          "source_line": 3115
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那就慢慢攒。我又没说明天一定办完。",
+          "source_line": 3118
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我等得起。约定又没写日期。",
+          "source_line": 3121
+        }
+      ]
+    },
+    {
+      "id": "wait_b002",
+      "label": "第二段：人情暂时不够",
+      "source_line": 3123,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "王尔德说的那笔优惠，也还没谈下来？",
+          "source_line": 3126
+        },
+        {
+          "speaker": "Player",
+          "text": "还得让那边的人多认得我一些。现在办，就是原价。",
+          "source_line": 3129
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "能省就省。真想先办，照原价付也行，别把自己逼得太紧。",
+          "source_line": 3132
+        }
+      ]
+    },
+    {
+      "id": "wait_b003",
+      "label": "第三段：她也在准备",
+      "source_line": 3134,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "你准备的时候，我也把自己能做的事又理了一遍。总不能只让你一个人忙。",
+          "source_line": 3137
+        },
+        {
+          "speaker": "Player",
+          "text": "没闲着？",
+          "source_line": 3140
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "当然。你又不是花钱买一尊摆着好看的东西回来。",
+          "source_line": 3143
+        },
+        {
+          "speaker": "Player",
+          "text": "好看也是真的。",
+          "source_line": 3146
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……等我把这份做完，再听你说。",
+          "source_line": 3149
+        }
+      ]
+    },
+    {
+      "id": "daily_b002",
+      "label": "日常一：主人也会放错东西",
+      "source_line": 3165,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "你找的是这支笔？",
+          "source_line": 3168
+        },
+        {
+          "speaker": "Player",
+          "text": "怎么在你那儿？",
+          "source_line": 3171
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "从你放错的地方拿回来的。已经第二次了。",
+          "source_line": 3174
+        },
+        {
+          "speaker": "Player",
+          "text": "我的侍从记得挺清。",
+          "source_line": 3177
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "不记清，主人就要把找东西的时间全花在问我身上。",
+          "source_line": 3180
+        },
+        {
+          "speaker": "Player",
+          "text": "那也不错。",
+          "source_line": 3183
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……想跟我说话就直说。别拿乱放东西当借口。",
+          "source_line": 3186
+        }
+      ]
+    },
+    {
+      "id": "daily_b003",
+      "label": "日常二：挑食的资格",
+      "source_line": 3188,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "带了点吃的。别先问花了多少，我自己的账记着呢。",
+          "source_line": 3191
+        },
+        {
+          "speaker": "Player",
+          "text": "你以前不是嫌这种东西？",
+          "source_line": 3194
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在也嫌。只是这家的做法还能吃。",
+          "source_line": 3197
+        },
+        {
+          "speaker": "Player",
+          "text": "给主人的就只有“还能吃”？",
+          "source_line": 3200
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这已经是我挑过最好的一份了。你知道我挑了多久吗？",
+          "source_line": 3203
+        },
+        {
+          "speaker": "Player",
+          "text": "那我认真吃。",
+          "source_line": 3206
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯。吃完告诉我，下次还要不要。",
+          "source_line": 3209
+        }
+      ]
+    },
+    {
+      "id": "daily_b004",
+      "label": "日常三：她决定让谁听见",
+      "source_line": 3211,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "刚才门口有人问，我是不是在这里做事。",
+          "source_line": 3214
+        },
+        {
+          "speaker": "Player",
+          "text": "你怎么说？",
+          "source_line": 3217
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "说是。他又问，我在上层区也这么给人帮忙吗。",
+          "source_line": 3220
+        },
+        {
+          "speaker": "Player",
+          "text": "你生气了？",
+          "source_line": 3223
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "有一点。所以我告诉他：我只给主人帮这个忙。换了别人，出多少钱也请不到。",
+          "source_line": 3226
+        },
+        {
+          "speaker": "Player",
+          "text": "不是说只在私下叫？",
+          "source_line": 3229
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你不许拿我逗人。我自己想说，是另一回事。",
+          "source_line": 3232
+        },
+        {
+          "speaker": "Player",
+          "text": "说得对。",
+          "source_line": 3235
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那就别一直笑。……至少等我转过身再笑。",
+          "source_line": 3238
+        }
+      ]
+    },
+    {
+      "id": "daily_b005",
+      "label": "日常四：今天没有差事",
+      "source_line": 3240,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天看着挺整齐。没有活给我？",
+          "source_line": 3243
+        },
+        {
+          "speaker": "Player",
+          "text": "有。陪我待一会儿。",
+          "source_line": 3246
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这也算？",
+          "source_line": 3249
+        },
+        {
+          "speaker": "Player",
+          "text": "算。",
+          "source_line": 3252
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那我坐哪儿？",
+          "source_line": 3255
+        },
+        {
+          "speaker": "Player",
+          "text": "近一点。",
+          "source_line": 3258
+        }
+      ]
+    },
+    {
+      "id": "daily_b006",
+      "label": "叙述",
+      "source_line": 3260,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她挨着你坐下，把手放在你碰得到的地方。过了一会儿，见你还在看账，便轻轻碰了碰你的手背。",
+          "source_line": 3261
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "主人，差事是你派的。别把人叫过来，又不理她。",
+          "source_line": 3264
+        }
+      ]
+    },
+    {
+      "id": "tragic_b002",
+      "label": "丙1：研究交付，目标第46天",
+      "source_line": 3279,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "营养果的研究送去报社了。对方确认能读，会继续核实。",
+          "source_line": 3282
+        },
+        {
+          "speaker": "Player",
+          "text": "你母亲那边有消息吗？",
+          "source_line": 3285
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "还没有。我问过了。",
+          "source_line": 3288
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今天先让我做点事吧。不然我坐着，就会一直想，是不是再等一会儿消息就来了。",
+          "source_line": 3291
+        },
+        {
+          "speaker": "Player",
+          "text": "坐这边，把核过的纸放一起。别的先不管。",
+          "source_line": 3294
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……好。",
+          "source_line": 3297
+        }
+      ]
+    },
+    {
+      "id": "tragic_b004",
+      "label": "叙述",
+      "source_line": 3301,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "母亲遇害的消息已经得到确认。她再来时，没有把背包放到惯常的位置。",
+          "source_line": 3302
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "消息是真的。",
+          "source_line": 3305
+        },
+        {
+          "speaker": "Player",
+          "text": "埃莉诺……",
+          "source_line": 3308
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "别说我们已经尽力了。我现在听不进去。",
+          "source_line": 3311
+        },
+        {
+          "speaker": "Player",
+          "text": "好。你想坐就坐一会儿。",
+          "source_line": 3314
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "还有那个约定。",
+          "source_line": 3317
+        },
+        {
+          "speaker": "Player",
+          "text": "到这里就结束了。",
+          "source_line": 3320
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你答应我的那一半……上层区……",
+          "source_line": 3323
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我现在不想要了。",
+          "source_line": 3326
+        },
+        {
+          "speaker": "Player",
+          "text": "我知道。",
+          "source_line": 3329
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那八百——",
+          "source_line": 3332
+        },
+        {
+          "speaker": "Player",
+          "text": "是你的工钱。你为店里做过的事，我记得。",
+          "source_line": 3335
+        }
+      ]
+    },
+    {
+      "id": "tragic_b005",
+      "label": "旧档豁免：替换上面“那八百”起的两句",
+      "source_line": 3337,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "可你帮我的那些事——",
+          "source_line": 3340
+        },
+        {
+          "speaker": "Player",
+          "text": "不用算成欠我的。今天先顾好你自己。",
+          "source_line": 3343
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我今天真的做不了任何事。",
+          "source_line": 3346
+        },
+        {
+          "speaker": "Player",
+          "text": "不用做。",
+          "source_line": 3349
+        }
+      ]
+    },
+    {
+      "id": "tragic_b006",
+      "label": "丙3：遗物，目标第50天",
+      "source_line": 3351,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "母亲留下的东西，拿到了一点。我本来想整理，打开以后又不知道先拿哪件。",
+          "source_line": 3354
+        },
+        {
+          "speaker": "Player",
+          "text": "可以慢慢来。",
+          "source_line": 3357
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以前怕没钱，怕没消息。现在有些事终于不用怕了，可我一点也没觉得轻松。",
+          "source_line": 3360
+        }
+      ]
+    },
+    {
+      "id": "tragic_b007",
+      "label": "若吊坠仍由她持有",
+      "source_line": 3362,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "这个我先留着。今天不想送，也不想卖。",
+          "source_line": 3365
+        },
+        {
+          "speaker": "Player",
+          "text": "留好。",
+          "source_line": 3368
+        }
+      ]
+    },
+    {
+      "id": "tragic_b008",
+      "label": "若吊坠此前已售",
+      "source_line": 3370,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我以前还想，等她出来，让她陪我去把吊坠找回来。",
+          "source_line": 3373
+        },
+        {
+          "speaker": "Player",
+          "text": "你想去的时候，我陪你去问。",
+          "source_line": 3376
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……以后吧。",
+          "source_line": 3379
+        }
+      ]
+    },
+    {
+      "id": "tragic_b009",
+      "label": "丙4：加入革命军，目标第52天",
+      "source_line": 3381,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我决定加入革命军。",
+          "source_line": 3384
+        },
+        {
+          "speaker": "Player",
+          "text": "想清楚以后要做什么了吗？",
+          "source_line": 3387
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "没全想清楚。但我不能只等下一次有人被这样带走，再来数一笔钱。",
+          "source_line": 3390
+        },
+        {
+          "speaker": "Player",
+          "text": "那就把要去的地方、能联系的人都记清楚。别谁说一句好听的，你就跟着走。",
+          "source_line": 3393
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我会的。你教我的那些，我没全丢下。",
+          "source_line": 3396
+        }
+      ]
+    },
+    {
+      "id": "tragic_b010",
+      "label": "丙5：武器需求，目标第54天",
+      "source_line": 3398,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我需要一件能用的武器。不是看起来吓人的那种，要真的靠得住。",
+          "source_line": 3401
+        },
+        {
+          "speaker": "Player",
+          "text": "有合适的就给你看。没有，也不会拿坏东西凑数。",
+          "source_line": 3404
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。按东西谈。",
+          "source_line": 3407
+        }
+      ]
+    },
+    {
+      "id": "tragic_b012",
+      "label": "交易或说明无货后",
+      "source_line": 3412,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天的账，先算到这里。",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "别的不用急着算。",
+          "source_line": null
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我知道。有些事，不是换一张价签就能放下的。",
+          "source_line": null
+        }
+      ],
+      "revision": "motivation_1"
+    },
+    {
+      "id": "tragic_b013",
+      "label": "丙6：莉迪亚单独来访，目标第55天",
+      "source_line": 3423,
+      "lines": [
+        {
+          "speaker": "Lydia",
+          "text": "埃莉诺跟我说了。她要跟革命军的人走，我没劝住。",
+          "source_line": 3426
+        },
+        {
+          "speaker": "Player",
+          "text": "你听她说完了吗？",
+          "source_line": 3429
+        },
+        {
+          "speaker": "Lydia",
+          "text": "这次听完了。她还说，店里的约定已经结束，谁也不欠谁。",
+          "source_line": 3432
+        },
+        {
+          "speaker": "Lydia",
+          "text": "她让我别来这儿替她吵架。……我以前是不是总让人觉得，我一开口就会把事情弄坏？",
+          "source_line": 3435
+        },
+        {
+          "speaker": "Player",
+          "text": "这次你听她的就好。",
+          "source_line": 3438
+        },
+        {
+          "speaker": "Lydia",
+          "text": "……嗯。",
+          "source_line": 3441
+        }
+      ]
+    },
+    {
+      "id": "tragic_b014",
+      "label": "丙7：离开前的谈话，目标第57天",
+      "source_line": 3443,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "快跟革命军的人走了，我却还在想，要是事情不是这样，我现在大概还在这儿挑你摆货的毛病。",
+          "source_line": 3446
+        },
+        {
+          "speaker": "Player",
+          "text": "你现在也能挑。",
+          "source_line": 3449
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那张标签歪了。",
+          "source_line": 3452
+        },
+        {
+          "speaker": "Player",
+          "text": "看见了。",
+          "source_line": 3455
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……我会记得这些的。不是每一件事，都得跟着最后发生的事一起变坏。",
+          "source_line": 3458
+        },
+        {
+          "speaker": "Player",
+          "text": "以后有机会，回来看看。",
+          "source_line": 3461
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好。但你不用等一个我保证不了的日子。",
+          "source_line": 3464
+        }
+      ]
+    },
+    {
+      "id": "tragic_b015",
+      "label": "丙8：出发，目标第59天",
+      "source_line": 3466,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "今天来拿最后一点东西。跟革命军走以后，就不会这么常来了。",
+          "source_line": 3469
+        }
+      ]
+    },
+    {
+      "id": "tragic_b016",
+      "label": "玩家处理",
+      "source_line": 3471,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "香水留给你。以后闻见，别只想起我最难看的时候。",
+          "source_line": 3475
+        },
+        {
+          "speaker": "Player",
+          "text": "我还记得你第一次擦柜台，嫌布太粗。",
+          "source_line": 3478
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那块布本来就太粗。",
+          "source_line": 3481
+        },
+        {
+          "speaker": "Player",
+          "text": "路上小心。",
+          "source_line": 3484
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你也是。别忙得连饭都忘了。",
+          "source_line": 3487
+        }
+      ]
+    },
+    {
+      "id": "exit_b002",
+      "label": "她主动结束约定",
+      "source_line": 3507,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我说过，哪天让我觉得是在拿我抵账，我当天就走。",
+          "source_line": 3511
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "你不愿再提箱子的事，可我不能当它没发生。今天就到这里。",
+          "source_line": 3514
+        }
+      ]
+    },
+    {
+      "id": "exit_b005",
+      "label": "玩家擅自交盘、出售研究或隐瞒私下交易",
+      "source_line": 3522,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "你把母亲的研究数据盘交出去了？",
+          "source_line": 3525
+        },
+        {
+          "speaker": "Player",
+          "text": "……是。",
+          "source_line": 3528
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "母亲在哪儿？你见到放人的手续了吗？",
+          "source_line": 3531
+        }
+      ]
+    },
+    {
+      "id": "exit_b006",
+      "label": "叙述",
+      "source_line": 3533,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "你拿不出任何核实过的消息。",
+          "source_line": 3534
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我问的不是你拿了多少。我问她在哪儿。",
+          "source_line": 3537
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "第一天我就说过，母亲和研究不在那个约定里。",
+          "source_line": 3540
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我照约定来做事，把知道的全告诉你，也等你核实消息。你答应先告诉我的事，为什么偏偏不算数？",
+          "source_line": null
+        },
+        {
+          "speaker": "Player",
+          "text": "埃莉诺——",
+          "source_line": 3546
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "不用再叫我过来了。这里的差事，我不做了。",
+          "source_line": 3549
+        }
+      ]
+    },
+    {
+      "id": "exit_b008",
+      "label": "玩家瞒着她公开研究",
+      "source_line": 3554,
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "我是从别人那里听说的。你已经把研究公开了。",
+          "source_line": 3557
+        },
+        {
+          "speaker": "Player",
+          "text": "是。",
+          "source_line": 3560
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我母亲还没有保护。你知道，我也知道。",
+          "source_line": 3563
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "原来你要我把每一件事都告诉你，自己却可以一句都不说。",
+          "source_line": 3566
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "约定结束了。以后我做什么，不用再向你交代。",
+          "source_line": 3569
+        }
+      ]
+    },
+    {
+      "id": "ending_b001",
+      "label": "玩家平安留在空间站，母亲生还，基础主从恋爱已确认，归来篇未完成",
+      "source_line": 3580,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "后来，人们渐渐习惯了那位上层区出身的姑娘来当铺帮忙。她待客还是挑剔，替老板说起话来却一点不含糊。",
+          "source_line": 3581
+        },
+        {
+          "speaker": "Narrator",
+          "text": "有人出更高的价请她去做事，她先问差事，再谈价钱；要是对方连那个称呼也想一起买走，她就抬起下巴，让他去别处问。",
+          "source_line": 3582
+        },
+        {
+          "speaker": "Narrator",
+          "text": "那份约定还没有到期。她不急，你也不急。柜台边那支笔，总朝着你顺手的方向放。",
+          "source_line": 3583
+        },
+        {
+          "speaker": "Narrator",
+          "text": "等店里只剩你们，她才靠过来问：“主人，今天还要让我等多久？”",
+          "source_line": 3584
+        }
+      ]
+    },
+    {
+      "id": "ending_b002",
+      "label": "归来篇进行中，按已完成的最高一幕追加一句",
+      "source_line": 3586,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她们有了一个能长住的地方。灯能看清字，母亲的工作台也终于摆开了。",
+          "source_line": 3587
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她已经重新走过上层区的检查口，回来时却仍然先到你的柜台前。",
+          "source_line": 3588
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她开始用自己的名字签下生意。你付出的准备，没有只变成一句感谢。",
+          "source_line": 3589
+        },
+        {
+          "speaker": "Narrator",
+          "text": "上层区有人打听过你是谁。她每次都说，那是她信得过的人。",
+          "source_line": 3590
+        },
+        {
+          "speaker": "Narrator",
+          "text": "上层区已经记住了她的名字。那份约定该由她亲口说到期，她还在等一个合适的晚上。",
+          "source_line": 3591
+        }
+      ]
+    },
+    {
+      "id": "ending_b003",
+      "label": "玩家平安留在空间站，进阶结局完成",
+      "source_line": 3594,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "后来，上层区的人提起埃莉诺，不再只说她母亲当年有多大的农场。他们谈她做成的生意、对货的判断，也会谈起那位一直留在下层区开当铺的人。",
+          "source_line": 3595
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她从不避讳谁出了最初的本钱，谁在她还没有机会的时候替她准备了机会。若有人以为再出一笔更高的价，就能让她换一个主人，她只会请对方把生意和妄想分清楚。",
+          "source_line": 3596
+        },
+        {
+          "speaker": "Narrator",
+          "text": "忙完自己的事，她仍会回到你这里，换上那套一直留着的衣服。你招招手，那位如今被整个上层区认真邀请的姑娘，便带着一点只有你熟悉的傲气走过来。",
+          "source_line": 3597
+        },
+        {
+          "speaker": "Narrator",
+          "text": "“今天想先听我说外面的事，还是先让我陪你，主人？”",
+          "source_line": 3598
+        }
+      ]
+    },
+    {
+      "id": "ending_b004",
+      "label": "乙线追加：已撤案",
+      "source_line": 3600,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她母亲的名字也回到了上层区。母女偶尔一起上去，又一起下来；在这家当铺门口，母亲总会先停一步，替女儿把领口理正。",
+          "source_line": 3602
+        },
+        {
+          "speaker": "Narrator",
+          "text": "那张撤案通知被她母亲收在抽屉最上层。母女俩谁也没再提起那场官司，只是吃饭的时候，偶尔会多摆一只碗。",
+          "source_line": 3603
+        }
+      ]
+    },
+    {
+      "id": "ending_b005",
+      "label": "乙线追加：未撤案",
+      "source_line": 3605,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "复核材料已经递了上去，那张正式通知还没有到。她把每一份回执收好，办完自己的事，仍会回去陪母亲吃饭。",
+          "source_line": 3606
+        }
+      ]
+    },
+    {
+      "id": "ending_b006",
+      "label": "玩家必须离开空间站，母亲生还，主从恋爱已确认",
+      "source_line": 3609,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她先替你核对行程，又一件件问清要带走什么、留下什么。你说已经没有差事要她做，她没理你，直到最后一项也有了着落。",
+          "source_line": 3610
+        },
+        {
+          "speaker": "Narrator",
+          "text": "母亲的安顿和她自己的去向，还要按当时的条件来安排。她没把“跟你走”说成一句话就能做到的事，却把联系你的办法记得比你还牢。",
+          "source_line": 3611
+        },
+        {
+          "speaker": "Narrator",
+          "text": "告别时，她握住你的手：“主人，到了地方先告诉我。别让我总是最后一个知道。”",
+          "source_line": 3612
+        }
+      ]
+    },
+    {
+      "id": "ending_b007",
+      "label": "玩家被捕或长期失去自由，主从恋爱已确认",
+      "source_line": 3614,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她开始打听你的下落，核实每一条能核实的消息。有人只肯给一句含糊的保证，她就接着追问谁负责、什么时候能见到人。",
+          "source_line": 3615
+        },
+        {
+          "speaker": "Narrator",
+          "text": "结果不会因为你们相爱就自动改变。她能做多少，取决于这个结局还留下多少余地。",
+          "source_line": 3616
+        },
+        {
+          "speaker": "Narrator",
+          "text": "但她一直记得，你曾经让她别一个人扛。现在轮到她把消息一件件查清楚，再去找你。",
+          "source_line": 3617
+        }
+      ]
+    },
+    {
+      "id": "ending_b008",
+      "label": "玩家死亡，主从恋爱已确认",
+      "source_line": 3619,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她后来又来过一次。站在柜台前，习惯性地想问今天先做什么。",
+          "source_line": 3620
+        },
+        {
+          "speaker": "Narrator",
+          "text": "没有人回答。她把那支笔摆回你惯用的地方，站了很久，最后再也没有去动它。",
+          "source_line": 3621
+        },
+        {
+          "speaker": "Narrator",
+          "text": "往后她仍要照顾母亲、做生意、过自己的日子。只是有些再普通不过的吩咐，她再也听不到了。",
+          "source_line": 3622
+        }
+      ]
+    },
+    {
+      "id": "ending_b010",
+      "label": "母亲遇害，双方仍信任",
+      "source_line": 3627,
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她偶尔传回消息，写得很短。问到最后，总要加一句：你还在那家店里吗？",
+          "source_line": 3628
+        },
+        {
+          "speaker": "Narrator",
+          "text": "有一次她说，又看见一张写得很潦草的价签，差一点习惯性地替人重写。信写到这里停了一下，后面才补上一句：你的那张，记得换掉。",
+          "source_line": 3629
+        }
+      ]
+    }
+  ]
+}

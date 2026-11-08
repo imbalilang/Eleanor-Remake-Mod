@@ -41,7 +41,8 @@ namespace EleanorRomance
             Add("测试：后日谈", TestEpilogue);
             Add("测试：旧档档案员", TestOldSavePrompt);
             Add("测试：好感 +5", AddAffection);
-            Add("标记完整恋爱线（测试）", UnlockScenario);
+            Add("标记完整恋爱线（测试）", MarkRomanceComplete);
+            RegisterMaidTests();
         }
 
         private static void Add(string label, Action action, bool tall = false)
@@ -137,9 +138,11 @@ namespace EleanorRomance
             RomanceState.UncleAccepted = true;
             RomanceState.UncleInspected = true;
             RomanceState.TrapSprung = true;
-            RomanceState.Arrested = true;
-            RomanceState.Rescued = false;
-            QueueTestChapter(5);
+            VanillaEleanorBridge.RecordArrest(6);
+            PlayerStore.Instance.storeClientData.eleanorArrestDay = StoreStation.Instance.dayCounter - 2;
+            RomanceState.LastQueuedDay = -1;
+            PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(VanillaEleanorBridge.IsOurClient);
+            PlayerStore.Instance.storeClientManager.CheckStoryLineEleanor();
         }
 
         private static void TestScavenger()
@@ -322,6 +325,14 @@ namespace EleanorRomance
                 return;
             }
 
+            if (VanillaEleanorBridge.RescuePending)
+            {
+                PlayerStore.Instance.storeClientManager.CheckStoryLineEleanor();
+                return;
+            }
+            int maidEvent=MaidStory.EventForDay(MaidState.Today);
+            if(maidEvent>0){QueueMaidEvent(maidEvent);return;}
+
             int chapter = RomanceState.Chapter == 0 ? 1 : RomanceState.Chapter;
             if (chapter >= RomanceState.ChapterComplete)
             {
@@ -366,9 +377,7 @@ namespace EleanorRomance
                 StoreClientManager manager = PlayerStore.Instance.storeClientManager;
                 if (manager.clientStack != null)
                 {
-                    manager.clientStack.RemoveAll(c => c != null
-                        && !string.IsNullOrEmpty(c.identifier)
-                        && c.identifier.StartsWith("er_story_", StringComparison.Ordinal));
+                    manager.clientStack.RemoveAll(VanillaEleanorBridge.IsOurClient);
                 }
 
                 StoreClient client = factory();
@@ -438,10 +447,71 @@ namespace EleanorRomance
             StoryDirector.Notify("Affection: " + RomanceState.Affection);
         }
 
-        private static void UnlockScenario()
+        private static void MarkRomanceComplete()
         {
             MetaProgress.UnlockTrueEnding();
-            ScenarioRegistration.RefreshAfterUnlock();
+            StoryDirector.Notify(L.Get("er_notice_true_unlock"));
+        }
+
+        private static void RegisterMaidTests()
+        {
+            Add("测试：侍从入口 / Attendant entry",()=>{SetupCommon();RomanceState.Savings=800;QueueTestChapter(12);},true);
+            Add("测试：旧800序章 / Legacy continuation",()=>
+            {
+                SetupCommon();RomanceState.Chapter=13;RomanceState.PendingChapter=0;
+                RomanceState.Romance=4;RomanceState.Savings=800;
+                MaidState.FeatureVersion=MaidState.CurrentVersion;MaidState.LegacyResume=1;
+                MaidState.LegacyDueDay=MaidState.Today;MaidState.Text("legacy_source","debug-fixture");
+                RomanceState.Romance=0;QueueMaidEvent(MaidStory.LegacyVisit);
+            },true);
+            Add("测试：女仆首秀 / Maid debut",()=>{SetupMaidFixture(false);QueueTestChapter(19);},true);
+            Add("测试：侍从告白 / Attendant confession",()=>{SetupMaidFixture(false);QueueTestChapter(21);},true);
+            Add("测试：侍从基础结局 / Base conclusion",()=>{SetupMaidFixture(true);QueueTestChapter(24);},true);
+            Add("测试：王尔德P1 / Wilde housing",()=>{SetupMaidFixture(false);MaidProjects.OnLoaded();ModHelper.OpenWildNetwork();},true);
+            Add("测试：23章后未付P1 / Late housing",()=>
+            {SetupMaidFixture(true);StoryDirector.CompleteCore();MaidState.BasicComplete=true;MaidState.BasicDay=MaidState.Today;MaidState.ProgressDay=MaidState.Today;MaidProjects.OnLoaded();ModHelper.OpenWildNetwork();},true);
+            foreach(int value in new[]{24,25,26,27,28})
+            {
+                int chapter=value;
+                Add("测试：归来"+chapter+" / Return "+chapter,()=>
+                {
+                    SetupMaidFixture(true);StoryDirector.CompleteCore();MaidState.BasicComplete=true;
+                    MaidState.BasicDay=MaidState.Today-12;MaidState.Progress=chapter-1;MaidState.ProgressDay=MaidState.Today-3;
+                    // Explicit debug-only paid fixtures: no actual deduction, not a playthrough.
+                    for(int p=1;p<=4;p++)
+                    {
+                        bool delivered=p==1 || p==2&&chapter>24 || p==3&&chapter>25 || p==4&&chapter>27;
+                        MaidState.Flag("p"+p+".paid",true);MaidState.Flag("p"+p+".shown",delivered);
+                        MaidState.Text("p"+p+".plan","er_maid_p"+p+"_cash");MaidState.SetInt("p"+p+".day",MaidState.Today-5);
+                    }
+                    QueueMaidEvent(chapter);
+                },true);
+            }
+            Add("测试：乙线撤案新闻 / Review news",()=>
+            {
+                SetupMaidFixture(true);StoryDirector.CompleteCore();MaidWorldEvents.SubmitReceipt();
+                MaidState.SetInt("world.due_day",MaidState.Today);MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
+                StoryDirector.Notify("Review state="+MaidWorldEvents.State+" (3=published)");
+            },true);
+            Add("测试：侍从状态 / Attendant state",()=>StoryDirector.Notify(
+                "Maid="+MaidState.Contract+" Entry="+MaidState.EntryKind+" Paid="+MaidState.EntryPaidCash
+                +" Love="+MaidState.Confession+" Base="+MaidState.BasicComplete+" Return="+MaidState.Progress
+                +" Pending="+MaidState.PendingVisit+" P1="+MaidProjects.Paid(1)+"/"+MaidProjects.ResultShown(1)
+                +" Review="+MaidWorldEvents.State+" Due="+MaidState.Int("world.due_day",-1)
+                +" Tx="+MaidState.Int("tx.phase")),true);
+        }
+        private static void SetupMaidFixture(bool lover)
+        {
+            SetupCommon();MaidState.Enter(2);RomanceState.Route=2;RomanceState.MotherState=1;
+            RomanceState.ProtectionReady=true;RomanceState.DriveState=4;MaidState.DebutShown=true;
+            if(lover){MaidState.Confession=1;RomanceState.Romance=1;}
+        }
+        private static void QueueMaidEvent(int id)
+        {
+            if(PlayerStore.Instance?.currentClientInstance!=null)
+            {StoryDirector.Notify("请先结束当前客人 / Finish the current visitor first.");return;}
+            MaidState.PendingVisit=id;MaidState.NextVisitDay=MaidState.Today;
+            QueueTestClient(()=>MaidStory.CreateEvent(id));
         }
     }
 }

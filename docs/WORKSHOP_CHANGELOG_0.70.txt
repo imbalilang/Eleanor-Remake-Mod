@@ -1,0 +1,10 @@
+0.70｜v0.7 选项与筹备修订 / v0.7 choices and preparation revision
+
+• 王尔德筹备项目改为按剧情步骤逐项显示：救母后仅开放“安顿”，基础主从恋爱与安顿结果确认后才开放“通行与正装”，之后依次开放第一单与自己的事业；未来项目不显示、不预告。
+• 读档撤销异常提前解锁的筹备并退回费用；新增对未审计解锁入口的兜底拦截。
+• 曾选择“让我再想一想”的暂缓存档读档时自动视为主从恋爱确认；第22章跳过已播过的莉迪亚内容。
+• 旧约序章重写为卖货→侦探消息→收回旧话两选→条件→最终确认，全程不扣款，最终确认才写入关系方向。
+• 第12、13、14、16、20、22、24章选项与台词修订：两种保管策略、唯一中途退出、甲线固定退回三百、告白三项、补充玩家台词。
+• 中英各2067条文本；原有平等恋爱、朋友线与旧800档承接保留。
+
+Version 0.70 implements the v0.7 revision. Wilde projects appear strictly in story order and premature unlocks are revoked/refunded. Deferred confession saves migrate to a confirmed attendant romance, the legacy prologue is rewritten without charges, and chapters 12-24 gain revised choices and dialogue. Chinese and English text now total 2067 keys each. The original equal romance, friendship routes and legacy continuation remain intact.

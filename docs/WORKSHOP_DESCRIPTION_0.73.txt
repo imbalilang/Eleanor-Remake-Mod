@@ -1,0 +1,43 @@
+[h1]Eleanor Story Expand[/h1]
+[h2]上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展[/h2]
+
+“呵，你们下层区管这种地方叫‘商店’啊？”
+
+她是上层区最大水培农场前负责人的独女。母亲被以挪用公款罪关押，家族一夜崩塌，她跌进自己曾最看不起的下层区。
+
+你，是这里的一家当铺老板。
+
+靠识货、开价、留证和承担风险，先成为她愿意信任的人。你们可以成为平等的恋人、继续做朋友，也可以选择一份双方说清条件的侍从约定。她的骄傲、判断与救母决心始终保留。
+
+[h2]0.73更新：让来访重新回到生意里[/h2]
+[list]
+[*]补充代客估价、可拒接的工具材料商单、小批进货与实际补货采购；交易后继续原有剧情，告白和最终约定保留完整情感空间。
+[*]“第一单”中的样品成为真实可检视、领取的物品，已由筹备费覆盖，不再收费；额外商品正常议价，未收下的样品可稍后再取。
+[*]新增三种可重复的筹备期日常：小批卖货、代邻居采购、代客估价。只在当前项目确实缺钱时低频轮换，主线、结果与紧急来访优先；回款来自真实货物与服务。
+[*]母亲吊坠改为紧凑的完整2×2占位，图像同步缩小。旧物品有空间时安全整理，位置不足则保留原状，腾挪后重试。
+[*]保留原有文风，英语同步。中英各2107条文本；34组离线回归与原生模组扫描通过，实机体验继续收集反馈。
+[/list]
+
+[h2]侍从恋爱与上层区归来[/h2]
+[list]
+[*]保留平等恋爱、朋友与原有救母／研究路线；侍从路线是可选分支，正式确认才收取另约的800预付工钱，探索或撤回不收费。
+[*]四个王尔德筹备项目，共七种购买方案。按剧情逐项显示，后三项现金与人脉二选一；可慢慢筹备，没有利息或催款，不购买不撤销已完成的救母和恋爱。
+[*]五次上层区归来来访，见证埃莉诺从重新立足到以自己的名字做生意；经营选择不代替双方的关系确认。
+[*]乙线新增独立的案件复核与原生新闻。母亲能否出席读取实际结果，筹备付款不替代撤案。
+[*]女仆立绘有原版风和《少女当铺》美化风两套资源。无需启用其他模组也能完整使用，仅在指定私人场景显示。
+[*]支持已核对字段的旧800停线档续接，不追收旧付款、不清空原有物品和世界事实。已看过的章节不重播、不追发新收益。
+[/list]
+
+[h2]开局与兼容[/h2]
+普通开局第23天开始；可在新游戏天赋中选择0点中立特性“旧日回想”，提前至第12天，不占用专精选择。后续按实际来访与筹备进度推进。
+
+适配游戏1.0.0.12同期代码、内部版本0.46D。简体中文与English完整支持，全年龄。更新前建议备份存档，降级兼容不作保证。
+
+[h2]English[/h2]
+An expanded Eleanor story with equal romance, friendship and an optional attendant relationship, four story-gated Wilde projects, five Upper Level return visits and an independent case review. Includes original-style and Maiden's Pawnshop-style maid portraits; no other mod is required.
+
+Version 0.73 brings business back into later visits: native appraisal work, an optional supply order, small stock lots, a real prepaid sample and restocking purchases. Three repeatable business visits rotate at low frequency while the current Wilde project is genuinely unaffordable, yielding priority to story and urgent events. Earnings require actual goods or services. Declining a purchase or missing the optional order does not end the relationship or undo the rescue.
+
+The mother's locket now uses a compact, filled 2×2 footprint with matching display scale. Legacy items are migrated only into valid space; crowded items remain intact until moved. Chinese and English include 2107 keys each. All 34 offline regression groups and the native mod scan pass; gameplay balance awaits further in-game feedback.
+
+Normal start on day 23; optional early-start perk on day 12. All-ages. Back up saves before updating; downgrading is not guaranteed.

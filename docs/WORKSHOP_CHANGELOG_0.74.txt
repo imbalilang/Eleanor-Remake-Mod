@@ -1,0 +1,12 @@
+0.74｜合作分红、关系递进与眼部微调 / Dividends and relationship progression
+
+• 新增按日累计、来访领取的合作分红：第25章第一单确认后每天200信用点，第27章事业开张后提高至600；对应节点次日起计，不因来访延迟而丢失。
+• 日常／经营来访可带款，另有低频结算；主线和紧急事件优先，第28章保留情感收束。王尔德P3/P4说明显示收益、待领与累计已领；交易货款与分红分开记账。
+• 重复读档与对白不重复领钱；旧完成档从更新读档日开账，不追造历史利润。现金放不下的部分继续留账。
+• 重写侍从入线至告白：展开核验交涉、证明玩家可靠，再表现救母后逐渐形成的依赖与矛盾。首次“主人”及完整女仆装后移到第19章，正式行礼在恋爱确认后。
+• 提前处理陷阱旧伤，保留旧档已经发生的称呼历史；丙丁与终约相关回忆同步调整。微调原版女仆装眼部，保留像素画风和色板。
+• 中英各2109键，41组离线回归及原生模组扫描通过。实机读档、镜头与经营平衡继续由玩家验证反馈。
+
+Adds business dividends accrued per game day and collected on Eleanor's visits: 200 after the first successful order, rising to 600 after the business opens. Missed visits retain all earnings. Existing completed saves start after their first updated load. Separate receipts prevent duplicate payments and preserve amounts beyond the native cash limit.
+
+Reworks the relationship through cooperation, proven help and gradual reliance. The first private address and full maid outfit move to chapter 19; the curtsy follows romance confirmation. Addresses the old injury earlier, preserves established legacy history, and subtly retouches the vanilla maid's eyes. Chinese and English each contain 2109 keys. All 41 offline regression groups and the native scan pass; in-game feedback remains welcome.

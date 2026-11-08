@@ -8,8 +8,21 @@ namespace EleanorRomance
     {
         private static bool Prefix()
         {
-            return !StoryDirector.ShouldSuppressOriginal;
+            return !StoryDirector.ShouldSuppressOriginal || VanillaEleanorBridge.AllowOriginalSchedule;
         }
+    }
+
+    [HarmonyPatch(typeof(StoreClientManager), nameof(StoreClientManager.AddClient))]
+    internal static class Patch_NativeEleanorQueue
+    {
+        private static bool Prefix(StoreClientManager __instance, StoreClient __0)
+            => VanillaEleanorBridge.FilterScheduledClient(__instance, __0);
+    }
+
+    [HarmonyPatch(typeof(PlayerStore), nameof(PlayerStore.AddDirectSellingItemToTableMiddle))]
+    internal static class Patch_NativeEleanorRewardPlacement
+    {
+        private static bool Prefix(GameItem __0) => !VanillaEleanorBridge.CaptureReward(__0);
     }
 
     [HarmonyPatch(typeof(StoreClientManager), nameof(StoreClientManager.HandleEleanorEarlyClient))]
@@ -39,25 +52,6 @@ namespace EleanorRomance
         }
     }
 
-    [HarmonyPatch(typeof(ScavHelper), nameof(ScavHelper.GetMaxScavAttempts))]
-    internal static class Patch_ScavAttempts
-    {
-        private static void Postfix(ref int __result)
-        {
-            try
-            {
-                if (RomanceState.StoryActive && RomanceState.ScavAssist && __result > 0)
-                {
-                    __result += 2;
-                }
-            }
-            catch (Exception ex)
-            {
-                ModEntry.LogError("Scav attempt bonus failed: " + ex);
-            }
-        }
-    }
-
     [HarmonyPatch(typeof(GameOverUIManager), nameof(GameOverUIManager.DisplayUI))]
     internal static class Patch_GameOverDisplayUI
     {
@@ -66,13 +60,18 @@ namespace EleanorRomance
             try
             {
                 if (!RomanceState.StoryActive) return;
-                if (RomanceState.Chapter < RomanceState.ChapterComplete) return;
+                if (RomanceState.Chapter < RomanceState.ChapterComplete && !MaidState.Lovers) return;
                 if (RomanceState.EpilogueDone && RomanceState.Route == 0) return;
 
-                string block = SelectEndingBlock(givenDescription);
-                if (string.IsNullOrEmpty(block)) return;
-
-                string extra = BlockText(block);
+                string extra = RomanceState.Route==4 && RomanceState.BetrayalKind==4
+                    ? L.Get("er_maid_ending_exit") : MaidStory.Ending(givenDescription);
+                if (extra == null)
+                {
+                    string block = SelectEndingBlock(givenDescription);
+                    extra = string.IsNullOrEmpty(block) ? "" : BlockText(block);
+                }
+                string world = MaidWorldEvents.Ending();
+                if (!string.IsNullOrEmpty(world)) extra += "\n\n" + world;
                 if (!string.IsNullOrEmpty(extra))
                 {
                     givenDescription = (givenDescription ?? string.Empty) + "\n\n" + extra;
@@ -88,7 +87,7 @@ namespace EleanorRomance
         {
             string text = description ?? string.Empty;
 
-            if (RomanceState.Route == 4 || RomanceState.Romance == 4)
+            if (RomanceState.Route == 4)
                 return StoryV06Content.B_END_B007;
 
             if (ContainsAny(text, "死亡", "死了", "dead", "died", "killed"))

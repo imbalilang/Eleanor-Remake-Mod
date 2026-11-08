@@ -692,15 +692,9 @@ out.append("")
 # ======================================================================
 # 附录
 # ======================================================================
-out.append(section("附录 A  新开局“旧日回响 · 上层常客”"))
-out.append("【标题】" + L("er_scenario_title"))
-out.append("【说明】" + L("er_scenario_desc"))
-out.append("【初始加成】")
-out.append("  - " + L("er_scenario_start_1"))
-out.append("  - " + L("er_scenario_start_2"))
-out.append("  - " + L("er_scenario_start_3"))
-out.append("  - " + L("er_scenario_start_4"))
-out.append("【标签】" + L("er_scenario_tag") + "\n")
+out.append(section("附录 A  开局特性“旧日回想”"))
+out.append("【名称】" + L("er_early_start_name"))
+out.append("【说明】" + L("er_early_start_desc") + "\n")
 
 out.append(section("附录 B  物品与纸书"))
 out.append("【物品】" + L("er_item_locket_name"))
@@ -730,7 +724,7 @@ out.append(section("附录 C  结局变体与系统提示"))
 for key in ["er_ending_variant_true", "er_ending_variant_normal", "er_ending_variant_locked"]:
     out.append("【结局变体】" + L(key))
 out.append("")
-for key in ["er_notice_old_save", "er_notice_version", "er_notice_scenario_started",
+for key in ["er_notice_old_save", "er_notice_version", "er_notice_early_start",
             "er_notice_true_unlock", "er_notice_trust", "er_notice_deal_first",
             "er_notice_queue_now", "er_notice_reset_arm", "er_notice_reset_done",
             "er_notice_keep_vanilla", "er_notice_story_inactive"]:
@@ -818,17 +812,13 @@ out.append("")
 out.append("【重要状态】")
 out.append("  DriveLost：第9章交出真U盘；关闭真结局/回归/泄露/卖盘。")
 out.append("  Exploited：第7章用感情换钱；永久关闭真结局。")
-out.append("  RomanceLocked：第5A放弃救援，或第10章放弃/卖盘；无每周来访、无新开局。")
-out.append("  TrueEnding：第10章真结局；解锁“旧日回响”新开局。")
+out.append("  RomanceLocked：第5A放弃救援，或第10章放弃/卖盘；无每周来访。")
+out.append("  TrueEnding：第10章真结局。")
 out.append("")
 out.append("【日程】")
 out.append("  普通模式：23 / 25 / 27 / 28 / 29 / 31 / 33 / 37 / 38 / 40 / 43 天")
-out.append("  旧日回响：5 / 7 / 9 / 10 / 11 / 13 / 15 / 19 / 20 / 22 / 25 天")
+out.append("  旧日回想：第 12 天开始，埃莉诺剧情目标日程提前 11 天。")
 out.append("  漏章：下一次开店补触发；每个营业日至多排入 1 个 Eleanor 剧情客户。")
-out.append("")
-out.append("【新开局“旧日回响”】")
-out.append("  初始好感 20；上层区 +20、下城区 -10；获得吊坠；")
-out.append("  第 1 章从第 5 天开始；后续日程按提前表推进。")
 out.append("")
 
 # 把所有未在正文使用的文本也列出，保证没有遗漏

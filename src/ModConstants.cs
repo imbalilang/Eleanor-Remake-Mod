@@ -3,7 +3,8 @@ namespace EleanorRomance
     public static class ModConstants
     {
         public const string ModId = "eleanor_romance";
-        public const string ScenarioId = "eleanor_romance.old_echo";
+        public const string LegacyScenarioId = "eleanor_romance.old_echo";
+        public const string EarlyStartPerkId = "eleanor_romance.early_start";
         public const string LocketItemId = "eleanor_romance.locket";
         public const string BraceletItemId = "eleanor_romance.upper_bracelet";
         public const string MetaFile = "meta.json";

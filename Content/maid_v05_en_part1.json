@@ -1,0 +1,418 @@
+{
+  "legacy_b002": [
+    "Today I'm only selling. Usual prices. Nothing else.",
+    "Put them out."
+  ],
+  "legacy_b004": [
+    "Fine."
+  ],
+  "legacy_b005": [
+    "Then don't take them. It's not as if this is the only shop I can go to."
+  ],
+  "legacy_b006": [
+    "*She puts the goods away, her hand resting on the bag strap, and does not leave at once*",
+    "The detective's started on Mother's case. He says what he finds may be bigger than I expect.",
+    "How big?",
+    "Big enough that knowing the truth won't be enough.",
+    "Even if we find out who did this to her — getting her out takes connections. Getting back upstairs takes capital. I have neither.",
+    "...Don't answer that. I didn't come here to tell you any of this."
+  ],
+  "legacy_b008": [
+    "I take back what I said that day. Once we know the truth, I'll help you.",
+    "You said I'd have to obey you. And not just in business. I heard you.",
+    "You did. I was wrong to say it.",
+    "And putting it nicely makes those terms disappear?",
+    "Those terms are gone. You can turn down today's offer and keep investigating.",
+    "She watches you, then sets her bag down again. Her hand stays on the strap.",
+    "I can't repay a loan. I won't take charity.",
+    "Then work here. Inspect goods, keep accounts, run errands. I'll help with what you can't manage alone.",
+    "And you can manage it?",
+    "We'll find out one thing at a time. I'll tell you when I can't.",
+    "...Tell me about the work first. Don't think I've forgotten what you said."
+  ],
+  "legacy_b011": [
+    "Then we'll try it this way. I'll do the work. I'll also watch what happens to your promises.",
+    "Good.",
+    "Don't start ordering me about already. I haven't seen you deliver yet.",
+    "Bring the detective's findings here first.",
+    "...That I can do. I need somewhere to lay out what he tells me anyway.",
+    "She shoulders her bag. She doesn't turn at the doorway this time. A few steps outside, she slows."
+  ],
+  "legacy_b012": [
+    "...You'd better not be doing this just to see whether I'd agree.",
+    "No. I was thinking too far ahead again.",
+    "That actually sounded human this time.",
+    "If the investigator finds anything, I'll still come."
+  ],
+  "legacy_b013": [
+    "I was wrong that day. Arrange the investigation yourself. Come to me if you need anything.",
+    "...At least you know how to apologize first.",
+    "Fine. That's the end of it. From now on, say what you mean. Don't make me guess what 'listen to me' was supposed to include.",
+    "We'll talk things through.",
+    "Mm. If the investigator finds anything, I'll come."
+  ],
+  "m11_b001": [
+    "There. Eight hundred for the detective to investigate Mother's case. All of it.",
+    "Count it again.",
+    "I've counted it three times! Eight hundred. Every last credit.",
+    "That used to be just a line on a bill. Now, point to any part of it and I can tell you how I earned it.",
+    "Including that lump you insisted wasn't scrap?",
+    "The materials inside it sold. You don't have to like it, but show some respect for its contribution."
+  ],
+  "m11_b002": [
+    "I've got the money for the detective to investigate Mother's case. Another shop took the rest, and the odd-job people agreed to an advance.",
+    "What about the next few days?",
+    "I'll keep working. Advancing the pay doesn't make the work do itself."
+  ],
+  "m11_b003": [
+    "I sold the locket too. Stop staring at my neckline. I'm still getting used to it myself.",
+    "Do you know who bought it?",
+    "Yes. Mother comes first. Don't let me being sentimental hold everything else up."
+  ],
+  "m11_b004": [
+    "The investigator starts tomorrow. He agreed to check the work records first, rather than question people at the company.",
+    "And after he finds out?",
+    "...After what?",
+    "After he finds out who did this to her. What then?",
+    "Then we... take it to court.",
+    "Will the court look at it?",
+    "*Her fingers go still on the stack of money.*",
+    "I don't know. I can't even get into the Upper Level. I can't afford a lawyer, and I don't know anyone who still answers my calls.",
+    "All I know is that we investigate first. Once we know the truth, there has to be a next step."
+  ],
+  "m11_b006": [
+    "I can help with what comes next.",
+    "Help? A loan, or charity?",
+    "You could work here. Inspect goods, keep accounts, run errands. I'll help work out what to do about the case.",
+    "...Do you need someone, or are you inventing a reason for me to take your money?",
+    "There's work. And I'll still tell you if it isn't done properly.",
+    "I can clean a counter. I'm learning the goods. How far can your help actually go?",
+    "We'll need to check the paperwork and find the right people. I've dealt with that in business. I won't promise what I can't secure.",
+    "I don't want to hear that something will turn up. I can say that myself.",
+    "Then one thing at a time. Judge the results.",
+    "She looks down at the money she earned, pressing her thumb over the crease in the top note.",
+    "I'll hear the terms. Don't change your manner if I turn them down.",
+    "You can keep bringing goods as usual."
+  ],
+  "m11_b007": [
+    "First, the term. You help me return to the Upper Level; I work here. Under my own name, not in a seat someone keeps empty for me.",
+    "A pass won't finish it.",
+    "Right. They must want me there because I'm good at the work. Not because of whose daughter I am.",
+    "And my investigation, other jobs and mother's affairs keep their time. I'll tell you if something comes up. I can't drop everything when you call.",
+    "We'll arrange the shop work ahead.",
+    "Mother and the research aren't part of this agreement. Who gets the drive and what course we take must be discussed separately.",
+    "You'll know every step.",
+    "Discussed together. Telling me isn't the same as deciding for me.",
+    "Together.",
+    "...And put away that tone. The one that expects to be called master.",
+    "See what I do first.",
+    "I will. If I think you're making me pay with myself, I'll leave. We can agree on work. Don't start adding anything else."
+  ],
+  "m11_b008": [
+    "I have a term too. *You set another stack beside hers.* Eight hundred. Wages in advance.",
+    "I said I don't want a handout—",
+    "It isn't a handout. It's pay. Your mother will need medicine and somewhere to live when she's out. A payment before you start. Shop policy.",
+    "Whose policy?",
+    "Mine.",
+    "...You certainly know how to word things.",
+    "I'm paying the investigator myself. I earned that money. Nobody takes that away from me.",
+    "It's yours to begin with."
+  ],
+  "m11_b011": [
+    "She separates the two piles. The detective's goes into an old envelope. She picks up your money, then puts it back on the counter.",
+    "Set my work days first. If there's news about mother, I have to go.",
+    "See the detective tomorrow. Bring the news back, then we'll arrange it.",
+    "This money...is for her medicine and somewhere to live. Not because I failed to raise the investigation fee.",
+    "Two accounts. Keep them separate.",
+    "Only then does she put your money away separately. Her fingers pause on the clasp.",
+    "I won't shirk the work. Don't let your side stay a promise.",
+    "Understood.",
+    "...Tomorrow, then."
+  ],
+  "m11_b012": [
+    "Let's leave it. Follow your own plan for the investigation.",
+    "...You'd better not be testing whether I'd take the money.",
+    "I got ahead of myself.",
+    "Not that far ahead. You just have an infuriating way of saying things.",
+    "If there's news tomorrow, I'll still come by."
+  ],
+  "m12_b001": [
+    "The detective found something. I read it all night. There are still things I can't make out.",
+    "Check the doorway first.",
+    "I took a detour and changed the meeting place. You're not the only one who knows to be careful.",
+    "Sit down. Lay out what you're unsure about."
+  ],
+  "m12_b002": [
+    "The drive was hidden in Mother's old laboratory. The investigator couldn't open it. There's a password.",
+    "Do you know it?",
+    "My birthday. She always said that way she wouldn't forget. I've told her so many times not to use it as a password."
+  ],
+  "m12_b003": [
+    "...It's genetic research on Nutrifruit.",
+    "She found a way to make ordinary Nutrifruit produce seeds again. Plant it, harvest it, and keep seeds for the next crop.",
+    "So people wouldn't have to buy from Pastel every time.",
+    "There are records ordering her to stop the trials. Then her access was revoked. And then... the charge.",
+    "She never embezzled anything. She just touched the business they least wanted anyone touching.",
+    "This gives us a motive. Getting them to release her will take something else.",
+    "I know. But for once, I have more than 'my mother wouldn't do that.'"
+  ],
+  "m12_b006": [
+    "Leave the drive here for now. I can watch the counter. Safer than carrying it from job to job.",
+    "Keeping it is one thing. I decide who gets it.",
+    "Put it on this receipt. Take it back whenever you come for it.",
+    "She reads the receipt, looks at your hand resting on the counter, then slowly lets go of the drive.",
+    "I'll come and check.",
+    "Do."
+  ],
+  "m12_b007": [
+    "Keep it on you. If someone asks here, I'll deal with them first.",
+    "You're putting your shop in front of it?",
+    "They know you come here. Another shop won't erase that.",
+    "Tell me as soon as anyone comes. Don't make a deal and then expect me to follow it.",
+    "Including what they offer.",
+    "...All right. I'll keep the drive."
+  ],
+  "m12_b008": [
+    "Also, you've mixed several little components together. One of the labels has fallen off.",
+    "Can you tell them apart?",
+    "You spent so long picking through my goods last time. I wasn't only standing there being angry.",
+    "Separate them, then. Anything you're unsure about, leave for me."
+  ],
+  "m12_b009": [
+    "She sorts the small parts, hesitates over one, then places it in front of you.",
+    "This casing was replaced. The price on the label hasn't changed.",
+    "Check inside too. A replaced casing doesn't mean it's broken.",
+    "I didn't say it was broken.",
+    "Then don't put it with the broken ones yet.",
+    "She looks at the pile, takes the part back and places it under the light again.",
+    "...Explain how to check. I'll do it myself next time."
+  ],
+  "m13_b001": [
+    "Boss, you've been getting close to Eleanor lately. The girl from the Upper Level."
+  ],
+  "m13_b002": [
+    "Someone got you out?",
+    "Then you should understand I'm not here on my own account."
+  ],
+  "m13_b003": [
+    "Say it.",
+    "She's got a data drive. Hand it over first. Someone will tell her where to collect her mother, alive in the Lower Level.",
+    "Deliver first, then wait for your address?",
+    "Who else will you check with? Keep delaying and her mother might not last.",
+    "Who arranges the release, and when do we see her? Come back with that in writing.",
+    "Three hundred if it works. You're a shopkeeper. Don't shut out your own payment.",
+    "Write that down too. She needs to know what you're paying me to do.",
+    "They say she works for you now. Your word carries more weight than ours.",
+    "I haven't agreed for her.",
+    "Then pass it on quickly. Her mother can't wait."
+  ],
+  "m13_b006": [
+    "*He glances behind the counter* It's not here?",
+    "I've got everything here. Just not what you're looking for."
+  ],
+  "m13_b007": [
+    "Her name and yours will both be on the record. Think about that.",
+    "So will the message you brought."
+  ],
+  "m13_b008": [
+    "Don't keep her waiting. Her mother doesn't have the time."
+  ],
+  "m14_b001": [
+    "What do we start with today? Those things you mentioned—",
+    "Sit down first. Someone from the black market came by. About your mother and that research disk."
+  ],
+  "m14_b002": [
+    "You write down the man's words in order for her, including the three hundred credits.",
+    "The drive first, then they tell me where to collect her. ...At least they're willing to talk.",
+    "Do you know whether this man can arrange her release?",
+    "I can ask. If I can meet someone who'll act—",
+    "With the drive, or with this paper?",
+    "...Do you think I stop listening the moment I'm frightened?",
+    "I'm worried that once you're there, only they can change the meeting. They take the drive, and you're still waiting for their next word.",
+    "She folds away the line saying drive first, then opens it again. Her fingertip stays on it.",
+    "What can I do now? Will sitting here get mother out?",
+    "Check where she's held, who handles the paperwork and where she can be seen. Leave the original here. Every question you ask still leaves you a way back.",
+    "I have her medication records. The person collecting it signed. I know the name.",
+    "Start with that name.",
+    "...I'll do that. If all I get is wait again, we'll need another way."
+  ],
+  "m14_b003": [
+    "There are channels for a protected transfer. We submit material they can act on, confirm who takes responsibility, then discuss publication.",
+    "I'll find her medication records. I have her identification too. I know what can't be left out."
+  ],
+  "m14_b004": [
+    "I don't have connections that can guarantee her safety. Negotiating an exchange is safer for now.",
+    "Then don't pretend it's arranged just to make me feel better. I'd rather hear the truth."
+  ],
+  "m14_b005": [
+    "You promised me an Upper Level. Right now I just want to see her.",
+    "This comes first. I'll tell you exactly how far we get.",
+    "...Don't just tell me not to worry. I'm afraid I really will sit and wait on those words.",
+    "When we have something, we lay it out here and check it.",
+    "All right. This time, we'll try your way."
+  ],
+  "m14_b007": [
+    "Your mother first. We return the research, but verify the release papers and collection point before handing it over.",
+    "All right. I won't gamble with her life.",
+    "If she asks later, I'll explain. You don't have to carry this decision alone."
+  ],
+  "m14_b008": [
+    "We apply for protection first. Once she's safe, we deal with the research. If protection falls through, we go back to the exchange.",
+    "Understood. We don't count unconfirmed things as done.",
+    "That's what you said about my goods: if you haven't checked it, don't add it to the price."
+  ],
+  "m14_b009": [
+    "We could publish now. Without protection, they may kill her. I can't promise to save her.",
+    "Let me think. I can't take this road just because you say it exists."
+  ],
+  "m14_b010": [
+    "I've decided. Send the research to the newspaper.",
+    "Are you sure you don't want to wait for protection?",
+    "Yes. Mother didn't do all this so it could stay locked on a drive forever.",
+    "But don't tell me she'll definitely be all right. I'll believe you."
+  ],
+  "m14_b011": [
+    "I've decided. I'll leave the investigation, and our agreement ends here too.",
+    "...",
+    "The drive is yours. I can't promise anything about what comes next.",
+    "You promised me an Upper Level.",
+    "I know. That's why I'm saying it now, before I make a mess of it.",
+    "*She puts the drive away and says nothing for a long time*",
+    "...Good. At least you didn't pretend you could carry it.",
+    "I'll handle the rest myself."
+  ],
+  "m14_b013": [
+    "Leave the shop work today. Write down what you need to ask, then rest.",
+    "I can't cancel tomorrow's job. I'll bring the papers, but later.",
+    "Later, then. This can wait.",
+    "...I thought you were going to tell me to follow your arrangements again.",
+    "You reserved that time.",
+    "I remember. Good that you do too."
+  ],
+  "m15_b001": [
+    "I've brought the paperwork for getting Mother out. Checked every page. The dates match too.",
+    "Put them here. Have you eaten?",
+    "Yes. You?",
+    "In a minute.",
+    "That's what you said last time."
+  ],
+  "m15_b002": [
+    "The name on the medication record checks out. But they changed the collection point.",
+    "Did you go?",
+    "Halfway. Then I came back. He said I wouldn't meet the next person without the drive.",
+    "She puts down the creased record. Its corner has gone soft under her fingers.",
+    "I nearly went. You can say you told me so.",
+    "You brought it back. We can still negotiate.",
+    "I found the original official. He'll let me check the release papers without going through that messenger.",
+    "Record the name, time and place separately. Once the official confirms, we arrange delivery.",
+    "...Go through it with me again. Especially the two steps he said we could skip."
+  ],
+  "m15_b003": [
+    "I have the protection documents. They haven't confirmed who's taking over. I thought of sending the research first, to avoid another delay.",
+    "Once it's sent, who will wait for that confirmation on your behalf?",
+    "...Deliver first, then wait for someone else to speak. Again.",
+    "Medication on top. I'll check the channel; you check who's taking over. It isn't done until both match.",
+    "I copied the medicine she can't miss separately. If they can't answer that, a notice won't reassure me.",
+    "Ask exactly that."
+  ],
+  "m15_b004": [
+    "We can't count the protection as arranged. We have no confirmed transfer for today.",
+    "The papers are ready, and it's still no?",
+    "Which is why we can't send the research first. We use the fallback: exchange it for her release, after checking the papers.",
+    "...I don't like this plan. But telling me now is better than leaving me waiting for something that hasn't happened."
+  ],
+  "m15_b005": [
+    "She takes wrapped food from her bag and sets it beside the papers. She starts pushing it towards you, then stops.",
+    "Bought an extra portion. Pay for it normally. Don't say you'll add it to my wages.",
+    "How much?",
+    "...Never mind. Eat first. I need this space to finish sorting the papers.",
+    "After this page.",
+    "I'll wait. Don't miss anything."
+  ],
+  "m15_b006": [
+    "She points out a date. Only after you've checked does she put a small tick beside it.",
+    "You already checked that one.",
+    "I know.",
+    "Still unsure?",
+    "...I need you to look before I count on the next step. Just today."
+  ],
+  "m16_b001": [
+    "I saw mother. At the place we checked. The official hadn't changed either.",
+    "She's out?",
+    "Yes. I saw her first, checked her medicine and the papers, then handed over the drive.",
+    "The messenger tried to lead me somewhere else again. I didn't follow. In the end he had to step aside.",
+    "You held them to what you'd checked.",
+    "...If I'd gone straight there with the drive, I wouldn't even have known whom to ask where she was.",
+    "Now you do.",
+    "She asked how much weight I'd lost. I'd prepared so much to say. That one question undid all of it."
+  ],
+  "m16_b002": [
+    "They sent the three hundred to the shop.",
+    "...Did you take it?",
+    "Returned it untouched. Told him to pass on a message: I don't do that kind of business here.",
+    "*She pauses* I thought you'd say to use it for my mother's medicine.",
+    "Medicine money has a proper source. That money had your mother's price written on it.",
+    "...You said that day I wasn't for sale.",
+    "Neither is she."
+  ],
+  "m16_b003": [
+    "Mother's been transferred safely. I saw her. The person taking over went through every medicine with me.",
+    "No gap in her medicine?",
+    "None. When the application notice came first, I wanted to push you to send the research.",
+    "Then I checked and found they hadn't set the transfer time. If I'd sent it then...",
+    "You waited for confirmation.",
+    "Because you made me look at the notice again. ...I'll remember this time.",
+    "She complained my writing was too small. Nobody else would start with that.",
+    "Settle her first, then handle the research as agreed.",
+    "Yes. I remember the order."
+  ],
+  "m16_b004": [
+    "I meant to come in, explain the paperwork properly, then discuss what comes next.",
+    "You still can.",
+    "...I can't get the words out.",
+    "Come here."
+  ],
+  "m16_b005": [
+    "She comes around the counter and stops. You open your arms. At last she leans into you, forehead against your shoulder. She tries to speak, but her breathing breaks first.",
+    "...Let me stay a moment.",
+    "Stay.",
+    "All the way back, I kept thinking what to tell you first.",
+    "She's back.",
+    "...Yes. She's back."
+  ],
+  "m16_b006": [
+    "Don't repeat what just happened to anyone.",
+    "Go be with her. There's no work for you here today.",
+    "Tomorrow, then?",
+    "Come if you want. Sort out those sleeves first. They nearly swept something off the counter last time.",
+    "...I know. I'll have the clothes altered myself. Don't order anything for me first.",
+    "I'll ask Wilde about a home. You and your mother need somewhere lasting.",
+    "She's out now. You're still taking care of the rest?",
+    "Getting her out wasn't all I promised.",
+    "...I'll go home first. We'll talk about tomorrow, tomorrow."
+  ],
+  "m12_b004": [
+    "Before the drive, there's something else. When that man pretending to be your uncle brought the box, I saw something was wrong. I didn't warn you.",
+    "Her hand stops at her bag. She pushes the half-withdrawn papers back inside.",
+    "...You're telling me now?",
+    "Yes. I should have told you then.",
+    "I kept wondering whether I couldn't see anything for myself. You were here watching.",
+    "I'm sorry.",
+    "And after one apology, I'm supposed to take out the drive and follow your arrangements?",
+    "No. You can take it away.",
+    "...From now on, tell me first. Danger, unpleasant news, all of it. Don't choose what I get to hear."
+  ],
+  "m12_b005": [
+    "I'll keep the drive. We can discuss what comes next. The shop agreement ends here.",
+    "You don't owe me anything.",
+    "Remember that. Let it show in what you say from now on."
+  ],
+  "m16_b007": [
+    "And the box. I haven't forgotten.",
+    "I know.",
+    "This time you told me who came, what they said, which steps hadn't worked.",
+    "More than once I wanted to blame you for delaying. Then I could only come back and ask you to check.",
+    "Next time too.",
+    "...Next time there's danger, tell me first. Don't wait for me to ask."
+  ]
+}

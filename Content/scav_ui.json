@@ -1,0 +1,7 @@
+{
+  "er_scav_event_title": ["埃莉诺的协助", "Eleanor's Assistance"],
+  "er_scav_event_desc": ["埃莉诺替你找了一片还没翻过的废料，又把松动的铁板挪到一旁。\n“你翻那边，我替你看着。”", "Eleanor has found a patch of scrap no one has searched yet and moved the loose metal sheets aside.\n“You search over there. I'll keep watch.”"],
+  "er_scav_event_attempts": ["拾荒次数 +2", "Scavenging attempts +2"],
+  "er_scav_event_safe": ["拾荒时不会受伤", "No injuries while scavenging"],
+  "er_scav_event_unlocked": ["垃圾填埋场已解锁随机事件「埃莉诺的协助」：出现当天拾荒次数 +2，且不会受伤。", "Random landfill event unlocked: Eleanor's Assistance. While active, gain 2 scavenging attempts and scavenge without injury."]
+}

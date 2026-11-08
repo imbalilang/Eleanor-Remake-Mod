@@ -1,0 +1,9 @@
+0.72｜筹备说明与章节承接 / Clearer preparations and dialogue continuity
+
+• 精简四项王尔德筹备说明：价格、余额与恩惠沿用原生界面显示，人脉方案只补充必要的声望门槛和消耗。
+• 首次“安顿”开放前，玩家在团聚对白中主动提出找王尔德安排住所，让提示自然接上剧情。
+• 保留原有文风，优化隔几天再见面时的开场与独立反馈：点明母亲、调查款、研究盘、撤案通知、两类买家及革命军。
+• 筹备等待按当前项目提醒；澄清检查员身份与终约原因，保留样品展示和最终约定问答，不增加长篇回顾。
+• 英语同步，中英各2073键。章节排期、路线条件、付款与奖励规则不变。29组离线回归及原生模组扫描通过。
+
+Shortens Wilde preparation descriptions and introduces the first housing project through dialogue. Improves returning-visit openings and standalone feedback while keeping the original tone, teasing and pauses. Clarifies the mother/research plot, the two buyers, the case-review notice and the revolutionaries. Waiting dialogue names the current project. Includes matching English text, with 2073 keys per language. Story schedules, route conditions, payment and reward rules remain unchanged. All 29 offline regression groups and the native mod scan pass.

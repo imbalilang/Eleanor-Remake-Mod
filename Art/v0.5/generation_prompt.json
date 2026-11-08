@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "identity-preserve",
+  "transparent_background": true,
+  "references": [
+    "少女当铺 / Workshop 3829696854 / Textures/Items/cp_portrait_eleanor1.png",
+    "少女当铺 / Workshop 3829696854 / Textures/Items/cp_portrait_eleanor_scav.png"
+  ],
+  "prompt": "Use case: identity-preserve. Create ONE production character portrait PNG for the pixel art game Probably Stolen. Use the two attached reference portraits ONLY as identity/style/framing references (not their scanline/background artifacts). The character is adult Eleanor: same recognizable face, green eyes, warm orange long wavy hair with a braid, same body proportions and small confident haughty smile. New outfit: modest, practical dark charcoal / deep plum maid work dress made by altering her own old dress, neatly fitted sleeves, crisp sewn-on white apron and a small meticulously pinned white maid headpiece. Gold choker can remain, no backpack or scavenging equipment, no props or other characters. She remains proud and self-possessed, not submissively posed. Compose at the SAME scale/position as reference: waist-up, centered at x=144, visible crown near y=64, lower torso cropped at bottom y=212, approx silhouette x=74..214 (about 140px wide), room above and beside her. Deliver exactly 288 by 212 pixels if possible; genuine RGBA transparent background everywhere outside silhouette. Use clean hand-crafted pixel art with crisp visible pixel clusters, limited harmonious colors (~64), dark outlines and restrained shading matching these game portraits. No painted blur, no text, no scene, no checkerboard, no horizontal stripes, no watermarks, no extra accessories. Outfit silhouette should fit reference dimensions and be clear at native game resolution."
+}

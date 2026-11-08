@@ -1,0 +1,17 @@
+0.75｜互动补强、上层区晚会与筹备优化 / Everyday interactions and the Upper Level party
+
+• 第19章共同估价加入引导与最终反馈，第25章根据实际经历回应她学会的方法；估价完成和未完成分别处理，不改变原生服务费、首次称呼或样品领取规则。
+• 母亲获救后的团聚尝试改为开门时她已在等，原版晨间事件优先，保留同章普通来访兜底。第一单完成至少两天后，在已有来访加入一次回头客消息。
+• 侍从恋爱第28章完成至少三天后，可收到上层区晚会邀约。赴宴、公开恋人身份与跳舞以普通对话和旁白表现，不新增场景、不扣款、不占原版外出次数。最多两次主动邀请，延期和错过预约均有承接。
+• 晚会完成后的下一游戏日起发布原生新闻，重要事件与母亲撤案新闻优先；已有日常来访带来一次后续回应。未开少女当铺直接复用原版上层区形象，开启时使用新酒红晚礼服，缺图或停用可回退。
+• 取消静默永久拾荒加成，改为垃圾填埋场的“埃莉诺的协助”：原版每日随机阶段70%概率，持续当天，拾荒次数+2且不会受伤。固定日事件优先，保留原有解锁资格和当天事件存档。
+• 王尔德四项筹备各保留一个现金方案。后三项声望达标自动半价，不扣声望，未达标仍可原价办理；说明显示条件与优惠。旧人脉方案付款记录和剧情结果保留，不重收或重置。
+• 补齐英语，中英各2248键。54组离线回归与原生权限扫描通过；实机体验继续收集反馈。
+
+Adds shared-appraisal dialogue and a later callback, a morning reunion with a normal-visit fallback, and one customer update during an existing visit.
+
+After chapter 28, the attendant romance can receive an optional Upper Level party invitation. The party uses ordinary dialogue and narration, with no new scene, payment or evening outing cost. Invitations, postponed appointments and interrupted dialogue retain their progress. News appears no earlier than the next game day and yields to important news. Vanilla uses Eleanor's original Upper Level portrait; Maiden's Pawnshop uses a new wine-red gown.
+
+Scavenging assistance becomes a visible landfill event: +2 attempts and injury immunity for the day, with a 70% chance in the native random-event phase. Fixed-day events retain priority. Wilde's four projects now each have one cash option; meeting the stated reputation conditions halves the last three base prices without spending reputation. Existing paid connection plans keep their history and results.
+
+Chinese and English each contain 2248 keys. All 54 offline regression groups and the native permission scan pass. In-game feedback remains welcome.

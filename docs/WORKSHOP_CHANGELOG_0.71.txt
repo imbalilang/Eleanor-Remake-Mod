@@ -1,0 +1,9 @@
+0.71｜王尔德筹备按剧情显示 / Story-gated Wilde preparations
+
+• 修复0.70中新版王尔德界面仍提前显示全部七张筹备卡片的问题，旧版界面同步处理。
+• 四个项目依次在救母团聚、基础篇结束且安顿反馈完成、第24章完成、第26章完成后出现；未到节点时隐藏名称、说明和价格。
+• 四个项目共有七种购买方案；同项目现金与人脉方案互斥，已付款只保留所选方案的结清记录。
+• 分组标题改为“埃莉诺 · 筹备”，避免提前透露后续方向；英语同步更新。
+• 安顿不阻断第17～23章基础剧情；后续项目沿用原有付款和来访间隔。28组离线回归及原生模组扫描通过。
+
+Fixes the seven preparation cards appearing too early in the newer Wilde interface, with matching refresh behavior for the legacy interface. The four projects appear after the reunion, the base conclusion plus housing feedback, chapter 24, and chapter 26 respectively. Future names, descriptions and prices remain hidden. The seven cards are alternative payment plans for four projects; a paid project retains only the selected plan. Renames the group to “Eleanor · Preparations” in both languages. Housing does not block base chapters 17–23. All 28 offline regression groups and the native mod scan pass.

@@ -21,7 +21,11 @@ namespace EleanorRomance
         public const int RouteCFirst = 101;
         public const int RouteDFirst = 201;
 
-        public static bool StoryActive => Initialized && !OldBlocked && VersionGate.IsSupported;
+        public static bool StoryActive => Initialized && !OldBlocked
+            && VersionGate.IsSupported && SchemaVersion == Schema;
+
+        public static bool IncompatibleSave => SchemaVersion != Schema
+            && ModHelper.GetModDataKeys(ModConstants.ModId).Count > 0;
 
         public static int SchemaVersion
         {
@@ -47,7 +51,7 @@ namespace EleanorRomance
             set => SetBool("old_prompt_done", value);
         }
 
-        public static bool ScenarioBoost
+        public static bool EarlyStart
         {
             get => GetBool("scenario_boost", false);
             set => SetBool("scenario_boost", value);
@@ -118,6 +122,30 @@ namespace EleanorRomance
         {
             get => GetInt("savings", 0);
             set => SetInt("savings", Mathf.Clamp(value, 0, 800));
+        }
+
+        public static bool WarningGiftGiven
+        {
+            get => GetBool("warning_gift_given", false);
+            set => SetBool("warning_gift_given", value);
+        }
+
+        public static bool HardshipAidGiven
+        {
+            get => GetBool("hardship_aid_given", false);
+            set => SetBool("hardship_aid_given", value);
+        }
+
+        public static bool HardshipCashGiven
+        {
+            get => GetBool("hardship_cash_given", false);
+            set => SetBool("hardship_cash_given", value);
+        }
+
+        public static bool NativeRescueLinked
+        {
+            get => GetBool("native_rescue_linked", false);
+            set => SetBool("native_rescue_linked", value);
         }
 
         public static bool SavingsAutoFilled
@@ -260,7 +288,7 @@ namespace EleanorRomance
         public static int ProtectionChannel
         {
             get => GetInt("protection_channel", 0);
-            set => SetInt("protection_channel", 0);
+            set => SetInt("protection_channel", value);
         }
 
         public static bool ProtectionReady
@@ -335,6 +363,8 @@ namespace EleanorRomance
             set => SetBool("perfume_given", value);
         }
 
+        // Backward-compatible unlock flag for the native landfill event.
+        // Its presence alone no longer modifies scavenging attempts.
         public static bool ScavAssist
         {
             get => GetBool("scav_assist", false);
@@ -411,14 +441,10 @@ namespace EleanorRomance
                 return;
             }
 
-            bool scenario = false;
-            try { scenario = ModHelper.IsStartingScenario(ModConstants.ScenarioId); }
-            catch { }
-
-            ResetForNewGame(scenario);
+            ResetForNewGame(StartingPerkRegistration.IsEarlyStartRun());
         }
 
-        public static void ResetForNewGame(bool scenarioBoost)
+        public static void ResetForNewGame(bool earlyStart)
         {
             bool keepMeta = TrueUnlocked;
             ModHelper.ClearModData(ModConstants.ModId);
@@ -427,11 +453,11 @@ namespace EleanorRomance
             Initialized = true;
             OldBlocked = false;
             OldPromptDone = false;
-            ScenarioBoost = scenarioBoost;
+            EarlyStart = earlyStart;
             Chapter = 0;
             PendingChapter = 0;
             Affection = 0;
-            NextVisitDay = scenarioBoost ? 12 : 23;
+            NextVisitDay = earlyStart ? 12 : 23;
             LastQueuedDay = -1;
             FairDeals = 0;
             Discounts = 0;
@@ -449,6 +475,10 @@ namespace EleanorRomance
             UncleInspected = false;
             UncleReported = false;
             UncleWarned = false;
+            WarningGiftGiven = false;
+            HardshipAidGiven = false;
+            HardshipCashGiven = false;
+            NativeRescueLinked = false;
             CrateKept = false;
             CrateSold = false;
             TrapSprung = false;
@@ -480,7 +510,7 @@ namespace EleanorRomance
             LastEpilogueDay = -1;
             TrueUnlocked = keepMeta;
 
-            ModEntry.Log("Story state initialized. scene=" + scenarioBoost + ", next=" + NextVisitDay);
+            ModEntry.Log("Story state initialized. earlyStart=" + earlyStart + ", next=" + NextVisitDay);
         }
 
         public static bool HasOriginalEleanorProgress()
@@ -503,6 +533,7 @@ namespace EleanorRomance
                         || data.eleanorSavings > 0
                         || data.eleanorHelpedTimes > 0
                         || data.eleanorArrested
+                        || data.isEleanorDead
                         || data.eleanorUncleReported)
                     {
                         return true;
@@ -539,6 +570,12 @@ namespace EleanorRomance
                         data.eleanorFund = 500;
                         data.eleanorHelpedTimes = 0;
                         data.eleanorArrested = false;
+                        data.isEleanorDead = false;
+                        data.eleanorArrestDay = -1;
+                        data.eleanorArrestVisit = 0;
+                        data.eleanorBailChoice = 0;
+                        data.eleanorBailDay = -1;
+                        data.eleanorFreedVisitDay = -1;
                         data.eleanorUncleReported = false;
                         data.eleanorWarnedDay = -1;
                         data.eleanorSavings = 0;

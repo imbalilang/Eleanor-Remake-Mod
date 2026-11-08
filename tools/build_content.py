@@ -151,7 +151,12 @@ def main() -> int:
     all_en = dict(ui_en)
     all_en.update(dialogue_en)
 
-    missing_en = sorted(set(zh) - set(all_en))
+    from build_maid_content import build as build_maid
+    maid_zh, maid_en = build_maid(root)
+    all_zh.update(maid_zh)
+    all_en.update(maid_en)
+
+    missing_en = sorted(set(all_zh) - set(all_en))
     os.makedirs(os.path.join(root, "Localization"), exist_ok=True)
     write_mod_csv(os.path.join(root, "Localization", "zh.csv"), all_zh)
     write_mod_csv(os.path.join(root, "Localization", "en.csv"), all_en)

@@ -48,7 +48,7 @@ namespace EleanorRomance
                 if (eleanorIsSeller)
                 {
                     if (ratio < 0.65f) Lowball = true;
-                    else if (ratio > 1.25f) Discount = true; // player paid above value
+                    else if (paid > baseValue) Discount = true; // includes native +10% / +20% buying markup
                     else Fair = true;
                 }
                 else
@@ -83,7 +83,10 @@ namespace EleanorRomance
                 case StorySpeaker.Lydia: return L.Get("er_name_lydia");
                 case StorySpeaker.Uncle: return L.Get("er_name_uncle");
                 case StorySpeaker.Thug: return L.Get("er_name_thug");
-                case StorySpeaker.Officer: return L.Get("er_name_officer");
+                // The native dialogue dispatcher recognizes SEC, not the
+                // localized name. It selects both the officer bubble and the
+                // recorder's officer attribution, independently of the client.
+                case StorySpeaker.Officer: return "SEC";
                 case StorySpeaker.News: return L.Get("er_name_news");
                 case StorySpeaker.SecurityNotice: return L.Get("er_name_security_notice");
                 default: return L.Get("er_name_narrator");
@@ -115,7 +118,7 @@ namespace EleanorRomance
             for (int i = start; i < lines.Length; i++)
             {
                 StoryLine line = lines[i];
-                Dialogue node = new Dialogue().SetText(SpeakerName(line.Speaker), L.Get(line.Key));
+                Dialogue node = Text(SpeakerName(line.Speaker), L.Get(line.Key));
                 if (head == null)
                 {
                     head = node;
@@ -158,7 +161,7 @@ namespace EleanorRomance
             Dialogue tail = Tail(current);
             foreach (StoryLine line in lines)
             {
-                Dialogue node = new Dialogue().SetText(SpeakerName(line.Speaker), L.Get(line.Key));
+                Dialogue node = Text(SpeakerName(line.Speaker), L.Get(line.Key));
                 if (tail == null)
                 {
                     tail = node;
@@ -191,7 +194,7 @@ namespace EleanorRomance
 
         public static Dialogue Text(string speaker, string text)
         {
-            return new Dialogue().SetText(speaker, text);
+            return DialogueSpeakers.Mark(new Dialogue().SetText(speaker, text));
         }
 
         public static void AddChoices(Dialogue head, string prompt, params Choice[] choices)
@@ -213,44 +216,107 @@ namespace EleanorRomance
         }
 
         /// <summary>
-        /// Shows a leaving conversation once, then commits the chapter.  If the
-        /// client is dismissed by the game before this runs, nothing is advanced
-        /// and the chapter can be queued again on the next day.
+        /// Shares one chapter wrap-up between native trade completion and the
+        /// player's next-customer button. Build it after the final transaction,
+        /// so reactions use the actual prices and stock/budget state.
         /// </summary>
         public static void InterceptDismiss(StoreClient client, Func<Dialogue> build, Action onComplete)
         {
-            bool shown = false;
-            client.tryInterceptDismiss = () =>
+            Dialogue completion = null;
+            bool built = false;
+            bool committed = false;
+            Action commit = () =>
             {
-                if (shown) return false;
-                shown = true;
+                if (committed) return;
+                committed = true;
+                onComplete?.Invoke();
+            };
+            Func<Dialogue> getCompletion = () =>
+            {
+                if (built) return completion;
+                built = true;
+                completion = build();
+                if (completion == null) return null;
 
-                Dialogue dialogue = build();
-                if (dialogue == null)
+                completion.SetPriority(7);
+                Action start = completion.startAction;
+                completion.SetStartAction(() =>
                 {
-                    onComplete?.Invoke();
-                    Dismiss();
-                    return false;
-                }
-
-                dialogue.SetPriority(7);
-                Dialogue tail = Tail(dialogue);
+                    // Prevent new trades or a second bell press during the wrap-up.
+                    client.tryInterceptDismiss = null;
+                    client.dismissable = false;
+                    if (!client.isBusinessComplete) client.CompleteBusiness();
+                    start?.Invoke();
+                });
+                Dialogue tail = CompletionTail(completion);
+                Action end = tail.endAction;
                 tail.SetEndAction(() =>
                 {
-                    onComplete?.Invoke();
-                    Dismiss();
+                    end?.Invoke();
+                    commit();
+                    Dismiss(callNextWhenPossible: true);
                 });
+                return completion;
+            };
+
+            // CompleteClientCreation wires acceptDealDialogue to OnDealAccepted.
+            // This event runs before vanilla chooses allDoneDialogue, including
+            // wholesale purchases, the last item and an exhausted buyer budget.
+            client.onDealAccepted += () =>
+            {
+                StoreClientInstance current = PlayerStore.Instance?.currentClientInstance;
+                if (current == null || current.GetClientBlueprint() != client) return;
+                if (client.isBusinessComplete || StoreClientInstance.IsClientBusinessDone(current))
+                {
+                    client.allDoneDialogue = getCompletion();
+                }
+            };
+
+            // The bell checks dismissable before invoking this interceptor.
+            client.dismissable = true;
+            client.tryInterceptDismiss = () =>
+            {
+                Dialogue dialogue = getCompletion();
+                if (dialogue == null)
+                {
+                    commit();
+                    return false;
+                }
                 return DialogUIManager.Instance.StartDialogue(dialogue, forcedStart: true);
             };
         }
 
-        public static void Dismiss()
+        public static void Dismiss() => Dismiss(callNextWhenPossible: false);
+
+        // A light invitation may split and then rejoin the host's original
+        // closing line. Keep its completion on that common leaf, never on the
+        // choice prompt, whose END runs before the player has answered.
+        public static Dialogue CompletionTail(Dialogue head)
+        {
+            var seen=new System.Collections.Generic.HashSet<Dialogue>();
+            var pending=new System.Collections.Generic.Stack<Dialogue>();
+            pending.Push(head);Dialogue leaf=null;
+            while(pending.Count>0)
+            {
+                var node=pending.Pop();if(node==null || !seen.Add(node))continue;
+                if(node.nextDialogue!=null)pending.Push(node.nextDialogue);
+                foreach(var choice in node.choices)pending.Push(choice.Item2);
+                if(node.nextDialogue==null && node.choices.Count==0)
+                {
+                    if(leaf!=null && leaf!=node)return Tail(head);
+                    leaf=node;
+                }
+            }
+            return leaf ?? Tail(head);
+        }
+
+        private static void Dismiss(bool callNextWhenPossible)
         {
             try
             {
                 if (PlayerStore.Instance != null)
                 {
-                    PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+                    PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: callNextWhenPossible);
                 }
             }
             catch (Exception ex)
@@ -369,22 +435,42 @@ namespace EleanorRomance
                 GameItem item = ItemSpawner.Spawn(itemId);
                 if (item == null) return false;
                 prepare?.Invoke(item);
+                return DeliverToPlayer(item);
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("GiveToPlayer failed for " + itemId + ": " + ex);
+                return false;
+            }
+        }
 
-                GraphUtils.TryAcceptAll(EmporiumEntry.Instance.invElement, item);
-                if (item.parentInventory == null)
+        public static bool DeliverToPlayer(GameItem item)
+        {
+            if (item == null) return false;
+            try
+            {
+                GeneralHelper.SetItemOwned(item, true);
+
+                int remaining = GraphUtils.TryAcceptAllMid(EmporiumEntry.Instance.frontInvinvElement, item);
+                if (remaining > 0)
                 {
-                    GraphUtils.TryAcceptAll(EmporiumEntry.Instance.afterhourInventory, item);
+                    remaining = GraphUtils.TryAcceptAll(EmporiumEntry.Instance.invElement, item, remaining);
                 }
-                if (item.parentInventory == null)
+                if (remaining > 0)
                 {
-                    StoryDirector.LogError("GiveToPlayer could not place " + itemId + " (inventory full).");
+                    remaining = GraphUtils.TryAcceptAll(EmporiumEntry.Instance.afterhourInventory, item, remaining);
+                }
+                if (remaining > 0)
+                {
+                    GraphUtils.DestroyIfUnplaced(item, "Eleanor gift could not be placed");
+                    StoryDirector.LogError("GiveToPlayer could not place " + item.identifier + " (inventory full).");
                     return false;
                 }
                 return true;
             }
             catch (Exception ex)
             {
-                StoryDirector.LogError("GiveToPlayer failed for " + itemId + ": " + ex);
+                StoryDirector.LogError("GiveToPlayer placement failed for " + item.identifier + ": " + ex);
                 return false;
             }
         }

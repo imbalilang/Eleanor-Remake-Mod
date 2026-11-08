@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "identity-preserve",
+  "transparent_background": true,
+  "references": [
+    {
+      "role": "authoritative original face and art style",
+      "path": "references_local/vanilla_eleanor1.png"
+    },
+    {
+      "role": "authoritative original face and art style",
+      "path": "references_local/vanilla_eleanor_scav.png"
+    },
+    {
+      "role": "costume design only",
+      "path": "../../Textures/Items/er_portrait_eleanor_maid_female_beauty.png"
+    }
+  ],
+  "prompt": "Use case: identity-preserve. Create ONE new production pixel-art portrait for the vanilla art style of the game Probably Stolen. REFERENCE ROLES: images 1 and 2 are the authoritative original-game Eleanor face, anatomy, muted palette and pixel-art technique; image 3 is ONLY a costume-design reference. Do not copy image 3's anime face, larger eyes or smooth rendering. Adult Eleanor must remain recognizably the SAME WOMAN as reference 1/2: narrow small green almond eyes, defined nose bridge and angular adult jaw, restrained natural lips, warm muted copper/auburn hair with the same parted front locks and braided/swept detail, medium adult proportions. Her expression is proud, composed, faintly amused. Outfit matches reference 3's work clothes: practical dark plum/charcoal dress, fitted sleeves and collar, white apron with straps, small tidy white maid headpiece, original gold choker. No backpack, tools or other props. This is an independent VANILLA-style asset, with coarse crisp pixel clusters, restrained 1990s adventure-game portrait shading, hard outlines, approximately 48 colors, no anime enlargement, no airbrushed gradients, no photorealism. COMPOSITION: one front-facing waist-up woman centered, same head-to-shoulder and head-to-canvas proportions as original-game references 1/2. At intended 288x212 native canvas, headpiece crown around y54-60, face about 40 pixels wide, shoulders about 120 pixels wide, total figure about 140 pixels wide, body reaches and is cropped by the bottom y212. Keep head and hair intact and side margins. Genuine RGBA TRANSPARENT background outside the character, including spaces between hair and arms; DO NOT reproduce the purple matte halos or jagged background artifacts in references 1/2. No floor, no rectangular backdrop, no checkerboard, no shadow halo, no text, no signature. Target output exactly 288 by 212 if supported. Preserve original game's understated realistic face and low-resolution pixel density; clothing reference is not permission to turn her into an anime character."
+}

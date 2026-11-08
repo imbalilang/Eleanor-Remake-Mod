@@ -1,0 +1,8 @@
+{
+  "er_maid_discount_lower": ["下城区声望≥{0}时费用减半：{1}→{2}信用点，不消耗声望。", "At Lower Level reputation ≥{0}, the cost is halved: {1} → {2} credits. Reputation is not spent."],
+  "er_maid_discount_upper": ["上层区声望≥{0}时费用减半：{1}→{2}信用点，不消耗声望。", "At Upper Level reputation ≥{0}, the cost is halved: {1} → {2} credits. Reputation is not spent."],
+  "er_maid_discount_both": ["上层区声望≥{0}、下城区声望≥{1}时费用减半：{2}→{3}信用点，不消耗声望。", "At Upper Level reputation ≥{0} and Lower Level reputation ≥{1}, the cost is halved: {2} → {3} credits. Reputation is not spent."],
+  "er_maid_discount_active": ["当前已享受声望优惠。", "The reputation discount is active."],
+  "er_maid_discount_pending": ["未达标也可按原价办理。", "You may pay the full price before meeting the reputation requirement."],
+  "er_maid_project_cash_missing": ["还差{0}信用点。", "You need {0} more credits."]
+}

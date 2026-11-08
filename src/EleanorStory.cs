@@ -16,22 +16,23 @@ namespace EleanorRomance
         {
             try
             {
+                StoreClient maidClient = MaidStory.CreateMainChapter(chapter);
+                if (maidClient != null) return maidClient;
                 switch (chapter)
                 {
                     case 1: return CreateFoodChapter();
                     case 2: return CreateHouseholdChapter();
                     case 3: return CreateBelongingsChapter();
                     case 4: return CreateUncleChapter();
-                    case 5: return RomanceState.Arrested && !RomanceState.Rescued
-                        ? CreateRescueChapter()
-                        : CreateWarningChapter();
+                    // Arrests are now scheduled by the native Eleanor scheduler.
+                    case 5: return VanillaEleanorBridge.RescuePending ? null : CreateWarningChapter();
                     case 6: return CreateHardshipChapter();
                     case 7: return CreateScavengerChapter();
                     case 8: return CreateScavengerSecondChapter();
                     case 9: return CreateGiftChapter();
                     case 10: return CreateLydiaChapter();
                     case 11: return CreateLydiaResponseChapter();
-                    case 12: return CreateSavingsChapter();
+                    case 12: return MaidStory.CreateEntry();
                     case 13: return CreateDriveChapter();
                     case 14: return CreateThreatChapter();
                     case 15: return CreateDecisionChapter();
@@ -69,7 +70,7 @@ namespace EleanorRomance
         // Shared client construction
         // ------------------------------------------------------------------
 
-        private static StoreClient NewEleanorClient(string id, string sprite, StoreClient.ClientIntent intent, bool upper = true)
+        internal static StoreClient NewEleanorClient(string id, string sprite, StoreClient.ClientIntent intent, bool upper = true)
         {
             StoreClient client = new StoreClient
             {
@@ -80,19 +81,19 @@ namespace EleanorRomance
                 nonShootable = true,
                 arrestable = false,
                 reportDegradesFaction = false,
-                dismissable = false
+                dismissable = false,
+                staysAfterFailedBargain = true
             };
 
             if (upper) StoreClientFactionSetup.InitUpperLevelCitizen(client);
             else StoreClientFactionSetup.InitRev(client);
 
-            client.acceptDealDialogue = StoryEngine.Text(L.Eleanor, L.Get("er_line_ellipsis"));
-            client.allDoneDialogue = StoryEngine.Text(L.Eleanor, L.Get("er_line_ellipsis"));
+            client.acceptDealDialogue = StoryEngine.Text(L.Eleanor, L.Get("er_line_trade_accept"));
             AddTrapWatcher(client);
             return client;
         }
 
-        private static StoreClient NewNpcClient(string id, string name, string sprite, FactionKind faction)
+        internal static StoreClient NewNpcClient(string id, string name, string sprite, FactionKind faction)
         {
             StoreClient client = new StoreClient
             {
@@ -103,7 +104,8 @@ namespace EleanorRomance
                 nonShootable = true,
                 arrestable = false,
                 reportDegradesFaction = false,
-                dismissable = false
+                dismissable = false,
+                staysAfterFailedBargain = true
             };
 
             switch (faction)
@@ -115,14 +117,13 @@ namespace EleanorRomance
                 default: StoreClientFactionSetup.InitUpperLevelCitizen(client); break;
             }
 
-            client.acceptDealDialogue = StoryEngine.Text(name, L.Get("er_line_ellipsis"));
-            client.allDoneDialogue = StoryEngine.Text(name, L.Get("er_line_ellipsis"));
+            client.acceptDealDialogue = StoryEngine.Text(name, L.Get("er_line_trade_accept"));
             return client;
         }
 
-        private enum FactionKind { Upper, BlackMarket, Security, Lower, Rev }
+        internal enum FactionKind { Upper, BlackMarket, Security, Lower, Rev }
 
-        private static void Advance(int expected, int next, Action flags = null)
+        internal static void Advance(int expected, int next, Action flags = null)
         {
             flags?.Invoke();
             StoryDirector.AdvanceChapter(expected, next);
@@ -208,7 +209,6 @@ namespace EleanorRomance
         {
             StoreClient client = NewEleanorClient("ch3", "eleanor2", StoreClient.ClientIntent.SELL);
             client.SetWholesale(30);
-            client.isBargainAvailable = false;
 
             StoryEngine.DealTracker tracker = new StoryEngine.DealTracker();
             client.onItemSold = (item, paid) => tracker.Record(item, paid, eleanorIsSeller: true);
@@ -288,7 +288,6 @@ namespace EleanorRomance
 
             StoreClient client = NewNpcClient("ch4", L.Get("er_name_uncle"), "maleBM5", FactionKind.BlackMarket);
             client.clientIntent = StoreClient.ClientIntent.SELL;
-            client.isBargainAvailable = false;
 
             GameItem crate = null;
             bool resolved = false;
@@ -420,9 +419,9 @@ namespace EleanorRomance
                 RomanceState.CrateSold = true;
                 RomanceState.UncleAccepted = false;
             }
-            Dialogue root = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_warning_prompt"));
+            Dialogue root = StoryEngine.Text(L.Player, L.Get("er_line_warning_prompt"));
 
-            Dialogue quiet = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_keep_quiet"));
+            Dialogue quiet = StoryEngine.Text(L.Player, L.Get("er_line_keep_quiet"));
             StoryEngine.Tail(quiet).SetEndAction(() =>
             {
                 Advance(5, 6);
@@ -449,36 +448,19 @@ namespace EleanorRomance
                 tell = StoryEngine.Chain(StoryV06Content.B_C04_B004,
                     StoryV06Content.B_C04_B007,
                     StoryV06Content.B_C04_B009);
-                StoryEngine.Tail(tell).SetEndAction(() =>
-                {
-                    Advance(5, 6);
-                    StoryEngine.Dismiss();
-                });
             }
 
-            if (knowsTrap)
+            if (knowsTrap && !RomanceState.WarningGiftGiven)
             {
-                // She offers a small existing item as thanks.  Each branch ends
-                // with her leaving line and only then commits the chapter.
+                Action finishGift = () =>
+                {
+                    if (RomanceState.WarningGiftGiven) Advance(5, 6);
+                    StoryEngine.Dismiss();
+                };
                 Dialogue purifierGift = StoryEngine.Build(StoryV06Content.B_C04_B009);
-                StoryEngine.Tail(purifierGift).SetEndAction(() =>
-                {
-                    StoryEngine.GiveToPlayer("portable_water_purifier", item =>
-                    {
-                        int max = DurabilityHelper.GetMaxDurability(item);
-                        DurabilityHelper.SetDurability(item, 75, max, max);
-                    });
-                    Advance(5, 6);
-                    StoryEngine.Dismiss();
-                });
+                StoryEngine.Tail(purifierGift).SetEndAction(finishGift);
                 Dialogue perfumeGift = StoryEngine.Build(StoryV06Content.B_C04_B009);
-                StoryEngine.Tail(perfumeGift).SetEndAction(() =>
-                {
-                    StoryEngine.GiveToPlayer("pheromone_perfume",
-                        item => UseCountHelper.SetCurrentUseCount(item, 3));
-                    Advance(5, 6);
-                    StoryEngine.Dismiss();
-                });
+                StoryEngine.Tail(perfumeGift).SetEndAction(finishGift);
                 Dialogue noGift = StoryEngine.Build(StoryV06Content.B_C04_B009);
                 StoryEngine.Tail(noGift).SetEndAction(() =>
                 {
@@ -487,11 +469,19 @@ namespace EleanorRomance
                 });
                 StoryEngine.AddChoices(tell, Prompt("er_prompt_gift"),
                     new StoryEngine.Choice(L.Get("er_choice_gift_purifier"), L.Get("er_choice_gift_purifier_desc"),
-                        purifierGift, null),
+                        purifierGift, () => GiveWarningGift(0)),
                     new StoryEngine.Choice(L.Get("er_choice_gift_perfume"), L.Get("er_choice_gift_perfume_desc"),
-                        perfumeGift, null),
+                        perfumeGift, () => GiveWarningGift(1)),
                     new StoryEngine.Choice(L.Get("er_choice_no_gift"), L.Get("er_choice_no_gift_desc"),
                         noGift, null));
+            }
+            else
+            {
+                StoryEngine.Tail(tell).SetEndAction(() =>
+                {
+                    Advance(5, 6);
+                    StoryEngine.Dismiss();
+                });
             }
 
             StoryEngine.AddChoices(root, Prompt("er_prompt_warning"),
@@ -509,91 +499,17 @@ namespace EleanorRomance
             return client;
         }
 
-        // ------------------------------------------------------------------
-        // 5b. Arrest rescue
-        // ------------------------------------------------------------------
-
-        private static StoreClient CreateRescueChapter()
+        private static void GiveWarningGift(int option)
         {
-            StoreClient client = NewNpcClient("rescue", L.Get("er_name_officer"), "maleSec1", FactionKind.Security);
-            Dialogue root = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_rescue_intro"));
-
-            Dialogue paid = StoryEngine.Build(StoryV06Content.B_C05_B008);
-            if (RomanceState.UncleInspected && !RomanceState.UncleWarned)
+            if (RomanceState.WarningGiftGiven) return;
+            if (!VanillaEleanorBridge.GiveWarningGift(option))
             {
-                StoryEngine.Append(paid, StoryV06Content.B_C05_B010);
+                StoryDirector.Notify(L.Get("er_notice_gift_pending"));
+                return;
             }
-            else
-            {
-                StoryEngine.Append(paid, StoryV06Content.B_C05_B009);
-            }
-            StoryEngine.Append(paid, StoryV06Content.B_C05_B011);
-            StoryEngine.Tail(paid).SetEndAction(() =>
-            {
-                RomanceState.Rescued = true;
-                RomanceState.Arrested = false;
-                int next = Mathf.Max(6, RomanceState.TrapResumeChapter);
-                Advance(5, next);
-                StoryEngine.Dismiss();
-            });
 
-            StoryEngine.AddChoices(root, Prompt("er_prompt_rescue"),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_report", 300), L.Get("er_choice_rescue_report_desc"),
-                    paid,
-                    () =>
-                    {
-                        if (StoryEngine.Spend(300))
-                        {
-                            RomanceState.RescueMethod = 1;
-                            RomanceState.ThreatRecorded = true;
-                        }
-                    },
-                    () => RomanceState.UncleReported && StoryEngine.HasCash(300)),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_sec", 30, 300), L.Get("er_choice_rescue_sec_desc"),
-                    paid,
-                    () =>
-                    {
-                        if (StoryEngine.Spend(300))
-                        {
-                            RomanceState.RescueMethod = 1;
-                            RomanceState.ThreatRecorded = true;
-                        }
-                    },
-                    () => StoryEngine.SecRep() >= 30 && StoryEngine.HasCash(300)),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_bm", 30, 400), L.Get("er_choice_rescue_bm_desc"),
-                    paid,
-                    () =>
-                    {
-                        if (StoryEngine.Spend(400)) RomanceState.RescueMethod = 2;
-                    },
-                    () => StoryEngine.BmRep() >= 30 && StoryEngine.HasCash(400)),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_money", 1200), L.Get("er_choice_rescue_money_desc"),
-                    paid,
-                    () => { if (StoryEngine.Spend(1200)) RomanceState.RescueMethod = 3; },
-                    () => StoryEngine.HasCash(1200)),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_ordinary", 120), L.Get("er_choice_rescue_ordinary_desc"),
-                    paid,
-                    () => { if (StoryEngine.Spend(120)) RomanceState.RescueMethod = 4; },
-                    () => StoryEngine.HasCash(120)),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_later"), L.Get("er_choice_rescue_later_desc"),
-                    null, () => StoryEngine.Dismiss()),
-                new StoryEngine.Choice(L.Get("er_choice_rescue_stop"), L.Get("er_choice_rescue_stop_desc"),
-                    StopRescue(), null));
-
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static Dialogue StopRescue()
-        {
-            Dialogue dialogue = StoryEngine.Text(L.Eleanor, L.Get("er_line_rescue_abandon"));
-            StoryEngine.Tail(dialogue).SetEndAction(() =>
-            {
-                StoryDirector.AbandonStory();
-                StoryEngine.Dismiss();
-            });
-            return dialogue;
+            RomanceState.WarningGiftGiven = true;
+            StoryDirector.Notify(L.Get("er_notice_gift_received"));
         }
 
         // ------------------------------------------------------------------
@@ -607,32 +523,44 @@ namespace EleanorRomance
             client.clientBuyingTagList.Add("TREAT");
             client.clientBuyingTagList.Add("BREVAGE");
             client.SetBudget(40);
-            client.isBargainAvailable = false;
             client.tradeReputationMultiplier = 2.0; // vanilla Eleanor4 parity
 
-            bool foodGiven = false;
             client.onItemBought = (item, paid) =>
             {
-                if (paid <= Mathf.Max(1, item.GetBaseValue()) / 3) foodGiven = true;
+                if (paid <= Mathf.Max(1, item.GetBaseValue()) / 3) RomanceState.HardshipAidGiven = true;
             };
 
             client.mainDialogue = StoryEngine.Build(StoryV06Content.B_C05_B001);
+            VanillaEleanorBridge.AttachCashAid(client);
 
             FinishWhenLeaving(client, 6, 7, () =>
             {
                 Dialogue dialogue;
-                if (foodGiven)
+                if (RomanceState.HardshipCashGiven)
+                {
+                    dialogue = StoryEngine.Text(L.Player, L.Get("er_line_cash_aid_1"));
+                    dialogue.NextDialogue().SetText(L.Eleanor, L.Get("er_line_cash_aid_2"))
+                        .NextDialogue().SetText(L.Eleanor, L.Get("er_line_cash_aid_3"))
+                        .NextDialogue().SetText(L.Player, L.Get("er_line_cash_aid_4"))
+                        .NextDialogue().SetText(L.Eleanor, L.Get("er_line_cash_aid_5"));
+                }
+                else if (RomanceState.HardshipAidGiven)
                 {
                     dialogue = StoryEngine.Chain(StoryV06Content.B_C05_B002, StoryV06Content.B_C05_B005);
-                    RomanceState.RecordDeal('D');
-                    RomanceState.AddAffection(2);
                 }
                 else
                 {
                     dialogue = StoryEngine.Chain(StoryV06Content.B_C05_B004, StoryV06Content.B_C05_B006);
-                    RomanceState.NoSaleVisits++;
                 }
                 return Head(dialogue);
+            }, () =>
+            {
+                if (RomanceState.HardshipAidGiven)
+                {
+                    RomanceState.RecordDeal('D');
+                    RomanceState.AddAffection(2);
+                }
+                else RomanceState.NoSaleVisits++;
             });
 
             client.CompleteClientCreation();
@@ -648,7 +576,6 @@ namespace EleanorRomance
             StoreClient client = NewEleanorClient("ch7", "eleanor_scav", StoreClient.ClientIntent.SELL);
             client.SetWholesale(30);
             client.staysAfterFailedBargain = true;
-            client.isBargainAvailable = false;
 
             StoryEngine.DealTracker tracker = new StoryEngine.DealTracker();
             client.onItemSold = (item, paid) =>
@@ -691,7 +618,6 @@ namespace EleanorRomance
             StoreClient client = NewEleanorClient("ch8", "eleanor_scav", StoreClient.ClientIntent.SELL);
             client.SetWholesale(30);
             client.staysAfterFailedBargain = true;
-            client.isBargainAvailable = false;
 
             StoryEngine.DealTracker tracker = new StoryEngine.DealTracker();
             client.onItemSold = (item, paid) =>
@@ -775,7 +701,6 @@ namespace EleanorRomance
             StoreClient client = NewNpcClient("lydia1", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
             client.clientIntent = StoreClient.ClientIntent.SELL;
             client.SetWholesale(45);
-            client.isBargainAvailable = false;
 
             StoryEngine.DealTracker tracker = new StoryEngine.DealTracker();
             client.onItemSold = (item, paid) =>
@@ -854,59 +779,6 @@ namespace EleanorRomance
 
         // ------------------------------------------------------------------
         // 12. The 800 credits
-        // ------------------------------------------------------------------
-
-        private static StoreClient CreateSavingsChapter()
-        {
-            StoreClient client = NewEleanorClient("ch12", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
-            Dialogue root;
-
-            if (RomanceState.Savings < 800)
-            {
-                RomanceState.Savings = 800;
-                RomanceState.SavingsAutoFilled = true;
-                if (RomanceState.Discounts + RomanceState.FairDeals < 2)
-                {
-                    RomanceState.LocketSold = true;
-                    RomanceState.LocketWithEleanor = false;
-                }
-                root = StoryEngine.Build(StoryV06Content.B_C11_B004);
-                if (RomanceState.LocketSold) StoryEngine.Append(root, StoryV06Content.B_C11_B005);
-            }
-            else
-            {
-                root = StoryEngine.Build(StoryV06Content.B_C11_B001);
-            }
-
-            Dialogue completion = StoryEngine.Build(StoryV06Content.B_C11_B002);
-            StoryEngine.Tail(completion).SetEndAction(() =>
-            {
-                Advance(12, 13);
-                StoryEngine.Dismiss();
-            });
-
-            Dialogue exploitative = StoryEngine.Build(StoryV06Content.B_C11_B003);
-            StoryEngine.Tail(exploitative).SetEndAction(() =>
-            {
-                RomanceState.Romance = 4;
-                Advance(12, 13);
-                StoryEngine.Dismiss();
-            });
-
-            StoryEngine.AddChoices(root, Prompt("er_prompt_savings"),
-                new StoryEngine.Choice(L.Get("er_choice_savings_continue"), L.Get("er_choice_savings_continue_desc"),
-                    completion, null),
-                new StoryEngine.Choice(L.Get("er_choice_savings_control", 800), L.Get("er_choice_savings_control_desc"),
-                    exploitative, null,
-                    () => StoryEngine.HasCash(800)));
-
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        // ------------------------------------------------------------------
-        // 13. The drive and its custodian
         // ------------------------------------------------------------------
 
         private static StoreClient CreateDriveChapter()
@@ -1281,7 +1153,9 @@ namespace EleanorRomance
         {
             StoreClient client = NewEleanorClient("ch19", "eleanor_scav", StoreClient.ClientIntent.SELL);
             client.SetWholesale(25);
-            client.isBargainAvailable = false;
+
+            StoryEngine.DealTracker tracker = new StoryEngine.DealTracker();
+            client.onItemSold = (item, paid) => tracker.Record(item, paid, eleanorIsSeller: true);
 
             Dialogue main = StoryEngine.Chain(StoryV06Content.B_C18_B001, StoryV06Content.B_C18_B002);
             StoryEngine.Tail(main).SetEndAction(() =>
@@ -1299,7 +1173,7 @@ namespace EleanorRomance
                         ? StoryV06Content.B_C18_B003
                         : StoryV06Content.B_C18_B004);
                 return Head(dialogue);
-            });
+            }, () => RecordDeal(tracker, noSaleIsVisit: true));
 
             client.CompleteClientCreation();
             return client;
@@ -1469,7 +1343,7 @@ namespace EleanorRomance
         // 23. Work and future
         // ------------------------------------------------------------------
 
-        private static StoreClient CreateFutureChapter()
+        internal static StoreClient CreateFutureChapter()
         {
             StoreClient client = NewEleanorClient("ch23", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
             Dialogue root = StoryEngine.Build(RomanceState.Route == 2
@@ -1511,7 +1385,9 @@ namespace EleanorRomance
                 StoryEngine.Tail(root).SetEndAction(() => FinishFuture(client, 23));
             }
 
-            client.mainDialogue = root;
+            var orderLead=MaidBusiness.Say("order_lead");
+            MaidBusiness.AppendOrderOffer(orderLead,root);
+            client.mainDialogue = orderLead;
             client.CompleteClientCreation();
             return client;
         }
@@ -1525,7 +1401,6 @@ namespace EleanorRomance
                 Dialogue accept = StoryEngine.Build(StoryV06Content.B_C22_B008);
                 StoryEngine.Tail(accept).SetEndAction(() =>
                 {
-                    Items.GiveLocket();
                     Advance(chapter, 24);
                     StoryEngine.Dismiss();
                 });
@@ -1535,11 +1410,7 @@ namespace EleanorRomance
                     Advance(chapter, 24);
                     StoryEngine.Dismiss();
                 });
-                StoryEngine.AddChoices(locket, Prompt("er_prompt_locket"),
-                    new StoryEngine.Choice(L.Get("er_choice_take_locket"), L.Get("er_choice_take_locket_desc"),
-                        accept, null),
-                    new StoryEngine.Choice(L.Get("er_choice_refuse_locket"), L.Get("er_choice_refuse_locket_desc"),
-                        refuse, null));
+                MaidStory.GateOriginalLocket(locket,accept,refuse);
                 DialogUIManager.Instance.StartDialogue(locket, forcedStart: true);
             }
             else if (RomanceState.RomanceConfirmed && RomanceState.LocketSold)
@@ -1563,7 +1434,7 @@ namespace EleanorRomance
         // 24. Core conclusion
         // ------------------------------------------------------------------
 
-        private static StoreClient CreateConclusionChapter()
+        internal static StoreClient CreateConclusionChapter()
         {
             if (RomanceState.Romance == 2) RomanceState.Romance = 3;
             bool lover = RomanceState.RomanceConfirmed;
@@ -1573,18 +1444,21 @@ namespace EleanorRomance
             Dialogue root = StoryEngine.Chain(StoryV06Content.B_C23_B001, StoryV06Content.B_C23_B002);
             StoryEngine.Append(root, lover ? StoryV06Content.B_C23_B003 : StoryV06Content.B_C23_B004);
             Dialogue tail = StoryEngine.Tail(root);
-            Dialogue gift = tail.NextDialogue().SetText(L.Eleanor, L.Get("er_line_end_perfume"));
-            gift.SetStartAction(StoryEngine.GiveSelfRefillingPerfume);
+            Dialogue gift = StoryEngine.Text(L.Eleanor, L.Get("er_line_end_perfume"));
+            MaidStory.GateOriginalReward(root,gift);
             Dialogue beforeClosing = gift;
             if (lover)
             {
                 beforeClosing = gift.NextDialogue()
                     .SetText(L.Eleanor, L.Get("er_line_scav_assist"));
             }
-            Dialogue closing = beforeClosing.NextDialogue()
-                .SetText(L.Get("er_name_narrator"), L.Get("er_line_core_end"));
+            bool receipt = MaidWorldEvents.AppendReceipt(beforeClosing);
+            beforeClosing = StoryEngine.Tail(beforeClosing);
+            Dialogue closing = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_core_end"));
+            beforeClosing.SetNextDialogue(closing);
             closing.SetEndAction(() =>
             {
+                if (receipt) MaidWorldEvents.SubmitReceipt();
                 StoryDirector.CompleteCore();
                 StoryEngine.Dismiss();
             });
@@ -1634,7 +1508,6 @@ namespace EleanorRomance
             StoreClient client = NewEleanorClient("rc3", "eleanor3", StoreClient.ClientIntent.BUY);
             client.clientBuyingTagList.Add("FOOD");
             client.SetBudget(40);
-            client.isBargainAvailable = false;
             bool dealt = false;
             client.onItemBought = (item, paid) => { if (paid >= 0) dealt = true; };
             Dialogue main = StoryEngine.Build(StoryV06Content.B_RC_B003);
@@ -1670,7 +1543,6 @@ namespace EleanorRomance
             StoreClient client = NewEleanorClient("rc5", "eleanor3", StoreClient.ClientIntent.BUY, upper: false);
             client.clientBuyingTagList.Add("WEAPON");
             client.SetBudget(350);
-            client.isBargainAvailable = false;
             bool dealt = false;
             client.onItemBought = (item, paid) => { if (paid >= 0) dealt = true; };
             Dialogue main = StoryEngine.Build(StoryV06Content.B_RC_B006);
@@ -1722,15 +1594,13 @@ namespace EleanorRomance
             StoreClient client = NewEleanorClient("rc8", "eleanor_rev", StoreClient.ClientIntent.BUY, upper: false);
             client.clientBuyingTagList.Add("FOOD");
             client.SetBudget(120);
-            client.isBargainAvailable = false;
             Dialogue main = StoryEngine.Build(StoryV06Content.B_RC_B014);
             client.mainDialogue = main;
             FinishWhenLeaving(client, 108, 300, () =>
             {
                 Dialogue dialogue = StoryEngine.Build(StoryV06Content.B_RC_B015);
-                Dialogue gift = StoryEngine.Tail(dialogue)
-                    .NextDialogue()
-                    .SetText(L.Get("er_name_narrator"), L.Get("er_line_leak_perfume"));
+                Dialogue gift = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_leak_perfume"));
+                StoryEngine.Tail(dialogue).SetNextDialogue(gift);
                 gift.SetStartAction(StoryEngine.GiveSelfRefillingPerfume);
                 return Head(dialogue);
             }, () => RomanceState.WorkState = 3);
@@ -1763,8 +1633,7 @@ namespace EleanorRomance
                     break;
                 default:
                     root = StoryEngine.Build(StoryV06Content.B_RD_B005);
-                    RomanceState.MotherState = 3;
-                    RomanceState.DriveState = 3;
+                    if (RomanceState.DriveState == 1) RomanceState.DriveState = 2;
                     break;
             }
 
@@ -1844,7 +1713,7 @@ namespace EleanorRomance
                 });
 
                 Dialogue root = StoryEngine.Text(L.Get("er_name_archivist"), L.Get("er_old_prompt_1"));
-                root.NextDialogue().SetText(L.Get("er_name_archivist"), L.Get("er_old_prompt_2"));
+                root.SetNextDialogue(StoryEngine.Text(L.Get("er_name_archivist"), L.Get("er_old_prompt_2")));
                 StoryEngine.AddChoices(root, L.Get("er_old_prompt_choice_prompt"),
                     new StoryEngine.Choice(L.Get("er_old_prompt_reset"), L.Get("er_old_prompt_reset_desc"), reset, null),
                     new StoryEngine.Choice(L.Get("er_old_prompt_keep"), L.Get("er_old_prompt_keep_desc"), keep, null));
@@ -1907,12 +1776,8 @@ namespace EleanorRomance
                             RomanceState.KnewTrapUnwarned = true;
                         }
                         RomanceState.TrapSprung = true;
-                        RomanceState.Arrested = true;
-                        RomanceState.TrapResumeChapter = Mathf.Max(6,
+                        VanillaEleanorBridge.RecordArrest(
                             RomanceState.PendingChapter > 0 ? RomanceState.PendingChapter : RomanceState.Chapter);
-                        RomanceState.PendingChapter = 0;
-                        RomanceState.Chapter = 5;
-                        RomanceState.NextVisitDay = StoreStation.Instance.dayCounter + 1;
                     }
                     else
                     {
@@ -1929,7 +1794,7 @@ namespace EleanorRomance
         // Utility
         // ------------------------------------------------------------------
 
-        private static string LydiaSpriteKey()
+        internal static string LydiaSpriteKey()
         {
             return PortraitCompat.ResolveCharacter(
                 ModConstants.LydiaPortraitVanilla,
@@ -1937,7 +1802,7 @@ namespace EleanorRomance
                 ModConstants.LydiaSprite);
         }
 
-        private static string MotherSpriteKey()
+        internal static string MotherSpriteKey()
         {
             return PortraitCompat.ResolveCharacter(
                 ModConstants.MotherPortraitVanilla,
@@ -1962,7 +1827,7 @@ namespace EleanorRomance
             }
         }
 
-        private static void RecordDeal(StoryEngine.DealTracker tracker, bool noSaleIsVisit)
+        internal static void RecordDeal(StoryEngine.DealTracker tracker, bool noSaleIsVisit)
         {
             if (!tracker.Any)
             {

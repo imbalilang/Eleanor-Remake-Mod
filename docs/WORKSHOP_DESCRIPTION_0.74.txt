@@ -1,0 +1,41 @@
+[h1]Eleanor Story Expand[/h1]
+[h2]上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展[/h2]
+
+“呵，你们下层区管这种地方叫‘商店’啊？”
+
+她是上层区最大水培农场前负责人的独女。母亲被以挪用公款罪关押，家族一夜崩塌，她跌进自己曾最看不起的下层区。
+你，是这里的一家当铺老板。
+
+靠识货、开价、留证和承担风险，先成为她愿意信任的人。你们可以成为平等的恋人、继续做朋友，也可以选择一份双方说清条件的侍从约定。她的骄傲、判断与救母决心始终保留。
+
+[h2]0.74：合作分红与逐渐形成的依赖[/h2]
+[list]
+[*]加入持续经营回报：“第一单”完成后每天累计200信用点，事业正式开张后提高至600。埃莉诺来访时带来结算，未领取的收益一直保留；主线和紧急事件延迟来访不会损失分红。
+[*]现有经营／日常来访可带款，也有低频结算来访。王尔德项目显示收益与待领账款。单纯付款不提前开账，完成对应剧情后次日起累计；旧完成档从更新后的读档日开账，不追造此前收入。
+[*]重写入线到告白的过渡：先协作，在救母交涉中验证玩家的判断，救母后再逐渐依靠。首次“主人”和完整女仆装后移至第19章，正式行礼在恋爱确认后；保留骄傲、矛盾与不适应。
+[*]早年的陷阱旧伤提前披露，承诺之后还要通过行动验证；旧版本已发生的称呼历史保留。平等恋爱、朋友及救母路线继续可用。
+[*]轻修原版风女仆立绘眼部，保留原有像素画风、轮廓和色板。中英各2109条文本，41组离线回归与原生模组扫描通过。
+[/list]
+
+[h2]侍从恋爱与上层区归来[/h2]
+[list]
+[*]可选的侍从路线，最后确认才另外支付800预付工钱；探索或撤回不收费，她自筹的调查款独立保留。
+[*]四个王尔德筹备项目，共七种购买方案，按剧情逐步显示。后三项现金与人脉二选一；可慢慢筹备，没有利息或催款，不购买不撤销已完成的救母和恋爱。
+[*]五次上层区归来来访，以及代客估价、可选商单、实物样品、现货买卖与补货需求，见证埃莉诺以自己的名字做生意。
+[*]乙线有独立案件复核和原生新闻。母亲能否出席读取实际结果，筹备付款不替代撤案。
+[*]女仆立绘提供原版风和《少女当铺》美化风两套资源，无需其他模组也可完整使用。母亲吊坠为紧凑2×2，手工镯为2×1，旧物品安全整理。
+[*]支持已核对字段的旧800停线档续接；已看过的章节不强制重播，读档不重收费用或清空世界事实。
+[/list]
+
+[h2]开局与兼容[/h2]
+普通开局第23天开始；可在新游戏天赋中选择0点中立特性“旧日回想”，提前至第12天，不占用专精选择。后续按实际来访与筹备进度推进。
+适配游戏1.0.0.12同期代码、内部版本0.46D。简体中文与English完整支持，全年龄。更新前建议备份存档，降级兼容不作保证。实机体验与经营平衡继续收集反馈。
+
+[h2]English[/h2]
+An expanded Eleanor story with equal romance, friendship and an optional attendant relationship, four story-gated Wilde projects, five Upper Level return visits, real shop interactions and an independent case review. Original-style and Maiden's Pawnshop-style maid portraits included; no other mod is required.
+
+Version 0.74 adds daily business dividends. After the first order succeeds, 200 credits accrue per game day; after the business opens, the rate rises to 600. Eleanor settles the accumulated balance during her own visits. Delayed visits never erase earnings. Wilde's projects show rewards and balances. Existing completed saves begin accruing after their first updated load, without invented historical income.
+
+The attendant relationship now develops through cooperation, demonstrated judgment during the rescue and growing reliance afterwards. The first private address and maid outfit are delayed to chapter 19, with the formal curtsy after romance confirmation. The earlier box incident is addressed sooner; established legacy relationships keep their history. Includes a subtle vanilla maid eye retouch and matching English text, with 2109 keys per language. All 41 offline regression groups and the native mod scan pass.
+
+Normal start on day 23; optional early-start perk on day 12. All-ages. Back up saves before updating; downgrading is not guaranteed.

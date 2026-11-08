@@ -1,0 +1,230 @@
+{
+  "world_b003": [
+    "Following a review, the embezzlement conviction of the station's former largest hydroponic farm manager has been formally overturned. The original allegations and procedural irregularities will be investigated separately.",
+    "Trials of seed-producing Nutrifruit continue. Researchers say existing trial records will remain open for public verification."
+  ],
+  "world_b004": [
+    "We've got the official notice overturning Mother's conviction. She looked at her name first, then read the last line again.",
+    "What did she say?",
+    "Nothing. After a long while, she said she wanted to cook a proper dinner. When she went for the bowls, she took three.",
+    "I'd better close early, then.",
+    "Yes. She said not to bring anything. Just come."
+  ],
+  "world_b005": [
+    "Next time, I'll take her upstairs to see the showroom. Not to make up for a missed reception. I just want her to see what I've built."
+  ],
+  "wait_b001": [
+    "Don't rush this by handing over money the shop still needs.",
+    "Still short of money.",
+    "Then save it a little at a time. I never said it had to be done tomorrow.",
+    "...I can wait. The agreement has no date on it."
+  ],
+  "wait_b002": [
+    "Still haven't secured that discount Wilde mentioned?",
+    "A few more people over there need to know my name first. If we go ahead now, it's the full price.",
+    "Save where you can. If you want to go ahead, paying full price is fine too. Don't stretch yourself too thin."
+  ],
+  "wait_b003": [
+    "While you're getting things ready, I've gone over what I can do too. I'm not leaving all the work to you.",
+    "Keeping busy?",
+    "Of course. You didn't pay for an ornament to sit looking pretty.",
+    "Pretty is true too.",
+    "...Let me finish this first. Then you can say it."
+  ],
+  "daily_b002": [
+    "Looking for this pen?",
+    "How did you get it?",
+    "Retrieved it from where you put it. The wrong place. Second time now.",
+    "My attendant keeps a careful count.",
+    "If I don't, Master will spend all his searching time asking me.",
+    "That wouldn't be so bad.",
+    "...If you want to talk to me, say so. Don't use misplaced things as an excuse."
+  ],
+  "daily_b003": [
+    "Brought something to eat. Don't ask what it cost first. I keep my own accounts.",
+    "Didn't you used to hate this sort of thing?",
+    "Still do. This place makes it edible, though.",
+    "Master only gets 'edible'?",
+    "It's the best portion I could find. Do you know how long I spent choosing?",
+    "Then I'll eat it properly.",
+    "Yes. Tell me afterward whether you'd like it again."
+  ],
+  "daily_b004": [
+    "Someone at the door asked whether I worked here.",
+    "What did you say?",
+    "Yes. Then he asked whether I helped people like this upstairs too.",
+    "Did that annoy you?",
+    "A little. So I told him I only do this for Master. Anyone else couldn't hire me for any price.",
+    "I thought that name was private.",
+    "You're not allowed to use me to amuse people. Choosing to say it myself is different.",
+    "You're right.",
+    "Then stop smiling so much. ...At least wait until I turn around."
+  ],
+  "daily_b005": [
+    "Looks quite tidy today. Nothing for me to do?",
+    "There is. Stay with me a while.",
+    "That counts?",
+    "Yes.",
+    "Then where do I sit?",
+    "Closer."
+  ],
+  "daily_b006": [
+    "She sits beside you, her hand within reach. After a while, noticing that you're still reading the accounts, she brushes the back of your hand.",
+    "Master. You assigned the duty. Don't call someone over and then ignore her."
+  ],
+  "tragic_b002": [
+    "The Nutrifruit research is with the newspaper. They've confirmed they can read it. They'll keep checking it.",
+    "Any word about your mother?",
+    "Not yet. I asked.",
+    "Let me do something today. Otherwise I'll sit here wondering whether the news would come if I just waited a little longer.",
+    "Sit here. Put the checked papers together. Leave the rest.",
+    "...All right."
+  ],
+  "tragic_b004": [
+    "Her mother's death is confirmed. When she returns, she doesn't put her pack in its usual place.",
+    "The news is true.",
+    "Eleanor...",
+    "Don't say we did everything we could. I can't hear that right now.",
+    "All right. Sit for a while if you want.",
+    "And the agreement.",
+    "It ends here.",
+    "Your half of the promise... the Upper Level...",
+    "I don't want it now.",
+    "I know.",
+    "Those eight hundred—",
+    "Your wages. I remember what you did for the shop."
+  ],
+  "tragic_b005": [
+    "But everything you did for me—",
+    "Doesn't become a debt. Look after yourself today.",
+    "...I really can't do anything today.",
+    "You don't have to."
+  ],
+  "tragic_b006": [
+    "I've got a few of Mother's things back. I meant to sort them. Once I opened them up, I didn't know what to pick up first.",
+    "Take your time.",
+    "I used to fear having no money, no news. Now there are things I never have to fear again. I don't feel any lighter."
+  ],
+  "tragic_b007": [
+    "I'll keep this for now. I don't want to give it away or sell it today.",
+    "Keep it safe."
+  ],
+  "tragic_b008": [
+    "I used to think, once she was out, I'd ask her to come find the locket with me.",
+    "When you want to go, I'll come ask with you.",
+    "...Later."
+  ],
+  "tragic_b009": [
+    "I've decided to join the revolutionaries.",
+    "Have you thought about what you'll do?",
+    "Not everything. But I can't just wait until someone else is taken like that, then start counting money again.",
+    "Then check where you're going and who you can contact. Don't follow someone just because they say the right things.",
+    "I will. I haven't forgotten everything you taught me."
+  ],
+  "tragic_b010": [
+    "I need a working weapon. Not something that looks frightening. Something reliable.",
+    "If I have one, I'll show you. If I don't, I won't pass off something broken.",
+    "All right. We judge the goods."
+  ],
+  "tragic_b012": [
+    "That's today's account settled.",
+    "No hurry with the rest.",
+    "...I know. Some things can't be put away with a new label."
+  ],
+  "tragic_b013": [
+    "Eleanor told me. She's leaving with the revolutionaries. I couldn't talk her out of it.",
+    "Did you let her finish?",
+    "This time, yes. She said the agreement at the shop was over. Nobody owed anyone anything.",
+    "She told me not to come here and argue on her behalf. ...Did I always make people feel I'd make things worse as soon as I spoke?",
+    "Listen to her this time.",
+    "...Yes."
+  ],
+  "tragic_b014": [
+    "I'm leaving with the revolutionaries soon, and I keep thinking: if things hadn't gone this way, I'd probably still be here finding fault with your shelves.",
+    "You still can.",
+    "That label's crooked.",
+    "I see it.",
+    "...I'll remember these things. Not everything has to turn bad because of what happened last.",
+    "Come back when you have the chance.",
+    "All right. But don't wait for a date I can't promise."
+  ],
+  "tragic_b015": [
+    "I'm here for the last few things. Once I leave with the revolutionaries, I won't be coming by so often."
+  ],
+  "tragic_b016": [
+    "Keep the perfume. When you smell it, don't only remember me at my worst.",
+    "I remember your first time wiping the counter. You said the cloth was too rough.",
+    "It was too rough.",
+    "Be careful out there.",
+    "You too. Don't get so busy you forget to eat."
+  ],
+  "exit_b002": [
+    "I told you: the day this starts to feel like I'm being used to settle a debt, I leave.",
+    "You don't want to talk about the crate again. I can't pretend it never happened. This ends here."
+  ],
+  "exit_b005": [
+    "You handed over Mother's research disk?",
+    "...Yes.",
+    "Where's Mother? Did you see the release papers?"
+  ],
+  "exit_b006": [
+    "You have no verified news to offer.",
+    "I didn't ask how much you got. I asked where she is.",
+    "On the first day I told you. Mother and the research were outside the agreement.",
+    "I did the agreed work, told you everything I knew, waited while you checked the news. Why doesn't your promise to tell me first count?",
+    "Eleanor—",
+    "Don't call me back here. I'm done working in this place."
+  ],
+  "exit_b008": [
+    "I heard it from someone else. You've already published the research.",
+    "Yes.",
+    "My mother has no protection yet. You knew. So did I.",
+    "So I'm meant to tell you everything, but you don't have to say a word.",
+    "The agreement is over. What I do from now on is no longer yours to be told."
+  ],
+  "ending_b001": [
+    "In time, people grow used to the Upper Level girl helping at the pawnshop. She remains particular with customers, and leaves no doubt when speaking up for the owner.",
+    "When someone offers more to hire her, she asks about the duties before the price. If they hope to buy that private name along with her work, she raises her chin and tells them to ask elsewhere.",
+    "The agreement hasn't expired. Neither of you is in a hurry. The pen beside the counter always points toward your usual hand.",
+    "Only when the shop holds just the two of you does she lean close and ask, 'Master, how long will you keep me waiting today?'"
+  ],
+  "ending_b002": [
+    "They have a place fit to live in. Enough light to read, and room at last for her mother's worktable.",
+    "She has passed through the Upper Level checkpoint again. Yet on her return, she still comes to your counter first.",
+    "She has begun signing business under her own name. Your preparations have become more than a word of thanks.",
+    "People upstairs have asked who you are. Every time, she calls you someone she trusts.",
+    "The Upper Level remembers her name. She intends to announce the agreement's fulfillment herself, and is still waiting for the right evening."
+  ],
+  "ending_b003": [
+    "Later, when people upstairs mention Eleanor, they no longer speak only of the size of her mother's farm. They discuss her business, her eye for goods, and the person who still runs a pawnshop downstairs.",
+    "She never hides who supplied the first capital, or who prepared an opportunity before she had any. If someone thinks a higher offer would make her change masters, she asks them to distinguish business from fantasy.",
+    "After her own business, she still returns to you and changes into that outfit she has kept. You beckon, and the woman now earnestly invited throughout the Upper Level comes over with that familiar touch of pride.",
+    "'Shall I tell you about the world outside first, or simply stay with you a while, Master?'"
+  ],
+  "ending_b004": [
+    "Her mother's name returns upstairs too. Sometimes mother and daughter go up together, and come back together. Outside this pawnshop, her mother always pauses to straighten her daughter's collar.",
+    "Her mother keeps the notice overturning the conviction at the top of a drawer. Neither brings up the case anymore. Sometimes, at dinner, they simply set out an extra bowl."
+  ],
+  "ending_b005": [
+    "The review documents have been submitted, but the formal notice has not arrived. She keeps every receipt safe, and after her own business, still goes home to eat with her mother."
+  ],
+  "ending_b006": [
+    "First she checks your itinerary, then asks, item by item, what you're taking and leaving. You say there are no more duties. She ignores that until the last detail is settled.",
+    "Her mother's housing and her own future must follow the circumstances as they are. She doesn't pretend following you is as simple as saying it, but remembers how to contact you more carefully than you do.",
+    "At parting, she holds your hand. 'Master, tell me when you arrive. Don't always make me the last to know.'"
+  ],
+  "ending_b007": [
+    "She begins asking after you, checking every report that can be checked. When someone offers only a vague assurance, she asks who is responsible, and when she can see you.",
+    "Love doesn't automatically change the outcome. What she can do depends on how much room this ending leaves her.",
+    "But she remembers you telling her not to carry everything alone. Now it's her turn to verify the news, one piece at a time, and come find you."
+  ],
+  "ending_b008": [
+    "She comes to the pawnshop once more. Standing at the counter, she almost asks what she should do first today.",
+    "No one answers. She puts the pen back beside your usual hand, stands for a long while, and finally leaves it untouched.",
+    "She still has to look after her mother, do business, and live. But there are ordinary instructions she will never hear again."
+  ],
+  "ending_b010": [
+    "Sometimes she sends a short message. By the end, she always adds one question: are you still at that shop?",
+    "Once she writes that she saw a badly written price tag and almost rewrote it out of habit. The letter pauses there, then adds: remember to replace yours."
+  ]
+}

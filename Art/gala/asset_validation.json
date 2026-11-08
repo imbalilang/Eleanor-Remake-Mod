@@ -1,0 +1,17 @@
+{
+  "source": "Art\\gala\\masters\\eleanor_gala_beauty_master.png",
+  "file": "Textures\\Items\\er_portrait_eleanor_gala_female_beauty.png",
+  "size": [
+    288,
+    212
+  ],
+  "alpha_bbox": [
+    79,
+    54,
+    208,
+    212
+  ],
+  "opaque_colors": 63,
+  "sha256": "e5e7f9f37e993d2095864c9f42d0c8b60d836df48e8a14ee5e4df56762b7b120",
+  "vanilla": "Uses native eleanor1. No new vanilla sprite."
+}

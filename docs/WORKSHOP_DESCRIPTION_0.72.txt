@@ -1,0 +1,66 @@
+[h1]Eleanor Story Expand[/h1]
+[h2]上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展[/h2]
+
+“呵，你们下层区管这种地方叫‘商店’啊？”
+
+她是上层区最大水培农场前负责人的独女。母亲被以挪用公款罪关押，家族一夜崩塌，她跌进自己曾最看不起的下层区。
+
+你，是这里的一家当铺老板。
+
+靠识货、开价、留证和承担风险，先成为她愿意信任的人。你们可以成为平等的恋人、继续做朋友，也可以选择一份双方说清条件的侍从约定。她的骄傲、判断与救母决心始终保留。
+
+[h2]0.72更新：筹备说明与章节承接[/h2]
+[list]
+[*]精简王尔德筹备说明，价格和恩惠沿用原生界面显示，人脉方案保留必要条件。
+[*]首次“安顿”由团聚剧情自然引出，玩家会主动提出找王尔德安排住所。
+[*]优化隔几天再见面时的对白承接，点明人物、当前事项与结果；保留原有拌嘴、停顿和留白。
+[*]筹备等待按当前项目提醒，两类买家、母亲撤案与丙线去向更清楚。英语同步，不改变路线、收费、奖励和章节排期。
+[/list]
+[h2]0.71更新：王尔德筹备按剧情显示[/h2]
+[list]
+[*]修复新版王尔德界面仍提前显示全部七张卡片的问题，旧版界面同步刷新；未来项目的名称、说明和价格均隐藏。
+[*]救母团聚后显示“安顿”；基础篇结束且安顿反馈完成后显示“通行与正装”；第24章后显示“第一单”；第26章后显示“自己的事业”。
+[*]四个项目共有七种购买方案，其中后三项为现金与人脉二选一；已付款保留所选方案的结清记录。安顿不阻断第17～23章基础剧情。
+[*]分组标题改为“埃莉诺 · 筹备”，避免提前透露后续方向，中英文同步。
+[/list]
+[h2]0.70更新：v0.7 选项与剧情修订[/h2]
+[list]
+[*][b]暂缓存档自动续接。[/b]曾选择“让我再想一想”的存档读档时直接视为主从恋爱确认；第22章不会重复追问已经播过的莉迪亚内容。
+[*][b]旧约序章重写。[/b]符合旧800停线形状的存档改为：到店卖货 → 侦探消息 → 收回旧话的两条路径 → 她拿旧话反讽“主人” → 第11章条件 → 最终确认。全程不扣款；只有最终确认才写入关系方向。
+[*][b]选项与玩家形象修订。[/b]第12章改为玩家主导的两种保管策略；第13章离开/举报/上层区选项改用侍从线文本；第14章退出改写为唯一一次有动机的中途退出；第16章甲线删除三百补偿菜单，固定为退回；第20章删除暂缓，保留主从恋人、普通恋人、朋友三项；第22、24章补充玩家台词。
+[*]中英各2067条对白、界面与系统文本；原恋爱、朋友线与旧800档承接不受影响。
+[/list]
+
+[h2]0.67新增：侍从恋爱与上层区归来[/h2]
+[list]
+[*][b]一份有边界的约定。[/b]在调查款凑齐的节点探索新提议；只有最后确认才支付800信用点预付工钱。她自筹的调查款独立保留，母亲与研究的决定另行商量。
+[*][b]上层区归来篇。[/b]新增阅读第24～28章：合法通行、第一单、上层区采购商、公开亮相与约定到期。她接受介绍和支持，也要靠自己的业务与交付，让上面的人记住“埃莉诺”。
+[*][b]王尔德的四项筹备。[/b]安顿、通行与正装、第一单、自己的事业；部分项目可用派系人脉减少现金。复用原版升级报价和王尔德抵付，项目可延期；未完成筹备不取消已有恋爱或救母结果。
+[*][b]乙线独立复核。[/b]保护与研究交付完成后，第23章追加回执，七日后安排撤案新闻。侍从、普通恋爱与朋友均可推进，不需要购买归来项目。
+[*][b]两种女仆立绘。[/b]未启用少女当铺时使用原版画风，启用时使用美化画风；私人场景换装，正式业务与危机沿用常服。
+[*][b]旧800停线档续接。[/b]符合已核对状态的旧存档会收到重谈序章，可选择新路线或继续原关系；不补扣旧800，不重置物品和世界进度。
+[/list]
+
+[h2]人物与经营[/h2]
+[list]
+[*]她仍然挑剔、嘴硬，也会在真正被帮助时别扭地道谢。公平收购、让利、压价，以及该不该提醒她的判断，都会留下影响。
+[*]假叔叔、黑市打手、治安部、帕斯泰尔、营养果、水培农场沿用原作设定。保释、现金援助与警告谢礼复用原版机制。
+[*]普通模式从第23天开始；可选0点开局特性“旧日回想”提前到第12天，不额外赠送好感或声望。
+[*]原有23章核心线、甲乙丙丁、平等恋爱、朋友线与后日谈保留。新侍从线为可选分支。
+[*]简体中文 / English，全年龄。中英各2073条对白、界面和系统文本。
+[*]兼容少女当铺（3829696854）；莉迪亚、母亲与女仆装使用本MOD持有的双画风资源。
+[/list]
+
+[h2]存档与更新[/h2]
+已使用本MOD的受支持存档保留进度；符合条件的旧800停线档自然续接。已推进原版埃莉诺故事的存档仍默认保护，可选择保留原线或重置后接管。更新前请保留存档副本；新增字段不保证向旧版本降级兼容。
+
+你的选择会改变故事的走向。最后会走到哪里，进店之后，你自己判断。
+
+[i]v0.72 · 经营费用与节奏仍可根据实际游玩反馈调整。[/i]
+
+[h2]English[/h2]
+Version 0.72 shortens Wilde preparation descriptions and introduces the first housing project through dialogue. Returning-visit openings and standalone feedback now give clearer context while keeping the original tone. Waiting dialogue names the current project. Story schedules, route conditions, payment and reward rules remain unchanged.
+
+The optional attendant romance sits alongside the original equal romance, friendship and mother/research routes. Agree on clear terms, prepare four projects through Wilde's native upgrade interface, and help Eleanor establish a business under her own name. Preparations can wait and do not cancel an existing romance or rescue result. The protected-research route gains an independent case review for all relationship paths.
+
+Includes original-style and Maiden's Pawnshop-style maid portraits, full Chinese/English text (2073 keys each), and precise continuation for supported legacy saves stalled after the old 800-credit choice, without retroactive charges. Normal start on day 23; optional early-start perk on day 12. All-ages. Back up saves before updating; downgrading is not guaranteed.

@@ -1,0 +1,13 @@
+0.73｜经营互动、筹备期日常与吊坠占位 / Business visits and a compact locket
+
+• 侍从第19章加入原版代客估价；第22章各关系路线可接或拒接工具材料商单，预算600，独立收货并按实际交货议价结算。期限从首次实际收货来访起算，失约不阻断恋爱或救母。
+• 第24章可选择工具／材料现货或跳过；第25章以真实免费样品承接验货，额外进货正常议价，未领可再取；第27章增加预算900的实际补货收购。告白与最终约定保持纯情感，四个筹备项目费用不变。
+• 新增小批卖货、代邻居采购、代客估价三种可重复日常。当前筹备确实缺钱时低频轮换，至少间隔4天，主线、结果及紧急事件优先；现金或恩惠已够、已付款时不再提示缺钱。
+• 母亲吊坠改为完整2×2占位，图像同步缩小。旧吊坠安全整理，保留旋转、所有权和剧情保护；空间不足时保留原状，腾挪后重试，不挤掉周围物品。
+• 保留原有文风，英语同步，中英各2107键。34组离线回归及原生模组扫描通过；实机验证与经营平衡反馈继续收集。
+
+Adds native appraisal work, an optional 600-credit supply order, small stock lots, a real prepaid sample and 900-credit restocking. Transactions lead back into the original scenes; the confession and final agreement retain their emotional space. Existing Wilde project costs are unchanged.
+
+Three repeatable business visits rotate while preparations are genuinely unaffordable, at least four days apart and behind story, result and urgent visitors. Income requires goods or services. Optional order failure does not block the relationship or rescue.
+
+The mother's locket now occupies a filled 2×2 square at matching display scale. Legacy migration preserves surrounding items and defers when no valid space exists. Matching English text included, 2107 keys per language; 34 offline regression groups and the native scan pass. In-game balance feedback remains welcome.

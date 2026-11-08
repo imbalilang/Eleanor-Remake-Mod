@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-08",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "precise-object-edit / identity-preserve",
+  "transparent_background": true,
+  "edit_target": "masters/eleanor_maid_vanilla_master.png",
+  "style_reference": "references_local/vanilla_eleanor1.png",
+  "model_output": "masters/eleanor_maid_vanilla_eye_edit.png",
+  "production_asset": "../../Textures/Items/er_portrait_eleanor_maid_female_vanilla.png",
+  "export": "export_maid.ps1 -Variant Vanilla",
+  "native_eye_regions_xywh": [[129, 95, 12, 7], [149, 95, 12, 7]],
+  "changed_pixels": 110,
+  "outside_eye_pixels_changed": 0,
+  "alpha_changed": false,
+  "before_sha256": "5b963e5f5301245c3941819c19cf81b02f8fcb673fda4a1c047ffd4420582374",
+  "after_sha256": "4a1c8e92438543712f3ad07c0ccc8c037cc1b9fb77f6a7ced1f6c5296aaa80ed",
+  "prompt": "Use case: precise-object-edit / identity-preserve. Image 1 is the EDIT TARGET: the existing original-game-style Eleanor maid portrait. Image 2 is ONLY the original game's face/style reference. Make a TINY professional pixel-art retouch to the eye area of image 1, especially the slightly awkward left eye and its heavy upper lash/iris clusters. Bring the two small green almond eyes into a coherent, natural forward gaze, subtly correct the eyelid contour and pupil/highlight placement, soften the one overly heavy dark cluster. Preserve slight natural facial asymmetry, the proud restrained adult expression and the defined original-game face. Keep eye size SMALL and virtually unchanged; do NOT add anime-sized eyes, cosmetic makeup, glossy wet eyes, bright white sclera or large highlights. Use the same muted green, brown and skin-tone palette and coarse hard pixel clusters, with no smooth airbrush rendering or blurry antialiasing. CRITICAL INVARIANTS: keep the entire portrait outside the small eye region identical to image 1: same face shape, nose, mouth, eyebrows, copper hair, headpiece, gold jewelry, dark purple dress, apron, body, pose, scale, framing and alignment. Do not redesign or beautify the rest of the face. Keep the input canvas proportions and figure position so this can be registered directly onto the existing sprite; if possible use the same 1461 by 1077 canvas. Preserve genuine transparent background and all original silhouette/alpha. Output one complete subtly edited portrait, no before/after layout, no text, no markings."
+}

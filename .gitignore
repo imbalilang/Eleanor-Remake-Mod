@@ -11,6 +11,7 @@ EleanorRomance.deps.json
 
 # Game-derived reference images (not authored for this mod)
 Art/v0.6/references_local/
+Art/v0.5/references_local/
 
 # OS
 Thumbs.db
@@ -22,3 +23,7 @@ __pycache__/
 
 # Local art backups / old placeholders
 Art/v0.6/backups/
+Art/v0.5/backups/
+
+# Temporary excerpts used while reviewing route text
+docs/_mother_route_content.txt

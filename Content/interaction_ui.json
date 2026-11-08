@@ -1,0 +1,22 @@
+{
+  "er_interaction_unfinished_papers":["她把带来的记录收好，放下笔，没有立刻去拿包。","She puts away the notes she brought and lays down her pen, without reaching for her bag."],
+  "er_gala_guest":["来宾","Guest"],
+  "er_gala_manager":["采购行管事","Purchasing Manager"],
+  "er_gala_prompt":["她等着你的回答。","She waits for your answer."],
+  "er_gala_wait_answer":["想好了？我等你说。","Decided? I'm waiting."],
+  "er_gala_accept":["把名字填上。等我换件外套。","Put my name down. Let me get my coat."],
+  "er_gala_later":["今晚不行。下一场，我陪你去。","Not tonight. I'll come to the next one."],
+  "er_gala_free":["参加晚会后日谈。不扣款，不占用原版外出次数。","Attend the party epilogue. No payment or evening outing is consumed."],
+  "er_gala_later_desc":["至少七天后，她会在合适的来访中再问一次。不影响感情。","After at least seven days, she'll ask once more during a suitable visit. Your relationship is unaffected."],
+  "er_gala_book":["明晚，我去接你。","Tomorrow evening. I'll pick you up."],
+  "er_gala_no_booking":["明晚还是走不开。","I still can't get away tomorrow."],
+  "er_gala_book_desc":["预约下一次赴宴来访；原版重要事件优先，不扣款或外出次数。","Arrange the next party visit. Native important events take priority; no payment or outing is consumed."],
+  "er_gala_booked":["好。明晚见，别又让我站在门口等。","Good. Tomorrow evening, then. Don't leave me waiting in the doorway."],
+  "er_gala_go":["走吧。今天的时间留给你。","Let's go. Today's time is yours."],
+  "er_gala_cancel":["这回还是走不开，你先去吧。","I still can't leave. Go ahead without me."],
+  "er_gala_decline_desc":["她这场自己去；不再主动邀约，不影响恋爱或分红。","She attends alone and won't ask again. Romance and dividends are unaffected."],
+  "er_gala_gown_beauty":["她站在门口，深酒红的礼服收出腰线，肩颈露在灯下，耳饰随着动作轻轻一晃。她没急着往里走，等你先开口。","She stands in the doorway in a fitted wine-red gown, bare shoulders catching the light, her earrings swaying gently. She waits for you to speak."],
+  "er_gala_gown_vanilla":["她换回了上层区的正装，头发仔细拢过，耳边的饰物随着动作轻轻一晃。她没急着往里走，等你先开口。","Back in her Upper Level clothes, her hair carefully arranged and earrings swaying gently, she waits in the doorway for you to speak."],
+  "er_gala_news_title":["名媛埃莉诺携神秘男伴亮相上层区晚会","Eleanor attends Upper Level party with mysterious companion"],
+  "er_gala_news_body":["近日以自己的生意重返上层区的埃莉诺，携一名少见于社交场合的男子出席晚会。面对旁人询问，她直言对方是在下层区经营当铺的恋人。据在场人士透露，曾要求她撤换合作方的某采购行管事，当晚亦主动上前致意。两人随后步入舞池，散场后一同离开。","Eleanor, recently returned to the Upper Level through her own business, attended a party with a man seldom seen in society. Asked who he was, she introduced him as her partner, a pawnshop owner from the Lower Levels. Guests report that a purchasing manager who had sought a change in her business partners also approached to offer his greetings. The couple later took to the dance floor and left together."]
+}

@@ -11,27 +11,40 @@ namespace EleanorRomance
     /// </summary>
     public static class StoryDirector
     {
-        public static bool ShouldSuppressOriginal => RomanceState.StoryActive;
+        // Keep vanilla Eleanor from taking over an incompatible mod save while its story is paused.
+        public static bool ShouldSuppressOriginal => VersionGate.IsSupported && !RomanceState.OldBlocked
+            && (RomanceState.Initialized || RomanceState.IncompatibleSave);
 
-        public static void OnGameLoadedInit()
+        public static void OnGameLoadedEarly()
         {
             VersionGate.Refresh();
             PortraitCompat.Refresh();
             PortraitCompat.SanitizeLoadedClients();
-            RomanceState.InitializeForSave();
-
-            if (RomanceState.Initialized && !RomanceState.OldBlocked
-                && RomanceState.SchemaVersion != RomanceState.Schema)
-            {
-                ModEntry.Log("Old mod save schema " + RomanceState.SchemaVersion
-                    + "; resetting to schema " + RomanceState.Schema + ".");
-                RomanceState.ResetForNewGame(false);
-            }
 
             if (!VersionGate.IsSupported)
             {
                 Notify(L.Get("er_notice_version"));
+                return;
             }
+
+            if (RomanceState.IncompatibleSave)
+            {
+                ModEntry.Log("Eleanor story paused: save schema " + RomanceState.SchemaVersion
+                    + ", expected " + RomanceState.Schema + ". Existing story data kept.");
+                Notify(L.Get("er_notice_save_schema", RomanceState.SchemaVersion, RomanceState.Schema));
+                return;
+            }
+
+            RomanceState.InitializeForSave();
+            MaidRouteMigration.OnLoaded();
+            // Must run before project visibility is computed on load.
+            MaidRouteMigration.MigrateDeferred();
+            VanillaEleanorBridge.OnLoaded();
+            MaidProjects.OnLoaded();
+            MaidDividends.Accrue();
+            MaidInteractions.OnLoaded();
+            MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
+            GalaStory.TickNews(StoreStation.Instance?.storeEventManager);
         }
 
         public static void OnNewGameStarted(string scenarioId)
@@ -41,11 +54,17 @@ namespace EleanorRomance
 
             if (!RomanceState.Initialized)
             {
-                RomanceState.ResetForNewGame(scenarioId == ModConstants.ScenarioId);
+                RomanceState.ResetForNewGame(StartingPerkRegistration.IsEarlyStartRun());
+                if (RomanceState.EarlyStart)
+                {
+                    Notify(L.Get("er_notice_early_start"));
+                }
             }
 
             ModEntry.Log("New game. scenario=" + scenarioId + ", chapter=" + RomanceState.Chapter
                 + ", next=" + RomanceState.NextVisitDay);
+            MaidProjects.OnLoaded();
+            MaidInteractions.OnLoaded();
         }
 
         public static void OnGenerateCustomerVeryEarly(StoreClientManager manager)
@@ -55,6 +74,16 @@ namespace EleanorRomance
             try
             {
                 PortraitCompat.SanitizeLoadedClients();
+                // Daily refresh runs before every early return: a story that is
+                // not active must still hide stale project rows, and a new shop
+                // may finish building its dictionary after the load-time pass.
+                MaidProjects.RefreshStates();
+                MaidProjects.NotifyRepairNotice();
+                MaidDividends.Accrue();
+                MaidInteractions.OnLoaded();
+                GalaStory.TickNews(StoreStation.Instance?.storeEventManager);
+
+                if (RomanceState.IncompatibleSave) return;
 
                 if (RomanceState.OldBlocked)
                 {
@@ -64,13 +93,30 @@ namespace EleanorRomance
 
                 if (!RomanceState.StoryActive) return;
 
+                VanillaEleanorBridge.SynchronizeRescue();
+                MaidRouteMigration.OnLoaded();
+                MaidRouteMigration.MigrateDeferred();
+                MaidRouteMigration.NotifyDeferred();
+                if (VanillaEleanorBridge.RescuePending) return;
+
                 int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;
                 if (RomanceState.LastQueuedDay == day) return;
+                if (MaidState.LastImportantDay == day) return;
                 if (HasModClient(manager)) return;
+                if (MaidStory.HasUrgentClient(manager)) return;
+                MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
+                if (MaidStory.TryQueue(manager, day)) return;
+                if (MaidState.LegacyResume == 1) return; // Await its dedicated due day and explicit choice.
+
+                // A romance lock is not a world-story termination. In particular
+                // route D still needs its result visit. Only precise migration
+                // shapes are reopened; unknown old control locks remain diagnostic.
+                if (RomanceState.RomanceLocked && RomanceState.Route != 4) return;
 
                 int chapter = PendingChapterForDay(day);
                 if (chapter <= 0)
                 {
+                    if (MaidBusiness.TryQueue(manager,day)) return;
                     if (TryQueueEpilogue(manager, day)) RomanceState.LastQueuedDay = day;
                     return;
                 }
@@ -87,6 +133,7 @@ namespace EleanorRomance
 
                 RomanceState.PendingChapter = chapter;
                 RomanceState.LastQueuedDay = day;
+                MaidState.LastImportantDay = day;
                 Log("Queued chapter " + chapter + " on day " + day + ".");
             }
             catch (Exception ex)
@@ -152,7 +199,7 @@ namespace EleanorRomance
         {
             // Early Start begins on day 12 instead of day 23: shift the whole
             // chapter schedule by 11 days while keeping the same relative gaps.
-            return RomanceState.ScenarioBoost ? 11 : 0;
+            return RomanceState.EarlyStart ? 11 : 0;
         }
 
         public static int StoryDay(int day)
@@ -179,15 +226,17 @@ namespace EleanorRomance
 
             if (partnerEnding)
             {
-                // Endgame reward D: Eleanor helps at the dumping ground.
+                // Unlock the native landfill event; this is no longer a permanent stat bonus.
+                bool firstUnlock = !RomanceState.ScavAssist;
                 RomanceState.ScavAssist = true;
+                if (firstUnlock) Notify(L.Get("er_scav_event_unlocked"));
             }
 
             if (partnerEnding && !RomanceState.TrueUnlocked)
             {
                 RomanceState.TrueUnlocked = true;
                 MetaProgress.UnlockTrueEnding();
-                ScenarioRegistration.RefreshAfterUnlock();
+                Notify(L.Get("er_notice_true_unlock"));
             }
 
             Log("Core story complete. route=" + RomanceState.Route
@@ -197,6 +246,7 @@ namespace EleanorRomance
 
         public static void AbandonStory()
         {
+            if (MaidState.HasHistory) MaidState.End("story-abandoned",4);
             RomanceState.RomanceLocked = true;
             RomanceState.Chapter = RomanceState.ChapterComplete;
             RomanceState.PendingChapter = 0;
@@ -204,16 +254,9 @@ namespace EleanorRomance
             Log("Story abandoned.");
         }
 
-        public static void ApplyScenarioStart()
-        {
-            VersionGate.Refresh();
-            RomanceState.ResetForNewGame(true);
-            Notify(L.Get("er_notice_scenario_started"));
-            Log("Old Echo experimental scenario started at day 5.");
-        }
-
         private static bool TryQueueEpilogue(StoreClientManager manager, int day)
         {
+            if (MaidState.Active) return false;
             if (!RomanceState.EpilogueDone || RomanceState.RomanceLocked) return false;
             if (RomanceState.Route == 3 || RomanceState.Route == 4) return false;
             if (RomanceState.MotherState != 1) return false;
@@ -256,10 +299,12 @@ namespace EleanorRomance
 
         private static bool HasModClient(StoreClientManager manager)
         {
+            StoreClient current=PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
+            if(current!=null && VanillaEleanorBridge.IsOurClient(current))return true;
             return manager.clientStack != null
                 && manager.clientStack.Any(c => c != null
                     && !string.IsNullOrEmpty(c.identifier)
-                    && c.identifier.StartsWith("er_story_", StringComparison.Ordinal));
+                    && VanillaEleanorBridge.IsOurClient(c));
         }
 
         public static int TargetDay(int chapter)

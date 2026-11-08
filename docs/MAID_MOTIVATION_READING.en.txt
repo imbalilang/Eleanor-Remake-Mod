@@ -1,0 +1,926 @@
+Attendant route: current runtime text (0.76)
+
+Ordered by reading chapter. Alternatives and legacy variants are separate, not continuous dialogue. Both chapter 12 repair approaches continue the agreement; returning the original fixes custody with Eleanor. Chapter 14 concerns open a discussion, with withdrawal only as an explicit nested decision. Chapter 19 unresolved-injury repair is a legacy fallback; either approach continues the relationship. m19_b006/008 establish the address, while m19_b007 preserves an existing one. Native appraisal separates the opening and wrap-up. All chapter 20 responses join m20_b009 and confirm the attendant romance. All chapter 28 responses accept her voluntary choice to stay.
+
+Covers revised chapters and their necessary context; unchanged chapters are omitted.
+
+============================================================
+旧档序章 / Legacy continuation
+============================================================
+
+[legacy_b002]
+Eleanor: Today I'm only selling. Usual prices. Nothing else.
+Player: Put them out.
+
+[legacy_b004]
+Eleanor: Fine.
+
+[legacy_b005]
+Eleanor: Then don't take them. It's not as if this is the only shop I can go to.
+
+[legacy_b006]
+Eleanor: *She puts the goods away, her hand resting on the bag strap, and does not leave at once*
+Eleanor: The detective's started on Mother's case. He says what he finds may be bigger than I expect.
+Player: How big?
+Eleanor: Big enough that knowing the truth won't be enough.
+Eleanor: Even if we find out who did this to her — getting her out takes connections. Getting back upstairs takes capital. I have neither.
+Eleanor: ...Don't answer that. I didn't come here to tell you any of this.
+
+[legacy_b008]
+Player: I take back what I said that day. Once we know the truth, I'll help you.
+Eleanor: You said I'd have to obey you. And not just in business. I heard you.
+Player: You did. I was wrong to say it.
+Eleanor: And putting it nicely makes those terms disappear?
+Player: Those terms are gone. You can turn down today's offer and keep investigating.
+Narrator: She watches you, then sets her bag down again. Her hand stays on the strap.
+Eleanor: I can't repay a loan. I won't take charity.
+Player: Then work here. Inspect goods, keep accounts, run errands. I'll help with what you can't manage alone.
+Eleanor: And you can manage it?
+Player: We'll find out one thing at a time. I'll tell you when I can't.
+Eleanor: ...Tell me about the work first. Don't think I've forgotten what you said.
+
+[m11_b007]
+Eleanor: First, the term. You help me return to the Upper Level; I work here. Under my own name, not in a seat someone keeps empty for me.
+Player: A pass won't finish it.
+Eleanor: Right. They must want me there because I'm good at the work. Not because of whose daughter I am.
+Eleanor: And my investigation, other jobs and mother's affairs keep their time. I'll tell you if something comes up. I can't drop everything when you call.
+Player: We'll arrange the shop work ahead.
+Eleanor: Mother and the research aren't part of this agreement. Who gets the drive and what course we take must be discussed separately.
+Player: You'll know every step.
+Eleanor: Discussed together. Telling me isn't the same as deciding for me.
+Player: Together.
+Eleanor: ...And put away that tone. The one that expects to be called master.
+Player: See what I do first.
+Eleanor: I will. If I think you're making me pay with myself, I'll leave. We can agree on work. Don't start adding anything else.
+
+[legacy_b011]
+Eleanor: Then we'll try it this way. I'll do the work. I'll also watch what happens to your promises.
+Player: Good.
+Eleanor: Don't start ordering me about already. I haven't seen you deliver yet.
+Player: Bring the detective's findings here first.
+Eleanor: ...That I can do. I need somewhere to lay out what he tells me anyway.
+Narrator: She shoulders her bag. She doesn't turn at the doorway this time. A few steps outside, she slows.
+
+[legacy_b012]
+Eleanor: ...You'd better not be doing this just to see whether I'd agree.
+Player: No. I was thinking too far ahead again.
+Eleanor: That actually sounded human this time.
+Eleanor: If the investigator finds anything, I'll still come.
+
+[legacy_b013]
+Player: I was wrong that day. Arrange the investigation yourself. Come to me if you need anything.
+Eleanor: ...At least you know how to apologize first.
+Eleanor: Fine. That's the end of it. From now on, say what you mean. Don't make me guess what 'listen to me' was supposed to include.
+Player: We'll talk things through.
+Eleanor: Mm. If the investigator finds anything, I'll come.
+
+============================================================
+11 入线与试做 / Beginning cooperation
+============================================================
+
+[m11_b001]
+Eleanor: There. Eight hundred for the detective to investigate Mother's case. All of it.
+Player: Count it again.
+Eleanor: I've counted it three times! Eight hundred. Every last credit.
+Eleanor: That used to be just a line on a bill. Now, point to any part of it and I can tell you how I earned it.
+Player: Including that lump you insisted wasn't scrap?
+Eleanor: The materials inside it sold. You don't have to like it, but show some respect for its contribution.
+
+[m11_b002]
+Eleanor: I've got the money for the detective to investigate Mother's case. Another shop took the rest, and the odd-job people agreed to an advance.
+Player: What about the next few days?
+Eleanor: I'll keep working. Advancing the pay doesn't make the work do itself.
+
+[m11_b003]
+Eleanor: I sold the locket too. Stop staring at my neckline. I'm still getting used to it myself.
+Player: Do you know who bought it?
+Eleanor: Yes. Mother comes first. Don't let me being sentimental hold everything else up.
+
+[m11_b004]
+Eleanor: The investigator starts tomorrow. He agreed to check the work records first, rather than question people at the company.
+Player: And after he finds out?
+Eleanor: ...After what?
+Player: After he finds out who did this to her. What then?
+Eleanor: Then we... take it to court.
+Player: Will the court look at it?
+Eleanor: *Her fingers go still on the stack of money.*
+Eleanor: I don't know. I can't even get into the Upper Level. I can't afford a lawyer, and I don't know anyone who still answers my calls.
+Eleanor: All I know is that we investigate first. Once we know the truth, there has to be a next step.
+
+[m11_b006]
+Player: I can help with what comes next.
+Eleanor: Help? A loan, or charity?
+Player: You could work here. Inspect goods, keep accounts, run errands. I'll help work out what to do about the case.
+Eleanor: ...Do you need someone, or are you inventing a reason for me to take your money?
+Player: There's work. And I'll still tell you if it isn't done properly.
+Eleanor: I can clean a counter. I'm learning the goods. How far can your help actually go?
+Player: We'll need to check the paperwork and find the right people. I've dealt with that in business. I won't promise what I can't secure.
+Eleanor: I don't want to hear that something will turn up. I can say that myself.
+Player: Then one thing at a time. Judge the results.
+Narrator: She looks down at the money she earned, pressing her thumb over the crease in the top note.
+Eleanor: I'll hear the terms. Don't change your manner if I turn them down.
+Player: You can keep bringing goods as usual.
+
+[m11_b007]
+Eleanor: First, the term. You help me return to the Upper Level; I work here. Under my own name, not in a seat someone keeps empty for me.
+Player: A pass won't finish it.
+Eleanor: Right. They must want me there because I'm good at the work. Not because of whose daughter I am.
+Eleanor: And my investigation, other jobs and mother's affairs keep their time. I'll tell you if something comes up. I can't drop everything when you call.
+Player: We'll arrange the shop work ahead.
+Eleanor: Mother and the research aren't part of this agreement. Who gets the drive and what course we take must be discussed separately.
+Player: You'll know every step.
+Eleanor: Discussed together. Telling me isn't the same as deciding for me.
+Player: Together.
+Eleanor: ...And put away that tone. The one that expects to be called master.
+Player: See what I do first.
+Eleanor: I will. If I think you're making me pay with myself, I'll leave. We can agree on work. Don't start adding anything else.
+
+[m11_b008]
+Player: I have a term too. *You set another stack beside hers.* Eight hundred. Wages in advance.
+Eleanor: I said I don't want a handout—
+Player: It isn't a handout. It's pay. Your mother will need medicine and somewhere to live when she's out. A payment before you start. Shop policy.
+Eleanor: Whose policy?
+Player: Mine.
+Eleanor: ...You certainly know how to word things.
+Eleanor: I'm paying the investigator myself. I earned that money. Nobody takes that away from me.
+Player: It's yours to begin with.
+
+[m11_b011]
+Narrator: She separates the two piles. The detective's goes into an old envelope. She picks up your money, then puts it back on the counter.
+Eleanor: Set my work days first. If there's news about mother, I have to go.
+Player: See the detective tomorrow. Bring the news back, then we'll arrange it.
+Eleanor: This money...is for her medicine and somewhere to live. Not because I failed to raise the investigation fee.
+Player: Two accounts. Keep them separate.
+Narrator: Only then does she put your money away separately. Her fingers pause on the clasp.
+Eleanor: I won't shirk the work. Don't let your side stay a promise.
+Player: Understood.
+Eleanor: ...Tomorrow, then.
+
+[m11_b012]
+Player: Let's leave it. Follow your own plan for the investigation.
+Eleanor: ...You'd better not be testing whether I'd take the money.
+Player: I got ahead of myself.
+Eleanor: Not that far ahead. You just have an infuriating way of saying things.
+Eleanor: If there's news tomorrow, I'll still come by.
+
+============================================================
+12 资料与旧伤 / Findings and the old injury
+============================================================
+
+[m12_b001]
+Eleanor: The detective found something. I read it all night. There are still things I can't make out.
+Player: Check the doorway first.
+Eleanor: I took a detour and changed the meeting place. You're not the only one who knows to be careful.
+Player: Sit down. Lay out what you're unsure about.
+
+[m12_b004]
+Player: Before the drive, there's something else. When that man pretending to be your uncle brought the box, I saw something was wrong. I didn't warn you.
+Narrator: Her hand stops at her bag. She pushes the half-withdrawn papers back inside.
+Eleanor: ...You're telling me now?
+Player: Yes. I should have told you then.
+Eleanor: I kept wondering whether I couldn't see anything for myself. You were here watching.
+Player: I'm sorry.
+Eleanor: And after one apology, I'm supposed to take out the drive and follow your arrangements?
+Player: No. You can take it away.
+Eleanor: ...From now on, tell me first. Danger, unpleasant news, all of it. Don't choose what I get to hear.
+
+[choicefix_b001]
+Player: Keep the drive with you. I'll tell you everything I knew then.
+Eleanor: I will. Tell me what you knew, from the beginning.
+Narrator: You go through each thing that struck you as wrong. She listens, her hand resting on the papers.
+Eleanor: Do the same from now on. Whoever holds the drive, I won't be kept in the dark.
+
+[m12_b002]
+Eleanor: The drive was hidden in Mother's old laboratory. The investigator couldn't open it. There's a password.
+Player: Do you know it?
+Eleanor: My birthday. She always said that way she wouldn't forget. I've told her so many times not to use it as a password.
+
+[m12_b003]
+Eleanor: ...It's genetic research on Nutrifruit.
+Eleanor: She found a way to make ordinary Nutrifruit produce seeds again. Plant it, harvest it, and keep seeds for the next crop.
+Player: So people wouldn't have to buy from Pastel every time.
+Eleanor: There are records ordering her to stop the trials. Then her access was revoked. And then... the charge.
+Eleanor: She never embezzled anything. She just touched the business they least wanted anyone touching.
+Player: This gives us a motive. Getting them to release her will take something else.
+Eleanor: I know. But for once, I have more than 'my mother wouldn't do that.'
+
+[m12_b006]
+Player: Leave the drive here for now. I can watch the counter. Safer than carrying it from job to job.
+Eleanor: Keeping it is one thing. I decide who gets it.
+Player: Put it on this receipt. Take it back whenever you come for it.
+Narrator: She reads the receipt, looks at your hand resting on the counter, then slowly lets go of the drive.
+Eleanor: I'll come and check.
+Player: Do.
+
+[m12_b007]
+Player: Keep it on you. If someone asks here, I'll deal with them first.
+Eleanor: You're putting your shop in front of it?
+Player: They know you come here. Another shop won't erase that.
+Eleanor: Tell me as soon as anyone comes. Don't make a deal and then expect me to follow it.
+Player: Including what they offer.
+Eleanor: ...All right. I'll keep the drive.
+
+[m12_b008]
+Eleanor: Also, you've mixed several little components together. One of the labels has fallen off.
+Player: Can you tell them apart?
+Eleanor: You spent so long picking through my goods last time. I wasn't only standing there being angry.
+Player: Separate them, then. Anything you're unsure about, leave for me.
+
+[m12_b009]
+Narrator: She sorts the small parts, hesitates over one, then places it in front of you.
+Eleanor: This casing was replaced. The price on the label hasn't changed.
+Player: Check inside too. A replaced casing doesn't mean it's broken.
+Eleanor: I didn't say it was broken.
+Player: Then don't put it with the broken ones yet.
+Narrator: She looks at the pile, takes the part back and places it under the light again.
+Eleanor: ...Explain how to check. I'll do it myself next time.
+
+============================================================
+13 黑市传话 / The messenger
+============================================================
+
+[m13_b001]
+Thug: Boss, you've been getting close to Eleanor lately. The girl from the Upper Level.
+
+[m13_b002]
+Player: Someone got you out?
+Thug: Then you should understand I'm not here on my own account.
+
+[m13_b003]
+Player: Say it.
+Thug: She's got a data drive. Hand it over first. Someone will tell her where to collect her mother, alive in the Lower Level.
+Player: Deliver first, then wait for your address?
+Thug: Who else will you check with? Keep delaying and her mother might not last.
+Player: Who arranges the release, and when do we see her? Come back with that in writing.
+Thug: Three hundred if it works. You're a shopkeeper. Don't shut out your own payment.
+Player: Write that down too. She needs to know what you're paying me to do.
+Thug: They say she works for you now. Your word carries more weight than ours.
+Player: I haven't agreed for her.
+Thug: Then pass it on quickly. Her mother can't wait.
+
+[m13_b006]
+Thug: *He glances behind the counter* It's not here?
+Player: I've got everything here. Just not what you're looking for.
+
+[m13_b007]
+Thug: Her name and yours will both be on the record. Think about that.
+Player: So will the message you brought.
+
+[m13_b008]
+Thug: Don't keep her waiting. Her mother doesn't have the time.
+
+============================================================
+14 核验与争执 / Checking the offer
+============================================================
+
+[m14_b001]
+Eleanor: What do we start with today? Those things you mentioned—
+Player: Sit down first. Someone from the black market came by. About your mother and that research disk.
+
+[m14_b002]
+Narrator: You write down the man's words in order for her, including the three hundred credits.
+Eleanor: The drive first, then they tell me where to collect her. ...At least they're willing to talk.
+Player: Do you know whether this man can arrange her release?
+Eleanor: I can ask. If I can meet someone who'll act—
+Player: With the drive, or with this paper?
+Eleanor: ...Do you think I stop listening the moment I'm frightened?
+Player: I'm worried that once you're there, only they can change the meeting. They take the drive, and you're still waiting for their next word.
+Narrator: She folds away the line saying drive first, then opens it again. Her fingertip stays on it.
+Eleanor: What can I do now? Will sitting here get mother out?
+Player: Check where she's held, who handles the paperwork and where she can be seen. Leave the original here. Every question you ask still leaves you a way back.
+Eleanor: I have her medication records. The person collecting it signed. I know the name.
+Player: Start with that name.
+Eleanor: ...I'll do that. If all I get is wait again, we'll need another way.
+
+[m14_b003]
+Player: There are channels for a protected transfer. We submit material they can act on, confirm who takes responsibility, then discuss publication.
+Eleanor: I'll find her medication records. I have her identification too. I know what can't be left out.
+
+[m14_b004]
+Player: I don't have connections that can guarantee her safety. Negotiating an exchange is safer for now.
+Eleanor: Then don't pretend it's arranged just to make me feel better. I'd rather hear the truth.
+
+[m14_b005]
+Eleanor: You promised me an Upper Level. Right now I just want to see her.
+Player: This comes first. I'll tell you exactly how far we get.
+Eleanor: ...Don't just tell me not to worry. I'm afraid I really will sit and wait on those words.
+Player: When we have something, we lay it out here and check it.
+Eleanor: All right. This time, we'll try your way.
+
+[m14_b007]
+Player: Your mother first. We return the research, but verify the release papers and collection point before handing it over.
+Eleanor: All right. I won't gamble with her life.
+Eleanor: If she asks later, I'll explain. You don't have to carry this decision alone.
+
+[m14_b008]
+Player: We apply for protection first. Once she's safe, we deal with the research. If protection falls through, we go back to the exchange.
+Eleanor: Understood. We don't count unconfirmed things as done.
+Eleanor: That's what you said about my goods: if you haven't checked it, don't add it to the price.
+
+[m14_b009]
+Player: We could publish now. Without protection, they may kill her. I can't promise to save her.
+Eleanor: Let me think. I can't take this road just because you say it exists.
+
+[m14_b010]
+Eleanor: I've decided. Send the research to the newspaper.
+Player: Are you sure you don't want to wait for protection?
+Eleanor: Yes. Mother didn't do all this so it could stay locked on a drive forever.
+Eleanor: But don't tell me she'll definitely be all right. I'll believe you.
+
+[m14_b011]
+Player: I've decided. I'll leave the investigation, and our agreement ends here too.
+Eleanor: ...
+Player: The drive is yours. I can't promise anything about what comes next.
+Eleanor: You promised me an Upper Level.
+Player: I know. That's why I'm saying it now, before I make a mess of it.
+Eleanor: *She puts the drive away and says nothing for a long time*
+Eleanor: ...Good. At least you didn't pretend you could carry it.
+Eleanor: I'll handle the rest myself.
+
+[m14_b013]
+Player: Leave the shop work today. Write down what you need to ask, then rest.
+Eleanor: I can't cancel tomorrow's job. I'll bring the papers, but later.
+Player: Later, then. This can wait.
+Eleanor: ...I thought you were going to tell me to follow your arrangements again.
+Player: You reserved that time.
+Eleanor: I remember. Good that you do too.
+
+[choicefix_b003]
+Player: I don't have a safer way right now. Let's lay out what we can do.
+Eleanor: Tell me what you can't do. Don't comfort me with promises you can't keep.
+Player: We can negotiate the drive for her release. I have no firm answer on anything else.
+Eleanor: Then let's start there. I understand what it means when you say you aren't sure.
+
+============================================================
+15 执行与求助 / Following through
+============================================================
+
+[m15_b001]
+Eleanor: I've brought the paperwork for getting Mother out. Checked every page. The dates match too.
+Player: Put them here. Have you eaten?
+Eleanor: Yes. You?
+Player: In a minute.
+Eleanor: That's what you said last time.
+
+[m15_b002]
+Eleanor: The name on the medication record checks out. But they changed the collection point.
+Player: Did you go?
+Eleanor: Halfway. Then I came back. He said I wouldn't meet the next person without the drive.
+Narrator: She puts down the creased record. Its corner has gone soft under her fingers.
+Eleanor: I nearly went. You can say you told me so.
+Player: You brought it back. We can still negotiate.
+Eleanor: I found the original official. He'll let me check the release papers without going through that messenger.
+Player: Record the name, time and place separately. Once the official confirms, we arrange delivery.
+Eleanor: ...Go through it with me again. Especially the two steps he said we could skip.
+
+[m15_b003]
+Eleanor: I have the protection documents. They haven't confirmed who's taking over. I thought of sending the research first, to avoid another delay.
+Player: Once it's sent, who will wait for that confirmation on your behalf?
+Eleanor: ...Deliver first, then wait for someone else to speak. Again.
+Player: Medication on top. I'll check the channel; you check who's taking over. It isn't done until both match.
+Eleanor: I copied the medicine she can't miss separately. If they can't answer that, a notice won't reassure me.
+Player: Ask exactly that.
+
+[m15_b004]
+Player: We can't count the protection as arranged. We have no confirmed transfer for today.
+Eleanor: The papers are ready, and it's still no?
+Player: Which is why we can't send the research first. We use the fallback: exchange it for her release, after checking the papers.
+Eleanor: ...I don't like this plan. But telling me now is better than leaving me waiting for something that hasn't happened.
+
+[m15_b005]
+Narrator: She takes wrapped food from her bag and sets it beside the papers. She starts pushing it towards you, then stops.
+Eleanor: Bought an extra portion. Pay for it normally. Don't say you'll add it to my wages.
+Player: How much?
+Eleanor: ...Never mind. Eat first. I need this space to finish sorting the papers.
+Player: After this page.
+Eleanor: I'll wait. Don't miss anything.
+
+[m15_b006]
+Narrator: She points out a date. Only after you've checked does she put a small tick beside it.
+Player: You already checked that one.
+Eleanor: I know.
+Player: Still unsure?
+Eleanor: ...I need you to look before I count on the next step. Just today.
+
+============================================================
+16 救母结果 / The rescue result
+============================================================
+
+[m16_b001]
+Eleanor: I saw mother. At the place we checked. The official hadn't changed either.
+Player: She's out?
+Eleanor: Yes. I saw her first, checked her medicine and the papers, then handed over the drive.
+Eleanor: The messenger tried to lead me somewhere else again. I didn't follow. In the end he had to step aside.
+Player: You held them to what you'd checked.
+Eleanor: ...If I'd gone straight there with the drive, I wouldn't even have known whom to ask where she was.
+Player: Now you do.
+Eleanor: She asked how much weight I'd lost. I'd prepared so much to say. That one question undid all of it.
+
+[m16_b002]
+Player: They sent the three hundred to the shop.
+Eleanor: ...Did you take it?
+Player: Returned it untouched. Told him to pass on a message: I don't do that kind of business here.
+Eleanor: *She pauses* I thought you'd say to use it for my mother's medicine.
+Player: Medicine money has a proper source. That money had your mother's price written on it.
+Eleanor: ...You said that day I wasn't for sale.
+Player: Neither is she.
+
+[m16_b003]
+Eleanor: Mother's been transferred safely. I saw her. The person taking over went through every medicine with me.
+Player: No gap in her medicine?
+Eleanor: None. When the application notice came first, I wanted to push you to send the research.
+Eleanor: Then I checked and found they hadn't set the transfer time. If I'd sent it then...
+Player: You waited for confirmation.
+Eleanor: Because you made me look at the notice again. ...I'll remember this time.
+Eleanor: She complained my writing was too small. Nobody else would start with that.
+Player: Settle her first, then handle the research as agreed.
+Eleanor: Yes. I remember the order.
+
+[m16_b004]
+Eleanor: I meant to come in, explain the paperwork properly, then discuss what comes next.
+Player: You still can.
+Eleanor: ...I can't get the words out.
+Player: Come here.
+
+[m16_b005]
+Narrator: She comes around the counter and stops. You open your arms. At last she leans into you, forehead against your shoulder. She tries to speak, but her breathing breaks first.
+Eleanor: ...Let me stay a moment.
+Player: Stay.
+Eleanor: All the way back, I kept thinking what to tell you first.
+Player: She's back.
+Eleanor: ...Yes. She's back.
+
+[m16_b006]
+Eleanor: Don't repeat what just happened to anyone.
+Player: Go be with her. There's no work for you here today.
+Eleanor: Tomorrow, then?
+Player: Come if you want. Sort out those sleeves first. They nearly swept something off the counter last time.
+Eleanor: ...I know. I'll have the clothes altered myself. Don't order anything for me first.
+Player: I'll ask Wilde about a home. You and your mother need somewhere lasting.
+Eleanor: She's out now. You're still taking care of the rest?
+Player: Getting her out wasn't all I promised.
+Eleanor: ...I'll go home first. We'll talk about tomorrow, tomorrow.
+
+[m16_b007]
+Eleanor: And the box. I haven't forgotten.
+Player: I know.
+Eleanor: This time you told me who came, what they said, which steps hadn't worked.
+Eleanor: More than once I wanted to blame you for delaying. Then I could only come back and ask you to check.
+Player: Next time too.
+Eleanor: ...Next time there's danger, tell me first. Don't wait for me to ask.
+
+============================================================
+17 母亲观察 / Her mother visits
+============================================================
+
+[m17_b001]
+Mother: Hello. I've come for some household goods. Eleanor said not to choose the prettiest ones. Choose sturdy ones first.
+Player: She never used to shop like that.
+Mother: Now she chooses for me, and complains that I'm too slow.
+Player: She didn't come with you?
+Mother: She's running an errand. She explained the way here twice before leaving.
+
+[m17_b003]
+Mother: She said she earned the investigation money herself. What you gave her was wages in advance.
+
+[m17_b004]
+Mother: She said she earned the investigation money herself. Later she came back and discussed the terms of your help properly.
+
+[m17_b005]
+Player: Yes. We agreed on terms.
+Mother: She told me. Which days she comes, what you can't decide for her. She remembers clearly.
+Player: You're worried about her?
+Mother: When she goes out now, she often says she'll ask the shopkeeper first. Then adds that something needs checking.
+Player: She asks carefully too.
+Mother: I asked whether she was unsure of everything, or only felt safe after someone checked it with her.
+Player: What did she say?
+Mother: Said I asked too many questions, and went out. Came back asking whether I'd need her for anything tomorrow.
+Mother: Let her think about the rest herself. I've only just come back. I'm in no hurry to explain it for her.
+
+[m17_b006]
+Mother: It hurts to have given the research back. But she needn't explain herself every day for bringing me home.
+Player: She's afraid she disappointed you.
+Mother: Then tell her this: the lamp still needs installing. We're both here. Let's start living the life in front of us.
+
+[m17_b007]
+Mother: I'll keep following up on the review and the research. You've both done a great deal of running around for me.
+Player: She made a list of things to do as well.
+Mother: I saw it. Your shop takes up quite a few lines.
+
+[m17_b008]
+Mother: That's everything. Charge the usual price.
+Player: Her instructions?
+Mother: She said not to mix household accounts with her wages.
+Player: Very clear accounts.
+Mother: ...She used to say she had everything worked out too. When it's time to decide, she still stands at the doorway a while.
+Player: I won't hurry her.
+Mother: Good.
+
+============================================================
+18 工作与依赖 / Work and growing reliance
+============================================================
+
+[m18_b002]
+Narrator: She's in her usual clothes, cuffs folded in and held with two stitches. As she enters, she looks first at the empty chair beside the counter.
+Eleanor: The altered clothes aren't ready. This will do today. I won't sweep anything off again.
+Player: Sit. Look at this lot first.
+Eleanor: ...Mother doesn't need anything today. I finished everything there before coming.
+Player: I hadn't asked.
+Eleanor: I'm telling you first. So you don't send me home again.
+
+[m18_b003]
+Eleanor: I've checked these. Written down prices too.
+Player: Let me see.
+Eleanor: ...The moment you hold out your hand, I want to turn the labels over again.
+Player: Afraid I'll find faults?
+Eleanor: They looked right when I calculated them myself.
+Player: Then explain your calculations too.
+
+[m18_b004]
+Eleanor: My own goods first, then your work. Payment for goods and wages are separate.
+Player: Set them out.
+Eleanor: I've put the damaged ones aside. Don't value them all together.
+Player: Saving me some trouble now?
+Eleanor: I'm saving myself an argument over a fair price.
+
+[m18_b005]
+Eleanor: All right. About what I worked out.
+
+[m18_b006]
+Eleanor: If today isn't right, I'll ask elsewhere. I still agreed to do the work here, and I will.
+
+[m18_b007]
+Eleanor: I priced this too high. Saw the new casing, missed the wear inside.
+Player: Correct it. You caught something on the other one that I missed.
+Eleanor: ...Give me that one too.
+Player: The pen's beside you.
+Eleanor: I know. I'll get it.
+Narrator: She picks up the pen, corrects her mistake first, then sets the two checked labels side by side.
+
+[m18_b008]
+Eleanor: Someone offered me a whole lot, cheaper. I was going to accept.
+Player: And now?
+Eleanor: I'd like to bring it here and check it together. ...If you're busy, I'll come later.
+Player: Ask whether we can inspect the pieces separately. Bring your prices too.
+Eleanor: All right.
+Narrator: She picks up her bag strap as though leaving immediately. After a moment, she sets it down again.
+Eleanor: I've noticed I want to ask you first about everything now. That habit...I need to think about it.
+
+[m18_b009]
+Eleanor: And about the housing. Wilde's people came by.
+Eleanor: The new place isn't big, but the light's good enough to read by, and Mother's things don't all have to be piled beside the bed. She asked me to tell you—
+Player: Don't empty the shop for us?
+Eleanor: ...How did you know?
+Player: A guess.
+Eleanor: She also said you look better at keeping accounts than I did when I first came here. I'm repeating that exactly. I won't explain it.
+
+[m18_b010]
+Eleanor: I'll ask about that lot first. Bring the records next time.
+Player: Keep anything you're unsure about for us to look at.
+Eleanor: ...Don't make that sound so easy. I'm still trying to decide things for myself.
+
+============================================================
+19 新衣与称呼 / The outfit and the address
+============================================================
+
+[m19_b001]
+Narrator: She wears the altered dark dress, white apron neatly fitted, headpiece carefully pinned. At the counter, her hands hesitate between her skirt and the tabletop.
+Eleanor: Had the cuffs altered again. Tried inspecting and carrying things. They won't get in the way.
+Player: Did you ask about the lot?
+Eleanor: We can inspect it separately. After I asked as you suggested, they withdrew two pieces and quoted again.
+Player: Check the rest just as carefully.
+Eleanor: I know. Wrote my own prices. Didn't agree yet.
+Narrator: She puts the record beside your hand. This time she doesn't cover it with her own.
+
+[m19_b002]
+Eleanor: There's something we need to settle first. That crate from the man pretending to be my uncle. You already knew something was wrong with it.
+Player: I did. I should have told you.
+Eleanor: I remember what you've done since. But don't use your help, or our agreement, to cover this up.
+Player: I won't. I was wrong. I'm sorry.
+Eleanor: ...Tell me things first from now on. Even the ugly ones. I don't want to be the last person to know.
+
+[choicefix_b002]
+Player: Let me tell you the rest of that day. From now on, you see the records of everything I find.
+Eleanor: Start with when you knew something was wrong. Don't just choose the parts you think won't upset me.
+Narrator: You tell her what happened from the beginning. She doesn't make it easier for you, but she doesn't put the papers away either.
+Eleanor: I'll read them. Remember what you've promised.
+
+[m19_b005]
+Narrator: She aligns the checked papers and sets down the pen, without reaching for her bag.
+Eleanor: When you told me to hold on to the drive, I really thought of taking it myself.
+Player: You came back.
+Eleanor: Yes. After mother got out, I thought I wouldn't need to come to you about everything.
+Eleanor: But the lot, those two labels...my first thought is still to bring them for you to check.
+Player: You caught plenty yourself.
+Eleanor: I know. I don't want you doing everything for me.
+Eleanor: It's...after you've weighed it up, I can get on with my part. Without doing it and wondering what else I've missed.
+Narrator: She smooths a fold in her apron, then quickly takes her hand away.
+
+[m19_b006]
+Eleanor: When we made the agreement, I wouldn't stand for that ordering tone. You remember.
+Player: I remember.
+Eleanor: I still won't accept everything.
+Player: I know.
+Eleanor: But there are things I want your judgment on first. Not because I took those wages.
+Narrator: She starts as though to curtsy. Her fingers touch her skirt, then let go. After a moment, she looks up again.
+Eleanor: ...Master.
+
+[m19_b008]
+Player: I hear you.
+Eleanor: ...Don't start teasing. I nearly changed it back just then.
+Player: Leave today's things here for now.
+Eleanor: All right.
+Narrator: Her answer is quiet. Packing her bag, she glances back at the records, still unused to what she has just said.
+
+[m19_b007]
+Eleanor: Before, I could say I used that name because it was in the agreement.
+Eleanor: I have to own this part myself now. There are things I want your judgment on first.
+Player: I hear you.
+Eleanor: Don't look as though you knew all along.
+
+============================================================
+20 侍从恋爱内的回应 / Attendant confession responses
+============================================================
+
+[m20_b001]
+Eleanor: Brought a business lead today.
+Player: Go on.
+Eleanor: Someone wants usable old equipment and materials. I said they could look here. Didn't promise stock or a discount.
+Player: Have them come themselves.
+Eleanor: Yes. ...I just wanted to tell you first.
+
+[m20_b005]
+Player: Today's work is done.
+Eleanor: ...Mm.
+Player: You've been waiting for the right moment since you walked in. Say it. I'm listening.
+Eleanor: ...You noticed?
+Player: Same counter. You've wiped it three times.
+Eleanor: Don't talk. Let me finish first, or I might not say it.
+
+[m20_b006]
+Eleanor: After mother got out, I found plenty of reasons. Work here, learn the goods, repay what you'd done little by little.
+Eleanor: But even when I knew how to inspect something, I still wanted to show you. With nothing to ask, I'd wonder whether the shop was busy.
+Player: So that's why the counter needed cleaning three times?
+Eleanor: Let me finish.
+Eleanor: I thought about that name all the way here last time. Then all the way home after saying it.
+Eleanor: I want to hear your judgment. I want to look after things here. But I want more than doing the work well.
+Narrator: She takes her hand off the cloth. At last she leaves every object on the counter alone.
+Eleanor: I like you.
+Eleanor: I want to be your lover. And stay here as the person you can call over, the one you can trust with things.
+Eleanor: I've thought this through. You didn't decide it for me with that money.
+
+[m20_b008]
+Player: I understand. Be my attendant, and my lover.
+Eleanor: ...You answered so quickly. I spent all night preparing, and I haven't finished.
+Player: Then save the rest. Tell me over time.
+Player: Come here.
+Eleanor: What is it this time?
+Player: I want to hold your hand.
+
+[choicefix_b004]
+Player: Then come here. You don't need an errand as an excuse to see me.
+Eleanor: ...I'll still do the work. Don't take my place away the moment you say yes.
+Player: Your place stays yours. I love you too. Did you hear that?
+Eleanor: I heard. Keep your voice down.
+Narrator: You hold out your hand. This time, she doesn't pretend to reach for the cloth.
+
+[choicefix_b005]
+Player: I love you too. Stop using the counter as an excuse.
+Eleanor: ...Who says it was an excuse?
+Player: The same patch. Three times.
+Eleanor: You counted, and still waited for me to say it first.
+Player: Then I won't wait now. Give me your hand.
+
+[m20_b009]
+Narrator: She gives you her hand. Only once she's holding yours does she slowly breathe out.
+Eleanor: Then hold it properly. Don't let go at the first crooked item.
+Player: Any other terms?
+Eleanor: That name stays private. I want that clear now.
+Player: Agreed.
+Eleanor: And you still owe your half upstairs. Being my lover doesn't let you out of it.
+Player: It doesn't.
+Narrator: She loosens her hand, lifts her skirt a little, and this time slowly finishes the curtsy. Her face turns aside.
+Eleanor: ...Master. I'll follow your lead with today's work too.
+
+============================================================
+丙丁线相关承接 / Related tragic and exit scenes
+============================================================
+
+[tragic_b012]
+Eleanor: That's today's account settled.
+Player: No hurry with the rest.
+Eleanor: ...I know. Some things can't be put away with a new label.
+
+[exit_b005]
+Eleanor: You handed over Mother's research disk?
+Player: ...Yes.
+Eleanor: Where's Mother? Did you see the release papers?
+
+[exit_b006]
+Narrator: You have no verified news to offer.
+Eleanor: I didn't ask how much you got. I asked where she is.
+Eleanor: On the first day I told you. Mother and the research were outside the agreement.
+Eleanor: I did the agreed work, told you everything I knew, waited while you checked the news. Why doesn't your promise to tell me first count?
+Player: Eleanor—
+Eleanor: Don't call me back here. I'm done working in this place.
+
+[exit_b008]
+Eleanor: I heard it from someone else. You've already published the research.
+Player: Yes.
+Eleanor: My mother has no protection yet. You knew. So did I.
+Eleanor: So I'm meant to tell you everything, but you don't have to say a word.
+Eleanor: The agreement is over. What I do from now on is no longer yours to be told.
+
+============================================================
+28 独立后的再选择 / Choosing again
+============================================================
+
+[m28_b002]
+Narrator: She waits at the doorway a moment. As on the first day she wore these clothes here, she checks for other customers before approaching the counter.
+Eleanor: There's something we need to settle today. Afterwards, I'd like to stay here a while.
+Player: Go on.
+Eleanor: Do you remember my condition?
+Player: Until the day you walk back into the Upper Level under your own name.
+Eleanor: That day has come.
+Eleanor: They remembered my name. No mention of Mother's case after it. No mention of whose maid I am. Just Eleanor.
+Eleanor: You've kept your half of the promise.
+Eleanor: So, you've kept your promise. And I've done the work I owed you.
+Player: Yes.
+Eleanor: All you have to say is 'yes'?
+Player: You said you wanted to say it yourself.
+Eleanor: ...
+Eleanor: That agreement is settled. But I haven't come to say goodbye.
+Eleanor: I turned down a very good dinner invitation upstairs today. Someone wanted to discuss next season's orders.
+Player: Why?
+Eleanor: I said I already had plans.
+Eleanor: Isn't there anything else you want to ask? Why I'm still wearing this, when the wages and promises are all settled?
+Player: Why?
+Eleanor: Because this time, no agreement requires me to.
+Eleanor: Before, I was always thinking about what I still owed. That's settled now, and I still want to wear it for you.
+Eleanor: I can walk into any shop upstairs. Discuss business with anyone. Turn down any table.
+Eleanor: I choose this one.
+
+[m28_b003]
+Narrator: She comes to your side. This time she need not smooth the apron or pull back her hand as it reaches for her skirt.
+Eleanor: Master.
+Eleanor: Not back when I had nowhere else to go and could only stay here. Now. Hear that clearly.
+
+[m28_b005]
+Player: Then let's make a new agreement. No end date this time.
+Eleanor: ...I set the terms.
+Player: Go ahead.
+Eleanor: First, don't use that name to tease me in front of customers. That hasn't changed.
+Eleanor: Second, you don't decide my business upstairs for me. Your business downstairs, I will fuss over, until you're sick of it.
+Player: And decisions?
+Eleanor: We make them together. I'm not unreasonable.
+Eleanor: Third, eat every day. I'll check.
+Player: Anything else?
+Eleanor: No end date. ...You said it yourself.
+
+[m28_b006]
+Player: I hear you. Come here, my lady.
+Eleanor: I'm already quite close.
+Eleanor: ...Never mind. A little closer is possible.
+
+[m28_b007]
+Player: Since it's your choice, I'll take that 'master' to heart.
+Eleanor: ...You really were listening.
+Eleanor: Then remember it properly.
+Eleanor: In public, your name.
+Eleanor: When we're alone—
+
+[m28_b008]
+Narrator: She pauses, as if deliberately making you wait.
+Eleanor: Master.
+Eleanor: This time, I decided. Nobody can change that. Not even you.
+
+[m28_b010]
+Narrator: She leans into your arms, her skirt brushing the counter. She paid to have this outfit made from an old dress. The first time she wore it here, she hadn't known where to put her hands, hadn't finished the curtsy. Now she can afford far finer clothes, and still chooses this set to see you.
+Eleanor: People say I'm harder to get hold of than I used to be.
+Player: Are you?
+Eleanor: For other people.
+Eleanor: You call, and I'll come.
+
+[m28_b011]
+Narrator: The first time she entered this pawnshop, she said it barely counted as a shop, and hardly wanted to touch the counter.
+Later, she learned to identify goods, keep accounts, and wipe that counter. She left the pen beside your usual hand, set replaced casings apart, and looked back from the door again and again to say, 'See you tomorrow, Master.'
+Now the Upper Level remembers her name again. People wait for her answers, invite her to examine samples, entrust her with proper business. When they mention that pawnbroker downstairs, she never lets 'he happened to help a little' pass as an account of what you did.
+You haven't moved upstairs. The pawnshop opens as usual. There is still a familiar place for her beside the counter.
+Sometimes she returns with formal business. Sometimes she changes into that outfit and waits for the last customer to leave before coming to your side.
+She can walk through those doors that once shut against her on her own. And she knows whose presence she chooses to bow her head in, before looking up again and saying, 'Master.'
+
+============================================================
+Dividend feedback (from chapter 25; values filled by the game)
+============================================================
+
+[er_div_first]
+Eleanor: Once the first order is settled, a share goes to you. From tomorrow, I'll set aside 200 credits a day and bring it when I visit. Missing a visit won't lose you anything. Your capital and the goods we checked together are part of this business.
+
+[er_div_established]
+Eleanor: The continuing supply contracts are settled too. From tomorrow your share is 600 credits a day. The earlier accounts still stand. Don't call it paying back my wages. This is business we built together.
+
+[er_div_visit]
+Eleanor: Brought the accounts. Let's check these entries first. We can talk goods afterwards.
+
+[er_div_receipt]
+Eleanor: Here's your share: {0} credits. Everything set aside up to today. Count it. Don't look at me like that. My accounts aren't missing a line.
+
+[er_div_receipt_end]
+Eleanor: Keep it safe. I'll keep recording the rest and settle it next time I come.
+
+============================================================
+Relationship choices and risk confirmations
+============================================================
+
+[er_maid_confess_yes]
+I understand. Be my attendant, and my lover.
+
+[er_maid_final_1]
+Then let's make a new agreement. No end date this time.
+
+[er_maid_final_2]
+I hear you. Come here, my lady.
+
+[er_maid_final_3]
+Since it's your choice, I'll take that 'master' to heart.
+
+[er_maid_choice_route_exit]
+I've decided. I'll leave the investigation, and our agreement ends here too.
+
+[er_maid_choice_route_exit_desc]
+Explicitly leave the investigation and end the attendant agreement. Return the drive and close future return projects. Paid support is delivered; no refund or reversal of existing rescue results.
+
+[er_maid_confirm_leak]
+Confirm: publish now, before protection is secured.
+
+[er_maid_confess_close]
+Then come here. You don't need an errand as an excuse to see me.
+
+[er_maid_confess_tease]
+I love you too. Stop using the counter as an excuse.
+
+[er_maid_confess_continue_desc]
+Accept her confession and continue your attendant agreement.
+
+[er_maid_final_continue_desc]
+Respond to her choice to stay and continue your relationship.
+
+[er_maid_repair_promise_desc]
+Acknowledge what you withheld and promise honesty. The investigation and agreement continue.
+
+[er_maid_repair_ack]
+I'll remember. Don't let me be the last to know again.
+
+[er_maid_repair_handback]
+Keep the drive with you. I'll tell you everything I knew then.
+
+[er_maid_repair_handback_desc]
+Return the original to her custody and explain what you withheld. The investigation and agreement continue.
+
+[er_maid_repair_records]
+Let me tell you the rest of that day. From now on, you see the records of everything I find.
+
+[er_maid_repair_records_desc]
+Explain what you withheld and share future investigation records. Continue the agreement.
+
+[er_maid_route_difficulty]
+I don't have a safer way right now. Let's lay out what we can do.
+
+[er_maid_route_difficulty_desc]
+Discuss the rescue options within reach. Raising concerns does not end the agreement.
+
+[er_maid_rescue_exchange_desc]
+Return the research for her mother's safety and continue the attendant agreement. The research will not be published.
+
+[er_maid_rescue_protection_desc]
+Arrange transfer and protection while continuing the agreement. If protection fails, you can exchange the drive for her release.
+
+[er_maid_public_risk_desc]
+Publishing before protection is secured puts her mother's life, and your agreed future, at risk.
+
+[er_maid_secret_risk_desc]
+Publish without her consent, ending your cooperation and attendant agreement. Final confirmation cannot be undone.
+
+[er_maid_sell_risk_desc]
+Sell the research she entrusted to you, ending the relationship. The buyer takes no responsibility for the rescue.
+
+[er_maid_reconsider_desc]
+Return to the discussion. No drive, money or route has been committed.
+
+[er_maid_handover_warning]
+He wants the drive, not to help with the rescue. Taking these three hundred credits means abandoning your promise to her.
+
+[er_maid_handover_confirm]
+I've decided. Give him the drive and take the three hundred.
+
+[er_maid_sell_warning]
+The buyer wants the research and accepts no responsibility for her release. Selling the drive ends your agreement.
+
+[er_maid_sell_confirm]
+I'll sell it. I won't involve myself in her affairs any further.
+
+[er_maid_secret_warning]
+She is waiting to decide with you. Giving it to the newspaper behind her back ends that trust and your agreement.
+
+[er_maid_secret_confirm]
+I'll hand it over without telling her.

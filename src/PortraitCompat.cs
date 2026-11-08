@@ -20,6 +20,9 @@ namespace EleanorRomance
         public const ulong BeautyWorkshopId = 3829696854UL;
         public const string BeautyKeyPrefix = "cp_portrait_";
         public const string LocalPortraitPrefix = "er_portrait_";
+        public const string MaidKey = "er_portrait_eleanor_maid_female_beauty";
+        public const string VanillaMaidKey = "er_portrait_eleanor_maid_female_vanilla";
+        public const string GalaKey = "er_portrait_eleanor_gala_female_beauty";
 
         private static LoadedMod beautyMod;
 
@@ -84,6 +87,49 @@ namespace EleanorRomance
             return Resolve(fallbackKey);
         }
 
+        public static bool IsMaidScene(string id)
+        {
+            switch (id)
+            {
+                case "er_story_maid_m19": case "er_story_maid_m20":
+                case "er_story_maid_m22": case "er_story_maid_m23": case "er_story_maid_m28":
+                case "er_story_maid_wait": case "er_story_maid_daily": case "er_story_maid_housing":
+                case "er_story_maid_feedback": case "er_story_maid_world": return true;
+                default: return false;
+            }
+        }
+        public static bool CanUseMaid(string id)
+        {
+            return IsMaidSceneEligible(id) && HasLocalMaidSprite(IsBeautyActive ? MaidKey : VanillaMaidKey);
+        }
+        private static bool IsMaidSceneEligible(string id)
+        {
+            return MaidState.Active && IsMaidScene(id)
+                && (MaidState.DebutShown || id == "er_story_maid_m19");
+        }
+        private static bool HasLocalMaidSprite(string key)
+        {
+            LoadedMod own = FindOurMod();
+            return own?.Sprites != null && own.Sprites.TryGetValue(key, out var sprite) && sprite != null;
+        }
+        public static string ResolveMaid(string id,string fallback)
+        {
+            string key=IsBeautyActive ? MaidKey : VanillaMaidKey;
+            return CanUseMaid(id) && EnsureLocalPortrait(key) ? key : Resolve(fallback);
+        }
+        public static bool IsGalaScene(string id)=>id=="er_story_gala" && GalaStory.Eligible
+            && MaidState.PendingVisit==GalaStory.VisitId;
+        public static string GalaDescription=>L.Get(ResolveGala("er_story_gala")==GalaKey
+            ?"er_gala_gown_beauty":"er_gala_gown_vanilla");
+        public static string ResolveGala(string id)
+        {
+            // Only a beautified portrait is authored. Vanilla reuses Eleanor's
+            // original upper-level portrait; creation precedes queue ownership.
+            if(id=="er_story_gala" && GalaStory.Eligible && IsBeautyActive && HasLocalMaidSprite(GalaKey)
+                && EnsureLocalPortrait(GalaKey))return GalaKey;
+            return Resolve("eleanor1");
+        }
+
         /// <summary>
         /// Safety net for SpriteDict rebuilds and direct cp_portrait_* lookups.
         /// Called by a GetSprite prefix; does nothing outside the beauty prefix.
@@ -91,6 +137,9 @@ namespace EleanorRomance
         public static void EnsureKey(string key)
         {
             if (string.IsNullOrEmpty(key)) return;
+            if (key == MaidKey && (!IsBeautyActive || !MaidState.Active)) return;
+            if (key == VanillaMaidKey && !MaidState.Active) return;
+            if (key == GalaKey && (!IsBeautyActive || !IsGalaScene("er_story_gala"))) return;
 
             if (key.StartsWith(LocalPortraitPrefix, StringComparison.Ordinal))
             {
@@ -160,25 +209,41 @@ namespace EleanorRomance
         /// </summary>
         public static void SanitizeLoadedClients()
         {
-            if (IsBeautyActive) return;
             try
             {
                 if (PlayerStore.Instance == null || PlayerStore.Instance.storeClientManager == null) return;
                 var stack = PlayerStore.Instance.storeClientManager.clientStack;
-                if (stack == null) return;
-                foreach (StoreClient client in stack)
+                if (stack != null) foreach (StoreClient client in stack)
                 {
-                    if (client == null || string.IsNullOrEmpty(client.spriteName)) continue;
-                    if (client.spriteName.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal))
-                    {
-                        client.spriteName = RevertKey(client.spriteName);
-                    }
+                    SanitizeClient(client);
                 }
+                SanitizeClient(PlayerStore.Instance.currentClientInstance?.GetClientBlueprint());
             }
             catch (Exception ex)
             {
                 StoryDirector.LogError("Portrait save sanitisation failed: " + ex);
             }
+        }
+
+        private static void SanitizeClient(StoreClient client)
+        {
+            if (client == null || string.IsNullOrEmpty(client.spriteName)) return;
+            if(client.spriteName==GalaKey)
+            {
+                client.spriteName=IsGalaScene(client.identifier)?ResolveGala(client.identifier):Resolve("eleanor1");
+            }
+            else if (client.spriteName == MaidKey || client.spriteName == VanillaMaidKey)
+            {
+                if (!IsMaidSceneEligible(client.identifier)) client.spriteName=Resolve("eleanor_scav");
+                else if (client.spriteName==MaidKey && !IsBeautyActive)
+                    client.spriteName=ResolveMaid(client.identifier,"eleanor_scav");
+                else if (!HasLocalMaidSprite(client.spriteName) || !EnsureLocalPortrait(client.spriteName))
+                    client.spriteName=Resolve("eleanor_scav");
+            }
+            else if (!IsBeautyActive && client.spriteName.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal))
+                client.spriteName = RevertKey(client.spriteName);
+            // Re-enabling beauty does not replace an existing vanilla maid visitor;
+            // the next appropriate visitor selects the newly preferred style.
         }
 
         private static string RevertKey(string beautyKey)

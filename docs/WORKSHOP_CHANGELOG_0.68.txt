@@ -1,0 +1,7 @@
+0.68｜修复模组界面启动报错 / Fix mod-menu startup error
+
+• 修复0.67在模组界面启用时出现的NullReferenceException：王尔德项目注册过早访问了尚未就绪的原生存档对象。
+• 项目定义改在读档初始化阶段、存档对象就绪后注册；新游戏沿用原生开局回调。已付款记录和结果排期继续在读档后恢复，不重复扣费。
+• 补充无存档对象时的反复启停、钩子解绑、延后注册与已付款恢复回归，连同原有流程共26组离线检查通过。
+
+Fixes the NullReferenceException introduced in 0.67 when enabling the mod from the mod menu. Wilde project definitions now register during save-load initialization, once the native store exists, or through the new-game callback. Paid project history and pending results are restored after loading without another charge. Adds startup and lifecycle regression coverage; all 26 offline test groups pass.

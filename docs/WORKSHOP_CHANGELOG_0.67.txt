@@ -1,0 +1,10 @@
+0.67｜侍从恋爱与上层区归来 / Attendant romance and return to the Upper Level
+
+• 新增可选侍从恋爱分支，保留原有平等恋爱与朋友线；探索提议不收费，最终确认才支付800预付工钱。
+• 新增四项原生王尔德筹备、七种购买方案与24～28章归来篇；已付待演出状态可恢复，购买互斥、重入与保存边界已检查。
+• 为符合条件的旧800停线档增加重谈序章，不补扣款、不重置物品或世界进度。
+• 乙线复核回执、七日后撤案新闻服务全部关系版本，独立于归来项目。
+• 女仆装支持原版／少女当铺两套独立立绘，含旧队列切换与缺图回退。
+• 补齐新增剧情与界面的英语，中英各2019条；修正保护渠道记录，保留交易收尾及奖励防重、满仓重试。
+
+Adds an optional attendant romance, four native Wilde projects with seven payment plans, and five Upper Level return visits. Preserves equal romance and friendship. Supported legacy 800-choice saves can continue without retroactive charges. The protected-research route gains a shared independent case review. Includes two maid portrait styles and complete Chinese/English text, plus payment, interruption and reward recovery checks.

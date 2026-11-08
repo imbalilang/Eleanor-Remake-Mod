@@ -1,0 +1,13 @@
+0.77｜谁在说话 / Correct dialogue speakers
+
+• 修正假叔叔被举报后，治安员台词被算到假叔叔名下的问题；埃莉诺被箱子陷害时的拘捕对白同步修正。
+• 统一修正旁白、晚会来宾与采购行管事、治安部通知和新闻的发言归属，姓名栏与对话记录保持一致，不再都显示成当前顾客。
+• 保留现有对话框，不新增场景；玩家和治安员沿用原版专用通道。只处理本MOD对白，不修改来访者身份、交易、剧情路线或其他MOD对白。
+• 兼容来源已确认的旧MOD对白图，处理启停、嵌套和异常清理。既有历史记录保留，之后的新对白按正确身份记录。
+• 中英各2294键。66组离线回归通过；149种访客与分支组合复核，先前69条不符归属均已消除；原生模组扫描无额外权限申请。实机显示继续收集反馈。
+
+Corrects the officer's speaker channel after reporting the false uncle, including Eleanor's related crate-arrest scene. Narration, party guests, the purchasing manager, security notices and news now keep their own names in both the existing dialogue caption and history.
+
+No new scene or UI flow. Player/officer lines retain native channels. The adapter only handles this mod's dialogue, without changing customer identities, trades, story outcomes or other mods. It supports verified restored dialogue, enable/disable, nested calls and error cleanup. Existing historical strings remain; new entries receive the correct attribution.
+
+Chinese and English each contain 2294 keys. All 66 offline regression groups pass. A 149-case visitor/branch audit resolves all 69 previously mismatched text keys. The native scan requests no extra capabilities. In-game feedback remains welcome.

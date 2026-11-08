@@ -1,0 +1,11 @@
+{
+  "er_div_first": ["第一单结清以后，账上会有你的一份。从明天起，每天先给你记200信用点。我隔几天带来一起结，没过来也不会少。你出的本钱、陪我验过的货，都在这笔生意里。", "Once the first order is settled, a share goes to you. From tomorrow, I'll set aside 200 credits a day and bring it when I visit. Missing a visit won't lose you anything. Your capital and the goods we checked together are part of this business."],
+  "er_div_established": ["后面的供货也谈稳了。从明天起，你那份每天记600信用点。先前的照旧结，不会拿新账盖过去。别又说是我还你工钱，这是一起做出来的生意。", "The continuing supply contracts are settled too. From tomorrow your share is 600 credits a day. The earlier accounts still stand. Don't call it paying back my wages. This is business we built together."],
+  "er_div_visit": ["账本带来了。今天先把这几笔对清楚，货的事等会儿再说。", "Brought the accounts. Let's check these entries first. We can talk goods afterwards."],
+  "er_div_receipt": ["这里是你那份，{0}信用点。攒到今天的都在里面，数清楚。别看我，我的账可没少一笔。", "Here's your share: {0} credits. Everything set aside up to today. Count it. Don't look at me like that. My accounts aren't missing a line."],
+  "er_div_receipt_end": ["收好。后面的照常记，等我下次过来一起结。", "Keep it safe. I'll keep recording the rest and settle it next time I come."],
+  "er_div_received": ["收到埃莉诺分红：{0}信用点；尚待领取：{1}。", "Eleanor's dividend received: {0} credits. Still awaiting collection: {1}."],
+  "er_div_summary": ["分红：{0}/天；待领{1}；累计已领{2}。", "Dividends: {0}/day; awaiting collection {1}; received in total {2}."],
+  "er_div_project_first": ["第一单做成后每天累计200信用点分红，埃莉诺来访时结算。", "After the first order succeeds, 200 credits accrue daily, paid during Eleanor's visits."],
+  "er_div_project_established": ["事业开张后分红提高至每天600信用点，来访时结算。", "After the business opens, daily dividends rise to 600 credits, paid during visits."]
+}
