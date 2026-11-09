@@ -1,4 +1,4 @@
-param([string]$Version='0.77')
+param([string]$Version='0.81')
 $ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
 [xml]$manifest=Get-Content (Join-Path $root 'manifest.xml') -Raw

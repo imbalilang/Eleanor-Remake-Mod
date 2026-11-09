@@ -152,9 +152,13 @@ def main() -> int:
     all_en.update(dialogue_en)
 
     from build_maid_content import build as build_maid
+    from build_dual_content import build as build_dual
     maid_zh, maid_en = build_maid(root)
     all_zh.update(maid_zh)
     all_en.update(maid_en)
+    dual_zh, dual_en = build_dual(root)
+    all_zh.update(dual_zh)
+    all_en.update(dual_en)
 
     missing_en = sorted(set(all_zh) - set(all_en))
     os.makedirs(os.path.join(root, "Localization"), exist_ok=True)

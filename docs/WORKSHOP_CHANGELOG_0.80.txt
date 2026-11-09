@@ -1,0 +1,12 @@
+0.80｜全文文风修订 / Dialogue style pass
+
+• 重写 765 条中文对白与界面文本，覆盖公共主线、侍从线、归来篇、经营互动和结局；Eleanor、Lydia、母亲等角色更接近原作语气，减少说明腔、程式化措辞和生硬的总结句。
+• 同步调整 40 条英文文本，保持中英文语气一致。
+• 剧情分支、数值、路线和存档结构不变；选项含义不变，被回显的玩家台词与选项标签保持逐字一致。旧存档继续可用。
+• 中英各 2294 键；Release 编译 0 警告 0 错误。
+
+English:
+• 765 Chinese dialogue and UI lines rewritten across the shared story, attendant route, return visits, business interactions and endings, bringing Eleanor, Lydia, her mother and the supporting cast closer to the original game's voice.
+• 40 English lines updated to match the revised tone.
+• Story branches, values, routes and save structure are unchanged; echoed player lines and choice labels remain identical. Existing saves remain compatible.
+• Chinese and English each contain 2294 keys; Release build completed with 0 warnings and 0 errors.

@@ -1,0 +1,14 @@
+0.78｜工具补给修复与安全更新适配 / Tool supply fix and security-update compliance
+
+• 修复工具补给与第25章样品来访把未注册的 wrench_old 当作真实物品生成的问题；游戏会为未注册 id 创建占位物品，悬停显示原始 id。现使用原版扳手 wrench_orange。
+• 旧存档中已经生成的占位扳手会在读档后补正名称、图标、价值 30 与 TOOL/WEAPON/MELEE_WEAPON 类型。
+• 假叔叔箱子的延迟回调由游戏 MonoBehaviour 上的 StartCoroutine 改为 ModHelper.Delay，消除 Modding API 100-Rev13 的 threads 发现；2026-12-10 安全更新后仍可加载。
+• 能力清单保持为空，不使用 files/network/反射/原生/动态代码，不需要创意工坊开发者验证；本次更新不新增能力，已订阅玩家无需重新授权。
+• 游戏 1.0.0.13 / build 26525552；public 与 open_beta 为同一构建。中英各 2294 键，Release 编译 0 警告 0 错误。
+
+English:
+• Fixes the tool-supply and chapter 25 sample visits spawning the unregistered wrench_old placeholder, which showed the raw id on hover. The native wrench_orange is now used.
+• Existing placeholder wrenches in old saves are repaired on load: name, icon, value 30 and TOOL/WEAPON/MELEE_WEAPON types.
+• The false-uncle crate callback now uses ModHelper.Delay instead of StartCoroutine on a game MonoBehaviour, removing the Modding API 100-Rev13 threads finding; the mod remains loadable after the 2026-12-10 security update.
+• Capabilities remain empty: no files/network/reflection/native/dynamic code, no Workshop developer verification, and no re-authorization for existing subscribers.
+• Game 1.0.0.13 / build 26525552; public and open_beta share the same build. Chinese and English each contain 2294 keys; Release build completed with 0 warnings and 0 errors.

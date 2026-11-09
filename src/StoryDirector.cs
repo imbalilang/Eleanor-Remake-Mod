@@ -39,6 +39,7 @@ namespace EleanorRomance
             MaidRouteMigration.OnLoaded();
             // Must run before project visibility is computed on load.
             MaidRouteMigration.MigrateDeferred();
+            DualMigration.OnLoaded();
             VanillaEleanorBridge.OnLoaded();
             MaidProjects.OnLoaded();
             MaidDividends.Accrue();
@@ -65,6 +66,7 @@ namespace EleanorRomance
                 + ", next=" + RomanceState.NextVisitDay);
             MaidProjects.OnLoaded();
             MaidInteractions.OnLoaded();
+            DualMigration.OnLoaded();
         }
 
         public static void OnGenerateCustomerVeryEarly(StoreClientManager manager)
@@ -105,8 +107,12 @@ namespace EleanorRomance
                 if (HasModClient(manager)) return;
                 if (MaidStory.HasUrgentClient(manager)) return;
                 MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
+                DualDirector.RecoverPending(manager);
+                if (DualDirector.TryQueue(manager, day)) return;
                 if (MaidStory.TryQueue(manager, day)) return;
                 if (MaidState.LegacyResume == 1) return; // Await its dedicated due day and explicit choice.
+                if (DualBusiness.TryQueue(manager, day)) return;
+                DualDirector.ReconcileMainProgression(day);
 
                 // A romance lock is not a world-story termination. In particular
                 // route D still needs its result visit. Only precise migration
@@ -163,6 +169,9 @@ namespace EleanorRomance
             if (chapter == 19 && RomanceState.MotherState != 1) return 0;
 
             if (chapter == 20 && RomanceState.Route == 3) return 0;
+            // The dual extension replaces the c21/c22/c23 visits while it owns
+            // the post-rescue schedule; its own director queues those scenes.
+            if (DualDirector.SuppressMainChapter(chapter)) return 0;
 
             if (day < RomanceState.NextVisitDay) return 0;
             return chapter;
@@ -257,6 +266,9 @@ namespace EleanorRomance
         private static bool TryQueueEpilogue(StoreClientManager manager, int day)
         {
             if (MaidState.Active) return false;
+            // The dual extension supplies its own confirmed ending/epilogue;
+            // an exited dual route falls back to the ordinary epilogue.
+            if (DualState.Active && DualState.Relation != 3) return false;
             if (!RomanceState.EpilogueDone || RomanceState.RomanceLocked) return false;
             if (RomanceState.Route == 3 || RomanceState.Route == 4) return false;
             if (RomanceState.MotherState != 1) return false;

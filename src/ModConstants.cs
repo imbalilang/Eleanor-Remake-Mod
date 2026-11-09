@@ -7,6 +7,7 @@ namespace EleanorRomance
         public const string EarlyStartPerkId = "eleanor_romance.early_start";
         public const string LocketItemId = "eleanor_romance.locket";
         public const string BraceletItemId = "eleanor_romance.upper_bracelet";
+        public const string PlaqueItemId = "eleanor_romance.recommendation_plaque";
         public const string MetaFile = "meta.json";
         public const string LogTag = "[EleanorRomance]";
 

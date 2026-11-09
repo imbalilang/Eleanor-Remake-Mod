@@ -710,8 +710,7 @@ namespace EleanorRomance
                 if (paid >= baseValue * 0.9) RomanceState.LydiaFairBracelet = true;
             };
 
-            Dialogue main = StoryEngine.Build(StoryV06Content.B_C09_B001);
-            StoryEngine.Tail(main).SetEndAction(() =>
+            Action spawnBracelet = () =>
             {
                 if (RomanceState.LydiaBraceletSpawned) return;
                 RomanceState.LydiaBraceletSpawned = true;
@@ -727,7 +726,19 @@ namespace EleanorRomance
                 {
                     StoryDirector.LogError("Lydia bracelet spawn failed: " + ex);
                 }
-            });
+            };
+            Dialogue main = StoryEngine.Build(StoryV06Content.B_C09_B001);
+            StoryEngine.Tail(main).SetEndAction(null);
+            // v0.4 common-9 additions: Lydia's arrival beat and the first
+            // "what do you look like" exchange, before the bracelet trade.
+            Dialogue arrival = DualText.Build("common09_arrival");
+            StoryEngine.Append(main, "common09_added");
+            StoryEngine.Tail(main).SetEndAction(spawnBracelet);
+            if (arrival != null)
+            {
+                StoryEngine.Tail(arrival).SetNextDialogue(main);
+                main = arrival;
+            }
             client.mainDialogue = main;
 
             FinishWhenLeaving(client, 10, 11, () =>
@@ -736,6 +747,8 @@ namespace EleanorRomance
                 if (!tracker.Any) dialogue = StoryEngine.Build(StoryV06Content.B_C09_B004);
                 else if (RomanceState.LydiaFairBracelet) dialogue = StoryEngine.Build(StoryV06Content.B_C09_B002);
                 else dialogue = StoryEngine.Build(StoryV06Content.B_C09_B003);
+                if (RomanceState.LydiaFairBracelet) DualText.Append(dialogue, "common09_high_price");
+                DualText.Append(dialogue, "common09_after");
                 StoryEngine.Append(dialogue, StoryV06Content.B_C09_B005);
                 StoryEngine.Append(dialogue, StoryV06Content.B_C09_B006);
                 return Head(dialogue);
@@ -765,6 +778,7 @@ namespace EleanorRomance
             {
                 StoryEngine.Append(root, StoryV06Content.B_C10_B006);
             }
+            DualText.Append(root, "common10_family");
 
             StoryEngine.Tail(root).SetEndAction(() =>
             {
@@ -1751,7 +1765,10 @@ namespace EleanorRomance
                     || RomanceState.CrateSold) return;
 
                 armed = true;
-                DialogUIManager.Instance.StartCoroutine(MetaHelper.WaitAndDo(0.3f, () =>
+                // StartCoroutine/Invoke on a game MonoBehaviour counts as the
+                // retiring `threads` capability from 2026-12-10. ModHelper.Delay
+                // runs on the loader and is cancelled when the mod is stopped.
+                ModHelper.Delay(ModConstants.ModId, 0.3f, () =>
                 {
                     bool isCurrent = PlayerStore.Instance.currentClientInstance != null
                         && PlayerStore.Instance.currentClientInstance.GetClientBlueprint() == client;
@@ -1786,7 +1803,7 @@ namespace EleanorRomance
                         armed = false;
                         sprung = false;
                     }
-                }));
+                });
             };
         }
 

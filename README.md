@@ -3,10 +3,38 @@
 
 《深空当铺：可能是偷的 / Probably Stolen》Eleanor 个人剧情线重制 MOD。
 
-- 游戏版本：1.0.0.12 同期代码，内部版本 0.46D（Steam AppID 4348910；已验证本机 open_beta build 26496118）
-- MOD 版本：0.77
+- 游戏版本：1.0.0.13（Steam build 26525552，内部版本 0.46D；public 与 open_beta 当前为同一构建）
+- MOD 版本：0.81
 - 内容尺度：全年龄
 - 语言：简体中文 / English（剧情与 UI 均已翻译）
+
+## 0.81：莉迪亚闺蜜双恋线
+
+- 新增 20 场双恋扩展：母亲安全后接受莉迪亚撮合，领取荐店铭牌，通过真实引荐客与两笔经营委托推进关系，经历三人讨论、分别约会与共同晚饭。
+- 双恋必须三方明确同意；玩家不背着任何一方维持关系。入口拒绝或第5场朋友选择保留埃莉诺原恋爱、救母与经营事实；确认进入后不会反复询问是否退出，莉迪亚在结束后回到普通来访。
+- 新增铭牌物品、橱窗有效性、真实成交的引荐客、口碑阶段、旧档入口、7 组低频日常与终局尾声。
+- 新美术：莉迪亚日常/约会各两版画像与铭牌；约会图只在确认后的指定场景使用，缺图时回退日常。
+- 兼容：原有路线、奖励、存档与 0.80 文风修订保留；中英各 3078 键。发布记录见 `docs/RELEASE_0.81.md`。
+- 路线与结局预览：用浏览器直接打开 [`docs/route_map.html`](docs/route_map.html)。页面以普通天为纵轴，按四条主路线分泳道绘制（常规恋爱 / 后宫 / 侍从 / 革命军），所有事件按发生日对齐；完美结局为 E1 / E4 / E3 / E9，其余 E1～E14 均为非完美。之后任何剧情、选项、日期或结局改动都必须同步维护该页与 [`docs/ROUTE_MAP_MAINTENANCE.md`](docs/ROUTE_MAP_MAINTENANCE.md)，编号保持稳定。
+
+## 0.80：全文文风修订
+
+- 重写 765 条中文对白与界面文本，覆盖公共主线、侍从线、归来篇、经营互动和结局；Eleanor、Lydia、母亲等角色更接近原作语气，减少说明腔、程式化措辞和生硬的总结句。
+- 同步调整 40 条英文文本，保持中英文语气一致。
+- 剧情分支、数值、路线与存档结构不变；选项含义不变，被回显的玩家台词与选项标签保持逐字一致。
+- 中英各 2294 键。对照表见 `docs/文风修订对照_2026-11-09.txt`，发布记录见 `docs/RELEASE_0.80.md`。
+
+## 0.79：工具物品修正
+
+- 0.78 使用的 `wrench_orange` 并不合适：它是 `UnusedDirectory` 中的遗留工厂，正常游戏没有可获得的扳手。工具补给与第25章样品来访现改为原版剪线钳 `wire_cutter`（名称、图标、描述、价值 40、类型 TOOL），与螺丝刀一起提供。
+- 旧存档中的 `wrench_old` 占位物品读档后补正为当前语言的 Wire Cutter 名称、图标、描述和价值；内部标识仍是 `wrench_old`，新生成的物品是真正的 `wire_cutter`。
+- 0.78 的 Modding 安全更新修复保留（`ModHelper.Delay`，空能力清单）；中英各 2294 键不变。
+
+## 0.78：工具补给修复与 Modding 安全更新
+
+- 修复工具补给与第25章样品来访把未注册的 `wrench_old` 当作真实物品生成的问题；游戏会为未注册 id 创建占位物品，悬停显示原始 id。现使用原版扳手 `wrench_orange`；旧存档中已生成的占位扳手在读取后补正名称、图标、价值与工具类型。
+- 官方 Modding API 文档 100-Rev13（2026-11-08）把 `reflection-external`、`native`、`dynamic-code`、`threads` 设为退出能力，2026-12-10 起拒绝加载。假叔叔箱子的延迟回调已从游戏 MonoBehaviour 上的 `StartCoroutine` 改为 `ModHelper.Delay`，不再触发 `threads`；模组保持空能力清单，不使用 files/network/反射/原生/动态代码，不需要开发者验证。
+- 本次更新不新增能力，已订阅玩家无需重新授权。游戏 1.0.0.13 / build 26525552，public 与 open_beta 为同一构建；中英各 2294 键。双分支兼容策略与发布检查清单见 [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md)，发布记录见 [`docs/RELEASE_0.78.md`](docs/RELEASE_0.78.md)。
 
 ## 0.77：对白与记录的发言归属
 
@@ -171,6 +199,8 @@ bash build.sh                    # 构建到 bin/Release，再部署到 Mods/Ele
 
 `build.sh` 会在覆盖安装目录前保留一份 `dist/rollback_*` 备份，并检查 DLL 与 CSV 非空。
 
+发布前请按 [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md) 核对 public/open_beta 分支，并在游戏 F8 控制台运行 `mod-scan eleanor_romance` 自查能力与 `DEPRECATED` 项。
+
 交易与物品占格的离线回归（PowerShell 7，先完成构建）：
 
 ```powershell
@@ -229,7 +259,8 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 ## 兼容与限制
 
-- 目标版本 0.46D。版本不匹配时剧情补丁停用，但不会删除 MOD 存档数据。
+- 目标版本 0.46D（1.0.0.13 / Steam build 26525552；public 与 open_beta 当前同构建）。版本不匹配时剧情补丁停用，但不会删除 MOD 存档数据。
+- Modding API 安全规则（空能力清单、禁止 threads/反射/文件/网络用法、正式版优先的编译基线）见 [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md)。
 - 选择性复用原版 Eleanor 保释调度，桥接层隔离其他原版访客并接回重制章节；谢礼放置拦截只在本 MOD 同步调用原版奖励动作时生效。保留立绘和结束界面的补丁；拾荒协助使用原版地点事件接口。
 - 与其他修改 Eleanor 调度的 MOD 可能冲突；启动日志会记录状态。
 - 本版尚未完成完整实机周目验收。新档、旧档、跨日、存读档、各结局分支仍需逐项测试。

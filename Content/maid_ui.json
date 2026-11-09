@@ -180,8 +180,8 @@
     "I was wrong. From now on, you'll be the first to hear about any danger I know of."
   ],
   "er_maid_reconcile_no": [
-    "今后该瞒你的时候，我仍会瞒着你。",
-    "I'll still keep things from you when I decide I should."
+    "以后该瞒的，我还是会瞒着你。",
+    "If I think something should be kept from you, I'll still keep it."
   ],
   "er_maid_notice_honesty": [
     "侍从约定已结束：你明确拒绝了今后坦诚相告。后续接朋友关系。",
@@ -268,16 +268,16 @@
     "Hydroponic farm conviction overturned"
   ],
   "er_maid_tragic_food_close": [
-    "今天就到这里。谢谢你让我慢慢来。",
-    "That's enough for today. Thank you for letting me take my time."
+    "今天就到这儿吧。谢谢你……没催我。",
+    "That's enough for today. Thank you... for not rushing me."
   ],
   "er_maid_betrayal_mother_died": [
-    "此后传来的确认消息中，她的母亲没能生还。",
-    "The later confirmed news is that her mother did not survive."
+    "后来传来消息：她的母亲没能活下来。",
+    "Word comes later: her mother did not survive."
   ],
   "er_maid_ending_exit": [
-    "后来，你不再参与她母亲的调查。双方归还了该归还的东西，约定与恋爱推进也到此结束。她仍要按自己的办法往前走；你没有替她写下一个尚未发生的结局。",
-    "Later, you take no further part in the investigation. What needed returning is returned. The agreement and romantic progress end there. She must find her own way forward; you do not invent an ending that has not happened."
+    "后来，你没有再参与她母亲的调查。该还的东西都还了，那份约定也到此为止。她照着自己的办法往前走，往后的事，就是她自己的事了。",
+    "Later, you take no further part in her mother's investigation. What needed returning is returned, and the agreement ends there. She goes on her own way; what comes next is hers."
   ],
   "er_maid_choice_custody_keep": [
     "盘放我这儿。在我柜台上，没人拿得走。",
@@ -328,7 +328,7 @@
     "Explicitly leave the investigation and end the attendant agreement. Return the drive and close future return projects. Paid support is delivered; no refund or reversal of existing rescue results."
   ],
   "er_maid_legacy_help": [
-    "那天的话，我收回。换个说法：查清以后，我帮你。",
+    "那天的话，我收回。换个说法：等查清楚了，我帮你。",
     "I take back what I said that day. Let me put it another way: once the truth is clear, I'll help you."
   ],
   "er_maid_legacy_help_desc": [
@@ -336,7 +336,7 @@
     "No charge. After the terms, you may still return to the ordinary relationship at the final confirmation."
   ],
   "er_maid_legacy_retract": [
-    "那天是我说错了。调查的事你自己安排，有需要就来。",
+    "那天是我说错了。调查的事你自己安排，需要帮忙就来。",
     "I was wrong that day. Arrange the investigation yourself. Come to me if you need anything."
   ],
   "er_maid_legacy_retract_desc": [

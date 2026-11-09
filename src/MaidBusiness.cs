@@ -157,7 +157,7 @@ namespace EleanorRomance
         private static void ChooseSupply(int choice){if(Number("supply.choice")==0)Set("supply.choice",choice);}
         private static void SpawnSupply(StoreClient c)
         {
-            if(Number("supply.choice")==1)Stock(c,"screwdriver","wrench_old");
+            if(Number("supply.choice")==1)Stock(c,"screwdriver","wire_cutter");
             else if(Number("supply.choice")==2)Stock(c,"metal_ingot","scrap_metal");
         }
         public static void AttachSample(StoreClient c,Dialogue opening)
@@ -173,7 +173,7 @@ namespace EleanorRomance
             {
                 SpawnSample(c);
                 if(Number("supply.choice")==2)Stock(c,"metal_ingot","scrap_metal");
-                else Stock(c,"screwdriver","wrench_old");
+                else Stock(c,"screwdriver","wire_cutter");
             });
         }
         private static void SpawnSample(StoreClient c)

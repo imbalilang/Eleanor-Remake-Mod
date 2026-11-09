@@ -1,0 +1,16 @@
+{
+  "er_dual_plaque_name": ["莉迪亚的荐店铭牌", "Lydia's Recommendation Plaque"],
+  "er_dual_plaque_desc": ["放进橱窗后，认识莉迪亚的客人会更愿意进来看看。放在仓库或随身背包里不会生效。", "Display it in the showcase to bring in customers who know Lydia. It has no effect in storage or your backpack."],
+  "er_dual_plaque_flavor": ["底座背面刻着一行小字：莉迪亚，替朋友说话。", "A small line is engraved on the back: Lydia, speaking up for a friend."],
+  "er_dual_biz_first_intro": ["我是莉迪亚介绍来的。听说你这儿有适合送上层的精品？我今天的预算大约 {0} 信用点。合适的话，我按店里的规矩买。", "Lydia sent me. I heard you have something fine enough for the Upper Levels. My budget today is about {0} credits. If it suits, I'll buy it the usual way."],
+  "er_dual_biz_first_close": ["东西我拿走了。她推荐得没错。", "I'll take it. She recommended the right place."],
+  "er_dual_biz_first_no_trade": ["今天没看到合适的。我下次再来。", "Nothing suitable today. I'll come back another time."],
+  "er_dual_biz_second_intro": ["莉迪亚说你能找到便携净水器。预算 {0} 信用点，耐久至少要有 {1}。东西先给我看，价钱照常谈。", "Lydia said you can find a portable water purifier. Budget {0} credits, at least {1} durability. Show me the item first; we'll negotiate the price normally."],
+  "er_dual_biz_second_close": ["能用。这趟没白跑。", "This will do. Worth the trip."],
+  "er_dual_biz_second_no_trade": ["没有合适的就先算了。莉迪亚说你这儿还能再问。", "If there's nothing suitable, never mind. Lydia said I can ask again here."],
+  "er_dual_biz_feedback_notice": ["两笔引荐都做成了。莉迪亚的铭牌开始带来更多上层客人。", "Both referrals went through. Lydia's plaque is bringing in more Upper Level customers."],
+  "er_dual_prompt": ["你的回答。", "Your answer."],
+  "er_dual_plaque_full": ["你身上和店里都腾不出位置。先清理空间，铭牌之后可以补领。", "There is no room in your inventory or shop. Make space and the plaque can be reissued later."],
+  "er_dual_entry_resume": ["莉迪亚还没把话说完。", "Lydia is not finished yet."],
+  "er_dual_notice_ending": ["三个人的关系已经稳定下来。之后可以在日常来访中继续见到她们。", "The three of you have settled into something steady. You can keep seeing them in everyday visits."]
+}

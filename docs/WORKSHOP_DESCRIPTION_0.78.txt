@@ -1,0 +1,62 @@
+[h1]Eleanor Story Expand[/h1]
+[h2]上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展[/h2]
+
+“呵，你们下层区管这种地方叫‘商店’啊？”
+
+她是上层区最大水培农场前负责人的独女。母亲被以挪用公款罪关押，家族一夜崩塌，她跌进自己曾最看不起的下层区。
+你，是这里的一家当铺老板。
+
+靠识货、开价、留证和承担风险，先成为她愿意信任的人。你们可以成为平等的恋人、继续做朋友，也可以选择一份双方说清条件的侍从约定。她的骄傲、判断与救母决心始终保留。
+
+[h2]0.78：工具补给修复与安全更新适配[/h2]
+[list]
+[*]修复工具补给与第25章样品来访把未注册的 wrench_old 当作真实物品生成的问题；悬停时不再显示原始 id。现使用原版扳手 wrench_orange。
+[*]旧存档中已经生成的占位扳手会在读档后补正名称、图标、价值 30 与 TOOL/WEAPON/MELEE_WEAPON 类型。
+[*]假叔叔箱子的延迟回调由游戏 MonoBehaviour 上的 StartCoroutine 改为 ModHelper.Delay，消除 Modding API 100-Rev13 的 threads 发现；2026-12-10 安全更新后仍可加载。
+[*]能力清单保持为空，不使用 files/network/反射/原生/动态代码，不需要创意工坊开发者验证。本次更新不新增能力，已订阅玩家无需重新授权。
+[*]游戏 1.0.0.13 / build 26525552，public 与 open_beta 为同一构建；中英各 2294 键，发布构建 0 警告 0 错误。
+[/list]
+
+[h2]确认心意，减少重复选线[/h2]
+[list]
+[*]侍从线第20章三种告白回应都延续已选的恋爱与约定，不再重复询问是否转普通恋人或朋友。第28章明确旧约已履行、她自愿留下，保留不同语气和原有情绪。
+[*]旧伤提供两种修复信任的方式。第14章提出能力顾虑先商量救人办法，彻底退出另作明确决定；研究与数据盘的不可逆处置补齐专用风险说明和最终确认，可以先返回商量。
+[*]普通线暂缓后的朋友选项明确关系方向。已转普通恋人或朋友的存档保留原结果，既付支持照常交付，不重置世界或重收费用。
+[/list]
+
+[h2]互动补强、晚会与经营[/h2]
+[list]
+[*]共同看货、估价后的交流，以及后来做生意时的回应，让她学会的判断有具体落点。母亲获救后的团聚尝试在开门时展开；原版晨间事件优先，同章普通来访兜底。第一单之后，已有来访还会带来一次回头客消息。
+[*]侍从恋爱第28章完成至少三天后，可收到晚会邀约：她带你回到上层区，公开介绍自己的恋人。赴宴与跳舞采用普通对话和旁白，不新增场景、不扣款、不占用原版外出次数；暂缓后至少七天再问一次，最多两次主动邀请。
+[*]完成晚会后的下一游戏日起可见原生新闻，重要事件及母亲撤案新闻优先。未开《少女当铺》复用原版上层区形象，开启时使用新的酒红晚礼服；缺图或停用美化可回退。
+[*]拾荒协助改为可见的垃圾填埋场事件：“埃莉诺的协助”，当天拾荒次数+2且不会受伤。解锁后在原版每日随机阶段有70%概率出现，固定日事件优先，取消静默永久加成。
+[*]王尔德四项筹备各只有一个现金入口。后三项达到指定声望后自动半价，不扣声望；未达标也可原价办理，说明显示优惠条件。旧人脉方案已付款历史和结果保留。
+[*]完整中英支持，各2294条文本；离线回归和原生模组扫描通过。实机体验继续收集反馈。
+[/list]
+
+[h2]侍从恋爱与上层区归来[/h2]
+[list]
+[*]先协作，在救母交涉中证明可靠，再逐渐形成依赖。首次私下称呼与完整女仆装在第19章；陷阱旧伤会提前面对，旧版本已发生的关系历史保留。
+[*]入线最后确认才另外支付800预付工钱；探索或撤回不收费，她自筹的调查款独立保留。四项王尔德项目按剧情逐步显示，可慢慢筹备，没有利息或催款，不购买不撤销已完成的救母和恋爱。
+[*]五次上层区归来来访，以及代客估价、可选商单、实物样品、现货买卖与补货需求，见证她以自己的名字做生意。
+[*]第一单结果完成后每天累计200信用点合作分红，事业开张结果完成后提高至600，次日起累计，由她来访领取；未领取一直保留。单纯项目付款不提前开账，旧完成档从更新后的首次读档日开账。
+[*]乙线有独立案件复核和原生新闻。母亲出席读取实际结果，筹备付款不替代撤案。女仆装提供原版和美化两种画风，无需其他模组也可完整使用。
+[*]母亲吊坠为紧凑2×2，手工镯为2×1，旧物品安全整理。支持已核对字段的旧800停线档续接，不强制重播已看章节或重收费用。
+[/list]
+
+[h2]开局与兼容[/h2]
+普通开局第23天开始；新游戏天赋可选0点中立特性“旧日回想”，提前至第12天，不占用专精选择。后续按实际来访与筹备进度推进。
+适配游戏1.0.0.13 / build 26525552，内部版本0.46D。简体中文与English完整支持，全年龄。实机体验由玩家验证反馈。
+
+[h2]English[/h2]
+An expanded Eleanor story with equal romance, friendship and an optional attendant relationship, four story-gated Wilde projects, five Upper Level return visits, real shop interactions and an independent case review. Original-style and Maiden's Pawnshop-style maid portraits are included; no other mod is required.
+
+Version 0.78 fixes the tool-supply and chapter 25 sample visits spawning the unregistered wrench_old placeholder, which showed the raw id on hover; the native wrench_orange is now used, and existing placeholder wrenches in old saves are repaired on load with the correct name, icon, value and tool types. It also replaces StartCoroutine on a game MonoBehaviour with ModHelper.Delay, removing the Modding API 100-Rev13 threads finding so the mod remains loadable after the 2026-12-10 security update. Capabilities remain empty, so no developer verification or player re-authorization is required. Game 1.0.0.13 / build 26525552, with public and open_beta sharing the same build.
+
+Recent content keeps all attendant confession responses on the chosen romance route, clarifies voluntary renewal, and offers two ways to repair trust. Raising rescue concerns opens a discussion; full withdrawal and irreversible actions have explicit consequences and confirmation. Existing ordinary-lover and friend saves retain their choices and paid support.
+
+The story also includes shared-appraisal dialogue, a morning reunion and a customer update during existing visits. After chapter 28, the attendant romance can receive an optional Upper Level party invitation, followed by native newspaper coverage. The party uses ordinary dialogue and narration, with no new scene, payment or evening outing cost. Vanilla reuses Eleanor's Upper Level portrait; Maiden's Pawnshop uses a new wine-red gown.
+
+Scavenging assistance is now a visible landfill event: +2 attempts and injury immunity for the day, with a 70% chance in the native random-event phase. Fixed-day events retain priority. Wilde's projects each have one cash option; the last three receive a half-price base cost when the stated reputation conditions are met, without spending reputation. Existing paid connection plans keep their history and results.
+
+Normal start on day 23; optional early-start perk on day 12. All-ages. Chinese and English each contain 2294 keys. In-game feedback remains welcome.

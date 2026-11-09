@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>0.77</ModVersion>
-  <Description>v0.77 fixes speaker attribution in dialogue bubbles and history: arresting officers use their native channel; narration, guests, the purchasing manager, notices and news retain their own names. Other mods and customer identities remain untouched. Full Chinese/English support. v0.77 修正对白与记录的发言归属：拘捕中的治安员使用原版专用通道，旁白、来宾、采购行管事、通知和新闻按各自身份显示。仅处理本MOD对白，不修改顾客身份或其他MOD，完整中英支持。</Description>
+  <ModVersion>0.81</ModVersion>
+  <Description>v0.81 adds the Lydia dual-romance expansion: 20 new scenes, the recommendation plaque, real referral customers and two business commissions, from the first offer through the three-way confirmation, dates and daily visits. Eleanor's original routes, rewards and saves are preserved. Empty capabilities; no new player approval required. Full Chinese/English support. v0.81 新增莉迪亚闺蜜双恋扩展：20 场新剧情、荐店铭牌、真实引荐客与两笔经营委托，从撮合、三人确认到约会与日常；保留埃莉诺原有路线、奖励与存档。能力清单为空，玩家无需重新授权。完整中英支持。</Description>
   <GameVersions>
     <Version>0.46</Version>
     <Version>0.46D</Version>

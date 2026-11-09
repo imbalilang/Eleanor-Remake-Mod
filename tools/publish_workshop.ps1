@@ -6,7 +6,8 @@ param(
     [string]$DescriptionFile,
     [string]$NotesFile,
     [string]$ResultFile,
-    [string]$Version='0.77',
+    [string]$Version='0.81',
+    [switch]$DescriptionOnly,
     [switch]$CheckOnly
 )
 $ErrorActionPreference='Stop'
@@ -28,24 +29,30 @@ try {
     if([Steamworks.SteamUser]::GetSteamID().m_SteamID -ne $expectedOwner){throw 'Steam account does not own the intended Workshop item.'}
     Write-Output 'Steam client and original item owner verified.'
     if($CheckOnly){return}
-    if(!$ContentFolder -or !$DescriptionFile -or !$NotesFile -or !$ResultFile){throw 'Content, description, notes, and result paths are required.'}
-    $folder=[IO.Path]::GetFullPath($ContentFolder)
-    [xml]$manifest=Get-Content -LiteralPath (Join-Path $folder 'manifest.xml') -Raw
-    if($manifest.Manifest.ID -ne 'eleanor_romance' -or $manifest.Manifest.ModVersion -ne $Version){throw 'Package ID/version mismatch.'}
-    $inventoryPath=Join-Path (Split-Path $folder -Parent) 'release-files.json'
-    $inventory=Get-Content -LiteralPath $inventoryPath -Raw | ConvertFrom-Json
-    foreach($file in $inventory){
-        $actual=Join-Path $folder $file.path
-        if((Get-FileHash -LiteralPath $actual -Algorithm SHA256).Hash -ne $file.sha256){throw ('Staged file changed: '+$file.path)}
-    }
-    if(@(Get-ChildItem -LiteralPath $folder -File -Recurse).Count -ne $inventory.Count){throw 'Untracked files in release content.'}
+    if(!$DescriptionFile -or !$ResultFile){throw 'Description and result paths are required.'}
+    if(!$DescriptionOnly -and (!$ContentFolder -or !$NotesFile)){throw 'Content, description, notes, and result paths are required.'}
     $description=Get-Content -LiteralPath $DescriptionFile -Raw -Encoding utf8
-    $notes=Get-Content -LiteralPath $NotesFile -Raw -Encoding utf8
+    $notes=if($NotesFile){Get-Content -LiteralPath $NotesFile -Raw -Encoding utf8}else{''}
     if([Text.Encoding]::UTF8.GetByteCount($description) -ge 8000){throw 'Description exceeds conservative 8000-byte limit.'}
+    $inventory=$null
+    if(!$DescriptionOnly){
+        $folder=[IO.Path]::GetFullPath($ContentFolder)
+        [xml]$manifest=Get-Content -LiteralPath (Join-Path $folder 'manifest.xml') -Raw
+        if($manifest.Manifest.ID -ne 'eleanor_romance' -or $manifest.Manifest.ModVersion -ne $Version){throw 'Package ID/version mismatch.'}
+        $inventoryPath=Join-Path (Split-Path $folder -Parent) 'release-files.json'
+        $inventory=Get-Content -LiteralPath $inventoryPath -Raw | ConvertFrom-Json
+        foreach($file in $inventory){
+            $actual=Join-Path $folder $file.path
+            if((Get-FileHash -LiteralPath $actual -Algorithm SHA256).Hash -ne $file.sha256){throw ('Staged file changed: '+$file.path)}
+        }
+        if(@(Get-ChildItem -LiteralPath $folder -File -Recurse).Count -ne $inventory.Count){throw 'Untracked files in release content.'}
+    }
     $app=[Steamworks.AppId_t]::new($expectedApp)
     $item=[Steamworks.PublishedFileId_t]::new($expectedItem)
     $handle=[Steamworks.SteamUGC]::StartItemUpdate($app,$item)
-    if(![Steamworks.SteamUGC]::SetItemContent($handle,$folder)){throw 'SetItemContent failed.'}
+    if(!$DescriptionOnly){
+        if(![Steamworks.SteamUGC]::SetItemContent($handle,$folder)){throw 'SetItemContent failed.'}
+    }
     if(![Steamworks.SteamUGC]::SetItemDescription($handle,$description)){throw 'SetItemDescription failed.'}
     $call=[Steamworks.SteamUGC]::SubmitItemUpdate($handle,$notes)
     $clock=[Diagnostics.Stopwatch]::StartNew()
@@ -70,12 +77,16 @@ try {
     $ok=[Steamworks.SteamUtils]::GetAPICallResult($call,$buffer,$size,[Steamworks.SubmitItemUpdateResult_t]::k_iCallback,[ref]$failed)
     if(!$ok -or $failed){throw 'Could not retrieve Steam update result.'}
     $result=[Runtime.InteropServices.Marshal]::PtrToStructure($buffer,[type][Steamworks.SubmitItemUpdateResult_t])
+    $localBytes=$null
+    $localFiles=$null
+    if($inventory){$localBytes=($inventory|Measure-Object length -Sum).Sum;$localFiles=$inventory.Count}
     $report=[pscustomobject]@{
         version=$Version;item=[string]$result.m_nPublishedFileId.m_PublishedFileId
         result=[string]$result.m_eResult;needsLegalAgreement=$result.m_bUserNeedsToAcceptWorkshopLegalAgreement
+        mode=$(if($DescriptionOnly){'description-only'}else{'content-and-description'})
         elapsedSeconds=[Math]::Round($clock.Elapsed.TotalSeconds,2)
-        localBytes=($inventory|Measure-Object length -Sum).Sum
-        localFiles=$inventory.Count;completedUtc=[DateTime]::UtcNow.ToString('o')
+        localBytes=$localBytes
+        localFiles=$localFiles;completedUtc=[DateTime]::UtcNow.ToString('o')
     }
     $report|ConvertTo-Json|Set-Content -LiteralPath $ResultFile -Encoding utf8
     $report

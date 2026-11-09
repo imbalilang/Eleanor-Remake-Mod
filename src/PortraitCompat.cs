@@ -23,6 +23,8 @@ namespace EleanorRomance
         public const string MaidKey = "er_portrait_eleanor_maid_female_beauty";
         public const string VanillaMaidKey = "er_portrait_eleanor_maid_female_vanilla";
         public const string GalaKey = "er_portrait_eleanor_gala_female_beauty";
+        public const string LydiaDateVanillaKey = "er_portrait_lydia_date_female_vanilla";
+        public const string LydiaDateBeautyKey = "er_portrait_lydia_date_female_beauty";
 
         private static LoadedMod beautyMod;
 
@@ -117,6 +119,14 @@ namespace EleanorRomance
             string key=IsBeautyActive ? MaidKey : VanillaMaidKey;
             return CanUseMaid(id) && EnsureLocalPortrait(key) ? key : Resolve(fallback);
         }
+        public static string ResolveLydiaDate()
+        {
+            string chosen = IsBeautyActive ? LydiaDateBeautyKey : LydiaDateVanillaKey;
+            if (EnsureLocalPortrait(chosen)) return chosen;
+            return ResolveCharacter(ModConstants.LydiaPortraitVanilla,
+                ModConstants.LydiaPortraitBeauty, ModConstants.LydiaSprite);
+        }
+
         public static bool IsGalaScene(string id)=>id=="er_story_gala" && GalaStory.Eligible
             && MaidState.PendingVisit==GalaStory.VisitId;
         public static string GalaDescription=>L.Get(ResolveGala("er_story_gala")==GalaKey

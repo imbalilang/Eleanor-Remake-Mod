@@ -43,6 +43,63 @@ namespace EleanorRomance
             Add("测试：好感 +5", AddAffection);
             Add("标记完整恋爱线（测试）", MarkRomanceComplete);
             RegisterMaidTests();
+            RegisterDualTests();
+        }
+
+        private static void RegisterDualTests()
+        {
+            Add("测试：双恋入口 / Dual entry", TestDualEntry, true);
+            Add("测试：双恋 dr07 / Dual dr07", () => TestDualScene("dr07"), true);
+            Add("测试：双恋 dr17 / Dual dr17", () => TestDualScene("dr17"), true);
+            Add("测试：打印双恋状态 / Print dual state", PrintDualState);
+            Add("测试：重置双恋 / Reset dual", () => { DualState.Reset(); StoryDirector.Notify("双恋状态已重置。"); }, true);
+        }
+
+        private static void TestDualEntry()
+        {
+            SetupCommon();
+            RomanceState.MotherState = 1;
+            RomanceState.Route = 1;
+            RomanceState.Chapter = 21;
+            RomanceState.NextVisitDay = 0;
+            RomanceState.UncleReported = true;
+            DualState.Reset();
+            DualState.FeatureVersion = DualState.CurrentVersion;
+            bool queued = DualDirector.ForceQueue("entry");
+            StoryDirector.Notify(queued ? "已排队双恋入口。" : "双恋入口排队失败。");
+        }
+
+        private static void TestDualScene(string id)
+        {
+            SetupCommon();
+            RomanceState.MotherState = 1;
+            RomanceState.Route = 1;
+            RomanceState.Chapter = 21;
+            RomanceState.Romance = 1;
+            RomanceState.UncleReported = true;
+            RomanceState.FairDeals = 3;
+            DualState.Reset();
+            DualState.Accept(1);
+            foreach (string prior in new[] { "dr01", "dr02", "dr03", "dr04", "dr05", "dr06", "dr07", "dr08", "dr09", "dr10", "dr11", "dr12", "dr13", "dr14", "dr15", "dr16" })
+            {
+                if (prior == id) break;
+                DualState.Flag("scene." + prior, true);
+            }
+            DualState.Flag("scene.dr05", true);
+            if (id != "dr07" && id != "dr17") DualState.FirstTraded = true;
+            bool queued = DualDirector.ForceQueue(id);
+            StoryDirector.Notify(queued ? "已排队双恋场景 " + id : "双恋场景 " + id + " 排队失败。");
+        }
+
+        private static void PrintDualState()
+        {
+            StoryDirector.Notify("Dual entry=" + DualState.Entry
+                + " rel=" + DualState.Relation
+                + " plaque=" + DualState.PlaqueReceived + "/" + DualBusiness.PlaquePlaced()
+                + " biz=" + DualState.FirstBusiness + "/" + DualState.SecondBusiness
+                + " traded=" + DualState.FirstTraded + "/" + DualState.SecondTraded
+                + " core=" + DualState.CoreCommitted
+                + " pending=" + DualState.PendingScene);
         }
 
         private static void Add(string label, Action action, bool tall = false)

@@ -1,0 +1,16 @@
+0.81｜莉迪亚闺蜜双恋线 / Lydia dual-romance expansion
+
+• 新增莉迪亚闺蜜双恋线：母亲安全后接受她的撮合，领取荐店铭牌，用真实引荐客和两笔经营委托把生意与关系一起做起来；从第 49 天推进到第 67 天的共同晚饭。
+• 双恋必须三方明确同意。玩家不会背着任何一方维持关系；入口拒绝或第5场选择只做朋友，都会保留原有恋爱、救母和经营事实，莉迪亚之后回到普通来访。确认进入后不会反复弹出退出选项。
+• 新增铭牌物品、橱窗有效性、真实成交的引荐客、口碑阶段、旧档入口、分别约会、7 组低频日常和终局尾声。铭牌取下后停止新引荐，已在路上的客人照常来。
+• 新美术：莉迪亚日常/约会各两版画像与荐店铭牌；约会图只在关系确认后的指定场景使用，缺图时回退日常形象。
+• 原有埃莉诺路线、奖励、存档与 0.80 文风修订保留。能力清单仍为空，玩家无需重新授权。
+• 中英各 3078 键；Release 编译 0 警告 0 错误。
+
+English:
+• Adds Lydia's dual-romance expansion: after Eleanor's mother is safe, accept Lydia's matchmaking, receive the recommendation plaque, and build the relationship through real referral customers and two business commissions, from day 49 to the shared dinner on day 67.
+• The relationship requires clear agreement from all three people. The player never maintains it behind anyone's back; declining the entry or choosing friendship in scene 5 preserves the original romance, rescue and business facts, and Lydia returns to ordinary visits. Once the route is confirmed, it does not repeatedly ask whether to leave.
+• New plaque item, showcase validity, real referral sales, a reputation stage, an old-save entry, separate dates, seven low-frequency daily scenes and an epilogue. Removing the plaque stops new referrals, but customers already on the way still arrive.
+• New art: daily and date portraits for Lydia in both vanilla and CutePortraits styles, plus the plaque. Date art appears only in the appropriate confirmed scenes, with a daily-portrait fallback when missing.
+• Existing Eleanor routes, rewards, saves and the 0.80 dialogue pass remain intact. Capabilities remain empty, so no player re-authorization is required.
+• Chinese and English each contain 3078 keys; Release build completed with 0 warnings and 0 errors.

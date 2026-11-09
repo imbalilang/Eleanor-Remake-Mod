@@ -2,34 +2,34 @@
   "blocks": [
     {"id":"choicefix_b001","label":"旧伤修复：原件先由她保管","lines":[
       {"speaker":"Player","text":"盘你先拿着。我把当时知道的都说清楚。","en":"Keep the drive with you. I'll tell you everything I knew then."},
-      {"speaker":"Eleanor","text":"我拿着。你知道的，从头说。","en":"I will. Tell me what you knew, from the beginning."},
-      {"speaker":"Narrator","text":"你把当时察觉的异样一项项说清。她一直听着，手压在资料上。","en":"You go through each thing that struck you as wrong. She listens, her hand resting on the papers."},
-      {"speaker":"Eleanor","text":"往后的也照这样。盘在谁手里，都不能把我蒙在外面。","en":"Do the same from now on. Whoever holds the drive, I won't be kept in the dark."}
+      {"speaker":"Eleanor","text":"好，我拿着。你知道什么，从头说。","en":"I will. Tell me what you knew, from the beginning."},
+      {"speaker":"Narrator","text":"你把当时看出来的不对劲一件件说了。她一直听着，没有打断你。","en":"You go through each thing that struck you as wrong. She listens, her hand resting on the papers."},
+      {"speaker":"Eleanor","text":"以后也照这样。不管盘在谁手里，都不许把我蒙在鼓里。","en":"Do the same from now on. Whoever holds the drive, I won't be kept in the dark."}
     ]},
     {"id":"choicefix_b002","label":"旧档和解：把经过和记录摊开","lines":[
       {"speaker":"Player","text":"先把那天的事说完。以后查到什么，记录都给你看。","en":"Let me tell you the rest of that day. From now on, you see the records of everything I find."},
-      {"speaker":"Eleanor","text":"那就从你什么时候看出不对开始。别只挑你觉得说了我不会生气的。","en":"Start with when you knew something was wrong. Don't just choose the parts you think won't upset me."},
-      {"speaker":"Narrator","text":"你把那天的经过从头说了一遍。她没有替你解围，也没有把资料收走。","en":"You tell her what happened from the beginning. She doesn't make it easier for you, but she doesn't put the papers away either."},
-      {"speaker":"Eleanor","text":"我会看。答应过的，你自己记着。","en":"I'll read them. Remember what you've promised."}
+      {"speaker":"Eleanor","text":"那就从你什么时候看出不对开始说。别光挑你觉得我听了不会生气的说。","en":"Start with when you knew something was wrong. Don't just choose the parts you think won't upset me."},
+      {"speaker":"Narrator","text":"你把那天的经过从头说了一遍。她没有替你打圆场，也没有把资料收走。","en":"You tell her what happened from the beginning. She doesn't make it easier for you, but she doesn't put the papers away either."},
+      {"speaker":"Eleanor","text":"我会看着的。答应过的，你自己记住。","en":"I'll read them. Remember what you've promised."}
     ]},
     {"id":"choicefix_b003","label":"担心办不到：先谈能做的，不自动退出","lines":[
-      {"speaker":"Player","text":"我现在没有更稳的门路。先把能做的摊开说。","en":"I don't have a safer way right now. Let's lay out what we can do."},
-      {"speaker":"Eleanor","text":"办不到的先说清，别拿没把握的话哄我。","en":"Tell me what you can't do. Don't comfort me with promises you can't keep."},
-      {"speaker":"Player","text":"能谈的是交盘换人。别的，我还没拿到准信。","en":"We can negotiate the drive for her release. I have no firm answer on anything else."},
-      {"speaker":"Eleanor","text":"那就先谈这一件。你说没把握，我听得懂。","en":"Then let's start there. I understand what it means when you say you aren't sure."}
+      {"speaker":"Player","text":"我现在没有更稳妥的门路。先说说眼下能做的。","en":"I don't have a safer way right now. Let's talk about what we can do."},
+      {"speaker":"Eleanor","text":"办不到的先说清楚，别拿没把握的话哄我。","en":"Tell me what you can't do. Don't comfort me with promises you can't keep."},
+      {"speaker":"Player","text":"眼下能谈的，只有交盘换人。别的，我还没拿到准信。","en":"We can negotiate the drive for her release. I have no firm answer on anything else."},
+      {"speaker":"Eleanor","text":"那就先谈这个。你说没把握，我听得懂。","en":"Then let's start there. I understand what it means when you say you aren't sure."}
     ]},
     {"id":"choicefix_b004","label":"侍从告白：温柔接住她的心意","lines":[
       {"speaker":"Player","text":"那就过来。以后想见我，不必先找差事。","en":"Then come here. You don't need an errand as an excuse to see me."},
-      {"speaker":"Eleanor","text":"……差事我也会做。别一答应，就把我的位置收走。","en":"...I'll still do the work. Don't take my place away the moment you say yes."},
-      {"speaker":"Player","text":"位置给你留着。我也喜欢你，听清了？","en":"Your place stays yours. I love you too. Did you hear that?"},
-      {"speaker":"Eleanor","text":"听清了。你小点声。","en":"I heard. Keep your voice down."},
-      {"speaker":"Narrator","text":"你向她伸出手。这回，她没再装作要去拿抹布。","en":"You hold out your hand. This time, she doesn't pretend to reach for the cloth."}
+      {"speaker":"Eleanor","text":"活我也照样会干。别一答应你，就把我的位置收走了。","en":"...I'll still do the work. Don't take my place away the moment you say yes."},
+      {"speaker":"Player","text":"位置给你留着。我也喜欢你，听清楚了？","en":"Your place stays yours. I love you too. Did you hear that?"},
+      {"speaker":"Eleanor","text":"听清楚了！你小点声。","en":"I heard. Keep your voice down."},
+      {"speaker":"Narrator","text":"你朝她伸出手。这回，她没再装作要去拿抹布。","en":"You hold out your hand. This time, she doesn't pretend to reach for the cloth."}
     ]},
     {"id":"choicefix_b005","label":"侍从告白：熟悉的拌嘴","lines":[
       {"speaker":"Player","text":"我也喜欢你。别再拿擦柜台作借口了。","en":"I love you too. Stop using the counter as an excuse."},
-      {"speaker":"Eleanor","text":"……谁拿它作借口了。","en":"...Who says it was an excuse?"},
-      {"speaker":"Player","text":"同一块地方，三遍。","en":"The same patch. Three times."},
-      {"speaker":"Eleanor","text":"你都数了，还等我先说。","en":"You counted, and still waited for me to say it first."},
+      {"speaker":"Eleanor","text":"……谁拿它当借口了！","en":"...Who says it was an excuse?"},
+      {"speaker":"Player","text":"同一块地方，擦了三遍。","en":"The same patch. Three times."},
+      {"speaker":"Eleanor","text":"你都数了，还非等我先说。","en":"You counted, and still waited for me to say it first."},
       {"speaker":"Player","text":"那现在不等了。手给我。","en":"Then I won't wait now. Give me your hand."}
     ]}
   ]

@@ -1,0 +1,12 @@
+0.79｜工具物品修正 / Tool item correction
+
+• 0.78 使用的 wrench_orange 是 UnusedDirectory 中的遗留工厂，正常游戏没有可获得的扳手。工具补给与第25章样品来访改为原版剪线钳 wire_cutter（名称、图标、描述、价值 40、类型 TOOL），与螺丝刀一起提供。
+• 旧存档中的 wrench_old 占位物品读档后补正为当前语言的 Wire Cutter 名称、图标、描述与价值；新生成的物品是真正的 wire_cutter。
+• 保留 0.78 的 ModHelper.Delay 修复与空能力清单；2026-12-10 Modding API 安全更新后仍可加载，玩家无需重新授权。
+• 中英各 2294 键；Release 编译 0 警告 0 错误。
+
+English:
+• The wrench_orange factory used in 0.78 belongs to UnusedDirectory and has no normally obtainable wrench in the game. Tool supply and the chapter 25 sample visit now use the native Wire Cutter (wire_cutter, value 40, TOOL) alongside the screwdriver.
+• Existing wrench_old placeholder items are repaired on load to the localized Wire Cutter name, icon, description and value; newly spawned items are real wire_cutters.
+• The 0.78 ModHelper.Delay fix and empty capability list remain; the mod stays loadable after the 2026-12-10 Modding API security update, with no player re-authorization.
+• Chinese and English each contain 2294 keys; Release build completed with 0 warnings and 0 errors.

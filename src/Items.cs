@@ -11,12 +11,20 @@ namespace EleanorRomance
         private const string LocketSprite = "eleanor_locket_compact";
         private const string LegacyBraceletShape = "0000" + "0110" + "0110" + "0000";
         private const string OversizedBraceletShape = "0000" + "1111" + "1111" + "0000";
+        // 0.73 spawns referenced the unregistered legacy id "wrench_old", which
+        // creates a dummy item showing the raw identifier. The game has no
+        // normal wrench item ("wrench_orange" lives in UnusedDirectory); the
+        // real second tool is the native Wire Cutter.
+        private const string LegacyWrenchId = "wrench_old";
+        private const string WireCutterAtlas = "Items/items_tool";
+        private const string WireCutterSprite = "wirecutter";
         private static bool repairOnPlacement;
 
         public static void Register(ModItemDirectory directory)
         {
             directory.Add(ModConstants.LocketItemId, CreateLocket);
             directory.Add(ModConstants.BraceletItemId, CreateBracelet);
+            directory.Add(ModConstants.PlaqueItemId, CreatePlaque);
         }
 
         public static GameItem CreateLocket()
@@ -36,6 +44,21 @@ namespace EleanorRomance
             item.EnableTag(TypeHelper.LUXURY_ITEM);
             item.EnableTag("ER_KEEPSAKE");
             item.EnableTag("IMPORTANT_TAG");
+            return item;
+        }
+
+        public static GameItem CreatePlaque()
+        {
+            GameItem item = ItemDirectory.CreateEmptyItem(ModConstants.PlaqueItemId)
+                .SetName(L.Get("er_dual_plaque_name"));
+            item.useSpriteFromMod = true;
+            item.SetSprite(ModConstants.ModId, "er_lydia_recommendation_plaque")
+                .SetShape(new GridShapeBuilder().SetData("1", 1).Build());
+            item.unitValue = 0;
+            item.shortDescription = L.Get("er_dual_plaque_desc");
+            item.flavorText = L.Get("er_dual_plaque_flavor");
+            item.EnableTag("IMPORTANT_TAG");
+            item.EnableTag("ER_DUAL_PLAQUE");
             return item;
         }
 
@@ -103,6 +126,7 @@ namespace EleanorRomance
 
             int deferred = 0;
             int deferredLockets = 0;
+            int repairedWrench = 0;
             try
             {
                 foreach (GameItem item in PlayerStore.Instance.FindAllItem(false))
@@ -111,6 +135,7 @@ namespace EleanorRomance
                         && !item.IsTag("IMPORTANT_TAG")) item.EnableTag("IMPORTANT_TAG");
                     if (IsLegacyBracelet(item) && !RepairBraceletShape(item)) deferred++;
                     if(IsLegacyLocket(item) && !RepairLocketShape(item))deferredLockets++;
+                    if (RepairLegacyWrench(item)) repairedWrench++;
                 }
             }
             catch (System.Exception ex)
@@ -118,6 +143,7 @@ namespace EleanorRomance
                 ModEntry.LogError("Keepsake shape update failed: " + ex);
             }
 
+            if (repairedWrench > 0) ModEntry.Log("Repaired " + repairedWrench + " legacy wrench_old item(s) to Wire Cutter.");
             if (deferred > 0) StoryDirector.Notify(L.Get("er_notice_bracelet_space"));
             if(deferredLockets>0)StoryDirector.Notify(L.Get("er_biz_locket_space"));
         }
@@ -125,6 +151,20 @@ namespace EleanorRomance
         private static void OnLocketPlaced(GameItem item,GameInventory inventory,SlotMarker slot)
         {
             if(repairOnPlacement && !SaveManager.IsDecoding && VersionGate.IsSupported)RepairLocketShape(item);
+        }
+        private static bool RepairLegacyWrench(GameItem item)
+        {
+            if (item == null || item.identifier != LegacyWrenchId) return false;
+            string name = LocHelper.GetLocalizedItem("item_wire_cutter_name");
+            if (string.IsNullOrEmpty(name)) name = "Wire Cutter";
+            item.name = name;
+            item.identifierName = name;
+            item.shortDescription = LocHelper.GetLocalizedItem("item_wire_cutter_desc");
+            item.flavorText = LocHelper.GetLocalizedItem("item_wire_cutter_flavor");
+            item.unitValue = 40;
+            item.SetGameItemType("TOOL");
+            item.SetSprite(WireCutterAtlas, WireCutterSprite);
+            return true;
         }
         private static bool IsLegacyLocket(GameItem item)=>item!=null && item.identifier==ModConstants.LocketItemId &&
             item.shape!=null && item.shape.width==4 && item.shape.height==4;
