@@ -4,7 +4,7 @@
 
 工作区关系递进修订后的文本与新增块请查`MAID_MOTIVATION_REWORK.md`及`MAID_MOTIVATION_READING.zh.txt`。下表保留冻结v0.7基线的源行索引，改写后不再代表当前台词数或逐行对应关系；当前运行源为`Content/maid_v05.json`。
 
-由 `tools/import_maid_v05.py` 生成；源行号对应冻结阅读稿。
+由 `tools/legacy/import_maid_v05.py` 生成；源行号对应冻结阅读稿。
 
 | ID | 段落 | 源行 | 台词数 |
 |---|---|---:|---:|

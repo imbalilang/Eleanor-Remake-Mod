@@ -55,86 +55,40 @@ namespace EleanorRomance
     [HarmonyPatch(typeof(GameOverUIManager), nameof(GameOverUIManager.DisplayUI))]
     internal static class Patch_GameOverDisplayUI
     {
-        private static void Prefix(ref string givenDescription)
+        private static void Prefix(ref string givenReason, ref string givenDescription)
         {
             try
             {
-                if (!RomanceState.StoryActive) return;
-                if (RomanceState.Chapter < RomanceState.ChapterComplete && !MaidState.Lovers && !DualState.HasHistory) return;
-                if (RomanceState.EpilogueDone && RomanceState.Route == 0) return;
-
-                string extra = RomanceState.Route==4 && RomanceState.BetrayalKind==4
-                    ? L.Get("er_maid_ending_exit") : DualOutcomes.Ending(givenDescription) ?? MaidStory.Ending(givenDescription);
-                if (extra == null)
-                {
-                    string block = SelectEndingBlock(givenDescription);
-                    extra = string.IsNullOrEmpty(block) ? "" : BlockText(block);
-                }
-                string world = MaidWorldEvents.Ending();
-                if (!string.IsNullOrEmpty(world)) extra += "\n\n" + world;
-                if (!string.IsNullOrEmpty(extra))
-                {
-                    givenDescription = (givenDescription ?? string.Empty) + "\n\n" + extra;
-                }
+                EndingPages.Page page = EndingPages.TryGet(givenDescription);
+                EndingPageUI.SetPage(page);
+                if (page == null) return;
+                givenReason = L.Get(page.TitleKey);
+                givenDescription = page.Text;
             }
             catch (Exception ex)
             {
-                ModEntry.LogError("Ending epilogue patch failed: " + ex);
+                ModEntry.LogError("Ending page patch failed: " + ex);
+                EndingPageUI.Hide();
             }
         }
+    }
 
-        private static string SelectEndingBlock(string description)
+    [HarmonyPatch(typeof(DialogUIManager), nameof(DialogUIManager.DisplayClientText))]
+    internal static class Patch_DisplayClientText
+    {
+        private static void Prefix(Dialogue dialogue)
         {
-            string text = description ?? string.Empty;
-
-            if (RomanceState.Route == 4)
-                return StoryV06Content.B_END_B007;
-
-            if (ContainsAny(text, "死亡", "死了", "dead", "died", "killed"))
-                return StoryV06Content.B_END_B004;
-
-            if (ContainsAny(text, "被捕", "监禁", "失去自由", "prison", "arrest", "captured", "detained"))
-                return StoryV06Content.B_END_B003;
-
-            if (RomanceState.MotherState == 2)
-                return StoryV06Content.B_END_B006;
-
-            if (RomanceState.MotherState == 1 || RomanceState.MotherState == 3)
+            try
             {
-                if (RomanceState.RomanceConfirmed)
-                {
-                    return ContainsAny(text, "离开", "远行", "流放", "leave", "depart", "exile")
-                        ? StoryV06Content.B_END_B002
-                        : StoryV06Content.B_END_B001;
-                }
-                return StoryV06Content.B_END_B005;
+                if (dialogue != null) PortraitExpression.Resolve(dialogue);
+                StoreClientMono mono = StoreClientMono.Instance;
+                if (dialogue != null && dialogue.portrait != null && mono != null && mono.image != null)
+                    mono.image.sprite = dialogue.portrait;
             }
-
-            return null;
-        }
-
-        private static bool ContainsAny(string text, params string[] needles)
-        {
-            foreach (string needle in needles)
+            catch (Exception ex)
             {
-                if (text.IndexOf(needle, StringComparison.OrdinalIgnoreCase) >= 0) return true;
+                ModEntry.LogError("Expression portrait failed: " + ex);
             }
-            return false;
-        }
-
-        private static string BlockText(string blockId)
-        {
-            StoryLine[] lines = StoryV06Content.Get(blockId);
-            if (lines == null) return string.Empty;
-            string result = string.Empty;
-            foreach (StoryLine line in lines)
-            {
-                string text = L.Get(line.Key);
-                if (string.IsNullOrEmpty(text)) continue;
-                if (result.Length > 0) result += "\n\n";
-                result += text;
-            }
-            return result;
         }
     }
 }

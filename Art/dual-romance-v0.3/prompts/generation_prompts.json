@@ -1,7 +1,7 @@
 {
   "method": "built-in image generation",
-  "approved_daily_beauty": "../../lydia-wingwoman/candidates/lydia_B_sheer_v1.png",
-  "approved_prompt": "../../lydia-wingwoman/candidates/lydia_B_sheer_v1_prompt.txt",
+  "approved_daily_beauty": "../../archive/lydia-candidates/lydia_B_sheer_v1.png",
+  "approved_prompt": "../../archive/lydia-candidates/lydia_B_sheer_v1_prompt.txt",
   "generated": [
     {
       "name": "daily_vanilla",

@@ -1,0 +1,710 @@
+{
+  "version": "0.82",
+  "rules": {
+    "player_default": "silent",
+    "implied_response_cap_per_chapter": 1,
+    "c_tier": "0"
+  },
+  "chapters": [
+    {
+      "id": "c01",
+      "title": "不是给上层区开的店",
+      "source": "Content/story_v06.json",
+      "blocks": [
+        {
+          "id": "c01.b001",
+          "scene": "到店",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "呵，你们下层区管这种地方叫“商店”啊？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "绝了。没见过世面的井底之蛙，大概觉得还算凑合。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "喂，那边那个。回上层区之前，我需要食物。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "价签？……哦。对，你们这里什么都要钱。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "挑点新鲜的。别拿压成别的形状的营养果糊弄我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "钱不是问题。……暂时还不是。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b002",
+          "scene": "看货时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "用不了多久，他们就会知道自己犯了多蠢的错。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他们以挪用公款罪关了我母亲。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "全空间站最大的水培农场，是她在管。一半人靠她吃饭。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她换一盏坏培养灯，都要把账核三遍。挪用公款？她？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他们连上层区都不让我回。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "没关系。等他们查清楚，我一天都不会在这下面多待。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b003",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "按正常价格成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "就这个价？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你没趁机多收我？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "哼。看来下层区也不全是骗子。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b004",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "明显让利或赠予可食用物品",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你算错了，少收了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……我还没落魄到要一个开当铺的来可怜我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "既然你坚持，我就收下。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这笔我记着。别指望我说谢谢。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b005",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "明显高价且实际成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "就这么点东西？在上层区都够买两份了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "看得出来。东西是下层区的，价钱倒是上层区的。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b006",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "没有适合的库存，未成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "什么？连吃的都没有？这也叫商店？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不可理喻……算了，我去别处看看。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b007",
+          "scene": "离店前",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我叫埃莉诺。我母亲的名字，你以后会在新闻上看到。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "名字是名字，价钱是价钱。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "下次给我留点新鲜的。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "title": "配给站对面的房间",
+      "source": "Content/story_v06.json",
+      "blocks": [
+        {
+          "id": "c02.b001",
+          "scene": "",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我真不敢相信我会被困在这里。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲没消息，他们也不让我回上面。为什么是我？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>*叹气*</i> 你有生活用品吗？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "杯子，能打扫的东西……还有一盏不用拍两下才亮的灯。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "看来我得在这里待上一阵子了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "配给站对面有间房，还算体面。很小，至少没异味。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b002",
+          "scene": "看货时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "这只杯子有缺口。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我知道完整的在另一边。我就问一句，又不是买不起。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……还是拿便宜的。缺口又不在喝水那边。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "室友说，先修门锁，再考虑窗帘。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她还说，我带的香水够付半个月房租。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你盯着这瓶看了半天。认得？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "正牌货就够。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我还以为你只认得废铁。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……哼。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b003",
+          "scene": "玩家处理",
+          "label": "公平成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "跟你刚才说的价钱一样。行，就这些。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b004",
+          "scene": "玩家处理",
+          "label": "实际让利",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "又便宜了？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你对每个客人都这样？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "用不着你操心。……灯我收下了。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b005",
+          "scene": "玩家处理",
+          "label": "明显宰客",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "同样的东西，你这儿怎么比别处还贵？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我是第一次在下层区过日子，不是不会算数！"
+            }
+          ]
+        },
+        {
+          "id": "c02.b006",
+          "scene": "玩家处理",
+          "label": "未成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "算了，我去别处转转。下层区总不至于只有你一家店。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b007",
+          "scene": "离店前",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "隔壁每天晚上都吵架，吵得跟就在我床边一样。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这动静，省得买收音机了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……这笑话真烂。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我真不敢相信，有人一辈子都住在这种地方。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "title": "你按东西开价",
+      "source": "Content/story_v06.json",
+      "blocks": [
+        {
+          "id": "c03.b001",
+          "scene": "",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嘿，我又来了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "资金见底了。他们没让我带太多东西出来。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "只要回到上面，我就能解释清楚，洗清罪名。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "至少不用每顿都吃营养果。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我带了些自己的东西来卖。水、香水、日用品。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "轻点。那瓶盖子松。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "香水也卖。没什么好奇怪的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "在这下面，不用闻起来像去晚宴。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "况且，晚宴也不会再请我。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b002",
+          "scene": "检视商品时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "这种瓶子，下层区一年见不着两回。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "总不至于当普通香水，随便给个价。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "砸自己的招牌。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那你接着算。真要一样一样算？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "按我的姓算？最近按我的姓算的人，一个信用点都不肯出。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……我没有别的家人。只有母亲。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b003",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "公平收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "比我想的少。不过你每一样都说清楚了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好，就这个价。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b004",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "明显溢价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你刚才说的折旧呢？算到一半就忘了？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "最好是真有用。别让我下次来还看见它们，像在等人可怜。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b005",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "明显压价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你知道它值多少，也知道我现在缺钱。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……行。今天算你会挑时候。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b006",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "不收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "好，我带走。你不收，有的是别家收。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b007",
+          "scene": "交易后追加：吊坠",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "还有这个。是母亲以前送我的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……先问个价。我还没想好。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天不卖这个。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这是我的东西。我想好了再拿出来。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c23",
+      "title": "今天不为别的事",
+      "source": "Content/story_v06.json",
+      "blocks": [
+        {
+          "id": "c23.b001",
+          "scene": "到店",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嘿。今天有空吗？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天不为别的事。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我妈好好的，工作也没丢。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你得习惯。我来，不一定出了事。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那就习惯得快一点。"
+            }
+          ]
+        },
+        {
+          "id": "c23.b002",
+          "scene": "普通经营结束后的短聊",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我妈最近总让我多带一份吃的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这份是给你的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "房间小，钱得算着花。我妈有时还会做噩梦。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不过她醒过来的时候，我就在旁边，能应她一声。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "以前的东西回不来了。可现在有的，也不少。"
+            }
+          ]
+        },
+        {
+          "id": "c23.b003",
+          "scene": "恋人收束",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我第一次来的时候，说过你这家店不怎么样。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在也还是有不少该修的地方。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别以为我喜欢你，就连坏灯一起喜欢。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你答应过的。我的脾气不会因为恋爱就没了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天让我在这儿待一会儿。有客人，你做你的生意。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "没客人，就跟我说话。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别从“你还差多少钱”开始就行。"
+            }
+          ]
+        },
+        {
+          "id": "c23.b004",
+          "scene": "朋友收束，替换上段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我以为回上面以后，就不会再联系这里的人了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在才知道，按住在哪儿来分人，真的蠢透了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "换作以前，我肯定不会说这种话。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有事来找我，没事也可以。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "朋友不只在缺钱时才算数。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "appended": [
+    {
+      "source": "Content/maid_ui.json",
+      "key": "er_maid_reward_prompt",
+      "original": "她为你留了一件纪念物。",
+      "revised": "她为你留了一件纪念物。",
+      "changed": false,
+      "note": "系统菜单提示，Player 承载但不计作对话；不改",
+      "en_source": "Content/maid_ui.json"
+    },
+    {
+      "source": "Content/maid_ui.json",
+      "key": "er_maid_reward_claim",
+      "original": "收下纪念物，继续谈话。",
+      "revised": "收下纪念物，继续谈话。",
+      "changed": false,
+      "note": "UI 选项；不改",
+      "en_source": "Content/maid_ui.json"
+    },
+    {
+      "source": "Content/maid_ui.json",
+      "key": "er_maid_reward_later",
+      "original": "稍后再来领取。",
+      "revised": "稍后再来领取。",
+      "changed": false,
+      "note": "UI 选项；不改",
+      "en_source": "Content/maid_ui.json"
+    },
+    {
+      "source": "Content/maid_ui.json",
+      "key": "er_maid_reward_desc",
+      "original": "需要可用物品空间。领取成功才记录奖励；空间不足可以重试。",
+      "revised": "需要可用物品空间。领取成功才记录奖励；空间不足可以重试。",
+      "changed": false,
+      "note": "UI 说明；不改",
+      "en_source": "Content/maid_ui.json"
+    },
+    {
+      "source": "Content/maid_ui.json",
+      "key": "er_maid_reward_keep",
+      "original": "那我先收好。你准备好了再来拿。",
+      "revised": "那我先收好。你准备好了再来拿。",
+      "changed": false,
+      "note": "暂存分支；不改",
+      "en_source": "Content/maid_ui.json"
+    },
+    {
+      "source": "tools/ui_text_zh.json",
+      "key": "er_line_end_perfume",
+      "original": "这个给你。别问价钱。",
+      "revised": "这个给你。别问价钱。",
+      "changed": false,
+      "note": "c23 纪念物正文；不改",
+      "en_source": "tools/ui_text_en.json"
+    },
+    {
+      "source": "tools/ui_text_zh.json",
+      "key": "er_line_scav_assist",
+      "original": "以后有空，我去垃圾场帮你翻。两个人能多翻几处，哪块废料松了要塌，我也替你盯着。",
+      "revised": "以后有空，我去垃圾场帮你翻。两个人能多翻几处，塌了我也替你盯着。",
+      "changed": true,
+      "note": "c23 恋人分支追加",
+      "en_source": "tools/ui_text_en.json"
+    },
+    {
+      "source": "tools/ui_text_zh.json",
+      "key": "er_line_core_end",
+      "original": "当铺照常营业。她有了自己的工作、母亲，和一堆要操心的日常，也开始有了不需要理由的来访。",
+      "revised": "当铺照常营业。她有了工作、母亲，和一堆日常，也开始有无需理由的来访。",
+      "changed": true,
+      "note": "c23 收束旁白",
+      "en_source": "tools/ui_text_en.json"
+    }
+  ],
+  "shared_block": {
+    "source": "Content/maid_v05.json",
+    "id": "m23_b006",
+    "original_line_count": 5,
+    "revised_line_count": 3,
+    "original_player_lines": 2,
+    "revised_player_lines": 0,
+    "lines": [
+      {
+        "speaker": "eleanor",
+        "text": "差点忘了。母亲的复核材料，递进去了。"
+      },
+      {
+        "speaker": "eleanor",
+        "text": "报告、转移记录、签收单，一样没少。日期当面写清了。"
+      },
+      {
+        "speaker": "eleanor",
+        "text": "母亲的清白，不能只靠谁嘴上答应的一句话。"
+      }
+    ],
+    "note": "会经 MaidWorldEvents.AppendReceipt 同时影响 dual 路径，应用前需确认"
+  }
+}

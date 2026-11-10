@@ -12,7 +12,7 @@
 
 ## 文案检查
 
-- `docs/文风修订对照_2026-11-09.txt` 共 765 条，全部与当前 `Localization/zh.csv` 的新文本一致；没有残留旧文本条目。
+- `docs/archive/design/文风修订对照_2026-11-09.txt` 共 765 条，全部与当前 `Localization/zh.csv` 的新文本一致；没有残留旧文本条目。
 - 相对已发布的 0.79 包：中文 765 条、英文 40 条差异，键集合与条目数不变。
 - 在临时目录重新运行 `tools/build_content.py`：生成的 `zh.csv`/`en.csv` 与工作区语义完全一致；生成的 `StoryV06Content.g.cs`、`MaidContent.g.cs` 与工作区逐字一致。
 - 选项回显检查：`er_maid_legacy_help` / `er_maid_legacy_retract` / `er_maid_route_difficulty` 与被回显的玩家台词保持相同文本。

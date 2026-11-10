@@ -23,7 +23,7 @@
 - 使用隔离的临时编译项目，仅收录工作区`src/*.cs`和实际游戏程序集；不修改运行游戏或存档。
 - 正式包文件清单、哈希、原生扫描和Steam上传回执保存在`dist/workshop-0.81/`。本次没有执行完整实机周目；离线检查不代表已覆盖全部实机体验。
 
-工坊说明与双语更新日志见`docs/WORKSHOP_CHANGELOG_0.81.txt`。旧0.81初稿构建记录已归档到`docs/ARCHIVE_RELEASE_0.81_DRAFT_2026-11-09.md`，不作为本次发布包证据。
+工坊说明与双语更新日志见`docs/WORKSHOP_CHANGELOG_0.81.txt`。旧0.81初稿构建记录已归档到`docs/archive/design/ARCHIVE_RELEASE_0.81_DRAFT_2026-11-09.md`，不作为本次发布包证据。
 
 ## 正式包与上传回执
 

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "chapters": [
+    {
+      "id": "c01",
+      "lines": 26,
+      "player": 0,
+      "chars": 434,
+      "sentences": 44
+    },
+    {
+      "id": "c02",
+      "lines": 26,
+      "player": 0,
+      "chars": 408,
+      "sentences": 34
+    },
+    {
+      "id": "c03",
+      "lines": 26,
+      "player": 0,
+      "chars": 371,
+      "sentences": 39
+    },
+    {
+      "id": "c23",
+      "lines": 22,
+      "player": 0,
+      "chars": 329,
+      "sentences": 27
+    }
+  ],
+  "b_responses": 0,
+  "c_responses": 0,
+  "text_effects": 1,
+  "shared_block": {
+    "id": "m23_b006",
+    "lines": 3,
+    "player": 0
+  }
+}

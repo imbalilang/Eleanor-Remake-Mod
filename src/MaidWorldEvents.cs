@@ -56,12 +56,6 @@ namespace EleanorRomance
             if(MaidState.Progress>=27 && !MaidState.Flag("mother_at_27"))MaidText.Append(head,"world_b005");
         }
         public static void CompleteChat()=>MaidState.Flag("world.chat_shown",true);
-        public static string Ending()
-        {
-            if(State==0)return ""; // No retrospective submission for old completed runs.
-            return Acquitted ? MaidText.Plain("ending_b004",MaidState.Lovers && MaidState.Progress>=28 ? 0 : 1)
-                : MaidText.Plain("ending_b005",0);
-        }
     }
     [HarmonyPatch(typeof(StoreEventManager),"OnDayStart")]
     internal static class MaidWorldDayPatch

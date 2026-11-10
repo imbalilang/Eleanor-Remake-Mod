@@ -119,6 +119,7 @@ namespace EleanorRomance
             {
                 StoryLine line = lines[i];
                 Dialogue node = Text(SpeakerName(line.Speaker), L.Get(line.Key));
+                PortraitExpression.Apply(node, line.Key, SpeakerName(line.Speaker));
                 if (head == null)
                 {
                     head = node;

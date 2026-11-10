@@ -68,7 +68,6 @@ namespace EleanorRomance
                 if (day < due) return null;
                 return id;
             }
-            if (DualState.Confirmed && !DualState.Done("dual_epilogue") && day >= DualState.LastDailyDay+3) return "dual_epilogue";
             if (DualRewards.NeedsClaim && day >= DualState.LastDailyDay+4) return "claim";
             if (DualState.Confirmed && day >= DualState.LastDailyDay+4) return "daily";
             return null;

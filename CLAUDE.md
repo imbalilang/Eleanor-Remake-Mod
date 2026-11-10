@@ -14,7 +14,7 @@ If the route map is not updated, the story change is incomplete. After editing, 
 ## Text and content source of truth
 
 - Shipped localization is generated from the Content JSON via `tools/build_content.py`; the JSON is the real source.
-- **Do not run `tools/parse_v06.py`** — it overwrites `Content/story_v06.json` from the stale text script.
+- **Do not run `tools/legacy/parse_v06.py`** — it overwrites `Content/story_v06.json` from the stale text script. Kept only as an archived legacy parser.
 - Run `python tools/build_content.py` and `python tools/check_project.py` after content changes.
 - The dual route source is `Content/dual_romance_v04.json`; the scene logic is in `src/DualStory.cs`.
 

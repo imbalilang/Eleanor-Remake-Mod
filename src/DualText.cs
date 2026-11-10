@@ -28,6 +28,7 @@ namespace EleanorRomance
                         int next=++position;
                         if(next<=cursor)continue;
                         Dialogue node = StoryEngine.Text(speaker, paragraph);
+                        PortraitExpression.Apply(node,line.Key,speaker);
                         node.SetEndAction(()=>DualState.SetInt("cursor."+id,Math.Max(next,DualState.Int("cursor."+id))));
                         if (head == null) head = node;
                         else tail.SetNextDialogue(node);

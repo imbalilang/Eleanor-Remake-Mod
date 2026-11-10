@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "chapters": [
+    {
+      "id": "c01",
+      "original_lines": 32,
+      "revised_lines": 26,
+      "original_player": 9,
+      "revised_player": 0
+    },
+    {
+      "id": "c02",
+      "original_lines": 30,
+      "revised_lines": 26,
+      "original_player": 8,
+      "revised_player": 0
+    },
+    {
+      "id": "c03",
+      "original_lines": 35,
+      "revised_lines": 28,
+      "original_player": 11,
+      "revised_player": 0
+    },
+    {
+      "id": "c23",
+      "original_lines": 31,
+      "revised_lines": 22,
+      "original_player": 12,
+      "revised_player": 0
+    }
+  ],
+  "shared_block": {
+    "id": "m23_b006",
+    "original_lines": 5,
+    "revised_lines": 3,
+    "revised_player": 0
+  }
+}

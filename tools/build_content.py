@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """Compile Content/story_v06.json into C# arrays and localization CSVs.
 
-Run after parse_v06.py:
-    python tools/parse_v06.py
+Content JSON is the source of truth. Run:
     python tools/build_content.py
+The archived legacy parser tools/legacy/parse_v06.py must not be run.
 """
 
 from __future__ import annotations
@@ -170,6 +170,8 @@ def main() -> int:
     print(f"Wrote Localization/en.csv ({len(all_en)} keys)")
     if missing_en:
         print(f"English missing {len(missing_en)} dialogue keys (fallback in code).")
+    from build_expressions import build as build_expressions
+    build_expressions(root)
     return 0
 
 

@@ -34,7 +34,7 @@
 - 重写 765 条中文对白与界面文本，覆盖公共主线、侍从线、归来篇、经营互动和结局；Eleanor、Lydia、母亲等角色更接近原作语气，减少说明腔、程式化措辞和生硬的总结句。
 - 同步调整 40 条英文文本，保持中英文语气一致。
 - 剧情分支、数值、路线与存档结构不变；选项含义不变，被回显的玩家台词与选项标签保持逐字一致。
-- 中英各 2294 键。对照表见 `docs/文风修订对照_2026-11-09.txt`，发布记录见 `docs/RELEASE_0.80.md`。
+- 中英各 2294 键。对照表见 `docs/archive/design/文风修订对照_2026-11-09.txt`，发布记录见 `docs/RELEASE_0.80.md`。
 
 ## 0.79：工具物品修正
 
@@ -119,7 +119,7 @@
 - 新增侍从关系对白、四个原生王尔德项目（七种购买定义）、五个归来来访24～28。付款、wildFavor抵付、声望与结果分开记录；项目可等待，不影响已有恋爱。
 - 乙线第23章的复核回执服务所有关系版本；完成后七日排原生撤案新闻。母亲出席和尾声读取实际发布状态，不由项目付款代替。
 - 女仆立绘提供两种独立画风，均为288×212：未启用少女当铺时使用原版风，启用时使用美化风。仅在指定私人场景显示，所选资源缺失时回退常服。
-- 新增903条剧情文本及72条界面文本，均有英语。全部中英键共2019条。章节映射与验证边界见 `docs/MAID_IMPLEMENTATION.md`。
+- 新增903条剧情文本及72条界面文本，均有英语。全部中英键共2019条。章节映射与验证边界见 `docs/archive/audits/MAID_IMPLEMENTATION.md`。
 - 已完成编译与离线回归；实机验证由用户进行。当前开发记录不包含完整经营平衡的实测结论。
 
 ## v0.6 内容结构
@@ -204,10 +204,11 @@
 
 ```bash
 cd EleanorRomanceDev
-python tools/parse_v06.py        # 从 v0.6 台本生成 Content/story_v06.json
-python tools/build_content.py    # 生成 StoryV06Content.g.cs 与中英 CSV
+python tools/build_content.py    # 从 Content/*.json 生成 *.g.cs 与中英 CSV
 bash build.sh                    # 构建到 bin/Release，再部署到 Mods/EleanorRomance
 ```
+
+`Content/story_v06.json` 与 `Content/dual_romance_v04.json` 是文本源。旧版 `tools/legacy/parse_v06.py` 会覆盖当前源，已归档且不要运行。
 
 `build.sh` 会在覆盖安装目录前保留一份 `dist/rollback_*` 备份，并检查 DLL 与 CSV 非空。
 
@@ -278,19 +279,147 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 - 本版尚未完成完整实机周目验收。新档、旧档、跨日、存读档、各结局分支仍需逐项测试。
 - 路线丙/丁、母亲来访、第 21 章合作买家等场景的运行时顺序与中断恢复需要实机验证。
 
-## 目录
+## 项目文件索引
 
-```
-EleanorRomanceDev/
-├─ src/                       C# 源码
-├─ Content/story_v06.json     解析后的剧情内容源
-├─ Localization/              zh.csv / en.csv
-├─ Textures/Items/            物品图标
-├─ Books/                     纸质研究笔记（旧版保留，当前流程不强制）
-├─ tools/                     解析、内容生成与本地化工具
-├─ manifest.xml
-├─ preview.png
-├─ EleanorRomance.csproj
-├─ build.sh
-└─ README.md
-```
+最后整理：2026-11-10。当前版本 **0.82**。
+
+### 运行与构建
+
+| 路径 | 用途 |
+|---|---|
+| `manifest.xml` | MOD 清单、版本、游戏版本范围 |
+| `src/` | C# 源码与生成的内容类 |
+| `Content/story_v06.json` | 共同/普通/侍从/丙丁主线文本源 |
+| `Content/dual_romance_v04.json` | 双恋线文本源 |
+| `Content/dual_ui.json` | 双恋线 UI 文本 |
+| `Content/maid_v05.json`、`maid_ui.json` | 侍从线文本与 UI |
+| `Content/interaction_v1.json`、`interaction_ui.json` | 经营互动文本 |
+| `Content/relationship_choices_v1.json`、`relationship_choice_ui.json` | 关系选项文本 |
+| `Content/business_ui.json` | 经营界面文本 |
+| `Localization/zh.csv`、`en.csv` | 生成后的中英发布文本（不要手改） |
+| `Textures/Items/` | 实际随包发布的画像与物品图标 |
+| `Books/` | 旧版纸质笔记，当前流程不强制使用 |
+| `preview.png` | 工坊/模组预览图 |
+| `build.sh` | 编译 Release 并部署到 `Mods/EleanorRomance` |
+| `EleanorRomance.csproj` | 编译配置 |
+
+### 当前文档：版本、规则与路线
+
+| 路径 | 用途 |
+|---|---|
+| [`docs/RELEASE_0.82.md`](docs/RELEASE_0.82.md) | 当前版本发布记录、验证与包信息 |
+| [`docs/WORKSHOP_CHANGELOG_0.82.txt`](docs/WORKSHOP_CHANGELOG_0.82.txt) | 当前工坊更新日志 |
+| [`docs/WORKSHOP_DESCRIPTION_0.81.txt`](docs/WORKSHOP_DESCRIPTION_0.81.txt) | 当前工坊说明底稿（0.82 沿用） |
+| [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md) | Modding API 安全边界与兼容说明 |
+| [`docs/TESTING_CONSOLE.md`](docs/TESTING_CONSOLE.md) | F8/F9 调试控制台与测试流程 |
+| [`docs/ROUTE_MAP_MAINTENANCE.md`](docs/ROUTE_MAP_MAINTENANCE.md) | 路线图编号、完美结局与更新规则 |
+| [`docs/route_map.html`](docs/route_map.html) | 可视化路线与结局预览（浏览器直接打开） |
+| [`docs/本MOD全剧情阅读版_含实际选项影响_2026-11-09.txt`](docs/本MOD全剧情阅读版_含实际选项影响_2026-11-09.txt) | 当前全剧情阅读版（TXT；同目录另有 HTML/MD 与覆盖核对 JSON） |
+| [`docs/文风与玩家台词基准_2026-11-10.md`](docs/文风与玩家台词基准_2026-11-10.md) | 唯一文本标准：原作文风、玩家默认沉默、整章改写、非台词表现、体量预算、留白与纯过渡章删章规则 |
+| [`docs/原作Eleanor章节_对照稿_2026-11-10.md`](docs/原作Eleanor章节_对照稿_2026-11-10.md) | 游戏本体 Eleanor 全场景原文对照稿（官方中文本地化，不含 MOD 文本） |
+| [`docs/文本体量统计_2026-11-10.md`](docs/文本体量统计_2026-11-10.md) | 原作与 MOD 的字数/行数/句数口径、全分支与核心故事对比 |
+| [`docs/文风调整_章节总表_2026-11-10.md`](docs/文风调整_章节总表_2026-11-10.md) | 逐章盘点、批次与优先检查项（当前文风任务） |
+| [`docs/文风修订稿_第一批试改_v6_2026-11-10.md`](docs/文风修订稿_第一批试改_v6_2026-11-10.md) | 共用01–03、普通24 的 v6 压缩稿；玩家 0、B/C 0、100→88 行 |
+| [`docs/文风修订稿_第一批试改_v6_2026-11-10.json`](docs/文风修订稿_第一批试改_v6_2026-11-10.json) | v6 按 block 替换 `lines` 的机器可读映射 |
+| [`docs/文风修订稿_第一批试改_v6_2026-11-10_核对.json`](docs/文风修订稿_第一批试改_v6_2026-11-10_核对.json) | v6 修订映射与当前 Content 的数据核对报告（PASS） |
+| [`docs/文风修订稿_第二批_c04-c06_2026-11-10.md`](docs/文风修订稿_第二批_c04-c06_2026-11-10.md) | 第二批 c04–c06；玩家默认沉默，三项自审 PASS |
+| [`docs/文风修订稿_第三批_c07-c09_2026-11-10.md`](docs/文风修订稿_第三批_c07-c09_2026-11-10.md) | 第三批 c07–c09；三项自审 PASS |
+| [`docs/文风修订稿_第四批_c10-c12_2026-11-10.md`](docs/文风修订稿_第四批_c10-c12_2026-11-10.md) | 第四批 c10–c12；三项自审 PASS |
+| [`docs/文风修订稿_第五批_c13-c17_2026-11-10.md`](docs/文风修订稿_第五批_c13-c17_2026-11-10.md) | 第五批 c13–c17；三项自审 PASS |
+| [`docs/文风修订稿_第六批_c18-c22及尾段_2026-11-10.md`](docs/文风修订稿_第六批_c18-c22及尾段_2026-11-10.md) | 第六批 c18–c22、丙/丁/尾声/结束追加；三项自审 PASS |
+| [`docs/文风修订稿_侍从线_A_2026-11-10.md`](docs/文风修订稿_侍从线_A_2026-11-10.md) | 侍从线 A（legacy + m11–m16）；三项自审 PASS，密度例外已登记 |
+| [`docs/文风修订稿_侍从线_B_2026-11-10.md`](docs/文风修订稿_侍从线_B_2026-11-10.md) | 侍从线 B（m17–m23）；三项自审 PASS |
+| [`docs/文风修订稿_侍从线_C_2026-11-10.md`](docs/文风修订稿_侍从线_C_2026-11-10.md) | 侍从线 C（m24–m28 + world/wait/daily/tragic）；三项自审 PASS |
+| [`docs/文风修订稿_双恋后宫线_2026-11-10.md`](docs/文风修订稿_双恋后宫线_2026-11-10.md) | 双恋/后宫全部场景；三项自审 PASS，短路径密度例外已登记 |
+| [`docs/文风修订稿_互动与关系选择_2026-11-10.md`](docs/文风修订稿_互动与关系选择_2026-11-10.md) | 互动与旧档关系选择；三项自审 PASS，选项首句保留 |
+| [`docs/文风修订稿_全内容索引_2026-11-10.md`](docs/文风修订稿_全内容索引_2026-11-10.md) | 全部现有剧情文本候选索引、汇总统计、自审与待处理风险 |
+| [`docs/原作非台词表现与MOD应用审计_2026-11-10.md`](docs/原作非台词表现与MOD应用审计_2026-11-10.md) | 原作肖像 idle/TextAnimator/斜体等非台词表现与 MOD 使用情况（数据依据） |
+
+### 当前文档：剧情与系统设计
+
+| 路径 | 用途 |
+|---|---|
+| [`docs/原作经营机制盘点与Eleanor路线组合研究_2026-11-09.md`](docs/原作经营机制盘点与Eleanor路线组合研究_2026-11-09.md) | 原版经营机制与 Eleanor 路线组合研究 |
+| [`docs/四路线开发基准与剧情美术规划_2026-11-09.md`](docs/四路线开发基准与剧情美术规划_2026-11-09.md) | 四路线开发基准、剧情与美术规划 |
+| [`docs/四路线规划补充_75天与经营分工_2026-11-09.md`](docs/四路线规划补充_75天与经营分工_2026-11-09.md) | 75 天日程与经营分工补充 |
+| [`docs/方向A深化_四路线经营与莉迪亚荐店信物_v0.1.md`](docs/方向A深化_四路线经营与莉迪亚荐店信物_v0.1.md) | 四路线经营与荐店信物方向 |
+| [`docs/NATIVE_STORY_MECHANISMS_ASSESSMENT.md`](docs/NATIVE_STORY_MECHANISMS_ASSESSMENT.md) | 原版剧情机制评估 |
+| [`docs/全剧情_人物动机与行文审读_2026-11-09.md`](docs/全剧情_人物动机与行文审读_2026-11-09.md) | 人物动机与行文审读 |
+| [`docs/全剧情_人物动机与行文修订_落实记录_2026-11-10.md`](docs/全剧情_人物动机与行文修订_落实记录_2026-11-10.md) | 审读意见的落实情况 |
+| [`docs/全剧情阅读核对_文本与选项问题_2026-11-09.md`](docs/全剧情阅读核对_文本与选项问题_2026-11-09.md) | 阅读稿文本与选项问题核对 |
+| [`docs/晚会终章_关门邀请与次日留白_2026-11-10.md`](docs/晚会终章_关门邀请与次日留白_2026-11-10.md) | 侍从线晚会终章流程 |
+| [`docs/螺丝刀相关剧情_检查与移除估价_2026-11-10.md`](docs/螺丝刀相关剧情_检查与移除估价_2026-11-10.md) | 螺丝刀剧情检查与清理记录 |
+
+### 当前文档：路线专项
+
+| 路线 | 文档 |
+|---|---|
+| 侍从线 | [`MAID_MOTIVATION_READING.zh.txt`](docs/MAID_MOTIVATION_READING.zh.txt)、[`MAID_MOTIVATION_READING.en.txt`](docs/MAID_MOTIVATION_READING.en.txt)、[`主从恋爱路线_v0.7_完整改动计划.md`](docs/主从恋爱路线_v0.7_完整改动计划.md)；旧块表与 0.67 实现说明见 `docs/archive/` |
+| 后宫线 | [`后宫线_v0.5_声望检查点与问题修复_完整执行计划.md`](docs/后宫线_v0.5_声望检查点与问题修复_完整执行计划.md)、[`执行参数.json`](docs/后宫线_v0.5_声望检查点与问题修复_执行参数.json)、[`完整阅读稿.zh.txt`](docs/后宫线_v0.5_完整阅读稿.zh.txt)、[`完整阅读稿.en.txt`](docs/后宫线_v0.5_完整阅读稿.en.txt)、[`实施与验证`](docs/后宫线_v0.5_实施与验证_2026-11-09.md)、[`执行可行性审查`](docs/后宫线_v0.5_执行可行性审查_2026-11-09.md)、[`0.81 实现与体验审查`](docs/后宫线_0.81_实现与体验审查_2026-11-09.md)、[`简化与经营付出核查`](docs/后宫线_简化与经营付出核查_2026-11-09.md) |
+| 双恋线 | [`闺蜜双恋线_v0.4_完整执行计划_2026-11-09.md`](docs/闺蜜双恋线_v0.4_完整执行计划_2026-11-09.md)、[`莉迪亚角色与美术设定_v0.2`](docs/莉迪亚_僚机双恋线_角色与美术设定_v0.2.md) |
+| 互动/晚会 | [`INTERACTION_AND_BALL_DESIGN.md`](docs/INTERACTION_AND_BALL_DESIGN.md)、[`设计审阅`](docs/INTERACTION_AND_BALL_DESIGN_REVIEW.md)、[`实现记录`](docs/INTERACTION_AND_BALL_IMPLEMENTATION.md) |
+
+### 当前文档：画像与美术记录
+
+[`Eleanor画像_像素风返工建议_2026-11-10.md`](docs/Eleanor画像_像素风返工建议_2026-11-10.md)、
+[`埃莉诺画像_以少女当铺为基准重裁_2026-11-10.md`](docs/埃莉诺画像_以少女当铺为基准重裁_2026-11-10.md)、
+[`埃莉诺礼服画像_资源核对与修复_2026-11-10.md`](docs/埃莉诺礼服画像_资源核对与修复_2026-11-10.md)、
+[`少女当铺画像_实际资源对比_2026-11-10.md`](docs/少女当铺画像_实际资源对比_2026-11-10.md)、
+[`现有画像原图_技术修复可行性_2026-11-10.md`](docs/现有画像原图_技术修复可行性_2026-11-10.md)、
+[`画像导出管线_按作者样图校准_2026-11-10.md`](docs/画像导出管线_按作者样图校准_2026-11-10.md)、
+[`莉迪亚画像_脸部与躯干构图对齐_2026-11-10.md`](docs/莉迪亚画像_脸部与躯干构图对齐_2026-11-10.md)、
+[`莉迪亚画像_面积缩小导出_2026-11-10.md`](docs/莉迪亚画像_面积缩小导出_2026-11-10.md)
+
+### 历史归档
+
+历史资料已从主文档区移出，按类别保存：
+
+- [`docs/archive/design/`](docs/archive/design/)：旧版全流程攻略、v0.1–v0.7 设计稿、旧剧情台本、旧文风对照、0.81 初稿归档。
+- [`docs/archive/audits/`](docs/archive/audits/)：0.71–0.77 期间的审计、交接、验收、旧功能说明。
+- [`docs/archive/workshop/`](docs/archive/workshop/)：0.67–0.81 的旧工坊说明与更新日志。
+
+归档文件只用于追溯，不作为当前实现依据。当前版本发布记录仍保留在 `docs/RELEASE_0.67.md`–`docs/RELEASE_0.82.md`。
+
+### 工具
+
+| 类别 | 文件 |
+|---|---|
+| 内容生成 | `tools/build_content.py`（总入口）、`tools/build_dual_content.py`、`tools/build_maid_content.py` |
+| 内容校验 | `tools/check_project.py`、`tools/check_route_map.py`、`tools/audit_dialogue_speakers.ps1` |
+| 阅读稿生成 | `tools/render_all_story_reading.py`、`tools/render_dual_reading.py`、`tools/render_motivation_reading.py` |
+| 打包发布 | `tools/package_release.ps1`、`tools/publish_workshop.ps1`、`tools/scan_package.ps1` |
+| 回归测试 | `tools/test_*.ps1`（交易、侍从、双恋、后宫、晚会、互动、发言者、阅读修正）；夹具在 `tools/fixtures/` |
+| 美术管线 | `tools/export_eleanor_beauty.py`、`export_lydia_portraits.py`、`export_gala_asset.py`、`audit_gala_asset.py`、`compare_portrait_resampling.py`、`portrait_resampling.py`、`validate_maid_asset.py` |
+| 本地化数据 | `tools/en_v06_part*.json`、`tools/ui_text_zh.json`、`tools/ui_text_en.json` |
+| 游戏交互辅助 | `tools/capture_game.ps1`、`click.ps1`、`foreground.ps1`、`screenshot.ps1`、`windowinfo.ps1` |
+| 旧版工具（不要运行） | `tools/legacy/`：`parse_v06.py`、`package_candidate.ps1`、`gen_localization.py`、`gen_script_doc.py`、`add_v04_localization.py`、`import_maid_v05.py` |
+
+### 美术资产
+
+| 路径 | 内容 |
+|---|---|
+| `Art/v0.5/` | 埃莉诺女仆装母版、旧导出脚本与校验记录 |
+| `Art/v0.6/` | 埃莉诺、莉迪亚、母亲、吊坠、手镯、工坊封面母版与交付说明 |
+| `Art/gala/` | 埃莉诺礼服母版 |
+| `Art/dual-romance-v0.3/` | 双恋线莉迪亚日常/约会画像、铭牌、导出与校验 |
+| `Art/pixel-redraw-2026-11-10/` | 2026-11-10 画像返工候选与提示词 |
+| `Art/reference-pipeline-2026-11-10/` | 画像导出参照与对比记录 |
+| `Art/revolution-route-2026-11-10/` | 革命军线服装母版 |
+| `Art/nexus/` | Nexus 发布封面 |
+| `Art/archive/` | 旧莉迪亚概念图与候选图（历史参考，不进入发布包） |
+
+`Art/v0.6/references_local/`、`Art/v0.6/backups/` 为本地参考/备份，已被 `.gitignore` 排除。`Textures/Items/` 才是随包发布的实际贴图。
+
+### 生成物与忽略目录
+
+- `bin/`、`obj/`：编译产物，已忽略。
+- `dist/`：本地打包、发布证据、回滚备份与临时分析，已忽略；不提交。
+- `dist/style_work/`：从游戏本体提取的对白/反编译分析，仅本地保留；`dist/` 已被 `.gitignore` 排除。
+- `Localization/*.csv`、`src/*Content.g.cs`：由 `tools/build_content.py` 生成，不手改。
+
+### 维护规则
+
+- 文本源是 `Content/*.json`；修改后运行 `python tools/build_content.py` 与 `python tools/check_project.py`。
+- 改剧情、选项、日期、路线或结局时，必须同步更新 `docs/route_map.html` 与 `docs/ROUTE_MAP_MAINTENANCE.md`，并运行 `python tools/check_route_map.py`。
+- 不运行 `tools/legacy/parse_v06.py`；它会用旧台本覆盖当前内容源。
+- 未经明确要求，不推送 GitHub、Steam 工坊或 Nexus。

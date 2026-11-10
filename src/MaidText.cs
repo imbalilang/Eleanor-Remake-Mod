@@ -19,6 +19,7 @@ namespace EleanorRomance
                     foreach(string paragraph in L.Get(line.Key).Split(new[]{'\n'},StringSplitOptions.RemoveEmptyEntries))
                     {
                         Dialogue node=StoryEngine.Text(speaker,paragraph);
+                        PortraitExpression.Apply(node,line.Key,speaker);
                         if(head==null) head=node; else tail.SetNextDialogue(node);
                         tail=node;
                     }

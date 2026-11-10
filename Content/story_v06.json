@@ -15,35 +15,32 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "呵，你们下层区管这种地方叫“商店”啊？"
+              "text": "呵，你们下层区管这种地方叫“商店”啊？",
+              "expr": "angry"
             },
             {
               "speaker": "eleanor",
-              "text": "绝了。对于没见过世面的井底之蛙而言，大概还算凑合吧。"
+              "text": "绝了。没见过世面的井底之蛙，大概觉得还算凑合。",
+              "expr": "angry"
             },
             {
               "speaker": "eleanor",
-              "text": "喂，那边那个。在我回到上层区之前，我需要一些食物。"
-            },
-            {
-              "speaker": "player",
-              "text": "吃的在那边，价签都贴着。"
+              "text": "喂，那边那个。回上层区之前，我需要食物。"
             },
             {
               "speaker": "eleanor",
-              "text": "价签？……哦。对，你们这里什么都要钱。"
+              "text": "还标价？……哦。对，你们这里什么都要钱。",
+              "expr": "shy"
             },
             {
               "speaker": "eleanor",
-              "text": "挑点新鲜的。别拿那种把营养果压成别的形状，再假装是另一种东西的玩意儿糊弄我。"
-            },
-            {
-              "speaker": "player",
-              "text": "新鲜的贵。"
+              "text": "挑点新鲜的。别拿压成别的形状的营养果糊弄我。",
+              "expr": "serious"
             },
             {
               "speaker": "eleanor",
-              "text": "钱不是问题。……暂时还不是。"
+              "text": "钱不是问题。……暂时还不是。",
+              "expr": "soft"
             }
           ]
         },
@@ -55,35 +52,30 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "用不了多久，他们就会意识到自己犯了多么愚蠢的错误。"
-            },
-            {
-              "speaker": "player",
-              "text": "谁？"
+              "text": "用不了多久，他们就会知道自己犯了多蠢的错。"
             },
             {
               "speaker": "eleanor",
-              "text": "他们以挪用公款的罪名关押了我母亲。而她可是经营着全空间站最大的水培农场的人！"
+              "text": "他们以挪用公款罪关了我母亲。",
+              "expr": "sad"
             },
             {
               "speaker": "eleanor",
-              "text": "荒谬至极。这个空间站有一半的人能吃上饭，都得归功于她！"
+              "text": "全空间站最大的水培农场归她管，一半人靠她吃饭。"
             },
             {
               "speaker": "eleanor",
-              "text": "她连换一盏坏掉的培养灯都要把账核上三遍。挪用公款？她？"
-            },
-            {
-              "speaker": "player",
-              "text": "你能去见她吗？"
+              "text": "她换盏坏培养灯都要把账核三遍。挪用公款？她？",
+              "expr": "angry"
             },
             {
               "speaker": "eleanor",
-              "text": "不能。他们连上层区都不让我回。"
+              "text": "他们连上层区都不让我回。"
             },
             {
               "speaker": "eleanor",
-              "text": "没关系，这只是暂时的。等他们把事情弄清楚，我一天都不会在这下面多待。"
+              "text": "没关系。等他们查清楚，我一天都不会在这下面多待。",
+              "expr": "serious"
             }
           ]
         },
@@ -95,11 +87,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "就这个价？你没趁机多收我一笔？"
-            },
-            {
-              "speaker": "player",
-              "text": "价签上写多少，就收多少。"
+              "text": "就这个价？你没趁机多收我？"
             },
             {
               "speaker": "eleanor",
@@ -118,16 +106,16 @@
               "text": "你算错了，少收了。"
             },
             {
-              "speaker": "player",
-              "text": "没算错。"
-            },
-            {
               "speaker": "eleanor",
               "text": "……我还没落魄到要一个开当铺的来可怜我。"
             },
             {
               "speaker": "eleanor",
-              "text": "不过既然你坚持，我就收下了。这笔我记着，别指望我说谢谢。"
+              "text": "这钱我收下。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这笔我记着，别指望我道谢。"
             }
           ]
         },
@@ -140,10 +128,6 @@
             {
               "speaker": "eleanor",
               "text": "就这么点东西？在上层区都够买两份了。"
-            },
-            {
-              "speaker": "player",
-              "text": "这里不是上层区。"
             },
             {
               "speaker": "eleanor",
@@ -162,10 +146,6 @@
               "text": "什么？连吃的都没有？这也叫商店？"
             },
             {
-              "speaker": "player",
-              "text": "今天卖完了。"
-            },
-            {
               "speaker": "eleanor",
               "text": "不可理喻……算了，我去别处看看。"
             }
@@ -179,15 +159,11 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我叫埃莉诺。我母亲的名字，你以后大概会在新闻上看到。"
-            },
-            {
-              "speaker": "player",
-              "text": "名字不会改变价钱。"
+              "text": "我叫埃莉诺。我母亲的名字，你以后会在新闻上看到。"
             },
             {
               "speaker": "eleanor",
-              "text": "我又没让你改！……下次记得给我留点新鲜的。"
+              "text": "名字是名字，价钱是价钱。下次给我留点新鲜的。"
             }
           ]
         }
@@ -208,19 +184,18 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我真不敢相信我会被困在这里。"
+              "text": "我真不敢相信我会被困在这里。",
+              "expr": "sad"
             },
             {
               "speaker": "eleanor",
-              "text": "母亲杳无音信，他们也不让我回上面去。为什么这种事会发生在我身上？"
+              "text": "母亲没消息，他们也不让我回上面。为什么是我？",
+              "expr": "sad"
             },
             {
               "speaker": "eleanor",
-              "text": "*叹气* 你有生活用品吗？"
-            },
-            {
-              "speaker": "player",
-              "text": "要什么？"
+              "text": "<i>叹气</i>，你有生活用品吗？",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
@@ -228,11 +203,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "看来我得在这里待上一阵子了。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我在配给站对面找到了一间还算体面的房间。虽然很小，但至少没有异味。"
+              "text": "配给站对面有间房，很小，至少没异味。",
+              "expr": "soft"
             }
           ]
         },
@@ -247,44 +219,24 @@
               "text": "这只杯子有缺口。"
             },
             {
-              "speaker": "player",
-              "text": "所以便宜。完整的在另一边。"
+              "speaker": "eleanor",
+              "text": "完整的在另一边。我又不是买不起。"
             },
             {
               "speaker": "eleanor",
-              "text": "我就问一句，又不是买不起完整的。"
-            },
-            {
-              "speaker": "player",
-              "text": "那你要哪只？"
+              "text": "……还是拿便宜的。缺口又不在喝水那边。"
             },
             {
               "speaker": "eleanor",
-              "text": "……便宜的。反正缺口又不在喝水那边。"
+              "text": "室友说，先修门锁，再考虑窗帘。"
             },
             {
               "speaker": "eleanor",
-              "text": "我室友说，先把门锁修好，再考虑窗帘。"
-            },
-            {
-              "speaker": "player",
-              "text": "她说得对。"
+              "text": "她还说，我带的香水够付半个月房租。"
             },
             {
               "speaker": "eleanor",
-              "text": "她还说，我带来的那瓶香水够付半个月房租。"
-            },
-            {
-              "speaker": "player",
-              "text": "要是正牌货，确实够。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "你认得？我还以为你只认得废铁。"
-            },
-            {
-              "speaker": "player",
-              "text": "干这行的，贵东西也得认得。"
+              "text": "上层区定制款，盖子松，还剩半瓶。下层区一年见不着两回。"
             },
             {
               "speaker": "eleanor",
@@ -312,15 +264,15 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "又便宜了？你对每个客人都这样？"
-            },
-            {
-              "speaker": "player",
-              "text": "先把房间收拾出来再说。"
+              "text": "又便宜了？"
             },
             {
               "speaker": "eleanor",
-              "text": "用不着你操心。……灯我收下了。"
+              "text": "你对每个客人都这样？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……东西我收下了。"
             }
           ]
         },
@@ -363,8 +315,8 @@
               "text": "隔壁每天晚上都吵架，吵得跟就在我床边一样。"
             },
             {
-              "speaker": "player",
-              "text": "省得买收音机了。"
+              "speaker": "eleanor",
+              "text": "这动静，省得买收音机了。"
             },
             {
               "speaker": "eleanor",
@@ -372,7 +324,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "我真不敢相信，底层人竟然一辈子都在这种环境里生活。"
+              "text": "我真不敢相信，有人一辈子都住在这种地方。"
             }
           ]
         }
@@ -397,39 +349,31 @@
             },
             {
               "speaker": "eleanor",
-              "text": "我的资金开始见底了。他们当初没让我带太多东西出来。"
+              "text": "资金见底了。他们没让我带太多东西出来。"
             },
             {
               "speaker": "eleanor",
-              "text": "只要能回到上面去，我就能解释清楚一切，洗清我们的罪名。这样一切都能恢复正常。"
+              "text": "只要回到上面，我就能解释清楚，洗清罪名。"
             },
             {
               "speaker": "eleanor",
-              "text": "我就再也不用每顿饭都吃营养果了。"
+              "text": "至少不用每顿都吃营养果。"
             },
             {
               "speaker": "eleanor",
-              "text": "总之，我带了些自己的东西来卖。水、香水，还有几样日用品。"
-            },
-            {
-              "speaker": "player",
-              "text": "放上来吧。"
+              "text": "我带了些东西来卖。水、香水、日用品。"
             },
             {
               "speaker": "eleanor",
-              "text": "轻一点！那瓶的盖子有点松。"
-            },
-            {
-              "speaker": "player",
-              "text": "香水你也不留着？"
+              "text": "轻点。那瓶盖子松。"
             },
             {
               "speaker": "eleanor",
-              "text": "在这下面，我又不用闻起来像要去参加晚宴。"
+              "text": "香水也卖。"
             },
             {
               "speaker": "eleanor",
-              "text": "况且，晚宴大概也不会再请我了。"
+              "text": "在这下面，不用闻起来像去晚宴。"
             }
           ]
         },
@@ -440,44 +384,20 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "*拧开瓶盖闻了一下* 上层区沙龙的定制款，还剩一半多。瓶子是原装的，就是盖子松了。"
+              "speaker": "eleanor",
+              "text": "这种瓶子，下层区一年见不着两回。"
             },
             {
               "speaker": "eleanor",
-              "text": "……你闻一下就知道？"
-            },
-            {
-              "speaker": "player",
-              "text": "这种瓶子，下层区一年见不着两回。见过一回就记住了。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我还以为你会把它当普通香水，随便给个价。"
-            },
-            {
-              "speaker": "player",
-              "text": "随便给价，砸的是我自己的招牌。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "那你接着算吧。你真的要一样一样算？"
-            },
-            {
-              "speaker": "player",
-              "text": "不然按你的姓氏算？"
+              "text": "那你接着算。真要一样一样算？"
             },
             {
               "speaker": "eleanor",
               "text": "最近按我的姓算的人，一个信用点都不肯出。"
             },
             {
-              "speaker": "player",
-              "text": "家里没别人能帮你？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我已经没有家人了。只有母亲。"
+              "text": "……我没有别的家人。只有母亲。"
             }
           ]
         },
@@ -489,7 +409,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "比我想的少。不过你每一样都说清楚了。"
+              "text": "比我想的少。不过价是公道价。"
             },
             {
               "speaker": "eleanor",
@@ -505,15 +425,11 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "你刚才说的折旧呢？算到一半就忘了？"
-            },
-            {
-              "speaker": "player",
-              "text": "这批货我有用。"
+              "text": "这个价比我预想的高。"
             },
             {
               "speaker": "eleanor",
-              "text": "最好是真的。我可不想下次来，还看见它们摆在这儿，像在等着我可怜它们。"
+              "text": "最好是真有用。别让我下次来还看见它们，像在等人可怜。"
             }
           ]
         },
@@ -556,28 +472,16 @@
               "text": "还有这个。是母亲以前送我的。"
             },
             {
-              "speaker": "player",
-              "text": "也卖？"
-            },
-            {
               "speaker": "eleanor",
               "text": "……先问个价。我还没想好。"
             },
             {
-              "speaker": "player",
-              "text": "那就先收起来。想好了再拿出来。"
+              "speaker": "eleanor",
+              "text": "今天不卖这个。"
             },
             {
               "speaker": "eleanor",
-              "text": "你就不怕我拿去别家卖？"
-            },
-            {
-              "speaker": "player",
-              "text": "那是你的东西。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……好。今天先不卖这个。"
+              "text": "这是我的东西。我想好了再拿出来。"
             }
           ]
         }
@@ -609,10 +513,6 @@
               "text": "可我怎么也找不到她。"
             },
             {
-              "speaker": "player",
-              "text": "当叔叔的，找不到自己侄女？"
-            },
-            {
               "speaker": "uncle",
               "text": "年轻人受了委屈，总爱躲起来。听说她常来你这儿。"
             },
@@ -623,14 +523,6 @@
             {
               "speaker": "uncle",
               "text": "一定要交到她手上。不是你，是她。"
-            },
-            {
-              "speaker": "player",
-              "text": "里面是什么？"
-            },
-            {
-              "speaker": "uncle",
-              "text": "说了，上层区最好的东西。她一看就明白。"
             },
             {
               "speaker": "uncle",
@@ -718,7 +610,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "那个箱子被报了失窃。我叫来治安部，报案的就是他自己。"
+              "text": "箱子被报了失窃。报案的就是他。"
             },
             {
               "speaker": "eleanor",
@@ -738,7 +630,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "箱子被报了失窃，现在在我仓库里。别碰它。"
+              "text": "箱子被报失窃，还在我仓库里。别碰。"
             },
             {
               "speaker": "eleanor",
@@ -754,7 +646,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "我没收。他说不清东西是从哪来的。"
+              "text": "我没收。他说不清东西哪来的。"
             },
             {
               "speaker": "eleanor",
@@ -783,10 +675,6 @@
             {
               "speaker": "eleanor",
               "text": "要是放在以前，有人给我送这种箱子，我连标签都不会看，直接就拆了。"
-            },
-            {
-              "speaker": "player",
-              "text": "现在呢？"
             },
             {
               "speaker": "eleanor",
@@ -838,10 +726,6 @@
               "text": "只有这个吊坠，因为一直戴在身上，才没被一起偷走。"
             },
             {
-              "speaker": "player",
-              "text": "你人没事吧？"
-            },
-            {
               "speaker": "eleanor",
               "text": "我当时不在。室友去帮我打听了，到现在都没消息。"
             },
@@ -860,10 +744,6 @@
             {
               "speaker": "eleanor",
               "text": "现在……连解释的机会都没了。"
-            },
-            {
-              "speaker": "player",
-              "text": "……"
             },
             {
               "speaker": "eleanor",
@@ -890,24 +770,12 @@
               "text": "够了，真的够了。不用再拿了。"
             },
             {
-              "speaker": "player",
-              "text": "多拿一份，给你室友。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "……她昨天把自己那份分了我一半。"
+              "text": "我室友昨天把自己那份分了我一半。"
             },
             {
               "speaker": "eleanor",
               "text": "我第一天来这儿的时候，说你们是井底之蛙。还说底层人一辈子都过这种日子。"
-            },
-            {
-              "speaker": "player",
-              "text": "记得。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "你就不能说一句“不记得了”吗？"
             },
             {
               "speaker": "eleanor",
@@ -922,12 +790,8 @@
           "label": "没有库存",
           "lines": [
             {
-              "speaker": "player",
-              "text": "我这儿今天也没吃的。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "……我看到货架了。你不用解释。"
+              "text": "……我看得到货架。"
             },
             {
               "speaker": "eleanor",
@@ -962,16 +826,8 @@
               "text": "今天的事，不许说出去。"
             },
             {
-              "speaker": "player",
-              "text": "哪件？"
-            },
-            {
               "speaker": "eleanor",
               "text": "我求你给我吃的。还有，我跟你道歉。"
-            },
-            {
-              "speaker": "player",
-              "text": "知道了。"
             },
             {
               "speaker": "eleanor",
@@ -988,10 +844,6 @@
             {
               "speaker": "eleanor",
               "text": "别跟别人说我今天来求过你。"
-            },
-            {
-              "speaker": "player",
-              "text": "不会。"
             },
             {
               "speaker": "eleanor",
@@ -1031,11 +883,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "是你跟他们说清楚的？"
-            },
-            {
-              "speaker": "player",
-              "text": "他们重新查了报失记录。"
+              "text": "是你跟他们说清楚的吧。他们重新查了报失记录。"
             },
             {
               "speaker": "eleanor",
@@ -1046,12 +894,8 @@
               "text": "有个警官笑了。他说，我母亲当初也是这么说的。"
             },
             {
-              "speaker": "player",
-              "text": "你出来了。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "嗯。可她还在里面。"
+              "text": "我出来了。可她还在里面。"
             }
           ]
         },
@@ -1061,10 +905,6 @@
           "scene": "救援完成后，她来访",
           "label": "如果玩家先前并不知道箱子有问题",
           "lines": [
-            {
-              "speaker": "player",
-              "text": "我不该直接把东西交给你。"
-            },
             {
               "speaker": "eleanor",
               "text": "你也被他骗了。……可下次，先问问我，好吗？"
@@ -1102,20 +942,8 @@
               "text": "你替我花的钱，我会记下来，一分不少地还你。"
             },
             {
-              "speaker": "player",
-              "text": "先吃点东西。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "……你这儿还有吃的？"
-            },
-            {
-              "speaker": "player",
-              "text": "有就拿给你。没有，再一起想办法。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……好。"
+              "text": "……你这儿要是有吃的，就给我一点。没有，再一起想办法。"
             }
           ]
         }
@@ -1153,14 +981,6 @@
             {
               "speaker": "eleanor",
               "text": "总之，来看看我的收获吧！……不许笑。"
-            },
-            {
-              "speaker": "player",
-              "text": "我还什么都没说。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "你的脸已经说了。"
             }
           ]
         },
@@ -1175,28 +995,12 @@
               "text": "这个我觉得能用。那个虽然旧，但里面是好的。"
             },
             {
-              "speaker": "player",
-              "text": "这个看得没错。"
+              "speaker": "eleanor",
+              "text": "这个坏在这儿？那得扣价。我还以为是脏东西，擦了它半天。"
             },
             {
               "speaker": "eleanor",
               "text": "你不用为了哄我，每样都说好。"
-            },
-            {
-              "speaker": "player",
-              "text": "那这个得扣价。坏在这儿。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……原来那不是脏东西？我擦了它半天。"
-            },
-            {
-              "speaker": "player",
-              "text": "擦得挺干净。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "这句才是在哄我。"
             }
           ]
         },
@@ -1224,11 +1028,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "你给多了。"
-            },
-            {
-              "speaker": "player",
-              "text": "这批好卖。"
+              "text": "你给多了。这批货好卖，是吧。"
             },
             {
               "speaker": "eleanor",
@@ -1279,12 +1079,8 @@
               "text": "找个靠谱的要八百信用点。"
             },
             {
-              "speaker": "player",
-              "text": "不是小数目。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我知道。所以我会继续去垃圾场拾荒，把找到的东西卖给你。"
+              "text": "八百不是小数目。所以我会继续去垃圾场拾荒，把找到的东西卖给你。"
             },
             {
               "speaker": "eleanor",
@@ -1295,12 +1091,8 @@
               "text": "我也问了别家收不收，还接了点清理培养槽的短工。总不能全指望你一家。"
             },
             {
-              "speaker": "player",
-              "text": "今天赚了多少，记下来。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "早记了。别以为全空间站只有你会算账。"
+              "text": "我会记着每一笔。别以为全空间站只有你会算账。"
             }
           ]
         }
@@ -1321,39 +1113,26 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "嘿，又是我。今天你先别看。"
-            },
-            {
-              "speaker": "player",
-              "text": "不看怎么收？"
+              "text": "嘿，又是我。今天你先别看。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
               "text": "我先报价，你再告诉我哪里报错了。"
             },
             {
-              "speaker": "player",
-              "text": "行。"
-            },
-            {
               "speaker": "eleanor",
               "text": "这个外壳磕坏了，里面没事，算正常价。这个看着新，其实接口锈了，得往下压。这个……我不确定。"
             },
             {
-              "speaker": "player",
-              "text": "两个对，一个不确定。上回那堂课没白上。"
+              "speaker": "eleanor",
+              "text": "两个对，一个不确定。上回那堂课没白上。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "你又没收学费，算什么课。"
-            },
-            {
-              "speaker": "player",
-              "text": "那下回开始收。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "教过的不能补收！"
+              "text": "你又没收学费，算什么课。教过的不能补收。",
+              "expr": "soft"
             }
           ]
         },
@@ -1366,10 +1145,6 @@
             {
               "speaker": "eleanor",
               "text": "今天在垃圾场，有个人想拿一袋坏零件换我的东西。说我一看就不懂行情。"
-            },
-            {
-              "speaker": "player",
-              "text": "换了？"
             },
             {
               "speaker": "eleanor",
@@ -1392,8 +1167,8 @@
               "text": "没想到在这下面，你的店名比我的姓好使。"
             },
             {
-              "speaker": "player",
-              "text": "也就收破烂的时候好使。"
+              "speaker": "eleanor",
+              "text": "……也就收破烂的时候好使。"
             },
             {
               "speaker": "eleanor",
@@ -1425,19 +1200,17 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "今天这笔加进去，离八百又近了一步。"
-            },
-            {
-              "speaker": "player",
-              "text": "饭钱留出来了？"
+              "text": "今天这笔加进去，离八百又近了一步。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "留了。我现在吃营养果，已经不觉得每顿都像受刑了。"
+              "text": "饭钱留出来了。我现在吃营养果，已经不觉得每顿都像受刑了。"
             },
             {
               "speaker": "eleanor",
-              "text": "……偶尔还是像。"
+              "text": "……偶尔还是像。",
+              "expr": "tired"
             }
           ]
         },
@@ -1449,11 +1222,13 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "你知道吗？我以前觉得，帮一个人就是一掷千金。"
+              "text": "你知道吗？我以前觉得，帮一个人就是一掷千金。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "现在才知道，有人肯老老实实按价收我捡来的东西，就够我撑下去了。"
+              "text": "现在才知道，有人肯老老实实按价收我捡来的东西，就够我撑下去了。",
+              "expr": "soft"
             }
           ]
         },
@@ -1493,36 +1268,22 @@
               "text": "等等，这块材料别跟其他的算在一起。"
             },
             {
-              "speaker": "player",
-              "text": "贵货？"
+              "speaker": "eleanor",
+              "text": "……给你的。",
+              "expr": "shy"
             },
             {
               "speaker": "eleanor",
-              "text": "……给你的。"
-            },
-            {
-              "speaker": "player",
-              "text": "你还差调查的钱。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我知道。这个不影响那笔。"
+              "text": "我知道你还差调查的钱。这个不影响那笔。"
             },
             {
               "speaker": "eleanor",
               "text": "上次你收货的时候，盯着这种材料多看了两眼。我捡到了，就留下来了。"
             },
             {
-              "speaker": "player",
-              "text": "这你都看见了？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我又不是只会站在这儿等你数钱。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "别误会，我只是眼神好。"
+              "text": "我又不是只会站在这儿等你数钱。别误会，我只是眼神好。",
+              "expr": "soft"
             }
           ]
         },
@@ -1533,12 +1294,8 @@
           "label": "收下",
           "lines": [
             {
-              "speaker": "player",
-              "text": "那我收下了。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "嗯。以后用上的时候，别跟人说是随手捡来的。"
+              "text": "收下吧。以后用上的时候，别跟人说是随手捡来的。"
             },
             {
               "speaker": "eleanor",
@@ -1569,12 +1326,8 @@
           "label": "婉拒",
           "lines": [
             {
-              "speaker": "player",
-              "text": "你留着换钱吧。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "好啊。那下次我挑一件让你找不到理由拒绝的。"
+              "text": "你不肯收？好啊。那下次我挑一件让你找不到理由拒绝的。"
             }
           ]
         },
@@ -1589,28 +1342,16 @@
               "text": "我室友问我，怎么知道你今天开门。"
             },
             {
-              "speaker": "player",
-              "text": "你怎么说？"
-            },
-            {
               "speaker": "eleanor",
               "text": "我说，正经做生意的都会开门。"
             },
             {
-              "speaker": "player",
-              "text": "她信了？"
+              "speaker": "eleanor",
+              "text": "她又问我那怎么不去别家。"
             },
             {
               "speaker": "eleanor",
-              "text": "她问我那怎么不去别家。"
-            },
-            {
-              "speaker": "player",
-              "text": "然后？"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "然后我让她管好自己的收音机，别再半夜响。"
+              "text": "我让她管好自己的收音机，别再半夜响。"
             },
             {
               "speaker": "eleanor",
@@ -1629,12 +1370,8 @@
               "text": "你之前帮过我的，我会慢慢还。"
             },
             {
-              "speaker": "player",
-              "text": "不用每次来都说。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "那这是我最后一次说。以后你看我怎么做就行。"
+              "text": "……这是我最后一次说。以后你看我怎么做就行。"
             }
           ]
         }
@@ -1658,20 +1395,12 @@
               "text": "这里就是埃莉诺天天挂在嘴边的那家店？"
             },
             {
-              "speaker": "player",
-              "text": "她今天没来。"
+              "speaker": "lydia",
+              "text": "她今天没在？我知道。我就是挑她不在的时候来的。"
             },
             {
               "speaker": "lydia",
-              "text": "我知道。我就是挑她不在的时候来的。"
-            },
-            {
-              "speaker": "player",
-              "text": "买还是卖？"
-            },
-            {
-              "speaker": "lydia",
-              "text": "卖。*把一只镯子放上柜台* 价钱我开，你看着收。"
+              "text": "卖。价钱我开，你看着收。"
             },
             {
               "speaker": "lydia",
@@ -1686,16 +1415,8 @@
           "label": "主动按实际价值收购（不压价，或报出高于她开价的公道价）",
           "lines": [
             {
-              "speaker": "player",
-              "text": "这个成色，我按这个价收。上层区的手工货，扣环换过，不影响价值。"
-            },
-            {
               "speaker": "lydia",
-              "text": "……扣环换过你也看得出来？"
-            },
-            {
-              "speaker": "player",
-              "text": "新扣环比镯身亮。"
+              "text": "这个成色，你按这个价收？还看出扣环换过？"
             },
             {
               "speaker": "lydia",
@@ -1742,16 +1463,8 @@
               "text": "她以前买东西只看顺不顺眼，从来不问价。"
             },
             {
-              "speaker": "player",
-              "text": "现在问得比谁都细。"
-            },
-            {
               "speaker": "lydia",
-              "text": "她跟我说了。说你收货的时候，毛病算在东西上，不算在人头上。"
-            },
-            {
-              "speaker": "player",
-              "text": "她原话？"
+              "text": "现在问得比谁都细。她跟我说了：你收货的时候，毛病算在东西上，不算在人头上。"
             },
             {
               "speaker": "lydia",
@@ -1762,16 +1475,12 @@
               "text": "我能在上面给她找份工作，连住的地方都有。"
             },
             {
-              "speaker": "player",
-              "text": "那你该去跟她说。"
+              "speaker": "lydia",
+              "text": "我跟她说过。人家只有一个条件：别再公开提她母亲的案子。"
             },
             {
               "speaker": "lydia",
-              "text": "说过了。人家只有一个条件：别再公开提她母亲的案子。她不答应。"
-            },
-            {
-              "speaker": "player",
-              "text": "那她已经给你答案了。"
+              "text": "她没答应。那她已经给我答案了。"
             },
             {
               "speaker": "lydia",
@@ -1779,11 +1488,7 @@
             },
             {
               "speaker": "lydia",
-              "text": "……你们这里到底给她灌了什么迷魂汤？"
-            },
-            {
-              "speaker": "player",
-              "text": "营养果。"
+              "text": "……你们这里到底给她灌了什么迷魂汤？营养果？"
             },
             {
               "speaker": "lydia",
@@ -1802,12 +1507,8 @@
               "text": "她要是问起，就说我是来卖东西的。"
             },
             {
-              "speaker": "player",
-              "text": "我会把你说的都告诉她。"
-            },
-            {
               "speaker": "lydia",
-              "text": "……随你。别替我说得更好听就行。"
+              "text": "……别替我说得更好听就行。"
             }
           ]
         }
@@ -1828,19 +1529,16 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "莉迪亚是不是来过？"
-            },
-            {
-              "speaker": "player",
-              "text": "来过。带了只镯子来，顺便说能帮你在上面找份工作。"
+              "text": "莉迪亚来过了。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "还说了条件吧。"
+              "text": "带了只镯子，还说能帮我在上面找份工作。"
             },
             {
-              "speaker": "player",
-              "text": "说了。"
+              "speaker": "eleanor",
+              "text": "还提了条件。"
             },
             {
               "speaker": "eleanor",
@@ -1848,27 +1546,21 @@
             },
             {
               "speaker": "eleanor",
-              "text": "可要我住着别人给的房子，学着闭嘴，假装没我母亲这个人？我做不到！"
+              "text": "可要我住着别人给的房子，学着闭嘴，假装没我母亲这个人？我做不到！",
+              "expr": "angry"
             },
             {
               "speaker": "eleanor",
-              "text": "……她还说什么了？"
-            },
-            {
-              "speaker": "player",
-              "text": "说我说话气人。"
+              "text": "她还说，我说话气人。"
             },
             {
               "speaker": "eleanor",
-              "text": "这个她倒没说错。"
+              "text": "这倒没说错。"
             },
             {
               "speaker": "eleanor",
-              "text": "她还问我，你是不是看中我以前有钱，等着哪天我翻身了好捞一笔。"
-            },
-            {
-              "speaker": "player",
-              "text": "你怎么说？"
+              "text": "她还问我，你是不是看中我以前有钱，等着哪天我翻身了好捞一笔。",
+              "expr": "angry"
             }
           ]
         },
@@ -1923,36 +1615,24 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "你用不着替我的店担保。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "谁替你担保了？我是对我自己的眼光有信心。"
+              "text": "我用不着你替我担保。我是对我自己的眼光有信心。"
             },
             {
               "speaker": "eleanor",
               "text": "她说，我以前从来不肯承认自己看错人。"
             },
             {
-              "speaker": "player",
-              "text": "现在肯了？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "肯了。比如，我以前觉得下面的人都是一个样。"
+              "text": "现在肯了。比如，我以前觉得下面的人都是一个样。"
             },
             {
               "speaker": "eleanor",
               "text": "不过你别得意。我现在看人，也不是每次都准。"
             },
             {
-              "speaker": "player",
-              "text": "知道。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "……你倒是回答得挺快。"
+              "text": "……你倒是没反驳。"
             }
           ]
         },
@@ -1967,10 +1647,6 @@
               "text": "对了。她是不是还夸你眼光好？"
             },
             {
-              "speaker": "player",
-              "text": "算是吧。"
-            },
-            {
               "speaker": "eleanor",
               "text": "她夸谁都那样，你别当真。"
             },
@@ -1980,15 +1656,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "今天的东西卖完了。我能在这儿再待一会儿吗？"
-            },
-            {
-              "speaker": "player",
-              "text": "没客人的时候可以。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "行。我又不是来耽误你赚钱的。"
+              "text": "今天的东西卖完了。我就在这儿待一会儿。我又不是来耽误你赚钱的。"
             }
           ]
         }
@@ -2012,12 +1680,8 @@
               "text": "今天这批卖掉，应该就够了。"
             },
             {
-              "speaker": "player",
-              "text": "先按东西算。别先按你想凑的数算。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "知道知道。你这句话，我都能替你说了。"
+              "text": "先按东西算，别按我想凑的数算。你这句话，我都能替你说了。"
             },
             {
               "speaker": "eleanor",
@@ -2032,12 +1696,8 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "原件别全交给他一个人。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我留了底，也记了每次见面的时间。"
+              "text": "原件我没全交给他。我留了底，也记了每次见面的时间。"
             },
             {
               "speaker": "eleanor",
@@ -2048,20 +1708,8 @@
               "text": "……我今天本来想说，终于不用再往你这儿跑了。"
             },
             {
-              "speaker": "player",
-              "text": "不跑了？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我可没这么说。查清楚之前，饭总得吃吧。"
-            },
-            {
-              "speaker": "player",
-              "text": "那就照常来。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……嗯。"
+              "text": "我可没说以后不来。查清楚之前，饭总得吃吧。"
             }
           ]
         },
@@ -2104,16 +1752,12 @@
               "text": "钱凑齐了。剩下的货我卖给了另一家，又预支了短工的工钱。"
             },
             {
-              "speaker": "player",
-              "text": "那家给的价怎么样？"
+              "speaker": "eleanor",
+              "text": "那家给的价不怎么样。接下来还得多干几天活。不过撑得住。"
             },
             {
               "speaker": "eleanor",
-              "text": "不怎么样，接下来还得多干几天活。不过撑得住。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "别这么看着我。我说过我会自己想办法的。"
+              "text": "我撑得住。我说过我会自己想办法的。"
             }
           ]
         },
@@ -2130,10 +1774,6 @@
             {
               "speaker": "eleanor",
               "text": "它一直戴在我身上，什么也做不了。现在，我想让它帮我找到母亲。"
-            },
-            {
-              "speaker": "player",
-              "text": "这回想好了？"
             },
             {
               "speaker": "eleanor",
@@ -2161,20 +1801,12 @@
               "text": "嘿。侦探查到了一些东西。"
             },
             {
-              "speaker": "player",
-              "text": "先说，他有没有被人跟着？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "他说没有。我们换了交接的地方，我也没直接从那儿过来。"
+              "text": "他说没人跟着。我们换了交接的地方，我也没直接从那儿过来。"
             },
             {
               "speaker": "eleanor",
               "text": "是一个数据盘，藏在我母亲以前在水培农场的实验室里。"
-            },
-            {
-              "speaker": "player",
-              "text": "他打开过？"
             },
             {
               "speaker": "eleanor",
@@ -2183,10 +1815,6 @@
             {
               "speaker": "eleanor",
               "text": "我跟她说过好多次，这样不安全。她说，怕自己哪天忙忘了。"
-            },
-            {
-              "speaker": "player",
-              "text": "忘过吗？"
             },
             {
               "speaker": "eleanor",
@@ -2206,7 +1834,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "*看着屏幕*"
+              "text": "<i>*看着屏幕*</i>"
             },
             {
               "speaker": "eleanor",
@@ -2214,22 +1842,18 @@
             },
             {
               "speaker": "eleanor",
-              "text": "她找到了让普通营养果重新结籽的方法。"
-            },
-            {
-              "speaker": "player",
-              "text": "种一次，就能自己留种。"
+              "text": "她找到了让普通营养果重新结籽的方法。种一次，就能自己留种。"
             },
             {
               "speaker": "eleanor",
-              "text": "对。有了这些数据，随便哪个像样的生物黑客都能改造它。"
+              "text": "有了这些数据，随便哪个像样的生物黑客都能改造它。"
             },
             {
               "speaker": "eleanor",
               "text": "再也不用从帕斯泰尔买种子了。这会让帕斯泰尔损失惨重。"
             },
             {
-              "speaker": "player",
+              "speaker": "eleanor",
               "text": "所以他们才对她下手。"
             },
             {
@@ -2241,20 +1865,12 @@
               "text": "挪用公款的指控是捏造的。全都是。是帕斯泰尔公司驻空间站的代表一手策划的。"
             },
             {
-              "speaker": "player",
-              "text": "光凭这个，法院不会放人。"
+              "speaker": "eleanor",
+              "text": "可光凭这个，法院不会放人。我知道。可至少我知道了，她到底在做什么，他们又在怕什么。"
             },
             {
               "speaker": "eleanor",
-              "text": "我知道。可至少我知道了，她到底在做什么，他们又在怕什么。"
-            },
-            {
-              "speaker": "player",
-              "text": "先别急着拿出去。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我知道。我母亲还在他们手里。"
+              "text": "先不急着拿出去。我母亲还在他们手里。"
             },
             {
               "speaker": "eleanor",
@@ -2275,10 +1891,6 @@
             {
               "speaker": "eleanor",
               "text": "你知道这可不是普通的寄存品吧？"
-            },
-            {
-              "speaker": "player",
-              "text": "知道。所以才先跟你说清楚。"
             },
             {
               "speaker": "eleanor",
@@ -2346,12 +1958,8 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "这么快就放出来了？"
-            },
-            {
               "speaker": "thug",
-              "text": "有人把手续办好了。你看，有些事没你想的那么难。"
+              "text": "没想到吧？我又出来了。有人把手续办好了。有些事没你想的那么难。"
             }
           ]
         },
@@ -2375,31 +1983,23 @@
           "lines": [
             {
               "speaker": "thug",
-              "text": "我们知道你一直跟埃莉诺有来往。也知道数据盘的事。"
-            },
-            {
-              "speaker": "player",
-              "text": "你替谁传话？"
+              "text": "我们知道你跟埃莉诺有来往，也知道数据盘的事。"
             },
             {
               "speaker": "thug",
-              "text": "她看过里面的东西，自然知道是谁。"
+              "text": "她看过里面的东西，自然知道我们替谁办事。"
             },
             {
               "speaker": "thug",
-              "text": "告诉她把东西还给我们，不然她母亲就没命了。"
+              "text": "告诉她，东西还回来，不然她母亲没命。"
             },
             {
               "speaker": "thug",
-              "text": "只要她交出来，我们就放了她母亲。人会被流放到下层区，但能保住命。"
-            },
-            {
-              "speaker": "player",
-              "text": "我凭什么信你？"
+              "text": "交出来，我们就放她母亲。人会被流放到下层区，但能保住命。"
             },
             {
               "speaker": "thug",
-              "text": "你信不信无所谓，她信就行。"
+              "text": "信不信随你，她信就行。"
             },
             {
               "speaker": "thug",
@@ -2410,12 +2010,8 @@
               "text": "开当铺的，何必把事情弄得这么复杂。"
             },
             {
-              "speaker": "player",
-              "text": "放人的事，谁来办？什么时候能见到人？"
-            },
-            {
               "speaker": "thug",
-              "text": "有人办。用不着你操心。"
+              "text": "放人的事有人办。用不着你操心。"
             },
             {
               "speaker": "thug",
@@ -2484,39 +2080,19 @@
             },
             {
               "speaker": "eleanor",
-              "text": "……你连这个也告诉我了。"
-            },
-            {
-              "speaker": "player",
-              "text": "这件事你该全都知道。"
+              "text": "……你连这个也告诉我了。谢谢。"
             },
             {
               "speaker": "eleanor",
-              "text": "谢谢。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "可要是我把它公开，他们就会杀了她。但那样的话，再也没人需要帕斯泰尔的种子了。"
+              "text": "可要是我公开，他们就会杀了她。但那样，再也没人需要帕斯泰尔的种子了。"
             },
             {
               "speaker": "eleanor",
               "text": "我想让她活着。这一点，我没办法装得很勇敢。"
             },
             {
-              "speaker": "player",
-              "text": "不用装。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "可那份研究是真的。你也看到了。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "就算我偷偷留一份再交回去，他们也照样能找到办法对付她。"
-            },
-            {
-              "speaker": "player",
-              "text": "所以想保住研究，得先让他们碰不到她。"
+              "text": "可那份研究是真的。就算偷偷留一份再交回去，他们照样有办法对付她。"
             },
             {
               "speaker": "eleanor",
@@ -2532,11 +2108,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "有一条路。先申请把她转到有人看管的临时看护，再谈原案复查。"
-            },
-            {
-              "speaker": "player",
-              "text": "栽赃和威胁的记录，能证明她现在有危险。研究能说明他们为什么这么做。"
+              "text": "先申请转临时看护，再谈原案复查。栽赃和威胁的记录、研究，能证明她有危险和他们的动机。"
             },
             {
               "speaker": "eleanor",
@@ -2552,7 +2124,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "我现在没有能把她保出来的门路。光靠我一句“能救”，不够。"
+              "text": "我现在没有能把她保出来的门路。"
             },
             {
               "speaker": "eleanor",
@@ -2568,19 +2140,11 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "要是有人接手保护她，我要知道是谁负责，什么时候能见到她。"
-            },
-            {
-              "speaker": "player",
-              "text": "能核实的先核实。没有保护的消息就公开，等于拿她冒险。"
+              "text": "要是有人接手保护她，我要知道谁负责，什么时候能见到她。"
             },
             {
               "speaker": "eleanor",
               "text": "还有，你别一个人去找那个打手。"
-            },
-            {
-              "speaker": "player",
-              "text": "怕我吃亏？"
             },
             {
               "speaker": "eleanor",
@@ -2604,7 +2168,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "但我得亲眼看到他们放人。别是把她从这间牢房，换到另一间。"
+              "text": "但我得亲眼看到他们放人。别是从这间牢房换到另一间。"
             }
           ]
         },
@@ -2620,7 +2184,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "好。我去整理她的资料。你那边需要什么就跟我说，别一个人全办完了才告诉我。"
+              "text": "好。我去整理她的资料。需要什么跟我说，别一个人全办完了才告诉我。"
             }
           ]
         },
@@ -2639,16 +2203,12 @@
               "text": "我知道他们不是说说而已。……让我想一想。"
             },
             {
-              "speaker": "narrator",
-              "text": "她握住装着数据盘的袋子，拇指在封口上来回摩挲，好一会儿才停下。"
+              "speaker": "eleanor",
+              "text": "他们连去哪接人都不肯先说。盘交出去，再改条件，我拿什么要她？"
             },
             {
               "speaker": "eleanor",
-              "text": "他们连去哪儿接人都不肯先说。盘交出去，要是再改条件，我拿什么去要她？"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我想把她接回来，也怕她留了那么久的研究，就这么被他们抹掉。"
+              "text": "我想把她接回来，也怕她留了那么久的研究被他们抹掉。"
             }
           ]
         },
@@ -2663,12 +2223,8 @@
               "text": "……送去报社吧。至少让这份研究留在外面。"
             },
             {
-              "speaker": "player",
-              "text": "不等保护的消息了？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "不等了。我不知道妈妈会不会答应。没见到她，我不能替她说。"
+              "text": "保护的消息，不等了。我不知道妈妈会不会答应。没见到她，我不能替她说。"
             },
             {
               "speaker": "eleanor",
@@ -2696,44 +2252,30 @@
           "label": "",
           "lines": [
             {
-              "speaker": "eleanor",
-              "text": "母亲的保护资料我交上去了。用药那一栏，我又重新核了一遍。"
-            },
-            {
               "speaker": "player",
-              "text": "申请也递进去了，还在等回复。"
+              "text": "申请递上去了，还在等回复。"
             },
             {
               "speaker": "eleanor",
-              "text": "你没跟我说“已经没事了”。"
-            },
-            {
-              "speaker": "player",
-              "text": "现在还说不了。"
+              "text": "你没跟我说“已经没事了”。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
               "text": "这样反而好。以前有人每次见我都说“放心”，后来就再也见不到人了。"
             },
             {
-              "speaker": "player",
-              "text": "你今晚还去打短工？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "去。等消息也得吃饭。"
+              "text": "今晚还去打短工。等消息也得吃饭。",
+              "expr": "tired"
             },
             {
               "speaker": "eleanor",
               "text": "我跟室友说好了，要是有人来打听我母亲住哪，一个字都别说。"
             },
             {
-              "speaker": "player",
-              "text": "她怎么说？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "她说我现在才学会这个，已经算晚的了。"
+              "text": "室友说，我现在才学会这个，已经算晚的了。"
             }
           ]
         },
@@ -2748,28 +2290,16 @@
               "text": "申请上也有你的名字。"
             },
             {
-              "speaker": "player",
-              "text": "嗯。"
-            },
-            {
               "speaker": "eleanor",
               "text": "你的店铺地址，我检查了两遍。"
-            },
-            {
-              "speaker": "player",
-              "text": "怕填错？"
             },
             {
               "speaker": "eleanor",
               "text": "怕写错了，真出事的时候找不到你。"
             },
             {
-              "speaker": "player",
-              "text": "我就在这儿。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我知道。所以我才敢把事情说到这一步。"
+              "text": "你就在这儿。所以我才敢把事情说到这一步。"
             }
           ]
         },
@@ -2788,12 +2318,8 @@
               "text": "我……可以见她了？"
             },
             {
-              "speaker": "player",
-              "text": "按上面写的地点和时间去。先核验，见到人再说。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "好。我这就去。"
+              "text": "好。我这就去。先核验，见到人再说。"
             },
             {
               "speaker": "eleanor",
@@ -2808,32 +2334,20 @@
           "label": "",
           "lines": [
             {
-              "speaker": "eleanor",
-              "text": "他们答应把放人和交接安排在同一天。"
-            },
-            {
               "speaker": "player",
-              "text": "先核验人和手续。不能只听那个传话的说办好了。"
+              "text": "先核验人和手续。别只听传话的说办好了。"
             },
             {
               "speaker": "eleanor",
               "text": "我要母亲亲口跟我确认。不能让别人替她念一句话就算数。"
             },
             {
-              "speaker": "player",
-              "text": "研究的副本呢？"
+              "speaker": "eleanor",
+              "text": "副本不留。我既然拿它换她，就不能一边拿她的命作担保，一边赌他们查不出来。"
             },
             {
               "speaker": "eleanor",
-              "text": "不留了。我既然决定拿它换她，就不能一边拿她的命作担保，一边赌他们查不出来。"
-            },
-            {
-              "speaker": "player",
-              "text": "想清楚了？"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "想清楚了。以后还有没有别的办法，那是以后的事。"
+              "text": "我想清楚了。以后还有没有别的办法，那是以后的事。"
             },
             {
               "speaker": "eleanor",
@@ -2853,7 +2367,7 @@
             },
             {
               "speaker": "player",
-              "text": "没有。可以接着申请，也可以改成归还换人。"
+              "text": "没有。接着申请，或者改成归还换人。"
             },
             {
               "speaker": "eleanor",
@@ -2881,16 +2395,8 @@
               "text": "嘿！我妈妈自由了！"
             },
             {
-              "speaker": "player",
-              "text": "见到本人了？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "本人！她见我第一句话就问，我是不是又没好好吃饭。"
-            },
-            {
-              "speaker": "player",
-              "text": "听着不像认错了人。"
+              "text": "见到本人了！她第一句话就问我，是不是又没好好吃饭。"
             },
             {
               "speaker": "eleanor",
@@ -2898,7 +2404,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "但我们又在一起了。今天晚上，我知道她睡在哪儿。"
+              "text": "但我们又在一起了。今晚，我知道她睡在哪儿。"
             }
           ]
         },
@@ -2910,23 +2416,15 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我见到母亲了！人已经转出来，有人负责看护，探视也登记了。"
-            },
-            {
-              "speaker": "player",
-              "text": "她知道接下来会怎样吗？"
+              "text": "我见到母亲了！人已经转出来，有人看护，探视也登记了。"
             },
             {
               "speaker": "eleanor",
-              "text": "知道。研究、威胁，还有我们打算公开的事，我全都跟她说了。"
+              "text": "她知道接下来会怎样。研究、威胁，还有公开的事，我全都跟她说了。"
             },
             {
               "speaker": "eleanor",
               "text": "她说，先让看护的人把安排确认好，再把东西送出去。"
-            },
-            {
-              "speaker": "player",
-              "text": "她比你还谨慎。"
             },
             {
               "speaker": "eleanor",
@@ -2942,11 +2440,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我准备了好多话。想问她在里面吃得怎么样，为什么不早点告诉我，有没有人欺负她。"
-            },
-            {
-              "speaker": "player",
-              "text": "问了吗？"
+              "text": "我准备了好多话：她在里面吃得怎么样，为什么不早点告诉我，有没有人欺负她。"
             },
             {
               "speaker": "eleanor",
@@ -2957,40 +2451,24 @@
               "text": "她说，听见了，不用那么大声。"
             },
             {
-              "speaker": "player",
-              "text": "剩下的慢慢问。"
+              "speaker": "eleanor",
+              "text": "现在能慢慢问了。"
             },
             {
               "speaker": "eleanor",
-              "text": "嗯。现在可以慢慢问了。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我以前总觉得，只要能回到上面，一切就都能恢复原样。"
+              "text": "我以前总觉得，只要能回到上面，一切就能恢复原样。"
             },
             {
               "speaker": "eleanor",
               "text": "可今天见到她，我连上面的房子都没想起来。"
             },
             {
-              "speaker": "player",
-              "text": "住的地方怎么办？"
+              "speaker": "eleanor",
+              "text": "接下来先在下层区找住的地方。室友会帮忙看看，我也还能继续打工。"
             },
             {
               "speaker": "eleanor",
-              "text": "先在下层区找个合适的。室友说会帮忙看看，我也还能继续打工。"
-            },
-            {
-              "speaker": "player",
-              "text": "缺什么就来挑。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "按价买。你已经帮了我们太多了，不能以后每样东西都让你出。"
-            },
-            {
-              "speaker": "player",
-              "text": "知道了。"
+              "text": "缺什么我会来买，按价买。你帮了我们太多，不能以后每样东西都让你出。"
             },
             {
               "speaker": "eleanor",
@@ -3050,28 +2528,16 @@
               "text": "你好。埃莉诺说，在这儿买东西，老板会先把毛病告诉你。"
             },
             {
-              "speaker": "player",
-              "text": "她还说什么了？"
-            },
-            {
               "speaker": "mother",
-              "text": "说老板有时候不太会说话，不过人不坏。"
-            },
-            {
-              "speaker": "player",
-              "text": "听得出来是她的原话。"
+              "text": "她还说，老板有时候不太会说话，不过人不坏。"
             },
             {
               "speaker": "mother",
               "text": "我想买点日用品。我们住的地方还缺不少东西。"
             },
             {
-              "speaker": "player",
-              "text": "她没一起来？"
-            },
-            {
               "speaker": "mother",
-              "text": "打工去了。出门前还叮嘱我，别看见便宜的就全往回拿。"
+              "text": "她打工去了。出门前还叮嘱我，别看见便宜的就全往回拿。"
             }
           ]
         },
@@ -3083,11 +2549,7 @@
           "lines": [
             {
               "speaker": "mother",
-              "text": "以前我跟她这么说，她都假装没听见。"
-            },
-            {
-              "speaker": "player",
-              "text": "她现在算得很精。"
+              "text": "以前我这么叮嘱她，她都假装没听见。"
             },
             {
               "speaker": "mother",
@@ -3098,16 +2560,8 @@
               "text": "你替她做的事，她都跟我说了。"
             },
             {
-              "speaker": "player",
-              "text": "她自己做的也不少。"
-            },
-            {
               "speaker": "mother",
-              "text": "我知道。可她讲到自己的时候，话比讲到你的时候少多了。"
-            },
-            {
-              "speaker": "player",
-              "text": "大概觉得没什么好讲的。"
+              "text": "可她讲到自己的时候，话比讲到你的时候少多了。"
             },
             {
               "speaker": "mother",
@@ -3127,7 +2581,7 @@
             },
             {
               "speaker": "mother",
-              "text": "但别让她以为，把我接回来是一件需要跟我认错的事。"
+              "text": "但别让她觉得，把我接回来是一件需要跟我认错的事。"
             }
           ]
         },
@@ -3158,24 +2612,16 @@
               "text": "就这些。别因为是我，就不肯收钱。"
             },
             {
-              "speaker": "player",
-              "text": "你们俩连这句话都一样。"
-            },
-            {
               "speaker": "mother",
-              "text": "有些地方，她确实像我。"
+              "text": "她不肯白拿东西这点，确实像我。"
             },
             {
               "speaker": "mother",
               "text": "她最近说起这里，已经不光是说买到了什么。"
             },
             {
-              "speaker": "player",
-              "text": "那还说什么？"
-            },
-            {
               "speaker": "mother",
-              "text": "这个你自己去问她。我可不替她把话说完。"
+              "text": "还说什么，你自己去问她。我可不替她把话说完。"
             }
           ]
         }
@@ -3200,23 +2646,11 @@
             },
             {
               "speaker": "player",
-              "text": "来过。买了东西，付了钱。"
+              "text": "来过。买了东西，付了钱。她让我来问你。"
             },
             {
               "speaker": "eleanor",
-              "text": "就只聊了买东西的事？"
-            },
-            {
-              "speaker": "player",
-              "text": "没有。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……我就知道。"
-            },
-            {
-              "speaker": "player",
-              "text": "她让我自己来问你。"
+              "text": "我就知道。"
             },
             {
               "speaker": "eleanor",
@@ -3232,23 +2666,11 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我带了点货来。不是借口，是真的能卖。"
-            },
-            {
-              "speaker": "player",
-              "text": "我没说是借口。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "你最好想都别想。"
+              "text": "我带了点货来。这回真是来卖的。"
             },
             {
               "speaker": "eleanor",
               "text": "我妈现在比我起得还早。前两天我一醒，就看见她坐在那儿修一个旧托盘。"
-            },
-            {
-              "speaker": "player",
-              "text": "闲不住？"
             },
             {
               "speaker": "eleanor",
@@ -3259,12 +2681,8 @@
               "text": "我把工具递给她，然后在旁边坐了一会儿。"
             },
             {
-              "speaker": "player",
-              "text": "挺好。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "嗯。也没什么特别的，就是坐了一会儿。"
+              "text": "也没什么特别的，就是坐了一会儿。"
             }
           ]
         },
@@ -3277,10 +2695,6 @@
             {
               "speaker": "eleanor",
               "text": "我一直以为，等她出来了，我就知道下一步该干什么了。"
-            },
-            {
-              "speaker": "player",
-              "text": "现在不知道？"
             },
             {
               "speaker": "eleanor",
@@ -3311,12 +2725,8 @@
               "text": "以后我还是会来卖货的。你不用每次都问我出了什么事。"
             },
             {
-              "speaker": "player",
-              "text": "当普通客人？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "当常客。普通客人可不知道你收什么。"
+              "text": "我是常客。普通客人可不知道你收什么。"
             }
           ]
         }
@@ -3340,10 +2750,6 @@
               "text": "有件事得先说清楚。那个冒充叔叔的人送来的箱子，我没忘。"
             },
             {
-              "speaker": "player",
-              "text": "我也没指望你忘。"
-            },
-            {
               "speaker": "eleanor",
               "text": "后来你确实把事情补上了，有什么事也都先告诉我。"
             },
@@ -3353,7 +2759,7 @@
             },
             {
               "speaker": "player",
-              "text": "我知道。以后我知道的危险，第一时间告诉你。"
+              "text": "以后有危险，我第一时间告诉你。"
             },
             {
               "speaker": "eleanor",
@@ -3369,27 +2775,21 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "今天没带货。有件事想跟你说。"
-            },
-            {
-              "speaker": "player",
-              "text": "我也正盼着你来。"
+              "text": "今天没带货。有件事想跟你说。",
+              "expr": "shy"
             },
             {
               "speaker": "eleanor",
-              "text": "……那你还老是一见面就问我卖什么。"
-            },
-            {
-              "speaker": "player",
-              "text": "怕问早了，把你吓跑。"
+              "text": "你每次都先问卖什么。今天先别问。"
             },
             {
               "speaker": "eleanor",
-              "text": "少来。我最近来得，比有货卖的时候还勤。"
+              "text": "我最近来得，比有货卖的时候还勤。"
             },
             {
               "speaker": "eleanor",
-              "text": "我会想你今天有没有收到好东西，是不是又把午饭放凉了，碰上难缠的客人有没有又跟人顶起来。"
+              "text": "我会想你今天有没有收到好东西，是不是又把午饭放凉了，碰上难缠的客人有没有又跟人顶起来。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
@@ -3401,11 +2801,13 @@
             },
             {
               "speaker": "eleanor",
-              "text": "等一下，让我说完。我喜欢你。"
+              "text": "等一下，让我说完。我喜欢你。",
+              "expr": "shy"
             },
             {
               "speaker": "eleanor",
-              "text": "好了，该你回答了。这次不许拿价签岔开话题。"
+              "text": "好了，该你回答了。别让我等太久。",
+              "expr": "shy"
             }
           ]
         },
@@ -3417,31 +2819,19 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "我也喜欢你。每天听见门响，都会先看看是不是你。"
+              "text": "我也喜欢你。跟你以前住在哪儿没关系。"
             },
             {
               "speaker": "eleanor",
-              "text": "……难怪。有两回我明明没带货，你还把秤拿出来了。"
-            },
-            {
-              "speaker": "player",
-              "text": "总得给自己找点事做。"
+              "text": "跟住在哪儿没关系？你现在说得倒轻巧。"
             },
             {
               "speaker": "eleanor",
-              "text": "那以后我挑你的毛病，你也不许躲。现在反悔还来得及。"
-            },
-            {
-              "speaker": "player",
-              "text": "不反悔。"
+              "text": "那以后我挑你的毛病，你也不许躲。"
             },
             {
               "speaker": "eleanor",
-              "text": "……好。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "那以后我来，就不用再说“顺路”了。"
+              "text": "好。那以后我来，就不用再找理由了。"
             }
           ]
         },
@@ -3477,19 +2867,15 @@
             },
             {
               "speaker": "eleanor",
-              "text": "……知道了。"
+              "text": "知道了。"
             },
             {
               "speaker": "eleanor",
               "text": "你直接告诉我，总比让我一直猜好。"
             },
             {
-              "speaker": "player",
-              "text": "以前帮你的那些，你不用拿别的来还。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我明白。我也不是拿这个还债。"
+              "text": "以前的事，不用拿这个来还。我也不是拿这个还债。"
             },
             {
               "speaker": "eleanor",
@@ -3512,12 +2898,8 @@
               "text": "谢谢你一直把我当成一个能自己做事的人。"
             },
             {
-              "speaker": "player",
-              "text": "你本来就能。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我现在信了。以后你要是有用得上我的地方，也可以来找我。"
+              "text": "我现在信自己了。以后你要是有用得上我的地方，也可以来找我。"
             }
           ]
         }
@@ -3541,24 +2923,16 @@
               "text": "我看到一批你可能想收的货。我没替你答应。"
             },
             {
-              "speaker": "player",
-              "text": "怎么没直接带过来？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "你说过的，先看东西，再听人说。"
+              "text": "先看东西，再听人说。这规矩我记着。"
             },
             {
               "speaker": "eleanor",
               "text": "来源我问过了，哪里坏了也问了。等人来了，你自己看。"
             },
             {
-              "speaker": "player",
-              "text": "还知道不替我做主。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "那当然。我只是想让你知道，这回是我给你带来生意。"
+              "text": "我只是想让你知道，这回是我给你带来生意。"
             }
           ]
         },
@@ -3573,16 +2947,8 @@
               "text": "怎么样？我挑得不错吧？"
             },
             {
-              "speaker": "player",
-              "text": "你没把毛病藏着，挺好。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我问的是眼光，不是人品！"
-            },
-            {
-              "speaker": "player",
-              "text": "眼光也不错。"
+              "text": "我可没把毛病藏着。夸眼光，别夸人品。"
             }
           ]
         },
@@ -3597,12 +2963,8 @@
               "text": "不合适？那就不收。又不是我带来的就非买不可。"
             },
             {
-              "speaker": "player",
-              "text": "下次还帮我看？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "看。不过我得先弄明白，这次是哪儿看走了眼。"
+              "text": "下次还帮你看。不过我得先弄明白，这次是哪儿看走了眼。"
             }
           ]
         },
@@ -3617,16 +2979,8 @@
               "text": "我妈说，我最近讲价的口气越来越像你了。"
             },
             {
-              "speaker": "player",
-              "text": "她觉得是好事？"
-            },
-            {
               "speaker": "eleanor",
               "text": "她说，至少这回我知道自己在说什么。"
-            },
-            {
-              "speaker": "player",
-              "text": "你怎么回的？"
             },
             {
               "speaker": "eleanor",
@@ -3641,20 +2995,12 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "那老师有什么好处？"
+              "speaker": "eleanor",
+              "text": "有这么聪明的女朋友，还不够？"
             },
             {
               "speaker": "eleanor",
-              "text": "有一个这么聪明的女朋友，还不够？"
-            },
-            {
-              "speaker": "player",
-              "text": "够了。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "这次回答得倒挺快。"
+              "text": "这次没跟我抬杠，算你有进步。"
             }
           ]
         },
@@ -3665,12 +3011,8 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "下次可以去教教别的新手。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "行。先教他们别在同一个地方摔两次。"
+              "text": "下次我去教教别的新手。先教他们分清锈接口和好接口。"
             }
           ]
         }
@@ -3694,28 +3036,16 @@
               "text": "今天真是来买东西的。"
             },
             {
-              "speaker": "player",
-              "text": "上次也卖了东西。"
-            },
-            {
               "speaker": "lydia",
               "text": "上次顺便说了很多不该替埃莉诺做主的话。"
             },
             {
-              "speaker": "player",
-              "text": "你跟她道过歉了？"
-            },
-            {
               "speaker": "lydia",
-              "text": "道过了。她说别光跟老板道歉，搞得好像她自己没长嘴一样。"
+              "text": "我跟她道过歉了。她说别光跟老板道歉，搞得好像她自己没长嘴一样。"
             },
             {
               "speaker": "lydia",
               "text": "我见到她母亲了。比以前瘦，说话还是那样，不许别人乱夸。"
-            },
-            {
-              "speaker": "player",
-              "text": "她们在慢慢安顿下来。"
             },
             {
               "speaker": "lydia",
@@ -3731,11 +3061,11 @@
           "lines": [
             {
               "speaker": "lydia",
-              "text": "那只镯子，我回去问过懂行的人。你当时肯出的价确实公道。"
+              "text": "那只镯子，我回去问过懂行的人。你当时出的价确实公道。"
             },
             {
               "speaker": "lydia",
-              "text": "我跟别人说起这事，他们都不信下层区有这种老板。"
+              "text": "说给上面的人听，他们都不信下层区有这种老板。"
             }
           ]
         },
@@ -3754,12 +3084,8 @@
               "text": "这回她让我带能真正用得上的东西，别把探望搞成一场展览。"
             },
             {
-              "speaker": "player",
-              "text": "她说得对。"
-            },
-            {
               "speaker": "lydia",
-              "text": "对是对。就是那语气，让人很难马上承认。"
+              "text": "话说得对。就是那语气，让人很难马上承认。"
             }
           ]
         },
@@ -3771,27 +3097,19 @@
           "lines": [
             {
               "speaker": "lydia",
-              "text": "她告诉我，你们在一起了。"
-            },
-            {
-              "speaker": "player",
-              "text": "你还有什么条件要提？"
+              "text": "她告诉我，你们在一起了。我没有条件要提。"
             },
             {
               "speaker": "lydia",
-              "text": "没有。只不过她说这话的时候，压根就没打算问我的意见。"
+              "text": "她说这话的时候，压根没打算问我的意见。"
             },
             {
               "speaker": "lydia",
               "text": "上面现在都在传，埃莉诺看上了下层区一个开当铺的。"
             },
             {
-              "speaker": "player",
-              "text": "传得没错。"
-            },
-            {
               "speaker": "lydia",
-              "text": "我替她挡了几句。……别谢我，我是替她挡的，不是替你。"
+              "text": "我替她挡了几句。我替她挡的，不是替你。"
             }
           ]
         },
@@ -3806,12 +3124,8 @@
               "text": "她说你是个值得来往的朋友。她很少用“值得”这两个字。"
             },
             {
-              "speaker": "player",
-              "text": "她自己也是。"
-            },
-            {
               "speaker": "lydia",
-              "text": "我正在重新学着明白这一点。"
+              "text": "她说得对，她也是。我以前没看懂。"
             }
           ]
         },
@@ -3855,12 +3169,8 @@
               "text": "我妈找到一个肯让她帮忙整理设备的地方。不是原来的农场，不过她想去。"
             },
             {
-              "speaker": "player",
-              "text": "你也去？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "先帮几天忙。我自己也找了份稳定点的活，不用光靠捡东西了。"
+              "text": "我先去帮几天忙。自己也找了份稳定点的活，不用光靠捡东西了。"
             },
             {
               "speaker": "eleanor",
@@ -3883,10 +3193,6 @@
               "text": "研究那边来人了，问我们愿不愿意帮忙整理母亲留下的记录。"
             },
             {
-              "speaker": "player",
-              "text": "在上面？"
-            },
-            {
               "speaker": "eleanor",
               "text": "有些活在上面，需要单独的工作通行证。不是回到原来的生活，案子也还没结。"
             },
@@ -3903,20 +3209,12 @@
           "label": "",
           "lines": [
             {
-              "speaker": "player",
-              "text": "想去就去。"
-            },
-            {
               "speaker": "eleanor",
               "text": "我当然会去。我今天来又不是请你批准的。"
             },
             {
-              "speaker": "player",
-              "text": "那是来通知我？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "是来跟你商量时间怎么排！你就不能让我把话说完？"
+              "text": "是来跟你商量时间怎么排。"
             }
           ]
         },
@@ -3931,12 +3229,8 @@
               "text": "我想接着干活，也想接着见你。"
             },
             {
-              "speaker": "player",
-              "text": "不用为了这家店推掉机会。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我没打算推掉。也没打算把你推掉。"
+              "text": "我没打算推掉工作，也没打算推掉你。"
             },
             {
               "speaker": "eleanor",
@@ -3947,12 +3241,8 @@
               "text": "现在我自己挑了。你可别又来替我决定“什么才是对我好”。"
             },
             {
-              "speaker": "player",
-              "text": "那就按你的安排来。忙的时候说一声。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "你也是。别老说店里离不开人，连顿饭都不肯好好吃。"
+              "text": "忙的时候说一声。别老说店里离不开人，连顿饭都不肯好好吃。"
             }
           ]
         },
@@ -3964,19 +3254,11 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "上次的事，我想好了。我希望你以后来这儿，不只是当个常客。"
+              "text": "我希望你以后来这儿，不只是当个常客。"
             },
             {
               "speaker": "eleanor",
-              "text": "你确定？这次不会又让我猜吧？"
-            },
-            {
-              "speaker": "player",
-              "text": "确定。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……好。那我把时间留出来，你也得留。"
+              "text": "好。那我把时间留出来，你也得留。"
             }
           ]
         },
@@ -3991,12 +3273,8 @@
               "text": "以后我可能没那么常来了。不过生意上的事，还是可以互相照应。"
             },
             {
-              "speaker": "player",
-              "text": "碰上合适的东西，我给你留意着。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "谢谢。你要是有什么需要，也别忘了来问我。"
+              "text": "你有什么需要，也别忘了来问我。"
             }
           ]
         },
@@ -4008,23 +3286,15 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "这个，你还记得吗？"
-            },
-            {
-              "speaker": "player",
-              "text": "那次你问了价，最后没卖。"
+              "text": "那次问了价，最后没卖。这个，你还记得吗？"
             },
             {
               "speaker": "eleanor",
               "text": "我跟我妈说，我想把它送给你。她说，那是我的东西，我自己决定。"
             },
             {
-              "speaker": "player",
-              "text": "这回也不是拿来卖的？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "不是。你最好已经学会分辨了。"
+              "text": "不是拿来卖的。你最好已经学会分辨了。"
             }
           ]
         },
@@ -4035,12 +3305,8 @@
           "label": "接受",
           "lines": [
             {
-              "speaker": "player",
-              "text": "那我留着。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "别跟柜台上的货摆在一起。我可没那么大方。"
+              "text": "拿去吧。别跟柜台上的货摆在一起。我可没那么大方。"
             }
           ]
         },
@@ -4051,12 +3317,8 @@
           "label": "婉拒，认为她留着更合适",
           "lines": [
             {
-              "speaker": "player",
-              "text": "你戴着更好看。心意我收下了。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "……好吧，那我自己戴着。反正你以后也不是看不到。"
+              "text": "好吧，那我自己戴着。反正你以后也不是看不到。"
             }
           ]
         },
@@ -4071,12 +3333,8 @@
               "text": "我原本想把那个吊坠送你的。后来，还是卖掉凑钱了。"
             },
             {
-              "speaker": "player",
-              "text": "不用再找别的东西替它。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我知道。我只是想让你知道，我这么想过。"
+              "text": "我不是要你找别的东西替它。我只是想让你知道，我这么想过。"
             }
           ]
         }
@@ -4097,27 +3355,17 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "嘿。今天有空吗？"
-            },
-            {
-              "speaker": "player",
-              "text": "没人出事吧？"
+              "text": "嘿。今天有空吗？今天不为别的事。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
-              "text": "没有。我妈好好的，工作也没丢。"
+              "text": "我妈好好的，工作也没丢。"
             },
             {
               "speaker": "eleanor",
-              "text": "你得慢慢习惯，我来不一定是出了什么事。"
-            },
-            {
-              "speaker": "player",
-              "text": "在习惯了。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "那就习惯得快一点。"
+              "text": "你得习惯。我来，不一定出了事。",
+              "expr": "soft"
             }
           ]
         },
@@ -4132,32 +3380,20 @@
               "text": "我妈最近总让我多带一份吃的。"
             },
             {
-              "speaker": "player",
-              "text": "给你室友？"
+              "speaker": "eleanor",
+              "text": "这份是给你的。"
             },
             {
               "speaker": "eleanor",
-              "text": "她那份也有。这份是给你的。"
-            },
-            {
-              "speaker": "player",
-              "text": "你们现在过得怎么样？"
+              "text": "房间小，钱得算着花。我妈还会做噩梦。"
             },
             {
               "speaker": "eleanor",
-              "text": "房间还是小，钱还是得算着花。我妈有时候也会做噩梦。"
+              "text": "她醒过来时，我就在旁边。"
             },
             {
               "speaker": "eleanor",
-              "text": "不过她醒过来的时候，我就在旁边，能应她一声。"
-            },
-            {
-              "speaker": "player",
-              "text": "那就好。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "嗯。以前的东西是回不来了。可我们现在有的，也不算少。"
+              "text": "现在有的，也不少。"
             }
           ]
         },
@@ -4169,47 +3405,26 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我第一次来的时候，说过你这家店不怎么样。"
-            },
-            {
-              "speaker": "player",
-              "text": "现在呢？"
+              "text": "我第一次来的时候，说过你这家店不怎么样。现在也还是有不少该修的地方。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
-              "text": "还是有不少该修的地方。你别以为我喜欢你，就会连那盏坏灯一起喜欢。"
-            },
-            {
-              "speaker": "player",
-              "text": "要求还挺多。"
+              "text": "别以为我喜欢你，就连坏灯一起喜欢。我的脾气不会因为恋爱就没了。",
+              "expr": "angry"
             },
             {
               "speaker": "eleanor",
-              "text": "你答应过的。我的脾气不会因为跟你在一起就突然没了。"
-            },
-            {
-              "speaker": "player",
-              "text": "记得。"
+              "text": "今天让我待一会儿。有客人，你做你的生意。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
-              "text": "那今天让我在这儿陪你一会儿。有客人来，你就做你的生意。"
-            },
-            {
-              "speaker": "player",
-              "text": "没客人呢？"
+              "text": "没客人，就跟我说话。"
             },
             {
               "speaker": "eleanor",
-              "text": "那就跟我说话。"
-            },
-            {
-              "speaker": "player",
-              "text": "说什么？"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "什么都行。只要别从“你还差多少钱”开始就好。"
+              "text": "别从“你还差多少钱”开始就行。"
             }
           ]
         },
@@ -4221,27 +3436,23 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我原本以为，在这下面认识的人，等我回到上面就不用再联系了。"
-            },
-            {
-              "speaker": "player",
-              "text": "现在呢？"
+              "text": "我以为回上面以后，就不会再联系这里的人了。"
             },
             {
               "speaker": "eleanor",
               "text": "现在才知道，按住在哪儿来分人，真的蠢透了。"
             },
             {
-              "speaker": "player",
-              "text": "这句我记下了。"
+              "speaker": "eleanor",
+              "text": "换作以前，我肯定不会说这种话。"
             },
             {
               "speaker": "eleanor",
-              "text": "记可以。别每次见我都拿出来念。"
+              "text": "有事来找我，没事也可以。"
             },
             {
               "speaker": "eleanor",
-              "text": "有事就来找我，没事也可以。朋友又不是只在缺钱的时候才算数。"
+              "text": "朋友不只在缺钱时才算数。"
             }
           ]
         }
@@ -4262,35 +3473,26 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "营养果的研究送到报社了。他们说先找人核验，再登出来。"
-            },
-            {
-              "speaker": "player",
-              "text": "你母亲的情况，跟他们说了？"
+              "text": "营养果的研究送到报社了。他们说先找人看一遍，再登出来。"
             },
             {
               "speaker": "eleanor",
-              "text": "说了。他们答应把威胁的事一起写进去，但没答应能把她接出来。"
-            },
-            {
-              "speaker": "player",
-              "text": "我们继续打听她的消息。"
+              "text": "我母亲的情况，我也跟他们说了。他们答应把威胁的事一起写进去，但没答应能把她接出来。",
+              "expr": "sad"
             },
             {
               "speaker": "eleanor",
-              "text": "嗯。我也留了能找到我的地址。"
+              "text": "我也会接着打听她的消息，留了能找到我的地址。"
             },
             {
               "speaker": "eleanor",
-              "text": "你不用现在跟我说，我们一定做对了。"
-            },
-            {
-              "speaker": "player",
-              "text": "我不会说。"
+              "text": "你不用现在跟我说，我们一定做对了。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "我只是想有个人知道，我做决定的时候，没有忘了她。"
+              "text": "我只是想有个人知道，我做决定的时候，没有忘了她。",
+              "expr": "sad"
             }
           ]
         },
@@ -4313,10 +3515,6 @@
               "text": "报纸登出来的那天早上，他们杀了我妈妈。"
             },
             {
-              "speaker": "player",
-              "text": "……确定吗？"
-            },
-            {
               "speaker": "eleanor",
               "text": "我去认过了。不是别人传的话。"
             },
@@ -4325,16 +3523,8 @@
               "text": "他们说是突发急病。偏偏就是报纸登出来的那个早上。"
             },
             {
-              "speaker": "player",
-              "text": "埃莉诺……"
-            },
-            {
               "speaker": "eleanor",
               "text": "别跟我说她一定会希望我这么做。我已经没办法再去问她了。"
-            },
-            {
-              "speaker": "player",
-              "text": "好。我不替她说。"
             },
             {
               "speaker": "eleanor",
@@ -4345,16 +3535,8 @@
               "text": "可知道这些，一点都不会让我现在好受。"
             },
             {
-              "speaker": "player",
-              "text": "今天什么都不用决定。"
-            },
-            {
               "speaker": "eleanor",
               "text": "我想在这儿待一会儿。别问我要不要喝点什么。"
-            },
-            {
-              "speaker": "player",
-              "text": "好。"
             }
           ]
         },
@@ -4369,10 +3551,6 @@
               "text": "母亲的遗物，他们只还回来一点。"
             },
             {
-              "speaker": "player",
-              "text": "有想留着的吗？"
-            },
-            {
               "speaker": "eleanor",
               "text": "一张她写的清单。全是农场里的小事。"
             },
@@ -4381,24 +3559,16 @@
               "text": "哪盏灯坏了，缺什么工具，哪个培养槽得再查一遍。"
             },
             {
-              "speaker": "player",
-              "text": "她一直都惦记着。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "嗯。不是每一页都是能改变整个空间站的研究。"
+              "text": "不是每一页都是能改变整个空间站的研究。"
             },
             {
               "speaker": "eleanor",
               "text": "大多数时候，她就是在忙这些。"
             },
             {
-              "speaker": "player",
-              "text": "留着吧。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "我会的。这个，不是拿来卖的。"
+              "text": "这张清单我留着。不是拿来卖的。"
             }
           ]
         },
@@ -4429,10 +3599,6 @@
               "text": "我加入了革命军。"
             },
             {
-              "speaker": "player",
-              "text": "是他们来找你的？"
-            },
-            {
               "speaker": "eleanor",
               "text": "他们找过我。但最后，是我自己去的。"
             },
@@ -4441,24 +3607,12 @@
               "text": "他们会帮我让帕斯泰尔付出代价，也能让我躲开公司的魔爪。研究也能接着传出去。"
             },
             {
-              "speaker": "player",
-              "text": "你知道他们要你做什么吗？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "问清楚了。我不会因为谁答应替我报仇，就什么都答应。"
-            },
-            {
-              "speaker": "player",
-              "text": "你要走了？"
+              "text": "他们要做什么，我问清楚了。我不会因为谁答应替我报仇，就什么都答应。"
             },
             {
               "speaker": "eleanor",
               "text": "不会一直住在原来的地方。也不能再按固定的日子来这儿了。"
-            },
-            {
-              "speaker": "player",
-              "text": "别把每次见面都变成传消息。"
             },
             {
               "speaker": "eleanor",
@@ -4469,12 +3623,8 @@
               "text": "只是有时候，我可能还需要一个能跟我好好说几句平常的话的人。"
             },
             {
-              "speaker": "player",
-              "text": "你知道这里在哪儿。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "知道。我一直都知道。"
+              "text": "这里在哪儿，我当然知道。"
             }
           ]
         },
@@ -4489,20 +3639,12 @@
               "text": "好了，我需要一件武器。你这儿有什么？"
             },
             {
-              "speaker": "player",
-              "text": "会用吗？"
-            },
-            {
               "speaker": "eleanor",
               "text": "有人教。我也不打算拿一件不会用的东西去吓唬人。"
             },
             {
-              "speaker": "player",
-              "text": "先看成色。坏的别凑合。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "这回听你的。"
+              "text": "我会先看成色。坏的不要。"
             }
           ]
         },
@@ -4514,7 +3656,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "钱够。这一笔，你别再替我免了。"
+              "text": "钱够。这一笔，别替我免。"
             }
           ]
         },
@@ -4545,16 +3687,8 @@
               "text": "现在，我连自己想变成什么样都说不准了。"
             },
             {
-              "speaker": "player",
-              "text": "那至少先别把谁的话都当真。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "嗯。包括你的。"
-            },
-            {
-              "speaker": "player",
-              "text": "包括我的。"
+              "text": "谁的话都别全当真。包括我的。"
             }
           ]
         },
@@ -4569,32 +3703,24 @@
               "text": "我想找埃莉诺。可她说过，不许到处打听她住在哪儿。"
             },
             {
-              "speaker": "player",
-              "text": "那就别打听。"
-            },
-            {
               "speaker": "lydia",
-              "text": "我不是来带她回去的。我知道这时候说这种话有多难听。"
+              "text": "我不打听。我不是来带她回去的，也知道这时候说这种话有多难听。"
             },
             {
               "speaker": "lydia",
               "text": "我只是想把她母亲以前帮过我家的事说清楚。那时候，我什么都没为她做。"
             },
             {
-              "speaker": "player",
-              "text": "等她愿意听的时候，你自己告诉她。"
-            },
-            {
               "speaker": "lydia",
-              "text": "好。我等她愿意。"
+              "text": "等她愿意听，我自己告诉她。"
             },
             {
               "speaker": "lydia",
               "text": "她要是需要什么正常买得到的东西，我可以帮忙找。我不需要知道她去哪儿。"
             },
             {
-              "speaker": "player",
-              "text": "这句我可以转告。"
+              "speaker": "lydia",
+              "text": "这句麻烦你转告她。"
             }
           ]
         },
@@ -4609,16 +3735,8 @@
               "text": "莉迪亚的话，我收到了。"
             },
             {
-              "speaker": "player",
-              "text": "要见她吗？"
-            },
-            {
               "speaker": "eleanor",
               "text": "以后吧。我现在没力气教每个人该怎么跟我说话。"
-            },
-            {
-              "speaker": "player",
-              "text": "那就以后。"
             }
           ]
         },
@@ -4633,10 +3751,6 @@
               "text": "我知道，我们之间还有些话一直没说完。"
             },
             {
-              "speaker": "player",
-              "text": "不用赶在你走之前说完。"
-            },
-            {
               "speaker": "eleanor",
               "text": "我在乎你。这件事，没有因为我妈出了事就消失。"
             },
@@ -4645,12 +3759,8 @@
               "text": "可我现在没法答应你按时回来，也不能让你把自己的日子停下来等我。"
             },
             {
-              "speaker": "player",
-              "text": "那就别许你现在做不到的承诺。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "……好。能回来的时候，我会回来。"
+              "text": "能回来的时候，我会回来。别的，我现在答应不了。"
             }
           ]
         },
@@ -4665,12 +3775,8 @@
               "text": "我会记得这里。不只记得那份研究和那笔调查款。"
             },
             {
-              "speaker": "player",
-              "text": "也记得你第一次嫌弃我的杯子？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "那只杯子确实有缺口。这一点我可没说错。"
+              "text": "也记得我第一次嫌你的杯子。那只杯子确实有缺口，这一点我可没说错。"
             }
           ]
         },
@@ -4685,20 +3791,12 @@
               "text": "今天来买点路上吃的。革命军那边要动身了。"
             },
             {
-              "speaker": "player",
-              "text": "还是不要营养果？"
+              "speaker": "eleanor",
+              "text": "营养果也要。现在看见它，我会觉得，至少有些事没白做。"
             },
             {
               "speaker": "eleanor",
-              "text": "要。现在看见它，我会觉得，至少有些事没白做。"
-            },
-            {
-              "speaker": "player",
-              "text": "挑你带得走的。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "嗯。账照算。"
+              "text": "挑我带得走的。账照算。"
             }
           ]
         },
@@ -4713,20 +3811,8 @@
               "text": "我该走了。"
             },
             {
-              "speaker": "player",
-              "text": "照顾好自己。"
-            },
-            {
               "speaker": "eleanor",
-              "text": "你也是。别什么麻烦找上门都接着。"
-            },
-            {
-              "speaker": "player",
-              "text": "看情况。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……就知道你会这么说。"
+              "text": "你照顾好自己。别什么麻烦找上门都接着。"
             },
             {
               "speaker": "eleanor",
@@ -4755,35 +3841,15 @@
             },
             {
               "speaker": "player",
-              "text": "已经交出去了。他们答应会放人。"
+              "text": "交了。他们答应放人，没确认。我拿三百。"
             },
             {
               "speaker": "eleanor",
-              "text": "你确认过了吗？"
-            },
-            {
-              "speaker": "player",
-              "text": "还没有。"
+              "text": "我让你收着，不是让你替我决定我母亲值多少钱。"
             },
             {
               "speaker": "eleanor",
-              "text": "那你拿到了什么？"
-            },
-            {
-              "speaker": "player",
-              "text": "三百信用点。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我让你保管它，不是让你替我决定我母亲值多少钱。"
-            },
-            {
-              "speaker": "player",
-              "text": "事情说不定还能办成。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我会自己去查。从今天起，我的事你别再管了。"
+              "text": "你不用再说事情还能办成。我会自己查。从今天起，我的事你别再管了。"
             }
           ]
         },
@@ -4799,7 +3865,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "我会过我自己的日子。你也继续做你的生意吧。"
+              "text": "我会过自己的日子。你继续做生意吧。"
             }
           ]
         },
@@ -4835,11 +3901,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "报纸上的东西，是你送过去的？"
-            },
-            {
-              "speaker": "player",
-              "text": "总得有人做决定。"
+              "text": "报纸上的东西，是你送过去的吧。"
             },
             {
               "speaker": "eleanor",
@@ -4847,7 +3909,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "你可以说你是为了大家好。可别再说，这是我们一起选的路。"
+              "text": "你可以说总得有人做决定。可别再说，这是我们一起选的路。"
             }
           ]
         },
@@ -4859,19 +3921,15 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我想过了。后面的事，我自己来处理。"
-            },
-            {
-              "speaker": "player",
-              "text": "你打算怎么做？"
+              "text": "我想过了。后面的事，我自己来办。"
             },
             {
               "speaker": "eleanor",
-              "text": "先想办法把我妈接回来。他们开的条件，我会一条一条核实。"
+              "text": "先想办法把我妈接回来。他们开的条件，我会一条一条问清楚。"
             },
             {
               "speaker": "eleanor",
-              "text": "以前你帮过我的，谢谢你。就算没走到最后，那些我也不会忘。"
+              "text": "以前你帮过我，谢谢你。就算没走到最后，那些我也不会忘。"
             }
           ]
         }
@@ -4895,20 +3953,12 @@
               "text": "你还没把那盏灯修好？"
             },
             {
-              "speaker": "player",
-              "text": "还能亮。"
+              "speaker": "eleanor",
+              "text": "我那只缺口杯子也还能喝水。可你当时就看着我拿了个缺口的！"
             },
             {
               "speaker": "eleanor",
-              "text": "我那只缺口杯子也还能喝水。可你当时明明说有完整的！"
-            },
-            {
-              "speaker": "player",
-              "text": "这种事你倒记得清楚。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "当然。跟你打交道的第一笔账，怎么能糊涂。"
+              "text": "当然。跟你打交道的第一笔账，我记着呢。"
             }
           ]
         },
@@ -4920,23 +3970,15 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我妈做多了，让我带过来。"
-            },
-            {
-              "speaker": "player",
-              "text": "怎么每次都正好多一份？"
+              "text": "我妈做多了，让我给你带过来。"
             },
             {
               "speaker": "eleanor",
-              "text": "你到底要不要？"
-            },
-            {
-              "speaker": "player",
-              "text": "要。"
+              "text": "拿着。别问怎么每次都正好多一份。"
             },
             {
               "speaker": "eleanor",
-              "text": "那就少问一个让做饭的人不好回答的问题。"
+              "text": "问多了，做饭的人不好回答。快吃。"
             }
           ]
         },
@@ -4951,20 +3993,12 @@
               "text": "刚才那个客人我认识。以前老劝我别跟下面的人来往。"
             },
             {
-              "speaker": "player",
-              "text": "今天倒挺乐意来买东西。"
-            },
-            {
               "speaker": "eleanor",
               "text": "我跟他说了，想买东西，就守这里的规矩。想教我怎么挑男朋友，就请回吧。"
             },
             {
-              "speaker": "player",
-              "text": "他怎么选的？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "买东西。他也不是每次都那么不识趣。"
+              "text": "他最后还是买了东西。看来也不是每次都那么不识趣。"
             }
           ]
         },
@@ -4979,20 +4013,12 @@
               "text": "今天这笔别给我免了，我发工钱了。"
             },
             {
-              "speaker": "player",
-              "text": "你不用每次都证明自己付得起。"
+              "speaker": "eleanor",
+              "text": "我就是想让你知道，不是只有你会照顾人。"
             },
             {
               "speaker": "eleanor",
-              "text": "我知道。我就是想让你知道，不是只有你会照顾人。"
-            },
-            {
-              "speaker": "player",
-              "text": "那就照价算。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "嗯。算完了，再陪我聊一会儿。"
+              "text": "算完了，再陪我聊一会儿。"
             }
           ]
         },
@@ -5007,20 +4033,12 @@
               "text": "这回的货我分好了。有毛病的放在一起，别说我没提醒你。"
             },
             {
-              "speaker": "player",
-              "text": "越来越像老手了。"
+              "speaker": "eleanor",
+              "text": "我现在也算老手了。第一次拾荒那种事，你可别再提。"
             },
             {
               "speaker": "eleanor",
-              "text": "本来就是。你可别拿我第一次拾荒说一辈子。"
-            },
-            {
-              "speaker": "player",
-              "text": "那说你第一次来买吃的？"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……先谈今天的价！"
+              "text": "行了，先谈今天的价。"
             }
           ]
         },
@@ -5035,141 +4053,12 @@
               "text": "今天不谈那些事。你这儿最近有什么新货？"
             },
             {
-              "speaker": "player",
-              "text": "要货，还是要消息？"
-            },
-            {
               "speaker": "eleanor",
-              "text": "要货。最好是能让我挑几句毛病的那种。"
-            },
-            {
-              "speaker": "player",
-              "text": "那可多了。"
+              "text": "要货，不要消息。最好是能让我挑几句毛病的那种。"
             },
             {
               "speaker": "eleanor",
               "text": "好啊。听起来就像普通逛一次店。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "end",
-      "number": 0,
-      "title": "原版游戏结束时的追加文字",
-      "day": "",
-      "kind": "end",
-      "blocks": [
-        {
-          "id": "end.b001",
-          "chapter": "end",
-          "scene": "玩家平安留在空间站，母亲生还，恋爱已确认",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "后来，她有时从工作的地方过来，有时陪母亲办完事再来。照旧嫌你的灯不够亮，照旧要把每一笔账都算清楚。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "只是再也没有人需要去猜，她为什么总往这家当铺跑。"
-            }
-          ]
-        },
-        {
-          "id": "end.b002",
-          "chapter": "end",
-          "scene": "玩家必须离开空间站，母亲生还，恋爱已确认",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "临走前，你把消息告诉了她。她先问你路上是不是都安排妥了，又把能联系上的法子一条条重新核了一遍。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "她没说一切都会很容易。你们只是约好，往后的每一步，也都要跟对方说清楚。"
-            }
-          ]
-        },
-        {
-          "id": "end.b003",
-          "chapter": "end",
-          "scene": "原版结局使玩家被捕或长期失去自由",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "埃莉诺得知消息后，开始四处打听你的下落。她记得你当初是怎么一条条核实承诺的，也知道光说一句“会没事的”远远不够。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "她还没打听到能见你的办法，却把每次问到的名字都记了下来。第二天，照着那些名字接着去找。"
-            }
-          ]
-        },
-        {
-          "id": "end.b004",
-          "chapter": "end",
-          "scene": "原版结局中玩家死亡",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "后来，她还是来过这家店。没有交易，也没有一句等你回答的话。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "关于你，她记得的不只是最后的结局，还有最早那些算得明明白白的小账。"
-            }
-          ]
-        },
-        {
-          "id": "end.b005",
-          "chapter": "end",
-          "scene": "母亲生还，朋友路线",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "她把日子一点点重新过顺了，偶尔带货来，偶尔替熟人介绍生意。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "你们没有成为恋人，但她再也不会把下层区只当成一个不得不忍受的地方。"
-            }
-          ]
-        },
-        {
-          "id": "end.b006",
-          "chapter": "end",
-          "scene": "母亲遇害，双方仍信任",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "她的消息不总能传过来。偶尔出现时，也不一定是谈研究或革命。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "有时她只是问一句，你的店还开着吗。她记得，在这家当铺里，她可以先只是埃莉诺。"
-            }
-          ]
-        },
-        {
-          "id": "end.b007",
-          "chapter": "end",
-          "scene": "明确背叛或关系结束",
-          "label": "",
-          "lines": [
-            {
-              "speaker": "narrator",
-              "text": "她再也没来过。你听到的关于她的消息，都来自别的客人。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "当铺的账本记得下那笔收入，却没有哪一栏写着，从此少了谁。"
             }
           ]
         }

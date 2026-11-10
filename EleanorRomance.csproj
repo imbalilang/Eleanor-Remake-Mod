@@ -14,6 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="dist/**" />
     <Reference Include="Assembly-CSharp">
       <HintPath>..\Probably Stolen_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>

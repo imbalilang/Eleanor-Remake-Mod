@@ -127,6 +127,21 @@ namespace EleanorRomance
                 ModConstants.LydiaPortraitBeauty, ModConstants.LydiaSprite);
         }
 
+        public static Sprite GetLocalSprite(string key)
+        {
+            try
+            {
+                var mod = FindOurMod();
+                if (mod?.Sprites != null && !string.IsNullOrEmpty(key)
+                    && mod.Sprites.TryGetValue(key, out var sprite) && sprite != null) return sprite;
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Local sprite lookup failed for " + key + ": " + ex);
+            }
+            return null;
+        }
+
         public static bool IsGalaScene(string id)=>id=="er_story_gala" && GalaStory.Eligible
             && MaidState.PendingVisit==GalaStory.VisitId;
         public static string GalaDescription=>L.Get(ResolveGala("er_story_gala")==GalaKey

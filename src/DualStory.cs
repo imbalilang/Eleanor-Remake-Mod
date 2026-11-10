@@ -32,7 +32,11 @@ namespace EleanorRomance
                 case "dr18": return CreateDr18();
                 case "dr19": return CreateDr19();
                 case "dr20": return CreateDr20();
-                case "dual_epilogue": return CreateDualEpilogue();
+                case "dual_epilogue":
+                    // The old standalone epilogue visit is retired; old saves
+                    // resume at the regular daily visit instead.
+                    DualState.Complete("dual_epilogue");
+                    return CreateDaily();
                 case "daily": return CreateDaily();
                 default:
                     ModEntry.LogError("Dual scene body not connected yet: " + id);
@@ -71,8 +75,7 @@ namespace EleanorRomance
                 var resume=DualText.Build("dr01_accept");Finish(client,resume,"entry");return Ready(client,resume);
             }
             bool legacy=DualState.Flag("migration.consent_pending") && RomanceState.RomanceConfirmed;
-            var open=DualText.Build(legacy?"v05_legacy_entry":"dr01_open",legacy?"v05_entry_notice":"dr01_notice");
-            if(!legacy)DualText.Append(open,"v05_entry_notice");
+            var open=DualText.Build(legacy?"v05_legacy_entry":"dr01_open");
             var accept=DualText.Build("dr01_accept");
             var decline=DualText.Build("dr01_decline");
             DualText.Choices(open,"er_dual_prompt",
@@ -151,8 +154,9 @@ namespace EleanorRomance
         {
             var c=Eleanor("dual_dr08");
             string job=RomanceState.WorkState>0?"v05_dr08_existing":RomanceState.Route==2?"dr08_job_b":"dr08_job_a";
-            string mother=RomanceState.Route==1?"dr08_mother_a":MaidWorldEvents.Acquitted?"dr08_mother_cleared":"dr08_mother_pending";
-            var root=DualText.Build(job,mother,"dr08_common","dr08_lover");
+            var root=RomanceState.Route==1
+                ?DualText.Build(job,"dr08_common","dr08_lover")
+                :DualText.Build(job,MaidWorldEvents.Acquitted?"dr08_mother_cleared":"dr08_mother_pending","dr08_common","dr08_lover");
             StoryEngine.Tail(root).SetEndAction(()=>EleanorStory.FinishFuture(c,23,()=>
             {StoryCoreFacts.CompleteReplacement(23);DualDirector.CompleteScene("dr08");}));
             return Ready(c,root);
@@ -302,8 +306,7 @@ namespace EleanorRomance
         {
             StoreClient client = Eleanor("dual_dr20", "eleanor1");
             Dialogue root = DualText.Build("dr20_arrival", "dr20_gathering",
-                DualBusiness.PlaquePlaced() ? "dr20_plaque" : "dr20_no_plaque",
-                "dr20_closing");
+                DualBusiness.PlaquePlaced() ? "dr20_plaque" : "dr20_no_plaque");
 
             if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_entry_resume"));
             Finish(client, root, "dr20", () =>
@@ -311,23 +314,6 @@ namespace EleanorRomance
                 DualState.LastDailyDay = DualState.Today;
                 StoryDirector.Notify(L.Get("er_dual_notice_ending"));
             });
-            return Ready(client, root);
-        }
-
-        private static StoreClient CreateDualEpilogue()
-        {
-            StoreClient client = Eleanor("dual_epilogue", "eleanor1");
-            string worldBlock = RomanceState.Route != 2 ? "dr_epilogue_route_a"
-                : MaidWorldEvents.Acquitted ? "dr_epilogue_route_b_acquitted"
-                : MaidWorldEvents.State > 0 ? "dr_epilogue_route_b"
-                : "dr_epilogue_route_b_unsubmitted";
-            Dialogue root = DualText.Build("dr_epilogue_safe",
-                worldBlock,
-                DualBusiness.PlaquePlaced() ? "dr_epilogue_plaque_listed"
-                    : DualState.PlaqueReceived ? "dr_epilogue_plaque_held"
-                    : "dr_epilogue_plaque_none");
-            if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_notice_ending"));
-            Finish(client, root, "dual_epilogue", () => DualState.LastDailyDay = DualState.Today);
             return Ready(client, root);
         }
 

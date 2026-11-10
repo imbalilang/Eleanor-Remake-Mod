@@ -763,16 +763,10 @@ namespace EleanorRomance
             };
             Dialogue main = StoryEngine.Build(StoryV06Content.B_C09_B001);
             StoryEngine.Tail(main).SetEndAction(null);
-            // v0.4 common-9 additions: Lydia's arrival beat and the first
-            // "what do you look like" exchange, before the bracelet trade.
-            Dialogue arrival = DualText.Build("common09_add_arrival");
+            // The native walk-in already shows Lydia's arrival; keep only the
+            // first "what do you look like" exchange before the bracelet trade.
             DualText.Append(main, "common09_add_added");
             StoryEngine.Tail(main).SetEndAction(spawnBracelet);
-            if (arrival != null)
-            {
-                StoryEngine.Tail(arrival).SetNextDialogue(main);
-                main = arrival;
-            }
             client.mainDialogue = main;
 
             FinishWhenLeaving(client, 10, 11, () =>

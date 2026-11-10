@@ -69,25 +69,5 @@ namespace EleanorRomance
                 StoryDirector.CompleteCore();
             });return Ready(c,root);
         }
-        public static string Ending(string description)
-        {
-            if(!MaidState.HasHistory)return null;
-            if(RomanceState.Route==4)
-                return RomanceState.BetrayalKind==4?L.Get("er_maid_ending_exit"):null;
-            string text=(description??"").ToLowerInvariant();
-            if(RomanceState.MotherState==2)
-                return Contains(text,"死亡","死了","dead","died","killed")?null:MaidText.Plain("ending_b010");
-            if(!MaidState.Lovers)return null;
-            if(Contains(text,"死亡","死了","dead","died","killed"))return MaidText.Plain("ending_b008");
-            if(Contains(text,"被捕","监禁","失去自由","prison","arrest","captured","detained"))return MaidText.Plain("ending_b007");
-            if(Contains(text,"离开","远行","流放","leave","depart","exile"))return MaidText.Plain("ending_b006");
-            if(MaidState.Progress>=28)return MaidText.Plain("ending_b003");
-            string result=MaidText.Plain("ending_b001");
-            int stage=MaidState.Progress>=27?4:MaidState.Progress>=26?3:MaidState.Progress>=25?2:MaidState.Progress>=24?1:MaidProjects.ResultShown(1)?0:-1;
-            if(stage>=0)result+="\n\n"+MaidText.Plain("ending_b002",stage);
-            return result;
-        }
-        private static bool Contains(string text,params string[] parts)
-        {foreach(var part in parts)if(text.Contains(part))return true;return false;}
     }
 }

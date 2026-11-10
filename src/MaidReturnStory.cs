@@ -162,7 +162,7 @@ namespace EleanorRomance
             for(int i=0;i<3;i++)
             {
                 var branch=MaidText.Build(blocks[i]);if(i==2)MaidText.Append(branch,"m28_b008");
-                MaidText.Append(branch,"m28_b010","m28_b011");
+                MaidText.Append(branch,"m28_b010");
                 branch=FinishEvent(branch,28,()=>{AdvanceReturn(28);MaidState.Contract=3;MaidState.LastChatDay=MaidState.Today;});
                 options[i]=Option("er_maid_final_"+(i+1),branch,description:"er_maid_final_continue_desc");
             }

@@ -5,38 +5,23 @@
       "lines": [
         {
           "speaker": "Eleanor",
-          "text": "还记得第一单那户翻修种植间的人家吗？他们又来问了！",
-          "en": "Remember the people renovating their growing room, our first order? They asked again."
-        },
-        {
-          "speaker": "Player",
-          "text": "上回那批用得怎么样？",
-          "en": "How did the last lot work out?"
+          "text": "还记得翻修种植间那户人家吗？他们又来问了。",
+          "en": "Remember the family renovating their growing room? They came asking again."
         },
         {
           "speaker": "Eleanor",
-          "text": "验收过了，一件都没退。这回他们先问下一批什么时候能看，还特意问是不是还由我经手。",
-          "en": "It passed inspection. Not one return. This time they asked when they could see the next lot, and specifically whether I'd still be handling it."
-        },
-        {
-          "speaker": "Player",
-          "text": "你怎么回的？",
-          "en": "What did you tell them?"
+          "text": "上回那批一件都没退。这回先问下一批什么时候能看，还问是不是仍由我经手。",
+          "en": "Not one piece from the last lot was returned. This time they asked when they could see the next batch, and whether I'd still be handling it."
         },
         {
           "speaker": "Eleanor",
-          "text": "先问他们要什么、什么时候要。我又没答应每回都能变出货来。",
-          "en": "I asked what they needed and when. I haven't promised to conjure it up every time."
-        },
-        {
-          "speaker": "Player",
-          "text": "那就等他们的单子。",
-          "en": "Then wait for the list."
+          "text": "我先问他们要什么、什么时候要。我没答应每回都能变出货，等他们的单子。",
+          "en": "I asked what they need and when. I didn't promise I could produce stock every time. I'm waiting for their order."
         },
         {
           "speaker": "Eleanor",
-          "text": "嗯。……以前别人来找我，多半是想托我打听母亲的事。这一回，他们先问的是我。",
-          "en": "Mm. ...People used to approach me mostly to ask my mother something. This time, they asked for me first."
+          "text": "……以前别人来找我，多半想打听母亲的事。这回他们先问的是我。",
+          "en": "...Before, when people came to me, it was usually to ask about Mother. This time they asked about me first."
         },
         {
           "speaker": "Player",
@@ -54,29 +39,14 @@
       "id": "interaction_b007",
       "lines": [
         {
-          "speaker": "Narrator",
-          "text": "卷帘门刚拉起来，你就看见她站在外面。听见动静，她往前走了一步，手还攥着包带。",
-          "en": "As the shutter rises, you see her waiting outside. She steps towards the sound, still gripping her bag strap."
+          "speaker": "Eleanor",
+          "text": "我母亲接出来了！我先安顿好她，就赶过来了。本来想等你开门……还是来早了。",
+          "en": "My mother's out! I got her settled and came straight here. I meant to wait for you to open... I'm early."
         },
         {
           "speaker": "Player",
-          "text": "这么早？",
-          "en": "This early?"
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "我母亲接出来了！我见到她了，先把她安顿好，就赶过来了。",
-          "en": "My mother is out. I've seen her. I got her settled, then came straight here."
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "本来想等你开了门再来……还是来早了。",
-          "en": "I meant to wait until you opened... Still came too early."
-        },
-        {
-          "speaker": "Player",
-          "text": "进来，从头说。",
-          "en": "Come in. Start at the beginning."
+          "text": "进来说。",
+          "en": "Come inside."
         }
       ]
     },
@@ -84,29 +54,14 @@
       "id": "interaction_b008",
       "lines": [
         {
-          "speaker": "Narrator",
-          "text": "卷帘门刚拉起来，你就看见她站在外面。听见动静，她往前走了一步，手还攥着包带。",
-          "en": "As the shutter rises, you see her waiting outside. She steps towards the sound, still gripping her bag strap."
+          "speaker": "Eleanor",
+          "text": "我母亲安全转出来了！我刚从她那儿过来。本来想等你开门……还是来早了。",
+          "en": "My mother's been moved out safely! I just came from seeing her. I meant to wait for you to open... I'm early."
         },
         {
           "speaker": "Player",
-          "text": "这么早？",
-          "en": "This early?"
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "我母亲安全转出来了！我刚从她那儿过来。",
-          "en": "My mother has been moved to safety. I've just come from seeing her."
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "本来想等你开了门再来……还是来早了。",
-          "en": "I meant to wait until you opened... Still came too early."
-        },
-        {
-          "speaker": "Player",
-          "text": "进来，从头说。",
-          "en": "Come in. Start at the beginning."
+          "text": "进来说。",
+          "en": "Come inside."
         }
       ]
     },
@@ -114,19 +69,9 @@
       "id": "gala_b001",
       "lines": [
         {
-          "speaker": "Narrator",
-          "text": "最后一位客人已经离开。你正要关上店门，熟悉的声音却从门口传来。",
-          "en": "The last customer has gone. Just as you are about to close up, a familiar voice comes from the doorway."
-        },
-        {
           "speaker": "Eleanor",
           "text": "今天轮到我来接你了。",
           "en": "Today it's my turn to pick you up."
-        },
-        {
-          "speaker": "Narrator",
-          "text": "她换回上层区的正装，站在门口，等你先开口。",
-          "en": "Dressed for the Upper Level, she stands in the doorway and waits for you to speak."
         },
         {
           "speaker": "Player",
@@ -135,18 +80,8 @@
         },
         {
           "speaker": "Eleanor",
-          "text": "你先看。看够了再问。",
-          "en": "Look first. Ask when you've had enough."
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "……算了，再多给你看一会儿。",
-          "en": "...Fine. I'll give you another moment."
-        },
-        {
-          "speaker": "Player",
-          "text": "今晚是什么场合？",
-          "en": "What's the occasion tonight?"
+          "text": "你先看。看够了再问。……算了，再多给你看一会儿。",
+          "en": "You look first. Ask when you've looked enough. ...Fine. I'll let you look a little longer."
         },
         {
           "speaker": "Eleanor",
@@ -154,54 +89,24 @@
           "en": "There's a party upstairs. The invitation has a space for a companion's name."
         },
         {
-          "speaker": "Player",
-          "text": "那一栏很难填？",
-          "en": "A difficult space to fill?"
+          "speaker": "Eleanor",
+          "text": "想被填进去的人太多了。有人送花，有人留座位，还有人提醒我，带一位“合适的男伴”对生意有好处。上回推掉的那张饭桌也在里面。",
+          "en": "Too many people want that slot. Some send flowers, some save seats, and some remind me that bringing a 'suitable male companion' would be good for business. The dinner table I turned down last time is in there too."
         },
         {
           "speaker": "Eleanor",
-          "text": "想被填进去的人太多了。有人送花，有人给我留座位，还有人提醒我，带一位“合适的男伴”，对以后的生意有好处。",
-          "en": "Too many people want their name there. Flowers, reserved seats, and reminders that a 'suitable companion' would be good for business."
-        },
-        {
-          "speaker": "Player",
-          "text": "就是上回你推掉的那张饭桌？",
-          "en": "Including that table you turned down last time?"
+          "text": "我提过你，可总有人以为我只是客气地谢一谢出钱的老板。",
+          "en": "I've mentioned you, but people still assume I'm just politely thanking the shopkeeper who put up the money."
         },
         {
           "speaker": "Eleanor",
-          "text": "那张也在里面。",
-          "en": "That one too."
-        },
-        {
-          "speaker": "Narrator",
-          "text": "她把请柬放在柜台上，推到你面前。同行人那一栏空着。",
-          "en": "She lays the invitation on the counter and slides it towards you. The companion's space is blank."
+          "text": "所以今晚要把话说清楚。我也想跟你跳支舞！别光听前半句。",
+          "en": "So tonight I'm making it clear. I want to dance with you too! Don't just hear the first half."
         },
         {
           "speaker": "Eleanor",
-          "text": "我跟他们提过你。可总有人以为，我只是客客气气地谢一谢出过钱的老板。",
-          "en": "I've told them about you. But some still think I'm only being polite to the shopkeeper who put up the money."
-        },
-        {
-          "speaker": "Player",
-          "text": "所以今晚要把话说清楚。",
-          "en": "So tonight you intend to make it clear."
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "我也想跟你跳支舞！别光听前半句。",
-          "en": "I also want a dance with you. Don't only hear the first part."
-        },
-        {
-          "speaker": "Player",
-          "text": "我这身衣服？",
-          "en": "And these clothes?"
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "穿件干净的外套就行。我带的是你，又不是你的衣服。",
-          "en": "A clean coat will do. I'm bringing you, not your clothes."
+          "text": "穿件干净外套就行。我带的是你，又不是你的衣服。",
+          "en": "Just wear a clean jacket. I'm bringing you, not your clothes."
         }
       ]
     },
@@ -212,11 +117,6 @@
           "speaker": "Eleanor",
           "text": "你自己填。",
           "en": "Fill it in yourself."
-        },
-        {
-          "speaker": "Narrator",
-          "text": "你写下自己的名字。她看了一眼，合上请柬，朝你伸出手。",
-          "en": "You write your name. She glances at it, closes the invitation and holds out her hand."
         },
         {
           "speaker": "Eleanor",
@@ -230,18 +130,13 @@
       "lines": [
         {
           "speaker": "Eleanor",
-          "text": "上回那场，我自己去了。同行人那一栏，我一直空着。",
-          "en": "I went to that party on my own. Left the companion's space blank."
-        },
-        {
-          "speaker": "Player",
-          "text": "有人问吗？",
-          "en": "Did anyone ask?"
+          "text": "上回那场，我自己去了，同行人那一栏一直空着。",
+          "en": "I went to the last one alone. The companion line stayed empty."
         },
         {
           "speaker": "Eleanor",
-          "text": "问了。我说他店里走不开。……下回你要是还走不开，我就直接去店里把你拎走！",
-          "en": "They did. I said he couldn't leave the shop. ...Next time you're stuck there, I'll come and carry you out myself."
+          "text": "有人问，我说他店里走不开。……下回你还走不开，我就直接去店里把你拎走！",
+          "en": "Someone asked, and I said you couldn't leave the shop. ...If you can't leave next time either, I'll come drag you out myself!"
         }
       ]
     },
@@ -254,24 +149,9 @@
           "en": "We're in the paper. 'Mysterious companion'—I told them exactly what you do."
         },
         {
-          "speaker": "Player",
-          "text": "他们大概还没来过我的店。",
-          "en": "They probably haven't visited my shop."
-        },
-        {
           "speaker": "Eleanor",
-          "text": "那就让他们来。来问价的时候，你照常算。",
-          "en": "Then let them come. Quote your usual prices."
-        },
-        {
-          "speaker": "Player",
-          "text": "你也照常？",
-          "en": "You too?"
-        },
-        {
-          "speaker": "Eleanor",
-          "text": "生意照常。别的，等客人走了再说。",
-          "en": "Business as usual. The rest can wait until the customers leave."
+          "text": "那就让他们来。问价的时候，你照常算。你也照常——生意归生意，别的等客人走了再说。",
+          "en": "Then let them come. When they ask the price, quote it as usual. And as usual—business is business. The rest waits until the customers are gone."
         }
       ]
     },
