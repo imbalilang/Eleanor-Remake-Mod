@@ -105,13 +105,13 @@ namespace EleanorRomance
             var ordinary=StoryEngine.Build(StoryV06Content.B_C11_B002);FinishMain(ordinary,12,13);
             var withdraw=MaidText.Build("m11_b012");FinishMain(withdraw,12,13);
             var offer=MaidText.Build("m11_b006","m11_b007","m11_b008");
-            var menu=StoryEngine.Text(L.Player,L.Get("er_maid_entry_terms"));
+            var menu=StoryEngine.Text(L.Player,L.Get("er_maid_prompt"));
             StoryEngine.Tail(offer).SetNextDialogue(menu);
             var success=MaidText.Build("m11_b011");
             FinishMain(success,12,13,()=>StoryDirector.Notify(L.Get("er_maid_notice_entry")));
-            GuardedOption(menu,"er_maid_entry_confirm",success,MaidProjects.TryEnter,"er_maid_entry_terms",()=>StoryEngine.HasCash(800));
+            GuardedOption(menu,"er_maid_entry_confirm",success,MaidProjects.TryEnter,"er_maid_entry_confirm_desc",()=>StoryEngine.HasCash(800));
             menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_entry_back"),L.Get("er_maid_choice_no_cost"),withdraw,null,null);
-            Choices(root,Option("er_maid_entry_normal",ordinary),Option("er_maid_entry_offer",offer,description:"er_maid_entry_terms"));
+            Choices(root,Option("er_maid_entry_normal",ordinary),Option("er_maid_entry_offer",offer,description:"er_maid_entry_offer_desc"));
             return Ready(client,root);
         }
         public static StoreClient CreateLegacy()

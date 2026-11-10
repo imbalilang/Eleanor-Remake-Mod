@@ -1,0 +1,11 @@
+Use case: identity-preserve / targeted hairstyle edit.
+Image 1 is the EDIT TARGET: the just-created author-style fusion Lydia portrait.
+Image 2 is our previous Lydia, a supporting identity/hairstyle direction reference only. The user's current hairstyle instruction overrides any large curls visible in either reference.
+
+Change ONLY the HAIR SHAPE of Image 1:
+Make it a distinctly LONG, MOSTLY STRAIGHT hairstyle with only a gentle natural bend and slight curl at the lower ends. The main lengths fall in smooth, calm, near-vertical locks down past the shoulders toward the waist. A little soft movement at the tips is enough. Remove the fluffy rounded masses, repeated large S-waves and outward-looping ringlets along the sides of the head and shoulders that make her silhouette too close to Eleanor.
+Use a soft near-centre part with a few long separated face-framing strands. Keep the side sections lightly swept back in a flatter understated half-up arrangement like our Lydia, rather than a thick high braided crown or elaborate piled-up waves. Hair lies relatively close to the head at the temples and flows down simply beside the shoulders. Keep the small rose-and-pearl hair ornament, adapted naturally to the simpler half-up style. The result should read at once as long straight hair with gently turned ends, not another wavy-haired Eleanor.
+
+Preserve EXACTLY all the successful parts of Image 1: the cooler low-saturation honey-brown / milk-tea-brown colour and neutral brown shadows; the original author's warm restrained illustration style and linework; the same mature adult Lydia facial identity, amber eye size and shape, gaze, gentle closed-mouth smile, skin tone, head angle, pearl earrings, cream and rose fitted outfit, semi-sheer upper-chest textile, bare shoulders, anatomy and body proportions, pose, lighting, waist-up crop, figure scale and placement.
+Do not redesign the face, enlarge eyes or breasts, change the clothes or copy Image 2's stronger anime finish. Maintain the original author's style from Image 1.
+Single portrait, complete head through natural waist only, same landscape canvas and transparent background. Normal high-resolution source illustration for later B/detail sampling. No artificial pixel grid, grain, dithering, text, UI, watermark, background or other characters. One edited portrait.

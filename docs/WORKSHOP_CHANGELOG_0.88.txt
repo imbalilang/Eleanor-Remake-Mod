@@ -1,0 +1,17 @@
+0.88｜Lydia 独立形象修正
+
+• Lydia 是恋爱对象，始终保留本 MOD 的独立画像：无少女当铺使用 er_portrait_lydia_female_vanilla，有少女当铺使用 er_portrait_lydia_female_beauty。
+• 约会服同理使用 er_portrait_lydia_date_female_vanilla / er_portrait_lydia_date_female_beauty；只有自定义文件缺失时才回退 femaleUpper10。
+• 撤销 0.87 将 Lydia 回退为通用 femaleUpper10 的方案。
+• 母亲仍为：无少女当铺 → femaleUpper3；有少女当铺 → er_portrait_mother_female_beauty。
+• 女仆装、礼服、战术背心仍复用原游戏 Eleanor 画像（eleanor_scav / eleanor1 / eleanor_rev）。
+• 保留 0.87 的即时 E3/E4 结局页、侍从短入口、其他美化 MOD 混搭修复与 0.86 修正。
+
+0.88 | Lydia keeps her independent portrait
+
+• Lydia is a romance lead and always keeps the mod's dedicated portrait: er_portrait_lydia_female_vanilla without CutePortraits, er_portrait_lydia_female_beauty with it.
+• The date outfit uses er_portrait_lydia_date_female_vanilla / er_portrait_lydia_date_female_beauty; only a missing local file falls back to femaleUpper10.
+• Reverts 0.87's generic femaleUpper10 Lydia fallback.
+• Mother: femaleUpper3 without CutePortraits; er_portrait_mother_female_beauty with it.
+• Maid, gala and tactical-vest scenes still reuse original Eleanor portraits (eleanor_scav / eleanor1 / eleanor_rev).
+• Retains 0.87's immediate E3/E4 ending pages, short attendant entry UI, other-beauty-mod mix fix and 0.86 fixes.

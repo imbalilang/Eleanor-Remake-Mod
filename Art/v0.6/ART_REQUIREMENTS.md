@@ -3,6 +3,8 @@
 更新日期：2026-11-06  
 适用范围：`EleanorRomanceDev` / Workshop 物品 3834588749
 
+> 2026-11-11 兼容策略更新：Lydia 是恋爱对象，未启用少女当铺时继续使用本文件的 `er_portrait_lydia_female_vanilla` 独立立绘（缺图才回退 `femaleUpper10`）；母亲未启用少女当铺时回退原游戏 `femaleUpper3`，自定义母亲 `_vanilla` 不再作为运行显示图。女仆/礼服/战术背心未启用时回退 Eleanor 原游戏画像。下表旧的双版本说明保留作美术记录，运行行为以本注和 `src/PortraitCompat.cs` 为准。
+
 ## 1. 当前状态
 
 - Eleanor 与所有通用 NPC：复用游戏原版立绘键；少女当铺（Workshop 3829696854）启用时自动换成其 `cp_portrait_*` 美化立绘。
@@ -15,24 +17,24 @@
 
 | 环境 | 使用的资源 |
 |---|---|
-| 未启用少女当铺 | `_vanilla` 版本 |
+| 未启用少女当铺 | Lydia 使用独立 `_vanilla`；Mother 使用原游戏 `femaleUpper3` |
 | 启用少女当铺 | `_beauty` 版本 |
-| 对应文件缺失 | 回退到通用 `femaleUpper3` / `femaleUpper6`（仅作为防崩溃兜底，不是正式效果） |
+| 对应文件缺失 | Lydia 回退 `femaleUpper10`；Mother 回退 `femaleUpper3` |
 
-因为莉迪亚和母亲不走少女当铺的 `cp_portrait_*` 通用资源，所以**两位角色各自需要两份美术资源**：
+以下是 2026-11-06 双版本美术记录；2026-11-11 起 `_vanilla` 图不再用于运行显示，仅保留作历史与旧档清理参考：
 
 ### 莉迪亚
 
 | 文件 | 用途 | 风格要求 |
 |---|---|---|
-| `Textures/Items/er_portrait_lydia_female_vanilla.png` | 无少女当铺 | 贴近游戏原版 288×212 像素立绘；线稿、描边、色板、光向与原版一致 |
+| `Textures/Items/er_portrait_lydia_female_vanilla.png` | 无少女当铺（Lydia 独立形象） | 贴近游戏原版 288×212 像素立绘；线稿、描边、色板、光向与原版一致 |
 | `Textures/Items/er_portrait_lydia_female_beauty.png` | 有少女当铺 | 贴近少女当铺的动漫像素立绘；与 `cp_portrait_femaleUpper*` 并排时不割裂 |
 
 ### 母亲
 
 | 文件 | 用途 | 风格要求 |
 |---|---|---|
-| `Textures/Items/er_portrait_mother_female_vanilla.png` | 无少女当铺 | 同上，原版像素风 |
+| `Textures/Items/er_portrait_mother_female_vanilla.png` | 历史/旧档清理 | 同上，原版像素风 |
 | `Textures/Items/er_portrait_mother_female_beauty.png` | 有少女当铺 | 同上，少女当铺动漫像素风 |
 
 ## 3. 立绘规格

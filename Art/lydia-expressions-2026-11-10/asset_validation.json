@@ -1,0 +1,499 @@
+{
+  "date": "2026-11-10",
+  "tool": "image_gen.imagegen",
+  "installed": true,
+  "source_approval": "user_approved_daily_beauty_v4",
+  "approved_master_sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5",
+  "fixed_transform": {
+    "s": 0.14487300094073377,
+    "tx": 38.81514581373473,
+    "ty": 59.11665098777047
+  },
+  "base_portraits": {
+    "daily": {
+      "source": "Art/lydia-style-fusion-2026-11-10/approved/er_portrait_lydia_female_beauty.png",
+      "sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+      "runtime_file": "er_portrait_lydia_female_beauty.png",
+      "neutral_eye_white_pixels": 14
+    },
+    "date": {
+      "source": "Art/lydia-style-fusion-2026-11-10/portraits/er_portrait_lydia_date_female_beauty_fusion_v1.png",
+      "sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+      "runtime_file": "er_portrait_lydia_date_female_beauty.png",
+      "neutral_eye_white_pixels": 15
+    }
+  },
+  "generated_faces": {
+    "smile": {
+      "master": "Art/lydia-expressions-2026-11-10/masters/lydia_face_smile.png",
+      "master_sha256": "44ad5e94d9a72c94c9bc613094fd3ec1c324d59adca70157d9df7e65c6e93ae4",
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          293,
+          24,
+          1173,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 152.40639698965194,
+          "centre_x": 145.00705550329258,
+          "bottom_exclusive": 215.0,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.14487300094073377,
+          "tx": 38.815145813734716,
+          "ty": 59.11665098777047
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7409,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          81,
+          63,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8267
+      }
+    },
+    "flustered": {
+      "master": "Art/lydia-expressions-2026-11-10/masters/lydia_face_flustered.png",
+      "master_sha256": "edbedb0ba56a77d3233fb164eb1265ee1c681ea3680087ed3c3a15261a04a0aa",
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          296,
+          24,
+          1173,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 152.40639698965194,
+          "centre_x": 145.22436500470369,
+          "bottom_exclusive": 215.0,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.14487300094073377,
+          "tx": 38.81514581373473,
+          "ty": 59.11665098777047
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7227,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          82,
+          63,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8139
+      }
+    },
+    "serious": {
+      "master": "Art/lydia-expressions-2026-11-10/masters/lydia_face_serious.png",
+      "master_sha256": "54b0b258e292179e7d562a9edddd0b0b5d7a741ef07054dd8c025fb051d12103",
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          293,
+          24,
+          1174,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 152.40639698965194,
+          "centre_x": 145.07949200376294,
+          "bottom_exclusive": 215.0,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.14487300094073377,
+          "tx": 38.815145813734716,
+          "ty": 59.11665098777047
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7205,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          81,
+          64,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8146
+      }
+    },
+    "hurt": {
+      "master": "Art/lydia-expressions-2026-11-10/masters/lydia_face_hurt.png",
+      "master_sha256": "a9bab4bec796c6f45ff639299b7a146424b96cce2eb94c85062a7a259650203a",
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          295,
+          23,
+          1172,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 152.55126999059266,
+          "centre_x": 145.07949200376294,
+          "bottom_exclusive": 215.0,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.14487300094073377,
+          "tx": 38.815145813734716,
+          "ty": 59.11665098777047
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7166,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          81,
+          63,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8084
+      }
+    },
+    "tease": {
+      "master": "Art/lydia-expressions-2026-11-10/masters/lydia_face_tease.png",
+      "master_sha256": "592a252d20fb1fb4c8008fff0d9aff55dba541fcbe41b693975ae4ba9ec01cae",
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          294,
+          22,
+          1172,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 152.6961429915334,
+          "centre_x": 145.00705550329258,
+          "bottom_exclusive": 215.0,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.14487300094073377,
+          "tx": 38.815145813734716,
+          "ty": 59.11665098777047
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7268,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          81,
+          63,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8181
+      }
+    }
+  },
+  "expression_assets": [
+    {
+      "file": "er_expr_lydia_daily_smile.png",
+      "outfit": "daily",
+      "expression": "smile",
+      "sha256": "735a8bbd49eb247fa57612f71503354f5592fb56b04de8df51367cf4e0fe284b",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_daily",
+      "face_changed_pixels": 1265,
+      "eye_white_pixels_diagnostic": 21,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_daily_flustered.png",
+      "outfit": "daily",
+      "expression": "flustered",
+      "sha256": "a7121ea195115bbd88ed44c6483f6fb62e8e0ff4416133b7d33cb8f160eb29f0",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_daily",
+      "face_changed_pixels": 1261,
+      "eye_white_pixels_diagnostic": 38,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_daily_serious.png",
+      "outfit": "daily",
+      "expression": "serious",
+      "sha256": "00223ccb07aa96bd72c97dde3b21b7d654f793b1b51522ebff6249a35b512e49",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_daily",
+      "face_changed_pixels": 1264,
+      "eye_white_pixels_diagnostic": 23,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_daily_hurt.png",
+      "outfit": "daily",
+      "expression": "hurt",
+      "sha256": "3dd088674a623c5576d2424314f89159166c8e839fd40b578dd151a78b01161e",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_daily",
+      "face_changed_pixels": 1248,
+      "eye_white_pixels_diagnostic": 13,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_daily_tease.png",
+      "outfit": "daily",
+      "expression": "tease",
+      "sha256": "8656be24f93df2a9d4da7ec4051473f8f292c59ba045b1f04daeaae81a60f151",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_daily",
+      "face_changed_pixels": 1249,
+      "eye_white_pixels_diagnostic": 15,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_date_smile.png",
+      "outfit": "date",
+      "expression": "smile",
+      "sha256": "80f8857b989bdbf1185e8dc7a4669d3fdb2d6d5fd0a8d500ed12a0984eeb8614",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_date",
+      "face_changed_pixels": 1252,
+      "eye_white_pixels_diagnostic": 21,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_date_flustered.png",
+      "outfit": "date",
+      "expression": "flustered",
+      "sha256": "fb86cdd12c1e83a5b21409b7f7e030841941208fa719455346d6a15cd7e4f73d",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_date",
+      "face_changed_pixels": 1247,
+      "eye_white_pixels_diagnostic": 38,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_date_serious.png",
+      "outfit": "date",
+      "expression": "serious",
+      "sha256": "b38dbc27b414e75796e85f3420d42c89452db6af6acc9e26e922208dfe390cc7",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_date",
+      "face_changed_pixels": 1255,
+      "eye_white_pixels_diagnostic": 23,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_date_hurt.png",
+      "outfit": "date",
+      "expression": "hurt",
+      "sha256": "c7ba69e7355a8f93fee4ad98a7005c3d987a329868e7b7232cadba9cf02d5bdf",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_date",
+      "face_changed_pixels": 1244,
+      "eye_white_pixels_diagnostic": 13,
+      "installed": true
+    },
+    {
+      "file": "er_expr_lydia_date_tease.png",
+      "outfit": "date",
+      "expression": "tease",
+      "sha256": "d9d2fae3608ae808ccd00607cf21a098473660e3f72b68ae4fad189047139c37",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_neutral": true,
+      "visible_body_unchanged": true,
+      "jaw_and_neck_pixels_identical_to_neutral": true,
+      "jaw_guard_profile": "lydia_date",
+      "face_changed_pixels": 1231,
+      "eye_white_pixels_diagnostic": 15,
+      "installed": true
+    }
+  ],
+  "image_generation_calls": 5,
+  "native_expression_assets": 10,
+  "method": "AI expression editing followed by exact B/detail sampling and fixed facial-layer assembly; no iris-area fitting.",
+  "out_of_scope_art_unchanged": true
+}

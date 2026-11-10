@@ -1,0 +1,71 @@
+{
+  "source_size": [
+    1461,
+    1076
+  ],
+  "clean_bbox": [
+    292,
+    22,
+    1175,
+    1076
+  ],
+  "parameters": {
+    "visible_height": 152.6961429915334,
+    "centre_x": 145.07949200376294,
+    "bottom_exclusive": 215.0,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": false,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.14487300094073377,
+    "tx": 38.815145813734716,
+    "ty": 59.11665098777047
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 6908,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    81,
+    63,
+    209,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 8273,
+  "master": "lydia_date_master_v1.png",
+  "master_sha256": "e018e082bb7d5f8dab49d65690c3f041b91587944509b2beb29ec41ff2333087",
+  "prompt": "prompt_date_v1.txt",
+  "prompt_sha256": "9ac6774319e70fd22d53d969afaab7137db775cd8d2c3ec9663a5fb9e1aa5956",
+  "output": "portraits/er_portrait_lydia_date_female_beauty_fusion_v1.png",
+  "output_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+  "repeat_identical": true,
+  "reference_sha256": {
+    "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+    "B:\\Eleanor Story Expand\\Art\\author-pipeline-validation-2026-11-10\\reference\\author-sprite.png": "da3523910cd9b48c904a122425a918fa566866deb2099b0b6c636be1282c95e2",
+    "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png": "5f297c4c8cb0aaddc40d7ece0ba1697fd4eadbf0c4b4d5a2aa1ccb89821f2c94",
+    "B:\\Eleanor Story Expand\\Art\\lydia-style-fusion-2026-11-10\\portraits\\er_portrait_lydia_date_female_beauty_fusion_v1.png": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5"
+  },
+  "geometry_note": "Preserve the approved daily V4 source-to-canvas mapping for the date outfit; visual eye/chin/underbust alignment reviewed without scaling the entire figure to its new garment bounding box.",
+  "generation_tool": "image_gen.imagegen",
+  "status": "Design candidate; no runtime replacement, Lydia expressions or harem CG produced."
+}

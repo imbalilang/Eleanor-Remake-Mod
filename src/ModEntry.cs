@@ -63,6 +63,7 @@ namespace EleanorRomance
             }
 
             DebugTools.Unregister();
+            EndingPageUI.HideRoutePage();
             Items.BeginLoad();
             StartingPerkRegistration.Unregister();
             ScavAssistance.Unregister();

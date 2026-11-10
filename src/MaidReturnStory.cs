@@ -163,7 +163,7 @@ namespace EleanorRomance
             {
                 var branch=MaidText.Build(blocks[i]);if(i==2)MaidText.Append(branch,"m28_b008");
                 MaidText.Append(branch,"m28_b010");
-                branch=FinishEvent(branch,28,()=>{AdvanceReturn(28);MaidState.Contract=3;MaidState.LastChatDay=MaidState.Today;});
+                branch=FinishEvent(branch,28,()=>{AdvanceReturn(28);MaidState.Contract=3;MaidState.LastChatDay=MaidState.Today;EndingPageUI.ShowMaidCompletion();});
                 options[i]=Option("er_maid_final_"+(i+1),branch,description:"er_maid_final_continue_desc");
             }
             Choices(root,options);return Ready(c,root);

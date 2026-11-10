@@ -1,0 +1,46 @@
+{
+  "tool": "image_gen.imagegen",
+  "status": "generated_candidate",
+  "revision": "v1",
+  "master": "masters/ending_harem_master_v1.png",
+  "source_sha256": "4a672116b83e3a203c38dfa2c2468db5ec956dd8c4ed0aa906c91979594dd18d",
+  "prompt_file": "prompts/ending_harem_v1.txt",
+  "prompt": "Use case: illustration-story / identity-preserving romantic ending CG.\nCreate ONE finished 16:9 landscape illustration, intended high-resolution master approximately 2048x1152, for the adult Eleanor and Lydia shared-romance ending of Eleanor Story Expand.\n\nReference roles:\nImage 1 is Eleanor's authoritative high-resolution identity and upper-district outfit: adult woman with long copper-orange wavy hair, green eyes, warm mature face, gold zigzag earrings, broad gold neckpiece, deep purple sleeveless fitted dress with double gold V trim, dark charcoal-purple short draped capelet and gold upper-arm bands. Preserve her recognizable identity, hair and costume.\nImage 2 is Lydia's authoritative approved identity, proportions and upper-district outfit: adult 27-year-old noblewoman, cool honey-brown long mostly straight hair with gently curved ends, rose-and-pearl hair ornament and ribbon on her left side (image-right), amber eyes, pearl-drop earrings; cream-white off-shoulder dress with rose trim, a rose embroidered high-neck fine-mesh yoke and a rose fitted waist with small gold clasp. Match this exact confirmed face, hairstyle, outfit and mature body proportions.\nImage 3 is the native in-game Eleanor upper-district portrait, for checking her costume and warm line/shading family only. Do not copy its tiny canvas, distorted transparent RGB stripes, empty margins or pixel grid.\nThese are reference images, not a collage to paste. Draw a coherent NEW scene with both characters in the same lighting, perspective and illustration style. Exactly two distinct adult women. Do not merge their features or change Lydia into orange-haired Eleanor.\n\nPrimary composition, essential:\nA close, intimate two-person upper-body composition seen from the player's first-person point of view. The CAMERA IS ABOVE THEIR LOWERED FACES, looking gently DOWN toward them, roughly a 25-30 degree downward viewing angle. Both women STAND SIDE BY SIDE and BEND FORWARD naturally AT THE WAIST toward the viewer, bringing their faces below the player's eye level. They lift their chins slightly and LOOK UP FROM BELOW DIRECTLY INTO THE CAMERA with affectionate eyes. Their gaze travels upward toward the viewer, while their torsos visibly slope forward. This is not a low-angle camera looking up at standing women. Make the forward waist bend and lifted eyes clear without extreme perspective distortion.\nFrame their complete heads, shoulders and leaning torsos to approximately waist/upper hips, with their faces close together at comparable heights, neither face hidden or cut off. They occupy most of the central image width. The viewer's own body and face are not depicted.\nEach woman rests a hand naturally on the near tabletop/counter for balance, natural elbows and wrists, clearly separated arms, anatomically correct hands with five fingers. No tangled or interlocking fingers. Their shoulders may lightly touch. Preserve the approved mature proportions; avoid enlarged heads and foreshortening that overwhelms either face.\n\nExpression and relationship:\nBoth have willingly chosen the same player and now feel comfortable being close together. Eleanor's expression is tender with a little familiar pride and a small knowing smile; Lydia has a warm, slightly playful, composed smile, her eyelids lifted enough to make the upward gaze clear without making her juvenile. Subtle warm blush, relaxed brows, direct loving eye contact. Convey a successful reciprocal romance through their paired gaze, closeness and relaxed body language.\n\nStory and environment:\nThis is an ordinary quiet evening after closing in the established lower-level science-fiction pawnshop, where both women continue visiting in their upper-district clothes. A modest worn wooden/metal table or counter near the viewer, softly simplified shelves of traded objects, muted metal interior panels and warm practical lamplight, a little cool teal evening ambience. Grounded lived-in pawnshop, not a palace, ballroom, wedding or bedroom. No other people.\nKeep the background secondary, softly shaded and coherent. The lower quarter should have calmer, slightly darker table and clothing values suitable for the game's ending text overlay; no drawn text, no empty black rectangle, no deliberately blank panel. Place both faces safely above this lower overlay area. Fill the full landscape canvas edge to edge with an opaque painted scene.\n\nStyle and output:\nNormal high-resolution anime game-source illustration consistent with the supplied Maiden's Pawnshop style, delicate warm brown outlines, clean coherent cel-shaded masses and restrained soft transitions. Preserve beautiful, readable eyes, hair locks, garment seams and distinct materials. The master will be downsampled offline with the project's verified algorithm; do NOT imitate a pixel grid, do not add dither, mosaic, screen grain, thick jagged outlines or forced colour quantization.\nNo UI, lettering, subtitles, symbols, floating hearts, logos, watermark, split-screen or reference-sheet layout. One complete opaque full-colour romantic ending CG.\n",
+  "references": [
+    {
+      "role": "Eleanor identity, upper-district costume, high-resolution style",
+      "path": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+      "sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e",
+      "size": [
+        1462,
+        1076
+      ]
+    },
+    {
+      "role": "Approved Lydia identity, proportions and upper-district daily costume",
+      "path": "Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5",
+      "size": [
+        1461,
+        1076
+      ]
+    },
+    {
+      "role": "Native Eleanor upper-district costume and shading family only",
+      "path": "D:/Program Files (x86)/Steam/steamapps/workshop/content/4348910/3829696854/Textures/Items/cp_portrait_eleanor3.png",
+      "sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "size": [
+        288,
+        212
+      ]
+    }
+  ],
+  "generated_original": "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-9eced7ad-c5cb-4b71-9001-6c4f0e9caa48.png",
+  "user_request": "两人穿着上层区服装，弯腰从下往上仰视相机，表示玩家同时获得两人的芳心",
+  "story_references": [
+    "Content/dual_romance_v04.json:dr20",
+    "Localization/zh.csv:er_ending_harem_01..03"
+  ],
+  "runtime_replaced": false,
+  "published": false
+}

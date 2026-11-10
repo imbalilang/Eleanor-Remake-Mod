@@ -1,0 +1,24 @@
+{
+  "status": "user_approved_daily_beauty_v4",
+  "user_instruction": "采用这一版作为最终定稿，接下来生成约会服",
+  "approved_identity_source": "lydia_fusion_master_v4.png",
+  "master_sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5",
+  "approved_master": "approved/lydia_daily_beauty_master.png",
+  "approved_portrait": "approved/er_portrait_lydia_female_beauty.png",
+  "applies_to": [
+    "face and author-style rendering",
+    "long mostly straight brown hair with gently curled ends",
+    "shoulder and bust proportions",
+    "daily beauty costume"
+  ],
+  "next_asset": "Harem ending CG v3 generated for review, not installed; future Lydia artwork inherits this approved identity.",
+  "ending_candidate": "../harem-ending-2026-11-10/ART_DELIVERY.md",
+  "runtime_status": "Daily v4 and date v1 beauty bases plus ten matching expressions installed in the workspace during the subsequent Lydia expression task. Not published; in-game visual verification pending.",
+  "expression_delivery": "../lydia-expressions-2026-11-10/ART_DELIVERY.md",
+  "date_asset": {
+    "master": "lydia_date_master_v1.png",
+    "portrait": "portraits/er_portrait_lydia_date_female_beauty_fusion_v1.png",
+    "status": "used_as_current_date_base_for_expression_generation",
+    "inherits_approved_daily_v4": true
+  }
+}

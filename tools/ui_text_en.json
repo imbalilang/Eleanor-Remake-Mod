@@ -167,5 +167,9 @@
   "er_ending_harem_title": "Harem Route Ending",
   "er_ending_harem_01": "Eleanor found her own place in the upper district; Lydia put the streets she wanted to browse, the food she wanted to eat, and the people she wanted to see into her days. Sometimes they came together; sometimes they walked in separately. Whoever arrived first sat down beside you first.",
   "er_ending_harem_02": "The pawnshop is still in the lower district. When people upstairs ask why those two ladies keep going there, Eleanor says the person she likes is there; Lydia adds: me too.",
-  "er_ending_harem_03": "After that, the shop always had three chairs. When you close up, you often hear them arguing over who got more dessert."
+  "er_ending_harem_03": "After that, the shop always had three chairs. When you close up, you often hear them arguing over who got more dessert.",
+  "er_notice_savings_progress": "Investigation fund: {0} / 800 ({1} credits to go)",
+  "er_notice_savings_complete": "The investigation fund has reached 800 credits.",
+  "er_ending_content_end": "This is the end of this mod's story. You can continue running the shop and its dailies.",
+  "er_ending_return_button": "Return to the shop"
 }

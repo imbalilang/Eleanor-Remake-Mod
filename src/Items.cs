@@ -73,9 +73,43 @@ namespace EleanorRomance
                 if(mod.Sprites.ContainsKey(key))return;
                 Sprite source;
                 if(!mod.Sprites.TryGetValue("er_lydia_recommendation_plaque",out source))return;
-                mod.Sprites[key]=Sprite.Create(source.texture,source.rect,new Vector2(0.5f,0.5f),
-                    source.pixelsPerUnit*4,0,SpriteMeshType.FullRect);
+                Sprite padded=CreatePaddedHitSprite(source,4);
+                mod.Sprites[key]=padded!=null?padded:Sprite.Create(source.texture,source.rect,
+                    new Vector2(0.5f,0.5f),source.pixelsPerUnit*4,0,SpriteMeshType.FullRect);
                 return;
+            }
+        }
+
+        /// <summary>
+        /// The game's item click uses per-pixel alpha hit testing.  A 1x1 ornament
+        /// whose badge has transparent margins therefore loses most of its cell
+        /// to click-through.  Give fully transparent pixels a 1/255 alpha floor:
+        /// the whole cell becomes clickable while remaining visually transparent.
+        /// The layout is unchanged; this only widens the hit area.
+        /// </summary>
+        private static Sprite CreatePaddedHitSprite(Sprite source,int scale)
+        {
+            try
+            {
+                Rect r=source.rect;
+                int w=Mathf.RoundToInt(r.width),h=Mathf.RoundToInt(r.height);
+                if(w<=0 || h<=0)return null;
+                Color[] pixels=source.texture.GetPixels(Mathf.RoundToInt(r.x),Mathf.RoundToInt(r.y),w,h);
+                const float hitAlpha=1f/255f;
+                for(int i=0;i<pixels.Length;i++)
+                    if(pixels[i].a<hitAlpha)pixels[i].a=hitAlpha;
+                var texture=new Texture2D(w,h,TextureFormat.RGBA32,false);
+                texture.filterMode=source.texture.filterMode;
+                texture.wrapMode=source.texture.wrapMode;
+                texture.SetPixels(pixels);
+                texture.Apply(false,false);
+                return Sprite.Create(texture,new Rect(0,0,w,h),new Vector2(0.5f,0.5f),
+                    source.pixelsPerUnit*scale,0,SpriteMeshType.FullRect);
+            }
+            catch(System.Exception ex)
+            {
+                ModEntry.Log("Ornament hit-area padding unavailable; using the compact sprite: "+ex.Message);
+                return null;
             }
         }
 

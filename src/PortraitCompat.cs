@@ -12,7 +12,9 @@ namespace EleanorRomance
     /// "cp_portrait_<originalKey>" and normally replaces the displayed sprite
     /// with a Harmony postfix.  We additionally expose those sprites through
     /// SpriteDict so our named clients can request them directly.  If the mod
-    /// is absent or disabled, Resolve() returns the original vanilla key.
+    /// is absent or disabled, Resolve() returns the original vanilla key, and
+    /// every custom outfit (Lydia, Mother, maid, gala, vest) falls back to an
+    /// existing game portrait instead of a local "_vanilla" replacement.
     /// </summary>
     public static class PortraitCompat
     {
@@ -32,11 +34,15 @@ namespace EleanorRomance
         {
             get
             {
+#if NEXUS_BEAUTY
+                return true;
+#else
                 if (beautyMod == null || !beautyMod.IsEnabled)
                 {
                     beautyMod = FindBeautyMod();
                 }
                 return beautyMod != null && beautyMod.IsEnabled;
+#endif
             }
         }
 
@@ -44,9 +50,13 @@ namespace EleanorRomance
         {
             get
             {
+#if NEXUS_BEAUTY
+                return "Nexus Beauty Edition; using bundled beautified portraits";
+#else
                 return IsBeautyActive
                     ? "cute_portraits (" + BeautyWorkshopId + ") active; using beautified portraits"
                     : "cute_portraits (" + BeautyWorkshopId + ") absent/disabled; using vanilla portraits";
+#endif
             }
         }
 
@@ -77,16 +87,39 @@ namespace EleanorRomance
         }
 
         /// <summary>
-        /// Dual-version custom portraits for Lydia and Mother.  The beauty key
-        /// is used when CutePortraits is active; the vanilla key is used
-        /// otherwise.  If the requested local sprite has not been delivered yet,
-        /// fall back to the generic key (which may itself be beautified).
+        /// Custom-outfit portrait with a hard vanilla fallback.  When
+        /// CutePortraits is active we use the local beautified portrait; when it
+        /// is absent or disabled we deliberately use an existing game sprite
+        /// instead of the old local "_vanilla" artwork.  If the beautified
+        /// portrait is missing, the generic fallback is resolved through
+        /// CutePortraits (or left as the original key).
         /// </summary>
-        public static string ResolveCharacter(string vanillaKey, string beautyKey, string fallbackKey)
+        public static string ResolveOutfit(string beautyKey, string fallbackKey)
         {
-            string chosen = IsBeautyActive ? beautyKey : vanillaKey;
-            if (EnsureLocalPortrait(chosen)) return chosen;
-            return Resolve(fallbackKey);
+            return IsBeautyActive && EnsureLocalPortrait(beautyKey)
+                ? beautyKey
+                : Resolve(fallbackKey);
+        }
+
+        public static string ResolveCharacter(string beautyKey, string fallbackKey)
+        {
+            return ResolveOutfit(beautyKey, fallbackKey);
+        }
+
+        public static string ResolveLydia()
+        {
+            // Lydia is a romance lead and always keeps a distinct portrait.
+            // Without CutePortraits use the authored vanilla-style variant;
+            // only an unavailable asset falls back to a generic NPC.
+            string chosen = IsBeautyActive
+                ? ModConstants.LydiaPortraitBeauty
+                : ModConstants.LydiaPortraitVanilla;
+            return EnsureLocalPortrait(chosen) ? chosen : Resolve(ModConstants.LydiaSprite);
+        }
+
+        public static string ResolveMother()
+        {
+            return ResolveCharacter(ModConstants.MotherPortraitBeauty, ModConstants.MotherSprite);
         }
 
         public static bool IsMaidScene(string id)
@@ -102,7 +135,7 @@ namespace EleanorRomance
         }
         public static bool CanUseMaid(string id)
         {
-            return IsMaidSceneEligible(id) && HasLocalMaidSprite(IsBeautyActive ? MaidKey : VanillaMaidKey);
+            return IsBeautyActive && IsMaidSceneEligible(id) && HasLocalMaidSprite(MaidKey);
         }
         private static bool IsMaidSceneEligible(string id)
         {
@@ -116,15 +149,14 @@ namespace EleanorRomance
         }
         public static string ResolveMaid(string id,string fallback)
         {
-            string key=IsBeautyActive ? MaidKey : VanillaMaidKey;
-            return CanUseMaid(id) && EnsureLocalPortrait(key) ? key : Resolve(fallback);
+            // The custom maid outfit exists only in the beautified art set.
+            // Without CutePortraits, reuse the scene's ordinary Eleanor portrait.
+            return CanUseMaid(id) && EnsureLocalPortrait(MaidKey) ? MaidKey : Resolve(fallback);
         }
         public static string ResolveLydiaDate()
         {
             string chosen = IsBeautyActive ? LydiaDateBeautyKey : LydiaDateVanillaKey;
-            if (EnsureLocalPortrait(chosen)) return chosen;
-            return ResolveCharacter(ModConstants.LydiaPortraitVanilla,
-                ModConstants.LydiaPortraitBeauty, ModConstants.LydiaSprite);
+            return EnsureLocalPortrait(chosen) ? chosen : ResolveLydia();
         }
 
         public static Sprite GetLocalSprite(string key)
@@ -155,6 +187,47 @@ namespace EleanorRomance
             return Resolve("eleanor1");
         }
 
+#if NEXUS_BEAUTY
+        /// <summary>
+        /// Nexus builds bundle the CutePortraits portraits under this mod's
+        /// Textures/Items.  Resolve any vanilla portrait key (and cp_portrait
+        /// alias) to that local beauty sprite before the native dictionary is
+        /// consulted.  This makes the Nexus package beauty-first without the
+        /// separate CutePortraits mod.
+        /// </summary>
+        public static bool TryNexusBeauty(string key, out Sprite sprite)
+        {
+            sprite = null;
+            if (string.IsNullOrEmpty(key)) return false;
+            LoadedMod own = FindOurMod();
+            if (own == null || own.Sprites == null) return false;
+
+            string beautyKey = key.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)
+                ? key
+                : BeautyKeyPrefix + key;
+            string[] candidates = beautyKey.EndsWith("_female", StringComparison.Ordinal)
+                ? new[] { beautyKey, beautyKey.Substring(0, beautyKey.Length - "_female".Length) }
+                : new[] { beautyKey, beautyKey + "_female" };
+
+            foreach (string candidate in candidates)
+            {
+                if (!own.Sprites.TryGetValue(candidate, out sprite) || sprite == null) continue;
+                try
+                {
+                    if (SpriteDict.Instance != null && SpriteDict.Instance.spriteDictionary != null)
+                        SpriteDict.Instance.spriteDictionary[key] = sprite;
+                }
+                catch
+                {
+                    // The direct sprite result is enough if the dictionary is not ready.
+                }
+                return true;
+            }
+            sprite = null;
+            return false;
+        }
+#endif
+
         /// <summary>
         /// Safety net for SpriteDict rebuilds and direct cp_portrait_* lookups.
         /// Called by a GetSprite prefix; does nothing outside the beauty prefix.
@@ -162,8 +235,8 @@ namespace EleanorRomance
         public static void EnsureKey(string key)
         {
             if (string.IsNullOrEmpty(key)) return;
+            if (key == VanillaMaidKey) return; // Legacy key; no longer displayed.
             if (key == MaidKey && (!IsBeautyActive || !MaidState.Active)) return;
-            if (key == VanillaMaidKey && !MaidState.Active) return;
             if (key == GalaKey && (!IsBeautyActive || !IsGalaScene("er_story_gala"))) return;
 
             if (key.StartsWith(LocalPortraitPrefix, StringComparison.Ordinal))
@@ -259,16 +332,26 @@ namespace EleanorRomance
             }
             else if (client.spriteName == MaidKey || client.spriteName == VanillaMaidKey)
             {
-                if (!IsMaidSceneEligible(client.identifier)) client.spriteName=Resolve("eleanor_scav");
-                else if (client.spriteName==MaidKey && !IsBeautyActive)
-                    client.spriteName=ResolveMaid(client.identifier,"eleanor_scav");
-                else if (!HasLocalMaidSprite(client.spriteName) || !EnsureLocalPortrait(client.spriteName))
-                    client.spriteName=Resolve("eleanor_scav");
+                client.spriteName = IsMaidSceneEligible(client.identifier)
+                    ? ResolveMaid(client.identifier, "eleanor_scav")
+                    : Resolve("eleanor_scav");
+            }
+            else if (client.spriteName == ModConstants.LydiaPortraitVanilla
+                || client.spriteName == ModConstants.LydiaPortraitBeauty)
+            {
+                client.spriteName = ResolveLydia();
+            }
+            else if (client.spriteName == ModConstants.MotherPortraitVanilla
+                || client.spriteName == ModConstants.MotherPortraitBeauty)
+            {
+                client.spriteName = ResolveMother();
+            }
+            else if (client.spriteName == LydiaDateVanillaKey || client.spriteName == LydiaDateBeautyKey)
+            {
+                client.spriteName = ResolveLydiaDate();
             }
             else if (!IsBeautyActive && client.spriteName.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal))
                 client.spriteName = RevertKey(client.spriteName);
-            // Re-enabling beauty does not replace an existing vanilla maid visitor;
-            // the next appropriate visitor selects the newly preferred style.
         }
 
         private static string RevertKey(string beautyKey)

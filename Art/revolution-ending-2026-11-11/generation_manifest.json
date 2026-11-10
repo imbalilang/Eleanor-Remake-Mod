@@ -1,0 +1,58 @@
+{
+  "request": "Create revolutionary-route ending CG using native-game pixel style, without viewing maid/harem ending CGs",
+  "endpoint_mode": "reference-guided new composition via images/edits",
+  "model": "gpt-image-2",
+  "requested_size": "1536x1024",
+  "target_aspect": "16:9",
+  "final_target": [
+    960,
+    540
+  ],
+  "sources": [
+    {
+      "path": "Art\\revolution-route-2026-11-10\\masters\\eleanor_revolution_undersuit_beauty_v3.png",
+      "role": "Eleanor face, hair, adult proportions and exact private black outfit; not smooth rendering",
+      "size": [
+        1460,
+        1077
+      ],
+      "sha256": "0eb50e2c5c9216835412ef19951dae82d1f676847b67be8ede75178a93773368"
+    },
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\references_local\\native_pawnshop_composite_no_ui.png",
+      "role": "Native game pawnshop setting and palette; composite, not a verified ending image",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "d8efdc0e225c2e32b5e716c05fd67c7bbd62076817b5bf5f078b7c0c36b25491"
+    },
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\references_local\\native_pixel_detail_reference.png",
+      "role": "Native game pixel contour, shading and texture detail; not an ending image",
+      "size": [
+        1440,
+        360
+      ],
+      "sha256": "fb0fc4975c8fb524456d5c15a9a85de58695a7bf9abf466836db202f14b41d84"
+    }
+  ],
+  "prompt": "Art\\revolution-ending-2026-11-11\\prompts\\ending_revolution_v1.txt",
+  "prompt_sha256": "000ff50d3a3a91507f1773ef21430c25b02e1cf25a66ebfac40be1e57eff2eef",
+  "native_ending_finding": "Installed GameOverUIManager.DisplayUI sets darkScreen to black and shows title/description. GameEnding has no CG property. No independent native ending illustration identified; native scene art used instead.",
+  "forbidden_reference_images_opened": [],
+  "runtime_installation": false,
+  "generation_attempts": 1,
+  "successful_images": 0,
+  "status": "blocked_service_quota_exhausted",
+  "http_status": 401,
+  "service_message": "该令牌额度已用尽",
+  "expected_master_created": false,
+  "references_viewed": [
+    "native drjackson and drjackson2 scene textures",
+    "native shop layers contact sheet",
+    "native shop no-UI composite",
+    "native wall scene",
+    "Eleanor revolutionary undersuit beauty v3 master"
+  ]
+}

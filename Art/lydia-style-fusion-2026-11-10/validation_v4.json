@@ -1,0 +1,87 @@
+{
+  "source_size": [
+    1461,
+    1076
+  ],
+  "clean_bbox": [
+    298,
+    26,
+    1167,
+    1076
+  ],
+  "parameters": {
+    "visible_height": 152.11665098777047,
+    "centre_x": 144.93461900282222,
+    "bottom_exclusive": 215.0,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": false,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.14487300094073377,
+    "tx": 38.81514581373473,
+    "ty": 59.11665098777047
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 7112,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    82,
+    64,
+    208,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 8114,
+  "master": "lydia_fusion_master_v4.png",
+  "master_sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5",
+  "prompt": "prompt_v4.txt",
+  "prompt_sha256": "256bc926d1500d2731c3817d6048ac11df6f27e76b956570a8cac96ca9a976bb",
+  "output": "portraits/er_portrait_lydia_female_beauty_fusion_v4.png",
+  "output_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+  "repeat_identical": true,
+  "reference_sha256": {
+    "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+    "B:\\Eleanor Story Expand\\Art\\author-pipeline-validation-2026-11-10\\reference\\author-sprite.png": "da3523910cd9b48c904a122425a918fa566866deb2099b0b6c636be1282c95e2",
+    "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png": "5f297c4c8cb0aaddc40d7ece0ba1697fd4eadbf0c4b4d5a2aa1ccb89821f2c94",
+    "B:\\Eleanor Story Expand\\Art\\lydia-style-fusion-2026-11-10\\portraits\\er_portrait_lydia_female_beauty_fusion_v4.png": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f"
+  },
+  "geometry_note": "Preserve v2/v3 source-to-canvas mapping. V4 increases clothed bust volume to lower the underbust toward Eleanor; shoulder/neck positions were intentionally retained, and all anatomical readings require visual review.",
+  "generation_tool": "image_gen.imagegen",
+  "status": "User approved final daily beauty design v4; frozen in approved/; runtime family migration pending.",
+  "manual_anatomy_review": {
+    "method": "Approximate visual reading on native portrait; not automated anatomy detection",
+    "reference_underbust_y_range": [
+      203,
+      208
+    ],
+    "v3_underbust_y_range": [
+      194,
+      198
+    ],
+    "v4_underbust_y_range": [
+      203,
+      207
+    ],
+    "conclusion": "Lower bust level now close to Eleanor; shoulder and neck positions deliberately retained per current edit scope."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "source_size": [
+    1461,
+    1076
+  ],
+  "clean_bbox": [
+    322,
+    13,
+    1137,
+    1076
+  ],
+  "parameters": {
+    "visible_height": 154,
+    "centre_x": 144.5,
+    "bottom_exclusive": 215,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": false,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.14487300094073377,
+    "tx": 38.815145813734716,
+    "ty": 59.11665098777047
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 6882,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    85,
+    62,
+    204,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 7820,
+  "master": "lydia_fusion_master_v2.png",
+  "master_sha256": "2489e9b29f0c689f0de2c692d5570bf22defb88e7d6d4ee2c828164972d99bb4",
+  "prompt": "prompt_v2.txt",
+  "prompt_sha256": "7f532625a23127424de02cabd3d3bd16802f00b3167fc4c32c646cbb69e5ec18",
+  "output": "portraits/er_portrait_lydia_female_beauty_fusion_v2.png",
+  "output_sha256": "1b718e229e22701e0eb1d5d2d4259a0ebb579ceba9936cd30e6f2e69475c10b5",
+  "repeat_identical": true,
+  "reference_sha256": {
+    "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+    "B:\\Eleanor Story Expand\\Art\\author-pipeline-validation-2026-11-10\\reference\\author-sprite.png": "da3523910cd9b48c904a122425a918fa566866deb2099b0b6c636be1282c95e2",
+    "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png": "5f297c4c8cb0aaddc40d7ece0ba1697fd4eadbf0c4b4d5a2aa1ccb89821f2c94",
+    "B:\\Eleanor Story Expand\\Art\\lydia-style-fusion-2026-11-10\\portraits\\er_portrait_lydia_female_beauty_fusion_v2.png": "1b718e229e22701e0eb1d5d2d4259a0ebb579ceba9936cd30e6f2e69475c10b5"
+  },
+  "geometry_note": "Face scale and approximate eye/chin alignment only. Shoulder and underbust vertical positions remain too high against Eleanor; master anatomy refinement is pending.",
+  "generation_tool": "image_gen.imagegen",
+  "status": "Design candidate; no runtime replacement, Lydia expressions or harem CG produced.",
+  "anatomy_review": {
+    "method": "Approximate manual native-pixel reading, not a body detector",
+    "reference_eye_midline_y": 115,
+    "reference_chin_y_range": [
+      137,
+      140
+    ],
+    "reference_shoulder_y_range": [
+      161,
+      166
+    ],
+    "reference_underbust_y_range": [
+      203,
+      208
+    ],
+    "fusion_eye_midline_y_range": [
+      114,
+      117
+    ],
+    "fusion_chin_y_range": [
+      138,
+      140
+    ],
+    "fusion_shoulder_y_range": [
+      153,
+      158
+    ],
+    "fusion_underbust_y_range": [
+      194,
+      198
+    ],
+    "status": "pending_vertical_torso_refinement"
+  }
+}

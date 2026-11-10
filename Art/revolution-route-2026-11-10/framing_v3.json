@@ -1,0 +1,35 @@
+{
+  "source": "masters/eleanor_revolution_undersuit_beauty_v3.png",
+  "source_size": [1460, 1077],
+  "source_alpha128_bbox": [315, 19, 1142, 1077],
+  "portrait": "portraits/er_portrait_eleanor_revolution_undersuit_female_beauty_v3.png",
+  "canvas_size": [288, 212],
+  "scaled_figure_height": 220,
+  "position": [53, 62],
+  "source_landmarks_approx": {
+    "left_eye": [671, 283],
+    "right_eye": [790, 257],
+    "chin": [750, 398]
+  },
+  "reference": {
+    "workshop_item": "3829696854",
+    "file": "cp_portrait_eleanor_rev.png",
+    "native_size": [288, 212],
+    "alpha_bbox": [73, 62, 213, 212],
+    "notes": "Preserve v2's approximate manual face alignment; uniform scale only."
+  },
+  "export": {
+    "resampling": "BOX area averaging in premultiplied alpha",
+    "palette": "Full RGB, no quantization or dithering",
+    "alpha": "Threshold at 128; zero RGB under transparent pixels",
+    "material": "Semi-sheer fabric appearance is painted over the figure, not transparent sprite pixels."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "prompt": "prompt_v3.txt",
+    "edit_target": "masters/eleanor_revolution_undersuit_beauty_v2.png",
+    "edit_target_sha256": "3814396472e354e58efaee23a0bff4fdbbab8be852be3e6a15f30f08d327c88b",
+    "supporting_reference": "codex-clipboard-86c1c81a-8c00-4ee7-a507-30d3dcbafd12.png",
+    "intent": "Adult Eleanor; black lightly semi-sheer tactical textile, firmer supported bodice; preserve v2 identity and waist-up composition."
+  }
+}

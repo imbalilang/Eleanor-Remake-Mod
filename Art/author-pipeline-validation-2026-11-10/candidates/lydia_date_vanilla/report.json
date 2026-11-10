@@ -1,0 +1,83 @@
+{
+  "source_size": [
+    1452,
+    1083
+  ],
+  "clean_bbox": [
+    459,
+    287,
+    991,
+    1051
+  ],
+  "parameters": {
+    "visible_height": 174,
+    "centre_x": 143.5,
+    "bottom_exclusive": 215,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": true,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.22774869109947643,
+    "tx": -21.617801047120423,
+    "ty": -24.363874345549732
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 7851,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    83,
+    42,
+    204,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 9165,
+  "name": "lydia_date_vanilla",
+  "source": "Art/dual-romance-v0.3/masters/lydia_date_vanilla.png",
+  "source_sha256": "7ebc7a9c91333386a477c1b9942653d5150c283890761a4ce5daab3fa8ca7db3",
+  "previous": "Textures/Items/er_portrait_lydia_date_female_vanilla.png",
+  "previous_sha256": "e104f1f61588ed3c485d9f6c9e2a0998ba274cd003590c53b0c495512d3fa66a",
+  "strict_sha256": "cc44b857a4fd84b4de162e8bf255b31da0e24253106b8c8f751b5388ccac27ab",
+  "strict_vs_previous": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 60453,
+    "alpha_different_pixels": 83,
+    "silhouette_iou": 0.9944242912803977,
+    "visible_rgb_different_pixels": 14488,
+    "exact_visible_rgb_fraction": 0.021279470377626158,
+    "visible_rgb_mae": 3.1181742439595577,
+    "interior_rgb_mae": 3.1208757756702963,
+    "visible_max_channel_error": 38
+  },
+  "fringe_effect": {
+    "rgba_identical": true,
+    "different_rgba_pixels_including_transparent": 0,
+    "alpha_different_pixels": 0,
+    "silhouette_iou": 1.0,
+    "visible_rgb_different_pixels": 0,
+    "exact_visible_rgb_fraction": 1.0,
+    "visible_rgb_mae": 0.0,
+    "interior_rgb_mae": 0.0,
+    "visible_max_channel_error": 0
+  }
+}

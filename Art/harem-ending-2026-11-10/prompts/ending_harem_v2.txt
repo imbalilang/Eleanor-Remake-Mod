@@ -1,0 +1,13 @@
+Use case: identity-preserve / precise facial-expression edit of an existing two-person ending CG.
+Image 1 is the exact EDIT TARGET, not merely a style reference. Preserve this complete scene, the same two clearly adult women, their identities, hairstyles, clothes, mature proportions, leaning posture, upward viewing gaze, hands, lighting, framing, background, and canvas size.
+
+The user specifically finds BOTH current eyes too half-closed and BOTH smiles too similar and overused. Make a clearly visible facial-expression change, NOT another near-identical tiny smile.
+
+Change ONLY the eyes/eyelids, eyebrows, mouths and very subtle cheek warmth of the two women:
+LEFT = Eleanor, copper-orange hair, green eyes:
+Open BOTH eyes visibly wider, lifting her upper eyelids so the upper iris is less covered; the whole gaze should read awake, emotionally present and expectant. Preserve her eye corners, iris size and green colour, adult facial construction. Her expression is tender anticipation with a trace of shy vulnerability: brows softly lifted, lips slightly parted in a relaxed small natural opening, mouth corners relaxed rather than curled into a smile. She is waiting for the player's response, looking directly UP into the lens. No teeth-showing grin, no smirk.
+RIGHT = Lydia, brown long straight/slightly curved hair with rose ornament, amber eyes:
+Open BOTH eyes visibly wider than the target image, with clear attentive amber irises and upward direct eye contact; keep her adult eye shape, width and iris scale. Her emotional expression should be different from Eleanor: more poised and openly inquisitive expectation, eyebrows gently raised with a small asymmetry, an attentive slightly raised chin, lips softly parted as though about to ask a quiet question. Keep the mouth small and natural, with no repeated stock closed-lip smile and no sly half-lidded teasing look. She feels confident enough to wait for an answer.
+Both should look lovingly EXPECTANT rather than sleepy, sad, shocked, frightened, cartoonishly wide-eyed or vacant. More open eyelids, not enlarged eyeballs or childlike faces. Distinct eyebrow and mouth shapes between the two. Preserve the same head angles and face placement.
+
+Do not alter costumes, hair, bodies, the relationship pose, tabletop, hands, shop props, camera angle, crop or background. Do not enlarge their busts. No extra characters. No symbols, sweat drops, floating hearts, UI or text. Keep the image a fully opaque, high-resolution, coherent anime game-source illustration with the same linework and shading. No pixel grid or dither. Output one complete edited scene, the same landscape aspect ratio.

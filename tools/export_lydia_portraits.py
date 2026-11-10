@@ -1,4 +1,4 @@
-"""Export all four current Lydia portraits with the shared area-reduction pipeline."""
+"""Export current Lydia portraits, respecting approved beauty replacements."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -38,6 +38,32 @@ def describe(path):
 
 
 def export_one(variant,art_only=False,output_dir=None):
+    # Approved fusion artwork supersedes the old beauty masters/framing. Keep
+    # the old exporter from reintroducing the retired face on a later export.
+    fusion=ROOT/'Art/lydia-style-fusion-2026-11-10'
+    if variant in ('daily_beauty','date_beauty') and (fusion/'approval.json').exists():
+        filename=PROFILES[variant][0]
+        is_daily=variant=='daily_beauty'
+        native=fusion/('approved/er_portrait_lydia_female_beauty.png' if is_daily else
+                      'portraits/er_portrait_lydia_date_female_beauty_fusion_v1.png')
+        validation=json.loads((fusion/('validation_v4.json' if is_daily else 'validation_date_v1.json')).read_text(encoding='utf8'))
+        if hashlib.sha256(native.read_bytes()).hexdigest()!=validation['output_sha256']:
+            raise ValueError('Approved fusion portrait differs from its validation')
+        destinations=([Path(output_dir).resolve()/filename] if output_dir else
+                      [ART/'portraits'/filename] if art_only else
+                      [ROOT/'Textures/Items'/filename,ART/'portraits'/filename])
+        for destination in destinations:
+            destination.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(native,destination)
+        report=describe(destinations[0])
+        report.update(variant=variant,source=label(fusion/validation['master']),
+                      source_sha256=validation['master_sha256'],source_size=validation['source_size'],
+                      source_alpha_bbox=validation['clean_bbox'],
+                      framing_basis='User-approved Lydia fusion identity and fixed B/detail source-to-canvas transform',
+                      pipeline=validation['parameters'],transform=validation['transform'],
+                      reference='Art/lydia-style-fusion-2026-11-10/approval.json',
+                      outputs=[label(p) for p in destinations])
+        return report
     filename,old_bbox=PROFILES[variant]
     source=ART/'masters'/('lydia_'+variant+'.png')
     with Image.open(source) as original:
@@ -120,9 +146,10 @@ def export(variant='all',art_only=False,output_dir=None):
     data={'date':'2026-11-10','scope':'candidate' if output_dir else 'art-only' if art_only else 'workspace production and art mirrors',
           'framing_configuration':label(ART/'framing_profiles.json'),
           'framing_configuration_sha256':hashlib.sha256((ART/'framing_profiles.json').read_bytes()).hexdigest(),
-          'pipeline':{'resampling':'BOX area averaging in premultiplied alpha; single resize',
+          'pipeline':{'resampling':'Verified author B/detail for approved beauty variants; legacy BOX only for unchanged vanilla variants',
                       'palette':'Full RGB; no colour quantization','dither':'NONE',
-                      'alpha':'threshold 128; transparent RGB cleared','game_filter':'Point (unchanged)'},
+                      'alpha':'Beauty: source >=128, target coverage >=0.35, transparent RGB bleed; legacy vanilla: threshold 128, transparent RGB cleared',
+                      'game_filter':'Point (unchanged)'},
           'assets':reports}
     out=Path(output_dir).resolve() if output_dir else ART
     out.mkdir(parents=True,exist_ok=True)

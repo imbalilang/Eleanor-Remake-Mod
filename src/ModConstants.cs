@@ -13,11 +13,15 @@ namespace EleanorRomance
         public const string MetaFile = "meta.json";
         public const string LogTag = "[EleanorRomance]";
 
-        // Generic fallback keys used only when a custom portrait is missing.
-        public const string LydiaSprite = "femaleUpper3";
-        public const string MotherSprite = "femaleUpper6";
+        // Lydia is a romance lead and keeps a dedicated dual-version portrait.
+        // femaleUpper10 is only an emergency fallback if the local Lydia art
+        // is missing. Mother is not romanceable and falls back to original
+        // femaleUpper3 when CutePortraits is not active.
+        public const string LydiaSprite = "femaleUpper10";
+        public const string MotherSprite = "femaleUpper3";
 
-        // Dual-version custom portraits (see Art/v0.6/ART_REQUIREMENTS.md).
+        // Lydia's _vanilla art remains active when CutePortraits is absent;
+        // the Mother _vanilla file is legacy/cleanup-only.
         public const string LydiaPortraitVanilla = "er_portrait_lydia_female_vanilla";
         public const string LydiaPortraitBeauty = "er_portrait_lydia_female_beauty";
         public const string MotherPortraitVanilla = "er_portrait_mother_female_vanilla";

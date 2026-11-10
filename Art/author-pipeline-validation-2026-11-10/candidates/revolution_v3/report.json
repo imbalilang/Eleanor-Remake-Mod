@@ -1,0 +1,83 @@
+{
+  "source_size": [
+    1460,
+    1077
+  ],
+  "clean_bbox": [
+    315,
+    19,
+    1142,
+    1077
+  ],
+  "parameters": {
+    "visible_height": 220,
+    "centre_x": 139,
+    "bottom_exclusive": 281,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": true,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.20793950850661624,
+    "tx": -12.483931947069948,
+    "ty": 57.04914933837429
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 6891,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    53,
+    62,
+    225,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 8808,
+  "name": "revolution_v3",
+  "source": "Art/revolution-route-2026-11-10/masters/eleanor_revolution_undersuit_beauty_v3.png",
+  "source_sha256": "0eb50e2c5c9216835412ef19951dae82d1f676847b67be8ede75178a93773368",
+  "previous": "Art/revolution-route-2026-11-10/portraits/er_portrait_eleanor_revolution_undersuit_female_beauty_v3.png",
+  "previous_sha256": "726e8e1f1c7ca220813750415259d7ab6a43ca16b351d5411584fa3e366a7897",
+  "strict_sha256": "9ee07ec2ae1cb250249fcaeb2121b6b7314e1e062e98311880fffd4f71b5b30b",
+  "strict_vs_previous": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 59920,
+    "alpha_different_pixels": 104,
+    "silhouette_iou": 0.993197723853751,
+    "visible_rgb_different_pixels": 14337,
+    "exact_visible_rgb_fraction": 0.055844583470530125,
+    "visible_rgb_mae": 2.7058720228295465,
+    "interior_rgb_mae": 2.676299769085438,
+    "visible_max_channel_error": 36
+  },
+  "fringe_effect": {
+    "rgba_identical": true,
+    "different_rgba_pixels_including_transparent": 0,
+    "alpha_different_pixels": 0,
+    "silhouette_iou": 1.0,
+    "visible_rgb_different_pixels": 0,
+    "exact_visible_rgb_fraction": 1.0,
+    "visible_rgb_mae": 0.0,
+    "interior_rgb_mae": 0.0,
+    "visible_max_channel_error": 0
+  }
+}

@@ -1,5 +1,9 @@
 # Project instructions
 
+## Artwork requirements
+
+For artwork generation, edits, expression variants or export, read `Art/ART_REQUIREMENTS.md` and the relevant templates in `Art/PROMPT_TEMPLATES.md`. Use the verified author B/detail pipeline for new portrait work; old BOX and fixed-palette notes are historical. Preserve any user-deferred artwork scope and distinguish candidates from runtime replacements.
+
 ## Route map maintenance (required)
 
 Any change to story chapters, scene order, target days, story-impacting choices, routes, relationships, or endings must update these two files in the same change:

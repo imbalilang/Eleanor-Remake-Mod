@@ -1,0 +1,19 @@
+Use case: identity-preserve / date-outfit edit.
+Image 1 is the EDIT TARGET and USER-APPROVED FINAL LYDIA: an adult woman aged 27. It is authoritative for her exact face, art style, hair and body.
+Image 2 is a COSTUME DESIGN reference only: the earlier rose date dress with champagne-gold piping, pearl accent and soft ivory wrap. Do NOT adopt its older face, larger round eyes, wavy hair, smaller bust, body proportions or rendering style.
+
+Create one exclusive DATE OUTFIT version of Image 1.
+Preserve exactly: the approved author's restrained warm-brown linework and coherent cel shading; adult Lydia's face and amber eye size/shape, gentle closed-mouth smile and head angle; neutral cool honey-brown long mostly straight hair with only lightly curved ends; rose-and-pearl hair ornament and pearl earrings. Keep the face, shoulders, body and waist at the same scale and position as Image 1.
+CRITICAL BODY LOCK: preserve Image 1's approved fuller bust VOLUME, supported rounded lower contour and LOWER EDGE. Do not reduce, flatten, raise or reposition it to match the much smaller bust in Image 2. The lower-bust curve should remain around master y=1000 in this approximately 1461x1076 frame, while the eye and chin coordinates remain unchanged.
+
+Change the clothes into a refined romantic dusty-rose date dress:
+- The MAIN BUST AND WAIST are now solid dusty-rose fabric, clearly distinct from the everyday outfit's ivory bust and sleeves. A coherent tailored dress, not a corset worn over the existing cream blouse.
+- A softly shaped sweetheart neckline edged with slim champagne-gold piping, a small pearl accent centred at the neckline, and elegant vertical shaping seams descending into the fitted waist.
+- Keep a delicate rose-taupe semi-sheer upper-chest yoke and a fine small lace neckline, in the same light feminine design family as the approved outfit. Opaque rose fabric fully covers the bust; the light upper textile only veils the upper chest.
+- Replace the everyday short puff sleeves with a soft IVORY WRAP draped LOW around both upper arms. Bare shoulder tops remain clearly visible. The shawl has natural soft gathered folds and hangs around the arms without squeezing the chest or hiding the waist silhouette.
+- Fit the rose bodice around the SAME approved bust with believable fabric tension and supportive curved seams. A restrained soft satin/textile sheen, no wet rubber reflections, no rigid duplicated spheres, no horizontal flattening.
+Her expression remains warm and affectionate, suitable for a quiet date; preserve the exact facial identity and mature temperament.
+
+Framing/pose: same upright relaxed front/three-quarter waist-up portrait as Image 1, complete hair top and shoulders through the natural waist, arms relaxed and hands below the crop. Preserve the canvas size, face position, head angle, figure scale and original lighting. Do not invent a new pose, props or hair arrangement.
+Normal high-resolution game source illustration in the approved Image 1 style, for later exact B/detail area sampling. Actual transparent background, including hair gaps.
+One finished single portrait; no full body, hips or legs, no comparison sheet, no UI, text, annotation, watermark, other characters, scenery, simulated pixel grid or dithering.

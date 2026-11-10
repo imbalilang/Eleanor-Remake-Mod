@@ -1,0 +1,83 @@
+{
+  "source_size": [
+    1461,
+    1077
+  ],
+  "clean_bbox": [
+    381,
+    257,
+    1073,
+    1077
+  ],
+  "parameters": {
+    "visible_height": 182,
+    "centre_x": 143.0,
+    "bottom_exclusive": 233,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": true,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.22195121951219512,
+    "tx": -18.35853658536587,
+    "ty": -6.041463414634137
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 34,
+  "detail_pixels": 8469,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    66,
+    52,
+    220,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 9746,
+  "name": "maid",
+  "source": "Art/v0.5/masters/eleanor_maid_master.png",
+  "source_sha256": "435d45e50d539d0c274230d2fe8290ffb90604dcf4e7c60973cb5b40677cc16e",
+  "previous": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+  "previous_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+  "strict_sha256": "2daf3fa91905c46dc9b675946c8ed22fb82d706f6df0a855daf2180ed550be9d",
+  "strict_vs_previous": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 60499,
+    "alpha_different_pixels": 33,
+    "silhouette_iou": 0.9978929894010982,
+    "visible_rgb_different_pixels": 15360,
+    "exact_visible_rgb_fraction": 0.017211593831979014,
+    "visible_rgb_mae": 3.783394117772517,
+    "interior_rgb_mae": 3.7240105071011977,
+    "visible_max_channel_error": 52
+  },
+  "fringe_effect": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 588,
+    "alpha_different_pixels": 0,
+    "silhouette_iou": 1.0,
+    "visible_rgb_different_pixels": 33,
+    "exact_visible_rgb_fraction": 0.9978927203065134,
+    "visible_rgb_mae": 0.003128991060025543,
+    "interior_rgb_mae": 0.0013541111703072278,
+    "visible_max_channel_error": 11
+  }
+}

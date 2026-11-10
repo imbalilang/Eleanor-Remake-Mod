@@ -1,0 +1,34 @@
+{
+  "source": "masters/eleanor_revolution_undersuit_beauty_v2.png",
+  "source_size": [1460, 1077],
+  "source_alpha128_bbox": [317, 21, 1139, 1077],
+  "portrait": "portraits/er_portrait_eleanor_revolution_undersuit_female_beauty_v2.png",
+  "canvas_size": [288, 212],
+  "scaled_figure_height": 220,
+  "position": [53, 62],
+  "source_landmarks_approx": {
+    "left_eye": [671, 283],
+    "right_eye": [790, 257],
+    "chin": [750, 398]
+  },
+  "reference": {
+    "workshop_item": "3829696854",
+    "file": "cp_portrait_eleanor_rev.png",
+    "native_size": [288, 212],
+    "alpha_bbox": [73, 62, 213, 212],
+    "notes": "Approximate manual alignment of hair top, eyes, chin and torso; uniform scale only."
+  },
+  "export": {
+    "resampling": "BOX area averaging in premultiplied alpha",
+    "palette": "Full RGB, no quantization or dithering",
+    "alpha": "Threshold at 128; zero RGB under transparent pixels"
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "prompt": "prompt_v2.txt",
+    "costume_reference": "codex-clipboard-86c1c81a-8c00-4ee7-a507-30d3dcbafd12.png",
+    "identity_reference": "cp_portrait_eleanor_rev.png",
+    "supporting_reference": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+    "intent": "Adult Eleanor; pearl-white tactical bodysuit; waist-up transparent master."
+  }
+}

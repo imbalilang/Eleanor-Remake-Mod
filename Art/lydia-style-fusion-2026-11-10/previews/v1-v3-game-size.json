@@ -1,0 +1,37 @@
+{
+  "native_frame": [
+    288,
+    212
+  ],
+  "panels": [
+    {
+      "version": "v1",
+      "source": "Art/lydia-style-fusion-2026-11-10/portraits/er_portrait_lydia_female_beauty_fusion_v1.png",
+      "size": [
+        288,
+        212
+      ],
+      "sha256": "98109dec07609102dbc2eb001bb330d6a32f5e5141dbb075c5d24fdb116aef56"
+    },
+    {
+      "version": "v3",
+      "source": "Art/lydia-style-fusion-2026-11-10/portraits/er_portrait_lydia_female_beauty_fusion_v3.png",
+      "size": [
+        288,
+        212
+      ],
+      "sha256": "167b8ce76622ef8e9542840b49b752a240898867521307cf6668828899c825fd"
+    }
+  ],
+  "panel_position": [
+    [
+      0,
+      28
+    ],
+    [
+      288,
+      28
+    ]
+  ],
+  "note": "1x is native game portrait texture framing; 2x is nearest-neighbour review enlargement. No additional portrait resampling or silhouette fitting."
+}

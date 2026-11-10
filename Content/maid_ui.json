@@ -147,9 +147,13 @@
     "还是算了。你按自己的安排去查。",
     "Let's leave it. Follow your own investigation plan."
   ],
-  "er_maid_entry_terms": [
-    "开启侍从恋爱与上层区归来路线，先做工协作，称呼随后续相处发展；最后确认才实付800预付工钱。她自筹的调查800独立保留。王尔德后续项目基准1000／3000／5000／8000，后三项声望达标费用减半，不消耗声望，实际报价以王尔德为准。可延期、无期限、无利息；不完成筹备不影响救母和已确认恋爱。",
-    "Opens the attendant romance and return upstairs. Cooperation starts with work; the private address develops later. Only final confirmation pays 800 in advance wages. Her own 800 for the investigation remains separate. Later projects at Wilde's have base costs of 1000 / 3000 / 5000 / 8000; the last three are half price at the required reputation, without spending reputation. Native quotes apply. No deadline or interest. Unfinished projects do not cancel the rescue or a confirmed romance."
+  "er_maid_entry_confirm_desc": [
+    "支付800信用点作为预付工钱；她自筹的调查款不动。",
+    "Pay 800 credits as advance wages; her own investigation fund is untouched."
+  ],
+  "er_maid_entry_offer_desc": [
+    "先听条件。不付款，也不锁定路线。",
+    "Hear the terms first. No payment and no route lock."
   ],
   "er_maid_payment_retry": [
     "当前未能完成领取或付款。请腾出物品空间或补足资源后重试；尚未结算的选项不会推进。",

@@ -1,0 +1,1612 @@
+{
+  "scope": "17 Eleanor expressions and E3 CG only; Lydia and E4 are outside this exporter scope",
+  "tool": "image_gen.imagegen",
+  "installed": true,
+  "expressions": [
+    {
+      "id": "er_expr_eleanor1_angry",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_angry.png",
+      "master_sha256": "b006da2d40acbdd52450e021f38f572080c7bc71657d62d50ffa13083a6c483d",
+      "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "output_sha256": "ca4fdfcae6808d369f8f9e0d27caa86a4b021b9a09904cf0a516d11a7829c477",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor1",
+      "changed_visible_pixels": 907,
+      "landmark_method": "manual iris check",
+      "reference_iris_landmarks": [
+        [
+          128.78571428571428,
+          117.92857142857143
+        ],
+        [
+          152.125,
+          113.0
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          656.5,
+          580.5
+        ],
+        [
+          775.5,
+          557.5
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          372,
+          304,
+          1118,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 151.93839170164708,
+          "centre_x": 146.16288740107962,
+          "bottom_exclusive": 214.2476595390721,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19681138821456876,
+          "tx": -0.46159681877409753,
+          "ty": 2.478605820196094
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7131,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          73,
+          63,
+          220,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9333
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor1_sad",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_sad.png",
+      "master_sha256": "c407ac7d848da05530bc5d1df48c03c82b207c3b696f509cb76c679449b17b8c",
+      "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "output_sha256": "e39bece4a09f19f75e1393599bea3773486256e6c09b7b4a70e1a5cfae4fce8d",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor1",
+      "changed_visible_pixels": 892,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          128.78571428571428,
+          117.92857142857143
+        ],
+        [
+          152.125,
+          113.0
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          665.1666666666666,
+          583.4710144927536
+        ],
+        [
+          783.0588235294117,
+          564.5
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          380,
+          302,
+          1112,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 154.6200366277644,
+          "centre_x": 144.82771909973363,
+          "bottom_exclusive": 214.75046046523377,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19976748918315812,
+          "tx": -4.1988278309023315,
+          "ty": -0.19935789584437202
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7386,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          72,
+          61,
+          218,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9380
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor1_serious",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_serious.png",
+      "master_sha256": "6007df9131be7ddee8a574684eaee2e82bdd36d91b60987d16c5a5cd51f200b6",
+      "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "output_sha256": "ce3630b7e30433f454d70bf83165cd1f03087a3980ab74afc3aff4e955ecdc68",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor1",
+      "changed_visible_pixels": 911,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          128.78571428571428,
+          117.92857142857143
+        ],
+        [
+          152.125,
+          113.0
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          654.578947368421,
+          582.5263157894736
+        ],
+        [
+          779.8023255813954,
+          562.7790697674419
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          379,
+          313,
+          1122,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 143.57084662119186,
+          "centre_x": 146.72305507432569,
+          "bottom_exclusive": 209.17725955739706,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.18816624720995,
+          "tx": 5.504286543258189,
+          "ty": 6.7103775594908655
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6977,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          77,
+          66,
+          217,
+          210
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9012
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor1_shy",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_shy.png",
+      "master_sha256": "e56d292aa24eed65b1111c36d2aad34dbf60b033c1c6e0038fc588b56ff6a1ed",
+      "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "output_sha256": "6e2011b1439317a4f2b7c669452da515e792e1c189beb1174bfc1aaa874ae8d1",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor1",
+      "changed_visible_pixels": 900,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          128.78571428571428,
+          117.92857142857143
+        ],
+        [
+          152.125,
+          113.0
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          653.1442953020135,
+          578.761744966443
+        ],
+        [
+          770.327027027027,
+          554.6351351351351
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          368,
+          299,
+          1106,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 154.91852936845137,
+          "centre_x": 145.492569778454,
+          "bottom_exclusive": 216.00900730037318,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.1993803466775436,
+          "tx": -1.4507457228956184,
+          "ty": 1.4757542753362713
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7571,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          72,
+          62,
+          219,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9528
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor1_soft",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+      "master_sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e",
+      "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "output_sha256": "089b068b368ed25792e6cfe3edd03f57278e06f4724e348c1dda0ac8b85bce58",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor1",
+      "changed_visible_pixels": 908,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          128.78571428571428,
+          117.92857142857143
+        ],
+        [
+          152.125,
+          113.0
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          655.704081632653,
+          582.6224489795918
+        ],
+        [
+          780.6752577319587,
+          556.3659793814433
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          379,
+          311,
+          1116,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 142.9002202461424,
+          "centre_x": 145.9304586564332,
+          "bottom_exclusive": 209.07838813199746,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.18679767352436916,
+          "tx": 6.299197696967241,
+          "ty": 8.084091419776257
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 7109,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          77,
+          67,
+          215,
+          210
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9041
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_scav_angry",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_angry.png",
+      "master_sha256": "2bc5acccf79dc42c852d5790dc4adef3289cc75d488a08a9cced3e89fa661326",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "output_sha256": "dd16fe6a98285de3517d05c168bffda23b0c21da1591bc09a11c3bb45fdab1ca",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_scav",
+      "changed_visible_pixels": 908,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          121.3,
+          118.5
+        ],
+        [
+          144.64285714285714,
+          113.78571428571429
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          624.8,
+          586.6
+        ],
+        [
+          747.1111111111111,
+          567.2222222222222
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          352,
+          308,
+          1073,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 147.688657785635,
+          "centre_x": 138.07600327411782,
+          "bottom_exclusive": 211.119117710206,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19230293982504557,
+          "tx": 1.0601586487728696,
+          "ty": 4.201154458456983
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6496,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          69,
+          64,
+          208,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8324
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_scav_determined",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_determined.png",
+      "master_sha256": "6ff656798c315cf40fd7e3dc3e2a4dfa580ed3719be9d930f75dab387cfecfb0",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "output_sha256": "fbd05f487b253ceecfd20e31bcb63e545b52e594fc18ac55f1cbe938581d46fb",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_scav",
+      "changed_visible_pixels": 893,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          121.3,
+          118.5
+        ],
+        [
+          144.64285714285714,
+          113.78571428571429
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          622.3882352941176,
+          582.7882352941176
+        ],
+        [
+          741.1181818181818,
+          560.439393939394
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          360,
+          310,
+          1067,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 150.98812536506188,
+          "centre_x": 139.22911594278958,
+          "bottom_exclusive": 214.56364642621304,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19711243520243066,
+          "tx": -1.4106065741447082,
+          "ty": 2.4706661483976404
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6582,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          70,
+          64,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8285
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_scav_sad",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_sad.png",
+      "master_sha256": "84ab7a7d623a88714bd22751dc6b8e187397c534e94dba3bd87586500ab836c2",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "output_sha256": "5bef7228dc02450f27441ba80658138698012e83e7566a676fa918cc9651ac32",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_scav",
+      "changed_visible_pixels": 906,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          121.3,
+          118.5
+        ],
+        [
+          144.64285714285714,
+          113.78571428571429
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          618.5696202531645,
+          588.1012658227849
+        ],
+        [
+          733.2030303030303,
+          569.9121212121212
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          359,
+          310,
+          1053,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 157.16402211258634,
+          "centre_x": 139.15000068616004,
+          "bottom_exclusive": 217.11344070660442,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.20517496359345475,
+          "tx": -5.703523610819019,
+          "ty": -3.6548201199528876
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6800,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          68,
+          61,
+          210,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8682
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_scav_shy",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_shy.png",
+      "master_sha256": "2df237889794dfbc8053bf8e4783c96fc7ff4c16c6e29ccd453685eaf3a58a36",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "output_sha256": "6e973989f9eef2a5f7fc6d724e3d92cf87ebbc0541687e8707981f3e4c3f9a8d",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_scav",
+      "changed_visible_pixels": 908,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          121.3,
+          118.5
+        ],
+        [
+          144.64285714285714,
+          113.78571428571429
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          618.725,
+          582.8
+        ],
+        [
+          738.2721518987341,
+          558.5886075949367
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          351,
+          299,
+          1057,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 151.7008139074329,
+          "centre_x": 137.9503047416726,
+          "bottom_exclusive": 213.79830809007217,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19523914273800885,
+          "tx": 0.5019482541143532,
+          "ty": 3.720990503974633
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6720,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          69,
+          63,
+          207,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8449
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_scav_soft",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_soft.png",
+      "master_sha256": "b65ec73ec339a54226e007a1b2daab078706c9205554ddff32dcfcba23aaf523",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "output_sha256": "b7170e9c5ac4de38fef177c7dfa739a1e14843842261b60d3a895cfb1d4eda28",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_scav",
+      "changed_visible_pixels": 897,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          121.3,
+          118.5
+        ],
+        [
+          144.64285714285714,
+          113.78571428571429
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          619.4395604395604,
+          582.2527472527472
+        ],
+        [
+          736.648717948718,
+          556.6948717948718
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          351,
+          305,
+          1070,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 153.05269510678377,
+          "centre_x": 139.4143040167562,
+          "bottom_exclusive": 215.69434688935917,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19851192620853927,
+          "tx": -1.6284195544109537,
+          "ty": 2.095514288970918
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6672,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          68,
+          63,
+          211,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8439
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_scav_tired",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_tired.png",
+      "master_sha256": "805b6e47137ee8f7d49f1bdd64e04243a8db5a1ffb5f5a53ee72eb5555206312",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "output_sha256": "c3acc9eb8ebdd7b9a294db0cd5b4d0e57a7d09cc280e380d715898e3cedf0063",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_scav",
+      "changed_visible_pixels": 890,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          121.3,
+          118.5
+        ],
+        [
+          144.64285714285714,
+          113.78571428571429
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          627.509756097561,
+          592.3829268292683
+        ],
+        [
+          746.5531914893617,
+          568.6542553191489
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1462,
+          1076
+        ],
+        "clean_bbox": [
+          366,
+          302,
+          1076,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 151.8482778279505,
+          "centre_x": 139.63559162674701,
+          "bottom_exclusive": 212.34957373348755,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.19618640546246835,
+          "tx": -1.814806711692654,
+          "ty": 1.2530014558716118
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6740,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          70,
+          61,
+          209,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 8471
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_maid_angry",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_angry.png",
+      "master_sha256": "9c97c12d20a09be934f6a52484a3f038b3ae16fae76c691191857b69e485ccdf",
+      "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "output_sha256": "8e03356320d0aa5e3bd37b3678ae4d81f854c8d9056a48b7c8dd39061dbe0cce",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_maid",
+      "changed_visible_pixels": 979,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          127.94444444444444,
+          118.61111111111111
+        ],
+        [
+          153.61111111111111,
+          113.61111111111111
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          657.75,
+          554.0285714285715
+        ],
+        [
+          772.4487179487179,
+          532.7051282051282
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          382,
+          255,
+          1077,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 184.01949970728373,
+          "centre_x": 144.00554727473593,
+          "bottom_exclusive": 234.49586850967117,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.22414068173846982,
+          "tx": -19.505080053477798,
+          "ty": -6.679505040922351
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 8484,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          66,
+          51,
+          222,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9802
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_maid_sad",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_sad.png",
+      "master_sha256": "0ce65cfa02487d048deb3a61f14cd971332bf1f79b1e62475d830f315e1e9820",
+      "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "output_sha256": "94aab91a8fc312300d67cf990cb041b9355b10daf7a4e4afce2b4d76f3be4867",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_maid",
+      "changed_visible_pixels": 1002,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          127.94444444444444,
+          118.61111111111111
+        ],
+        [
+          153.61111111111111,
+          113.61111111111111
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          658.8809523809524,
+          554.5272108843537
+        ],
+        [
+          772.0436241610738,
+          533.748322147651
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          380,
+          256,
+          1077,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 186.36634838146554,
+          "centre_x": 143.7409371999503,
+          "bottom_exclusive": 235.99065049699294,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.22727603461154333,
+          "tx": -21.829654014558997,
+          "ty": -8.558362745027694
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 8951,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          64,
+          50,
+          223,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 10190
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_maid_serious",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_serious.png",
+      "master_sha256": "81bf80508ddad3504fcd805593d950326f2a3dba6237a9ea9c0d52ed6e0166c2",
+      "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "output_sha256": "364dca2f42930ac11275cb95ed3a522cd6f52f05b873856c9bedfbb0b4c7308d",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_maid",
+      "changed_visible_pixels": 1028,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          127.94444444444444,
+          118.61111111111111
+        ],
+        [
+          153.61111111111111,
+          113.61111111111111
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          659.3598130841121,
+          547.4968847352025
+        ],
+        [
+          772.6691394658753,
+          530.660237388724
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          379,
+          257,
+          1078,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 186.95345567288032,
+          "centre_x": 143.62785324331583,
+          "bottom_exclusive": 237.67438148268792,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.22827039764698454,
+          "tx": -22.667131442512414,
+          "ty": -7.9445663854674535
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 8694,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          64,
+          52,
+          224,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9796
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_maid_shy",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_shy.png",
+      "master_sha256": "d4f59fc53333b77da5b297893ccd154c31fe1cc414e8fda1eb87b06f3dd99f21",
+      "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "output_sha256": "b79558ab4cff80c0724434fbe8fcae80d68e392f7f593a863b8c27fecd33670c",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_maid",
+      "changed_visible_pixels": 1014,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          127.94444444444444,
+          118.61111111111111
+        ],
+        [
+          153.61111111111111,
+          113.61111111111111
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          655.6086956521739,
+          557.4782608695652
+        ],
+        [
+          770.8354430379746,
+          535.2405063291139
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          381,
+          255,
+          1076,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 182.9391006987889,
+          "centre_x": 144.1820785019563,
+          "bottom_exclusive": 233.12813676018425,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.2228247267951144,
+          "tx": -18.14573496828453,
+          "ty": -6.631269271358832
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 8511,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          67,
+          51,
+          222,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 10076
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_maid_soft",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_soft.png",
+      "master_sha256": "6aaddf6dde7a0d2fbba91eba93370db370081f4d30c1836fe3c6a461779c5c99",
+      "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "output_sha256": "c37ad85d4123c1058e0d8bf6ac0d8cd6c11fe487cd734d35f336cf4de2bdc876",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_maid",
+      "changed_visible_pixels": 998,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          127.94444444444444,
+          118.61111111111111
+        ],
+        [
+          153.61111111111111,
+          113.61111111111111
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          657.8939393939394,
+          553.1414141414141
+        ],
+        [
+          772.5753768844221,
+          528.6507537688442
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          378,
+          258,
+          1080,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 182.40376215165483,
+          "centre_x": 143.84727672975467,
+          "bottom_exclusive": 234.43258718527701,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.22298748429297657,
+          "tx": -18.710599319825263,
+          "ty": -5.501945913965784
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 8654,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          65,
+          53,
+          222,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9692
+      },
+      "installed": true
+    },
+    {
+      "id": "er_expr_eleanor_maid_tsun",
+      "master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_tsun.png",
+      "master_sha256": "20c2fae4f63f80c2a32c1589f69ac14fb93b2401eb0fbc00c5e16ec111e090a4",
+      "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "output_sha256": "106a11f8083433550966ce9e6121517857b0752c13909a7d2e4c6ca32345ef47",
+      "size": [
+        288,
+        212
+      ],
+      "alpha_identical_to_base": true,
+      "body_opaque_pixels_identical_to_base": true,
+      "jaw_and_neck_pixels_identical_to_base": true,
+      "jaw_guard_profile": "eleanor_maid",
+      "changed_visible_pixels": 1021,
+      "landmark_method": "green iris clustering, reviewed at native size",
+      "reference_iris_landmarks": [
+        [
+          127.94444444444444,
+          118.61111111111111
+        ],
+        [
+          153.61111111111111,
+          113.61111111111111
+        ]
+      ],
+      "generated_iris_landmarks": [
+        [
+          660.6351351351351,
+          552.2927927927927
+        ],
+        [
+          775.9423076923077,
+          530.1923076923077
+        ]
+      ],
+      "pipeline": {
+        "source_size": [
+          1461,
+          1076
+        ],
+        "clean_bbox": [
+          378,
+          256,
+          1082,
+          1076
+        ],
+        "parameters": {
+          "visible_height": 182.63371230996208,
+          "centre_x": 143.38616105108048,
+          "bottom_exclusive": 234.2144504216124,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.22272403940239277,
+          "tx": -19.20238771266625,
+          "ty": -5.436615975362201
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 8461,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          65,
+          52,
+          222,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 9731
+      },
+      "installed": true
+    }
+  ],
+  "ending": {
+    "id": "er_ending_maid_cg",
+    "source_size": [
+      1672,
+      941
+    ],
+    "size": [
+      960,
+      540
+    ],
+    "source_sha256": "e08b61e9487b1a1fa06e4e24c4bd827f6f584bb89c62b3b71598b9d8bc5825f5",
+    "output_sha256": "b43ec7b24d91c24c79695ce1066c33ec9bc7ac73fe634d01594a867a93ee6e32",
+    "opaque_fraction": 1,
+    "isotropic_scale": 0.5741626794258373,
+    "installed": true
+  },
+  "deferred_unchanged": {
+    "er_expr_lydia_daily_flustered.png": "b10ad2121cdaa92d2f3a1b35c9caa2f29e57ab1ca84d64c8de9962740ac5371c",
+    "er_expr_lydia_daily_hurt.png": "d3807fb253e90f049dc640a11a7bcd952fe47efed971a5a8610b23eb5c14dcdb",
+    "er_expr_lydia_daily_serious.png": "c306aa06ef1f62d78b082279587385581a70da91ba9d99ebd232105736477f87",
+    "er_expr_lydia_daily_smile.png": "ad0f5d305527df47780cc6b5dc280e372ce9b8faaa55d7f5c5a6ac09a66e035f",
+    "er_expr_lydia_daily_tease.png": "b9bfbf2562065b29dea6db3788335ad25b5cc6aa39072dd01172c638b834b276",
+    "er_ending_harem_cg.png": "9124c2c610c41ab208a037dd98ce734ec0c4bc3b5eb26f2c4905a505926d894d"
+  }
+}

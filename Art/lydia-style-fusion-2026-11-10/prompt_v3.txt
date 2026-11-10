@@ -1,0 +1,13 @@
+Use case: identity-preserve / subtle anatomical proportion refinement.
+Image 1 is the EDIT TARGET: Lydia's latest author-style fusion portrait with long mostly straight brown hair.
+Image 2 is Eleanor's existing portrait, used ONLY as a head-to-shoulder balance reference, not for Lydia's identity, hairstyle, colour or outfit.
+
+Refine Image 1 because the head looks slightly too dominant over the narrow shoulders. Make a SMALL, natural correction:
+- Gently broaden the anatomical shoulder frame by approximately 8-10 percent, distributed to both sides. Give the shoulder line a more relaxed, clearly supported sweep and a natural connection through the collarbones to the neck. Keep feminine adult proportions, not broad athletic shoulders.
+- Let the upper arms follow the slightly wider shoulders naturally; adapt the off-shoulder sleeves and garment straps coherently. Do not enlarge her breasts, waist or entire torso as a shortcut.
+- Slightly lower and flatten the puffiness of the hair at the very top of the crown, about 3-4 percent in that local area. Keep the FACE, eye spacing, jaw and chin the same size, at the same position. Do not shrink the face or compress the skull.
+- Keep the long mostly straight hair with only lightly curved lower ends. Allow the straight side hair to sit a little behind the outer shoulder caps so the shoulder contour is readable. Do not reintroduce ringlets, big waves, a tall braided crown or Eleanor's orange hair.
+
+Preserve exactly the successful design: the original author's warm restrained face construction and cel shading; mature adult Lydia's amber eyes and gentle closed-mouth smile; neutral cool honey-brown/milk-tea-brown hair colour; rose and pearl ornament; pearl earrings; ivory fitted sweetheart bodice, rose waist, semi-sheer rose-taupe upper-chest fabric and lace neckline; bare shoulder tops; natural bust volume; pose, lighting, waist-up framing, transparent background and illustration quality.
+The aim is a small correction to her head/shoulder balance while remaining unmistakably this same drawing and character. Do not redesign her, enlarge eyes, add props or change clothing.
+One normal high-resolution waist-up portrait on actual transparent background, full head and shoulders through the natural waist only. No text, UI, watermark, background, pixel grid, dithering or other characters.

@@ -1,0 +1,748 @@
+{
+  "algorithm_document": "Art/图片生成提示词.txt",
+  "algorithm_document_sha256": "0c083643cc0697a6f9ddb841b71d0261f564edc1a2cb93695ca2ce8890711b62",
+  "implementation_sha256": "f0bd0f3cff71ebf54b674ccddf7c25388cb9b6b886400f9bf4773cc317d7d843",
+  "verification_script_sha256": "e00c6e7723d4bb3567fe2580fc1e5909990b9aa9232c28793039bcb240b23935",
+  "golden": {
+    "source_size": [
+      1470,
+      1070
+    ],
+    "clean_bbox": [
+      280,
+      15,
+      1174,
+      1070
+    ],
+    "parameters": {
+      "visible_height": 150,
+      "centre_x": 144.5,
+      "bottom_exclusive": 211,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": true,
+      "fringe": true,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.14218009478672985,
+      "tx": 41.13507109004739,
+      "ty": 58.86729857819907
+    },
+    "keying_counts": {
+      "strong": 910947,
+      "weak_near_strong": 1094,
+      "residual_edge": 826
+    },
+    "source_fringe_pixels": 3714,
+    "detail_pixels": 7649,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      81,
+      62,
+      208,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 9033,
+    "comparison": {
+      "rgba_identical": true,
+      "different_rgba_pixels_including_transparent": 0,
+      "alpha_different_pixels": 0,
+      "silhouette_iou": 1.0,
+      "visible_rgb_different_pixels": 0,
+      "exact_visible_rgb_fraction": 1.0,
+      "visible_rgb_mae": 0.0,
+      "interior_rgb_mae": 0.0,
+      "visible_max_channel_error": 0
+    },
+    "source_sha256": "24940d5ce1b03c1e36caeec931993ab238edc635ac577bae3e553531a194888d",
+    "target_sha256": "da3523910cd9b48c904a122425a918fa566866deb2099b0b6c636be1282c95e2",
+    "decoded_output_sha256": "262efa8422f83cbd6b49e9e727e3991b1253509269978d717856ca808e39f2c4",
+    "repeat_identical": true,
+    "previous_box_comparison": {
+      "rgba_identical": false,
+      "different_rgba_pixels_including_transparent": 57659,
+      "alpha_different_pixels": 90,
+      "silhouette_iou": 0.9932945909700491,
+      "visible_rgb_different_pixels": 10223,
+      "exact_visible_rgb_fraction": 0.2331983198319832,
+      "visible_rgb_mae": 3.2210221022102212,
+      "interior_rgb_mae": 3.0926950018433663,
+      "visible_max_channel_error": 58
+    },
+    "ablations": {
+      "without_detail": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 7649,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 7649,
+        "exact_visible_rgb_fraction": 0.4301147369989569,
+        "visible_rgb_mae": 2.7287786221626185,
+        "interior_rgb_mae": 2.764707431400432,
+        "visible_max_channel_error": 33
+      },
+      "without_fringe": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 46563,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 872,
+        "exact_visible_rgb_fraction": 0.9350320369542542,
+        "visible_rgb_mae": 0.23930859782446728,
+        "interior_rgb_mae": 0.02422710275451625,
+        "visible_max_channel_error": 46
+      },
+      "coverage_050": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 16978,
+        "alpha_different_pixels": 75,
+        "silhouette_iou": 0.9944121591417077,
+        "visible_rgb_different_pixels": 76,
+        "exact_visible_rgb_fraction": 0.9943058365175695,
+        "visible_rgb_mae": 0.03983416997577483,
+        "interior_rgb_mae": 0.008743514787601063,
+        "visible_max_channel_error": 25
+      }
+    }
+  },
+  "numeric_probes": {
+    "coverage_035": true,
+    "transparent_rgb_excluded": true,
+    "half_up_rounding": true,
+    "literal_2d_integral": [
+      {
+        "s": 0.37,
+        "tx": 0.31,
+        "ty": -0.27,
+        "identical": true
+      },
+      {
+        "s": 0.81,
+        "tx": -0.93,
+        "ty": 0.19,
+        "identical": true
+      },
+      {
+        "s": 1.3,
+        "tx": 0.12,
+        "ty": -0.23,
+        "identical": true
+      }
+    ]
+  },
+  "boundary_probes": {
+    "existing_alpha_and_rgb_preserved": true,
+    "source_alpha_127_excluded_128_included": true,
+    "strong_weak_keying_and_internal_holes": true,
+    "cropped_canvas_edge_is_not_transparency": true,
+    "source_fringe_4px_eight_neighbours_alpha_fixed": true,
+    "target_fringe_1px_radius": true,
+    "detail_threshold_6_single_gain_and_border": true,
+    "detail_requires_five_opaque_pixels": true,
+    "detail_clamps_to_8bit": true,
+    "detail_reads_frozen_copy_no_order_accumulation": true,
+    "rgb_bleed_fills_holes_without_changing_alpha": true,
+    "empty_master_rejected_and_empty_bleed_stable": true,
+    "isolated_hair_jewellery_pixels_not_deleted": true
+  },
+  "project_candidates": [
+    {
+      "source_size": [
+        1461,
+        1077
+      ],
+      "clean_bbox": [
+        381,
+        257,
+        1073,
+        1077
+      ],
+      "parameters": {
+        "visible_height": 182,
+        "centre_x": 143.0,
+        "bottom_exclusive": 233,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.22195121951219512,
+        "tx": -18.35853658536587,
+        "ty": -6.041463414634137
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 34,
+      "detail_pixels": 8469,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 9746,
+      "name": "maid",
+      "source": "Art/v0.5/masters/eleanor_maid_master.png",
+      "source_sha256": "435d45e50d539d0c274230d2fe8290ffb90604dcf4e7c60973cb5b40677cc16e",
+      "previous": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+      "previous_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "strict_sha256": "2daf3fa91905c46dc9b675946c8ed22fb82d706f6df0a855daf2180ed550be9d",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 60499,
+        "alpha_different_pixels": 33,
+        "silhouette_iou": 0.9978929894010982,
+        "visible_rgb_different_pixels": 15360,
+        "exact_visible_rgb_fraction": 0.017211593831979014,
+        "visible_rgb_mae": 3.783394117772517,
+        "interior_rgb_mae": 3.7240105071011977,
+        "visible_max_channel_error": 52
+      },
+      "fringe_effect": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 588,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 33,
+        "exact_visible_rgb_fraction": 0.9978927203065134,
+        "visible_rgb_mae": 0.003128991060025543,
+        "interior_rgb_mae": 0.0013541111703072278,
+        "visible_max_channel_error": 11
+      }
+    },
+    {
+      "source_size": [
+        1462,
+        1076
+      ],
+      "clean_bbox": [
+        395,
+        265,
+        1058,
+        1076
+      ],
+      "parameters": {
+        "visible_height": 209,
+        "centre_x": 143.5,
+        "bottom_exclusive": 266,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.25770653514180025,
+        "tx": -43.723797780517884,
+        "ty": -11.292231812577086
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 0,
+      "detail_pixels": 7762,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 10352,
+      "name": "gala",
+      "source": "Art/gala/masters/eleanor_gala_beauty_master.png",
+      "source_sha256": "410fcf24b6a86aa8383a622d77b11c596def71a9b205fafbe499e70773519c29",
+      "previous": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+      "previous_sha256": "0d68790bf9e45f41dc9f058a4c7cf7cb774d684f7dfb094d615c64196af0370b",
+      "strict_sha256": "47d84569ce5f96584f3ec0135e5c7cb1417b4db9f0dd4d9dd70bafd5f545ecbd",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 60068,
+        "alpha_different_pixels": 68,
+        "silhouette_iou": 0.9956852791878172,
+        "visible_rgb_different_pixels": 14992,
+        "exact_visible_rgb_fraction": 0.044608717817996434,
+        "visible_rgb_mae": 2.975762596652222,
+        "interior_rgb_mae": 2.9280726412779154,
+        "visible_max_channel_error": 44
+      },
+      "fringe_effect": {
+        "rgba_identical": true,
+        "different_rgba_pixels_including_transparent": 0,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 0,
+        "exact_visible_rgb_fraction": 1.0,
+        "visible_rgb_mae": 0.0,
+        "interior_rgb_mae": 0.0,
+        "visible_max_channel_error": 0
+      }
+    },
+    {
+      "source_size": [
+        1452,
+        1083
+      ],
+      "clean_bbox": [
+        448,
+        289,
+        995,
+        1051
+      ],
+      "parameters": {
+        "visible_height": 174,
+        "centre_x": 143.5,
+        "bottom_exclusive": 215,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.2283464566929134,
+        "tx": -21.251968503937007,
+        "ty": -24.99212598425197
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 0,
+      "detail_pixels": 8004,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        81,
+        42,
+        206,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 9436,
+      "name": "lydia_daily_vanilla",
+      "source": "Art/dual-romance-v0.3/masters/lydia_daily_vanilla.png",
+      "source_sha256": "9396d9e8d1654090231988af17cb138f669ddca511d0b35ef27ee02429ef9f7c",
+      "previous": "Textures/Items/er_portrait_lydia_female_vanilla.png",
+      "previous_sha256": "9a2d7a43469d7a9e41e06bd6e6a4578aa81f1f4567803ed37c2b4a59bcbda358",
+      "strict_sha256": "c5d98a1ba3e30713e0ba6669ea108d69e28f6e78858706c1faaf43c687b6e094",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 60439,
+        "alpha_different_pixels": 70,
+        "silhouette_iou": 0.9952416559037455,
+        "visible_rgb_different_pixels": 14312,
+        "exact_visible_rgb_fraction": 0.022471142681510826,
+        "visible_rgb_mae": 3.0552102543086765,
+        "interior_rgb_mae": 3.0578904877237973,
+        "visible_max_channel_error": 39
+      },
+      "fringe_effect": {
+        "rgba_identical": true,
+        "different_rgba_pixels_including_transparent": 0,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 0,
+        "exact_visible_rgb_fraction": 1.0,
+        "visible_rgb_mae": 0.0,
+        "interior_rgb_mae": 0.0,
+        "visible_max_channel_error": 0
+      }
+    },
+    {
+      "source_size": [
+        1462,
+        1076
+      ],
+      "clean_bbox": [
+        435,
+        267,
+        1029,
+        1076
+      ],
+      "parameters": {
+        "visible_height": 166,
+        "centre_x": 144.0,
+        "bottom_exclusive": 225,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.20519159456118666,
+        "tx": -6.200247218788633,
+        "ty": 4.21384425216317
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 71,
+      "detail_pixels": 7252,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        83,
+        60,
+        205,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 9024,
+      "name": "lydia_daily_beauty",
+      "source": "Art/dual-romance-v0.3/masters/lydia_daily_beauty.png",
+      "source_sha256": "c52f87b9e2b7ae408720f6b6df696547f0a1d9f35eff925f0712bd6a5e906f40",
+      "previous": "Textures/Items/er_portrait_lydia_female_beauty.png",
+      "previous_sha256": "5f297c4c8cb0aaddc40d7ece0ba1697fd4eadbf0c4b4d5a2aa1ccb89821f2c94",
+      "strict_sha256": "7ffacdcfc9b684815d4454079ef3d13eb5b18e02f83abed2c88f50b20cfbbe76",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 60592,
+        "alpha_different_pixels": 49,
+        "silhouette_iou": 0.996215924009576,
+        "visible_rgb_different_pixels": 12724,
+        "exact_visible_rgb_fraction": 0.013643410852713178,
+        "visible_rgb_mae": 3.5805684754521963,
+        "interior_rgb_mae": 3.5441970862661645,
+        "visible_max_channel_error": 53
+      },
+      "fringe_effect": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 1037,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 81,
+        "exact_visible_rgb_fraction": 0.9937446907097073,
+        "visible_rgb_mae": 0.022652971915463227,
+        "interior_rgb_mae": 0.012082213352882083,
+        "visible_max_channel_error": 56
+      }
+    },
+    {
+      "source_size": [
+        1452,
+        1083
+      ],
+      "clean_bbox": [
+        459,
+        287,
+        991,
+        1051
+      ],
+      "parameters": {
+        "visible_height": 174,
+        "centre_x": 143.5,
+        "bottom_exclusive": 215,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.22774869109947643,
+        "tx": -21.617801047120423,
+        "ty": -24.363874345549732
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 0,
+      "detail_pixels": 7851,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        83,
+        42,
+        204,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 9165,
+      "name": "lydia_date_vanilla",
+      "source": "Art/dual-romance-v0.3/masters/lydia_date_vanilla.png",
+      "source_sha256": "7ebc7a9c91333386a477c1b9942653d5150c283890761a4ce5daab3fa8ca7db3",
+      "previous": "Textures/Items/er_portrait_lydia_date_female_vanilla.png",
+      "previous_sha256": "e104f1f61588ed3c485d9f6c9e2a0998ba274cd003590c53b0c495512d3fa66a",
+      "strict_sha256": "cc44b857a4fd84b4de162e8bf255b31da0e24253106b8c8f751b5388ccac27ab",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 60453,
+        "alpha_different_pixels": 83,
+        "silhouette_iou": 0.9944242912803977,
+        "visible_rgb_different_pixels": 14488,
+        "exact_visible_rgb_fraction": 0.021279470377626158,
+        "visible_rgb_mae": 3.1181742439595577,
+        "interior_rgb_mae": 3.1208757756702963,
+        "visible_max_channel_error": 38
+      },
+      "fringe_effect": {
+        "rgba_identical": true,
+        "different_rgba_pixels_including_transparent": 0,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 0,
+        "exact_visible_rgb_fraction": 1.0,
+        "visible_rgb_mae": 0.0,
+        "interior_rgb_mae": 0.0,
+        "visible_max_channel_error": 0
+      }
+    },
+    {
+      "source_size": [
+        1462,
+        1076
+      ],
+      "clean_bbox": [
+        438,
+        265,
+        1024,
+        1076
+      ],
+      "parameters": {
+        "visible_height": 166,
+        "centre_x": 144.0,
+        "bottom_exclusive": 225,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.20468557336621454,
+        "tx": -5.625154130702839,
+        "ty": 4.758323057953163
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 4,
+      "detail_pixels": 6255,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        85,
+        60,
+        204,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 8620,
+      "name": "lydia_date_beauty",
+      "source": "Art/dual-romance-v0.3/masters/lydia_date_beauty.png",
+      "source_sha256": "d9b5b75c1eacb1fb6c590dca8975186b109ac77e868d559ef310e2cd7ca09044",
+      "previous": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+      "previous_sha256": "6670a243cb15589bbf0e1b3e76218bc5051286c907072803345c7b4ccee92f10",
+      "strict_sha256": "f9b1518b23d7e6de52ce2ee9bbc3e9290b1c7842f5b49dcb91973a5a8442fb70",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 60571,
+        "alpha_different_pixels": 61,
+        "silhouette_iou": 0.9952830188679245,
+        "visible_rgb_different_pixels": 12674,
+        "exact_visible_rgb_fraction": 0.015305726050811902,
+        "visible_rgb_mae": 3.129956232356978,
+        "interior_rgb_mae": 3.0865882224764394,
+        "visible_max_channel_error": 46
+      },
+      "fringe_effect": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 641,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 8,
+        "exact_visible_rgb_fraction": 0.9993813795236622,
+        "visible_rgb_mae": 0.0009279307145066501,
+        "interior_rgb_mae": 0.0002705847336093298,
+        "visible_max_channel_error": 9
+      }
+    },
+    {
+      "source_size": [
+        1460,
+        1077
+      ],
+      "clean_bbox": [
+        315,
+        19,
+        1142,
+        1077
+      ],
+      "parameters": {
+        "visible_height": 220,
+        "centre_x": 139,
+        "bottom_exclusive": 281,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": true,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.20793950850661624,
+        "tx": -12.483931947069948,
+        "ty": 57.04914933837429
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 0,
+      "detail_pixels": 6891,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 8808,
+      "name": "revolution_v3",
+      "source": "Art/revolution-route-2026-11-10/masters/eleanor_revolution_undersuit_beauty_v3.png",
+      "source_sha256": "0eb50e2c5c9216835412ef19951dae82d1f676847b67be8ede75178a93773368",
+      "previous": "Art/revolution-route-2026-11-10/portraits/er_portrait_eleanor_revolution_undersuit_female_beauty_v3.png",
+      "previous_sha256": "726e8e1f1c7ca220813750415259d7ab6a43ca16b351d5411584fa3e366a7897",
+      "strict_sha256": "9ee07ec2ae1cb250249fcaeb2121b6b7314e1e062e98311880fffd4f71b5b30b",
+      "strict_vs_previous": {
+        "rgba_identical": false,
+        "different_rgba_pixels_including_transparent": 59920,
+        "alpha_different_pixels": 104,
+        "silhouette_iou": 0.993197723853751,
+        "visible_rgb_different_pixels": 14337,
+        "exact_visible_rgb_fraction": 0.055844583470530125,
+        "visible_rgb_mae": 2.7058720228295465,
+        "interior_rgb_mae": 2.676299769085438,
+        "visible_max_channel_error": 36
+      },
+      "fringe_effect": {
+        "rgba_identical": true,
+        "different_rgba_pixels_including_transparent": 0,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0,
+        "visible_rgb_different_pixels": 0,
+        "exact_visible_rgb_fraction": 1.0,
+        "visible_rgb_mae": 0.0,
+        "interior_rgb_mae": 0.0,
+        "visible_max_channel_error": 0
+      }
+    }
+  ],
+  "protected_inputs_unchanged": true,
+  "boundary_interpretation": "Colour-fringe distances use actual transparent pixels, not the cropped canvas exterior. Only area sampling treats outside as transparent.",
+  "scope": "Isolated artwork validation; production portraits and runtime files unchanged."
+}

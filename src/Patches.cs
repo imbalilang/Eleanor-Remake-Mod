@@ -1,5 +1,6 @@
 using System;
 using HarmonyLib;
+using UnityEngine;
 
 namespace EleanorRomance
 {
@@ -46,9 +47,17 @@ namespace EleanorRomance
     [HarmonyPatch(typeof(SpriteDict), nameof(SpriteDict.GetSprite))]
     internal static class Patch_SpriteDictGetSprite
     {
-        private static void Prefix(string key)
+        private static bool Prefix(string key, ref Sprite __result)
         {
+#if NEXUS_BEAUTY
+            if (PortraitCompat.TryNexusBeauty(key, out Sprite beauty))
+            {
+                __result = beauty;
+                return false;
+            }
+#endif
             PortraitCompat.EnsureKey(key);
+            return true;
         }
     }
 

@@ -1,0 +1,35 @@
+{
+  "tool": "image_gen.imagegen",
+  "status": "candidate_for_review",
+  "revision": "v3",
+  "source": "masters/ending_harem_master_v3.png",
+  "source_sha256": "32037d8b9854950766e79848a3d1408638651ea8103fa00ae25a283ba3d1e141",
+  "source_size": [
+    1672,
+    941
+  ],
+  "output": "endings/er_ending_harem_cg_v3.png",
+  "output_sha256": "8f07467c24c3209c993cf2c35c5cf36c65efaf3702910f2099663c4d6232c4e5",
+  "output_size": [
+    960,
+    540
+  ],
+  "mode": "RGBA",
+  "alpha_values": [
+    255
+  ],
+  "pipeline": "Verified author exact area sampling and one B/detail pass for a complete opaque scene",
+  "transform": {
+    "scale": 0.5741626794258373,
+    "tx": 0.0,
+    "ty": -0.1435406698564634
+  },
+  "detail_pixels": 123936,
+  "portrait_top_row_added": false,
+  "fixed_palette": false,
+  "dither": false,
+  "all_runtime_art_unchanged": true,
+  "runtime_placeholder_sha256": "9124c2c610c41ab208a037dd98ce734ec0c4bc3b5eb26f2c4905a505926d894d",
+  "in_game_visual_test_performed": false,
+  "published": false
+}

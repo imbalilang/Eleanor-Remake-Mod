@@ -121,7 +121,31 @@ namespace EleanorRomance
         public static int Savings
         {
             get => GetInt("savings", 0);
-            set => SetInt("savings", Mathf.Clamp(value, 0, 800));
+            set
+            {
+                SetInt("savings", Mathf.Clamp(value, 0, 800));
+                SyncNativeSavings();
+            }
+        }
+
+        /// <summary>
+        /// The original Eleanor storyline reads StoreClientData.eleanorSavings
+        /// for its 800-credit progress.  Keep it in lockstep with the remake's
+        /// state so native checks/tooltips and old-save bridges see the same
+        /// amount even while the remake owns the chapters.
+        /// </summary>
+        public static void SyncNativeSavings()
+        {
+            try
+            {
+                PlayerStore store = PlayerStore.Instance;
+                if (store == null || store.storeClientData == null) return;
+                store.storeClientData.eleanorSavings = Savings;
+            }
+            catch
+            {
+                // Early load / tests may not have a PlayerStore yet.
+            }
         }
 
         public static bool WarningGiftGiven

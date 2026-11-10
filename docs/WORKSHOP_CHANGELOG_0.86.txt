@@ -1,0 +1,19 @@
+0.86｜表情分布、价格判定与结算修正
+
+• 平衡主线表情变化，补齐可用表情素材的章节。
+• 修复 1×1 铭牌/赞助饰品/谢礼饰品的点击命中区，整格可点，视觉不变。
+• 价格判定改用谈判界面价格与让利/加价特性，修复 -25% 让利被误判为高价；同步修正买卖方向、C05 援助阈值与 C09 公道镯子。
+• 修复 C03 等 SELL 客户的原生结束对白覆盖章节收尾，交易后追加的吊坠段落（c03.b007）现在会播放。
+• 恢复 800 调查款进度：同步原版 eleanorSavings，C07/C08 每笔拾荒交易在上方提示已攒/剩余金额。
+• C08“照常付款”回礼由废金属改为电子元件（普通）。
+• 保留 0.85 表情/CG 美术、0.84 游戏 1.0.0.14 兼容与全部路线数值。
+
+0.86 | Expression balance, price verdicts and settlement fixes
+
+• Balances expression changes across the main chapters with available portrait sets.
+• Fixes the click hit area of 1x1 plaques/ornaments; the whole cell is clickable without changing the visuals.
+• Price verdicts now use the negotiation price plus actual discount/markup features, fixing a 25% discount being read as a high price; also fixes both trade directions, the C05 aid threshold and the C09 fair-bracelet check.
+• Fixes native SELL all-done dialogue bypassing the chapter wrap; the C03 post-trade pendant scene (c03.b007) now plays.
+• Restores the 800-credit investigation fund progress: the native eleanorSavings value is synchronized and C07/C08 show accumulated/remaining credits after each scavenger sale.
+• The C08 paid return gift changes from scrap metal to a common electronic component.
+• Retains the 0.85 expression/ending art, 0.84 game 1.0.0.14 compatibility and all route values.

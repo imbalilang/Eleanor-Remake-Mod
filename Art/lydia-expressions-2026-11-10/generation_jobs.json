@@ -1,0 +1,67 @@
+{
+  "tool": "image_gen.imagegen",
+  "source": "approved Lydia daily beauty V4",
+  "scope": "5 generated facial layers, assembled into daily and date families",
+  "jobs": [
+    {
+      "id": "lydia_face_smile",
+      "expression": "smile",
+      "prompt": "Use case: identity-preserve / expression-only edit.\nImage 1 is the EDIT TARGET: the user's APPROVED FINAL LYDIA, an adult upper-district woman aged 27.\nCreate ONE facial-expression variation of this exact illustration. It will be a reusable facial layer for her daily and date outfits.\nCharacter interpretation: Lydia's neutral partially lowered eyelids express worldly adult poise and calm confidence. Preserve that identity. Some emotions may open the lids further without changing her face design.\nRequested expression (smile): Genuine bright happiness: raise the upper eyelids so the eyes open noticeably more than the neutral reference, revealing more of the existing amber irises. Keep the same horizontal eye corners and iris size. A lively, natural open smile, with a modest upper-tooth shape if appropriate. This is a poised adult woman enjoying herself, not a childlike exaggerated grin.\nCRITICAL EYE RULES: preserve the original eye corner positions and horizontal eye width, existing amber iris/pupil size, iris colours and facial bone structure. For open-eye expressions, alter the lid aperture vertically to reveal more of the same eyes. Do NOT substitute oversized round modern-anime eyes, enlarge irises or make her look younger.\nChange only eyebrows, eyelids, gaze nuance, mouth and the requested blush. LOCK the face shape, jaw and chin, exact head angle and position, hair silhouette, long mostly straight cool honey-brown hair and gently curved ends, rose-and-pearl ornament, pearl earrings, body, full bust volume and its lower level, shoulders, hands/arms, costume, lighting, colour handling, figure scale and canvas placement.\nKeep the original author's warm restrained linework and controlled cel shading, with subtle natural adult emotion. Do not redesign, recolour, rejuvenate or change her outfit. No tears, sweat drops, emoticons or symbols.\nSame complete head-to-natural-waist portrait and same canvas dimensions as the target, genuine transparent background. Normal high-resolution source illustration for later exact B/detail sampling; no pixel grid or dither. One portrait, one expression, no comparison sheet, text, UI, logo or watermark.",
+      "reference": "B:/Eleanor Story Expand/Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "status": "installed_daily_and_date",
+      "outputs": [
+        "er_expr_lydia_daily_smile.png",
+        "er_expr_lydia_date_smile.png"
+      ],
+      "master": "masters/lydia_face_smile.png"
+    },
+    {
+      "id": "lydia_face_flustered",
+      "expression": "flustered",
+      "prompt": "Use case: identity-preserve / expression-only edit.\nImage 1 is the EDIT TARGET: the user's APPROVED FINAL LYDIA, an adult upper-district woman aged 27.\nCreate ONE facial-expression variation of this exact illustration. It will be a reusable facial layer for her daily and date outfits.\nCharacter interpretation: Lydia's neutral partially lowered eyelids express worldly adult poise and calm confidence. Preserve that identity. Some emotions may open the lids further without changing her face design.\nRequested expression (flustered): Momentarily surprised and romantically flustered: open the eyelids clearly wider than the neutral reference, subtly raised eyebrows, warm cheek blush and a small uncertain parted-lip expression. Show more of the same amber iris without enlarging the iris or widening the eyes sideways. She is an experienced composed woman caught off guard, not a panicked caricature.\nCRITICAL EYE RULES: preserve the original eye corner positions and horizontal eye width, existing amber iris/pupil size, iris colours and facial bone structure. For open-eye expressions, alter the lid aperture vertically to reveal more of the same eyes. Do NOT substitute oversized round modern-anime eyes, enlarge irises or make her look younger.\nChange only eyebrows, eyelids, gaze nuance, mouth and the requested blush. LOCK the face shape, jaw and chin, exact head angle and position, hair silhouette, long mostly straight cool honey-brown hair and gently curved ends, rose-and-pearl ornament, pearl earrings, body, full bust volume and its lower level, shoulders, hands/arms, costume, lighting, colour handling, figure scale and canvas placement.\nKeep the original author's warm restrained linework and controlled cel shading, with subtle natural adult emotion. Do not redesign, recolour, rejuvenate or change her outfit. No tears, sweat drops, emoticons or symbols.\nSame complete head-to-natural-waist portrait and same canvas dimensions as the target, genuine transparent background. Normal high-resolution source illustration for later exact B/detail sampling; no pixel grid or dither. One portrait, one expression, no comparison sheet, text, UI, logo or watermark.",
+      "reference": "B:/Eleanor Story Expand/Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "status": "installed_daily_and_date",
+      "outputs": [
+        "er_expr_lydia_daily_flustered.png",
+        "er_expr_lydia_date_flustered.png"
+      ],
+      "master": "masters/lydia_face_flustered.png"
+    },
+    {
+      "id": "lydia_face_serious",
+      "expression": "serious",
+      "prompt": "Use case: identity-preserve / expression-only edit.\nImage 1 is the EDIT TARGET: the user's APPROVED FINAL LYDIA, an adult upper-district woman aged 27.\nCreate ONE facial-expression variation of this exact illustration. It will be a reusable facial layer for her daily and date outfits.\nCharacter interpretation: Lydia's neutral partially lowered eyelids express worldly adult poise and calm confidence. Preserve that identity. Some emotions may open the lids further without changing her face design.\nRequested expression (serious): Calm focused seriousness: slightly lift the upper lids from their usual relaxed position for an attentive gaze, level composed eyebrows and a natural small closed unsmiling mouth. Preserve her dignified adult manner; no anger or glaring.\nCRITICAL EYE RULES: preserve the original eye corner positions and horizontal eye width, existing amber iris/pupil size, iris colours and facial bone structure. For open-eye expressions, alter the lid aperture vertically to reveal more of the same eyes. Do NOT substitute oversized round modern-anime eyes, enlarge irises or make her look younger.\nChange only eyebrows, eyelids, gaze nuance, mouth and the requested blush. LOCK the face shape, jaw and chin, exact head angle and position, hair silhouette, long mostly straight cool honey-brown hair and gently curved ends, rose-and-pearl ornament, pearl earrings, body, full bust volume and its lower level, shoulders, hands/arms, costume, lighting, colour handling, figure scale and canvas placement.\nKeep the original author's warm restrained linework and controlled cel shading, with subtle natural adult emotion. Do not redesign, recolour, rejuvenate or change her outfit. No tears, sweat drops, emoticons or symbols.\nSame complete head-to-natural-waist portrait and same canvas dimensions as the target, genuine transparent background. Normal high-resolution source illustration for later exact B/detail sampling; no pixel grid or dither. One portrait, one expression, no comparison sheet, text, UI, logo or watermark.",
+      "reference": "B:/Eleanor Story Expand/Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "status": "installed_daily_and_date",
+      "outputs": [
+        "er_expr_lydia_daily_serious.png",
+        "er_expr_lydia_date_serious.png"
+      ],
+      "master": "masters/lydia_face_serious.png"
+    },
+    {
+      "id": "lydia_face_hurt",
+      "expression": "hurt",
+      "prompt": "Use case: identity-preserve / expression-only edit.\nImage 1 is the EDIT TARGET: the user's APPROVED FINAL LYDIA, an adult upper-district woman aged 27.\nCreate ONE facial-expression variation of this exact illustration. It will be a reusable facial layer for her daily and date outfits.\nCharacter interpretation: Lydia's neutral partially lowered eyelids express worldly adult poise and calm confidence. Preserve that identity. Some emotions may open the lids further without changing her face design.\nRequested expression (hurt): Quiet hurt feelings: retain approximately the neutral reference's relaxed partially lowered eyelids, soften the gaze, gently raise the inner eyebrows and let the smile fade to a small tense or slightly downturned closed mouth. Restrained sadness, no crying or tears.\nCRITICAL EYE RULES: preserve the original eye corner positions and horizontal eye width, existing amber iris/pupil size, iris colours and facial bone structure. For open-eye expressions, alter the lid aperture vertically to reveal more of the same eyes. Do NOT substitute oversized round modern-anime eyes, enlarge irises or make her look younger.\nChange only eyebrows, eyelids, gaze nuance, mouth and the requested blush. LOCK the face shape, jaw and chin, exact head angle and position, hair silhouette, long mostly straight cool honey-brown hair and gently curved ends, rose-and-pearl ornament, pearl earrings, body, full bust volume and its lower level, shoulders, hands/arms, costume, lighting, colour handling, figure scale and canvas placement.\nKeep the original author's warm restrained linework and controlled cel shading, with subtle natural adult emotion. Do not redesign, recolour, rejuvenate or change her outfit. No tears, sweat drops, emoticons or symbols.\nSame complete head-to-natural-waist portrait and same canvas dimensions as the target, genuine transparent background. Normal high-resolution source illustration for later exact B/detail sampling; no pixel grid or dither. One portrait, one expression, no comparison sheet, text, UI, logo or watermark.",
+      "reference": "B:/Eleanor Story Expand/Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "status": "installed_daily_and_date",
+      "outputs": [
+        "er_expr_lydia_daily_hurt.png",
+        "er_expr_lydia_date_hurt.png"
+      ],
+      "master": "masters/lydia_face_hurt.png"
+    },
+    {
+      "id": "lydia_face_tease",
+      "expression": "tease",
+      "prompt": "Use case: identity-preserve / expression-only edit.\nImage 1 is the EDIT TARGET: the user's APPROVED FINAL LYDIA, an adult upper-district woman aged 27.\nCreate ONE facial-expression variation of this exact illustration. It will be a reusable facial layer for her daily and date outfits.\nCharacter interpretation: Lydia's neutral partially lowered eyelids express worldly adult poise and calm confidence. Preserve that identity. Some emotions may open the lids further without changing her face design.\nRequested expression (tease): Warm knowing teasing: preserve the mature relaxed eyelid shape, lift one eyebrow subtly, and form a small asymmetric affectionate smile. A slight lively change in gaze is enough. No wink, no head turn, and no wide comic smirk.\nCRITICAL EYE RULES: preserve the original eye corner positions and horizontal eye width, existing amber iris/pupil size, iris colours and facial bone structure. For open-eye expressions, alter the lid aperture vertically to reveal more of the same eyes. Do NOT substitute oversized round modern-anime eyes, enlarge irises or make her look younger.\nChange only eyebrows, eyelids, gaze nuance, mouth and the requested blush. LOCK the face shape, jaw and chin, exact head angle and position, hair silhouette, long mostly straight cool honey-brown hair and gently curved ends, rose-and-pearl ornament, pearl earrings, body, full bust volume and its lower level, shoulders, hands/arms, costume, lighting, colour handling, figure scale and canvas placement.\nKeep the original author's warm restrained linework and controlled cel shading, with subtle natural adult emotion. Do not redesign, recolour, rejuvenate or change her outfit. No tears, sweat drops, emoticons or symbols.\nSame complete head-to-natural-waist portrait and same canvas dimensions as the target, genuine transparent background. Normal high-resolution source illustration for later exact B/detail sampling; no pixel grid or dither. One portrait, one expression, no comparison sheet, text, UI, logo or watermark.",
+      "reference": "B:/Eleanor Story Expand/Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "status": "installed_daily_and_date",
+      "outputs": [
+        "er_expr_lydia_daily_tease.png",
+        "er_expr_lydia_date_tease.png"
+      ],
+      "master": "masters/lydia_face_tease.png"
+    }
+  ]
+}

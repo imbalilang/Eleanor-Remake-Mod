@@ -176,9 +176,9 @@ def common():
     many('m11_b001','m11_b002','m11_b003','m11_b004')
     p('前两段到店开场互斥：已挣够用第一段，逾期自行补齐用第二段。自行补齐且此前正面交易不足2次会记录她已卖掉母亲吊坠，影响后续实物赠礼；已售才追加第三段。')
     choice('er_maid_entry_normal','不付800，不建立侍从约定，继续原调查与普通关系路线。');b('c11.b002','选择不以预付工钱介入')
-    choice('er_maid_entry_offer','进入她开条件的商谈，本身不扣款、不锁恋爱，也不立即开始称呼或女仆装。',desc='er_maid_entry_terms')
+    choice('er_maid_entry_offer','进入她开条件的商谈，本身不扣款、不锁恋爱，也不立即开始称呼或女仆装。',desc='er_maid_entry_offer_desc')
     many('m11_b006','m11_b007','m11_b008')
-    choice('er_maid_entry_confirm','实际扣玩家800信用点一次，建立侍从合作约定；此后仍需救母与逐步建立关系。','玩家实际持有至少800。',desc='er_maid_entry_terms')
+    choice('er_maid_entry_confirm','实际扣玩家800信用点一次，建立侍从合作约定；此后仍需救母与逐步建立关系。','玩家实际持有至少800。',desc='er_maid_entry_confirm_desc')
     b('m11_b011','付款成功才播放；中断后续接，不重复付款')
     choice('er_maid_entry_back','不扣钱，不建立约定，继续普通调查／恋爱路线。');b('m11_b012','商谈后收回提议')
 

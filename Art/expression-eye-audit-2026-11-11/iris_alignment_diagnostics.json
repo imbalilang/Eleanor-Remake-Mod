@@ -1,0 +1,543 @@
+[
+  {
+    "id": "er_expr_eleanor1_serious",
+    "iris_fit_residual": 0.6166164762652374,
+    "source_angle": -8.961525473813005,
+    "neutral_angle": -11.924002619029018,
+    "angle_error": 2.9624771452160132,
+    "mapped_centres": [
+      [
+        128.67395057221336,
+        117.32216830263437
+      ],
+      [
+        152.23676371350095,
+        113.60640312593705
+      ]
+    ],
+    "neutral_centres": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      1.3552618543578698,
+      1.4630874888399532
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_maid_serious",
+    "iris_fit_residual": 0.5868001235033885,
+    "source_angle": -8.451747168083251,
+    "neutral_angle": -11.023455963743137,
+    "angle_error": 2.5717087956598856,
+    "mapped_centres": [
+      [
+        127.84519528263925,
+        118.03276520352247
+      ],
+      [
+        153.7103602729163,
+        114.18945701869978
+      ]
+    ],
+    "neutral_centres": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.5583264233956068,
+      0.6781419786518719
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor1_sad",
+    "iris_fit_residual": 0.5791481288992876,
+    "source_angle": -9.141575233662937,
+    "neutral_angle": -11.924002619029018,
+    "angle_error": 2.7824273853660806,
+    "mapped_centres": [
+      [
+        128.67984705742833,
+        117.35918168052308
+      ],
+      [
+        152.23086722828594,
+        113.56938974804838
+      ]
+    ],
+    "neutral_centres": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.4312088161017857,
+      0.7276770498572178
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_scav_angry",
+    "iris_fit_residual": 0.5018888742163946,
+    "source_angle": -9.002559477058043,
+    "neutral_angle": -11.417783225722951,
+    "angle_error": 2.415223748664909,
+    "mapped_centres": [
+      [
+        121.21103545146133,
+        118.00605895982872
+      ],
+      [
+        144.7318216913958,
+        114.2796553258856
+      ]
+    ],
+    "neutral_centres": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ],
+    "final_colour_detector_error": "Green iris landmarks unavailable",
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_scav_sad",
+    "iris_fit_residual": 0.49907808576188367,
+    "source_angle": -9.016087730764847,
+    "neutral_angle": -11.417783225722951,
+    "angle_error": 2.401695494958105,
+    "mapped_centres": [
+      [
+        121.21147570464115,
+        118.00883568450165
+      ],
+      [
+        144.73138143821592,
+        114.27687860121264
+      ]
+    ],
+    "neutral_centres": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.5385164807134515,
+      0.5150787536376981
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_maid_soft",
+    "iris_fit_residual": 0.23531135082184393,
+    "source_angle": -12.054658269415459,
+    "neutral_angle": -11.023455963743137,
+    "angle_error": -1.0312023056723216,
+    "mapped_centres": [
+      [
+        127.99151515722528,
+        118.84166648368765
+      ],
+      [
+        153.56404039833026,
+        113.38055573853458
+      ]
+    ],
+    "neutral_centres": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.22222222222221433,
+      0.15713484026368169
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor1_angry",
+    "iris_fit_residual": 0.20502193468342803,
+    "source_angle": -10.939091183192152,
+    "neutral_angle": -11.924002619029018,
+    "angle_error": 0.9849114358368656,
+    "mapped_centres": [
+      [
+        128.7450795440903,
+        117.72761667875325
+      ],
+      [
+        152.16563474162396,
+        113.20095474981818
+      ]
+    ],
+    "neutral_centres": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      22.066804878618488,
+      1.940521837032503
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_scav_soft",
+    "iris_fit_residual": 0.18354650787262822,
+    "source_angle": -12.301001554387101,
+    "neutral_angle": -11.417783225722951,
+    "angle_error": -0.8832183286641495,
+    "mapped_centres": [
+      [
+        121.33772075821706,
+        118.67962868632755
+      ],
+      [
+        144.60513638464,
+        113.60608559938674
+      ]
+    ],
+    "neutral_centres": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.20000000000000284,
+      0.3194382824999736
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_scav_determined",
+    "iris_fit_residual": 0.15743865559980016,
+    "source_angle": -10.66019680219168,
+    "neutral_angle": -11.417783225722951,
+    "angle_error": 0.7575864235312721,
+    "mapped_centres": [
+      [
+        121.26985412602222,
+        118.3454744145483
+      ],
+      [
+        144.67300301683488,
+        113.94023987116594
+      ]
+    ],
+    "neutral_centres": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.14577379737113397,
+      0.45175395145261277
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_maid_sad",
+    "iris_fit_residual": 0.14118962642684801,
+    "source_angle": -10.404727584630969,
+    "neutral_angle": -11.023455963743137,
+    "angle_error": 0.6187283791121683,
+    "mapped_centres": [
+      [
+        127.91819612366098,
+        118.47238282896727
+      ],
+      [
+        153.63735943189457,
+        113.74983939325503
+      ]
+    ],
+    "neutral_centres": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.3214040751002667,
+      0.248451997499971
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_maid_angry",
+    "iris_fit_residual": 0.11225453142776211,
+    "source_angle": -10.531529312440838,
+    "neutral_angle": -11.023455963743137,
+    "angle_error": 0.4919266513022986,
+    "mapped_centres": [
+      [
+        127.92345336000074,
+        118.50083666166817
+      ],
+      [
+        153.63210219555484,
+        113.72138556055404
+      ]
+    ],
+    "neutral_centres": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.21589635728152543,
+      0.08958064164776246
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor1_shy",
+    "iris_fit_residual": 0.060371074548277094,
+    "source_angle": -11.633987342384211,
+    "neutral_angle": -11.924002619029018,
+    "angle_error": 0.290015276644807,
+    "mapped_centres": [
+      [
+        128.77339030487974,
+        117.86947163044574
+      ],
+      [
+        152.13732398083454,
+        113.05909979812574
+      ]
+    ],
+    "neutral_centres": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.4285714285714164,
+      0.1767766952966369
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_maid_tsun",
+    "iris_fit_residual": 0.039563935970011906,
+    "source_angle": -10.850077642763006,
+    "neutral_angle": -11.023455963743137,
+    "angle_error": 0.17337832098013095,
+    "mapped_centres": [
+      [
+        127.93693815577666,
+        118.57226576827732
+      ],
+      [
+        153.61861739977888,
+        113.6499564539449
+      ]
+    ],
+    "neutral_centres": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.42739403231226847,
+      0.11111111111111427
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_scav_tired",
+    "iris_fit_residual": 0.03010983974052582,
+    "source_angle": -11.272897297773559,
+    "neutral_angle": -11.417783225722951,
+    "angle_error": 0.14488592794939237,
+    "mapped_centres": [
+      [
+        121.29407672971806,
+        118.47047852784216
+      ],
+      [
+        144.64878041313904,
+        113.81523575787216
+      ]
+    ],
+    "neutral_centres": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.25495097567963865,
+      0.1684639487867184
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_maid_shy",
+    "iris_fit_residual": 0.02285713555783989,
+    "source_angle": -10.92329073293549,
+    "neutral_angle": -11.023455963743137,
+    "angle_error": 0.10016523080764728,
+    "mapped_centres": [
+      [
+        127.94009352491241,
+        118.58867190111755
+      ],
+      [
+        153.61546203064313,
+        113.63355032110468
+      ]
+    ],
+    "neutral_centres": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.3251305530755477,
+      0.15713484026368169
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor1_soft",
+    "iris_fit_residual": 0.012224477001350527,
+    "source_angle": -11.865277783064972,
+    "neutral_angle": -11.924002619029018,
+    "angle_error": 0.05872483596404621,
+    "mapped_centres": [
+      [
+        128.78319466637987,
+        117.91660943223448
+      ],
+      [
+        152.1275196193344,
+        113.01196199633699
+      ]
+    ],
+    "neutral_centres": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      0.22587697572631987,
+      0.3359274061791004
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  },
+  {
+    "id": "er_expr_eleanor_scav_shy",
+    "iris_fit_residual": 0.0064917147090514426,
+    "source_angle": -11.449020783901805,
+    "neutral_angle": -11.417783225722951,
+    "angle_error": -0.03123755817885332,
+    "mapped_centres": [
+      [
+        121.30128684468889,
+        118.50636289168618
+      ],
+      [
+        144.64157029816826,
+        113.77935139402808
+      ]
+    ],
+    "neutral_centres": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ],
+    "final_coloured_iris_centroid_shift": [
+      2.4166091947189168,
+      0.3944771791852558
+    ],
+    "diagnostic_caution": "Colour-centroid diagnostic, not anatomical eye-corner or eyeball-centre measurement; affected by eyelid coverage and sampling."
+  }
+]

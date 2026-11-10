@@ -1,0 +1,110 @@
+{
+  "revision": "v2",
+  "status": "candidate_exported_reviewed_not_installed",
+  "generation_attempts": 1,
+  "successful_images": 1,
+  "model": "gpt-image-2",
+  "endpoint_mode": "reference-guided new composition via images/edits",
+  "requested_size": "1536x1024",
+  "requested_count": 1,
+  "target_aspect": "16:9",
+  "native_reference_size": [
+    640,
+    360
+  ],
+  "candidate_sizes": [
+    [
+      640,
+      360
+    ],
+    [
+      960,
+      540
+    ]
+  ],
+  "prompt": "Art\\revolution-ending-2026-11-11\\prompts\\ending_revolution_v2.txt",
+  "prompt_sha256": "f3f63c87fdedea7c71624f954ce80db37f91a84b897898f6171cc597d5b49799",
+  "sources": [
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\references_local\\wall_36.png",
+      "role": "PRIMARY STYLE: actual native ending image, confirmed by user screenshot; pixel medium, blue-purple/coral palette, cyberpunk environment",
+      "size": [
+        640,
+        360
+      ],
+      "sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1"
+    },
+    {
+      "path": "Art\\revolution-route-2026-11-10\\masters\\eleanor_revolution_undersuit_beauty_v3.png",
+      "role": "IDENTITY AND OUTFIT ONLY: Eleanor adult appearance, orange hair, earrings, black private top, silver collar and dog tag; not smooth illustration rendering",
+      "size": [
+        1460,
+        1077
+      ],
+      "sha256": "0eb50e2c5c9216835412ef19951dae82d1f676847b67be8ede75178a93773368"
+    },
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\references_local\\native_pawnshop_composite_no_ui.png",
+      "role": "SETTING ONLY: native pawnshop fittings and architecture, not palette or exact scene layout",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "d8efdc0e225c2e32b5e716c05fd67c7bbd62076817b5bf5f078b7c0c36b25491"
+    }
+  ],
+  "user_evidence": {
+    "path": "Art\\revolution-ending-2026-11-11\\references_local\\user_stream_ending_screenshot_2026-11-11.png",
+    "role": "Evidence only: confirms native wall_36 image is used on an ending page; screenshot NOT sent to image generator because of streamer avatar, subtitles and UI",
+    "sha256": "8970cad01c7ae7f79b70beb35ff79828fa5f59cc9a600433309b2b3859e7f2f4"
+  },
+  "correction_to_previous_finding": "The initial native-code/texture audit did not establish the full ending-page presentation. User screenshot confirms native wall_36 texture is an ending illustration. It replaces generic store/drjackson style references.",
+  "forbidden_reference_images_opened": [],
+  "runtime_installation": false,
+  "output_master": {
+    "path": "Art\\revolution-ending-2026-11-11\\masters\\ending_revolution_master_v2.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "574224f67abeb83a7fc9fab2417b2e55b742a4b2c8f50e214b6141bcd7bc556c"
+  },
+  "provider_returned_size_differs": true,
+  "actual_returned_size": [
+    1672,
+    941
+  ],
+  "exports": [
+    {
+      "path": "endings\\er_ending_revolution_cg_v2_native640.png",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "48f2dc4099814091c6ac37d0b17a1a1d2c381d71efc89c9b1bf62631bc5078f2"
+    },
+    {
+      "path": "endings\\er_ending_revolution_cg_v2.png",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "79628e90951aa3c619e3828607ea297919207f591beb861f3d3fe3aed54a8391"
+    }
+  ],
+  "visual_review": {
+    "inspected": [
+      "master 1672x941",
+      "candidate 960x540",
+      "candidate 640x360 nearest-neighbour 2x",
+      "native ending and candidate side-by-side at 640x360"
+    ],
+    "identity_and_costume": "Recognizable orange hair, earrings, silver collar, blue gem and rectangular pendant preserved. Sleeping face and sleeve grip readable.",
+    "style": "Blue-violet/coral palette and pixel cluster rendering follow actual native ending reference; close-up character detail is finer than native distant silhouettes.",
+    "ui_obstruction": "Not cleared for existing fullscreen lower-half text overlay; sleeve grip and lower face would be obscured. User screenshot uses a separate upper image region.",
+    "in_game_verification": false
+  }
+}

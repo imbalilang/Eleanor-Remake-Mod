@@ -3,10 +3,60 @@
 
 《深空当铺：可能是偷的 / Probably Stolen》Eleanor 个人剧情线重制 MOD。
 
-- 游戏版本：1.0.0.13（Steam build 26525552，内部版本 0.46D；public 与 open_beta 当前为同一构建）
-- MOD版本：0.82
+- 游戏版本：1.0.0.14（public 与 open_beta 当前为同一构建；同时保留 1.0.0.13 / 0.46D 兼容）
+- MOD版本：0.88
 - 内容尺度：全年龄
 - 语言：简体中文 / English（剧情与 UI 均已翻译）
+
+## 0.88：保留 Lydia 独立形象
+
+- 修正 0.87 的 Lydia 回退：Lydia 是恋爱对象，必须始终保留独立画像。未启用少女当铺时使用本 MOD 的 `er_portrait_lydia_female_vanilla`；启用时使用 `er_portrait_lydia_female_beauty`。
+- 约会场景同样保留 Lydia 独立形象：未启用少女当铺时使用 `er_portrait_lydia_date_female_vanilla`，启用时使用 `er_portrait_lydia_date_female_beauty`。
+- 只有 Lydia 自定义立绘文件缺失时才回退原游戏 `femaleUpper10` 作为防崩溃兜底，不作为正常显示。
+- 母亲仍为：未启用少女当铺 → 原游戏 `femaleUpper3`；启用 → `er_portrait_mother_female_beauty`。
+- 女仆装、礼服、战术背心仍按 0.87 规则：未启用少女当铺时复用原游戏 Eleanor 画像（`eleanor_scav` / `eleanor1` / `eleanor_rev`），不显示自定义 `_vanilla` 服装图。
+- 0.87 的其他改动保留：其他美化 MOD 不再造成普通立绘/女仆装混搭、旧存档立绘键清理、E3/E4 即时结局页、侍从入口短提示、0.86 的表情与结算修正。
+
+## 0.87：终极立绘兼容与即时结局页
+
+- 未启用少女当铺时，女仆装使用当前场景的 `eleanor_scav` / `eleanor1`，礼服使用 `eleanor1`，战术背心使用 `eleanor_rev`；母亲使用原游戏 `femaleUpper3`。
+- 女仆/母亲等 `_vanilla` 服装图不再作为运行显示图；旧存档中的相关立绘键会在载入时清理成原游戏 ID。其他美化 MOD 只替换普通原游戏立绘，不再出现“普通立绘美化、女仆装却是本 MOD 原版风”的混搭。
+- 少女当铺启用时仍使用本 MOD 的美化女仆、礼服、莉迪亚/母亲画像；美化文件缺失时回退原游戏 ID。0.87 的 Lydia 通用 NPC 回退已被 0.88 修正为独立形象。
+- E3 侍从线与 E4 后宫线的独立结局页在 `m28` / `dr20` 完成时立即显示，不再等真正 GameOver；已显示过结局页的存档在 GameOver 时不重复同一 CG。页面使用原有结局文案，并增加“本 MOD 的这段剧情到此结束”提示与“返回当铺”按钮。
+- 侍从入口移除超过 130 字的长条款提示，改用“你的回答”短提示和短选项说明；完整条件仍保留在 README/工坊说明。
+- 保留 0.86 的表情分布、价格判定、1×1 饰品点击、C03 追加段、调查款进度与 C08 回礼修正。
+
+## 0.86：表情分布、价格判定与结算修正
+
+- 平衡各章表情变化：补齐主线中可用表情素材的章节，新增/调整至 143 个表情标签；C01/C07 不再明显多于其他章节。
+- 修复 1×1 铭牌/赞助饰品/谢礼饰品的点击命中区：透明边也纳入命中，整格可点，视觉不变。
+- 价格判定改用谈判界面价格和实际让利/加价特性；修复 -25% 让利被误判为高价，并同步修正买卖方向与 C05/C09 的自定义价格检查。
+- 修复 C03 等 SELL 客户的原生结束对白覆盖章节收尾的问题；交易后追加的吊坠段落（c03.b007）现在会正常播放。
+- 恢复 800 调查款进度：同步原版 `eleanorSavings`，C07/C08 每笔拾荒交易在上方提示已攒金额与剩余金额。
+- C08“照常付款”回礼由废金属改为电子元件（普通）。
+- 保留 0.85 表情/CG 美术、0.84 游戏 1.0.0.14 兼容与全部路线数值。
+- 另提供 Nexus 专用美化立绘包：运行 `tools/package_nexus.ps1`，默认强制使用美化立绘并内置经授权的 CutePortraits 人像；输出 `dist/EleanorRomance-0.86-nexus.zip`，不上传。
+
+## 0.85：埃莉诺表情与侍从结局 CG
+
+- 替换基础装5张、拾荒装6张、女仆装6张，共17张表情占位；使用对应美化底图和原作者 B/detail 采样，固定身体、发型外轮廓及透明度，减少切换时的风格与位置跳变。
+- 侍从结局 CG 替换为关店后熟悉当铺中的完整场景，960×540；Lydia 差分及后宫 CG 按用户要求等待角色重设。
+- 美术交付及检查见[本轮美术记录](Art/expressions-and-endings-2026-11-10/ART_DELIVERY.md)；后续制作遵循[美术需求规范](Art/ART_REQUIREMENTS.md)和[提示词模板](Art/PROMPT_TEMPLATES.md)。
+- 0.84 的游戏兼容保留。发布信息见[0.85发布记录](docs/RELEASE_0.85.md)。
+
+## 0.84：游戏 1.0.0.14 兼容
+
+- 游戏更新到 1.0.0.14 后，原版本门禁只接受 0.46 / 0.46D，导致模组能加载但剧情、物品和【旧日回想】开局特性被提前停用。
+- `VersionGate` 与 `manifest.xml` 现在接受 1.0.0.14，并保留 1.0.0.13 / 0.46D / 0.46；0.83 的文本、表情立绘、E3/E4 结局页和 0.82 晚会修复不变。
+- 发布记录见[0.84发布记录](docs/RELEASE_0.84.md)。
+
+## 0.83：无旁白文本修订、表情立绘与 E3/E4 结局页
+
+- 按最终无旁白稿重写/修订剧情，重建中英本地化（各 1954 键）。
+- 新增埃莉诺美化表情立绘（基础/女仆/拾荒/莉迪亚日常），运行时按对白逐句切换，缺图回退基础立绘。
+- 新增 E3/E4 结局页与占位 CG，退役其他结局附页。
+- 保留 0.82 晚会兼容修复、原生走入演出与全部路线、数值。
+- 发布记录见[0.83发布记录](docs/RELEASE_0.83.md)。
 
 ## 0.82：兼容警告修复与晚会入场演出
 
@@ -261,12 +311,15 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 - 检测美化 MOD `少女当铺 / Maiden's Pawnshop`（Workshop ID **3829696854**，manifest ID `cute_portraits`）。
   - Eleanor、假叔叔、黑市打手、治安部警官、档案员、合作买家：启用少女当铺时使用其 `cp_portrait_*` 美化立绘；未启用时回退原版。
-  - **Lydia 与母亲按方案 B：始终使用本 MOD 自己的专有形象，不使用少女当铺的通用上层区女性立绘。**
-    - 无少女当铺：`er_portrait_lydia_female_vanilla` / `er_portrait_mother_female_vanilla`
-    - 有少女当铺：`er_portrait_lydia_female_beauty` / `er_portrait_mother_female_beauty`
-    - 如果对应文件尚未交付，才回退到通用 `femaleUpper3` / `femaleUpper6` 作为防崩溃兜底。
-- 实现位于 `src/PortraitCompat.cs`：从 CutePortraits 的 `LoadedMod.Sprites` 读取美化 Sprite；从本 MOD 的 `LoadedMod.Sprites` 读取 Lydia/母亲双版本 Sprite，并注册到 `SpriteDict`。Eleanor 使用带性别标记的别名，避免被误判为中性。
-- 莉迪亚/母亲四张立绘已替换为正式美术；`_vanilla` 与 `_beauty` 是两套不同成图，分别用于无少女当铺/有少女当铺环境。规格与校验见 `Art/v0.6/ART_DELIVERY.md`、`asset_validation.json`。
+  - **Lydia：** 恋爱对象，始终使用本 MOD 的独立画像，不因美化 MOD 状态改成通用 NPC。
+    - 无少女当铺：`er_portrait_lydia_female_vanilla`
+    - 有少女当铺：`er_portrait_lydia_female_beauty`
+    - 约会服同理使用 `er_portrait_lydia_date_female_vanilla` / `er_portrait_lydia_date_female_beauty`；仅自定义文件缺失时才回退 `femaleUpper10` 防崩溃。
+  - **母亲：** 少女当铺开启时 `er_portrait_mother_female_beauty`；未开启时使用原游戏 `femaleUpper3`，不再显示自定义母亲 `_vanilla` 图。
+- **Eleanor 新服装：** 少女当铺开启时使用本 MOD 的女仆装、礼服和后续战术背心美化图；未开启时直接复用原游戏 Eleanor 画像：女仆装回退当前场景常服（`eleanor_scav` / `eleanor1`），礼服回退 `eleanor1`，战术背心回退 `eleanor_rev`。`er_portrait_eleanor_maid_female_vanilla` 不再作为运行显示图。
+- **其他美化 MOD：** 本 MOD 只识别少女当铺。其他替换普通埃莉诺立绘的 MOD 不会被当作服装美化来源；女仆装、礼服、战术背心会回退原游戏 Eleanor 立绘，因此不会再出现“普通立绘美化、女仆装却是本 MOD 原版风”的混搭。Lydia 始终保持本 MOD 的独立形象，不会跟随其他美化 MOD 变成通用 NPC。
+- 实现位于 `src/PortraitCompat.cs`：从 CutePortraits 的 `LoadedMod.Sprites` 读取美化 Sprite；未检测到少女当铺时，Lydia/母亲/新服装统一回退原游戏立绘 ID。旧存档中的自定义 `_vanilla` 立绘键会在载入时清理为对应原游戏 ID。
+- 莉迪亚/母亲的美化立绘仍用于少女当铺环境；`_vanilla` 文件仅保留作历史/旧档清理参考，不再在无少女当铺时主动显示。规格与校验见 `Art/v0.6/ART_DELIVERY.md`、`asset_validation.json`。
 - 物品图标已替换为正式 16 色像素图：吊坠、上层区手工镯。
 - `preview.png` 已使用 `workshop_cover_master.png` 生成的 768×768 版本。
 
@@ -281,7 +334,7 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 ## 项目文件索引
 
-最后整理：2026-11-10。当前版本 **0.82**。
+最后整理：2026-11-11。当前版本 **0.86**。
 
 ### 运行与构建
 
@@ -307,9 +360,9 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 | 路径 | 用途 |
 |---|---|
-| [`docs/RELEASE_0.82.md`](docs/RELEASE_0.82.md) | 当前版本发布记录、验证与包信息 |
-| [`docs/WORKSHOP_CHANGELOG_0.82.txt`](docs/WORKSHOP_CHANGELOG_0.82.txt) | 当前工坊更新日志 |
-| [`docs/WORKSHOP_DESCRIPTION_0.81.txt`](docs/WORKSHOP_DESCRIPTION_0.81.txt) | 当前工坊说明底稿（0.82 沿用） |
+| [`docs/RELEASE_0.86.md`](docs/RELEASE_0.86.md) | 当前版本发布记录、验证与包信息 |
+| [`docs/WORKSHOP_CHANGELOG_0.86.txt`](docs/WORKSHOP_CHANGELOG_0.86.txt) | 当前工坊更新日志 |
+| [`docs/WORKSHOP_DESCRIPTION_0.86.txt`](docs/WORKSHOP_DESCRIPTION_0.86.txt) | 当前工坊说明底稿 |
 | [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md) | Modding API 安全边界与兼容说明 |
 | [`docs/TESTING_CONSOLE.md`](docs/TESTING_CONSOLE.md) | F8/F9 调试控制台与测试流程 |
 | [`docs/ROUTE_MAP_MAINTENANCE.md`](docs/ROUTE_MAP_MAINTENANCE.md) | 路线图编号、完美结局与更新规则 |
@@ -378,7 +431,7 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 - [`docs/archive/audits/`](docs/archive/audits/)：0.71–0.77 期间的审计、交接、验收、旧功能说明。
 - [`docs/archive/workshop/`](docs/archive/workshop/)：0.67–0.81 的旧工坊说明与更新日志。
 
-归档文件只用于追溯，不作为当前实现依据。当前版本发布记录仍保留在 `docs/RELEASE_0.67.md`–`docs/RELEASE_0.82.md`。
+归档文件只用于追溯，不作为当前实现依据。当前版本发布记录仍保留在 `docs/RELEASE_0.67.md`–`docs/RELEASE_0.86.md`。
 
 ### 工具
 

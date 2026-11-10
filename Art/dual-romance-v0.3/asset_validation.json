@@ -28,13 +28,13 @@
       255
     ],
     "alpha_bbox": [
-      83,
-      60,
-      205,
+      82,
+      64,
+      208,
       212
     ],
-    "opaqueColors": 8389,
-    "sha256": "5F297C4C8CB0AADDC40D7ECE0BA1697FD4EADBF0C4B4D5A2AA1CCB89821F2C94",
+    "opaqueColors": 8114,
+    "sha256": "A01CAE9BE4796E5FF8C1F4A71DD155FDD226D029DB4EDA1E84B049F2CAF1712F",
     "format": "Format32bppArgb"
   },
   {
@@ -66,13 +66,13 @@
       255
     ],
     "alpha_bbox": [
-      85,
-      60,
-      204,
+      81,
+      63,
+      209,
       212
     ],
-    "opaqueColors": 8024,
-    "sha256": "6670A243CB15589BBF0E1B3E76218BC5051286C907072803345C7B4CCEE92F10",
+    "opaqueColors": 8273,
+    "sha256": "AFDE9634896A12B7F77867B97C8A8B080BF237252742FF7D04695F38BACE74A5",
     "format": "Format32bppArgb"
   },
   {

@@ -1,0 +1,13 @@
+0.83｜文本修订、表情立绘与 E3/E4 结局页
+
+• 按最终无旁白稿修订剧情并重建中英文本。
+• 新增埃莉诺表情立绘，按对白逐句切换；缺图回退基础立绘。
+• 新增 E3/E4 结局页（占位 CG），退役其他结局附页。
+• 保留 0.82 晚会兼容修复、原生走入演出与全部路线、数值。
+
+0.83 | Text revision, expression portraits and E3/E4 ending pages
+
+• Rewrites the script to the final no-narrator version and rebuilds Chinese/English text.
+• Adds expression portraits with per-line portrait switching; missing art falls back to the base portrait.
+• Adds E3/E4 ending pages (placeholder CGs) and retires the other ending addenda.
+• Retains the 0.82 gala compatibility fix, native walk-in presentation, all routes and balance.

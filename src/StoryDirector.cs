@@ -101,6 +101,7 @@ namespace EleanorRomance
                 }
 
                 if (!RomanceState.StoryActive) return;
+                RomanceState.SyncNativeSavings();
                 GalaClosing.RecoverQueuedVisits(manager);
 
                 VanillaEleanorBridge.SynchronizeRescue();

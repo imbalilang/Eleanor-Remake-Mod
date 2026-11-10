@@ -1,0 +1,13 @@
+0.85｜埃莉诺表情与侍从结局插画
+
+• 替换基础装5张、拾荒装6张、女仆装6张表情占位，共17张。
+• 表情采用对应美化底图，固定身体和轮廓；全部输出288×212，减少切换时的换脸和位置跳变。
+• 侍从结局CG替换为关店后当铺中的960×540完整插画。
+• 保留游戏1.0.0.14兼容和现有剧情。莉迪亚差分与后宫CG待角色形象调整后制作。
+
+0.85 | Eleanor expressions and attendant ending artwork
+
+• Replaces 17 expression placeholders: 5 everyday, 6 scavenging and 6 maid portraits.
+• Uses the corresponding beautified bases with a stable body and silhouette; all are 288×212.
+• Replaces the attendant ending placeholder with a complete 960×540 evening pawnshop illustration.
+• Retains game 1.0.0.14 compatibility and existing story behaviour. Lydia expressions and the harem CG await her redesign.

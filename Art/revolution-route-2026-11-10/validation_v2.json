@@ -1,0 +1,74 @@
+{
+  "source": "masters/eleanor_revolution_undersuit_beauty_v2.png",
+  "source_sha256": "3814396472e354e58efaee23a0bff4fdbbab8be852be3e6a15f30f08d327c88b",
+  "prompt_sha256": "4b8ddf457530064181f62a7961e310440d9d04c0979a39cc8816245820f23646",
+  "profile_sha256": "82639e3643328c8eb6cc43a07be21cdb240f750ea1c5b8661c382a568d30dbb6",
+  "output": "portraits/er_portrait_eleanor_revolution_undersuit_female_beauty_v2.png",
+  "output_sha256": "55bcdebe1e5cc32c9a758926ce9cc690b3bad5c8742aa559df4b5c0e6afc55cd",
+  "size": [
+    288,
+    212
+  ],
+  "mode": "RGBA",
+  "source_size": [
+    1460,
+    1077
+  ],
+  "source_alpha128_bbox": [
+    317,
+    21,
+    1139,
+    1077
+  ],
+  "scaled_figure_size": [
+    171,
+    220
+  ],
+  "position": [
+    53,
+    62
+  ],
+  "native_alpha_bbox": [
+    53,
+    62,
+    224,
+    212
+  ],
+  "bottom_crop_pixels": 70,
+  "projected_landmarks_approx": {
+    "left_eye": [
+      126.64,
+      116.58
+    ],
+    "right_eye": [
+      151.4,
+      111.17
+    ],
+    "chin": [
+      143.08,
+      140.54
+    ]
+  },
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 7707,
+  "repeat_export_identical": true,
+  "export": {
+    "resampling": "BOX area averaging in premultiplied alpha",
+    "palette": "Full RGB, no quantization or dithering",
+    "alpha": "Threshold at 128; zero RGB under transparent pixels"
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "prompt": "prompt_v2.txt",
+    "costume_reference": "codex-clipboard-86c1c81a-8c00-4ee7-a507-30d3dcbafd12.png",
+    "identity_reference": "cp_portrait_eleanor_rev.png",
+    "supporting_reference": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+    "intent": "Adult Eleanor; pearl-white tactical bodysuit; waist-up transparent master."
+  },
+  "visual_review": "Master and integer-2x reference comparison inspected: waist-up master, complete head, matched facial scale, clear costume silhouette.",
+  "status": "Art candidate only; not registered in gameplay; in-game review pending.",
+  "reference_sha256": "397e062f5b7949a0237b1c55e1683d8d5836bdd56f4d23d24f465a1fc57a8c56"
+}

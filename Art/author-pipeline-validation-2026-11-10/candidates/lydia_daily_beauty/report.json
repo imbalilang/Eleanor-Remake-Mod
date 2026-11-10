@@ -1,0 +1,83 @@
+{
+  "source_size": [
+    1462,
+    1076
+  ],
+  "clean_bbox": [
+    435,
+    267,
+    1029,
+    1076
+  ],
+  "parameters": {
+    "visible_height": 166,
+    "centre_x": 144.0,
+    "bottom_exclusive": 225,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": true,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.20519159456118666,
+    "tx": -6.200247218788633,
+    "ty": 4.21384425216317
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 71,
+  "detail_pixels": 7252,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    83,
+    60,
+    205,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 9024,
+  "name": "lydia_daily_beauty",
+  "source": "Art/dual-romance-v0.3/masters/lydia_daily_beauty.png",
+  "source_sha256": "c52f87b9e2b7ae408720f6b6df696547f0a1d9f35eff925f0712bd6a5e906f40",
+  "previous": "Textures/Items/er_portrait_lydia_female_beauty.png",
+  "previous_sha256": "5f297c4c8cb0aaddc40d7ece0ba1697fd4eadbf0c4b4d5a2aa1ccb89821f2c94",
+  "strict_sha256": "7ffacdcfc9b684815d4454079ef3d13eb5b18e02f83abed2c88f50b20cfbbe76",
+  "strict_vs_previous": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 60592,
+    "alpha_different_pixels": 49,
+    "silhouette_iou": 0.996215924009576,
+    "visible_rgb_different_pixels": 12724,
+    "exact_visible_rgb_fraction": 0.013643410852713178,
+    "visible_rgb_mae": 3.5805684754521963,
+    "interior_rgb_mae": 3.5441970862661645,
+    "visible_max_channel_error": 53
+  },
+  "fringe_effect": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 1037,
+    "alpha_different_pixels": 0,
+    "silhouette_iou": 1.0,
+    "visible_rgb_different_pixels": 81,
+    "exact_visible_rgb_fraction": 0.9937446907097073,
+    "visible_rgb_mae": 0.022652971915463227,
+    "interior_rgb_mae": 0.012082213352882083,
+    "visible_max_channel_error": 56
+  }
+}

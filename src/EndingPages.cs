@@ -3,8 +3,10 @@ using System;
 namespace EleanorRomance
 {
     /// <summary>
-    /// Only the two fully produced perfect routes get a custom ending page.
-    /// Every other ending keeps the native GameOver reason/description.
+    /// The two fully produced route endings get a standalone full-screen page at
+    /// the end of their final event.  The native GameOver page still shows the
+    /// regular failure reasons; it only reuses these pages for older saves that
+    /// completed the route before the standalone page existed.
     /// </summary>
     public static class EndingPages
     {
@@ -21,6 +23,35 @@ namespace EleanorRomance
             }
         }
 
+        private static Page HaremPage() => new Page("er_ending_harem_title", "er_ending_harem_cg",
+            "er_ending_harem_01", "er_ending_harem_02", "er_ending_harem_03");
+
+        private static Page MaidPage() => new Page("er_ending_maid_title", "er_ending_maid_cg",
+            "er_ending_maid_01", "er_ending_maid_02", "er_ending_maid_03", "er_ending_maid_04");
+
+        /// <summary>Route-completion page for dr20; independent of the run's GameOver timing.</summary>
+        public static Page TryDualCompletion()
+        {
+            if (!RomanceState.StoryActive) return null;
+            if (!(DualState.Writable && DualState.HasHistory && DualState.Confirmed && DualState.Done("dr20")))
+                return null;
+            return HaremPage();
+        }
+
+        /// <summary>Route-completion page for m28; independent of the run's GameOver timing.</summary>
+        public static Page TryMaidCompletion()
+        {
+            if (!RomanceState.StoryActive) return null;
+            if (!(MaidState.Active && MaidState.Lovers && MaidState.Contract == 3 && MaidState.Progress >= 28))
+                return null;
+            return MaidPage();
+        }
+
+        /// <summary>
+        /// Native GameOver fallback.  Once a route has shown its standalone page,
+        /// do not show the same CG again behind the failure panel.  Old saves that
+        /// completed the route before the standalone page can still see it here.
+        /// </summary>
         public static Page TryGet(string description)
         {
             if (!RomanceState.StoryActive) return null;
@@ -28,12 +59,10 @@ namespace EleanorRomance
             if (RomanceState.Route != 1 || RomanceState.MotherState != 1) return null;
 
             if (DualState.Writable && DualState.HasHistory && DualState.Confirmed && DualState.Done("dr20"))
-                return new Page("er_ending_harem_title", "er_ending_harem_cg",
-                    "er_ending_harem_01", "er_ending_harem_02", "er_ending_harem_03");
+                return DualState.Flag("ending_card_shown") ? null : HaremPage();
 
             if (MaidState.Active && MaidState.Lovers && MaidState.Contract == 3 && MaidState.Progress >= 28)
-                return new Page("er_ending_maid_title", "er_ending_maid_cg",
-                    "er_ending_maid_01", "er_ending_maid_02", "er_ending_maid_03", "er_ending_maid_04");
+                return MaidState.Flag("ending_card_shown") ? null : MaidPage();
 
             return null;
         }

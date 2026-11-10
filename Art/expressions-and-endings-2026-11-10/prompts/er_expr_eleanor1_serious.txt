@@ -1,0 +1,9 @@
+Use case: identity-preserve / expression-only character portrait edit.
+Image 1 is the EDIT TARGET and authoritative character, outfit and pose reference.
+Asset: one high-resolution transparent expression master for Eleanor in her everyday upper-level purple outfit.
+Identity/style: Maiden's Pawnshop's warm, delicately drawn orange-haired adult Eleanor; green eyes; purple-and-gold dress and dark shoulder shawl. Use the supplied BEAUTIFIED portrait, not the base game's more realistic face.
+Change ONLY the facial expression, specifically eyebrows, eyelids, gaze nuance, mouth and a little cheek blush where requested.
+Requested expression (serious): Attentive seriousness: calm level eyebrows, fully attentive open eyes, relaxed but unsmiling closed mouth. Not angry and not gloomy.
+LOCK everything else: exact facial identity and age, iris colours, head size, face shape and head angle; hair shape/parting/colour and every accessory; neck, body, clothing, pose, illumination, colour palette, character scale and canvas position. The same neutral portrait must remain recognizable when toggling this expression on and off. Do not redesign, rejuvenate or replace her face with the base game's character.
+Framing: preserve the input's full head and visible upper body with the same front/three-quarter angle. No full body, no zoom, no new hands or gestures. Reproduce only a single character on actual transparent background, with clean alpha. Output a normal detailed high-resolution game source illustration matching the reference; do not introduce artificial pixel grids, dithering or a restricted palette.
+Important: no background, no comparison or expression sheet, no text, no emoticons, no symbols, no tears or sweat drops, no added jewellery. One portrait, one expression.

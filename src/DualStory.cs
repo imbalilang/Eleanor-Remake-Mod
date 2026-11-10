@@ -64,6 +64,7 @@ namespace EleanorRomance
                 commit?.Invoke();
                 DualState.SetSceneDay(scene, DualState.Today);
                 DualDirector.CompleteScene(scene);
+                if (scene == "dr20") EndingPageUI.ShowDualCompletion();
             });
         }
 

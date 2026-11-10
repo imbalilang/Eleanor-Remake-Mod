@@ -3,11 +3,13 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>0.82</ModVersion>
-  <Description>Eleanor and Lydia story expansion with explicit romance choices and Upper Level reputation checkpoints at 50/100/150. Three owned showcase ornaments independently provide referrals, +30% buyer budget and 10% extra tips capped at 150 per visit. Includes waiting dailies, original story rewards, legacy-save compatibility, improved dialogue and gift handling, a closing-time finale and updated portraits. Chinese/English. 埃莉诺与莉迪亚剧情扩展：上层声望50/100/150检查点、明确的恋爱选择和三件1格橱窗饰品，分别提供引荐客、预算+30%及每访最多150的额外小费。包含等待日常、原剧情奖励与旧档兼容，优化人物动机、章节衔接及回礼结算，调整关门后的晚会终章，并更新埃莉诺与莉迪亚画像。中英同步。</Description>
+  <ModVersion>0.88</ModVersion>
+  <Description>0.88 keeps Lydia's independent portrait: a romance lead must not become a generic NPC. Without CutePortraits, Lydia uses er_portrait_lydia_female_vanilla and the date-outfit vanilla variant; Mother falls back to original femaleUpper3. Maid, gala and tactical-vest scenes still reuse original Eleanor portraits. Lydia only falls back to femaleUpper10 if her custom file is missing. 0.87's generic Lydia fallback is replaced. E3/E4 standalone ending pages and the short attendant entry UI are retained. 0.88 保留Lydia独立形象：恋爱对象不能改成通用NPC。未启用少女当铺时，Lydia 继续使用 er_portrait_lydia_female_vanilla 与约会服独立画像；母亲回退原游戏 femaleUpper3；女仆、礼服、战术背心仍复用原游戏 Eleanor 画像。只有Lydia自定义文件缺失时才回退 femaleUpper10。0.87 的通用NPC回退已替换；E3/E4 独立结局页与侍从短入口保留。0.87 adds ultimate portrait compatibility, immediate E3/E4 standalone ending pages and a short attendant entry UI. 0.86 balances expression changes, fixes 1x1 ornament hit areas, corrects price verdicts, restores C03 appended scenes and the 800-credit savings progress/tip, and changes the C08 paid gift to an electronic component. 0.85 replaces 17 Eleanor expression placeholders and the attendant ending CG with generated artwork, aligned to the beautified base portraits. 0.86 平衡表情变化、修复饰品点击与价格判定、恢复调查款进度提示，并把C08付款回礼改为电子元件。0.85 替换17张埃莉诺表情与侍从结局CG，表情与美化底图对齐。 Eleanor and Lydia story expansion with explicit romance choices and Upper Level reputation checkpoints at 50/100/150. Three owned showcase ornaments independently provide referrals, +30% buyer budget and 10% extra tips capped at 150 per visit. Includes waiting dailies, original story rewards, legacy-save compatibility, improved dialogue and gift handling, a closing-time finale and updated portraits. 0.84 adds compatibility with game 1.0.0.14 so the story and the 0-point "Early Recall" starting perk register again. 0.83 revises the script to the final no-narrator version, adds expression portraits with per-line switching and E3/E4 ending pages. Chinese/English. 埃莉诺与莉迪亚剧情扩展：上层声望50/100/150检查点、明确的恋爱选择和三件1格橱窗饰品，分别提供引荐客、预算+30%及每访最多150的额外小费。包含等待日常、原剧情奖励与旧档兼容，优化人物动机、章节衔接及回礼结算，调整关门后的晚会终章，并更新埃莉诺与莉迪亚画像。0.84 兼容游戏 1.0.0.14，重新启用剧情和 0 点“旧日回想”开局特性；0.83 按最终无旁白稿修订文本，新增表情立绘逐句切换与 E3/E4 结局页。中英同步。</Description>
   <GameVersions>
     <Version>0.46</Version>
     <Version>0.46D</Version>
+    <Version>1.0.0.13</Version>
+    <Version>1.0.0.14</Version>
   </GameVersions>
   <Prerequisites />
   <Assemblies>

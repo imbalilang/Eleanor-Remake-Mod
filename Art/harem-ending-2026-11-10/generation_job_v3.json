@@ -1,0 +1,28 @@
+{
+  "tool": "image_gen.imagegen",
+  "status": "generated_candidate",
+  "revision": "v3",
+  "master": "masters/ending_harem_master_v3.png",
+  "source_sha256": "32037d8b9854950766e79848a3d1408638651ea8103fa00ae25a283ba3d1e141",
+  "prompt_file": "prompts/ending_harem_v3.txt",
+  "prompt": "Use case: precise facial-expression edit.\nImage 1 is the exact EDIT TARGET, the two-adult-woman romantic CG. Keep the image composition, characters, camera, bodies, clothing, hair, hands, background and rendering exactly the same.\nKeep the ENTIRE LEFT woman Eleanor completely unchanged, including her newly opened green eyes, shy lifted brows and small parted lips. Her expression is shy, emotionally vulnerable expectation.\nEdit ONLY the RIGHT brown-haired woman Lydia's mouth and eyebrows, plus tiny cheek expression details. Her eyes must remain just as visibly open and attentive as in Image 1, looking directly upward into the camera. Do not return to half-closed eyes.\nThe two women currently have almost the same small O-shaped parted mouth; make Lydia's emotion clearly DIFFERENT. Lydia feels happy, confident, and openly delighted to be close to the player, impatiently looking forward to the player's affectionate response. Give her a brighter, genuinely cheerful OPEN smile, a small arc of upper teeth visible, mouth corners naturally lifted, no tongue and no broad exaggerated grin. It must be different from the old stock closed-mouth shallow smile and different from Eleanor's small parted lips. Relax her inner brows, slightly lift one eyebrow in a warm, eager, inviting way. Preserve her poised adult personality, identity and face anatomy; no startled round O mouth, no worried knitted brows, no sleepy or sly smirk.\nEverything beyond this RIGHT facial expression stays exactly as in the target. No body, costume or scene changes, no extra people, no UI, text, floating hearts or symbols. Same fully opaque landscape high-resolution anime game-source painting.\n",
+  "references": [
+    {
+      "role": "Exact edit target; preserve scene and character identity",
+      "path": "Art/harem-ending-2026-11-10/masters/ending_harem_master_v2.png",
+      "sha256": "68f740dc6c82d11f25259e2a6e458e1ad88fda99581ac9c6acf4c7c63f031d47",
+      "size": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "generated_original": "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-0ade88ab-d8e9-4da9-a05e-5e1b35fee4e7.png",
+  "user_request": "两人眼睛更张开、更期待；避免相同且重复使用的微笑表情",
+  "story_references": [
+    "Content/dual_romance_v04.json:dr20",
+    "Localization/zh.csv:er_ending_harem_01..03"
+  ],
+  "runtime_replaced": false,
+  "published": false
+}

@@ -1,0 +1,19 @@
+0.87｜终极立绘兼容与即时结局页
+
+• 未启用少女当铺时，所有新画像回退原游戏已有 ID：Lydia 使用 femaleUpper10，母亲使用 femaleUpper3。
+• 女仆装、礼服、战术背心复用原游戏 Eleanor 画像，不再显示本 MOD 自定义的原版风服装图。
+• 旧存档中的旧立绘键会在载入时清理；其他美化 MOD 不再造成“普通立绘美化、女仆装原版风”的混搭。
+• 少女当铺启用时仍使用本 MOD 的美化女仆、礼服、Lydia/母亲画像。
+• E3/E4 独立结局页在 m28/dr20 完成时立即显示，GameOver 不重复同一 CG。
+• 侍从入口移除超过 130 字的长条款提示，改用短提示和短选项说明。
+• 保留 0.86 的表情分布、价格判定、1×1 点击、C03 追加段、调查款进度与 C08 回礼修正。
+
+0.87 | Ultimate portrait compatibility and immediate ending pages
+
+• Without CutePortraits, all new portraits fall back to original game IDs: Lydia uses femaleUpper10 and Mother uses femaleUpper3.
+• Maid, gala and tactical-vest scenes reuse original Eleanor portraits instead of the mod's custom vanilla-art outfits.
+• Old portrait keys in existing saves are cleaned up on load; other beauty mods no longer cause mixed normal-beauty/vanilla-maid styles.
+• CutePortraits-enabled games still use the mod's beautified maid, gala, Lydia and Mother portraits.
+• E3/E4 standalone ending pages now appear immediately after m28/dr20; GameOver does not repeat the same CG.
+• The attendant entry menu now uses a short prompt and short option descriptions instead of the 130+ character terms line.
+• Retains the 0.86 expression, price, 1x1 click, C03, savings progress and C08 gift fixes.

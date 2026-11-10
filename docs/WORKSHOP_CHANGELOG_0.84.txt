@@ -1,0 +1,11 @@
+0.84｜游戏 1.0.0.14 兼容
+
+• 版本门禁接受 1.0.0.14，恢复剧情、物品和 0 点“旧日回想”开局特性。
+• 保留 0.83 的无旁白文本、表情立绘、E3/E4 结局页与 0.82 晚会修复。
+• 路线、关系、数值与 E1～E14 不变。
+
+0.84 | Game 1.0.0.14 compatibility
+
+• Accepts game 1.0.0.14 so the story, items and the 0-point "Early Recall" starting perk register again.
+• Retains the 0.83 no-narrator script, expression portraits, E3/E4 ending pages and the 0.82 gala fix.
+• Routes, relationships, balance and E1–E14 are unchanged.

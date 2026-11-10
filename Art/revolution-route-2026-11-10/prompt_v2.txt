@@ -1,0 +1,20 @@
+Use case: stylized-concept, identity-preserving character outfit design.
+Asset type: one transparent waist-up dialogue portrait MASTER for Eleanor's revolutionary-route reward in the existing pawnshop-game mod.
+
+References:
+Image 1 is the user's COSTUME reference only: the pearl-white, extremely close-fitting halter-style combat bodysuit, bare shoulders/upper arms, curved torso seams and shaped side openings. Borrow that garment language, not the blonde character, weapon, wings, armour, or full-body pose.
+Image 2 is the authoritative Eleanor IDENTITY and revolutionary-period reference from Maiden's Pawnshop: the same mature adult woman, copper-orange long wavy hair and swept bangs, green eyes, confident gentle expression, little rectangular silver pendant on a dark cord.
+Image 3 is the project's existing portrait framing and face/illustration-family reference.
+
+Primary request: redesign Eleanor's tactical base layer to follow Image 1, and draw ONLY from the complete top of her head down to her natural waist. A single centered character portrait, no full-body image, no hips or thighs. Her complete hairstyle top and both shoulders must fit within the frame. Keep her face large enough for the existing dialogue portraits.
+
+Character and pose: Eleanor is clearly an ADULT woman in her late twenties, recognizable mature face and proportions, long loose orange waves framing her face and falling around her shoulders, emerald-green eyes, a small affectionate, self-possessed smile looking at the player. Upright relaxed three-quarter frontal pose like the existing portraits, arms resting naturally at her sides and continuing out of frame below the waist. Not an action pose.
+
+Costume: a sleek pearl-white opaque tactical second-skin bodysuit. Closely follow the reference's high halter collar and sweeping armholes, bare shoulders, upper arms, and small side-waist openings. A continuous white stretch-fabric front covers the whole bust and abdomen; precise curved seams and close tailoring emphasize her figure. A restrained satin sheen and long clean highlights make the fitted material attractive and readable. Slim blue-grey / muted gunmetal edging and a small collar clasp give a practical tactical interpretation of the reference. Show the slim waist at the lower crop. Keep her small rectangular revolutionary pendant over the suit. The suit itself is the focus: no jacket, no breastplate or other bulky armour, no belts or harness over the torso. No transparent fabric.
+
+Composition: landscape canvas approximately 288:212, one centered waist-up woman on a real transparent background. Her visible silhouette fills most of the canvas height, with a clean margin above the head. The lower edge cuts at the NATURAL WAIST, not at the hips, pelvis or legs. This is a normal master illustration, not a character sheet or a comparison.
+
+Style/medium: normal high-resolution anime game source art matching the Eleanor references, delicate warm dark outlines, coherent cel-shaded forms, finely drawn green eyes and softly modelled warm skin. Preserve the reference's charming mature face. Use restrained transitions and clean fabric shapes suitable for subsequent area downsampling. Do NOT generate simulated low-resolution pixel art, pixel grids, dithering, grain or fragmented outlines. We will downsample the source later using the project's established export pipeline.
+
+Lighting/mood: soft warm frontal light, intimate and relaxed between trusted adults, clean readable white fabric and warm orange hair, no dramatic scene lighting.
+Constraints: fully opaque covered chest, natural anatomy, no nudity, no visible nipple detail, no text, no watermark, no UI, no background scenery. No sword, wings, fantasy armour, blonde hair or full-body framing. One finished portrait with actual alpha transparency.

@@ -44,18 +44,56 @@ namespace EleanorRomance
                 if (baseValue <= 0) baseValue = Mathf.Max(1, paid);
                 TotalBase += baseValue;
 
-                float ratio = paid / (float)baseValue;
+                // Both directions compare against the price shown in the
+                // negotiation UI.  Raw GetBaseValue alone ignores retail/
+                // market features, so a normal or discounted price can look
+                // like an overpayment when divided by base value.
+                long marketValue = MarketValue(item, baseValue);
+                float marketRatio = paid / (float)marketValue;
                 if (eleanorIsSeller)
                 {
-                    if (ratio < 0.65f) Lowball = true;
-                    else if (paid > baseValue) Discount = true; // includes native +10% / +20% buying markup
+                    // Player is buying from Eleanor.  Explicit bargain features
+                    // carry the player's intent even when the feature is already
+                    // included in the displayed price.
+                    bool buyingMarkup = HasActiveFeature(item, "bargainBuyingMarkup");
+                    bool buyingDiscount = HasActiveFeature(item, "bargainBuyingDiscount")
+                        || HasActiveFeature(item, "blackmailDiscount")
+                        || HasActiveFeature(item, "threatenDiscount");
+                    if (buyingDiscount) Lowball = true;
+                    else if (buyingMarkup) Discount = true;
+                    else if (paid > marketValue) Discount = true; // includes native +10% / +20% buying markup
+                    else if (marketRatio < 0.85f) Lowball = true;  // at least 15% below the displayed price
                     else Fair = true;
                 }
                 else
                 {
-                    if (ratio > 1.25f) Overcharge = true;   // player charged her above value
-                    else if (ratio < 0.65f) Discount = true; // player gave her a deal
+                    // Player is selling to Eleanor.
+                    bool bargainDiscount = HasActiveFeature(item, "bargainDiscount");
+                    bool bargainMarkup = HasActiveFeature(item, "bargainMarkup")
+                        || HasActiveFeature(item, "blackmailMarkup")
+                        || HasActiveFeature(item, "threatenMarkup");
+                    if (bargainMarkup) Overcharge = true;
+                    else if (bargainDiscount) Discount = true;
+                    else if (marketRatio > 1.25f) Overcharge = true;   // clearly above the displayed market price
+                    else if (marketRatio < 0.85f) Discount = true;     // at least 15% below the displayed price
                     else Fair = true;
+                }
+                StoryDirector.Log("Deal " + (item != null ? item.identifier : "?")
+                    + " paid=" + paid + " base=" + baseValue + " market=" + marketValue
+                    + " seller=" + eleanorIsSeller + " verdict=" + Dominant);
+            }
+
+            private static bool HasActiveFeature(GameItem item, string id)
+            {
+                if (item == null) return false;
+                try
+                {
+                    ItemFeature feature = item.FindItemFeatureByID(id);
+                    return feature != null && !feature.isDisabled;
+                }
+                catch
+                {
+                    return false;
                 }
             }
 
@@ -70,6 +108,22 @@ namespace EleanorRomance
                     if (Fair) return 'F';
                     return 'N';
                 }
+            }
+        }
+
+        /// <summary>Price shown by the native negotiation UI, with a safe floor.</summary>
+        internal static long MarketValue(GameItem item, long fallback)
+        {
+            long floor = Math.Max(1L, fallback);
+            if (item == null) return floor;
+            try
+            {
+                long value = item.GetNegociatedValue();
+                return value > 0 ? value : floor;
+            }
+            catch
+            {
+                return floor;
             }
         }
 
@@ -226,6 +280,7 @@ namespace EleanorRomance
             Dialogue completion = null;
             bool built = false;
             bool committed = false;
+            bool started = false;
             Action commit = () =>
             {
                 if (committed) return;
@@ -243,6 +298,7 @@ namespace EleanorRomance
                 Action start = completion.startAction;
                 completion.SetStartAction(() =>
                 {
+                    started = true;
                     // Prevent new trades or a second bell press during the wrap-up.
                     client.tryInterceptDismiss = null;
                     client.dismissable = false;
@@ -259,6 +315,23 @@ namespace EleanorRomance
                 });
                 return completion;
             };
+
+            // Native SELL clients can start allDoneDialogue from OnAnyAction
+            // immediately after the last item is bought, before the bell or
+            // accept-deal hook.  Keep allDoneDialogue refreshed after every
+            // trade so the chapter wrap (and its appended blocks, e.g.
+            // c03.b007's pendant scene) is not replaced by the generic
+            // native "business done" line.
+            Action refreshAllDone = () =>
+            {
+                if (started) return;
+                built = false;
+                completion = null;
+                Dialogue dialogue = getCompletion();
+                if (dialogue != null) client.allDoneDialogue = dialogue;
+            };
+            client.onItemSold += (item, paid) => refreshAllDone();
+            client.onItemBought += (item, paid) => refreshAllDone();
 
             // CompleteClientCreation wires acceptDealDialogue to OnDealAccepted.
             // This event runs before vanilla chooses allDoneDialogue, including

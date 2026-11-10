@@ -1,0 +1,139 @@
+{
+  "manifest_version_unchanged": "0.85",
+  "local_installed_directory": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3834588749",
+  "files_replaced": 17,
+  "all_other_installed_files_unchanged": true,
+  "replacement_rule": "Only files identical to the verified pre-fix asset were replaced.",
+  "restart_required": true,
+  "game_visual_test_performed": false,
+  "published": false,
+  "changes": [
+    {
+      "file": "er_expr_eleanor1_angry.png",
+      "old_sha256": "cb7fd902e6413d263798723a2afe4a4d7c9557f26297b3dcab861e1baccafa0c",
+      "new_sha256": "ca4fdfcae6808d369f8f9e0d27caa86a4b021b9a09904cf0a516d11a7829c477"
+    },
+    {
+      "file": "er_expr_eleanor1_sad.png",
+      "old_sha256": "474c3439c103546e4ce321b33e906cf6d339b867f530bc9f7abc4564ef454e05",
+      "new_sha256": "e39bece4a09f19f75e1393599bea3773486256e6c09b7b4a70e1a5cfae4fce8d"
+    },
+    {
+      "file": "er_expr_eleanor1_serious.png",
+      "old_sha256": "1840ceb8e609f4814341e059ddf6827749dcda8aa83abf475533bc3ce1e6b51a",
+      "new_sha256": "ce3630b7e30433f454d70bf83165cd1f03087a3980ab74afc3aff4e955ecdc68"
+    },
+    {
+      "file": "er_expr_eleanor1_shy.png",
+      "old_sha256": "7ca0de10c16b72cc9bfbeaab4e73d9434e9eb8899c974dbc14e900921eec31f9",
+      "new_sha256": "6e2011b1439317a4f2b7c669452da515e792e1c189beb1174bfc1aaa874ae8d1"
+    },
+    {
+      "file": "er_expr_eleanor1_soft.png",
+      "old_sha256": "1e18d7bdbefac8deb291c49134606f67f5e492b6362c6eb52fa9d1a89db1280b",
+      "new_sha256": "089b068b368ed25792e6cfe3edd03f57278e06f4724e348c1dda0ac8b85bce58"
+    },
+    {
+      "file": "er_expr_eleanor_maid_angry.png",
+      "old_sha256": "6fbfce815ba4b392ac6092fc722d052fa4256bffb358ed14d7c4846f6de74518",
+      "new_sha256": "8e03356320d0aa5e3bd37b3678ae4d81f854c8d9056a48b7c8dd39061dbe0cce"
+    },
+    {
+      "file": "er_expr_eleanor_maid_sad.png",
+      "old_sha256": "2ab9b6181d881b4367550b7331c1763a81efeb867406567d05cee0a177897337",
+      "new_sha256": "94aab91a8fc312300d67cf990cb041b9355b10daf7a4e4afce2b4d76f3be4867"
+    },
+    {
+      "file": "er_expr_eleanor_maid_serious.png",
+      "old_sha256": "8270f4a0b1b4772532eea35d2c0337e85adbd6878e1398524020d6c1c42fcb56",
+      "new_sha256": "364dca2f42930ac11275cb95ed3a522cd6f52f05b873856c9bedfbb0b4c7308d"
+    },
+    {
+      "file": "er_expr_eleanor_maid_shy.png",
+      "old_sha256": "ab6d1cc6f2be6deed901a9785970f023c7884e7f0c1ffe3e7e3b3ab28ab1f003",
+      "new_sha256": "b79558ab4cff80c0724434fbe8fcae80d68e392f7f593a863b8c27fecd33670c"
+    },
+    {
+      "file": "er_expr_eleanor_maid_soft.png",
+      "old_sha256": "1abc3c46eca374573f76a8b81dc1876a0b1756dd1bb216eada58287c1a2f4f8b",
+      "new_sha256": "c37ad85d4123c1058e0d8bf6ac0d8cd6c11fe487cd734d35f336cf4de2bdc876"
+    },
+    {
+      "file": "er_expr_eleanor_maid_tsun.png",
+      "old_sha256": "b080d41899dc2c5f651250ec4531db8d5bbb80dc613e477f34ec203c82bca76f",
+      "new_sha256": "106a11f8083433550966ce9e6121517857b0752c13909a7d2e4c6ca32345ef47"
+    },
+    {
+      "file": "er_expr_eleanor_scav_angry.png",
+      "old_sha256": "5c41d82d509b4d9a30bdd60c7711286797e48eb06c178dc291dfe88a123580a1",
+      "new_sha256": "dd16fe6a98285de3517d05c168bffda23b0c21da1591bc09a11c3bb45fdab1ca"
+    },
+    {
+      "file": "er_expr_eleanor_scav_determined.png",
+      "old_sha256": "53df5f21bc0a2afff912c79d178913a651fce892ee4ee6a2233d575f11fcdb8c",
+      "new_sha256": "fbd05f487b253ceecfd20e31bcb63e545b52e594fc18ac55f1cbe938581d46fb"
+    },
+    {
+      "file": "er_expr_eleanor_scav_sad.png",
+      "old_sha256": "5748bf8b9e7390f6dbd39a6313572cecb762c9401f6888cbbf5c755f1e97bfda",
+      "new_sha256": "5bef7228dc02450f27441ba80658138698012e83e7566a676fa918cc9651ac32"
+    },
+    {
+      "file": "er_expr_eleanor_scav_shy.png",
+      "old_sha256": "48df39b194fb155575d9fe8edd49e0206487c85449c2b7eba22be3b47dcb51a1",
+      "new_sha256": "6e973989f9eef2a5f7fc6d724e3d92cf87ebbc0541687e8707981f3e4c3f9a8d"
+    },
+    {
+      "file": "er_expr_eleanor_scav_soft.png",
+      "old_sha256": "54a9d9d3ccb19f9b8faf318a49ecede4dab348775b6ced3747582ff4acfb1ca9",
+      "new_sha256": "b7170e9c5ac4de38fef177c7dfa739a1e14843842261b60d3a895cfb1d4eda28"
+    },
+    {
+      "file": "er_expr_eleanor_scav_tired.png",
+      "old_sha256": "fd813f39d09210e4f410d77da4592e89d86ac20efb4b377ef0e48a73dd6f15ac",
+      "new_sha256": "c3acc9eb8ebdd7b9a294db0cd5b4d0e57a7d09cc280e380d715898e3cedf0063"
+    }
+  ],
+  "skipped": [
+    {
+      "file": "er_expr_lydia_daily_flustered.png",
+      "reason": "different_asset_family_or_revision"
+    },
+    {
+      "file": "er_expr_lydia_daily_hurt.png",
+      "reason": "different_asset_family_or_revision"
+    },
+    {
+      "file": "er_expr_lydia_daily_serious.png",
+      "reason": "different_asset_family_or_revision"
+    },
+    {
+      "file": "er_expr_lydia_daily_smile.png",
+      "reason": "different_asset_family_or_revision"
+    },
+    {
+      "file": "er_expr_lydia_daily_tease.png",
+      "reason": "different_asset_family_or_revision"
+    },
+    {
+      "file": "er_expr_lydia_date_flustered.png",
+      "reason": "not_in_installed_version"
+    },
+    {
+      "file": "er_expr_lydia_date_hurt.png",
+      "reason": "not_in_installed_version"
+    },
+    {
+      "file": "er_expr_lydia_date_serious.png",
+      "reason": "not_in_installed_version"
+    },
+    {
+      "file": "er_expr_lydia_date_smile.png",
+      "reason": "not_in_installed_version"
+    },
+    {
+      "file": "er_expr_lydia_date_tease.png",
+      "reason": "not_in_installed_version"
+    }
+  ]
+}

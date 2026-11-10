@@ -1,0 +1,57 @@
+{
+  "revision": "v3",
+  "status": "generation_requested",
+  "generation_attempts": 1,
+  "successful_images": 0,
+  "model": "gpt-image-2",
+  "requested_size": "1536x1024",
+  "requested_count": 1,
+  "endpoint_mode": "images/edits",
+  "requested_changes": [
+    "Restore fuller canonical chest proportions",
+    "Restore plausible substantial arm volume",
+    "Reconstruct continuous waist and exact garment cutouts across arm occlusion"
+  ],
+  "prompt": "Art\\revolution-ending-2026-11-11\\prompts\\ending_revolution_v3.txt",
+  "prompt_sha256": "e15c04a54813cce30eaf74ababb921b8024c1dacf7d89ccb5550721f478e5d83",
+  "sources": [
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\masters\\ending_revolution_master_v2.png",
+      "role": "EDIT TARGET: preserve scene, face, pose, pixel medium; correct torso and arm",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "574224f67abeb83a7fc9fab2417b2e55b742a4b2c8f50e214b6141bcd7bc556c"
+    },
+    {
+      "path": "Art\\revolution-route-2026-11-10\\masters\\eleanor_revolution_undersuit_beauty_v3.png",
+      "role": "AUTHORITATIVE adult anatomy and outfit: volume, support seams and crescent side-waist cutouts",
+      "size": [
+        1460,
+        1077
+      ],
+      "sha256": "0eb50e2c5c9216835412ef19951dae82d1f676847b67be8ede75178a93773368"
+    },
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\references_local\\eleanor_outfit_construction_crop_v3.png",
+      "role": "CROP of same model sheet: garment construction, source box [385,430,1080,1077], composited on neutral background for visibility",
+      "size": [
+        695,
+        647
+      ],
+      "sha256": "37fefb6eac028819ef45650e7a0059bdcb68532cc9aa4cca4c51e5540cc5a93e"
+    },
+    {
+      "path": "Art\\revolution-ending-2026-11-11\\references_local\\wall_36.png",
+      "role": "STYLE ONLY: original game ending pixel medium and indigo/coral palette",
+      "size": [
+        640,
+        360
+      ],
+      "sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1"
+    }
+  ],
+  "forbidden_reference_images_opened": [],
+  "runtime_installation": false
+}

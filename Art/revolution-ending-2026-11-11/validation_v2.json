@@ -1,0 +1,41 @@
+{
+  "master": "masters\\ending_revolution_master_v2.png",
+  "master_size": [
+    1672,
+    941
+  ],
+  "master_sha256": "574224f67abeb83a7fc9fab2417b2e55b742a4b2c8f50e214b6141bcd7bc556c",
+  "crop_box_half_open_source_pixels": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "method": "Separable exact rectangular overlap area average in 8-bit RGB; floor(v+0.5)",
+  "uniform_scale": true,
+  "palette_reduction": false,
+  "added_dither": false,
+  "sharpening": false,
+  "master_modified": false,
+  "runtime_installation": false,
+  "outputs": [
+    {
+      "path": "endings\\er_ending_revolution_cg_v2_native640.png",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "48f2dc4099814091c6ac37d0b17a1a1d2c381d71efc89c9b1bf62631bc5078f2"
+    },
+    {
+      "path": "endings\\er_ending_revolution_cg_v2.png",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "79628e90951aa3c619e3828607ea297919207f591beb861f3d3fe3aed54a8391"
+    }
+  ]
+}

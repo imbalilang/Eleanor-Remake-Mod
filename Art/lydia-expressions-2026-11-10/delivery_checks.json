@@ -1,0 +1,13 @@
+{
+  "installed_native_expressions": 10,
+  "installed_base_portraits": 2,
+  "all_runtime_hashes_match_delivery": true,
+  "all_expressions_alpha_and_visible_body_locked": true,
+  "legacy_export_replay_matches_new_bases": true,
+  "out_of_scope_art_unchanged": true,
+  "audit_flags_outside_task": [
+    "Textures/Items/er_ending_harem_cg.png"
+  ],
+  "game_visual_test_performed": false,
+  "published": false
+}

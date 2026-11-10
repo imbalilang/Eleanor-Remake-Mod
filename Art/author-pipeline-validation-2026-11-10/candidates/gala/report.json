@@ -1,0 +1,83 @@
+{
+  "source_size": [
+    1462,
+    1076
+  ],
+  "clean_bbox": [
+    395,
+    265,
+    1058,
+    1076
+  ],
+  "parameters": {
+    "visible_height": 209,
+    "centre_x": 143.5,
+    "bottom_exclusive": 266,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": true,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.25770653514180025,
+    "tx": -43.723797780517884,
+    "ty": -11.292231812577086
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 7762,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    59,
+    58,
+    224,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 10352,
+  "name": "gala",
+  "source": "Art/gala/masters/eleanor_gala_beauty_master.png",
+  "source_sha256": "410fcf24b6a86aa8383a622d77b11c596def71a9b205fafbe499e70773519c29",
+  "previous": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+  "previous_sha256": "0d68790bf9e45f41dc9f058a4c7cf7cb774d684f7dfb094d615c64196af0370b",
+  "strict_sha256": "47d84569ce5f96584f3ec0135e5c7cb1417b4db9f0dd4d9dd70bafd5f545ecbd",
+  "strict_vs_previous": {
+    "rgba_identical": false,
+    "different_rgba_pixels_including_transparent": 60068,
+    "alpha_different_pixels": 68,
+    "silhouette_iou": 0.9956852791878172,
+    "visible_rgb_different_pixels": 14992,
+    "exact_visible_rgb_fraction": 0.044608717817996434,
+    "visible_rgb_mae": 2.975762596652222,
+    "interior_rgb_mae": 2.9280726412779154,
+    "visible_max_channel_error": 44
+  },
+  "fringe_effect": {
+    "rgba_identical": true,
+    "different_rgba_pixels_including_transparent": 0,
+    "alpha_different_pixels": 0,
+    "silhouette_iou": 1.0,
+    "visible_rgb_different_pixels": 0,
+    "exact_visible_rgb_fraction": 1.0,
+    "visible_rgb_mae": 0.0,
+    "interior_rgb_mae": 0.0,
+    "visible_max_channel_error": 0
+  }
+}

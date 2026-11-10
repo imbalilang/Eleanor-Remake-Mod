@@ -1,0 +1,28 @@
+{
+  "tool": "image_gen.imagegen",
+  "status": "generated_candidate",
+  "revision": "v2",
+  "master": "masters/ending_harem_master_v2.png",
+  "source_sha256": "68f740dc6c82d11f25259e2a6e458e1ad88fda99581ac9c6acf4c7c63f031d47",
+  "prompt_file": "prompts/ending_harem_v2.txt",
+  "prompt": "Use case: identity-preserve / precise facial-expression edit of an existing two-person ending CG.\nImage 1 is the exact EDIT TARGET, not merely a style reference. Preserve this complete scene, the same two clearly adult women, their identities, hairstyles, clothes, mature proportions, leaning posture, upward viewing gaze, hands, lighting, framing, background, and canvas size.\n\nThe user specifically finds BOTH current eyes too half-closed and BOTH smiles too similar and overused. Make a clearly visible facial-expression change, NOT another near-identical tiny smile.\n\nChange ONLY the eyes/eyelids, eyebrows, mouths and very subtle cheek warmth of the two women:\nLEFT = Eleanor, copper-orange hair, green eyes:\nOpen BOTH eyes visibly wider, lifting her upper eyelids so the upper iris is less covered; the whole gaze should read awake, emotionally present and expectant. Preserve her eye corners, iris size and green colour, adult facial construction. Her expression is tender anticipation with a trace of shy vulnerability: brows softly lifted, lips slightly parted in a relaxed small natural opening, mouth corners relaxed rather than curled into a smile. She is waiting for the player's response, looking directly UP into the lens. No teeth-showing grin, no smirk.\nRIGHT = Lydia, brown long straight/slightly curved hair with rose ornament, amber eyes:\nOpen BOTH eyes visibly wider than the target image, with clear attentive amber irises and upward direct eye contact; keep her adult eye shape, width and iris scale. Her emotional expression should be different from Eleanor: more poised and openly inquisitive expectation, eyebrows gently raised with a small asymmetry, an attentive slightly raised chin, lips softly parted as though about to ask a quiet question. Keep the mouth small and natural, with no repeated stock closed-lip smile and no sly half-lidded teasing look. She feels confident enough to wait for an answer.\nBoth should look lovingly EXPECTANT rather than sleepy, sad, shocked, frightened, cartoonishly wide-eyed or vacant. More open eyelids, not enlarged eyeballs or childlike faces. Distinct eyebrow and mouth shapes between the two. Preserve the same head angles and face placement.\n\nDo not alter costumes, hair, bodies, the relationship pose, tabletop, hands, shop props, camera angle, crop or background. Do not enlarge their busts. No extra characters. No symbols, sweat drops, floating hearts, UI or text. Keep the image a fully opaque, high-resolution, coherent anime game-source illustration with the same linework and shading. No pixel grid or dither. Output one complete edited scene, the same landscape aspect ratio.\n",
+  "references": [
+    {
+      "role": "Exact edit target; preserve scene and character identity",
+      "path": "Art/harem-ending-2026-11-10/masters/ending_harem_master_v1.png",
+      "sha256": "4a672116b83e3a203c38dfa2c2468db5ec956dd8c4ed0aa906c91979594dd18d",
+      "size": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "generated_original": "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-16710408-af33-480c-bcdb-9e4a991e4997.png",
+  "user_request": "两人眼睛更张开、更期待；避免相同且重复使用的微笑表情",
+  "story_references": [
+    "Content/dual_romance_v04.json:dr20",
+    "Localization/zh.csv:er_ending_harem_01..03"
+  ],
+  "runtime_replaced": false,
+  "published": false
+}

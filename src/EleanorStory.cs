@@ -527,7 +527,8 @@ namespace EleanorRomance
 
             client.onItemBought = (item, paid) =>
             {
-                if (paid <= Mathf.Max(1, item.GetBaseValue()) / 3) RomanceState.HardshipAidGiven = true;
+                long market = StoryEngine.MarketValue(item, 1);
+                if (paid <= Math.Max(1L, market / 3)) RomanceState.HardshipAidGiven = true;
             };
 
             client.mainDialogue = StoryEngine.Build(StoryV06Content.B_C05_B001);
@@ -582,6 +583,7 @@ namespace EleanorRomance
             {
                 tracker.Record(item, paid, eleanorIsSeller: true);
                 RomanceState.Savings = RomanceState.Savings + Mathf.Max(0, paid);
+                NotifySavingsProgress(paid);
             };
 
             Dialogue main = StoryEngine.Chain(StoryV06Content.B_C06_B001, StoryV06Content.B_C06_B002);
@@ -624,6 +626,7 @@ namespace EleanorRomance
             {
                 tracker.Record(item, paid, eleanorIsSeller: true);
                 RomanceState.Savings = RomanceState.Savings + Mathf.Max(0, paid);
+                NotifySavingsProgress(paid);
             };
 
             Dialogue main = StoryEngine.Chain(StoryV06Content.B_C07_B001, StoryV06Content.B_C07_B002);
@@ -717,7 +720,7 @@ namespace EleanorRomance
             // Reserve the price first, then refund immediately if placement fails.
             // A failed selection retains the menu and does not advance the chapter.
             if (paid && !StoryEngine.Spend(20)) return false;
-            if (!StoryEngine.GiveToPlayer("scrap_metal"))
+            if (!StoryEngine.GiveToPlayer("common_electronic"))
             {
                 if (paid) StoryEngine.AddCredit(20);
                 return false;
@@ -740,8 +743,8 @@ namespace EleanorRomance
             client.onItemSold = (item, paid) =>
             {
                 tracker.Record(item, paid, eleanorIsSeller: true);
-                long baseValue = Math.Max(1, item.GetBaseValue());
-                if (paid >= baseValue * 0.9) RomanceState.LydiaFairBracelet = true;
+                long market = StoryEngine.MarketValue(item, 1);
+                if ((long)paid * 10 >= market * 9) RomanceState.LydiaFairBracelet = true;
             };
 
             Action spawnBracelet = () =>
@@ -1854,18 +1857,12 @@ namespace EleanorRomance
 
         internal static string LydiaSpriteKey()
         {
-            return PortraitCompat.ResolveCharacter(
-                ModConstants.LydiaPortraitVanilla,
-                ModConstants.LydiaPortraitBeauty,
-                ModConstants.LydiaSprite);
+            return PortraitCompat.ResolveLydia();
         }
 
         internal static string MotherSpriteKey()
         {
-            return PortraitCompat.ResolveCharacter(
-                ModConstants.MotherPortraitVanilla,
-                ModConstants.MotherPortraitBeauty,
-                ModConstants.MotherSprite);
+            return PortraitCompat.ResolveMother();
         }
 
         private static Dialogue Head(Dialogue dialogue)
@@ -1882,6 +1879,21 @@ namespace EleanorRomance
                 case 'O': return StoryEngine.Build(over);
                 case 'L': return StoryEngine.Build(low);
                 default: return StoryEngine.Build(none);
+            }
+        }
+
+        private static void NotifySavingsProgress(int paid)
+        {
+            int gained = Mathf.Max(0, paid);
+            if (gained <= 0) return;
+            int current = RomanceState.Savings;
+            if (current >= 800)
+            {
+                StoryDirector.Notify(L.Get("er_notice_savings_complete"));
+            }
+            else
+            {
+                StoryDirector.Notify(L.Get("er_notice_savings_progress", current, 800 - current));
             }
         }
 
