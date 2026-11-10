@@ -104,8 +104,8 @@
     "You'll know every step.",
     "Discussed together! Not you deciding first and then informing me.",
     "Together.",
-    "...And put away that tone. The one that expects to be called master.",
-    "See what I do first.",
+    "...One more thing. You have not already decided what I am supposed to call you, have you?",
+    "Work first. What you call me is up to you.",
     "I will. If I think you're making me pay with myself, I'll leave. We can agree on work. Don't start adding anything else."
   ],
   "m11_b008": [
@@ -262,14 +262,17 @@
     "That's what you said about my goods: if you haven't checked it, don't add it to the price."
   ],
   "m14_b009": [
-    "We could publish now. Without protection, they may kill her. I can't promise to save her.",
-    "Let me think. I can't take this road just because you say it exists."
+    "We could publish it now. But without protection, they may kill her. I cannot promise I can save her.",
+    "Let me think.",
+    "She tightens her grip on the bag holding the drive, then slowly loosens it, without handing it over.",
+    "They will not even say where they would release her. Once I hand it over, all I have is their word. But publishing it now puts her at risk too...",
+    "I want her alive. And after everything she has endured, I want her work to survive too."
   ],
   "m14_b010": [
-    "I've decided. Send the research to the newspaper.",
-    "Are you sure you don't want to wait for protection?",
-    "Yes. Mother didn't do all this so it could stay locked on a drive forever.",
-    "But don't tell me she'll definitely be all right. I'll believe you."
+    "...Send the research to the newspaper. At least they will not be able to take that copy back.",
+    "You will not wait for news of protection?",
+    "No. I do not know whether Mother would agree. This is my decision.",
+    "But do not tell me she will certainly be all right. I would believe you."
   ],
   "m14_b011": [
     "I've decided. I'll leave the investigation, and our agreement ends here too.",
@@ -347,13 +350,11 @@
     "She asked how much weight I'd lost. I'd prepared so much to say. That one question undid all of it."
   ],
   "m16_b002": [
-    "They sent the three hundred to the shop.",
-    "...Did you take it?",
-    "Returned it untouched. Told him to pass on a message: I don't do that kind of business here.",
-    "*She pauses* I thought you'd say to use it for my mother's medicine.",
-    "Medicine money has a proper source. That money had your mother's price written on it.",
-    "...Three hundred credits. That's what they think my mother is worth.",
-    "Not here. She's not something I put a price tag on."
+    "They sent someone to the shop with those three hundred credits.",
+    "...Did you take them?",
+    "Sent them straight back. They wanted me to push you into handing over the drive. I did not work for them, so I will not take their money.",
+    "She looks at you for a moment. Slowly, the tension leaves her shoulders.",
+    "...All right."
   ],
   "m16_b003": [
     "Mother's been transferred safely. I saw her. The person taking over went through every medicine with me.",

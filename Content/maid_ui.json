@@ -172,8 +172,8 @@
     "Confirm: publish now, before protection is secured."
   ],
   "er_maid_reconsider": [
-    "先不公开，重新商量。",
-    "Don't publish yet. Discuss it again."
+    "返回，重新选择。",
+    "Go back and choose again."
   ],
   "er_maid_reconcile_yes": [
     "是我做错了。以后我知道的危险，第一个告诉你。",

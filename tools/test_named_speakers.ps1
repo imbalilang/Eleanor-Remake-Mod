@@ -16,13 +16,13 @@ foreach($label in @('旁白','Narration','来宾','Guest','采购行管事','Pur
 }
 'PASS: bilingual narration/guest/manager/notice/news captions and native records use the authored role without changing the actual customer.'
 
-# Real party, protection, reunion, tragic and narration graphs, not just labels.
+# Real doorway, protection, reunion, tragic and narration graphs, not just labels.
 Gala-Run;[EleanorRomance.GalaStory]::Phase=4;[EleanorRomance.MaidState]::PendingVisit=916
 $client=[EleanorRomance.GalaStory]::CreateVisit();Use-Client $client
 foreach($line in (Motivation-Nodes $client.mainDialogue)){
     $actual=Record-Named $line
     $expected=if($line.title -eq 'PLAYER'){'Player'}else{$line.title}
-    Assert ($actual -eq ($expected+': '+$line.plainText)) 'Party visitor/manager/narration was attributed to Eleanor.'
+    Assert ($actual -eq ($expected+': '+$line.plainText)) 'Gala doorway narration was attributed to Eleanor.'
 }
 foreach($block in @('c15.b004','c16.b004','c16.b005','rc.b002')){
     Reset-Run
@@ -33,7 +33,7 @@ foreach($block in @('c15.b004','c16.b004','c16.b005','rc.b002')){
         Assert ($actual -eq ($expected+': '+$line.plainText)) "Notice/news/character attribution failed in $block."
     }
 }
-'PASS: actual party, protection notice, rescue news and route-C news retain each authored speaker through the native dispatcher and recorder.'
+'PASS: gala doorway, protection notice, rescue news and route-C news retain each authored speaker through the native dispatcher and recorder.'
 
 # Unmarked foreign lines remain native, even when they share a localized title.
 Reset-Run

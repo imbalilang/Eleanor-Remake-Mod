@@ -29,9 +29,9 @@
     "You said good goods can stand by their price. Turns out documents can too."
   ],
   "m24_b005": [
-    "He finally said, 'Welcome back, Miss Eleanor.'",
-    "Before I left, that inspector tried getting friendly. I told him I was in a hurry. Someone was waiting downstairs.",
-    "The look on his face was about the same as mine when I first saw your price tags.",
+    "In the end he only said, \"You may go, Miss Eleanor.\"",
+    "He pushed my papers to the edge of the window and called the next person. I picked them up and walked through.",
+    "Only when the gate clicked behind me did I notice how tightly I was clutching the papers.",
     "That inspector. What's his name?",
     "...Why do you want to know?",
     "Write it down. I'm not buying anything from him.",
@@ -78,7 +78,7 @@
     "How do you make them trust it?",
     "Origin, condition, repairs, replacements. Everything on the label. I recorded who found each piece and in which scavenging area.",
     "Goods from below, inspection below, buyers above. You need to understand both ends to make it work.",
-    "Inspect it. Just as you used to inspect my goods."
+    "The sample is already paid for. Take it through the usual trade. The other goods are separate; we can discuss those if you want them."
   ],
   "m25_b003": [
     "You pick up the screwdriver and turn it over. Check the tip, the handle joint, every detail on her label. She waits across the counter without speaking.",
@@ -104,7 +104,7 @@
     "The person who introduced me came out of regard for you. He said, 'People upstairs have heard about that pawnbroker's eye too.'"
   ],
   "m25_b006": [
-    "Training, samples, trial work. You didn't cut corners on any of it. They picked through it all evening and couldn't find any shoddy work."
+    "You paid for the training, samples, trial work—all of it. They tested the sample several times before agreeing on a delivery date."
   ],
   "m25_b007": [
     "It's all ordinary equipment and existing seeds. Nothing from the research we returned. I did use everything Mother taught me about the basics."
@@ -115,7 +115,7 @@
   "m25_b009": [
     "The training money wasn't wasted.",
     "It wasn't just the training.",
-    "The first time I brought scavenged goods, you made me name a price, then explained what I'd got wrong. What I'm doing now is what I learned that day.",
+    "The second time I brought goods in, I insisted on naming the price first. You said I had two right and one uncertain, then tried to charge tuition. I remember.",
     "So half this order is yours.",
     "Half's too much.",
     "I say half, I mean half. ...Is it that difficult to give me proper credit, Master?",
@@ -150,11 +150,11 @@
     "She said, 'Go ahead. He won't go around me.'",
     "I thought she was bluffing.",
     "And now?",
-    "Now I know why everyone upstairs is asking who you are.",
+    "It seems I still need her for inspections and delivery dates. With you two working together, at least I know who is responsible.",
     "Today, consider me a customer. Quote your usual prices."
   ],
   "m26_b007": [
-    "Next time I go up, I'll negotiate at her price.",
+    "Next time I go up, I will discuss delivery with her. For a large order, we will still have to negotiate the price.",
     "One more thing, boss. When she introduces her supplier, she never says 'some pawnshop downstairs.' She says 'someone I trust.'"
   ],
   "m27_b002": [
@@ -222,34 +222,26 @@
     "...What do you think?"
   ],
   "m28_b002": [
-    "She waits at the doorway a moment. As on the first day she wore these clothes here, she checks for other customers before approaching the counter.",
-    "There's something we need to settle today. Afterwards, I'd like to stay here a while.",
-    "Go on.",
+    "She pauses in the doorway, checks that there are no other customers, then approaches the counter.",
+    "There is something to settle today. Afterwards, I want to spend a little longer here.",
+    "I have kept the rest of the day for you.",
     "Do you remember my condition?",
-    "Until the day you walk back into the Upper Level under your own name.",
-    "That day has come.",
-    "They remembered my name. No mention of Mother's case after it. No mention of whose maid I am. Just Eleanor.",
-    "You've kept your half of the promise.",
-    "And the work I owed you is done, too.",
-    "Yes.",
-    "All you have to say is 'yes'?",
-    "You said you wanted to say it yourself.",
-    "...",
-    "That agreement is settled. But I haven't come to say goodbye.",
-    "I turned down a very good dinner invitation upstairs today. Someone wanted to discuss next season's orders.",
-    "Why?",
-    "I said I already had plans.",
-    "Isn't there anything else you want to ask? Why I'm still wearing this, when the wages and promises are all settled?",
-    "Why?",
-    "Because this time, it isn't the agreement that brought me here.",
-    "Before, I was always thinking about what I still owed. That's settled now, and I still want to wear it for you.",
-    "I can walk into any shop upstairs. Discuss business with anyone. Turn down any table.",
-    "I choose this one."
+    "Until the day you return to the upper district under your own name.",
+    "That day has come. They remember my name, and trust me with their business.",
+    "You kept your promise, and I have done the work I promised. Our original agreement ends today.",
+    "I know. I will miss having someone tell me off every day.",
+    "Who said I was leaving?",
+    "Someone upstairs invited me to dinner to discuss next season. I asked him to arrange another time.",
+    "Because you had plans with me?",
+    "What else? ...And you cannot count this outfit as work today.",
+    "What should I count it as?",
+    "Coming to see you. I used to want to stay after the work was done. Now I have a business of my own, and I still want to come.",
+    "...Must I say what I call you as well?"
   ],
   "m28_b003": [
-    "She comes to your side. This time she need not smooth the apron or pull back her hand as it reaches for her skirt.",
+    "She comes to your side and places her hand in yours. You hold it, reluctant to let go.",
     "Master.",
-    "Not back when I had nowhere else to go and could only stay here. Now. Hear that clearly."
+    "The old agreement has ended. That name has not. Did you hear me?"
   ],
   "m28_b005": [
     "Then let's make a new agreement. No end date this time.",

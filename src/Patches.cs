@@ -60,11 +60,11 @@ namespace EleanorRomance
             try
             {
                 if (!RomanceState.StoryActive) return;
-                if (RomanceState.Chapter < RomanceState.ChapterComplete && !MaidState.Lovers) return;
+                if (RomanceState.Chapter < RomanceState.ChapterComplete && !MaidState.Lovers && !DualState.HasHistory) return;
                 if (RomanceState.EpilogueDone && RomanceState.Route == 0) return;
 
                 string extra = RomanceState.Route==4 && RomanceState.BetrayalKind==4
-                    ? L.Get("er_maid_ending_exit") : MaidStory.Ending(givenDescription);
+                    ? L.Get("er_maid_ending_exit") : DualOutcomes.Ending(givenDescription) ?? MaidStory.Ending(givenDescription);
                 if (extra == null)
                 {
                     string block = SelectEndingBlock(givenDescription);

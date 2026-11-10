@@ -2,14 +2,18 @@
 
 日期：2026-11-09。按用户确认的 B 薄纱版统一形象；先前 A/C、卡通化及粗颗粒候选不作为本包依据。
 
+2026-11-10更新：四张正式画像已按与埃莉诺相同的面积缩小管线重新导出，使用各自原母版、完整RGB与二值透明，工作区Textures及本目录portraits已同步。参见[本轮处理与验证](<B:/Eleanor Story Expand/docs/莉迪亚画像_面积缩小导出_2026-11-10.md>)。目录中的历史v0.3压缩包保留，不代表本轮更新。
+
+同日构图更新：四张图又按用户要求对齐埃莉诺的脸部尺度与躯干位置，原版完整人物高174像素、置于y=42，美化高166像素、置于y=60，画布下方分别裁去4／14像素。当前参数保存在`framing_profiles.json`，详见[脸部与躯干构图对齐](<B:/Eleanor Story Expand/docs/莉迪亚画像_脸部与躯干构图对齐_2026-11-10.md>)。
+
 ## 文件与用途
 
 | 导出文件（相对本目录） | 规格 | 用途 |
 |---|---|---|
-| portraits/er_portrait_lydia_female_vanilla.png | 288×212 RGBA，48色 | 原版日常；胸前不透明拼接、包肩袖 |
-| portraits/er_portrait_lydia_female_beauty.png | 288×212 RGBA，64色 | 少女当铺日常；用户确认的薄纱版 |
-| portraits/er_portrait_lydia_date_female_vanilla.png | 288×212 RGBA，48色 | 原版约会；玫瑰裙、披肩覆盖双肩、不透明胸前拼接 |
-| portraits/er_portrait_lydia_date_female_beauty.png | 288×212 RGBA，64色 | 少女当铺约会；玫瑰裙、上胸薄纱、披肩搭在上臂 |
+| portraits/er_portrait_lydia_female_vanilla.png | 288×212 RGBA，全RGB | 原版日常；胸前不透明拼接、包肩袖 |
+| portraits/er_portrait_lydia_female_beauty.png | 288×212 RGBA，全RGB | 少女当铺日常；用户确认的薄纱版 |
+| portraits/er_portrait_lydia_date_female_vanilla.png | 288×212 RGBA，全RGB | 原版约会；玫瑰裙、披肩覆盖双肩、不透明胸前拼接 |
+| portraits/er_portrait_lydia_date_female_beauty.png | 288×212 RGBA，全RGB | 少女当铺约会；玫瑰裙、上胸薄纱、披肩搭在上臂 |
 | items/er_lydia_recommendation_plaque.png | 64×64 RGBA，16色 | 莉迪亚荐店铭牌；两种环境共用，拟1×1橱窗物品 |
 
 masters 为高分辨率生成母版，不能直接作为游戏头像。portrait_contact_sheet.png 为四张导出图的2倍最近邻预览，左原版、右美化，上日常、下约会。
@@ -17,14 +21,14 @@ masters 为高分辨率生成母版，不能直接作为游戏头像。portrait_
 ## 已完成检查
 
 - 五张均已导出、读取并检查；尺寸正确、RGBA格式、透明度仅0/255，原版/美化为不同成图。
-- 画像保持人物居中、底部对齐；有效范围适配156×158区域，不拉伸人物。约会装与日常装在小图中通过裙身颜色和袖部轮廓区分。
-- 原版48色、美化64色、物品16色；具体色数与文件哈希见 asset_validation.json。
-- 已查看导出预览和64像素铭牌。母版以透明背景生成，导出时使用最近邻缩放、二值透明和项目既有减色算法。
+- 画像按对应画风的埃莉诺脸部、眼线、下巴和胸线设置等比缩放与裁切，腰部落在下沿附近；不再统一按156×158人物总范围缩小。约会装与日常装在小图中通过裙身颜色和袖部轮廓区分。
+- 四张画像取消48／64色限制，使用预乘Alpha空间的BOX面积缩小，无抖动、锐化或额外模糊；物品仍为原有16色。具体色数与文件哈希见 asset_validation.json。
+- 已查看四张画像的前后同尺度对照。母版以透明背景生成；当前导出保留完整RGB，最终透明度为0／255。铭牌保持原有资源。
 - 原版风格相对写实且克制；美化风格保留用户选定 B 薄纱方案。尚未做游戏内来访、少女当铺开关和存档切换实测，不将离线检查表述为运行验收。
 
 ## 接入约束
 
-本包仅交付美术，不覆盖当前 Textures/Items，不修改剧情、程序集或创意工坊发布内容。
+2026-11-10更新已同步工作区Textures/Items中的四张莉迪亚画像；没有修改剧情或程序集，没有部署或上传。原版与美化、日常与约会仍分别使用各自资源键。
 
 日常文件名沿用既有兼容资源名；正式接入时才替换相应文件。约会像为新资源键，按真实双恋阶段和场景选择，不能全局替换日常。对应原版/美化缺图时仍应回退日常，不使用历史短发形象作正式版本。
 
@@ -38,4 +42,6 @@ v0.3 本线第18章的服装描写需与成图同步：美化版为玫瑰色裙�
 
 母版使用内置图片生成。提示词位于 prompts/generation_prompts.json；美化日常承接已确认候选及其提示词。荐店铭牌复用本轮此前生成的同名候选，现已完成正式尺寸导出。
 
-执行 export_assets.ps1 会调用 Windows PowerShell 下的 export_palette.ps1，再生成校验记录和预览。减色算法来自 Art/v0.6/export_final_art.ps1；未对旧脚本做修改。参考的游戏及少女当铺原图不包含在交付压缩包内。
+当前正式导出入口为`python tools/export_lydia_portraits.py`，同时写工作区Textures和本目录portraits；加`--art-only`只更新本美术目录，加`--output-dir <目录>`只写候选。四张画像与埃莉诺共用`tools/portrait_resampling.py`。
+
+历史`export_assets.ps1`仍调用`export_palette.ps1`再生成校验与预览；其中画像部分已转调新Python入口的`--art-only`模式，旧减色算法仅保留用于16色铭牌。参考的游戏及少女当铺原图不包含在交付压缩包内。

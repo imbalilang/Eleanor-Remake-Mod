@@ -1,17 +1,133 @@
 {
-  "source": "Art\\gala\\masters\\eleanor_gala_beauty_master.png",
-  "file": "Textures\\Items\\er_portrait_eleanor_gala_female_beauty.png",
+  "source": "Art/gala/masters/eleanor_gala_beauty_master.png",
+  "file": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+  "revision": "2026-11-10 supplied source/export pair calibration; original masters, area sampling, full RGB",
+  "source_size": [
+    1462,
+    1076
+  ],
+  "source_opaque_bbox": [
+    395,
+    265,
+    1058,
+    1076
+  ],
+  "source_sha256": "410fcf24b6a86aa8383a622d77b11c596def71a9b205fafbe499e70773519c29",
+  "export": {
+    "resampling": "BOX area averaging in premultiplied alpha; single resize",
+    "palette": "Full RGB; no colour quantization",
+    "dither": "NONE",
+    "alpha": "threshold 128, binary silhouette",
+    "game_filter": "Point (native ModLoader)"
+  },
+  "framing": {
+    "reference": {
+      "workshop": 3829696854,
+      "mod": "cute_portraits",
+      "version": "1.0.3",
+      "portrait": "cp_portrait_eleanor1.png",
+      "crosscheck": "cp_portrait_eleanor_scav.png",
+      "method": "Approximate manual native-pixel landmarks; integer-zoom visual check",
+      "landmarks": {
+        "left_eye": [
+          126,
+          118
+        ],
+        "right_eye": [
+          155,
+          112
+        ],
+        "chin": [
+          142,
+          138
+        ],
+        "left_cheek": [
+          128,
+          125
+        ],
+        "right_cheek": [
+          164,
+          125
+        ]
+      }
+    },
+    "scaled_figure_size": [
+      171,
+      209
+    ],
+    "position": [
+      58,
+      58
+    ],
+    "previous_scaled_figure_size": [
+      149,
+      182
+    ],
+    "scale_relative_to_previous": 1.1483516483516483,
+    "bottom_crop_pixels": 55,
+    "source_landmarks_approx": {
+      "left_eye": [
+        641,
+        494
+      ],
+      "right_eye": [
+        774,
+        467
+      ],
+      "chin": [
+        723,
+        583
+      ],
+      "left_cheek": [
+        656,
+        526
+      ],
+      "right_cheek": [
+        803,
+        526
+      ]
+    },
+    "projected_landmarks_approx": {
+      "left_eye": [
+        121.45,
+        117.01
+      ],
+      "right_eye": [
+        155.75,
+        110.06
+      ],
+      "chin": [
+        142.6,
+        139.95
+      ],
+      "left_cheek": [
+        125.32,
+        125.26
+      ],
+      "right_cheek": [
+        163.23,
+        125.26
+      ]
+    },
+    "intent": "Match face/eye/chin scale and position to actual Eleanor reference"
+  },
   "size": [
     288,
     212
   ],
   "alpha_bbox": [
-    79,
-    54,
-    208,
+    59,
+    58,
+    224,
     212
   ],
-  "opaque_colors": 63,
-  "sha256": "e5e7f9f37e993d2095864c9f42d0c8b60d836df48e8a14ee5e4df56762b7b120",
+  "opaque_colors": 9897,
+  "alpha_values": [
+    0,
+    255
+  ],
+  "bytes": 40731,
+  "sha256": "0d68790bf9e45f41dc9f058a4c7cf7cb774d684f7dfb094d615c64196af0370b",
+  "visual_review": "Offline native and integer zoom comparison; in-game verification pending",
   "vanilla": "Uses native eleanor1. No new vanilla sprite."
 }

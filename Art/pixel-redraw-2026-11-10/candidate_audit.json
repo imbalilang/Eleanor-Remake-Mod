@@ -1,0 +1,77 @@
+[
+  {
+    "file": "eleanor_gala_beauty_redraw_v1.png",
+    "size": [
+      1462,
+      1076
+    ],
+    "sha256": "e8da04937a3f92110fb13f3349f4d9849e67ab9080b16e619b72dc297f089042",
+    "alpha_values": 256,
+    "transparent_pixels": 1163390,
+    "fully_opaque_pixels": 583,
+    "partial_alpha_pixels": 409139,
+    "nonzero_alpha_bbox": [
+      39,
+      41,
+      1426,
+      1076
+    ],
+    "alpha_128_bbox": [
+      321,
+      286,
+      1108,
+      1076
+    ],
+    "ready_for_native_sprite": false
+  },
+  {
+    "file": "eleanor_maid_beauty_redraw_v1.png",
+    "size": [
+      1460,
+      1077
+    ],
+    "sha256": "b0be39ba0c6205d5524081c399f221e4ec717999bd1c9838f97e6451dea50c42",
+    "alpha_values": 256,
+    "transparent_pixels": 1149758,
+    "fully_opaque_pixels": 460,
+    "partial_alpha_pixels": 422202,
+    "nonzero_alpha_bbox": [
+      0,
+      21,
+      1388,
+      1077
+    ],
+    "alpha_128_bbox": [
+      327,
+      257,
+      1097,
+      1077
+    ],
+    "ready_for_native_sprite": false
+  },
+  {
+    "file": "eleanor_maid_vanilla_redraw_v1.png",
+    "size": [
+      1461,
+      1076
+    ],
+    "sha256": "ea40ee6c67209aa6bd0a1a201a2273b7d1a35c3351b26f2bff77009cb3e29b66",
+    "alpha_values": 256,
+    "transparent_pixels": 1225990,
+    "fully_opaque_pixels": 666,
+    "partial_alpha_pixels": 345380,
+    "nonzero_alpha_bbox": [
+      41,
+      99,
+      1441,
+      1061
+    ],
+    "alpha_128_bbox": [
+      444,
+      209,
+      1013,
+      1056
+    ],
+    "ready_for_native_sprite": false
+  }
+]

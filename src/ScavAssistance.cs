@@ -7,7 +7,7 @@ namespace EleanorRomance
         public const float DailyChance = 70f;
         public const int ExtraAttempts = 2;
 
-        public static bool Eligible => RomanceState.StoryActive && RomanceState.ScavAssist;
+        public static bool Eligible => RomanceState.StoryActive && RomanceState.ScavAssist && !DualState.Flag("scav.transferred");
 
         // Registration only stores definitions and deferred providers. It is safe
         // in the mod menu, where the lazy PlayerStore singleton must not be read.

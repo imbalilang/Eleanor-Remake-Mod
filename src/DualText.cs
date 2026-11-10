@@ -18,19 +18,24 @@ namespace EleanorRomance
                     ModEntry.LogError("Missing dual story block: " + id);
                     continue;
                 }
+                int cursor=DualState.Int("cursor."+id);
+                int position=0;
                 foreach (DualContent.Line line in lines)
                 {
                     string speaker = SpeakerName(line.Speaker);
                     foreach (string paragraph in L.Get(line.Key).Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries))
                     {
+                        int next=++position;
+                        if(next<=cursor)continue;
                         Dialogue node = StoryEngine.Text(speaker, paragraph);
+                        node.SetEndAction(()=>DualState.SetInt("cursor."+id,Math.Max(next,DualState.Int("cursor."+id))));
                         if (head == null) head = node;
                         else tail.SetNextDialogue(node);
                         tail = node;
                     }
                 }
             }
-            return head;
+            return head ?? StoryEngine.Text(L.Get("er_name_narrator"),L.Get("er_dual_entry_resume"));
         }
 
         public static string SpeakerName(string speaker)

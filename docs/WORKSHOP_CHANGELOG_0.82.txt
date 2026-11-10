@@ -1,0 +1,13 @@
+0.82｜兼容性警告修复与晚会入场演出
+
+• 修复0.81新增晚会流程触发“下一次游戏更新将拒绝的能力”警告的问题。两处延迟协程改用官方加载器托管接口，随模组停止而取消。
+• 关门后的Eleanor晚会邀请改为正常顾客从左侧走入，到达柜台后再开始对白。
+• 补全发布扫描的待生效项与弃用能力检查，避免漏报。
+• 保留0.81全部剧情、数值与最新画像。
+
+0.82 | Compatibility warning fix and gala entrance
+
+• Fixes the deprecated-capability warning introduced by 0.81's closing-time gala flow. Both delayed routines now use the official loader-managed coroutine API and are cancelled when the mod stops.
+• Eleanor walks in from the left using the normal customer arrival animation; her invitation dialogue starts after arrival.
+• Release checks now reject pending/deprecated capability findings as well as ordinary capabilities and hard flags.
+• Retains the story, balance and portrait updates from 0.81.

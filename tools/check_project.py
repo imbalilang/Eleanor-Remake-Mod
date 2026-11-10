@@ -111,6 +111,47 @@ def main() -> int:
         for key,pair in ui.items():
             if set(re.findall(r'\{\d+\}',pair[0]))!=set(re.findall(r'\{\d+\}',pair[1])):errors.append('Placeholder mismatch: '+key)
         print(f"maid blocks: {len(blocks)}, lines: {sum(len(b['lines']) for b in blocks.values())}, UI: {len(ui)}")
+    # Dual source, generated table and every literal/dynamic runtime reference.
+    dual=json.load(open(os.path.join(ROOT,'Content','dual_romance_v04.json'),encoding='utf-8'))
+    dual_blocks={}
+    choices={}
+    speakers={'Player','Eleanor','Lydia','Mother','Uncle','Thug','Officer','News','SecurityNotice','UpperBuyer','Narrator'}
+    for scene in dual['scenes']:
+        for b in scene['blocks']:
+            if b['id'] in dual_blocks:errors.append('Duplicate dual block: '+b['id'])
+            dual_blocks[b['id']]=b
+            for i,line in enumerate(b['lines'],1):
+                key=f"er_dual_{b['id']}_{i:02d}"
+                if line.get('speaker') not in speakers:errors.append('Unknown dual speaker: '+key)
+                if not line.get('text') or not line.get('en'):errors.append('Incomplete dual translation: '+key)
+                if zh.get(key)!=line.get('text') or en.get(key)!=line.get('en'):errors.append('Stale dual generation: '+key)
+                if re.search(r'[\u4e00-\u9fff]',line.get('en','')):errors.append('Untranslated dual English: '+key)
+        for c in scene.get('choices',[]):choices[c['id']]=c
+    # Match literals inside calls rather than assuming a particular block prefix.
+    for call in re.findall(r'DualText\.(?:Build|Append|Plain)\((.*?)\)',source,re.S):
+        for bid in re.findall(r'"([^"\n]+)"',call):
+            if bid in {'dr_daily_','_open'}:continue  # complete dynamic set checked below
+            if bid not in dual_blocks:errors.append('Unknown dual block reference: '+bid)
+    for cid in re.findall(r'DualText\.Choice\("([^"\n]+)"',source):
+        if cid not in choices:errors.append('Unknown dual choice: '+cid)
+    for stage in range(1,4):
+        for variant in range(1,3):
+            if f'wait_{stage}_{variant}' not in dual_blocks:errors.append('Missing stage daily')
+    for i in range(1,8):
+        if f'dr_daily_{i}_open' not in dual_blocks:errors.append('Missing confirmed daily')
+    dualgen=open(os.path.join(ROOT,'src','DualContent.g.cs'),encoding='utf8').read()
+    generated=set(re.findall(r'\{"([^"\n]+)",new\[\]',dualgen))
+    if generated!=set(dual_blocks):errors.append('Dual generated block set differs from source')
+    dualui=json.load(open(os.path.join(ROOT,'Content','dual_ui.json'),encoding='utf8'))
+    for k,pair in dualui.items():
+        if not all(pair) or zh.get(k)!=pair[0] or en.get(k)!=pair[1]:errors.append('Stale dual UI: '+k)
+        if set(re.findall(r'\{\d+\}',pair[0]))!=set(re.findall(r'\{\d+\}',pair[1])):errors.append('Dual placeholder mismatch: '+k)
+    items=open(os.path.join(ROOT,'src','Items.cs'),encoding='utf8').read()
+    for const in ('PlaqueItemId','PatronItemId','GratitudeItemId'):
+        if not re.search(r'directory\.Add\(ModConstants\.'+const,items):errors.append('Missing ornament factory: '+const)
+    for forbidden in ('dr05_defer','dr02_hold_plaque','dr07_book','dr07_decline'):
+        if forbidden in choices:errors.append('Retired dual choice registered: '+forbidden)
+    print(f"dual blocks: {len(dual_blocks)}, choices: {len(choices)} (source/generated/bilingual checked)")
     print(f"zh keys: {len(zh)}")
     print(f"en keys: {len(en)} (missing {len(missing_en_content)} content keys, {len(missing_en_code)} code keys)")
     print(f"content blocks: {len(content_blocks)}")

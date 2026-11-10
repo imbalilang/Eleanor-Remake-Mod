@@ -12,14 +12,14 @@
         0,
         255
       ],
-      "opaque_colors": 64,
+      "opaque_colors": 8949,
       "alpha_bbox": [
-        77,
-        54,
-        210,
+        66,
+        52,
+        220,
         212
       ],
-      "sha256": "31f51e5f176b9f1d6adb7670d00faf175f3bcd3dd15105b6fda546e715b39ab2",
+      "sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
       "visual_review": "Native-size sprite inspected against the corresponding game/mod reference; in-game scale pending user verification."
     },
     {

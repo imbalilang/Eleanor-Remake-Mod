@@ -42,8 +42,7 @@ public static class ERArtExport {
 }
 '@
 $root=$PSScriptRoot
-[ERArtExport]::Export((Join-Path $root 'masters/lydia_daily_vanilla.png'),(Join-Path $root 'portraits/er_portrait_lydia_female_vanilla.png'),288,212,54,156,158,48)
-[ERArtExport]::Export((Join-Path $root 'masters/lydia_daily_beauty.png'),(Join-Path $root 'portraits/er_portrait_lydia_female_beauty.png'),288,212,54,156,158,64)
-[ERArtExport]::Export((Join-Path $root 'masters/lydia_date_vanilla.png'),(Join-Path $root 'portraits/er_portrait_lydia_date_female_vanilla.png'),288,212,54,156,158,48)
-[ERArtExport]::Export((Join-Path $root 'masters/lydia_date_beauty.png'),(Join-Path $root 'portraits/er_portrait_lydia_date_female_beauty.png'),288,212,54,156,158,64)
+# Portraits share the source/export-pair-calibrated pipeline with Eleanor.
+& python (Join-Path $root '../../tools/export_lydia_portraits.py') --art-only
+if($LASTEXITCODE -ne 0){throw 'Lydia portrait export failed'}
 [ERArtExport]::Export((Join-Path $root 'masters/lydia_recommendation_plaque.png'),(Join-Path $root 'items/er_lydia_recommendation_plaque.png'),64,64,-1,52,48,16)

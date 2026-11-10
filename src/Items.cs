@@ -25,6 +25,8 @@ namespace EleanorRomance
             directory.Add(ModConstants.LocketItemId, CreateLocket);
             directory.Add(ModConstants.BraceletItemId, CreateBracelet);
             directory.Add(ModConstants.PlaqueItemId, CreatePlaque);
+            directory.Add(ModConstants.PatronItemId, () => CreateOrnament(2));
+            directory.Add(ModConstants.GratitudeItemId, () => CreateOrnament(3));
         }
 
         public static GameItem CreateLocket()
@@ -47,19 +49,34 @@ namespace EleanorRomance
             return item;
         }
 
-        public static GameItem CreatePlaque()
+        public static GameItem CreatePlaque()=>CreateOrnament(1);
+        public static GameItem CreateOrnament(int stage)
         {
-            GameItem item = ItemDirectory.CreateEmptyItem(ModConstants.PlaqueItemId)
-                .SetName(L.Get("er_dual_plaque_name"));
-            item.useSpriteFromMod = true;
-            item.SetSprite(ModConstants.ModId, "er_lydia_recommendation_plaque")
-                .SetShape(new GridShapeBuilder().SetData("1", 1).Build());
-            item.unitValue = 0;
-            item.shortDescription = L.Get("er_dual_plaque_desc");
-            item.flavorText = L.Get("er_dual_plaque_flavor");
-            item.EnableTag("IMPORTANT_TAG");
-            item.EnableTag("ER_DUAL_PLAQUE");
-            return item;
+            string prefix=stage==1?"er_dual_plaque":stage==2?"er_dual_patron":"er_dual_gratitude";
+            EnsureOrnamentSprite();
+            GameItem item=ItemDirectory.CreateEmptyItem(DualRewards.ItemIds[stage-1]).SetName(DualRewards.Name(stage));
+            item.useSpriteFromMod=true;
+            // Deliberate existing-art fallback: no dependency on unverified native sprite IDs.
+            item.SetSprite(ModConstants.ModId,"er_lydia_recommendation_plaque_compact")
+                .SetShape(new GridShapeBuilder().SetData("1",1).Build());
+            item.unitValue=0;item.shortDescription=L.Get(prefix+"_desc");item.flavorText=L.Get(prefix+"_flavor");
+            item.EnableTag("IMPORTANT_TAG");item.EnableTag("ER_DUAL_ORNAMENT");
+            if(stage==1)item.EnableTag("ER_DUAL_PLAQUE");return item;
+        }
+
+        private static void EnsureOrnamentSprite()
+        {
+            foreach(LoadedMod mod in ModLoader.Mods)
+            {
+                if(mod?.Manifest==null || mod.Manifest.ID!=ModConstants.ModId)continue;
+                const string key="er_lydia_recommendation_plaque_compact";
+                if(mod.Sprites.ContainsKey(key))return;
+                Sprite source;
+                if(!mod.Sprites.TryGetValue("er_lydia_recommendation_plaque",out source))return;
+                mod.Sprites[key]=Sprite.Create(source.texture,source.rect,new Vector2(0.5f,0.5f),
+                    source.pixelsPerUnit*4,0,SpriteMeshType.FullRect);
+                return;
+            }
         }
 
         public static GameItem CreateBracelet()

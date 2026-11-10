@@ -21,6 +21,8 @@ namespace EleanorRomance
         public void OnEnable()
         {
             DialogueSpeakers.Enabled=true;
+            GalaClosing.Enabled=true;
+            DualShowcaseEffects.Enabled=true;
             if (!subscribed)
             {
                 ModHook.OnModItemDirectoryInit += Items.Register;
@@ -45,6 +47,9 @@ namespace EleanorRomance
         public void OnDisable()
         {
             DialogueSpeakers.Enabled=false;
+            GalaClosing.Enabled=false;GalaClosing.Reset();
+            DualShowcaseEffects.Enabled=false;
+            DualShowcaseEffects.ClearMemory();
             if (subscribed)
             {
                 ModHook.OnModItemDirectoryInit -= Items.Register;

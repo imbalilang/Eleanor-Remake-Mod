@@ -1,0 +1,381 @@
+{
+  "date": "2026-11-10",
+  "scope": "workspace production and art mirrors",
+  "framing_configuration": "Art/dual-romance-v0.3/framing_profiles.json",
+  "framing_configuration_sha256": "4ade55784fcd2fb883543bc64fc3db9e656b14c0bdbecfbf0825418ff7738aa4",
+  "pipeline": {
+    "resampling": "BOX area averaging in premultiplied alpha; single resize",
+    "palette": "Full RGB; no colour quantization",
+    "dither": "NONE",
+    "alpha": "threshold 128; transparent RGB cleared",
+    "game_filter": "Point (unchanged)"
+  },
+  "assets": [
+    {
+      "file": "Textures/Items/er_portrait_lydia_female_vanilla.png",
+      "width": 288,
+      "height": 212,
+      "mode": "RGBA",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        42,
+        206,
+        212
+      ],
+      "opaqueColors": 8575,
+      "sha256": "9a2d7a43469d7a9e41e06bd6e6a4578aa81f1f4567803ed37c2b4a59bcbda358",
+      "variant": "daily_vanilla",
+      "source": "Art/dual-romance-v0.3/masters/lydia_daily_vanilla.png",
+      "source_size": [
+        1452,
+        1083
+      ],
+      "source_alpha_bbox": [
+        448,
+        289,
+        995,
+        1051
+      ],
+      "source_sha256": "9396d9e8d1654090231988af17cb138f669ddca511d0b35ef27ee02429ef9f7c",
+      "scaled_figure_size": [
+        125,
+        174
+      ],
+      "position": [
+        81,
+        42
+      ],
+      "bottom_crop_pixels": 4,
+      "framing_basis": "Approximate face scale, eye/chin and bust/waist position against the matching Eleanor style; isotropic scaling only",
+      "reference": {
+        "portrait": "Art/v0.5/references_local/vanilla_eleanor1.png",
+        "cheek_span": 38,
+        "eye_y": 98,
+        "chin_y": 127,
+        "bust_y": 187,
+        "underbust_y": 198,
+        "waist_lower_bound_y": 212
+      },
+      "projected_landmarks_approx": {
+        "left_cheek": [
+          123.5,
+          109.82
+        ],
+        "right_cheek": [
+          161.21,
+          108.45
+        ],
+        "eye_midpoint": [
+          140.41,
+          97.72
+        ],
+        "chin": [
+          144.3,
+          127.86
+        ],
+        "bust": [
+          146.13,
+          186.54
+        ],
+        "underbust": [
+          145.44,
+          198.42
+        ],
+        "waist": [
+          145.44,
+          214.63
+        ]
+      },
+      "cheek_span_approx": 37.71,
+      "vertical_difference_from_reference_approx": {
+        "eye_midpoint": -0.28,
+        "chin": 0.86,
+        "bust": -0.46,
+        "underbust": 0.42
+      },
+      "outputs": [
+        "Textures/Items/er_portrait_lydia_female_vanilla.png",
+        "Art/dual-romance-v0.3/portraits/er_portrait_lydia_female_vanilla.png"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_female_beauty.png",
+      "width": 288,
+      "height": 212,
+      "mode": "RGBA",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        83,
+        60,
+        205,
+        212
+      ],
+      "opaqueColors": 8389,
+      "sha256": "5f297c4c8cb0aaddc40d7ece0ba1697fd4eadbf0c4b4d5a2aa1ccb89821f2c94",
+      "variant": "daily_beauty",
+      "source": "Art/dual-romance-v0.3/masters/lydia_daily_beauty.png",
+      "source_size": [
+        1462,
+        1076
+      ],
+      "source_alpha_bbox": [
+        435,
+        267,
+        1029,
+        1076
+      ],
+      "source_sha256": "c52f87b9e2b7ae408720f6b6df696547f0a1d9f35eff925f0712bd6a5e906f40",
+      "scaled_figure_size": [
+        122,
+        166
+      ],
+      "position": [
+        83,
+        60
+      ],
+      "bottom_crop_pixels": 14,
+      "framing_basis": "Approximate face scale, eye/chin and bust/waist position against the matching Eleanor style; isotropic scaling only",
+      "reference": {
+        "portrait": "cute_portraits/cp_portrait_eleanor1.png",
+        "crosscheck": "Eleanor maid/gala beauty portrait face scale",
+        "cheek_span": 36,
+        "eye_y": 115,
+        "chin_y": 138,
+        "bust_y": 191,
+        "underbust_y": 207,
+        "waist_lower_bound_y": 212
+      },
+      "projected_landmarks_approx": {
+        "left_cheek": [
+          124.49,
+          127.51
+        ],
+        "right_cheek": [
+          159.61,
+          124.02
+        ],
+        "eye_midpoint": [
+          137.43,
+          115.4
+        ],
+        "chin": [
+          143.59,
+          140.23
+        ],
+        "bust": [
+          144.82,
+          194.81
+        ],
+        "underbust": [
+          145.64,
+          207.12
+        ],
+        "waist": [
+          145.44,
+          221.08
+        ]
+      },
+      "cheek_span_approx": 35.12,
+      "vertical_difference_from_reference_approx": {
+        "eye_midpoint": 0.4,
+        "chin": 2.23,
+        "bust": 3.81,
+        "underbust": 0.12
+      },
+      "outputs": [
+        "Textures/Items/er_portrait_lydia_female_beauty.png",
+        "Art/dual-romance-v0.3/portraits/er_portrait_lydia_female_beauty.png"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_date_female_vanilla.png",
+      "width": 288,
+      "height": 212,
+      "mode": "RGBA",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        83,
+        42,
+        204,
+        212
+      ],
+      "opaqueColors": 8423,
+      "sha256": "e104f1f61588ed3c485d9f6c9e2a0998ba274cd003590c53b0c495512d3fa66a",
+      "variant": "date_vanilla",
+      "source": "Art/dual-romance-v0.3/masters/lydia_date_vanilla.png",
+      "source_size": [
+        1452,
+        1083
+      ],
+      "source_alpha_bbox": [
+        459,
+        287,
+        991,
+        1051
+      ],
+      "source_sha256": "7ebc7a9c91333386a477c1b9942653d5150c283890761a4ce5daab3fa8ca7db3",
+      "scaled_figure_size": [
+        121,
+        174
+      ],
+      "position": [
+        83,
+        42
+      ],
+      "bottom_crop_pixels": 4,
+      "framing_basis": "Approximate face scale, eye/chin and bust/waist position against the matching Eleanor style; isotropic scaling only",
+      "reference": {
+        "portrait": "Art/v0.5/references_local/vanilla_eleanor1.png",
+        "cheek_span": 38,
+        "eye_y": 98,
+        "chin_y": 127,
+        "bust_y": 187,
+        "underbust_y": 198,
+        "waist_lower_bound_y": 212
+      },
+      "projected_landmarks_approx": {
+        "left_cheek": [
+          122.8,
+          110.1
+        ],
+        "right_cheek": [
+          160.33,
+          108.73
+        ],
+        "eye_midpoint": [
+          139.63,
+          98.03
+        ],
+        "chin": [
+          143.5,
+          128.09
+        ],
+        "bust": [
+          145.32,
+          187.53
+        ],
+        "underbust": [
+          144.64,
+          202.11
+        ],
+        "waist": [
+          144.64,
+          214.63
+        ]
+      },
+      "cheek_span_approx": 37.53,
+      "vertical_difference_from_reference_approx": {
+        "eye_midpoint": 0.03,
+        "chin": 1.09,
+        "bust": 0.53,
+        "underbust": 4.11
+      },
+      "outputs": [
+        "Textures/Items/er_portrait_lydia_date_female_vanilla.png",
+        "Art/dual-romance-v0.3/portraits/er_portrait_lydia_date_female_vanilla.png"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+      "width": 288,
+      "height": 212,
+      "mode": "RGBA",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        85,
+        60,
+        204,
+        212
+      ],
+      "opaqueColors": 8024,
+      "sha256": "6670a243cb15589bbf0e1b3e76218bc5051286c907072803345c7b4ccee92f10",
+      "variant": "date_beauty",
+      "source": "Art/dual-romance-v0.3/masters/lydia_date_beauty.png",
+      "source_size": [
+        1462,
+        1076
+      ],
+      "source_alpha_bbox": [
+        438,
+        265,
+        1024,
+        1076
+      ],
+      "source_sha256": "d9b5b75c1eacb1fb6c590dca8975186b109ac77e868d559ef310e2cd7ca09044",
+      "scaled_figure_size": [
+        120,
+        166
+      ],
+      "position": [
+        84,
+        60
+      ],
+      "bottom_crop_pixels": 14,
+      "framing_basis": "Approximate face scale, eye/chin and bust/waist position against the matching Eleanor style; isotropic scaling only",
+      "reference": {
+        "portrait": "cute_portraits/cp_portrait_eleanor1.png",
+        "crosscheck": "Eleanor maid/gala beauty portrait face scale",
+        "cheek_span": 36,
+        "eye_y": 115,
+        "chin_y": 138,
+        "bust_y": 191,
+        "underbust_y": 207,
+        "waist_lower_bound_y": 212
+      },
+      "projected_landmarks_approx": {
+        "left_cheek": [
+          124.75,
+          127.75
+        ],
+        "right_cheek": [
+          159.77,
+          124.27
+        ],
+        "eye_midpoint": [
+          137.65,
+          115.47
+        ],
+        "chin": [
+          143.8,
+          140.44
+        ],
+        "bust": [
+          145.02,
+          196.12
+        ],
+        "underbust": [
+          145.84,
+          209.63
+        ],
+        "waist": [
+          145.64,
+          222.32
+        ]
+      },
+      "cheek_span_approx": 35.02,
+      "vertical_difference_from_reference_approx": {
+        "eye_midpoint": 0.47,
+        "chin": 2.44,
+        "bust": 5.12,
+        "underbust": 2.63
+      },
+      "outputs": [
+        "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+        "Art/dual-romance-v0.3/portraits/er_portrait_lydia_date_female_beauty.png"
+      ]
+    }
+  ]
+}

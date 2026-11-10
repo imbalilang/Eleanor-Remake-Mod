@@ -1,8 +1,4 @@
 {
-  "er_biz_appraisal_name": ["待估的工具", "Tool awaiting appraisal"],
-  "er_biz_appraisal_intro": ["还有这件。配给站那边有人托我拿来问价——先别收，只是请你估个价。我也想听听你会怎么报。", "And this. Someone near the ration station asked me to bring it for a valuation. Don't buy it yet. Appraise it. I want to hear what you'd quote too."],
-  "er_biz_appraisal_wrap": ["估价的事先到这里。你刚才看东西的时候，我还想起一件事。", "That's enough appraising for now. While you were looking at it, something else came to mind."],
-  "er_biz_appraisal_receipt": ["这件已经估过了。别为了多听我夸你一句，又替人算一遍。", "You've already written that one up. Don't do it twice just to hear another compliment."],
   "er_biz_order_lead": ["母亲还托我带了张小单子。你先想想接不接，别一听是我带来的就点头。", "Mother asked me to bring a small request too. Decide whether you want it. Don't say yes just because I brought it."],
   "er_biz_order_offer": ["要两件能用的工具，再加一件普通材料。收购预算六百，东西和价钱当面谈。我过两天来收；要是第一次来还没凑齐，就再给你四天。家里自己要用的，可别全搬出来。", "Two working tools and one ordinary material item. Six hundred in buying funds; we'll inspect and price the goods together. I'll come in two days. If you're short then, you've another four days. Don't empty your own shelves for it."],
   "er_biz_order_prompt": ["这笔生意怎么说？", "Interested in the order?"],
@@ -30,7 +26,6 @@
   "er_biz_restock_intro": ["今天有笔正经生意。上面下一批要补工具、材料和日用品，我替他们来收，预算九百。先按东西谈，等会儿再说那场亮相。", "Proper business today. They need tools, materials and household goods upstairs. I'm buying for them, with nine hundred to spend. Goods first. I'll tell you about the launch afterwards."],
   "er_biz_routine_sell": ["两件东西。这批是我自己的，货款另算。你先看，我保证这回没把标签弄丢。", "Two items. My own goods; separate payment. Look them over. I promise the labels survived this time."],
   "er_biz_routine_buy": ["配给站那边凑了点钱，托我带些工具和日用品。照常开价，别因为是我来的，就连该挣的也不挣了。", "Some people near the ration station pooled money for tools and household goods. Quote normally. Don't give up your margin just because it's me."],
-  "er_biz_routine_appraise": ["今天替人跑一趟问价的活。放心，问的是东西值多少，不是你的大小姐又花了多少。", "I'm bringing something for a valuation today. Relax. They want to know what the item is worth, not how much your young lady has spent."],
   "er_biz_routine_end": ["行，今天先到这儿。店照常开，我也照常过日子。王尔德那边的事，准备好了再办。", "All right, that's enough for today. The shop keeps opening; I keep getting on with life. We can deal with Wilde when we're ready."],
   "er_biz_locket_space": ["吊坠需要一块2×2空位。现有物品已保留，腾挪后会重试整理。", "The locket needs a 2×2 space. Existing items are preserved; move it into room and its shape will be updated."]
 }

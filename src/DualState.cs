@@ -9,14 +9,16 @@ namespace EleanorRomance
     public static class DualState
     {
         private const string Prefix = "er.dual.";
-        public const int CurrentVersion = 1;
+        public const int CurrentVersion = 2;
 
         public static int Int(string key, int fallback = 0) => ModHelper.GetModDataInt(ModConstants.ModId, Prefix + key, fallback);
-        public static void SetInt(string key, int value) => ModHelper.SetModDataInt(ModConstants.ModId, Prefix + key, value);
+        public static void SetInt(string key, int value) { if (Writable) ModHelper.SetModDataInt(ModConstants.ModId, Prefix + key, value); }
         public static bool Flag(string key) => ModHelper.GetModDataBool(ModConstants.ModId, Prefix + key, false);
-        public static void Flag(string key, bool value) => ModHelper.SetModDataBool(ModConstants.ModId, Prefix + key, value);
+        public static void Flag(string key, bool value) { if (Writable) ModHelper.SetModDataBool(ModConstants.ModId, Prefix + key, value); }
         public static string Text(string key) => ModHelper.GetModData(ModConstants.ModId, Prefix + key, "");
-        public static void Text(string key, string value) => ModHelper.SetModData(ModConstants.ModId, Prefix + key, value);
+        public static void Text(string key, string value) { if (Writable) ModHelper.SetModData(ModConstants.ModId, Prefix + key, value); }
+        public static bool Writable => FeatureVersion <= CurrentVersion;
+        public static string PendingId { get => Text("pending_id"); set => Text("pending_id", value); }
 
         public static int FeatureVersion { get => Int("version"); set => SetInt("version", value); }
         // 0 not offered, 1 accepted from the pre-confession path,
@@ -59,7 +61,7 @@ namespace EleanorRomance
         public static int LastDailyDay { get => Int("daily.last_day", -1); set => SetInt("daily.last_day", value); }
 
         public static bool HasHistory => Entry == 1 || Entry == 2;
-        public static bool Active => FeatureVersion == CurrentVersion && HasHistory
+        public static bool Active => FeatureVersion == CurrentVersion && HasHistory && Relation != 3
             && RomanceState.MotherState == 1
             && (RomanceState.Route == 1 || RomanceState.Route == 2)
             && !MaidState.Active
@@ -68,16 +70,15 @@ namespace EleanorRomance
         public static bool Confirmed => Active && Relation == 2;
         public static bool Ended => Relation == 3 || Entry == 3;
         /// <summary>The plaque keeps its base referral effect after the romance ends.</summary>
-        public static bool PlaqueActive => FeatureVersion == CurrentVersion && HasHistory
-            && PlaqueReceived && RomanceState.MotherState == 1
-            && (RomanceState.Route == 1 || RomanceState.Route == 2)
-            && !MaidState.Active && !RomanceState.RomanceLocked;
+        public static bool PlaqueActive => FeatureVersion == CurrentVersion && PlaqueReceived;
 
         public static bool Done(string scene) => Flag("scene." + scene);
         public static void Complete(string scene)
         {
             Flag("scene." + scene, true);
-            LastImportantDay = Today;
+            SetSceneDay(scene, Today);
+            if (scene != "daily" && !scene.StartsWith("wait_", StringComparison.Ordinal)
+                && scene != "claim" && scene != "coop_buyer") LastImportantDay = Today;
         }
         public static int SceneDay(string scene) => Int("scene_day." + scene, -1);
         public static void SetSceneDay(string scene, int day) => SetInt("scene_day." + scene, day);
@@ -90,10 +91,16 @@ namespace EleanorRomance
             Entry = entryKind;
             Relation = 0;
             MigrationVersion = CurrentVersion;
+            Flag("entry.explicit", true);
         }
 
         public static void Reset()
         {
+            DualShowcaseEffects.ClearMemory();
+            var keys = new System.Collections.Generic.List<string>(ModHelper.GetModDataKeys(ModConstants.ModId));
+            foreach (string key in keys)
+                if (key.StartsWith(Prefix, StringComparison.Ordinal))
+                    ModHelper.SetModData(ModConstants.ModId, key, "");
             // Only the dual extension's own keys are cleared. Global story facts
             // and the ordinary romance are intentionally untouched.
             SetInt("version", 0);
@@ -126,13 +133,7 @@ namespace EleanorRomance
             SetInt("scav.source", 0);
             SetInt("daily.index", 0);
             SetInt("daily.last_day", -1);
-            SetInt("scene_count", 0);
-            int count = Int("scene_count");
-            for (int i = 0; i < count; i++)
-            {
-                Text("scene_key." + i, "");
-                Flag("scene." + Text("scene_key." + i), false);
-            }
+            PendingId = "";
         }
     }
 }

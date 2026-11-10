@@ -1,6 +1,6 @@
-Attendant route: current runtime text (0.76)
+Attendant route: current runtime text (local 0.81; narrative revision 2026-11-10, unpublished)
 
-Ordered by reading chapter. Alternatives and legacy variants are separate, not continuous dialogue. Both chapter 12 repair approaches continue the agreement; returning the original fixes custody with Eleanor. Chapter 14 concerns open a discussion, with withdrawal only as an explicit nested decision. Chapter 19 unresolved-injury repair is a legacy fallback; either approach continues the relationship. m19_b006/008 establish the address, while m19_b007 preserves an existing one. Native appraisal separates the opening and wrap-up. All chapter 20 responses join m20_b009 and confirm the attendant romance. All chapter 28 responses accept her voluntary choice to stay.
+Ordered by reading chapter. Alternatives and legacy variants are separate, not continuous dialogue. Both chapter 12 repair approaches continue the agreement; returning the original fixes custody with Eleanor. Chapter 14 concerns open a discussion, with withdrawal only as an explicit nested decision. Chapter 19 unresolved-injury repair is a legacy fallback; either approach continues the relationship. m19_b006/008 establish the address, while m19_b007 preserves an existing one. Chapter 19 continues directly into the outfit and address dialogue; screwdriver appraisal has been removed. All chapter 20 responses join m20_b009 and confirm the attendant romance. All chapter 28 responses accept her voluntary choice to stay.
 
 Covers revised chapters and their necessary context; unchanged chapters are omitted.
 
@@ -47,10 +47,10 @@ Eleanor: And my investigation, other jobs and mother's affairs keep their time. 
 Player: We'll arrange the shop work ahead.
 Eleanor: Mother and the research aren't part of this agreement. Who gets the drive and what course we take must be discussed separately.
 Player: You'll know every step.
-Eleanor: Discussed together. Telling me isn't the same as deciding for me.
+Eleanor: Discussed together! Not you deciding first and then informing me.
 Player: Together.
-Eleanor: ...And put away that tone. The one that expects to be called master.
-Player: See what I do first.
+Eleanor: ...One more thing. You have not already decided what I am supposed to call you, have you?
+Player: Work first. What you call me is up to you.
 Eleanor: I will. If I think you're making me pay with myself, I'll leave. We can agree on work. Don't start adding anything else.
 
 [legacy_b011]
@@ -58,7 +58,7 @@ Eleanor: Then we'll try it this way. I'll do the work. I'll also watch what happ
 Player: Good.
 Eleanor: Don't start ordering me about already. I haven't seen you deliver yet.
 Player: Bring the detective's findings here first.
-Eleanor: ...That I can do. I need somewhere to lay out what he tells me anyway.
+Eleanor: ...That I can do. I've been looking for somewhere to sort out what he finds.
 Narrator: She shoulders her bag. She doesn't turn at the doorway this time. A few steps outside, she slows.
 
 [legacy_b012]
@@ -129,10 +129,10 @@ Eleanor: And my investigation, other jobs and mother's affairs keep their time. 
 Player: We'll arrange the shop work ahead.
 Eleanor: Mother and the research aren't part of this agreement. Who gets the drive and what course we take must be discussed separately.
 Player: You'll know every step.
-Eleanor: Discussed together. Telling me isn't the same as deciding for me.
+Eleanor: Discussed together! Not you deciding first and then informing me.
 Player: Together.
-Eleanor: ...And put away that tone. The one that expects to be called master.
-Player: See what I do first.
+Eleanor: ...One more thing. You have not already decided what I am supposed to call you, have you?
+Player: Work first. What you call me is up to you.
 Eleanor: I will. If I think you're making me pay with myself, I'll leave. We can agree on work. Don't start adding anything else.
 
 [m11_b008]
@@ -182,7 +182,7 @@ Eleanor: I kept wondering whether I couldn't see anything for myself. You were h
 Player: I'm sorry.
 Eleanor: And after one apology, I'm supposed to take out the drive and follow your arrangements?
 Player: No. You can take it away.
-Eleanor: ...From now on, tell me first. Danger, unpleasant news, all of it. Don't choose what I get to hear.
+Eleanor: ...Next time there's danger, tell me first, however ugly it is. I'll decide what I can handle.
 
 [choicefix_b001]
 Player: Keep the drive with you. I'll tell you everything I knew then.
@@ -267,7 +267,7 @@ Thug: Her name and yours will both be on the record. Think about that.
 Player: So will the message you brought.
 
 [m13_b008]
-Thug: Don't keep her waiting. Her mother doesn't have the time.
+Thug: Don't keep me waiting too long. My patience isn't that good.
 
 ============================================================
 14 核验与争执 / Checking the offer
@@ -318,14 +318,17 @@ Eleanor: Understood. We don't count unconfirmed things as done.
 Eleanor: That's what you said about my goods: if you haven't checked it, don't add it to the price.
 
 [m14_b009]
-Player: We could publish now. Without protection, they may kill her. I can't promise to save her.
-Eleanor: Let me think. I can't take this road just because you say it exists.
+Player: We could publish it now. But without protection, they may kill her. I cannot promise I can save her.
+Eleanor: Let me think.
+Narrator: She tightens her grip on the bag holding the drive, then slowly loosens it, without handing it over.
+Eleanor: They will not even say where they would release her. Once I hand it over, all I have is their word. But publishing it now puts her at risk too...
+Eleanor: I want her alive. And after everything she has endured, I want her work to survive too.
 
 [m14_b010]
-Eleanor: I've decided. Send the research to the newspaper.
-Player: Are you sure you don't want to wait for protection?
-Eleanor: Yes. Mother didn't do all this so it could stay locked on a drive forever.
-Eleanor: But don't tell me she'll definitely be all right. I'll believe you.
+Eleanor: ...Send the research to the newspaper. At least they will not be able to take that copy back.
+Player: You will not wait for news of protection?
+Eleanor: No. I do not know whether Mother would agree. This is my decision.
+Eleanor: But do not tell me she will certainly be all right. I would believe you.
 
 [m14_b011]
 Player: I've decided. I'll leave the investigation, and our agreement ends here too.
@@ -346,7 +349,7 @@ Player: You reserved that time.
 Eleanor: I remember. Good that you do too.
 
 [choicefix_b003]
-Player: I don't have a safer way right now. Let's lay out what we can do.
+Player: I don't have a safer way right now. Let's talk about what we can do.
 Eleanor: Tell me what you can't do. Don't comfort me with promises you can't keep.
 Player: We can negotiate the drive for her release. I have no firm answer on anything else.
 Eleanor: Then let's start there. I understand what it means when you say you aren't sure.
@@ -417,13 +420,11 @@ Player: Now you do.
 Eleanor: She asked how much weight I'd lost. I'd prepared so much to say. That one question undid all of it.
 
 [m16_b002]
-Player: They sent the three hundred to the shop.
-Eleanor: ...Did you take it?
-Player: Returned it untouched. Told him to pass on a message: I don't do that kind of business here.
-Eleanor: *She pauses* I thought you'd say to use it for my mother's medicine.
-Player: Medicine money has a proper source. That money had your mother's price written on it.
-Eleanor: ...You said that day I wasn't for sale.
-Player: Neither is she.
+Player: They sent someone to the shop with those three hundred credits.
+Eleanor: ...Did you take them?
+Player: Sent them straight back. They wanted me to push you into handing over the drive. I did not work for them, so I will not take their money.
+Narrator: She looks at you for a moment. Slowly, the tension leaves her shoulders.
+Eleanor: ...All right.
 
 [m16_b003]
 Eleanor: Mother's been transferred safely. I saw her. The person taking over went through every medicine with me.
@@ -606,7 +607,7 @@ Narrator: You tell her what happened from the beginning. She doesn't make it eas
 Eleanor: I'll read them. Remember what you've promised.
 
 [m19_b005]
-Narrator: She aligns the checked papers and sets down the pen, without reaching for her bag.
+Narrator: She puts away the notes she brought and lays down her pen, without reaching for her bag.
 Eleanor: When you told me to hold on to the drive, I really thought of taking it myself.
 Player: You came back.
 Eleanor: Yes. After mother got out, I thought I wouldn't need to come to you about everything.
@@ -709,7 +710,7 @@ Eleanor: ...Master. I'll follow your lead with today's work too.
 [tragic_b012]
 Eleanor: That's today's account settled.
 Player: No hurry with the rest.
-Eleanor: ...I know. Some things can't be put away with a new label.
+Eleanor: ...I know. The rest, I can't make sense of yet.
 
 [exit_b005]
 Eleanor: You handed over Mother's research disk?
@@ -732,38 +733,268 @@ Eleanor: So I'm meant to tell you everything, but you don't have to say a word.
 Eleanor: The agreement is over. What I do from now on is no longer yours to be told.
 
 ============================================================
-28 独立后的再选择 / Choosing again
+24 通行与归来 / Passage and return
+============================================================
+
+[m24_b001]
+Eleanor: Don't look at me like that. I've just been upstairs with the pass Wilde arranged. I came straight down without changing.
+Player: It suits you.
+Eleanor: Of course it does. It's made to Upper Level standards. The cuff buttons, the height of the collar. Nothing out of place.
+Eleanor: I used to have a whole wardrobe of clothes like this. Now there's just this one. I'm careful even sitting down in it.
+Player: Did you get in?
+Eleanor: Yes. Look at the goods first. I'll tell you about it in a moment.
+
+[m24_b002]
+Eleanor: The checkpoint officer spent ages going through my documents. Halfway through, he looked up. 'You're the daughter from the embezzlement case?'
+Player: What did you say?
+Eleanor: I said my name was Eleanor. It was on the documents.
+Eleanor: Then he asked, 'I hear you're working as a pawnbroker's maid down below?'
+Player: ...
+Eleanor: Someone beside him laughed. Someone who used to come to dinner at our house. I called him Uncle when I was little.
+Eleanor: Do you know the funniest part? I wasn't frightened at all.
+Eleanor: I stood there thinking about the way you inspect goods. However fine someone's words, you look at the goods. If there's nothing wrong with them, the words don't need an answer.
+
+[m24_b003]
+Eleanor: The contact you arranged submitted my documents the day before. He recorded the name of every person who handled each procedure.
+Eleanor: The officer's face changed when he saw those names. He went through the remaining pages very quickly.
+Player: What did the contact say?
+Eleanor: 'Nobody downstairs wants to mishandle a favor for that pawnbroker.' ...How many favors do you owe down here, and how many are owed to you?
+
+[m24_b004]
+Eleanor: Every procedure was followed properly. Every page stamped. Every expense listed.
+Eleanor: He went back and forth, couldn't find a single fault, and finally had to push my papers back.
+Eleanor: You said good goods can stand by their price. Turns out documents can too.
+
+[m24_b005]
+Eleanor: In the end he only said, "You may go, Miss Eleanor."
+Eleanor: He pushed my papers to the edge of the window and called the next person. I picked them up and walked through.
+Eleanor: Only when the gate clicked behind me did I notice how tightly I was clutching the papers.
+Player: That inspector. What's his name?
+Eleanor: ...Why do you want to know?
+Player: Write it down. I'm not buying anything from him.
+Eleanor: You really hold a grudge.
+Player: I keep accounts.
+Eleanor: *She can't help a laugh* ...Then keep it.
+Player: Is that road long?
+Eleanor: Very. I never used to think it was that long.
+Eleanor: People recognized me. First they asked about Mother, then what I do now. I said I work in the Lower Level. The owner knows goods, and his accounts are cleaner than theirs.
+
+[m24_b006]
+Eleanor: Mother still can't go back. I asked very carefully. Reviewing my pass doesn't revoke her exile.
+Eleanor: She says it's enough for me to go and do what I need to. I shouldn't stop my own life waiting for hers.
+
+[m24_b007]
+Eleanor: Mother's case is still under review. When people ask, I only tell them what's confirmed. I haven't promised the rest in advance.
+
+[m24_b008]
+Eleanor: I brought Mother's formal notice too. If anyone asks, I show them. Her innocence has been established. My business is still mine to build.
+Player: Keep it safe. One step at a time.
+
+[m24_b009]
+Player: Your name is on the pass. The agreement—
+Eleanor: Not yet.
+Eleanor: It's my name on the document. But in their mouths, I'm still 'the daughter from that case,' or 'the pawnbroker's maid.'
+Eleanor: I said getting back didn't mean a pass. It meant that when they mentioned me, they meant Eleanor.
+Player: Then we keep going.
+Eleanor: Yes. ...So you still owe me.
+
+[m24_b010]
+Eleanor: Master, tell me. Do I look better in this, or the other outfit?
+Player: This one's for the people upstairs.
+Eleanor: And the other?
+Player: For me.
+Eleanor: ...Correct answer.
+
+============================================================
+25 第一单 / The first order
+============================================================
+
+[m25_b001]
+Eleanor: Don't speak yet. Look at this.
+
+[m25_b002]
+Narrator: She sets a small parcel on the counter and unwraps it. Inside is a cleaned screwdriver, its tip unchipped and its handle secured again. A densely written label lies beside it.
+Eleanor: The sample for my first order. A household upstairs is renovating its growing room. They want reliable used equipment and materials.
+Eleanor: New is expensive. They don't trust used. People upstairs think nine out of ten things from down here are stolen.
+Player: How do you make them trust it?
+Eleanor: Origin, condition, repairs, replacements. Everything on the label. I recorded who found each piece and in which scavenging area.
+Eleanor: Goods from below, inspection below, buyers above. You need to understand both ends to make it work.
+Eleanor: The sample is already paid for. Take it through the usual trade. The other goods are separate; we can discuss those if you want them.
+
+[m25_b003]
+Narrator: You pick up the screwdriver and turn it over. Check the tip, the handle joint, every detail on her label. She waits across the counter without speaking.
+Player: ...
+Eleanor: You're looking for faults.
+Player: Can't find any.
+Eleanor: *She breathes in very slowly, then out again.*
+Eleanor: I've waited a long time to hear that.
+Player: Feeling pleased with yourself?
+Eleanor: Yes. You're not allowed to tease me.
+
+[m25_b004]
+Eleanor: Before delivery, someone told that household my goods were stolen stock from a pawnshop.
+Player: Who?
+Eleanor: An Upper Level dealer that's been trading in used goods for years. My family used to buy from them.
+Eleanor: The household asked me about it. I laid out the origin records for every piece, and went through them page by page.
+Eleanor: Finally they asked the dealer: can you produce records like these for your own goods?
+Player: Could they?
+Eleanor: No.
+Eleanor: I signed the contract. My own name.
+
+[m25_b005]
+Eleanor: The person who introduced me came out of regard for you. He said, 'People upstairs have heard about that pawnbroker's eye too.'
+
+[m25_b006]
+Eleanor: You paid for the training, samples, trial work—all of it. They tested the sample several times before agreeing on a delivery date.
+
+[m25_b007]
+Eleanor: It's all ordinary equipment and existing seeds. Nothing from the research we returned. I did use everything Mother taught me about the basics.
+
+[m25_b008]
+Eleanor: The public research trials asked about procurement too. I inspect and supply goods. I won't write Mother's research down as mine.
+
+[m25_b009]
+Player: The training money wasn't wasted.
+Eleanor: It wasn't just the training.
+Eleanor: The second time I brought goods in, I insisted on naming the price first. You said I had two right and one uncertain, then tried to charge tuition. I remember.
+Eleanor: So half this order is yours.
+Player: Half's too much.
+Eleanor: I say half, I mean half. ...Is it that difficult to give me proper credit, Master?
+Player: You did very well.
+Eleanor: ...That's better.
+
+============================================================
+26 采购商 / The buyer
+============================================================
+
+[m26_b001]
+Buyer: This is the pawnshop? ...Smaller than I expected.
+Player: Buying or selling?
+Buyer: Neither. I've come to discuss business.
+Buyer: There's a new supplier upstairs. Eleanor. Clean goods, complete records, fair prices. Several of us have been asking where she gets her stock.
+Buyer: Every trail leads here.
+Player: And?
+Buyer: I'd like to deal directly with you. You supply, I buy. No need for her in the middle.
+Buyer: You're a pawnbroker from downstairs. How much can she be giving you? I'll pay twice as much.
+
+[m26_b003]
+Player: My goods sell at my prices. Her business isn't mine to sell.
+Buyer: Not even for double?
+Player: Not for ten times as much.
+
+[m26_b004]
+Player: If you want her goods, speak to her. This shop is only one end of her route.
+Buyer: What if she won't lower her price?
+Player: Then your offer isn't right.
+
+[m26_b005]
+Buyer: *The buyer laughs and slips a business card back into a pocket.*
+Buyer: She was right about you.
+Player: What did she say?
+Buyer: I went to her first. I said if she wouldn't lower her price, I'd go around her and talk to her people below.
+Buyer: She said, 'Go ahead. He won't go around me.'
+Buyer: I thought she was bluffing.
+Player: And now?
+Buyer: It seems I still need her for inspections and delivery dates. With you two working together, at least I know who is responsible.
+Buyer: Today, consider me a customer. Quote your usual prices.
+
+[m26_b007]
+Buyer: Next time I go up, I will discuss delivery with her. For a large order, we will still have to negotiate the price.
+Buyer: One more thing, boss. When she introduces her supplier, she never says 'some pawnshop downstairs.' She says 'someone I trust.'
+
+============================================================
+27 事业亮相 / The business debut
+============================================================
+
+[m27_b002]
+Eleanor: It's over. I mean the launch Wilde helped arrange. We held it today.
+Player: How was it?
+Eleanor: A lot of people came. More than I expected.
+Eleanor: Samples at the front, records beside them. Some people looked at the clothes and jewelry first, then turned back to the records.
+Eleanor: Afterward, some stayed asking questions until the end. When could the next batch arrive? Could we sign a long-term contract?
+
+[m27_b003]
+Eleanor: Mother came.
+Player: She can go upstairs?
+Eleanor: Yes. When the formal notice arrived, she looked at it for ages. She took it out again before leaving today.
+Eleanor: She stood in the last row and listened to everything. I got one number wrong and she frowned from the back. ...Just like at the farm.
+
+[m27_b004]
+Eleanor: Mother didn't come. The formal result still hasn't arrived. She says she doesn't want to stand in front of people until the case is settled.
+Player: Have you told her about today?
+Eleanor: I rehearsed it for her last night. She picked out three things, and people asked about all three today. When the notice arrives, I'll take her to see it.
+
+[m27_b005]
+Eleanor: Mother still can't go upstairs. The night before, she made me rehearse it in our room and found three weak points.
+Eleanor: People asked about all three today.
+
+[m27_b006]
+Eleanor: Then someone came to see me. One of the biggest procurement firms upstairs. The person in charge came in person.
+Eleanor: The contract was worth more than all my current orders together.
+Player: The condition?
+Eleanor: You can guess.
+Eleanor: Remove that pawnshop downstairs from the supplier and partner list. People upstairs don't like dealing with pawnshops. And there are unpleasant rumors.
+Eleanor: ...Just like Lydia at the beginning. Back then it was 'stop mentioning your mother's case.' Today it's 'stop mentioning that pawnshop.'
+Player: What did you say?
+Eleanor: In front of everyone.
+Eleanor: 'Where my goods come from, who inspected them, who provided my first capital: not a single name comes off that list. If you object to a pawnshop, find someone else.'
+Player: And then?
+Eleanor: The whole room went quiet.
+Eleanor: Then someone at the back came forward and said they'd sign. A little later, a second person did too.
+Eleanor: When that manager left, his face looked worse than mine after my first Nutrifruit.
+
+[m27_b007]
+Eleanor: Half the people came through your connections. Someone told me they were there to show support for that shopkeeper.
+Eleanor: I told them I didn't need a cheering section. Since they'd come, they should look at the goods.
+
+[m27_b008]
+Eleanor: Someone asked whether the supply was reliable. I said half the scavengers and owners downstairs knew my mas... my business partner.
+Eleanor: You didn't hear that. I corrected it.
+Player: I heard.
+Eleanor: ...Then pretend you didn't. Lydia was the only person there who laughed.
+
+[m27_b009]
+Eleanor: The venue, the samples, the arrangements. You spared none of it. Nobody could claim this presentation only succeeded through someone else's influence.
+
+[m27_b010]
+Eleanor: Lydia was there too. Afterward she came running over, but the first thing she said wasn't praise.
+Player: What was it?
+Eleanor: 'They kept calling you by your name.'
+Eleanor: Only then did I realize. Not once all day did anyone call me 'the daughter from that case.'
+
+[m27_b011]
+Player: Then the agreement—
+Eleanor: Don't say it.
+Eleanor: Next time, I will. I set the terms. I should be the one to say when they're fulfilled.
+Eleanor: Today I need to go home and change first.
+Player: Into which outfit?
+Eleanor: ...What do you think?
+
+============================================================
+28 旧约完成后仍然相爱 / Love after the agreement ends
 ============================================================
 
 [m28_b002]
-Narrator: She waits at the doorway a moment. As on the first day she wore these clothes here, she checks for other customers before approaching the counter.
-Eleanor: There's something we need to settle today. Afterwards, I'd like to stay here a while.
-Player: Go on.
+Narrator: She pauses in the doorway, checks that there are no other customers, then approaches the counter.
+Eleanor: There is something to settle today. Afterwards, I want to spend a little longer here.
+Player: I have kept the rest of the day for you.
 Eleanor: Do you remember my condition?
-Player: Until the day you walk back into the Upper Level under your own name.
-Eleanor: That day has come.
-Eleanor: They remembered my name. No mention of Mother's case after it. No mention of whose maid I am. Just Eleanor.
-Eleanor: You've kept your half of the promise.
-Eleanor: So, you've kept your promise. And I've done the work I owed you.
-Player: Yes.
-Eleanor: All you have to say is 'yes'?
-Player: You said you wanted to say it yourself.
-Eleanor: ...
-Eleanor: That agreement is settled. But I haven't come to say goodbye.
-Eleanor: I turned down a very good dinner invitation upstairs today. Someone wanted to discuss next season's orders.
-Player: Why?
-Eleanor: I said I already had plans.
-Eleanor: Isn't there anything else you want to ask? Why I'm still wearing this, when the wages and promises are all settled?
-Player: Why?
-Eleanor: Because this time, no agreement requires me to.
-Eleanor: Before, I was always thinking about what I still owed. That's settled now, and I still want to wear it for you.
-Eleanor: I can walk into any shop upstairs. Discuss business with anyone. Turn down any table.
-Eleanor: I choose this one.
+Player: Until the day you return to the upper district under your own name.
+Eleanor: That day has come. They remember my name, and trust me with their business.
+Eleanor: You kept your promise, and I have done the work I promised. Our original agreement ends today.
+Player: I know. I will miss having someone tell me off every day.
+Eleanor: Who said I was leaving?
+Eleanor: Someone upstairs invited me to dinner to discuss next season. I asked him to arrange another time.
+Player: Because you had plans with me?
+Eleanor: What else? ...And you cannot count this outfit as work today.
+Player: What should I count it as?
+Eleanor: Coming to see you. I used to want to stay after the work was done. Now I have a business of my own, and I still want to come.
+Eleanor: ...Must I say what I call you as well?
 
 [m28_b003]
-Narrator: She comes to your side. This time she need not smooth the apron or pull back her hand as it reaches for her skirt.
+Narrator: She comes to your side and places her hand in yours. You hold it, reluctant to let go.
 Eleanor: Master.
-Eleanor: Not back when I had nowhere else to go and could only stay here. Now. Hear that clearly.
+Eleanor: The old agreement has ended. That name has not. Did you hear me?
 
 [m28_b005]
 Player: Then let's make a new agreement. No end date this time.
@@ -884,7 +1115,7 @@ Let me tell you the rest of that day. From now on, you see the records of everyt
 Explain what you withheld and share future investigation records. Continue the agreement.
 
 [er_maid_route_difficulty]
-I don't have a safer way right now. Let's lay out what we can do.
+I don't have a safer way right now. Let's talk about what we can do.
 
 [er_maid_route_difficulty_desc]
 Discuss the rescue options within reach. Raising concerns does not end the agreement.

@@ -1,16 +1,106 @@
 {
-  "er_dual_plaque_name": ["莉迪亚的荐店铭牌", "Lydia's Recommendation Plaque"],
-  "er_dual_plaque_desc": ["放进橱窗后，认识莉迪亚的客人会更愿意进来看看。放在仓库或随身背包里不会生效。", "Display it in the showcase to bring in customers who know Lydia. It has no effect in storage or your backpack."],
-  "er_dual_plaque_flavor": ["底座背面刻着一行小字：莉迪亚，替朋友说话。", "A small line is engraved on the back: Lydia, speaking up for a friend."],
-  "er_dual_biz_first_intro": ["我是莉迪亚介绍来的。听说你这儿有适合送上层的精品？我今天的预算大约 {0} 信用点。合适的话，我按店里的规矩买。", "Lydia sent me. I heard you have something fine enough for the Upper Levels. My budget today is about {0} credits. If it suits, I'll buy it the usual way."],
-  "er_dual_biz_first_close": ["东西我拿走了。她推荐得没错。", "I'll take it. She recommended the right place."],
-  "er_dual_biz_first_no_trade": ["今天没看到合适的。我下次再来。", "Nothing suitable today. I'll come back another time."],
-  "er_dual_biz_second_intro": ["莉迪亚说你能找到便携净水器。预算 {0} 信用点，耐久至少要有 {1}。东西先给我看，价钱照常谈。", "Lydia said you can find a portable water purifier. Budget {0} credits, at least {1} durability. Show me the item first; we'll negotiate the price normally."],
-  "er_dual_biz_second_close": ["能用。这趟没白跑。", "This will do. Worth the trip."],
-  "er_dual_biz_second_no_trade": ["没有合适的就先算了。莉迪亚说你这儿还能再问。", "If there's nothing suitable, never mind. Lydia said I can ask again here."],
-  "er_dual_biz_feedback_notice": ["两笔引荐都做成了。莉迪亚的铭牌开始带来更多上层客人。", "Both referrals went through. Lydia's plaque is bringing in more Upper Level customers."],
-  "er_dual_prompt": ["你的回答。", "Your answer."],
-  "er_dual_plaque_full": ["你身上和店里都腾不出位置。先清理空间，铭牌之后可以补领。", "There is no room in your inventory or shop. Make space and the plaque can be reissued later."],
-  "er_dual_entry_resume": ["莉迪亚还没把话说完。", "Lydia is not finished yet."],
-  "er_dual_notice_ending": ["三个人的关系已经稳定下来。之后可以在日常来访中继续见到她们。", "The three of you have settled into something steady. You can keep seeing them in everyday visits."]
+  "er_dual_plaque_name": [
+    "莉迪亚的荐店铭牌",
+    "Lydia's Recommendation Plaque"
+  ],
+  "er_dual_plaque_desc": [
+    "1×1。玩家拥有并放入橱窗时，每个可用营业日有50%机会引荐一位上层普通买家；最短到访间隔2天，最多1位待来访。需有可售精品。取下停止新引荐，已预约客人照常来；仓库无效，同类不叠加。",
+    "1×1. When owned and displayed in the showcase, each available business day has a 50% chance of one ordinary Upper Level referral. At least 2 days between arrivals; at most one pending. Requires suitable stock. Removing it stops new referrals, not promised visits. Inactive in storage; duplicates do not stack."
+  ],
+  "er_dual_plaque_flavor": [
+    "底座背面刻着一行小字：莉迪亚，替朋友说话。",
+    "A small line is engraved on the back: Lydia, speaking up for a friend."
+  ],
+  "er_dual_biz_second_intro": [
+    "莉迪亚说你能找到便携净水器。预算 {0} 信用点，耐久至少要有 {1}。东西先给我看，价钱照常谈。",
+    "Lydia said you can find a portable water purifier. Budget {0} credits, at least {1} durability. Show me the item first; we'll negotiate the price normally."
+  ],
+  "er_dual_prompt": [
+    "你的回答。",
+    "Your answer."
+  ],
+  "er_dual_plaque_full": [
+    "先腾些位置。未能交付的饰品或纪念物仍可在后续来访补领。",
+    "Make some room. Undelivered ornaments or keepsakes remain available during a later visit."
+  ],
+  "er_dual_entry_resume": [
+    "这段话还没有说完。",
+    "This conversation is not finished yet."
+  ],
+  "er_dual_notice_ending": [
+    "三个人的关系已经稳定下来。之后可以在日常来访中继续见到她们。",
+    "The three of you have settled into something steady. You can keep seeing them in everyday visits."
+  ],
+  "er_dual_gate_passed": [
+    "上层区声望检查点{0}已达成。后续来访已可安排，阶段资格已保留。",
+    "Upper Level reputation checkpoint {0} reached. The next visit can be arranged; this milestone is secured."
+  ],
+  "er_dual_gate_progress": [
+    "上层区声望：{0}／{1}。下一阶段奖励：{2}。达标后继续主线，日常与营业不受影响。",
+    "Upper Level reputation: {0}/{1}. Next reward: {2}. The main story resumes when reached; everyday visits and business continue."
+  ],
+  "er_dual_reward_received": [
+    "获得{0}。放入橱窗后生效。",
+    "Received {0}. Display it in the showcase to activate it."
+  ],
+  "er_dual_tip_paid": [
+    "上层买家额外小费 +{0}",
+    "Upper Level customer extra tip +{0}"
+  ],
+  "er_dual_claim_line": [
+    "这个替你收着呢——{0}。这次腾出地方了吧？",
+    "I have been keeping this for you: {0}. Have you made room this time?"
+  ],
+  "er_dual_perfume_claim": [
+    "那瓶香水还替你留着。这次拿好。",
+    "I still have that perfume for you. Take it this time."
+  ],
+  "er_dual_referral_intro": [
+    "莉迪亚提起过这家店。我想看看适合带回上层的东西，价钱照常谈。",
+    "Lydia mentioned this shop. I would like to see something suitable for the Upper Levels. We can negotiate as usual."
+  ],
+  "er_dual_referral_close": [
+    "今天就到这里。东西合适，我还会再来。",
+    "That will do for today. If the goods suit me, I will return."
+  ],
+  "er_dual_patron_name": [
+    "上层宾客珐琅座饰",
+    "Upper Guest Enamel Ornament"
+  ],
+  "er_dual_patron_desc": [
+    "1×1。玩家拥有并放入橱窗时，上层普通买家最终购买预算+30%，向下取整。到店时确定，中途取下或重摆不重算。仓库无效，同类不叠加；具名剧情、固定订单和其他MOD客户除外。",
+    "1×1. When owned and displayed, ordinary Upper Level buyers receive 30% more final spending budget, rounded down. Snapshot at arrival; removing or replacing it during a visit does not recalculate. Inactive in storage; duplicates do not stack. Excludes named story clients, fixed orders and other mods."
+  ],
+  "er_dual_patron_flavor": [
+    "她说这只是个摆件，却替你把底座擦得很亮。",
+    "She calls it a trinket, yet polishes its base for you."
+  ],
+  "er_dual_gratitude_name": [
+    "名媛致意银饰",
+    "Silver Token of Appreciation"
+  ],
+  "er_dual_gratitude_desc": [
+    "1×1。玩家拥有并放入橱窗时，上层普通买家实际购买商品后额外给10%小费，每次来访最多150信用点。到店时确定，不扣买家预算、不复利；仓库无效，同类不叠加。具名剧情、固定订单和其他MOD客户除外。",
+    "1×1. When owned and displayed, ordinary Upper Level buyers leave an extra tip of 10% of actual goods payments, capped at 150 credits per visit. Snapshot at arrival. Does not consume buyer budget or compound. Inactive in storage; duplicates do not stack. Excludes named story clients, fixed orders and other mods."
+  ],
+  "er_dual_gratitude_flavor": [
+    "底座上的字很小：承蒙照应。",
+    "Tiny words on the base: With thanks for your care."
+  ],
+  "er_gala_not_attend": [
+    "这次不参加。",
+    "I will miss this party."
+  ],
+  "er_gala_not_attend_desc": [
+    "明确谢绝本次邀请，不再另约下一场；关系不变。",
+    "Decline this invitation without arranging another party. Your relationship is unchanged."
+  ],
+  "er_dual_resolution_ack": [
+    "好。那就照我们说定的。",
+    "All right. Then that is what we have agreed."
+  ],
+  "er_dual_future_schema": [
+    "后宫扩展存档版本{0}高于本版本，已暂停该扩展写入；现有数据保留。",
+    "Harem save schema {0} is newer than this version. Extension writes are paused; existing data is preserved."
+  ]
 }

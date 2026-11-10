@@ -43,39 +43,6 @@ Assert ($created.shape.width -eq 2 -and $created.shape.height -eq 2 -and
     $created.onSlotAddItemFunc -ne $null -and $created.IsTag('IMPORTANT_TAG')) 'New locket factory shape/hooks/protection are wrong.'
 'PASS: solid 2x2 locket factory, 32 transformed edge migrations, packed-hole rollback and retry without deleting neighbours.'
 
-# Native estimate acceptance, real rank fee arithmetic, repeated estimate/load,
-# incorrect estimates and manual departure all retain the chapter wrap-up.
-New-MaidRun;[EleanorRomance.MaidState]::Enter(1)
-$script:businessStock.Clear();$c=Main-Client 20
-$store.appraiserLevel=0;$store.appraisalProgress=0;$cash=$store.playerCash
-Finish-Dialogue $c.mainDialogue
-Assert ($c.clientIntent -eq [StoreClient+ClientIntent]::APPRAISAL_SERVICE -and $script:businessStock.Count -eq 1) 'Chapter 19 did not spawn a native appraisal.'
-$appraised=$script:businessStock[0]
-Assert ([AppraisalHelper]::GetCorrectBaseValue($appraised) -eq 100) 'Ordinary-tool valuation was not available.'
-[AppraisalServiceHelper]::OnEstimate($appraised,100)
-Assert ($store.playerCash -eq $cash+35 -and [EleanorRomance.MaidBusiness]::AppraisalPaid($c)) 'Native junior fee was not paid/receipted once.'
-Finish-Dialogue $ui.currentDialog
-Assert ([EleanorRomance.RomanceState]::Chapter -eq 21) 'Successful appraisal stranded the original story.'
-Assert (@([AppraisalItemRegistry]::GetAll() | Where-Object {$_.id -like '*er_business*'}).Count -eq 0) 'Scripted tool changed the native random appraisal category pool.'
-$snapshot=[System.Collections.Generic.Dictionary[string,string]]::new([ModHelper]::TestData)
-[ModHelper]::TestData=[System.Collections.Generic.Dictionary[string,string]]::new($snapshot)
-$null=[AppraisalServiceHelper]::GetAcceptEstimateDialog($appraised,100)
-Assert ($store.playerCash -eq $cash+35) 'Saved appraisal receipt paid a second fee.'
-foreach($walkout in @($true,$false)){
-    New-MaidRun;[EleanorRomance.MaidState]::Enter(1)
-    $script:businessStock.Clear();$c=Main-Client 20;Finish-Dialogue $c.mainDialogue;$cash=$store.playerCash
-    if($walkout){1..3 | ForEach-Object {[AppraisalServiceHelper]::OnEstimate($script:businessStock[0],1000)};Finish-Dialogue $ui.currentDialog}
-    else{Leave-Trade $c}
-    Assert ([EleanorRomance.RomanceState]::Chapter -eq 21 -and $store.playerCash -eq $cash) 'Refusal/manual appraisal close lost the story or invented income.'
-}
-New-MaidRun;[EleanorRomance.MaidState]::Enter(1)
-[EleanorRomance.RomanceState]::KnewTrapUnwarned=$true
-[EleanorRomance.MaidState]::MotivationVersion=0 # Existing pre-revision save, already used the address.
-$c=Main-Client 20;$store.TryPlayerDismissCurrentClient($true)
-Finish-Dialogue (Pick $ui.currentDialog 0)
-Assert ([EleanorRomance.MaidState]::Flag('reconciled') -and [EleanorRomance.RomanceState]::Chapter -eq 21) 'Appraisal removed reconciliation choice.'
-'PASS: native appraisal 35-credit fee, saved no-double-payment, wrong-estimate walkout, manual close and original reconciliation.'
-
 function Tagged-Item($tag){$i=New-Item '1' 1;$i.identifier='business_test';$null=$i.EnableTag($tag);return $i}
 function Biz-Client($id){
     [EleanorRomance.MaidState]::PendingVisit=$id
@@ -185,7 +152,7 @@ function Waiting-BusinessRun {
     $store.playerCash=100;$station.dayCounter=80
 }
 Waiting-BusinessRun
-foreach($id in @(911,912,913,911)){
+foreach($id in @(911,912,911,912)){
     $manager=$store.storeClientManager;$manager.clientStack.Clear();$store.currentClientInstance=$null
     [EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
     Assert ($manager.clientStack.Count -eq 1 -and [EleanorRomance.MaidState]::PendingVisit -eq $id) "Business rotation missed $id."
@@ -205,9 +172,6 @@ Waiting-BusinessRun;$c=Biz-Client 912;$cash=$store.playerCash
 Assert ($c.GetBudget() -eq 350 -and $c.IsClientBuyingThisItem((Tagged-Item 'HOUSEHOLD_GOOD'))) 'Repeat buying daily lacks its native budget/item preference.'
 $item=Tagged-Item 'TOOL';$c.onItemBought.Invoke($item,80);$c.onItemBought.Invoke($item,80)
 Assert ([EleanorRomance.MaidBusiness]::Number('routine.spent.0') -eq 80 -and $store.playerCash -eq $cash) 'Repeat buying receipt replayed payment bookkeeping.'
-Waiting-BusinessRun;$script:businessStock.Clear();$c=Biz-Client 913;Finish-Dialogue $c.mainDialogue;$cash=$store.playerCash
-[AppraisalServiceHelper]::OnEstimate($script:businessStock[0],100);Finish-Dialogue $ui.currentDialog
-Assert ($store.playerCash -eq $cash+35 -and [EleanorRomance.MaidState]::PendingVisit -eq 0) 'Repeat appraisal did not pay/finish through native service.'
 foreach($reason in @('cash','favor','paid','urgent','main')){
     Waiting-BusinessRun;$manager=$store.storeClientManager
     switch($reason){
@@ -224,4 +188,24 @@ foreach($reason in @('cash','favor','paid','urgent','main')){
 Waiting-BusinessRun;$store.playerCash=0
 [EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($store.storeClientManager)
 Assert ([EleanorRomance.MaidState]::PendingVisit -eq 912) 'Zero-cash waiting offered only a seller.'
-'PASS: repeated sell/buy/appraisal rotation, four-day spacing, same-day dedupe, cash/favor/paid-project gates, urgent/main priority and zero-cash buyer.'
+Waiting-BusinessRun
+[EleanorRomance.MaidState]::PendingVisit=913
+[EleanorRomance.MaidState]::NextVisitDay=83
+[EleanorRomance.MaidState]::SetInt('biz.routine.cycle',2)
+$cash=$store.playerCash
+[EleanorRomance.MaidBusiness]::OnLoaded();[EleanorRomance.MaidBusiness]::OnLoaded()
+Assert ([EleanorRomance.MaidState]::PendingVisit -eq 912 -and
+    [EleanorRomance.MaidState]::NextVisitDay -eq 83 -and
+    [EleanorRomance.MaidStory]::EventForDay(82) -eq 0 -and
+    [EleanorRomance.MaidStory]::EventForDay(83) -eq 912 -and $store.playerCash -eq $cash) 'Retired pending appraisal migration lost its due day or modified money.'
+$station.dayCounter=83;$c=Biz-Client 912
+Assert ($c.clientIntent -eq [StoreClient+ClientIntent]::BUY -and $c.GetBudget() -eq 350) 'Migrated pending visit is not normal procurement.'
+Leave-Trade $c
+Assert ([EleanorRomance.MaidState]::PendingVisit -eq 0 -and
+    [EleanorRomance.MaidBusiness]::Number('routine.next') -eq 87) 'Migrated visit could not finish normally.'
+Waiting-BusinessRun;[EleanorRomance.MaidState]::PendingVisit=913
+$c=[EleanorRomance.MaidStory]::CreateEvent(913);Use-Client $c;Leave-Trade $c
+Assert ($c.clientIntent -eq [StoreClient+ClientIntent]::BUY -and
+    [EleanorRomance.MaidState]::PendingVisit -eq 0) 'Direct old event recovery stranded the retired pending id.'
+'PASS: repeated sell/buy rotation, four-day spacing, same-day dedupe, cash/favor/paid-project gates, urgent/main priority and zero-cash buyer.'
+'PASS: retired appraisal pending id becomes normal procurement, preserves due day/cash, migrates once and completes through both recovery paths.'

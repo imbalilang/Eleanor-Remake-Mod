@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>0.81</ModVersion>
-  <Description>v0.81 adds the Lydia dual-romance expansion: 20 new scenes, the recommendation plaque, real referral customers and two business commissions, from the first offer through the three-way confirmation, dates and daily visits. Eleanor's original routes, rewards and saves are preserved. Empty capabilities; no new player approval required. Full Chinese/English support. v0.81 新增莉迪亚闺蜜双恋扩展：20 场新剧情、荐店铭牌、真实引荐客与两笔经营委托，从撮合、三人确认到约会与日常；保留埃莉诺原有路线、奖励与存档。能力清单为空，玩家无需重新授权。完整中英支持。</Description>
+  <ModVersion>0.82</ModVersion>
+  <Description>Eleanor and Lydia story expansion with explicit romance choices and Upper Level reputation checkpoints at 50/100/150. Three owned showcase ornaments independently provide referrals, +30% buyer budget and 10% extra tips capped at 150 per visit. Includes waiting dailies, original story rewards, legacy-save compatibility, improved dialogue and gift handling, a closing-time finale and updated portraits. Chinese/English. 埃莉诺与莉迪亚剧情扩展：上层声望50/100/150检查点、明确的恋爱选择和三件1格橱窗饰品，分别提供引荐客、预算+30%及每访最多150的额外小费。包含等待日常、原剧情奖励与旧档兼容，优化人物动机、章节衔接及回礼结算，调整关门后的晚会终章，并更新埃莉诺与莉迪亚画像。中英同步。</Description>
   <GameVersions>
     <Version>0.46</Version>
     <Version>0.46D</Version>

@@ -1,0 +1,51 @@
+{
+  "revision": "2026-11-10 match Eleanor face and torso framing",
+  "measurement_note": "Approximate manual anatomical landmarks, not detector output. Bust position varies with pose and costume. Eleanor's waist is at or below the lower crop; 212 is a visibility bound, not an exact waist measurement.",
+  "references": {
+    "beauty": {
+      "portrait": "cute_portraits/cp_portrait_eleanor1.png",
+      "crosscheck": "Eleanor maid/gala beauty portrait face scale",
+      "cheek_span": 36,
+      "eye_y": 115,
+      "chin_y": 138,
+      "bust_y": 191,
+      "underbust_y": 207,
+      "waist_lower_bound_y": 212
+    },
+    "vanilla": {
+      "portrait": "Art/v0.5/references_local/vanilla_eleanor1.png",
+      "cheek_span": 38,
+      "eye_y": 98,
+      "chin_y": 127,
+      "bust_y": 187,
+      "underbust_y": 198,
+      "waist_lower_bound_y": 212
+    }
+  },
+  "profiles": {
+    "daily_vanilla": {
+      "height": 174,
+      "top": 42,
+      "reference": "vanilla",
+      "landmarks": {"left_cheek": [634, 586], "right_cheek": [799, 580], "eye_midpoint": [708, 533], "chin": [725, 665], "bust": [733, 922], "underbust": [730, 974], "waist": [730, 1045]}
+    },
+    "daily_beauty": {
+      "height": 166,
+      "top": 60,
+      "reference": "beauty",
+      "landmarks": {"left_cheek": [637, 596], "right_cheek": [808, 579], "eye_midpoint": [700, 537], "chin": [730, 658], "bust": [736, 924], "underbust": [740, 984], "waist": [739, 1052]}
+    },
+    "date_vanilla": {
+      "height": 174,
+      "top": 42,
+      "reference": "vanilla",
+      "landmarks": {"left_cheek": [634, 586], "right_cheek": [799, 580], "eye_midpoint": [708, 533], "chin": [725, 665], "bust": [733, 926], "underbust": [730, 990], "waist": [730, 1045]}
+    },
+    "date_beauty": {
+      "height": 166,
+      "top": 60,
+      "reference": "beauty",
+      "landmarks": {"left_cheek": [637, 596], "right_cheek": [808, 579], "eye_midpoint": [700, 536], "chin": [730, 658], "bust": [736, 930], "underbust": [740, 996], "waist": [739, 1058]}
+    }
+  }
+}

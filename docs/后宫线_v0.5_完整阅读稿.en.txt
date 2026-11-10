@@ -1,0 +1,855 @@
+Harem route v0.5 reading copy
+Status: locally implemented, awaiting playtesting. Conditional branches are alternatives, not one continuous reading.
+
+================================================
+Entry: explicit harem choice; compatibility opening is an alternative
+
+[dr01_open]
+Lydia：No tests today. I came to say thanks.
+Player：For what?
+Lydia：Since her mother came back, she's finally willing to get some proper sleep. I went to see her the day before yesterday, and she actually slept until noon.
+Player：She held on for a long time.
+Lydia：Yeah. I used to tell her to go back upstairs and find someone she knew to smooth things over. She wouldn't listen, and I even got angry at her.
+Lydia：Looking back, while she was going through the worst of it, I was still telling her which dress made her look lively. ...I wasn't hearing a word she was saying.
+Player：Have you told her all this?
+Lydia：I did. She cursed me out a little, then asked if I'd eaten. I think that counts as forgiveness.
+
+[dr01_notice]
+Lydia：There's something else. She brings you up more often than she talks about how much she made today.
+Player：Probably complaining about me.
+Lydia：Of course she's complaining! She can't admit she misses you every time she sees me.
+Player：Did she send you?
+Lydia：If she knew I came, she'd strangle me.
+Lydia：So I'll just say it—if you really like her, I can give you a hand.
+Player：Why?
+Lydia：Because she's my friend. And because every time she tells me what you two talked about, it always ends up being about prices! Listening to you two stresses me out.
+
+[v05_entry_notice]
+Narrator：Original romance requirements: at least three fair or favorable deals, and at least one of reporting the false uncle, rescuing Eleanor or recording the threat. Harem progress follows Upper Level reputation 50/100/150, awarding three showcase ornaments. Reputation is not spent; business and everyday visits continue while waiting.
+
+[dr01_accept]
+Lydia：Good! Rule one: if she isn't in a hurry to leave, whatever you do, don't ask 'What else do you have?' Just say—your hair clip looks nice today.
+Player：What if she isn't wearing a hair clip that day?
+Lydia：Then compliment something else! ...It's not about the hair clip. You have to look at her, not just the counter.
+Player：How long did you prepare all this?
+Lydia：Not long. Just... a few lines. They work! Don't laugh. Thank me after you've used them.
+
+[dr01_decline]
+Lydia：Fine, I'll stay out of it. ...But if she asks, I'll say you finally said something decent today.
+
+[v05_legacy_entry]
+Lydia：She has told me about you two. Relax, I am not here to make you go through it again.
+Lydia：There is something I would rather ask you myself.
+
+================================================
+G1: award at reputation 50; keep trading while waiting
+
+[v05_reward50]
+Lydia：After hearing me talk about you, they want to have a look. They have even asked me to show them the way.
+Player：What do you tell them?
+Lydia：I said I had seen the stock myself—surely they could trust my taste. That persuaded them to make the trip down.
+Narrator：She slides a small square plaque across the counter.
+Lydia：Put it in the showcase. Do not bury it under your ledger. People who know me will know they have the right door.
+Player：And once they are inside?
+Lydia：That is your part. I never promised to do the selling.
+
+================================================
+dr03: after the actual native sale; no purchase also permits departure
+
+[dr03_open]
+Eleanor：That will do for today.
+Player：Mm.
+Narrator：*'What else do you have?' is already on your tongue. You swallow it back.*
+Player：You... look well today.
+Eleanor：I slept three hours last night.
+Player：...
+Eleanor：Lydia came by, didn't she?
+Player：She did.
+Eleanor：Did she teach you that?
+Player：A few lines. She told me not to open with asking what else you have.
+Eleanor：She really will teach anything!
+Player：But asking you to stay a little longer was my own idea.
+Eleanor：...That's more like it.
+Narrator：*She glances at the door, then sets the bag she'd already picked up back down by her feet.*
+Player：How's your mother today?
+Eleanor：She complained that I'd put everything away too neatly and now she can't find anything. Then she shooed me out and told me to find something of my own to do.
+Player：So you came here?
+Eleanor：To sell goods! ...And to sit for a while.
+
+[dr03_plaque]
+Eleanor：That plaque... She gave you even that?
+Player：She said she'd send customers my way.
+Eleanor：When she likes a shop, she can sing its praises for ages. But she's only put her own name out like that a handful of times.
+Player：Should I thank her for you?
+Eleanor：Thank her yourself. Not everything has to go through me.
+
+[dr03_no_plaque]
+Eleanor：She said she wants to send customers your way.
+Player：First I need the stock ready.
+Eleanor：Mm. When she gets enthusiastic, she runs ahead. Just tell her clearly what you can actually do.
+
+================================================
+dr04: something of Lydia’s own
+
+[v05_dr04_feedback]
+Lydia：Whether you put that plaque out is up to you. I am not standing outside counting customers every day.
+Player：So you are not here to inspect my books?
+Lydia：No. This is about something of my own.
+
+[dr04_consult_open]
+Player：Every time you come, you ask about her first, then about customers. What about you?
+Lydia：Me...? There's actually something I'm not sure about.
+
+[dr04_consult]
+Narrator：*She digs a folded piece of paper out of her small bag. On it is a drawing of a flower-shaped brooch, with a price beside it crossed out and rewritten twice.*
+Lydia：I've got my eye on an old brooch. The shopkeeper says some famous person wore it, but I just think the petals are beautifully made. Is the extra price worth it?
+Player：Where is it?
+Lydia：Still in the shop. I haven't paid. I wanted to ask you first. ...Don't laugh at me for only caring whether something looks good.
+Player：Looking good is a reason. As for who wore it, he needs to show proof. I haven't seen the item, so I won't price it for you.
+Lydia：So it's not that I don't know how to appreciate it—it's that I don't have to pay for the story too?
+Player：Right. If you like the petals, negotiate on the price of the petals.
+Lydia：I thought you'd say this kind of thing is useless.
+Player：If you like it, it's useful. You don't need to pay extra for a nice story.
+Narrator：*She folds the paper and is about to ask something else when her stomach gives a soft rumble. She glances down and pretends to straighten her skirt.*
+Player：You haven't eaten today?
+Lydia：...I came to teach you how to care about her, and you're practicing on me first.
+Player：That needs practice?
+Lydia：I'll just—
+Player：A piece of dessert later counts as lunch? Eat something proper first.
+Narrator：*She looks at you for a moment, then finally gives a slightly embarrassed smile.*
+Lydia：...All right. I won't pass this one on to her.
+
+================================================
+dr05: lovers/friends alternatives; old deferred saves resolve once
+
+[dr05_open]
+Eleanor：Everyone I see lately asks what I'm going to do next.
+Player：What are you going to do?
+Eleanor：Live a good life. Find a proper job, take care of my mother. ...And sometimes, I want to come here.
+Player：Only sometimes?
+Eleanor：Do you have to pick apart every single word!
+
+[dr05_confess]
+Player：Then I'll say it. I like you. I don't want to be just the shopkeeper you come to when something's wrong.
+Narrator：*She looks at you, and the retort she had ready never comes out.*
+Eleanor：...Did she teach you that too?
+Player：She only taught me to say it clearly. Who I like doesn't need her teaching.
+Eleanor：...Me too.
+Player：Me too, which part?
+Eleanor：That I like you! Did you hear me clearly?
+Player：Clearly. I won't make you guess anymore.
+Narrator：*You hold out your hand. She looks at it, then places her hand in yours.*
+Eleanor：There's still dust on my hand.
+Player：Should I let go?
+Eleanor：Who told you to let go?
+
+[dr05_friend]
+Eleanor：...I understand.
+Eleanor：We'll keep doing business. Don't start avoiding me just because we've had this talk.
+
+[v05_resolve_open]
+Eleanor：Let us settle what we left unsaid. I do not want either of us to keep guessing.
+
+================================================
+dr06: a meal for three
+
+[dr06_open]
+Lydia：I booked a table for three. She's been so busy she barely eats. It's a good excuse to drag her out.
+Player：You're coming too?
+Lydia：Of course! Otherwise you two would sit there staring at each other. Who'd make conversation?
+
+[dr06_meal]
+Narrator：*Lydia holds up a piece of bread, imitating a society lady inspecting merchandise. Eleanor laughs so hard she grips the table.*
+Eleanor：Do it again. He missed it.
+Narrator：*Lydia glances at the time and puts down her cup.*
+Lydia：Oh! I promised to look at clothes with someone. Take your time—no need to see me out.
+Eleanor：Did you not just say that shop was closing early today?
+Lydia：...There is another one! Just enjoy yourselves!
+Narrator：*She hurries off, then returns for the shawl left on her chair. Eleanor reaches for it, opens her mouth, then simply hands it over. Passing you, Lydia lowers her voice.*
+Lydia：Do not spend the whole time talking about stock.
+
+[dr06_after]
+Eleanor：She really thinks I can't tell.
+Player：Should I call her back?
+Eleanor：...Move your glass this way. It's in the way over there.
+Narrator：*She pushes the empty chair in and sits a little closer to you.*
+
+================================================
+dr07: a friend’s visit, without another commission
+
+[v05_dr07_open]
+Lydia：Tell me—how did the rest of that dinner go?
+
+[dr07_confirmed]
+Lydia：You two did not spend the rest of the evening talking about stock, did you?
+Player：No. She spent a while laughing about your hurried escape.
+Lydia：Wonderful! I go to all that trouble to give you some time, and you spend it laughing at me!
+Player：Thank you.
+Lydia：No need to thank me. Just let me hear half as much complaining about you from her next time.
+Player：Remember your shawl next time. She was the one who handed it back.
+Lydia：...Yes. She always remembers those things.
+Narrator：*She winds a strand of hair around her finger, tightens it, then lets it go. She's still smiling, but her eyes don't come back to you.*
+Player：Did you end up buying that brooch?
+Lydia：I did! He couldn't prove a famous person wore it, so I negotiated on the piece itself and got it for much less. I've worn it with two dresses, and it looks good with both.
+Player：Then you bought something you like.
+Lydia：Yeah. It's not that I stopped liking it after what you said... I just don't have to worry I'm being ripped off while I like it.
+Player：You can ask me about your own things too, from now on.
+Lydia：I will hold you to that. Next time I bring you a problem of my own, no complaining!
+
+================================================
+dr08: work; route-A exile / route-B pending / route-B withdrawal alternatives
+
+[dr08_job_a]
+Eleanor：Lydia found out about a trading company that deals in household goods and growing equipment. They need someone to organize delivery records and count stock.
+Player：Have you been to see them?
+Eleanor：I did a two-day trial. The first day they only let me count goods against a list. Then I caught a crate with the wrong model number written on it, and only then did they let me keep the books myself.
+Player：They kept you?
+Eleanor：They did! My employer is arranging a work pass for me. I'll run between both levels for now, and once I know the place better, I'll find a room upstairs.
+Player：And your mother?
+Eleanor：She's staying down below and keeping her current job. Her restrictions are still in place. My having a job doesn't mean her case is finished.
+
+[dr08_job_b]
+Eleanor：The research office asked me to organize the handover records. Some of it has to be done upstairs, and the work pass is handled separately.
+Player：Do you want to go?
+Eleanor：I do. There's still a lot I don't understand, so I'll do well what I can. Lydia asked about a room I can stay in for a short while, not far from there.
+
+[v05_dr08_existing]
+Eleanor：Work is going as we discussed. You do not have to look at me as if I am applying all over again.
+
+[dr08_mother_a]
+Eleanor：Mother is still registered as an exile in the lower district, doing the work she has now. I visit after work; wherever I stay, I will need to travel between the two.
+
+[dr08_mother_cleared]
+Eleanor：My mother's official result came through too. She'll decide about the research and where to live herself. I'll focus on doing my job well first.
+
+[dr08_mother_pending]
+Eleanor：My mother's review isn't finished. She's living under her current registration. She won't suddenly move upstairs just because I have a pass.
+
+[dr08_common]
+Eleanor：Either way, this time going up doesn't mean going back to being the young lady who doesn't have to worry about anything.
+
+[dr08_lover]
+Player：Then I will be looking forward to the end of your working day.
+Eleanor：...Why have you not asked whether I will still come?
+Player：Because I was about to ask you out.
+Eleanor：...I will. I just cannot run down here with a bag of stock every time I think of you.
+Player：Then set aside the time in advance. You set yours aside, and I'll set mine.
+Eleanor：Lydia even told me to break it to you slowly so you wouldn't think I'm leaving.
+Player：Does she think we're that bad at talking to each other?
+Eleanor：...Sometimes she's not wrong.
+
+================================================
+G2/dr09: award at reputation 100, then her own life
+
+[v05_reward100]
+Lydia：At the last gathering, they were the ones praising you to me. They said you had a better eye for secondhand goods than several shops upstairs.
+Player：What did you say?
+Lydia：I nearly blurted out that I found you first. ...Here, take this. They will be bringing more than pocket change next time.
+Narrator：She takes out a small enamel ornament and sets it on the counter.
+Lydia：I used to do all the talking about how good you were. Now I get to sit and listen. ...It feels rather lovely.
+
+[dr09_open]
+Lydia：Let me rest my feet here! I spent all morning rearranging a jewelry display. My legs ache.
+Player：I thought you never went wrong with pretty things.
+Lydia：So did I! I crammed all the brightest pieces together. From a distance, you could not make out a single one.
+Narrator：*She sits and gestures to show you the size of the display. A rose-colored clip catches the light in her curls.*
+Lydia：Once I left some space, people even asked about the plainest piece. The owner wants me to do the next display too.
+Player：Enough choosing for other people. I want to see the one you chose for yourself.
+Lydia：You noticed at last! Here, look at this side—the petals are different colors.
+Narrator：*She tilts her head to show you, then realizes halfway through her explanation how close you are.*
+Player：It suits you.
+Lydia：...That sounds much nicer than praise for arranging cabinets.
+
+================================================
+dr10: the hair clip and outfit; alternative replies
+
+[dr10_open]
+Lydia：Next time you see her, don't keep asking whether work's going well. Sometimes she wants you to notice her new hair ornament.
+Player：You changed yours today too.
+Narrator：*Without thinking, she raises a hand to her hair clip. Her hand moves faster than her mouth.*
+Lydia：...You—why are you looking so closely?
+Player：You taught me. Look at the person, not just the counter.
+Lydia：I meant look at her!
+Player：I know. So I'm telling you—the trick works.
+Narrator：*She opens her mouth, but nothing comes out.*
+
+[dr10_option1]
+Lydia：...Thank you.
+Narrator：*She takes the clip out, looks at it, and puts it back.*
+
+[dr10_option2]
+Lydia：...I gave her that one! Is your eye for detail good or bad?
+
+[dr10_common]
+Player：Do you have to rush to another appointment tonight?
+Lydia：No rush. I meant to go see the new dresses, but halfway there I came around to this place instead.
+Player：Why didn't you go?
+Lydia：The dresses will not run away. Today I came to see whether you had learned to give a compliment—and it seems you have.
+
+================================================
+dr11/12: after actual cooperation buyer settlement; shared perfume and route-B receipt
+
+[dr11_open]
+Eleanor：There are two days next week when I can come down early. I wrote them down.
+Player：So formal?
+Eleanor：When things get busy upstairs, everyone says 'this will only take a moment.' If I don't set time aside in advance, my own plans always get pushed back.
+Player：Those two days—are they for your things or mine?
+Eleanor：...Ours.
+Narrator：*She pushes the paper toward you, then adds one more thing, as if uneasy.*
+Eleanor：Write it down too.
+Player：I've got it.
+
+[dr12_open]
+Eleanor：Has Lydia been by lately?
+Player：She came a few days ago. Then nothing.
+Eleanor：She told me she's busy. I brought up that new shop she's been wanting to visit. She didn't even ask where it was—just said she'd already made plans with someone else.
+Player：Maybe she really did.
+Eleanor：When she really doesn't want to go out, she complains her shoes rub or her dress doesn't fit. She'd never say she's busy without even hearing where I meant.
+Narrator：*She glances at the chair by the counter.*
+Eleanor：Does she talk about her own things when she's here?
+Player：She does.
+Eleanor：...Before, whenever she talked about you, it was all 'he should do this' and 'you should do that.' Lately she doesn't say a word.
+Player：What do you want to ask?
+Eleanor：I haven't decided. I'll ask when I have.
+Eleanor：And don't suddenly pretend you don't know her just because I asked. ...That would look even worse.
+
+================================================
+G3/dr13: award at reputation 150, then she pulls away
+
+[v05_reward150]
+Lydia：Someone actually asked me to arrange a viewing with you today. I used to coax them into coming. Now I have to ask when you are free.
+Player：There is always time for you.
+Lydia：...I meant customers. This is for your window too. A happy customer may leave a little extra thanks.
+Narrator：She straightens the little silver ornament, her fingers lingering on its base.
+Lydia：How wonderful. ...I shall not have to rack my brains about whom to bring along anymore.
+
+[dr13_open]
+Lydia：From now on, if you want to ask her out, just ask her. I've been... busy lately.
+Player：We've already talked directly.
+Lydia：Good. Then my job here is done.
+Player：So you won't come anymore?
+Lydia：It's not like I have to come around here every day.
+Player：Last time you came around here, you didn't even go see the dress you wanted.
+Lydia：...I had other plans later.
+Player：You do not have to tell me. You need not put me off with something else.
+Narrator：*She stops rummaging in her bag. Her hands slowly come to rest on her knees.*
+Lydia：I thought I'd be happy once it worked out.
+Player：You're not?
+Lydia：I am! Happy for her, and happy for you.
+Lydia：It's just... when she told me you'd met up, the first thing I thought about was what you talked about. She didn't mention me, and then I was angry at myself for caring about that at all.
+Player：Lydia.
+Lydia：Don't comfort me. When you look at me seriously, I can't finish a sentence.
+Narrator：*She stands up. This time she doesn't end it with a joke.*
+Lydia：Let me think on my own. That's enough for today.
+
+[dr13_door]
+Lydia：The customer business stays as usual. Whatever's already arranged, I'll make clear.
+Player：I'm not asking about customers.
+Lydia：...I know.
+Player：But these past few days without you, I keep looking at the door.
+Narrator：*Her hand is already on the door. She pauses.*
+Lydia：When you say that, I have even less idea how to leave.
+
+================================================
+dr14: speaking plainly
+
+[dr14_open]
+Lydia：I won't say I was passing by this time.
+Player：All right.
+Lydia：I like you.
+Lydia：At first I only wanted things to go better for her. Then, when they praised you upstairs, I nearly interrupted to say I had found this shop first.
+Lydia：You remembered my brooch, and listened to all my little stories. I kept looking forward to coming, then worrying you would only ask how she was.
+Player：I have been looking forward to seeing you too. But Eleanor does not know yet. I need to tell her.
+Lydia：Then tell her the whole truth. What you want—do not leave either of us guessing.
+
+[dr14_accept]
+Lydia：...Then tell her. Every time I think of how she will look at me, I lose all my words.
+Player：I will tell her that I like you too.
+Lydia：Honestly... Now it's my turn to wait for you to say it clearly.
+Player：I will say it clearly. Until then, I won't make you wait in secret.
+Lydia：Mm. ...I'll go find her myself too.
+
+================================================
+dr15: telling Eleanor; both answers take responsibility
+
+[dr15_open]
+Player：Lydia came by last time. She told me she likes me.
+Narrator：*Eleanor is about to sit. The bag in her hand stops in midair.*
+Eleanor：...And then?
+Player：I like her too. This is something I had to tell you myself.
+Eleanor：You—
+Narrator：*She sets the bag down on the counter. Her voice is louder than usual.*
+Eleanor：You really dare say it to my face!
+Player：Yes. I rehearsed this over and over. Now you are here, I am still afraid you will leave when you hear it.
+Eleanor：So I should thank you?
+Player：No. I knew this would hurt you. But I cannot bear to lose you, and I cannot pretend I only see her as a friend.
+Eleanor：Of course I'm angry! ...I've felt something was off for a while. She didn't come, and you didn't mention her. I thought I was imagining things.
+Player：When you asked about her, I changed the subject. I should have told you sooner.
+Eleanor：So you know you should have told me!
+Narrator：*She glares at you, her eyes a little red, refusing to look down.*
+Eleanor：So what do you want now? To break up with me?
+Player：I want to be with you. And I have fallen for her too. I owe you both truths, to your face.
+Eleanor：...You're honest, at least.
+Eleanor：And her? What did she say?
+Player：She said she'd come find you herself.
+Eleanor：She'll find me?
+Narrator：*Eleanor gives a cold laugh, but it doesn't last long.*
+Eleanor：A couple of days ago I was thinking that if she never came again, maybe I could pretend none of this had happened.
+Player：And then?
+Eleanor：Then I wanted to go find her myself. I wanted to ask what she was hiding from... and I was afraid she'd actually tell me.
+Eleanor：At dinner she held up that bread and imitated a customer. I nearly spilled my water laughing. When she came back for her shawl, I wanted to ask her to sit down again.
+Eleanor：I have imagined more evenings together like that. I want you, and I want her to stay too. ...Do not think that means I have stopped being jealous.
+Player：I hear you. I will be here when you have talked.
+Eleanor：Let me talk to her first. I have questions for her that you can't answer for me.
+
+[dr15_wait]
+Eleanor：Don't suddenly stop coming to see me these next few days. Don't think that because I'm angry, you should stay away.
+Player：I'll open as usual tomorrow. If you come, you'll see me.
+Eleanor：...Hmph.
+Narrator：*You push the cup she always uses toward her. She glares at it for a moment, then picks it up anyway.*
+
+================================================
+dr16: Lydia’s answer
+
+[dr16_open]
+Narrator：*When Lydia comes in, her eyes are still a little puffy, but her makeup has been redone without a flaw.*
+Lydia：I went to find her. ...No, she came to find me first.
+Player：What did she say?
+Lydia：The moment she walked in, she asked me: 'Didn't you say that if you like someone, you shouldn't keep making them guess?'
+Lydia：That's what I taught her before! She used it to shut me up.
+Player：How did you answer?
+Lydia：I said that was about her. She said: 'So it doesn't count when it's your turn?'
+Narrator：*She winds a strand of hair around her finger, then slowly lets it go.*
+Lydia：I said if she didn't want to see me anymore, then I'd... Before I finished, she cut me off.
+Player：Saying what?
+Lydia：'See? You're answering for me again.'
+Lydia：...Before, watching you two refuse to open your mouths, I was so anxious I wanted to say it for you. When it was my turn, I didn't even know where to start.
+Player：And then?
+Lydia：Then she asked me what I actually wanted.
+Lydia：I said I want to see you. Not drop her at the door and then stand outside waiting by myself.
+Lydia：She said she wanted the three of us to talk like that again, until we forgot the time.
+Lydia：She also said she won't stop minding all at once, and she won't give up our agreed evenings for me every time.
+Player：What did you say?
+Lydia：I said we should each make our own dates. And when we go shopping together, she has to stay until I am done, instead of hurrying back to you.
+Lydia：Then we both cried. ...She won't admit it, so don't ask her.
+Player：All right.
+Lydia：She said we would come together next time. I have even picked my outfit, but the words are still fighting in my head.
+Player：You do not have to memorize them. There is plenty I want to say too.
+Lydia：Then I will say the most important bit first. I want to be with you.
+Player：So do I.
+Lydia：Then it'll be your turn next time. Think before you speak. Don't just sit there saying, 'Whatever you want.'
+
+================================================
+dr17: relationship commits after all three agree
+
+[dr17_open]
+Narrator：*They come in together. Eleanor does not stand behind Lydia, and Lydia does not rush to speak first.*
+Player：At last. I have been waiting for you.
+Eleanor：She told you I cried, did she?
+Player：...
+Eleanor：She cried first.
+Lydia：I was the one who got out a handkerchief first! ...Oh, never mind. We can argue about that later.
+Narrator：*Eleanor presses her lips together and turns to you.*
+Eleanor：I have thought it over. I want to try this, the three of us. And I will tell you when I am jealous. Do not expect sudden generosity.
+Lydia：And when you ask me out, you cannot spend the whole time looking at her.
+Player：All right. I want to be with you both. I want you to see how happy I am. Let us all stay a while today.
+
+[dr17_accept]
+Eleanor：I want this. ...Give me your hand.
+Lydia：So do I. Do not leave me standing in the doorway this time.
+Narrator：*You place your hand on the table. Eleanor takes it first. Lydia glances at her, then puts her hand on your other side.*
+Lydia：I only came to help out a little.
+Eleanor：You certainly helped thoroughly.
+Player：Do you want a referral fee now?
+Lydia：I'd like a kiss as payment. ...But not in front of the whole shop.
+Eleanor：Can't you slow down?
+Lydia：Well, you can teach me that later.
+
+================================================
+dr18: a date; outfit/fallback alternatives
+
+[dr18_open]
+Lydia：Finished yet? I spent ages choosing what to wear, and that is all the attention I get?
+Narrator：*You put down the accounts and come around the counter to meet her.*
+Player：I have been looking since you came in. I wanted a closer look.
+Lydia：That is more like it. ...I missed you.
+
+[dr18_outfit]
+Narrator：*She has dressed for a date. She wears the same hair clip, but her curls have been carefully arranged.*
+Player：Where are we going today?
+Lydia：We're already here.
+Player：Did you pick it just for this place?
+Lydia：Yes. The first one looked like a visit to an elderly aunt. Then I changed and missed the color of the other one. I spent ages turning in front of the mirror.
+Player：Good choice.
+Narrator：*She was clearly waiting for that. When she hears it, she lowers her head and smiles first.*
+Lydia：When I was teaching you to compliment her, I never thought one line could be so hard to receive.
+Player：You don't need to teach me now.
+Lydia：...Then look a little longer. It's not just for that first moment in the doorway.
+
+[dr18_fallback]
+Narrator：*She carefully smooths her hair and looks at you, waiting for you to speak first.*
+Lydia：I spent a long time in front of the mirror. If you say nothing, I shall have to compliment myself.
+Player：I see. You look beautiful today.
+Lydia：...I thought I'd have to remind you.
+
+[dr18_embrace]
+Narrator：*She leans in, resting a hand on your shoulder first, and only relaxes after a moment. You kiss her, and this time she doesn't rush to push you away with a joke.*
+Lydia：...So when it actually happens, I'm not that good with words after all.
+Player：You don't have to keep talking.
+
+[dr18_talk]
+Narrator：*She moves her chair closer. You take her hand, and she doesn't pull it away.*
+Lydia：Remember the jewelry display I arranged? The owner has asked me back. I want to try a different arrangement this time.
+
+[dr18_common]
+Lydia：I know you've made plans with her too. Stop checking the time today, as if I'm about to leave early again.
+Player：Today's time is yours.
+
+================================================
+dr19: Eleanor’s date
+
+[dr19_open]
+Eleanor：Today is the day we agreed on.
+Player：I remember. I have been listening for the door.
+Eleanor：I know you remember. I just wanted to hear you say it.
+Narrator：*She sits down beside you and sets her bag to one side.*
+Player：How's work?
+Eleanor：Fine. Everyone upstairs knows now. On days I leave early, they shouldn't try to dump last-minute work on me.
+Player：Did you tell them you're coming to see me?
+Eleanor：I did. I'm not sneaking around.
+Narrator：*She's quiet for a moment.*
+Eleanor：...She was the one who came to spend time with you last time, right?
+Player：She did.
+Eleanor：How long did she stay?
+Player：Until almost closing time. Are you jealous?
+Eleanor：A little! ...Do not laugh. I wanted to know.
+Player：Then I had better make today last. I want to hold you a little longer too.
+Eleanor：Then don't give me a full account of everything you said to her the moment you see me. It makes me feel like I'm here to audit the books.
+Player：All right. You came in and I forgot everything else anyway.
+Eleanor：There's only one thing I want to say today—when I come back from upstairs, the first person I want to see is still you.
+Narrator：*She leans on your shoulder and takes your hand.*
+Eleanor：Don't think that because there's one more person, I'll ask for less.
+Player：I wasn't planning to ask you to.
+Eleanor：...Good.
+
+================================================
+dr20: dinner together; actual plaque-display variant
+
+[dr20_arrival]
+Narrator：*Eleanor comes in first, carrying a paper bag. Lydia follows, both hands guarding a package of pastries wrapped in paper. A strand of hair brushes her face, but she has no free hand to push it back.*
+Eleanor：Don't say 'let's just eat something' today.
+Player：Did you two plan this?
+Lydia：If we didn't plan it, someone would end up too busy and call a bite of cold rice dinner.
+Eleanor：She means you, and herself too.
+Lydia：Now you're finishing my sentences for me?
+Eleanor：You used to finish mine more than I do yours.
+
+[dr20_gathering]
+Narrator：*Three cups are set on the table. Eleanor puts some food on your plate. Lydia watches the two of you with a smile, her hand moving by habit toward the small bag beside her chair.*
+Lydia：Then I'll just—
+Eleanor：Sit down.
+Narrator：*She pushes the third cup back in front of Lydia.*
+Eleanor：You don't have to make room for us today.
+Player：There's a place for you too.
+Narrator：*Lydia's hand stops. After a moment, she puts the bag back beside her chair.*
+Lydia：I didn't say I was leaving. It's just... last time I sat here, when it got to this point, it was my turn to find an excuse.
+Player：You don't need to this time.
+Lydia：...Then I won't go. We haven't had the pastries yet.
+Narrator：*She opens the pastries, hands one to Eleanor, then one to you, and finally picks the one with the most cream for herself.*
+Eleanor：Didn't you say you bought these specially for us today?
+Lydia：That was the old way of saying it. Today I want some too.
+Player：That was pretty direct.
+Lydia：I've always been direct. I just needed a little longer to practice saying I like you.
+
+[dr20_plaque]
+Narrator：*You get up to tidy the counter. Lydia follows your gaze to the showcase, where the recommendation plaque catches the light from the room.*
+Player：The plaque isn't buried under the ledger. See?
+Lydia：I see it. But I told you: how business goes is still up to you.
+Eleanor：So are you here to inspect the business today?
+Lydia：Not today. Both the people I wanted to see are here.
+Player：Then come closer, both of you. I do not want a whole table between us.
+Lydia：Gladly! Move this way. I saved you some dessert.
+Eleanor：Any closer and there will be no room left on my side.
+Lydia：And you have the nerve to say that about me?
+Narrator：*Eleanor doesn't move her chair back. When you sit down, both of them shift aside, leaving the middle place for you.*
+
+[dr20_no_plaque]
+Lydia：Let me try yours too. Hers has even more cream than mine.
+Player：You chose your piece.
+Eleanor：All that choosing, and you still want someone else's.
+Lydia：You just took something from his bowl!
+Player：Enough arguing. Try some, both of you.
+Narrator：*Two forks reach over. You move your plate to the middle.*
+
+[dr20_closing]
+Narrator：Eleanor returned to the Upper Levels. Her work is there, along with the streets she knows and many decisions she has to make for herself. She didn't give up her chance for anyone's sake, and going back didn't mean leaving this pawnshop in the past.
+Narrator：Lydia still loves new dresses and pretty accessories, still loves hearing about her friends' romances and offering advice. But a compliment from you can make her lose her place, leaving Eleanor to remind her with a laugh.
+Narrator：You're still running your shop in the Lower Levels. Sometimes one of them comes; sometimes both. They'll fight over the same chair, close your ledger halfway through your accounts, and wander off to talk among themselves when you're truly too busy to step away.
+Narrator：Upstairs, they're proper young ladies in everyone else's eyes. Down here, they don't have to be.
+Narrator：The dessert paper lies folded at the corner of the table. Footsteps outside grow sparse. They are still talking beside you; neither reaches for her bag.
+
+================================================
+Epilogue: actual stage, route and case-review/withdrawal status
+
+[v05_ending_complete]
+Narrator：Later, at closing time, you often hear them arguing over who got more dessert. While Eleanor protests, Lydia is already opening the next packet and offering you a taste.
+
+[v05_ending_confirmed]
+Narrator：You remember the warmth of their hands in yours. Eleanor held on tightly. Lydia smiled with her head lowered, then finally looked up at you.
+
+[v05_ending_discussing]
+Narrator：When you think back on their visits, you remember looking up as the door opened. The pauses in conversation, the glances back before leaving, stay with you too.
+
+[dr_epilogue_safe]
+Narrator：Eleanor has her own place in the Upper Levels now. Lydia has also started making room in her days for the streets she wants to browse, the food she wants to try, and the people she wants to see. Sometimes they come together; sometimes each walks in on her own. Whoever arrives first sits down beside you first.
+Narrator：The pawnshop is still in the Lower Levels. People upstairs have asked why these two young ladies keep going down there. Eleanor says the person she likes is there. Lydia smiles and adds: me too.
+Narrator：After that, there were always three chairs in the shop.
+
+[dr_epilogue_route_a]
+Narrator：Eleanor's mother still lives in the Lower Levels. Her daughter often goes back to see her. That road didn't disappear just because work improved and there was one more person at her side.
+
+[dr_epilogue_route_b_unsubmitted]
+Narrator：Her mother's case has not been formally withdrawn. Eleanor still keeps the papers about the research and the protection arrangements. She has her own work now, and she smiles when she visits, but no one pretends the case is over.
+
+[dr_epilogue_route_b]
+Narrator：The papers for her mother's case review have been submitted, but there is no answer yet. Eleanor keeps the receipt in her bag and sometimes mentions it when she visits. You have done what you can, one step at a time. The rest still takes waiting.
+
+[dr_epilogue_route_b_acquitted]
+Narrator：Her mother's case has finally been withdrawn. Eleanor keeps the newspaper page that carried the news. Work, home, the pawnshop: at last, those journeys no longer have to bend around the case.
+
+[dr_epilogue_plaque_listed]
+Narrator：The recommendation plaque remains in the showcase. Customers mention Lydia, but when they ask a price, they are talking to you.
+
+[dr_epilogue_plaque_held]
+Narrator：That little plaque is still tucked away with you. Whether it ever brought in business is one thing; why she wanted to come, she already told you herself.
+
+[dr_epilogue_plaque_none]
+Narrator：She didn't write this relationship into the showcase. When she wants to see you, she walks through the door herself.
+
+[dr_epilogue_departure]
+Narrator：Together they inventory what you can take with you, then each tells you her own arrangements. Whether they can go with you depends on their papers and circumstances; a few words of reluctance can't make it happen. Before you leave, both of them tell you: when you get there, send word to both of us. Don't tell only one.
+
+[dr_epilogue_arrested]
+Narrator：Eleanor finds out where you are being held, while Lydia looks for someone who will listen. Knowing a few people upstairs cannot guarantee your release, but neither will accept a vague "wait and see".
+
+[dr_epilogue_death]
+Narrator：Later, they came back together once. Lydia said nothing this time, and Eleanor didn't rush her. The two of them set the chairs by the counter in order, sat for a while, and then left together. You weren't coming back, and they still had to go on living their own lives.
+
+================================================
+Checkpoint dailies: two per stage, at least four days apart, no early relationship
+
+[wait_1_1]
+Lydia：I really was passing by today. I saw a brooch next door with a price rather more impressive than the brooch.
+Player：So you came to compare prices?
+Lydia：To ask you. If the stone is loose, is it still worth buying after repairs?
+Player：Count the repair cost first. Liking it is no reason to pay the seller twice.
+Lydia：That makes sense. Then I won't rush to buy it.
+Narrator：She folds away the slip with the price on it, leaving Eleanor out of the conversation.
+
+[wait_1_2]
+Lydia：Eleanor wants to know whether you have been too busy to eat lunch again.
+Player：Why not ask me herself?
+Lydia：She is busy too. Do you think carrying your messages requires no walking?
+Player：Tell her I have eaten.
+Lydia：Only if you have. If she asks me what you ate, I cannot invent it for you.
+Narrator：She rests by the counter for a moment, then glances at the price tags by the door on her way out.
+
+[wait_2_1]
+Eleanor：My mother asked about you again today.
+Player：What did she ask?
+Eleanor：Whether the shop's busy, whether you're eating on time. Now she's worrying about you too.
+Player：What did you tell her?
+Eleanor：I said I'd come and see for myself. ...Go on with your work. I never said you had to entertain me.
+Narrator：She sets her bag beside the counter and pulls up a chair herself, though her eyes follow you around the shelves.
+
+[wait_2_2]
+Lydia：Try not to arrange dinner on her busiest workdays. She says nothing, but gets home too tired to take her shoes off.
+Player：She did not tell me.
+Lydia：That is why I am mentioning it. I am not managing you on her behalf.
+Player：Understood. I will ask her first.
+Lydia：And do not prove you remembered by choosing the most expensive place. Find somewhere you can sit and finish your meal.
+Player：I will remember that too.
+
+[wait_3_1]
+Lydia：I decided against that piece of jewelry after all.
+Player：Too expensive?
+Lydia：I tried it on three times and kept wanting someone else to tell me how it looked. Then I realized I did not like it that much myself.
+Player：At least this time you were choosing for yourself.
+Lydia：Yes. If it is mine, I ought to be the one who likes it.
+Narrator：She looks at you, then straightens her cuff as though it were nothing.
+
+[wait_3_2]
+Lydia：Eleanor says business has been decent lately.
+Player：It can still get hectic.
+Lydia：Then carry on. I have no question you need to answer on the spot today.
+Player：You can sit for a while.
+Lydia：...Just a little while. Do not expect me to watch the shop.
+Narrator：She keeps her bag on her lap, only getting up when someone else passes the door.
+
+================================================
+Seven daily visits after the full route
+
+[dr_daily_1_open]
+Lydia：Help me choose. Does this shawl suit the dress, or was the other one better?
+Eleanor：You asked me three times on the way here.
+Lydia：Which is why I am asking him! Come on, leave the accounts a moment.
+Player：This one. I noticed it when you were in the doorway.
+Eleanor：...I changed mine too.
+Player：I noticed. You both look lovely. Come closer so I can see.
+
+[dr_daily_2_open]
+Lydia：Someone praised you at dinner tonight. She said the old clock she bought here kept better time than her new one.
+Player：Did you tell her again that you found this shop first?
+Lydia：I was too busy being pleased to remember!
+Player：Then stay a little longer. We can celebrate together.
+Lydia：Gladly. But first, have a look at these earrings.
+
+[dr_daily_3_open]
+Eleanor：She asked me to pass along a message.
+Player：What message?
+Eleanor：She'll come later. Right now, this time is mine.
+Player：Did she say the second half too?
+Eleanor：I said it. Don't cut it.
+
+[dr_daily_4_open]
+Lydia：The two of us are going out tomorrow. Remember to eat.
+Player：Not taking me?
+Eleanor：Who was it that complained we took too long shopping last time?
+Player：Then bring me back something good to eat.
+Lydia：That's easy!
+
+[dr_daily_5_open]
+Lydia：Someone was outside staring at my name just now.
+Player：Did they come in?
+Lydia：No. First they asked if I was the person herself.
+Eleanor：What did you say?
+Lydia：I said yes, then told him to look at the goods, not just at me.
+Player：You're getting better at business.
+Lydia：Then I will sit a while. Carry on—but I have worn these earrings all the way here. Have you really not noticed?
+
+[dr_daily_6_open]
+Eleanor：Upstairs, she talks about the things in your shop more than she talks about the new dresses she buys.
+Lydia：That's because people ask!
+Eleanor：And when no one asks?
+Lydia：...I still talk about them a little. You're the same—you say you're coming down to sell goods, then you sit down and don't want to leave.
+Player：No rush today.
+Eleanor：I know. I've finished everything else.
+
+[dr_daily_7_open]
+Lydia：Those colors are rather lively, are they not? Gold paint and red flowers!
+Eleanor：It catches your eye among the stock. It might sell well.
+Lydia：Must I call it pretty because it sells? I refuse.
+Player：Then tell me where to put it. I heard good things about your last display.
+Narrator：*She puts the ornament by itself on a pale cloth, steps back, then draws you both over to look.*
+Eleanor：It does look better than when it was crammed in with everything else.
+Lydia：Of course! A gaudy ornament does not need a gaudy display.
+
+================================================
+Recovery claims
+
+[v05_claim_open]
+Lydia：I brought what I was keeping for you. See if you have room this time.
+
+================================================
+运行选项 / Runtime choices
+Enter Eleanor and Lydia’s harem story.
+Original romance requirements apply. Progress at 50/100/150 Upper Level reputation and earn three showcase ornaments. No reputation is spent; keep trading and receiving visits while waiting.
+
+I want to tell her how I feel myself.
+Continue the original ordinary romance route; this expansion does not begin. Refusal does not lower affection.
+
+(Say it) I like you.
+
+
+(Be clear) I care about you, but let's stay friends.
+
+
+It suits you.
+Changes only this response, not the relationship progression. All three still need to speak for themselves.
+
+I think Eleanor has one just like it.
+Changes only this response, not the relationship progression. All three still need to speak for themselves.
+
+I like you too. But I'm with her, and I won't promise you anything behind her back. I'll tell her this myself.
+Open the explicit three-way discussion; nothing is committed yet.
+
+I won't promise you anything behind her back. We'll each speak to her ourselves.
+Continue the three-way discussion; nothing is committed yet.
+
+All right. After you two talk. Whatever you want to ask me, I'll answer.
+Continue the joint discussion; the relationship is not registered yet.
+
+I will keep my promises to both of you.
+Take responsibility and continue the three-way discussion.
+
+If you're both willing too, then starting today, let's be serious about this—all three of us.
+Commit the dual relationship after both explicit agreements; no fee.
+
+Come here. Let me hold you for a while.
+
+
+Sit closer. Let's take our time talking today.
+
+
+================================================
+Shared original nodes: sales opening, cooperation, locket and core rewards
+[c18.b001]
+eleanor：Did my mother come by?
+player：She did. Bought some things, paid for them.
+eleanor：Did you only talk about shopping?
+player：No.
+eleanor：...I knew it.
+player：She told me to ask you myself.
+eleanor：Then don't ask today!
+[c18.b002]
+eleanor：I brought some goods. Not an excuse. They're actually sellable.
+player：I didn't say it was an excuse.
+eleanor：You'd better not even think it.
+eleanor：My mother gets up earlier than I do now. Two days ago I woke up and found her sitting there repairing an old tray.
+player：Can't sit still?
+eleanor：She says if her hands aren't doing something, she starts thinking about what happened in there.
+eleanor：I handed her the tools and sat with her for a while.
+player：That's good.
+eleanor：Yeah. Nothing special. Just sat for a while.
+[c20.b001]
+eleanor：I saw a batch of goods you might want. I didn't agree to anything for you.
+player：Why didn't you bring it directly?
+eleanor：You said it yourself: look at the goods first, then listen to the person.
+eleanor：I asked where it came from, and what's broken. When the person arrives, you look for yourself.
+player：You know not to make decisions for me.
+eleanor：Of course. I just wanted you to know, this time I'm bringing you business.
+[c20.b004]
+eleanor：My mother says my tone when bargaining sounds more and more like yours.
+player：Does she think that's a good thing?
+eleanor：She says at least now I know what I'm talking about.
+player：How did you answer?
+eleanor：I said the teacher is average. The student is the smart one.
+[c20.b005]
+player：So what does the teacher get?
+eleanor：A girlfriend this clever isn't enough?
+player：Enough.
+eleanor：That was a quick answer.
+[c20.b006]
+player：Next time you could teach some other beginners.
+eleanor：Fine. First lesson: don't fall down in the same place twice.
+[c22.b007]
+eleanor：Do you remember this?
+player：That time you asked for a price and didn't sell it.
+eleanor：I told my mother I wanted to give it to you. She said it's mine, so I decide.
+player：And this time it's not for sale?
+eleanor：No. You'd better have learned to tell the difference by now.
+[c22.b008]
+player：Then I'll keep it.
+eleanor：Don't put it with the goods on the counter. I'm not that generous.
+[c22.b009]
+player：It looks better on you. I'll take the thought.
+eleanor：...Fine. I'll wear it myself. It's not as if you won't see me again.
+[c22.b010]
+eleanor：I originally wanted to give you that locket. In the end, I sold it to make up the money.
+player：You don't need to find something else to replace it.
+eleanor：I know. I just wanted you to know that I thought about it.
+This is for you. Don't ask the price.
+When I have time, I'll help you dig at the dump. Two of us can cover more piles, and I'll watch for any scrap that's about to give way.
+1×1. When owned and displayed in the showcase, each available business day has a 50% chance of one ordinary Upper Level referral. At least 2 days between arrivals; at most one pending. Requires suitable stock. Removing it stops new referrals, not promised visits. Inactive in storage; duplicates do not stack.
+1×1. When owned and displayed, ordinary Upper Level buyers receive 30% more final spending budget, rounded down. Snapshot at arrival; removing or replacing it during a visit does not recalculate. Inactive in storage; duplicates do not stack. Excludes named story clients, fixed orders and other mods.
+1×1. When owned and displayed, ordinary Upper Level buyers leave an extra tip of 10% of actual goods payments, capped at 150 credits per visit. Snapshot at arrival. Does not consume buyer budget or compound. Inactive in storage; duplicates do not stack. Excludes named story clients, fixed orders and other mods.

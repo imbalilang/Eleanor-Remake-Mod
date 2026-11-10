@@ -17,7 +17,9 @@ namespace EleanorRomance
 
         public static void OnGameLoadedEarly()
         {
+            GalaClosing.Reset();
             VersionGate.Refresh();
+            DualShowcaseEffects.OnLoaded();
             PortraitCompat.Refresh();
             PortraitCompat.SanitizeLoadedClients();
 
@@ -39,17 +41,21 @@ namespace EleanorRomance
             MaidRouteMigration.OnLoaded();
             // Must run before project visibility is computed on load.
             MaidRouteMigration.MigrateDeferred();
+            StoryCoreFacts.Migrate();
             DualMigration.OnLoaded();
             VanillaEleanorBridge.OnLoaded();
             MaidProjects.OnLoaded();
             MaidDividends.Accrue();
+            MaidBusiness.OnLoaded();
             MaidInteractions.OnLoaded();
+            GalaClosing.OnLoaded();
             MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
             GalaStory.TickNews(StoreStation.Instance?.storeEventManager);
         }
 
         public static void OnNewGameStarted(string scenarioId)
         {
+            GalaClosing.Reset();
             VersionGate.Refresh();
             if (!VersionGate.IsSupported) return;
 
@@ -66,6 +72,7 @@ namespace EleanorRomance
                 + ", next=" + RomanceState.NextVisitDay);
             MaidProjects.OnLoaded();
             MaidInteractions.OnLoaded();
+            StoryCoreFacts.Migrate();
             DualMigration.OnLoaded();
         }
 
@@ -94,6 +101,7 @@ namespace EleanorRomance
                 }
 
                 if (!RomanceState.StoryActive) return;
+                GalaClosing.RecoverQueuedVisits(manager);
 
                 VanillaEleanorBridge.SynchronizeRescue();
                 MaidRouteMigration.OnLoaded();
@@ -102,12 +110,21 @@ namespace EleanorRomance
                 if (VanillaEleanorBridge.RescuePending) return;
 
                 int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;
+                DualProgression.Check();
+                DualShowcaseEffects.FlushPending();
+                DualDirector.RecoverPending(manager);
                 if (RomanceState.LastQueuedDay == day) return;
                 if (MaidState.LastImportantDay == day) return;
                 if (HasModClient(manager)) return;
                 if (MaidStory.HasUrgentClient(manager)) return;
                 MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
                 DualDirector.RecoverPending(manager);
+                if(!MaidState.Active && !DualState.Active && RomanceState.Romance==2 && RomanceState.Chapter>=24)
+                {
+                    var resolution=EleanorStory.CreateDeferredResolution();ModHelper.SetClientSource(resolution,ModConstants.ModId);
+                    manager.AddClient(resolution);if(manager.clientStack.Contains(resolution))RomanceState.LastQueuedDay=day;
+                    return;
+                }
                 if (DualDirector.TryQueue(manager, day)) return;
                 if (MaidStory.TryQueue(manager, day)) return;
                 if (MaidState.LegacyResume == 1) return; // Await its dedicated due day and explicit choice.
@@ -123,6 +140,14 @@ namespace EleanorRomance
                 if (chapter <= 0)
                 {
                     if (MaidBusiness.TryQueue(manager,day)) return;
+                    if (!MaidState.Active && DualState.Writable && DualRewards.NeedsClaim
+                        && day>=DualState.LastDailyDay+4)
+                    {
+                        var claim=DualStory.CreateScene("claim");
+                        ModHelper.SetClientSource(claim,ModConstants.ModId);manager.AddClient(claim);
+                        if(manager.clientStack.Contains(claim)){RomanceState.LastQueuedDay=day;DualState.LastDailyDay=day;}
+                        return;
+                    }
                     if (TryQueueEpilogue(manager, day)) RomanceState.LastQueuedDay = day;
                     return;
                 }
@@ -187,6 +212,7 @@ namespace EleanorRomance
             }
 
             flags?.Invoke();
+            StoryCoreFacts.Record(expected);
             RomanceState.PendingChapter = 0;
 
             int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;

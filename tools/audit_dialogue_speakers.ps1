@@ -74,7 +74,7 @@ foreach($route in 1..2){foreach($id in (@(24..28)+@(902..907)+@(910..915))){
     Inspect-Speakers "attendant route$route visit$id" ([EleanorRomance.MaidStory]::CreateEvent($id))
 }}
 Gala-Run;[EleanorRomance.GalaStory]::Phase=4;[EleanorRomance.MaidState]::PendingVisit=916
-Inspect-Speakers 'gala actual party' ([EleanorRomance.GalaStory]::CreateVisit())
+Inspect-Speakers 'gala doorway departure' ([EleanorRomance.GalaStory]::CreateVisit())
 $unique=@($auditRows|Sort-Object client,key -Unique)
 $unresolved=@($auditRows|Where-Object {!$_.resolved})
 $report=[pscustomobject]@{scope='Read-only runtime factory/graph audit using native DisplayLine and history. Branches are inspected, not played. Not a full save-state Cartesian product.';unresolved=$unresolved.Count;

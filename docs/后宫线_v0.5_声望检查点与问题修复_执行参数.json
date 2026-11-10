@@ -1,0 +1,77 @@
+{
+  "version": "0.5",
+  "status": "implemented_pending_playtest",
+  "baseline": "0.81",
+  "date": "2026-11-09",
+  "gates": [
+    {
+      "id": "upper50",
+      "reputation": 50,
+      "after": "entry",
+      "before": "dr02",
+      "earliestNormalDay": 49,
+      "rewardItem": "eleanor_romance.recommendation_plaque",
+      "rewardName": "莉迪亚的荐店铭牌",
+      "effect": "extra_upper_buyers"
+    },
+    {
+      "id": "upper100",
+      "reputation": 100,
+      "after": "dr08",
+      "before": "dr09",
+      "earliestNormalDay": 56,
+      "rewardItem": "eleanor_romance.upper_patron_ornament",
+      "rewardName": "上层宾客珐琅座饰",
+      "effect": "upper_buyer_budget"
+    },
+    {
+      "id": "upper150",
+      "reputation": 150,
+      "after": "dr11",
+      "before": "dr13",
+      "earliestNormalDay": 60,
+      "rewardItem": "eleanor_romance.upper_gratitude_ornament",
+      "rewardName": "名媛致意银饰",
+      "effect": "upper_buyer_tips"
+    }
+  ],
+  "policy": {
+    "reputationConsumed": false,
+    "paidAlternative": false,
+    "failToOrdinaryWhenBelowGate": false,
+    "gateLatch": "current_reputation_when_checkpoint_is_active",
+    "regressAfterPassed": false,
+    "mainlineWaits": true,
+    "nativeCustomersContinue": true,
+    "stageDailyIntervalDays": 4,
+    "oneModVisitPerDay": true,
+    "gateRewardSceneCountsAsMainScene": true,
+    "bonusRequiresOwnedItemInShowcase": true,
+    "duplicateCopiesStack": false,
+    "bonus2RequiresBonus1": false,
+    "bonus3RequiresBonus1Or2": false
+  },
+  "initialTuning": {
+    "extraBuyerChance": 0.5,
+    "extraBuyerCooldownDays": 2,
+    "maxPendingExtraBuyers": 1,
+    "budgetMultiplier": 1.3,
+    "tipRateOnActualGoodsPayment": 0.1,
+    "tipCapPerVisit": 150,
+    "referralProbabilityChangedByRomance": false
+  },
+  "assets": {
+    "newIllustrationsRequired": 0,
+    "existingPortraits": true,
+    "existingItemSprites": true,
+    "uniqueRuntimeItems": 3,
+    "plaqueLegacyIdPreserved": true
+  },
+  "migration": {
+    "ordinaryLoversRemainOrdinary": true,
+    "explicitDualProgressPreserved": true,
+    "confirmedDualRelationshipNotRevoked": true,
+    "legacyRelationshipGateWaiverDoesNotGrantNewRewards": true,
+    "unknownFutureSchemaReadOnly": true
+  }
+}

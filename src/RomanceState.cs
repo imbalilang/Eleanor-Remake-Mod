@@ -130,6 +130,15 @@ namespace EleanorRomance
             set => SetBool("warning_gift_given", value);
         }
 
+        // 0 undecided, 1 gift accepted, 2 bought for 20, 3 declined.
+        // Persist delivery before playing the response so an interrupted visit
+        // can resume without giving or charging a second time.
+        public static int ReturnGiftChoice
+        {
+            get => GetInt("return_gift_choice", 0);
+            set => SetInt("return_gift_choice", value);
+        }
+
         public static bool HardshipAidGiven
         {
             get => GetBool("hardship_aid_given", false);
@@ -476,6 +485,7 @@ namespace EleanorRomance
             UncleReported = false;
             UncleWarned = false;
             WarningGiftGiven = false;
+            ReturnGiftChoice = 0;
             HardshipAidGiven = false;
             HardshipCashGiven = false;
             NativeRescueLinked = false;

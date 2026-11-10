@@ -1,13 +1,14 @@
 using System;
-using HarmonyLib;
 
 namespace EleanorRomance
 {
     /// <summary>Native shop actions. Only order scheduling and one-shot receipts are mod state.</summary>
     public static class MaidBusiness
     {
-        public const int CollectVisit=910, SellVisit=911, BuyVisit=912, AppraiseVisit=913, SampleVisit=914;
-        public const string AppraisalTag="ER_BUSINESS_APPRAISAL", SampleTag="ER_BUSINESS_SAMPLE";
+        public const int CollectVisit=910, SellVisit=911, BuyVisit=912, SampleVisit=914;
+        private const int RetiredAppraiseVisit=913; // Reserved for old pending visits; never schedule again.
+        private const string LegacyAppraisalTag="ER_BUSINESS_APPRAISAL";
+        public const string SampleTag="ER_BUSINESS_SAMPLE";
         private static string K(string key)=>"biz."+key;
         public static int Number(string key,int fallback=0)=>MaidState.Int(K(key),fallback);
         public static bool Done(string key)=>MaidState.Flag(K(key));
@@ -16,12 +17,11 @@ namespace EleanorRomance
         public static Dialogue Say(string key,params object[] args)=>StoryEngine.Text(L.Eleanor,L.Get("er_biz_"+key,args));
         private static string Receipt(StoreClient c)=>c.identifier+".stock";
 
-        private static GameItem CreateAppraisalItem()
+        public static void OnLoaded()
         {
-            var item=DirectoryMaster.Item("screwdriver");
-            item.EnableTag(AppraisalTag);
-            AppraisalHelper.InitAppraisalItem(item,Math.Max(1,(int)Math.Min(int.MaxValue,item.GetBaseValue())));
-            return item;
+            if(!RomanceState.StoryActive || MaidState.PendingVisit!=RetiredAppraiseVisit)return;
+            MaidState.PendingVisit=BuyVisit;
+            Set("routine.cycle",1);
         }
         private static void PutStock(GameItem item)=>PlayerStore.Instance.AddDirectSellingItemToTableMiddle(item,isOwend:false);
         private static void Stock(StoreClient c,params string[] ids)
@@ -39,33 +39,8 @@ namespace EleanorRomance
             }
             Mark(Receipt(c));
         }
-        private static void SpawnAppraisal(StoreClient c)
-        {
-            if(Done(Receipt(c)) || AppraisalPaid(c))return;
-            PutStock(CreateAppraisalItem());Mark(Receipt(c));
-        }
-        public static bool IsAppraisal(StoreClient c)=>c!=null &&
-            (c.identifier=="er_story_maid_m19" || c.identifier.StartsWith("er_story_biz_appraise_",StringComparison.Ordinal));
-        public static bool AppraisalPaid(StoreClient c)=>Done("fee."+c.identifier);
-        public static void RecordAppraisal(StoreClient c,int before)
-        {
-            if(!IsAppraisal(c) || AppraisalPaid(c))return;
-            Set("fee_amount."+c.identifier,Math.Max(0,PlayerStore.Instance.GetCash()-before));
-            Mark("fee."+c.identifier);
-        }
-        public static void AttachAppraisal(StoreClient c,Dialogue opening,Dialogue ending)
-        {
-            c.clientIntent=StoreClient.ClientIntent.APPRAISAL_SERVICE;
-            var intro=MaidInteractions.AppraisalIntro(c);StoryEngine.Tail(opening).SetNextDialogue(intro);
-            intro.SetEndAction(()=>SpawnAppraisal(c));
-            var start=ending.startAction;
-            ending.SetStartAction(()=>{start?.Invoke();c.tryInterceptDismiss=null;c.dismissable=false;c.CompleteBusiness();});
-            c.allDoneDialogue=ending;c.dismissable=true;
-            c.tryInterceptDismiss=()=>DialogUIManager.Instance.StartDialogue(ending,true);
-        }
-
         private static bool SafeItem(GameItem item)=>item!=null && !item.IsTag("IMPORTANT_TAG") &&
-            !item.IsTag(AppraisalTag) && !StolenHelper.IsStolenItem(item);
+            !item.IsTag(LegacyAppraisalTag) && !StolenHelper.IsStolenItem(item);
         private static void Buyer(StoreClient c,int budget,string receipt,Func<GameItem,bool> filter=null)
         {
             string paidTag="ER_BIZ_PAID_"+receipt;
@@ -215,7 +190,7 @@ namespace EleanorRomance
             else if(MaidDividends.Due(day))id=MaidDividends.VisitId;
             else if(MaidState.Active && NeedsFunding() && day>=Number("routine.next") && day>=MaidState.LastImportantDay+2)
             {
-                id=SellVisit+Number("routine.cycle")%3;
+                id=SellVisit+Number("routine.cycle")%2;
                 if(id==SellVisit && PlayerStore.Instance.GetCash()<=0)id=BuyVisit;
                 Set("routine.cycle",id-SellVisit);
                 Set("routine.serial",Number("routine.serial")+1);
@@ -229,6 +204,7 @@ namespace EleanorRomance
         }
         public static StoreClient CreateEvent(int id)
         {
+            if(id==RetiredAppraiseVisit){OnLoaded();id=BuyVisit;}
             if(id==CollectVisit)return Collect();
             if(id==SampleVisit)
             {
@@ -240,20 +216,15 @@ namespace EleanorRomance
                     ()=>{Set("sample.next",MaidState.Today+7);Complete(id);});
                 c.CompleteClientCreation();return c;
             }
-            if(id<SellVisit || id>AppraiseVisit)return null;
+            if(id<SellVisit || id>BuyVisit)return null;
             int serial=Number("routine.serial");
-            var client=EleanorStory.NewEleanorClient((id==AppraiseVisit?"biz_appraise_":"biz_routine_")+serial,"eleanor_scav",StoreClient.ClientIntent.SELL);
+            var client=EleanorStory.NewEleanorClient("biz_routine_"+serial,"eleanor_scav",StoreClient.ClientIntent.SELL);
             Action done=()=>
             {Set("routine.next",MaidState.Today+4);Set("routine.cycle",Number("routine.cycle")+1);Complete(id);};
-            client.mainDialogue=Say(id==SellVisit?"routine_sell":id==BuyVisit?"routine_buy":"routine_appraise");
-            if(id==AppraiseVisit)
-                AttachAppraisal(client,client.mainDialogue,MaidText.Finish(MaidInteractions.WithLight(MaidDividends.WithReceipt(Say("routine_end"))),done));
-            else
-            {
-                if(id==SellVisit)client.mainDialogue.SetEndAction(()=>Stock(client,"scrap_metal","screwdriver"));
-                else Buyer(client,350,"routine.spent."+serial);
-                StoryEngine.InterceptDismiss(client,()=>MaidInteractions.WithLight(MaidDividends.WithReceipt(Say("routine_end"))),done);
-            }
+            client.mainDialogue=Say(id==SellVisit?"routine_sell":"routine_buy");
+            if(id==SellVisit)client.mainDialogue.SetEndAction(()=>Stock(client,"scrap_metal","screwdriver"));
+            else Buyer(client,350,"routine.spent."+serial);
+            StoryEngine.InterceptDismiss(client,()=>MaidInteractions.WithLight(MaidDividends.WithReceipt(Say("routine_end"))),done);
             client.CompleteClientCreation();return client;
         }
         private static void Complete(int id)
@@ -261,49 +232,6 @@ namespace EleanorRomance
             if(MaidState.PendingVisit!=id)return;
             MaidState.PendingVisit=0;MaidState.NextVisitDay=-1;MaidState.LastImportantDay=MaidState.Today;
             MaidProjects.RefreshStates(true);
-        }
-    }
-
-    // Give only our marked ordinary tool a native base valuation. Registering a
-    // new appraisal category would also alter vanilla random customers/guides.
-    [HarmonyPatch(typeof(AppraisalHelper),"GetCorrectBaseValue")]
-    internal static class BusinessAppraisalValue
-    {
-        private static bool Prefix(GameItem gameItem,ref int __result)
-        {
-            if(gameItem==null || !gameItem.IsTag(MaidBusiness.AppraisalTag))return true;
-            __result=Math.Max(1,(int)Math.Min(int.MaxValue,gameItem.GetBaseValue()));return false;
-        }
-    }
-
-    [HarmonyPatch(typeof(AppraisalServiceHelper),"GetAcceptEstimateDialog")]
-    internal static class BusinessAppraisalReceipt
-    {
-        private static bool Prefix(ref Dialogue __result,ref int __state)
-        {
-            __state=int.MinValue;
-            var c=PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
-            if(!MaidBusiness.IsAppraisal(c))return true;
-            if(MaidBusiness.AppraisalPaid(c)){__result=MaidBusiness.Say("appraisal_receipt");return false;}
-            __state=PlayerStore.Instance.GetCash();return true;
-        }
-        private static void Postfix(int __state)
-        {if(__state!=int.MinValue)MaidBusiness.RecordAppraisal(PlayerStore.Instance.currentClientInstance.GetClientBlueprint(),__state);}
-        private static Exception Finalizer(Exception __exception,int __state)
-        {
-            if(__exception!=null && __state!=int.MinValue && PlayerStore.Instance.GetCash()>__state)
-                MaidBusiness.RecordAppraisal(PlayerStore.Instance.currentClientInstance.GetClientBlueprint(),__state);
-            return __exception;
-        }
-    }
-    [HarmonyPatch(typeof(AppraisalServiceHelper),"GetPatienceRunOutDialog")]
-    internal static class BusinessAppraisalExit
-    {
-        private static void Postfix(Dialogue __result)
-        {
-            var c=PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
-            if(!MaidBusiness.IsAppraisal(c) || c.allDoneDialogue==null)return;
-            StoryEngine.Tail(__result).SetEndAction(null).SetNextDialogue(c.allDoneDialogue);
         }
     }
 }

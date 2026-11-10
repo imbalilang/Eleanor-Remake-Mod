@@ -4,7 +4,8 @@
 param(
     [Parameter(Mandatory=$true)][string]$Managed,
     [string]$ModDll = (Join-Path $PSScriptRoot '..\bin\Release\EleanorRomance.dll'),
-    [switch]$Maid
+    [switch]$Maid,
+    [switch]$Dual
 )
 $ErrorActionPreference = 'Stop'
 Add-Type -Path (Join-Path $Managed 'Unity.Burst.Cecil.dll')
@@ -277,6 +278,7 @@ if($Maid){
     . (Join-Path $PSScriptRoot 'test_scav_boundaries.ps1')
     . (Join-Path $PSScriptRoot 'test_interaction_boundaries.ps1')
 }
+if($Dual){. (Join-Path $PSScriptRoot 'test_dual_boundaries.ps1')}
 . (Join-Path $PSScriptRoot 'test_speaker_boundaries.ps1')
 foreach ($assembly in @($game,$mod)) {
     $stream = [IO.MemoryStream]::new()
@@ -761,3 +763,6 @@ if($Maid){
     . (Join-Path $PSScriptRoot 'test_relationship_choices.ps1')
     . (Join-Path $PSScriptRoot 'test_named_speakers.ps1')
 }
+
+if($Dual){. (Join-Path $PSScriptRoot 'test_dual_routes.ps1');. (Join-Path $PSScriptRoot 'test_dual_showcase.ps1')}
+. (Join-Path $PSScriptRoot 'test_reading_fixes.ps1')

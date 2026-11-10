@@ -7,6 +7,10 @@ namespace EleanorRomance
     {
         public static int EventForDay(int day)
         {
+            MaidBusiness.OnLoaded();
+            // Invitation 916 belongs exclusively to the player's empty-shop
+            // close action, including old queued/pending saves.
+            if(MaidState.PendingVisit==GalaStory.VisitId)return 0;
             if(MaidState.LegacyResume==1)return day>=MaidState.LegacyDueDay?LegacyVisit:0;
             if(MaidState.PendingVisit>0)return day>=MaidState.NextVisitDay?MaidState.PendingVisit:0;
             bool core=RomanceState.Chapter>=RomanceState.ChapterComplete && RomanceState.EpilogueDone;
@@ -26,7 +30,6 @@ namespace EleanorRomance
             if(MaidState.BuyerState==3 && !MaidState.BuyerFeedbackShown && !RomanceState.RomanceLocked)return FeedbackVisit;
             if(MaidWorldEvents.ChatPending)return WorldChatVisit;
             if(!MaidState.Lovers)return 0;
-            if(GalaStory.Due(day))return GalaStory.VisitId;
             if(day<Math.Max(MaidState.LastChatDay+7,MaidState.ProgressDay+7))return 0;
             if(MaidState.Progress<28)
                 return WaitingProject()>0 && !MaidState.Flag("wait_stage_"+MaidState.Progress)?WaitVisit:0;
@@ -52,7 +55,7 @@ namespace EleanorRomance
                 case WaitVisit:return CreateWait();case DailyVisit:return CreateDaily();
                 case 24:return CreateReturn24();case 25:return CreateReturn25();case 26:return CreateProcurement();
                 case 27:return CreateReturn27();case 28:return CreateReturn28();
-                case MaidDividends.VisitId:return MaidDividends.CreateVisit();case GalaStory.VisitId:return GalaStory.CreateVisit();
+                case MaidDividends.VisitId:return MaidDividends.CreateVisit();
                 default:return MaidBusiness.CreateEvent(id);
             }
         }
@@ -113,7 +116,6 @@ namespace EleanorRomance
             StoryEngine.InterceptDismiss(c,()=>
             {
                 var wrap=MaidBusiness.Done("sample.claimed")?MaidText.Build("m25_b003"):MaidBusiness.Say("sample_later");
-                MaidInteractions.AppendLessonEcho(wrap);
                 MaidText.Append(wrap,"m25_b004",MaidProjects.FavorPlan(3)?"m25_b005":"m25_b006",
                     RomanceState.Route==1?"m25_b007":"m25_b008","m25_b009");
                 if(MaidProjects.Paid(3) && !MaidProjects.ResultShown(3))

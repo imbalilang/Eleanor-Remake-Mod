@@ -24,13 +24,17 @@ sections=[
  ('19 新衣与称呼 / The outfit and the address',['m19_b001','m19_b002','choicefix_b002','m19_b005','m19_b006','m19_b008','m19_b007']),
  ('20 侍从恋爱内的回应 / Attendant confession responses',['m20_b001','m20_b005','m20_b006','m20_b008','choicefix_b004','choicefix_b005','m20_b009']),
  ('丙丁线相关承接 / Related tragic and exit scenes',['tragic_b012','exit_b005','exit_b006','exit_b008']),
- ('28 独立后的再选择 / Choosing again',[b for b in blocks if b.startswith('m28_')]),
+ ('24 通行与归来 / Passage and return',[b for b in blocks if b.startswith('m24_')]),
+ ('25 第一单 / The first order',[b for b in blocks if b.startswith('m25_')]),
+ ('26 采购商 / The buyer',[b for b in blocks if b.startswith('m26_')]),
+ ('27 事业亮相 / The business debut',[b for b in blocks if b.startswith('m27_')]),
+ ('28 旧约完成后仍然相爱 / Love after the agreement ends',[b for b in blocks if b.startswith('m28_')]),
 ]
 for lang in ('zh','en'):
     intro=(
-        '侍从线：当前运行文案（0.75后本地修订，未发布）\n\n以下按阅读章排列；同章的路线、选项与旧档变体分别标出，并非全部连续播放。第12章可承诺坦诚后商量保管人，或先把盘交还她并说清隐瞒，两者继续约定。第14章表达顾虑先讨论，只有顾虑子菜单里明确退出才解除约定。第19章m19_b002仅为尚未处理旧伤的旧档兜底，两种修复方式都继续关系；m19_b006／008为新称呼，m19_b007为已建立称呼的旧档。第19章开场后有原版估价经营，后半段在业务结束时播放。第20章三种回答共同进入m20_b009，均确认侍从恋爱。第28章三个回答均承接她自愿留下。\n'
+        '侍从线：当前运行文案（0.75后本地修订，未发布）\n\n以下按阅读章排列；同章的路线、选项与旧档变体分别标出，并非全部连续播放。第12章可承诺坦诚后商量保管人，或先把盘交还她并说清隐瞒，两者继续约定。第14章表达顾虑先讨论，只有顾虑子菜单里明确退出才解除约定。第19章m19_b002仅为尚未处理旧伤的旧档兜底，两种修复方式都继续关系；m19_b006／008为新称呼，m19_b007为已建立称呼的旧档。第19章直接接续新衣与称呼对白，不再进行螺丝刀估价。第20章三种回答共同进入m20_b009，均确认侍从恋爱。第28章三个回答均承接她自愿留下。\n'
         if lang=='zh' else
-        'Attendant route: current runtime text (local revision after 0.75, unpublished)\n\nOrdered by reading chapter. Alternatives and legacy variants are separate, not continuous dialogue. Both chapter 12 repair approaches continue the agreement; returning the original fixes custody with Eleanor. Chapter 14 concerns open a discussion, with withdrawal only as an explicit nested decision. Chapter 19 unresolved-injury repair is a legacy fallback; either approach continues the relationship. m19_b006/008 establish the address, while m19_b007 preserves an existing one. Native appraisal separates the opening and wrap-up. All chapter 20 responses join m20_b009 and confirm the attendant romance. All chapter 28 responses accept her voluntary choice to stay.\n')
+        'Attendant route: current runtime text (local revision after 0.75, unpublished)\n\nOrdered by reading chapter. Alternatives and legacy variants are separate, not continuous dialogue. Both chapter 12 repair approaches continue the agreement; returning the original fixes custody with Eleanor. Chapter 14 concerns open a discussion, with withdrawal only as an explicit nested decision. Chapter 19 unresolved-injury repair is a legacy fallback; either approach continues the relationship. m19_b006/008 establish the address, while m19_b007 preserves an existing one. Chapter 19 continues directly into the outfit and address dialogue; screwdriver appraisal has been removed. All chapter 20 responses join m20_b009 and confirm the attendant romance. All chapter 28 responses accept her voluntary choice to stay.\n')
     out=[intro,('仅列本轮修订涉及的章节及必要上下文，未改章节略。' if lang=='zh' else 'Covers revised chapters and their necessary context; unchanged chapters are omitted.')]
     for title,ids in sections:
         out.append('\n'+'='*60+'\n'+title+'\n'+'='*60)
@@ -50,7 +54,7 @@ for lang in ('zh','en'):
     for key in ['er_maid_confess_yes','er_maid_final_1','er_maid_final_2','er_maid_final_3','er_maid_choice_route_exit','er_maid_choice_route_exit_desc','er_maid_confirm_leak']:
         out.append('\n['+key+']\n'+existing_ui[key][0 if lang=='zh' else 1])
     for key,pair in choice_ui.items():out.append('\n['+key+']\n'+pair[0 if lang=='zh' else 1])
-    out[0]=out[0].replace('（0.75后本地修订，未发布）','（0.76）').replace('(local revision after 0.75, unpublished)','(0.76)')
+    out[0]=out[0].replace('（0.75后本地修订，未发布）','（本地0.81；2026-11-10文本修订，未发布）').replace('(local revision after 0.75, unpublished)','(local 0.81; narrative revision 2026-11-10, unpublished)')
     target=ROOT/'docs'/('MAID_MOTIVATION_READING.'+lang+'.txt')
     target.write_text('\n'.join(out)+'\n',encoding='utf-8')
     print(target)

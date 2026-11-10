@@ -28,36 +28,6 @@ namespace EleanorRomance
             if(chapter==25 && Number("first_order_day",-1)<0)Set("first_order_day",MaidState.Today);
             if(chapter==28)GalaStory.SetReadyDay(MaidState.Today+3);
         }
-        public static bool IsLesson(StoreClient c)=>c!=null && c.identifier=="er_story_maid_m19";
-        public static Dialogue AppraisalIntro(StoreClient c)
-        {
-            if(!IsLesson(c))return MaidBusiness.Say("appraisal_intro");
-            var root=MaidText.Build("interaction_b001");
-            root.SetStartAction(()=>{if(!MaidBusiness.AppraisalPaid(c))Flag("lesson.opened",true);});
-            return root;
-        }
-        public static void ConfigureLesson(StoreClient c,Dialogue wrap,Dialogue after)
-        {
-            bool built=false;
-            wrap.SetStartAction(()=>
-            {
-                if(built || !Flag("lesson.opened"))return;
-                built=true;bool accepted=MaidBusiness.AppraisalPaid(c);
-                if(!accepted)after.SetText(L.Get("er_name_narrator"),L.Get("er_interaction_unfinished_papers"));
-                var next=wrap.nextDialogue;
-                var feedback=MaidText.Build(accepted?"interaction_b002":"interaction_b003");
-                var tail=StoryEngine.Tail(feedback);
-                tail.SetEndAction(()=>{if(Number("lesson.result")==0)Set("lesson.result",accepted?1:2);});
-                tail.SetNextDialogue(next);wrap.SetNextDialogue(feedback);
-            });
-        }
-        public static void AppendLessonEcho(Dialogue head)
-        {
-            int result=Number("lesson.result");
-            if(result==0 || Flag("lesson.echo"))return;
-            MaidText.Append(head,result==1?"interaction_b004":"interaction_b005");
-            StoryEngine.Tail(head).SetEndAction(()=>Flag("lesson.echo",true));
-        }
         private static Dialogue CustomerEcho()
         {
             int day=Number("first_order_day",-1);

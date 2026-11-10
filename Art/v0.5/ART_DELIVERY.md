@@ -4,12 +4,14 @@
 
 | 资源 | 环境 | 色板 |
 |---|---|---|
-| `Textures/Items/er_portrait_eleanor_maid_female_beauty.png` | 启用少女当铺 | 64色 |
+| `Textures/Items/er_portrait_eleanor_maid_female_beauty.png` | 启用少女当铺 | 保留原图RGB，现行9327色 |
 | `Textures/Items/er_portrait_eleanor_maid_female_vanilla.png` | 未启用少女当铺 | 48色 |
 
 两张为独立生成的正式稿，文件哈希不同。服装均使用深紫工作裙、白围裙、整齐袖口与头饰，保留埃莉诺的铜红发、绿眼和金色颈饰。原版风沿用原作的小眼睛、明确鼻梁、硬朗成年脸型和沉稳色彩。
 
-使用内置 image_gen 分别生成母版，保存在 `masters/eleanor_maid_master.png` 与 `masters/eleanor_maid_vanilla_master.png`。美化版参考少女当铺；2026-11-08补制的原版风使用本机原作埃莉诺常服／拾荒图约束人物与画风，现有美化女仆图仅作为服装参考。游戏提取图保存在忽略目录 `references_local`，不随包再分发。正式PNG由 `export_maid.ps1` 按项目既有最近邻和有限色板流程导出。
+使用内置 image_gen 分别生成母版，保存在 `masters/eleanor_maid_master.png` 与 `masters/eleanor_maid_vanilla_master.png`。美化版参考少女当铺；2026-11-08补制的原版风使用本机原作埃莉诺常服／拾荒图约束人物与画风，现有美化女仆图仅作为服装参考。游戏提取图保存在忽略目录 `references_local`，不随包再分发。`export_maid.ps1`的Beauty入口现调用`tools/export_eleanor_beauty.py --variant maid`，原版风继续使用独立的最近邻／48色及眼部修订流程。
+
+2026-11-10按用户要求以《少女当铺》Eleanor实际脸部大小重新构图：从原母版缩至154×182、放于`[66,52]`，比旧133×158构图放大约15.2%，底部裁掉22像素，正式可见边界`[66,52,220,212]`。取消美化版64色硬性限制，保留原始RGB与清楚的像素边缘，Alpha仍为0／255；现行SHA256为`a20b2f2265e6b62ee2304a2be7cfb23bea356813e8fc83152066cf58f33ae7c7`。两张母版与原版风正式PNG保持。配置和近似脸部测量见`beauty_export_validation.json`，尺寸／哈希核对仍见`asset_validation.json`。最新记录见`../../docs/埃莉诺画像_以少女当铺为基准重裁_2026-11-10.md`，本轮没有部署或实机验收。
 
 当前工作区的关系递进修订已将完整女仆装首秀后移至第19章，第18章使用常服；后续私人场景按白名单启用，并根据少女当铺状态选择对应画风。危机、正式业务、母亲、莉迪亚、采购商、退出及丙线不使用。停用少女当铺后，当前与已排美化女仆访客切为原版女仆；再次启用只影响新建的适用来访。缺所选资源时回退常服，剧情与奖励保留。本变更按用户追加要求实施，取代冻结设计稿中“无少女当铺时仅用衣装旁白”的美术条件。
 

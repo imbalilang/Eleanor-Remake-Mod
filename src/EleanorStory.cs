@@ -664,7 +664,6 @@ namespace EleanorRomance
             Dialogue pay = StoryEngine.Build(StoryV06Content.B_C08_B003);
             Dialogue refuse = StoryEngine.Build(StoryV06Content.B_C08_B004);
 
-            Action gift = () => StoryEngine.GiveToPlayer("scrap_metal");
             string extraBlock = StoryEngine.PositiveDeals >= 3
                 ? StoryV06Content.B_C08_B005
                 : StoryV06Content.B_C08_B006;
@@ -679,17 +678,52 @@ namespace EleanorRomance
                 });
             }
 
-            StoryEngine.AddChoices(root, Prompt("er_prompt_gift_return"),
-                new StoryEngine.Choice(L.Get("er_choice_accept_gift"), L.Get("er_choice_accept_gift_desc"),
-                    accept, gift),
-                new StoryEngine.Choice(L.Get("er_choice_pay_gift"), L.Get("er_choice_pay_gift_desc"),
-                    pay, () => { gift(); StoryEngine.Spend(20); }),
-                new StoryEngine.Choice(L.Get("er_choice_refuse_gift"), L.Get("er_choice_refuse_gift_desc"),
-                    refuse, null));
-
-            client.mainDialogue = root;
+            if (RomanceState.ReturnGiftChoice != 0)
+            {
+                client.mainDialogue = RomanceState.ReturnGiftChoice == 1 ? accept
+                    : RomanceState.ReturnGiftChoice == 2 ? pay : refuse;
+            }
+            else
+            {
+                var menu = StoryEngine.Text(L.Player, Prompt("er_prompt_gift_return"));
+                StoryEngine.Tail(root).SetNextDialogue(menu);
+                var retry = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_return_gift_retry"));
+                retry.SetNextDialogue(menu);
+                void AddGiftOption(string key, Dialogue success, bool paid)
+                {
+                    var response = StoryEngine.Text(L.Player, L.Get(key));
+                    response.SetNextDialogue(success);
+                    menu.AddChoice(DirectoryMaster.Item("yes"), L.Get(key), L.Get(key + "_desc"), response,
+                        () => response.SetNextDialogue(TryReceiveReturnGift(paid) ? success : retry),
+                        paid ? (Func<bool>)(() => StoryEngine.HasCash(20)) : null);
+                }
+                AddGiftOption("er_choice_accept_gift", accept, false);
+                AddGiftOption("er_choice_pay_gift", pay, true);
+                menu.AddChoice(DirectoryMaster.Item("yes"), L.Get("er_choice_refuse_gift"),
+                    L.Get("er_choice_refuse_gift_desc"), refuse, () =>
+                    {
+                        if (RomanceState.ReturnGiftChoice == 0) RomanceState.ReturnGiftChoice = 3;
+                    }, null);
+                client.mainDialogue = root;
+            }
             client.CompleteClientCreation();
             return client;
+        }
+
+        private static bool TryReceiveReturnGift(bool paid)
+        {
+            int choice = paid ? 2 : 1;
+            if (RomanceState.ReturnGiftChoice != 0) return RomanceState.ReturnGiftChoice == choice;
+            // Reserve the price first, then refund immediately if placement fails.
+            // A failed selection retains the menu and does not advance the chapter.
+            if (paid && !StoryEngine.Spend(20)) return false;
+            if (!StoryEngine.GiveToPlayer("scrap_metal"))
+            {
+                if (paid) StoryEngine.AddCredit(20);
+                return false;
+            }
+            RomanceState.ReturnGiftChoice = choice;
+            return true;
         }
 
         // ------------------------------------------------------------------
@@ -731,8 +765,8 @@ namespace EleanorRomance
             StoryEngine.Tail(main).SetEndAction(null);
             // v0.4 common-9 additions: Lydia's arrival beat and the first
             // "what do you look like" exchange, before the bracelet trade.
-            Dialogue arrival = DualText.Build("common09_arrival");
-            StoryEngine.Append(main, "common09_added");
+            Dialogue arrival = DualText.Build("common09_add_arrival");
+            DualText.Append(main, "common09_add_added");
             StoryEngine.Tail(main).SetEndAction(spawnBracelet);
             if (arrival != null)
             {
@@ -747,8 +781,8 @@ namespace EleanorRomance
                 if (!tracker.Any) dialogue = StoryEngine.Build(StoryV06Content.B_C09_B004);
                 else if (RomanceState.LydiaFairBracelet) dialogue = StoryEngine.Build(StoryV06Content.B_C09_B002);
                 else dialogue = StoryEngine.Build(StoryV06Content.B_C09_B003);
-                if (RomanceState.LydiaFairBracelet) DualText.Append(dialogue, "common09_high_price");
-                DualText.Append(dialogue, "common09_after");
+                if (RomanceState.LydiaFairBracelet) DualText.Append(dialogue, "common09_add_high_price");
+                DualText.Append(dialogue, "common09_add_after");
                 StoryEngine.Append(dialogue, StoryV06Content.B_C09_B005);
                 StoryEngine.Append(dialogue, StoryV06Content.B_C09_B006);
                 return Head(dialogue);
@@ -778,7 +812,7 @@ namespace EleanorRomance
             {
                 StoryEngine.Append(root, StoryV06Content.B_C10_B006);
             }
-            DualText.Append(root, "common10_family");
+            DualText.Append(root, "common10_add_family");
 
             StoryEngine.Tail(root).SetEndAction(() =>
             {
@@ -1163,15 +1197,15 @@ namespace EleanorRomance
         // 19. After the reunion
         // ------------------------------------------------------------------
 
-        private static StoreClient CreateAfterReunionChapter()
+        internal static StoreClient CreateAfterReunionChapter(Dialogue supplied = null, System.Func<Dialogue> wrap = null, System.Action complete = null)
         {
-            StoreClient client = NewEleanorClient("ch19", "eleanor_scav", StoreClient.ClientIntent.SELL);
+            StoreClient client = NewEleanorClient(complete==null?"ch19":"dual_dr03", "eleanor_scav", StoreClient.ClientIntent.SELL);
             client.SetWholesale(25);
 
             StoryEngine.DealTracker tracker = new StoryEngine.DealTracker();
             client.onItemSold = (item, paid) => tracker.Record(item, paid, eleanorIsSeller: true);
 
-            Dialogue main = StoryEngine.Chain(StoryV06Content.B_C18_B001, StoryV06Content.B_C18_B002);
+            Dialogue main = supplied ?? StoryEngine.Chain(StoryV06Content.B_C18_B001, StoryV06Content.B_C18_B002);
             StoryEngine.Tail(main).SetEndAction(() =>
             {
                 if (RomanceState.ScavStockSpawned19) return;
@@ -1180,14 +1214,14 @@ namespace EleanorRomance
             });
             client.mainDialogue = main;
 
-            FinishWhenLeaving(client, 19, 20, () =>
+            StoryEngine.InterceptDismiss(client, wrap ?? (() =>
             {
                 Dialogue dialogue = StoryEngine.Build(
                     StoryEngine.PositiveDeals >= 3 || RomanceState.Affection >= 10
                         ? StoryV06Content.B_C18_B003
                         : StoryV06Content.B_C18_B004);
                 return Head(dialogue);
-            }, () => RecordDeal(tracker, noSaleIsVisit: true));
+            }), () => { RecordDeal(tracker, noSaleIsVisit: true); StoryCoreFacts.CompleteReplacement(19); if (complete != null) complete(); else { RomanceState.PendingChapter=19; Advance(19,20); } });
 
             client.CompleteClientCreation();
             return client;
@@ -1215,15 +1249,7 @@ namespace EleanorRomance
                 Dialogue accept = StoryEngine.BuildSkipFirst(StoryV06Content.B_C19_B003);
                 StoryEngine.Tail(accept).SetEndAction(() =>
                 {
-                    RomanceState.Romance = 1;
-                    Advance(20, 21);
-                    StoryEngine.Dismiss();
-                });
-
-                Dialogue slow = StoryEngine.BuildSkipFirst(StoryV06Content.B_C19_B004);
-                StoryEngine.Tail(slow).SetEndAction(() =>
-                {
-                    RomanceState.Romance = 2;
+                    StoryCoreFacts.Confess(1);
                     Advance(20, 21);
                     StoryEngine.Dismiss();
                 });
@@ -1231,7 +1257,7 @@ namespace EleanorRomance
                 Dialogue friends = StoryEngine.BuildSkipFirst(StoryV06Content.B_C19_B005);
                 StoryEngine.Tail(friends).SetEndAction(() =>
                 {
-                    RomanceState.Romance = 3;
+                    StoryCoreFacts.Confess(3);
                     Advance(20, 21);
                     StoryEngine.Dismiss();
                 });
@@ -1239,8 +1265,6 @@ namespace EleanorRomance
                 StoryEngine.AddChoices(root, Prompt("er_prompt_confession"),
                     new StoryEngine.Choice(L.Get("er_choice_confess_yes"), L.Get("er_choice_confess_yes_desc"),
                         accept, null),
-                    new StoryEngine.Choice(L.Get("er_choice_confess_slow"), L.Get("er_choice_confess_slow_desc"),
-                        slow, null),
                     new StoryEngine.Choice(L.Get("er_choice_confess_friends"), L.Get("er_choice_confess_friends_desc"),
                         friends, null));
             }
@@ -1248,9 +1272,9 @@ namespace EleanorRomance
             {
                 if (root == null) root = StoryEngine.Build(StoryV06Content.B_C19_B006);
                 else StoryEngine.Append(root, StoryV06Content.B_C19_B006);
-                RomanceState.Romance = 3;
                 StoryEngine.Tail(root).SetEndAction(() =>
                 {
+                    StoryCoreFacts.Confess(3);
                     Advance(20, 21);
                     StoryEngine.Dismiss();
                 });
@@ -1265,9 +1289,9 @@ namespace EleanorRomance
         // 21. Cooperation
         // ------------------------------------------------------------------
 
-        private static StoreClient CreateCooperationChapter()
+        internal static StoreClient CreateCooperationChapter(System.Action complete = null)
         {
-            StoreClient client = NewEleanorClient("ch21", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
+            StoreClient client = NewEleanorClient(complete==null?"ch21":"dual_coop", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
             Dialogue root = StoryEngine.Build(StoryV06Content.B_C20_B001);
             StoryEngine.Append(root, StoryV06Content.B_C20_B004);
             StoryEngine.Append(root, RomanceState.RomanceConfirmed
@@ -1275,8 +1299,9 @@ namespace EleanorRomance
                 : StoryV06Content.B_C20_B006);
             StoryEngine.Tail(root).SetEndAction(() =>
             {
-                Advance(21, 22);
-                QueueCooperationBuyer();
+                StoryCoreFacts.ArrangeCooperation();
+                if (complete != null) complete(); else Advance(21, 22);
+                if (!DualState.Active) QueueCooperationBuyer();
                 StoryEngine.Dismiss();
             });
 
@@ -1285,7 +1310,7 @@ namespace EleanorRomance
             return client;
         }
 
-        private static void QueueCooperationBuyer()
+        internal static StoreClient CreateCooperationBuyer()
         {
             try
             {
@@ -1306,21 +1331,28 @@ namespace EleanorRomance
                 buyer.clientBuyingTagList.Add(TypeHelper.ART);
                 buyer.clientBuyingTagList.Add(TypeHelper.HIGHEND);
                 buyer.SetBudget(600);
+                int remaining=ModHelper.GetModDataInt(ModConstants.ModId,"er.core.coop.remaining",-1);
+                if(remaining>=0)buyer.OverrideBudget(remaining);
+                buyer.onItemBought+=(item,paid)=>ModHelper.SetModDataInt(ModConstants.ModId,"er.core.coop.remaining",buyer.GetBudget());
                 buyer.SetVariety();
                 buyer.mainDialogue = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_coop_buyer_intro"));
                 buyer.AddBasicDialog();
                 buyer.acceptDealDialogue = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_coop_buyer"));
                 buyer.allDoneDialogue = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_coop_buyer"));
                 StoryEngine.Tail(buyer.allDoneDialogue).SetEndAction(StoryEngine.Dismiss);
+                StoryEngine.InterceptDismiss(buyer, () => StoryEngine.Text(L.Get("er_name_upper_buyer"),L.Get("er_line_coop_buyer")), StoryCoreFacts.CloseCooperation);
                 buyer.CompleteClientCreation();
                 ModHelper.SetClientSource(buyer, ModConstants.ModId);
-                PlayerStore.Instance.storeClientManager.AddNextClient(buyer);
+                return buyer;
             }
             catch (Exception ex)
             {
                 StoryDirector.LogError("Cooperation buyer failed: " + ex);
+                return null;
             }
         }
+        private static void QueueCooperationBuyer()
+        { var buyer=CreateCooperationBuyer(); if(buyer!=null)PlayerStore.Instance.storeClientManager.AddNextClient(buyer); }
 
         // ------------------------------------------------------------------
         // 22. Lydia's second visit
@@ -1406,22 +1438,23 @@ namespace EleanorRomance
             return client;
         }
 
-        private static void FinishFuture(StoreClient client, int chapter)
+        internal static void FinishFuture(StoreClient client, int chapter, System.Action complete = null)
         {
             RomanceState.WorkState = RomanceState.Route == 2 ? 2 : 1;
-            if (RomanceState.RomanceConfirmed && RomanceState.LocketWithEleanor && !RomanceState.LocketSold)
+            if (RomanceState.RomanceConfirmed && RomanceState.LocketWithEleanor && !RomanceState.LocketSold && !RomanceState.LocketGiven && !StoryCoreFacts.LocketRefused)
             {
                 Dialogue locket = StoryEngine.Build(StoryV06Content.B_C22_B007);
                 Dialogue accept = StoryEngine.Build(StoryV06Content.B_C22_B008);
                 StoryEngine.Tail(accept).SetEndAction(() =>
                 {
-                    Advance(chapter, 24);
+                    StoryCoreFacts.Record(23); if(complete!=null)complete(); else Advance(chapter, 24);
                     StoryEngine.Dismiss();
                 });
                 Dialogue refuse = StoryEngine.Build(StoryV06Content.B_C22_B009);
                 StoryEngine.Tail(refuse).SetEndAction(() =>
                 {
-                    Advance(chapter, 24);
+                    StoryCoreFacts.RefuseLocket();
+                    StoryCoreFacts.Record(23); if(complete!=null)complete(); else Advance(chapter, 24);
                     StoryEngine.Dismiss();
                 });
                 MaidStory.GateOriginalLocket(locket,accept,refuse);
@@ -1432,14 +1465,14 @@ namespace EleanorRomance
                 Dialogue gone = StoryEngine.Build(StoryV06Content.B_C22_B010);
                 StoryEngine.Tail(gone).SetEndAction(() =>
                 {
-                    Advance(chapter, 24);
+                    StoryCoreFacts.Record(23); if(complete!=null)complete(); else Advance(chapter, 24);
                     StoryEngine.Dismiss();
                 });
                 DialogUIManager.Instance.StartDialogue(gone, forcedStart: true);
             }
             else
             {
-                Advance(chapter, 24);
+                StoryCoreFacts.Record(23); if(complete!=null)complete(); else Advance(chapter, 24);
                 StoryEngine.Dismiss();
             }
         }
@@ -1448,15 +1481,29 @@ namespace EleanorRomance
         // 24. Core conclusion
         // ------------------------------------------------------------------
 
-        internal static StoreClient CreateConclusionChapter()
+        internal static StoreClient CreateDeferredResolution()
         {
-            if (RomanceState.Romance == 2) RomanceState.Romance = 3;
+            var c=NewEleanorClient("resolve_deferred","eleanor_scav",StoreClient.ClientIntent.DIALOGUE);
+            var root=DualText.Build("v05_resolve_open");
+            var yes=StoryEngine.Text(L.Eleanor,L.Get("er_dual_resolution_ack"));
+            var friends=StoryEngine.Text(L.Eleanor,L.Get("er_dual_resolution_ack"));
+            DualText.Finish(yes,()=>StoryCoreFacts.Confess(1));
+            DualText.Finish(friends,()=>StoryCoreFacts.Confess(3));
+            StoryEngine.AddChoices(root,L.Get("er_prompt_future"),
+                new StoryEngine.Choice(L.Get("er_choice_future_confirm"),L.Get("er_choice_future_confirm_desc"),yes,null,()=>StoryEngine.CanConfess()),
+                new StoryEngine.Choice(L.Get("er_choice_future_friends"),L.Get("er_choice_future_friends_desc"),friends,null));
+            c.mainDialogue=root;c.CompleteClientCreation();return c;
+        }
+
+        internal static StoreClient CreateConclusionChapter(Dialogue supplied = null, System.Action complete = null)
+        {
+            if (RomanceState.Romance == 2) return CreateDeferredResolution();
             bool lover = RomanceState.RomanceConfirmed;
-            StoreClient client = NewEleanorClient("ch24", lover ? "eleanor1" : "eleanor_scav",
+            StoreClient client = NewEleanorClient(complete==null?"ch24":"dual_dr11", lover ? "eleanor1" : "eleanor_scav",
                 StoreClient.ClientIntent.DIALOGUE);
 
-            Dialogue root = StoryEngine.Chain(StoryV06Content.B_C23_B001, StoryV06Content.B_C23_B002);
-            StoryEngine.Append(root, lover ? StoryV06Content.B_C23_B003 : StoryV06Content.B_C23_B004);
+            Dialogue root = supplied ?? StoryEngine.Chain(StoryV06Content.B_C23_B001, StoryV06Content.B_C23_B002);
+            if(supplied==null)StoryEngine.Append(root, lover ? StoryV06Content.B_C23_B003 : StoryV06Content.B_C23_B004);
             Dialogue tail = StoryEngine.Tail(root);
             Dialogue gift = StoryEngine.Text(L.Eleanor, L.Get("er_line_end_perfume"));
             MaidStory.GateOriginalReward(root,gift);
@@ -1468,13 +1515,13 @@ namespace EleanorRomance
             }
             bool receipt = MaidWorldEvents.AppendReceipt(beforeClosing);
             beforeClosing = StoryEngine.Tail(beforeClosing);
+            if(receipt)beforeClosing.SetEndAction(MaidWorldEvents.SubmitReceipt);
             Dialogue closing = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_core_end"));
             beforeClosing.SetNextDialogue(closing);
-            closing.SetEndAction(() =>
+            DualText.FinishAll(root, () =>
             {
-                if (receipt) MaidWorldEvents.SubmitReceipt();
-                StoryDirector.CompleteCore();
-                StoryEngine.Dismiss();
+                StoryCoreFacts.FinishCore();
+                if(complete!=null)complete();
             });
 
             client.mainDialogue = root;

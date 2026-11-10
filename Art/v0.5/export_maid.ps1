@@ -76,7 +76,9 @@ public static class ERArtExport {
 '@
 $artRoot = $PSScriptRoot
 if($Variant -in @('Beauty','All')){
- [ERArtExport]::Export((Join-Path $artRoot 'masters/eleanor_maid_master.png'),(Join-Path $artRoot '../../Textures/Items/er_portrait_eleanor_maid_female_beauty.png'),288,212,54,144,158,64)
+ # Beauty uses the actual Maiden's Pawnshop face framing and source RGB.
+ & python (Join-Path $artRoot '../../tools/export_eleanor_beauty.py') --variant maid
+ if($LASTEXITCODE -ne 0){throw 'Beauty portrait export failed'}
 }
 if($Variant -in @('Vanilla','All')){
  [ERArtExport]::Export((Join-Path $artRoot 'masters/eleanor_maid_vanilla_master.png'),(Join-Path $artRoot '../../Textures/Items/er_portrait_eleanor_maid_female_vanilla.png'),288,212,54,144,158,48)

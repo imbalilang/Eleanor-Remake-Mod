@@ -10,39 +10,44 @@ function Gala-Client {
     $c=[EleanorRomance.GalaStory]::CreateVisit();Use-Client $c;return $c
 }
 
-# A: native estimate/retry/walkout and the common sample close on both paths.
-foreach($success in @($true,$false)){
+# A: chapter 19 is ordinary dialogue; retired appraisal records have no effect.
+foreach($legacy in @($false,$true)){
     New-MaidRun;[EleanorRomance.MaidState]::Enter(1)
-    $script:businessStock.Clear();$c=Main-Client 20
-    Finish-Dialogue $c.mainDialogue
-    Assert ([EleanorRomance.MaidInteractions]::Flag('lesson.opened')) 'Actual lesson intro did not open its record.'
-    $cash=$store.playerCash
-    if($success){[AppraisalServiceHelper]::OnEstimate($script:businessStock[0],100)}
-    else{
-        [AppraisalServiceHelper]::OnEstimate($script:businessStock[0],1000)
-        Assert ([EleanorRomance.MaidInteractions]::Number('lesson.result') -eq 0) 'A retry was treated as a final lesson result.'
-        $store.TryPlayerDismissCurrentClient($true)
+    [EleanorRomance.MaidState]::AddressAccepted=$legacy
+    if($legacy){
+        [EleanorRomance.MaidInteractions]::Flag('lesson.opened',$true)
+        [EleanorRomance.MaidInteractions]::Set('lesson.result',1)
+        [EleanorRomance.MaidState]::Flag('biz.fee.er_story_maid_m19',$true)
     }
-    Finish-Dialogue $ui.currentDialog
-    $result=if($success){1}else{2}
-    Assert ([EleanorRomance.MaidInteractions]::Number('lesson.result') -eq $result -and
-        [EleanorRomance.RomanceState]::Chapter -eq 21) 'Lesson feedback failed to rejoin the original chapter.'
-    Assert ($store.playerCash -eq $cash+$(if($success){35}else{0})) 'Lesson changed native fee arithmetic.'
+    $script:businessStock.Clear();$cash=$store.playerCash;$c=Main-Client 20
+    Assert ($c.clientIntent -eq [StoreClient+ClientIntent]::DIALOGUE -and
+        $null -eq $c.tryInterceptDismiss -and $null -eq $c.allDoneDialogue) 'Chapter 19 still waits for an appraisal or bell.'
+    Assert ((Has-MotivationBlock $c.mainDialogue 'm19_b005') -and
+        (Has-MotivationBlock $c.mainDialogue $(if($legacy){'m19_b007'}else{'m19_b006'}))) 'Direct relationship continuation lost its address variant.'
+    Finish-Dialogue $c.mainDialogue
+    Assert ([EleanorRomance.RomanceState]::Chapter -eq 21 -and
+        [EleanorRomance.MaidState]::AddressAccepted -and [EleanorRomance.MaidState]::DebutShown -and
+        $script:businessStock.Count -eq 0 -and $store.playerCash -eq $cash) 'Direct dialogue did not complete without appraisal stock/fees.'
+    Set-Partner;[EleanorRomance.MaidState]::BasicComplete=$true
+    [EleanorRomance.MaidState]::Flag('p3.paid',$true)
     foreach($claimed in @($false,$true)){
-        Set-Partner;[EleanorRomance.MaidState]::BasicComplete=$true
-        [EleanorRomance.MaidState]::Flag('p3.paid',$true)
-        [EleanorRomance.MaidInteractions]::Flag('lesson.echo',$false)
         [EleanorRomance.MaidState]::Flag('biz.sample.claimed',$claimed)
         [EleanorRomance.MaidState]::PendingVisit=25
         $c=[EleanorRomance.MaidStory]::CreateEvent(25);Use-Client $c
         Finish-Dialogue $c.mainDialogue;Leave-Trade $c
-        Assert ([EleanorRomance.MaidInteractions]::Flag('lesson.echo') -and [EleanorRomance.MaidState]::Progress -eq 25) "Sample claimed=$claimed lost the lesson echo."
+        Assert (!(Has-MotivationBlock $ui.currentDialog 'interaction_b004') -and
+            !(Has-MotivationBlock $ui.currentDialog 'interaction_b005') -and
+            [EleanorRomance.MaidState]::Progress -eq 25) 'Sample wrap-up retained a retired appraisal memory or blocked progress.'
     }
 }
-Dividend-Run 25
-$old=[EleanorRomance.StoryEngine]::Text('test','closing');[EleanorRomance.MaidInteractions]::AppendLessonEcho($old)
-Assert ($old.nextDialogue -eq $null) 'An old save invented a past lesson.'
-'PASS: lesson final outcomes, native retry/fee, chapter continuation and sample-claimed/unclaimed echoes without invented old history.'
+foreach($choice in 0..1){
+    New-MaidRun;[EleanorRomance.MaidState]::Enter(1)
+    [EleanorRomance.RomanceState]::KnewTrapUnwarned=$true
+    $c=Main-Client 20;Finish-Dialogue (Pick $c.mainDialogue $choice)
+    Assert ([EleanorRomance.MaidState]::Flag('reconciled') -and
+        [EleanorRomance.RomanceState]::Chapter -eq 21) 'Removing appraisal lost an existing reconciliation choice.'
+}
+'PASS: direct chapter 19 dialogue without appraisal/bell/fees, both address variants, both reconciliation choices and no retired sample memories.'
 
 # B: MotherState is deliberately zero before this chapter's final action.
 foreach($route in 1..2){foreach($early in @($false,$true)){
@@ -93,98 +98,4 @@ $c=[EleanorRomance.MaidDividends]::CreateVisit()
 Assert (!(Has-MotivationBlock $c.mainDialogue 'interaction_b006')) 'Customer echo replayed.'
 'PASS: customer-news result/two-day gates, conservative old-save start, exact-line dedupe and unchanged host dividend payment.'
 
-# D: no date/resource change; invitation and party each resume at a read cursor.
-Gala-Run
-Assert (![EleanorRomance.GalaStory]::Due(82) -and [EleanorRomance.GalaStory]::Due(83)) 'Old completed save did not receive a three-day invitation gap.'
-$station.dayCounter=83;$c=Gala-Client;$cash=$store.playerCash;$day=$station.dayCounter
-Assert (!(Has-MotivationBlock $c.mainDialogue 'interaction_b006')) 'Gala acquired unrelated business dialogue.'
-$c.mainDialogue.startAction.Invoke();$c.mainDialogue.ExecuteEndAction()
-$c=Gala-Client
-Assert ($c.mainDialogue.plainText -eq [EleanorRomance.MaidContent]::Get('gala_b001')[1].Key -and
-    [EleanorRomance.MaidState]::Int('gala.invite_line') -eq 1 -and [EleanorRomance.GalaStory]::Attempts -eq 1) 'Invitation restart lost its read cursor.'
-Finish-Dialogue $c.mainDialogue
-$accept=Pick $c.mainDialogue 0
-# Acceptance has five lines; stop two lines into the party, then rebuild.
-$node=$accept
-while($node -and $node.plainText -notlike '*gala_b004*'){$node.ExecuteEndAction();$node=$node.nextDialogue}
-Assert ($node -ne $null) 'Accepted invitation did not reach the party.'
-$node.ExecuteEndAction();$node=$node.nextDialogue;$node.ExecuteEndAction()
-$cursor=[EleanorRomance.MaidState]::Int('gala.ball_line')
-$c=Gala-Client
-Assert ($cursor -eq 2 -and [EleanorRomance.GalaStory]::Phase -eq 4) 'Party interruption was not saved.'
-Finish-Dialogue $c.mainDialogue
-Assert ([EleanorRomance.GalaStory]::Phase -eq 5 -and $store.playerCash -eq $cash -and $station.dayCounter -eq $day -and [EleanorRomance.MaidState]::PendingVisit -eq 0) 'Narrated party changed native cash/day or failed completion.'
-$events=[StoreEventManager]::new();$station.storeEventManager=$events
-[EleanorRomance.GalaStory]::TickNews($events)
-Assert (![bool]$events.IsEventActive([EleanorRomance.GalaStory]::NewsId)) 'Party news appeared on the same game day.'
-$station.dayCounter++
-$urgent=[StoreEvent]::new();$urgent.identifier='native_priority';$urgent.importance=9;$urgent.duration=2
-$events.ActivateEvent($urgent,$false,$false)
-[EleanorRomance.GalaStory]::TickNews($events)
-Assert ([EleanorRomance.GalaStory]::Phase -eq 5) 'Gala news displaced important native news.'
-$events=[StoreEventManager]::new();$station.storeEventManager=$events
-[EleanorRomance.MaidWorldEvents]::State=1
-[EleanorRomance.MaidState]::SetInt('world.due_day',$station.dayCounter)
-[EleanorRomance.GalaStory]::TickNews($events)
-Assert ([EleanorRomance.GalaStory]::Phase -eq 5) 'Gala news raced ahead of a due mother-review callback.'
-[EleanorRomance.MaidWorldEvents]::State=0
-[EleanorRomance.GalaStory]::TickNews($events);[EleanorRomance.GalaStory]::TickNews($events)
-Assert ([EleanorRomance.GalaStory]::Phase -eq 6 -and @($events.GetActiveEvents() | Where-Object identifier -eq 'er_gala_public_partner').Count -eq 1) 'Next-day native news failed or duplicated.'
-$c=[EleanorRomance.MaidDividends]::CreateVisit();Finish-Dialogue $c.mainDialogue
-Assert ([EleanorRomance.MaidState]::Flag('gala.reply')) 'News reply did not attach to an existing safe visitor.'
-'PASS: gala three-day gate, invitation/party read cursors, no cash/day changes, next-day news priority/deduplication and existing-visit reply.'
-
-foreach($book in @($true,$false)){
-    Gala-Run;$station.dayCounter=83;$c=Gala-Client;Finish-Dialogue $c.mainDialogue
-    Finish-Dialogue (Pick $c.mainDialogue 1)
-    Assert ([EleanorRomance.GalaStory]::Phase -eq 2 -and [EleanorRomance.GalaStory]::Attempts -eq 1) 'First delay failed.'
-    $station.dayCounter=89;$c=[EleanorRomance.MaidDividends]::CreateVisit()
-    Assert (!(Has-MotivationBlock $c.mainDialogue 'gala_b007')) 'Second invitation appeared before seven days.'
-    $station.dayCounter=90;[EleanorRomance.MaidState]::PendingVisit=915
-    $c=[EleanorRomance.MaidDividends]::CreateVisit();Use-Client $c
-    Finish-Dialogue $c.mainDialogue
-    Assert ([EleanorRomance.GalaStory]::Phase -eq 9 -and [EleanorRomance.GalaStory]::Attempts -eq 2 -and [EleanorRomance.MaidState]::PendingVisit -eq 915) 'Second invitation bypassed the choice or prematurely completed its host.'
-    Finish-Dialogue (Pick $c.mainDialogue $(if($book){0}else{1}))
-    Assert ([EleanorRomance.MaidState]::PendingVisit -eq 0) 'Second invitation lost its host completion.'
-    if($book){
-        Assert (![EleanorRomance.GalaStory]::Due(90) -and [EleanorRomance.GalaStory]::Due(91)) 'Booked visit was not due tomorrow.'
-        $station.dayCounter=93;$c=Gala-Client
-        Assert ((Has-MotivationBlock $c.mainDialogue 'gala_b009')) 'Delayed appointment did not acknowledge a different party.'
-        Finish-Dialogue $c.mainDialogue;Finish-Dialogue (Pick $c.mainDialogue 1)
-    }
-    $station.dayCounter++
-    $c=[EleanorRomance.MaidDividends]::CreateVisit();Finish-Dialogue $c.mainDialogue
-    Assert ([EleanorRomance.GalaStory]::Phase -eq 8 -and [EleanorRomance.GalaStory]::Attempts -eq 2 -and ![EleanorRomance.GalaStory]::Due(200)) 'Two declined invitations did not close with the solo reply.'
-}
-'PASS: seven-day second invitation, no default choice bypass, host completion, next-day booking, missed-party confirmation and maximum-two-invitation closure.'
-
-# Trade completion owns a shared closing node beyond the invitation choice.
-Gala-Run;$station.dayCounter=90;[EleanorRomance.GalaStory]::Phase=2
-[EleanorRomance.MaidState]::SetInt('gala.attempts',1)
-[EleanorRomance.MaidState]::SetInt('gala.retry_day',90)
-$null=[EleanorRomance.MaidBusiness]::AcceptOrder();$c=Biz-Client 910
-$store.TryPlayerDismissCurrentClient($true)
-Finish-Dialogue $ui.currentDialog
-Assert ([EleanorRomance.MaidState]::PendingVisit -eq 910 -and [EleanorRomance.GalaStory]::Phase -eq 9) 'Business host finished on the invitation prompt.'
-Finish-Dialogue (Pick $ui.currentDialog 0)
-Assert ([EleanorRomance.MaidState]::PendingVisit -eq 0 -and [EleanorRomance.GalaStory]::Phase -eq 3) 'Business host did not finish after the invitation answer.'
-'PASS: native trade-dismiss wrapper preserves second-invitation choices and settles its shared host closing only after the answer.'
-
-# Two portrait modes, plus hot-disable/missing-art and unrelated-scene fallback.
-Gala-Run;[EleanorRomance.MaidState]::PendingVisit=916
-$own.Sprites[[EleanorRomance.PortraitCompat]::GalaKey]=$sprite
-$beauty.IsEnabled=$false;[EleanorRomance.PortraitCompat]::Refresh()
-Assert ((Gala-Client).spriteName -eq 'eleanor1') 'Vanilla gala did not reuse the original Upper Level Eleanor.'
-$beauty.IsEnabled=$true;[EleanorRomance.PortraitCompat]::Refresh()
-$station.dayCounter=83;[EleanorRomance.MaidState]::PendingVisit=0;$store.storeClientManager.clientStack.Clear()
-Assert ([EleanorRomance.MaidStory]::TryQueue($store.storeClientManager,83) -and $store.storeClientManager.clientStack[0].spriteName -eq [EleanorRomance.PortraitCompat]::GalaKey) 'Real queue factory required its not-yet-written pending visit to select the gown.'
-$c=Gala-Client
-Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::GalaKey) 'Beauty gala did not select its local gown.'
-$beauty.IsEnabled=$false;[EleanorRomance.PortraitCompat]::Refresh();[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
-Assert ($c.spriteName -eq 'eleanor1') 'Disabling beauty left a stale gown key in the current visitor.'
-$beauty.IsEnabled=$true;[EleanorRomance.PortraitCompat]::Refresh();$own.Sprites.Remove([EleanorRomance.PortraitCompat]::GalaKey) | Out-Null
-Assert ((Gala-Client).spriteName -eq 'eleanor1') 'Missing gown failed its native fallback.'
-Assert ([EleanorRomance.PortraitCompat]::ResolveGala('foreign_client') -eq 'eleanor1') 'Gown escaped its scene.'
-[EleanorRomance.RomanceState]::MotherState=0
-Assert (![EleanorRomance.GalaStory]::Eligible -and [EleanorRomance.GalaStory]::CreateVisit() -eq $null) 'Gala ignored its living-mother relationship gate.'
-'PASS: native/beauty gown selection, disabled/missing-art fallback, scene isolation and relationship eligibility.'
+. (Join-Path $PSScriptRoot 'test_gala_closing_routes.ps1')

@@ -39,6 +39,37 @@ def main() -> int:
         return 1
 
     errors = []
+    # The planned design is deliberately separate from the shipped DATA/CHART.
+    plan_path = root / "docs" / "后宫线_v0.5_声望检查点与问题修复_执行参数.json"
+    plan = {}
+    plan_marker = 'id="dual-v05-plan"'
+    if plan_path.exists():
+        try:
+            plan = json.loads(plan_path.read_text(encoding="utf-8"))
+            if plan.get("status") == "planned_not_implemented":
+                if plan_marker not in html:
+                    errors.append("dual v0.5 plan exists but its pending-design notice is missing")
+                if [g.get("reputation") for g in plan.get("gates", [])] != [50, 100, 150]:
+                    errors.append("dual v0.5 reputation checkpoints must be 50/100/150")
+                policy = plan.get("policy", {})
+                if not policy.get("mainlineWaits") or not policy.get("nativeCustomersContinue"):
+                    errors.append("dual v0.5 must wait at gates while native business continues")
+                if policy.get("failToOrdinaryWhenBelowGate") or policy.get("reputationConsumed"):
+                    errors.append("dual v0.5 gates must not consume reputation or reject the route")
+                if "v0.5" not in maintenance.read_text(encoding="utf-8"):
+                    errors.append("route maintenance is missing the planned dual v0.5 rules")
+        except (ValueError, TypeError, AttributeError) as exc:
+            errors.append("invalid dual v0.5 plan: " + str(exc))
+    if plan_path.exists() and plan.get('status') == 'implemented_pending_playtest':
+        if data.get('dualDesignVersion') != '0.5':errors.append('runtime map missing dual v0.5 implementation')
+        for i in range(1,4):
+            if f'HG{i}' not in html:errors.append('runtime reputation checkpoint missing')
+        if [g.get('reputation') for g in plan['gates']] != [50,100,150]:errors.append('checkpoint threshold drift')
+        if '待实施的声望检查点' in html:errors.append('stale planned-only banner')
+        for day in data.get('days',[]):
+            if day.get('id') == 'dr05' and any('暂缓' in str(c) for c in day.get('choices',[])):errors.append('deferred confession returned')
+        for edge in (json.JSONDecoder().raw_decode(html.split('const CHART = ',1)[1])[0]['edges']):
+            if edge.get('from','').startswith('HG') and edge.get('to','').startswith('E'):errors.append('reputation gate exits to an ending')
     version = re.search(r"<ModVersion>([^<]+)</ModVersion>", manifest.read_text(encoding="utf-8"))
     if not version:
         errors.append("manifest ModVersion missing")
@@ -112,7 +143,7 @@ def main() -> int:
 
     days = data.get("days", [])
     required_days = {"start", "maid_entry", "drive", "threat", "direction", "resolution",
-                     "dual_entry", "dr05", "dr07", "dr11", "dr14", "dr15", "dr17", "dr20"}
+                     "dual_entry", "dr05", "dr07", "dr11", "dr14", "dr15", "dr17", "dr20", "gala_closing"}
     day_ids = {d.get("id") for d in days}
     missing_days = required_days - day_ids
     if missing_days:

@@ -1,9 +1,11 @@
 # MOD API 安全更新与正式版/测试版兼容规范
 
-更新日期：2026-11-09
+更新日期：2026-11-10
 适用：Eleanor Story Expand 0.77 之后的开发分支
 
 ## 结论摘要
+
+- 0.82补充修复：0.81晚会两处在`StoreUIManager`上直接启动的协程触发`threads`弃用警告，现改为`ModHelper.StartCoroutine`托管。发布脚本必须同时检查`Pending`、`DeprecatedCapabilities`与`UsesDeprecatedCapability`；`Capabilities`、`Findings`、`HardFlags`全空仍可能有弃用警告。修正后的扫描对旧0.81包明确失败，不能沿用旧“零发现”结论。
 
 - 官方 Modding API 文档已于 2026-11-08 更新（`dragonpan2/probably-stolen-modding` 提交 `ae16103`，100-Rev13 Future Modding Security Changes），对应游戏公告 1.0.0.13 中提到的 **2026-12-10** 安全更新。
 - 2026-12-10 起，`reflection-external`、`native`、`dynamic-code`、`threads` 四种能力直接拒绝；声明 `files` 或 `network` 的创意工坊模组需要开发者验证。

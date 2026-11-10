@@ -3,60 +3,95 @@
     "file": "portraits/er_portrait_lydia_female_vanilla.png",
     "width": 288,
     "height": 212,
-    "format": "Format32bppArgb",
+    "mode": "RGBA",
     "alphaValues": [
       0,
       255
     ],
-    "opaqueColors": 48,
-    "sha256": "3661A8E7A0C5E4BBAE98EDCF2A327953E6CA6DE96A62E8E360C1B5E5ECB1540F"
+    "alpha_bbox": [
+      81,
+      42,
+      206,
+      212
+    ],
+    "opaqueColors": 8575,
+    "sha256": "9A2D7A43469D7A9E41E06BD6E6A4578AA81F1F4567803ED37C2B4A59BCBDA358",
+    "format": "Format32bppArgb"
   },
   {
     "file": "portraits/er_portrait_lydia_female_beauty.png",
     "width": 288,
     "height": 212,
-    "format": "Format32bppArgb",
+    "mode": "RGBA",
     "alphaValues": [
       0,
       255
     ],
-    "opaqueColors": 64,
-    "sha256": "7054EEB34090B60D876097F3D8BBBA699E4660390CD7143BFD7C2C45BE58A9C1"
+    "alpha_bbox": [
+      83,
+      60,
+      205,
+      212
+    ],
+    "opaqueColors": 8389,
+    "sha256": "5F297C4C8CB0AADDC40D7ECE0BA1697FD4EADBF0C4B4D5A2AA1CCB89821F2C94",
+    "format": "Format32bppArgb"
   },
   {
     "file": "portraits/er_portrait_lydia_date_female_vanilla.png",
     "width": 288,
     "height": 212,
-    "format": "Format32bppArgb",
+    "mode": "RGBA",
     "alphaValues": [
       0,
       255
     ],
-    "opaqueColors": 48,
-    "sha256": "2D6362B5EA1D3EA7D7EEDA1A18C2D295509AD306FDDC19D40E809F3B21C9C37F"
+    "alpha_bbox": [
+      83,
+      42,
+      204,
+      212
+    ],
+    "opaqueColors": 8423,
+    "sha256": "E104F1F61588ED3C485D9F6C9E2A0998BA274CD003590C53B0C495512D3FA66A",
+    "format": "Format32bppArgb"
   },
   {
     "file": "portraits/er_portrait_lydia_date_female_beauty.png",
     "width": 288,
     "height": 212,
-    "format": "Format32bppArgb",
+    "mode": "RGBA",
     "alphaValues": [
       0,
       255
     ],
-    "opaqueColors": 64,
-    "sha256": "74386073DBF8FF75A989632725E96A1958C0E9F0C7A76D6DBEE0804CA9B24BCF"
+    "alpha_bbox": [
+      85,
+      60,
+      204,
+      212
+    ],
+    "opaqueColors": 8024,
+    "sha256": "6670A243CB15589BBF0E1B3E76218BC5051286C907072803345C7B4CCEE92F10",
+    "format": "Format32bppArgb"
   },
   {
     "file": "items/er_lydia_recommendation_plaque.png",
     "width": 64,
     "height": 64,
-    "format": "Format32bppArgb",
+    "mode": "RGBA",
     "alphaValues": [
       0,
       255
     ],
+    "alpha_bbox": [
+      6,
+      14,
+      58,
+      50
+    ],
     "opaqueColors": 16,
-    "sha256": "387A22DF796ED7B6318FC437E60BFA4ABF3F0A2B94D3FED21A55450FDFB4D913"
+    "sha256": "387A22DF796ED7B6318FC437E60BFA4ABF3F0A2B94D3FED21A55450FDFB4D913",
+    "format": "Format32bppArgb"
   }
 ]

@@ -123,9 +123,9 @@
   "er_choice_refuse_locket_desc": "The locket stays with her.",
   "er_prompt_gift_return": "(She sets the material aside.)",
   "er_choice_accept_gift": "Accept it.",
-  "er_choice_accept_gift_desc": "She has started noticing what you need.",
-  "er_choice_pay_gift": "Pay the normal price.",
-  "er_choice_pay_gift_desc": "You do not want her gift to become another debt.",
+  "er_choice_accept_gift_desc": "She has started noticing what you need. If there is no room, you can choose again.",
+  "er_choice_pay_gift": "Pay the normal price (20 credits).",
+  "er_choice_pay_gift_desc": "Pay 20 credits rather than turn her gift into another debt. No charge if it cannot be placed; you can choose again.",
   "er_choice_refuse_gift": "Keep it and sell it.",
   "er_choice_refuse_gift_desc": "She is still saving for the investigator.",
   "er_notice_true_unlock": "A complete romance route has been reached.",
@@ -157,5 +157,6 @@
   "er_line_cash_aid_2": "...She shared her portion with me yesterday.",
   "er_line_cash_aid_3": "The things I said before... I was wrong. I'm sorry.",
   "er_line_cash_aid_4": "Eat first. We can talk later.",
-  "er_line_cash_aid_5": "...Don't go telling everyone about today."
+  "er_line_cash_aid_5": "...Don't go telling everyone about today.",
+  "er_return_gift_retry": "The item could not be delivered. Make room and have 20 credits ready if paying; you have not been charged."
 }

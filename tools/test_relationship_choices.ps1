@@ -47,14 +47,15 @@ foreach($early in @($false,$true)){
     [EleanorRomance.RomanceState]::Route=1;$c=Main-Client 17;Finish-Dialogue $c.mainDialogue
     Assert ([EleanorRomance.MaidState]::Active -and [EleanorRomance.MaidState]::Flag('reconciled') -and
         [EleanorRomance.RomanceState]::MotherState -eq 1 -and $store.playerCash -eq $cash) 'Handback failed the shared rescue/trust continuation.'
-    $c=Main-Client 20;Finish-Dialogue $c.mainDialogue;$store.TryPlayerDismissCurrentClient($true)
-    Assert ((Choice-Node $ui.currentDialog) -eq $null) 'A repaired new run was tested again in chapter 19.'
+    $c=Main-Client 20
+    Assert ((Choice-Node $c.mainDialogue) -eq $null) 'A repaired new run was tested again in chapter 19.'
+    Finish-Dialogue $c.mainDialogue
 }
 foreach($answer in 0..1){
     New-MaidRun;[EleanorRomance.MaidState]::Enter(2)
     [EleanorRomance.MaidState]::MotivationVersion=0;[EleanorRomance.RomanceState]::KnewTrapUnwarned=$true
-    $cash=$store.playerCash;$c=Main-Client 20;Finish-Dialogue $c.mainDialogue;$store.TryPlayerDismissCurrentClient($true)
-    $reply=Pick $ui.currentDialog $answer
+    $cash=$store.playerCash;$c=Main-Client 20
+    $reply=Pick $c.mainDialogue $answer
     Assert (![EleanorRomance.MaidState]::Flag('reconciled')) 'Legacy repair committed on menu selection.'
     Finish-Dialogue $reply
     Assert ([EleanorRomance.MaidState]::Active -and [EleanorRomance.MaidState]::Flag('reconciled') -and

@@ -117,7 +117,7 @@ $station.dayCounter=70;[EleanorRomance.MaidState]::Flag('p4.paid',$true);[Eleano
 $cash=$store.playerCash;$c=[EleanorRomance.MaidStory]::CreateEvent(27);Use-Client $c;Leave-Trade $c
 Assert ($store.playerCash -eq $cash+1000 -and [EleanorRomance.MaidDividends]::DailyRate -eq 600 -and
     @((Motivation-Nodes $ui.currentDialog) | Where-Object plainText -eq 'er_div_established').Count -eq 1) 'Launch did not settle the old rate and introduce the new one.'
-foreach($id in @(907,911,912,913,914)){
+foreach($id in @(907,911,912,914)){
     Dividend-Run 28;[EleanorRomance.MaidDividends]::Accrue();$station.dayCounter=64
     [EleanorRomance.MaidState]::PendingVisit=$id;$cash=$store.playerCash
     $c=[EleanorRomance.MaidStory]::CreateEvent($id);Use-Client $c
@@ -131,4 +131,4 @@ $c=[EleanorRomance.MaidStory]::CreateEvent(26);Use-Client $c;Leave-Trade $c
 Assert ($store.playerCash -eq $cash -and [EleanorRomance.MaidDividends]::Pending -eq 2400) 'Another customer handed out Eleanor dividends.'
 $description=[EleanorRomance.MaidProjects]::Description([EleanorRomance.MaidProjects]::Find('er_maid_p4_cash'))
 Assert ($description.Contains('er_div_project_established') -and $description.Contains('er_div_summary')) 'Wilde project omitted the reward or ledger summary.'
-'PASS: first-order/launch numeric introductions, stage-rate boundary, five existing Eleanor visit carriers, no third-party payouts and concise Wilde reward display.'
+'PASS: first-order/launch numeric introductions, stage-rate boundary, four existing Eleanor visit carriers, no third-party payouts and concise Wilde reward display.'

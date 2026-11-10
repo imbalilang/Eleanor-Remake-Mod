@@ -7,9 +7,14 @@ namespace EleanorRomance
     {
         public static StoreClient CreateScene(string id)
         {
+            if(id.StartsWith("wait_",StringComparison.Ordinal))return DualDaily.Create(id);
             switch (id)
             {
                 case "entry": return CreateEntry();
+                case "dr02": return CreatePlaqueScene();
+                case "resolve": return CreateDr05();
+                case "coop": return EleanorStory.CreateCooperationChapter(()=>DualDirector.CompleteScene("coop"));
+                case "claim": return CreateClaim();
                 case "dr03": return CreateDr03();
                 case "dr04": return CreateDr04();
                 case "dr05": return CreateDr05();
@@ -29,7 +34,6 @@ namespace EleanorRomance
                 case "dr20": return CreateDr20();
                 case "dual_epilogue": return CreateDualEpilogue();
                 case "daily": return CreateDaily();
-                case "reputation": return CreateReputation();
                 default:
                     ModEntry.LogError("Dual scene body not connected yet: " + id);
                     return null;
@@ -61,56 +65,33 @@ namespace EleanorRomance
 
         private static StoreClient CreateEntry()
         {
-            StoreClient client = Lydia("dual_entry");
-            bool legacy = DualState.Entry == 2;
-
-            // An interrupted first half resumes at the plaque conversation.
-            if (!legacy && DualState.Entry == 1 && !DualState.Done("dr01"))
+            var client=Lydia("dual_entry");
+            if(DualState.Flag("entry.explicit") && DualState.HasHistory)
             {
-                Dialogue resume = BuildEntrySecondHalf();
-                Finish(client, resume, "entry");
-                return Ready(client, resume);
+                var resume=DualText.Build("dr01_accept");Finish(client,resume,"entry");return Ready(client,resume);
             }
-
-            Dialogue open = DualText.Build(legacy ? "legacy_entry_open" : "dr01_open",
-                legacy ? "legacy_entry_notice" : "dr01_notice");
-            if (open == null)
-            {
-                open = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_dual_entry_resume"));
-            }
-
-            if (legacy)
-            {
-                // Old lovers do not repeat the original confession. The
-                // dedicated invitation leads straight into the extension.
-                Dialogue legacyOpen = DualText.Build(
-                    RomanceState.WorkState > 0 ? "dr_legacy_has_job" : "dr_legacy_no_job",
-                    "dr_legacy_common");
-                if (RomanceState.WorkState > 0) DualText.Append(legacyOpen, "dr_legacy_work_fact");
-                if (legacyOpen == null) legacyOpen = open;
-                Dialogue accepted = DualText.Build("dr_legacy_accept");
-                Dialogue declined = DualText.Build("dr_legacy_decline");
-                if (accepted == null) accepted = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr_legacy_accept_label"));
-                if (declined == null) declined = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr_legacy_decline_label"));
-                DualText.Choices(legacyOpen, "er_dual_prompt",
-                    DualText.Choice("dr_legacy_accept", accepted),
-                    DualText.Choice("dr_legacy_decline", declined, () => { DualState.Entry = 3; DualState.Relation = 3; }));
-                Finish(client, legacyOpen, "entry", () => { if (DualState.Entry == 3) DualState.Relation = 3; });
-                return Ready(client, legacyOpen);
-            }
-
-            Dialogue accept = DualText.Build("dr01_accept");
-            Dialogue decline = DualText.Build("dr01_decline");
-            Dialogue second = BuildEntrySecondHalf();
-            StoryEngine.Tail(accept).SetNextDialogue(second);
-            DualText.Choices(open, "er_dual_prompt",
-                DualText.Choice("dr01_accept", accept, () => DualState.Accept(1)),
-                DualText.Choice("dr01_decline", decline, () => DualState.Entry = 3));
-            Finish(client, open, "entry", () =>
-            {
-                if (DualState.Entry == 3) DualState.Relation = 3;
-            });
-            return Ready(client, open);
+            bool legacy=DualState.Flag("migration.consent_pending") && RomanceState.RomanceConfirmed;
+            var open=DualText.Build(legacy?"v05_legacy_entry":"dr01_open",legacy?"v05_entry_notice":"dr01_notice");
+            if(!legacy)DualText.Append(open,"v05_entry_notice");
+            var accept=DualText.Build("dr01_accept");
+            var decline=DualText.Build("dr01_decline");
+            DualText.Choices(open,"er_dual_prompt",
+                DualText.Choice("dr01_accept",accept,()=>
+                {DualState.Accept(legacy?2:1);DualState.Flag("migration.consent_pending",false);}),
+                DualText.Choice("dr01_decline",decline,()=>
+                {DualState.Entry=3;DualState.Relation=3;DualState.Flag("migration.consent_pending",false);}));
+            Finish(client,open,"entry");return Ready(client,open);
+        }
+        private static StoreClient CreatePlaqueScene()
+        {
+            var c=Lydia("dual_dr02");var root=DualText.Build("v05_reward50");
+            Finish(c,root,"dr02",()=>{if(!DualBusiness.GivePlaque())StoryDirector.Notify(L.Get("er_dual_plaque_full"));});
+            return Ready(c,root);
+        }
+        private static StoreClient CreateClaim()
+        {
+            var c=StoryCoreFacts.PerfumePending?Eleanor("dual_claim"):Lydia("dual_claim");var root=DualText.Build("v05_claim_open");DualRewards.AppendClaims(root);
+            Finish(c,root,"claim",()=>DualState.LastDailyDay=DualState.Today);return Ready(c,root);
         }
 
         private static StoreClient Eleanor(string id, string sprite = "eleanor1")
@@ -120,64 +101,35 @@ namespace EleanorRomance
 
         private static StoreClient CreateDr03()
         {
-            StoreClient client = Eleanor("dual_dr03");
-            Dialogue root = DualText.Build("dr03_open",
-                DualBusiness.PlaquePlaced() ? "dr03_plaque" : "dr03_no_plaque");
-            if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_entry_resume"));
-            Finish(client, root, "dr03");
-            return Ready(client, root);
+            return EleanorStory.CreateAfterReunionChapter(null,()=>DualText.Build("dr03_open",
+                DualBusiness.PlaquePlaced()?"dr03_plaque":"dr03_no_plaque"),()=>DualDirector.CompleteScene("dr03"));
         }
 
         private static StoreClient CreateDr04()
         {
-            StoreClient client = Lydia("dual_dr04");
-            string feedback = DualState.FirstTraded ? "dr04_feedback_success"
-                : DualState.FirstBusiness == 4 ? "dr04_feedback_failed"
-                : "dr04_feedback_none";
-            Dialogue root = DualText.Build(feedback, "dr04_consult_open", "dr04_consult");
-            if (root == null) root = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_entry_resume"));
-            Action plaque = AppendPlaqueFollowup(root);
-            Finish(client, root, "dr04", plaque);
-            return Ready(client, root);
+            var c=Lydia("dual_dr04");var root=DualText.Build("v05_dr04_feedback","dr04_consult_open","dr04_consult");
+            DualRewards.AppendClaims(root);Finish(c,root,"dr04");return Ready(c,root);
         }
 
         private static StoreClient CreateDr05()
         {
-            if (!StoryEngine.CanConfess() && !RomanceState.RomanceConfirmed)
+            var c=Eleanor("dual_dr05");
+            var root=DualText.Build(RomanceState.Romance==2?"v05_resolve_open":"dr05_open");
+            var friend=DualText.Build("dr05_friend");
+            DualText.Finish(friend,()=>
+            {StoryCoreFacts.Confess(3);StoryCoreFacts.CompleteReplacement(20);DualState.Relation=3;DualDirector.CompleteScene("dr05");});
+            if(!StoryEngine.CanConfess() && !RomanceState.RomanceConfirmed)
             {
-                ModEntry.Log("Dual confession deferred: original confession conditions are not met.");
-                return null;
+                root=StoryEngine.Build(StoryV06Content.B_C19_B006);
+                DualText.Finish(root,()=>{StoryCoreFacts.Confess(3);StoryCoreFacts.CompleteReplacement(20);DualState.Relation=3;DualDirector.CompleteScene("dr05");});
             }
-            StoreClient client = Eleanor("dual_dr05");
-            Dialogue root = DualText.Build("dr05_open");
-            if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_entry_resume"));
-
-            Dialogue confess = DualText.Build("dr05_confess");
-            Dialogue defer = DualText.Build("dr05_defer");
-            Dialogue friend = DualText.Build("dr05_friend");
-            if (confess == null) confess = StoryEngine.Text(L.Player, L.Get("er_dual_choice_dr05_confess_label"));
-            if (defer == null) defer = StoryEngine.Text(L.Player, L.Get("er_dual_choice_dr05_defer_label"));
-            if (friend == null) friend = StoryEngine.Text(L.Player, L.Get("er_dual_choice_dr05_friend_label"));
-
-            DualText.Finish(confess, () =>
+            else
             {
-                RomanceState.Romance = 1;
-                DualState.Complete("dr05");
-                DualState.LastImportantDay = DualState.Today;
-            });
-            DualText.Finish(defer, () => DualDirector.CompleteScene("dr05"));
-            DualText.Finish(friend, () =>
-            {
-                RomanceState.Romance = 4;
-                DualState.Relation = 3;
-                DualState.CooldownUntil = DualState.Today + 7;
-                DualDirector.CompleteScene("dr05");
-            });
-            DualText.Choices(root, "er_dual_prompt",
-                DualText.Choice("dr05_confess", confess),
-                DualText.Choice("dr05_defer", defer),
-                DualText.Choice("dr05_friend", friend));
-            return Ready(client, root);
+                var yes=DualText.Build("dr05_confess");
+                DualText.Finish(yes,()=>{StoryCoreFacts.Confess(1);StoryCoreFacts.CompleteReplacement(20);DualDirector.CompleteScene("dr05");});
+                DualText.Choices(root,"er_dual_prompt",DualText.Choice("dr05_confess",yes),DualText.Choice("dr05_friend",friend));
+            }
+            return Ready(c,root);
         }
 
         private static StoreClient CreateDr06()
@@ -191,53 +143,26 @@ namespace EleanorRomance
 
         private static StoreClient CreateDr07()
         {
-            StoreClient client = Lydia("dual_dr07");
-            string result = DualState.FirstTraded ? "dr07_fair" : "dr07_none";
-            Dialogue root = DualText.Build(result,
-                RomanceState.RomanceConfirmed ? "dr07_confirmed" : "dr07_unconfirmed",
-                "dr07_business");
-            if (root == null) root = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_entry_resume"));
-
-            Dialogue book = DualText.Build("dr07_booked");
-            Dialogue decline = DualText.Build("dr07_declined");
-            if (book == null) book = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr07_book_label"));
-            if (decline == null) decline = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr07_decline_label"));
-            DualText.Finish(book, () =>
-            {
-                DualBusiness.ArrangeSecondBusiness(DualState.Today + 1);
-                DualDirector.CompleteScene("dr07");
-            });
-            DualText.Finish(decline, () => DualDirector.CompleteScene("dr07"));
-            DualText.Choices(root, "er_dual_prompt",
-                DualText.Choice("dr07_book", book),
-                DualText.Choice("dr07_decline", decline));
-            return Ready(client, root);
+            var c=Lydia("dual_dr07");var root=DualText.Build("v05_dr07_open","dr07_confirmed");
+            Finish(c,root,"dr07",()=>StoryCoreFacts.CompleteReplacement(22));return Ready(c,root);
         }
 
         private static StoreClient CreateDr08()
         {
-            StoreClient client = Eleanor("dual_dr08");
-            string job = RomanceState.Route == 2 ? "dr08_job_b" : "dr08_job_a";
-            string mother = MaidWorldEvents.Acquitted ? "dr08_mother_cleared" : "dr08_mother_pending";
-            Dialogue root = DualText.Build(job, mother, "dr08_common");
-            if (RomanceState.RomanceConfirmed) DualText.Append(root, "dr08_lover");
-            if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_entry_resume"));
-            Finish(client, root, "dr08", () =>
-            {
-                RomanceState.WorkState = RomanceState.Route == 2 ? 2 : 1;
-            });
-            return Ready(client, root);
+            var c=Eleanor("dual_dr08");
+            string job=RomanceState.WorkState>0?"v05_dr08_existing":RomanceState.Route==2?"dr08_job_b":"dr08_job_a";
+            string mother=RomanceState.Route==1?"dr08_mother_a":MaidWorldEvents.Acquitted?"dr08_mother_cleared":"dr08_mother_pending";
+            var root=DualText.Build(job,mother,"dr08_common","dr08_lover");
+            StoryEngine.Tail(root).SetEndAction(()=>EleanorStory.FinishFuture(c,23,()=>
+            {StoryCoreFacts.CompleteReplacement(23);DualDirector.CompleteScene("dr08");}));
+            return Ready(c,root);
         }
 
         private static StoreClient CreateDr09()
         {
-            StoreClient client = Lydia("dual_dr09");
-            Dialogue root = DualText.Build("dr09_open",
-                DualState.SecondTraded ? "dr09_business_success" : "dr09_business_none");
-            if (root == null) root = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_entry_resume"));
-            Action plaque = AppendPlaqueFollowup(root);
-            Finish(client, root, "dr09", plaque);
-            return Ready(client, root);
+            var c=Lydia("dual_dr09");var root=DualText.Build("v05_reward100","dr09_open");
+            DualRewards.AppendClaims(root);
+            Finish(c,root,"dr09",()=>{if(DualProgression.Earned(2))DualRewards.Give(2);});return Ready(c,root);
         }
 
         private static StoreClient CreateDr10()
@@ -259,29 +184,17 @@ namespace EleanorRomance
 
         private static StoreClient CreateDr11()
         {
-            StoreClient client = Eleanor("dual_dr11", "eleanor1");
-            Dialogue root = DualText.Build("dr11_open");
-            if (DualState.SecondTraded) DualText.Append(root, "dr11_add");
-            DualText.Append(root, "dr12_open");
-            if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_entry_resume"));
-            DualText.Finish(root, () =>
-            {
-                StoryEngine.GiveSelfRefillingPerfume();
-                DualState.CoreTakenOver = true;
-                DualState.CoreCommitted = true;
-                if (RomanceState.Chapter < RomanceState.ChapterComplete)
-                    StoryDirector.CompleteCore();
-                DualDirector.CompleteScene("dr11");
-            });
-            return Ready(client, root);
+            var root=DualText.Build("dr11_open","dr12_open");
+            return EleanorStory.CreateConclusionChapter(root,()=>
+            {DualState.CoreTakenOver=true;DualState.CoreCommitted=true;DualDirector.CompleteScene("dr11");});
         }
 
         private static StoreClient CreateDr13()
         {
             StoreClient client = Lydia("dual_dr13");
-            Dialogue root = DualText.Build("dr13_open", "dr13_door");
+            Dialogue root = DualText.Build("v05_reward150", "dr13_open", "dr13_door");
             if (root == null) root = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_entry_resume"));
-            Finish(client, root, "dr13");
+            Finish(client, root, "dr13",()=>{if(DualProgression.Earned(3))DualRewards.Give(3);});
             return Ready(client, root);
         }
 
@@ -346,6 +259,8 @@ namespace EleanorRomance
                 // Only after both independent agreements: the choice click
                 // alone must not create the relationship.
                 DualState.Relation = 2;
+                DualState.ScavSource = RomanceState.ScavAssist ? 1 : 0;
+                DualState.Flag("scav.transferred", true);
                 DualDirector.CompleteScene("dr17");
             });
             DualText.Choices(root, "er_dual_prompt",
@@ -389,7 +304,7 @@ namespace EleanorRomance
             Dialogue root = DualText.Build("dr20_arrival", "dr20_gathering",
                 DualBusiness.PlaquePlaced() ? "dr20_plaque" : "dr20_no_plaque",
                 "dr20_closing");
-            if (DualState.FirstTraded || DualState.SecondTraded) DualText.Append(root, "dr20_business_extra");
+
             if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_entry_resume"));
             Finish(client, root, "dr20", () =>
             {
@@ -402,9 +317,13 @@ namespace EleanorRomance
         private static StoreClient CreateDualEpilogue()
         {
             StoreClient client = Eleanor("dual_epilogue", "eleanor1");
+            string worldBlock = RomanceState.Route != 2 ? "dr_epilogue_route_a"
+                : MaidWorldEvents.Acquitted ? "dr_epilogue_route_b_acquitted"
+                : MaidWorldEvents.State > 0 ? "dr_epilogue_route_b"
+                : "dr_epilogue_route_b_unsubmitted";
             Dialogue root = DualText.Build("dr_epilogue_safe",
-                RomanceState.Route == 2 ? "dr_epilogue_route_b" : "dr_epilogue_route_a",
-                DualState.FirstTraded || DualState.SecondTraded ? "dr_epilogue_plaque_listed"
+                worldBlock,
+                DualBusiness.PlaquePlaced() ? "dr_epilogue_plaque_listed"
                     : DualState.PlaqueReceived ? "dr_epilogue_plaque_held"
                     : "dr_epilogue_plaque_none");
             if (root == null) root = StoryEngine.Text(L.Eleanor, L.Get("er_dual_notice_ending"));
@@ -419,6 +338,7 @@ namespace EleanorRomance
                 : Eleanor("dual_daily_" + index, "eleanor1");
             Dialogue root = DualText.Build("dr_daily_" + index + "_open");
             if (root == null) root = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_dual_entry_resume"));
+            DualRewards.AppendClaims(root);
             DualText.Finish(root, () =>
             {
                 DualState.DailyIndex = index % 7;
@@ -428,68 +348,5 @@ namespace EleanorRomance
             return Ready(client, root);
         }
 
-        private static Action AppendPlaqueFollowup(Dialogue root)
-        {
-            if (root == null) return null;
-            if (DualState.PlaqueReceived && !DualBusiness.PlaqueExists())
-                DualBusiness.MarkPlaqueLost();
-            if (DualBusiness.CanReissuePlaque()
-                || (!DualState.PlaqueReceived && DualState.Done("dr02") && DualState.PlaqueRetryDay >= 0))
-            {
-                DualText.Append(root, "dr_plaque_pickup");
-                return () => DualBusiness.GivePlaque();
-            }
-            if (DualState.PlaqueReceived && !DualBusiness.PlaquePlaced())
-            {
-                DualText.Append(root, "dr_plaque_removed");
-                return null;
-            }
-            if (DualState.PlaqueReceived && DualBusiness.PlaquePlaced()
-                && !DualBusiness.HasFirstItem() && DualState.FirstBusiness == 0)
-            {
-                DualText.Append(root, "dr_plaque_no_stock");
-            }
-            return null;
-        }
-
-        private static StoreClient CreateReputation()
-        {
-            StoreClient client = Lydia("dual_reputation");
-            Dialogue root = DualText.Build("dr_biz_reputation_open");
-            if (!DualBusiness.PlaquePlaced()) DualText.Append(root, "dr_biz_reputation_removed");
-            if (root == null) root = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_biz_feedback_notice"));
-            DualText.Finish(root, () =>
-            {
-                DualState.FeedbackPending = false;
-                DualState.FeedbackShown = true;
-                DualState.CooldownUntil = DualState.Today + 2;
-                DualDirector.CompleteScene("reputation");
-            });
-            return Ready(client, root);
-        }
-
-        private static Dialogue BuildEntrySecondHalf()
-        {
-            bool hasStock = DualBusiness.HasFirstItem();
-            Dialogue plaque = DualText.Build("dr02_open", hasStock ? "dr02_stock" : "dr02_no_stock", "dr02_plaque");
-            Dialogue take = DualText.Build("dr02_accept", "dr02_leave");
-            Dialogue hold = DualText.Build("dr02_hold", "dr02_leave");
-            if (take == null) take = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr02_accept_plaque_label"));
-            if (hold == null) hold = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr02_hold_plaque_label"));
-            DualText.Choices(plaque, "er_dual_prompt",
-                DualText.Choice("dr02_accept_plaque", take, () =>
-                {
-                    if (!DualBusiness.GivePlaque())
-                    {
-                        StoryDirector.Notify(L.Get("er_dual_plaque_full"));
-                        DualState.PlaqueRetryDay = DualState.Today + 1;
-                    }
-                }),
-                DualText.Choice("dr02_hold_plaque", hold, () =>
-                {
-                    DualState.PlaqueRetryDay = DualState.Today + 1;
-                }));
-            return plaque;
-        }
     }
 }

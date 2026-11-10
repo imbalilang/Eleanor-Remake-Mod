@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Compile Content/dual_romance_v04.json into C# arrays and localization pairs.
 
-The JSON is the source of truth created from the v0.4 script. This module is
+The stable JSON path is the source of truth, now upgraded to design v0.5. This module is
 called by build_content.py so the mod keeps a single CSV generation path.
 """
 from __future__ import annotations

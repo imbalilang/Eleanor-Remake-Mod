@@ -340,7 +340,6 @@ namespace EleanorRomance
         private static StoreClient CreateGrowingCloser()
         {
             var c=Eleanor("m19",true);var root=MaidText.Build("m19_b001");
-            var wrap=MaidBusiness.Say("appraisal_wrap");
             var after=MaidText.Build("m19_b005");
             if(MaidState.AddressAccepted)MaidText.Append(after,"m19_b007");
             else
@@ -353,19 +352,17 @@ namespace EleanorRomance
             FinishMain(after,20,21,()=>MaidState.DebutShown=true);
             if(RomanceState.KnewTrapUnwarned && !MaidState.Flag("reconciled"))
             {
-                MaidText.Append(wrap,"m19_b002");
+                MaidText.Append(root,"m19_b002");
                 var accept=StoryEngine.Text(L.Eleanor,L.Get("er_maid_repair_ack"));
                 accept.SetEndAction(()=>MaidState.Flag("reconciled",true));accept.SetNextDialogue(after);
                 var records=MaidText.Build("choicefix_b002");
                 StoryEngine.Tail(records).SetEndAction(()=>
                 {MaidState.Flag("reconciled",true);MaidState.Flag("honesty.open_records",true);});
                 StoryEngine.Tail(records).SetNextDialogue(after);
-                Choices(wrap,Option("er_maid_reconcile_yes",accept,description:"er_maid_repair_promise_desc"),
+                Choices(root,Option("er_maid_reconcile_yes",accept,description:"er_maid_repair_promise_desc"),
                     Option("er_maid_repair_records",records,description:"er_maid_repair_records_desc"));
             }
-            else StoryEngine.Tail(wrap).SetNextDialogue(after);
-            MaidInteractions.ConfigureLesson(c,wrap,after);
-            MaidBusiness.AttachAppraisal(c,root,wrap);
+            else StoryEngine.Tail(root).SetNextDialogue(after);
             return Ready(c,root);
         }
         private static StoreClient CreateConfession()

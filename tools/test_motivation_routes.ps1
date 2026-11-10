@@ -65,13 +65,11 @@ foreach($early in @($false,$true)){foreach($route in @('exchange','protection','
     Finish-Dialogue $c.mainDialogue;Leave-Trade $c
     Assert-NoEarlyAddress $ui.currentDialog
     Assert (![EleanorRomance.MaidState]::AddressAccepted -and ![EleanorRomance.MaidState]::DebutShown) 'Post-rescue work skipped dependency development.'
-    $c=Motivation-Visit 20;Finish-Dialogue $c.mainDialogue
+    $c=Motivation-Visit 20
     Assert ($station.dayCounter -ge $rescueDay+4) 'Address immediately followed rescue instead of later visits.'
-    Assert (![EleanorRomance.MaidState]::AddressAccepted) 'Address was accepted on arrival/stock spawn.'
-    $store.TryPlayerDismissCurrentClient($true)
-    $wrap=$ui.currentDialog
-    Assert (Has-MotivationBlock $wrap 'm19_b006') 'First deliberate address is missing after business.'
-    $node=$wrap
+    Assert (![EleanorRomance.MaidState]::AddressAccepted) 'Address was accepted before reading the dialogue.'
+    Assert (Has-MotivationBlock $c.mainDialogue 'm19_b006') 'First deliberate address is missing from the direct dialogue.'
+    $node=$c.mainDialogue
     while($node -and $node.plainText -ne 'er_maid_m19_b006_07'){
         if($node.startAction){$node.startAction.Invoke()};$node.ExecuteEndAction();$node=$node.nextDialogue
     }
@@ -82,8 +80,8 @@ foreach($early in @($false,$true)){foreach($route in @('exchange','protection','
     # Rebuild after an interrupted/replayed visit: do not announce a second first.
     [ModHelper]::TestData=[System.Collections.Generic.Dictionary[string,string]]::new([ModHelper]::TestData)
     $cash=$store.playerCash;$c=Main-Client 20
-    Assert (!(Has-MotivationBlock $c.allDoneDialogue 'm19_b006') -and
-        (Has-MotivationBlock $c.allDoneDialogue 'm19_b007') -and $store.playerCash -eq $cash) 'Saved address replayed its first occurrence or charged again.'
+    Assert (!(Has-MotivationBlock $c.mainDialogue 'm19_b006') -and
+        (Has-MotivationBlock $c.mainDialogue 'm19_b007') -and $store.playerCash -eq $cash) 'Saved address replayed its first occurrence or charged again.'
 }}
 'PASS: both starting modes x exchange/protection/fallback, early disclosure/later trust repair, post-rescue dependency, delayed address/debut, exact-line commit and saved no-second-first.'
 
