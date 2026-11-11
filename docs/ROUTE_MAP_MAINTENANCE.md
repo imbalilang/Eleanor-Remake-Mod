@@ -45,7 +45,7 @@
 
 查看页面：`docs/route_map.html`（浏览器直接打开，无需服务器）。
 
-公开网页：https://imbalilang.github.io/Eleanor-Remake-Mod/ 由 `site/index.html` 提供，GitHub Pages 源为 `main` 分支 `/site`。修改路线图后必须运行 `tools/sync_site.ps1`，把同一版本的 `docs/route_map.html` 同步到 `site/index.html` 一并提交，否则公开页与仓库源文件版本不一致。
+公开网页：https://imbalilang.github.io/Eleanor-Remake-Mod/ 由 `site/index.html` 提供，GitHub Actions 工作流 `.github/workflows/pages.yml` 只发布 `site/` 目录。修改路线图后必须运行 `tools/sync_site.ps1`，把同一版本的 `docs/route_map.html` 同步到 `site/index.html` 一并提交，否则公开页与仓库源文件版本不一致。
 
 ## 2026-11-10 0.84游戏1.0.0.14兼容
 
