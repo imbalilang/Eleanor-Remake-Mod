@@ -1,6 +1,6 @@
 # 0.90：革命军线 R01—R14
 
-2026-11-11。状态：**已构建、已打包、已发布到原创意工坊条目 3834588749**；GitHub 同步待提交完成，实机验收待完成。
+2026-11-11。状态：**已构建、已打包、已发布到原创意工坊条目 3834588749，并已同步至 GitHub `main`**；实机验收待完成。
 
 ## 内容
 
@@ -42,3 +42,4 @@
 - 远程复核：`result=1`、`file_size=5,234,340`、`time_updated=1794378445`、公开、未封禁；远程快照 `dist/workshop-0.90/remote-after.json`。
 - 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，6,899 UTF-8 字节，低于 8,000 限制；更新日志 `docs/WORKSHOP_CHANGELOG_0.90.txt`。
 - 扫描说明：本机没有 PowerShell 7，游戏自带 ModScanner 在 PowerShell 5.1 下报 `MissingMethodException`，因此本轮未取得原生扫描回执；已人工核对新增代码未引入 files/network/reflection/process/native 能力，0.89 的清理扫描结果仍作为上一次基线。
+- GitHub：发布提交 `9becd8e` 已推送到 `https://github.com/imbalilang/Eleanor-Remake-Mod.git` 的 `main`；同步细节保存在本地 `dist/workshop-0.90/github-sync.json`（发布证据目录不随仓库提交）。
