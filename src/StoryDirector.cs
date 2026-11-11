@@ -38,6 +38,7 @@ namespace EleanorRomance
             }
 
             RomanceState.InitializeForSave();
+            RevolutionStory.OnLoaded();
             MaidRouteMigration.OnLoaded();
             // Must run before project visibility is computed on load.
             MaidRouteMigration.MigrateDeferred();
@@ -120,7 +121,8 @@ namespace EleanorRomance
                 if (MaidStory.HasUrgentClient(manager)) return;
                 MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
                 DualDirector.RecoverPending(manager);
-                if(!MaidState.Active && !DualState.Active && RomanceState.Romance==2 && RomanceState.Chapter>=24)
+                if(!MaidState.Active && !DualState.Active && RomanceState.Romance==2
+                    && RomanceState.Chapter>=24 && RomanceState.Route!=3)
                 {
                     var resolution=EleanorStory.CreateDeferredResolution();ModHelper.SetClientSource(resolution,ModConstants.ModId);
                     manager.AddClient(resolution);if(manager.clientStack.Contains(resolution))RomanceState.LastQueuedDay=day;
@@ -149,6 +151,11 @@ namespace EleanorRomance
                         if(manager.clientStack.Contains(claim)){RomanceState.LastQueuedDay=day;DualState.LastDailyDay=day;}
                         return;
                     }
+                    if (RevolutionStory.TryQueueDaily(manager, day))
+                    {
+                        RomanceState.LastQueuedDay = day;
+                        return;
+                    }
                     if (TryQueueEpilogue(manager, day)) RomanceState.LastQueuedDay = day;
                     return;
                 }
@@ -161,7 +168,10 @@ namespace EleanorRomance
                 }
 
                 ModHelper.SetClientSource(client, ModConstants.ModId);
-                manager.AddClient(client);
+                if (RomanceState.Route == 3 && RevolutionStory.UseMorningQueue(chapter))
+                    manager.AddNextClient(client);
+                else
+                    manager.AddClient(client);
 
                 RomanceState.PendingChapter = chapter;
                 RomanceState.LastQueuedDay = day;
@@ -195,6 +205,9 @@ namespace EleanorRomance
             if (chapter == 19 && RomanceState.MotherState != 1) return 0;
 
             if (chapter == 20 && RomanceState.Route == 3) return 0;
+            // Revolution supply gates and the R12-R13 interval wait for the
+            // repeatable visits queued below instead of blocking the route.
+            if (RomanceState.Route == 3 && RevolutionStory.BlocksChapter(chapter, day)) return 0;
             // The dual extension replaces the c21/c22/c23 visits while it owns
             // the post-rescue schedule; its own director queues those scenes.
             if (DualDirector.SuppressMainChapter(chapter)) return 0;
@@ -376,12 +389,17 @@ namespace EleanorRomance
                 case 24: return 59;
                 case 101: return 46;
                 case 102: return 48;
-                case 103: return 50;
-                case 104: return 52;
-                case 105: return 54;
+                case 103: return 49;
+                case 104: return 51;
+                case 105: return 0; // R06 is the next safe morning after R05.
                 case 106: return 55;
                 case 107: return 57;
                 case 108: return 59;
+                case 109: return 61;
+                case 110: return 63;
+                case 111: return 65;
+                case 112: return 68;
+                case 113: return 0; // R14 is the next safe morning after R13.
                 case 201: return 45;
                 case 202: return 46;
                 case 203: return 48;

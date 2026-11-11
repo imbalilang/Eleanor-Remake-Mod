@@ -83,7 +83,7 @@ public static readonly Dictionary<string,string> ByKey = new Dictionary<string,s
 {"er_v06_c09_b006_02","serious"},
 {"er_v06_c10_b001_01","determined"},
 {"er_v06_c10_b001_05","angry"},
-{"er_v06_c10_b001_08","angry"},
+{"er_v06_c10_b001_07","angry"},
 {"er_v06_c11_b001_03","determined"},
 {"er_v06_c11_b002_02","determined"},
 {"er_v06_c11_b002_04","shy"},
@@ -143,9 +143,6 @@ public static readonly Dictionary<string,string> ByKey = new Dictionary<string,s
 {"er_v06_ep_b003_02","angry"},
 {"er_v06_ep_b004_02","soft"},
 {"er_v06_ep_b006_03","soft"},
-{"er_v06_rc_b001_02","sad"},
-{"er_v06_rc_b001_04","determined"},
-{"er_v06_rc_b001_05","sad"},
 };
 }
 }

@@ -396,6 +396,104 @@ namespace EleanorRomance
             set => SetBool("perfume_given", value);
         }
 
+        // --- Revolution route ------------------------------------------------
+        // Additive keys only: the save schema stays 2 and old saves default to 0.
+        public static int RevVersion
+        {
+            get => GetInt("rev_version", 0);
+            set => SetInt("rev_version", value);
+        }
+
+        public static int RevSupply
+        {
+            get => GetInt("rev_supply", 0);
+            set => SetInt("rev_supply", Math.Max(0, value));
+        }
+
+        public static int RevTier
+        {
+            get => GetInt("rev_tier", 0);
+            set => SetInt("rev_tier", Mathf.Clamp(value, 0, 3));
+        }
+
+        public static bool RevComplete
+        {
+            get => GetBool("rev_complete", false);
+            set => SetBool("rev_complete", value);
+        }
+
+        public static bool RevEndingShown
+        {
+            get => GetBool("rev_ending_shown", false);
+            set => SetBool("rev_ending_shown", value);
+        }
+
+        public static bool RevLegacyCompleted
+        {
+            get => GetBool("rev_legacy_completed", false);
+            set => SetBool("rev_legacy_completed", value);
+        }
+
+        public static bool RevLydiaTold
+        {
+            get => GetBool("rev_lydia_told", false);
+            set => SetBool("rev_lydia_told", value);
+        }
+
+        public static bool RevStockR02
+        {
+            get => GetBool("rev_stock_r02", false);
+            set => SetBool("rev_stock_r02", value);
+        }
+
+        public static bool RevStockR05
+        {
+            get => GetBool("rev_stock_r05", false);
+            set => SetBool("rev_stock_r05", value);
+        }
+
+        public static bool RevStockR08
+        {
+            get => GetBool("rev_stock_r08", false);
+            set => SetBool("rev_stock_r08", value);
+        }
+
+        public static bool RevStockR13
+        {
+            get => GetBool("rev_stock_r13", false);
+            set => SetBool("rev_stock_r13", value);
+        }
+
+        public static int RevLastVisitDay
+        {
+            get => GetInt("rev_last_visit_day", -1);
+            set => SetInt("rev_last_visit_day", value);
+        }
+
+        public static int RevLastShort
+        {
+            get => GetInt("rev_last_short", 0);
+            set => SetInt("rev_last_short", value);
+        }
+
+        public static int RevR13EarliestDay
+        {
+            get => GetInt("rev_r13_earliest_day", -1);
+            set => SetInt("rev_r13_earliest_day", value);
+        }
+
+        public static int RevDailyStockDay
+        {
+            get => GetInt("rev_daily_stock_day", -1);
+            set => SetInt("rev_daily_stock_day", value);
+        }
+
+        public static int RevLastLootDay
+        {
+            get => GetInt("rev_last_loot_day", -1);
+            set => SetInt("rev_last_loot_day", value);
+        }
+
         // Backward-compatible unlock flag for the native landfill event.
         // Its presence alone no longer modifies scavenging attempts.
         public static bool ScavAssist
@@ -536,6 +634,22 @@ namespace EleanorRomance
             LocketSold = false;
             LocketGiven = false;
             PerfumeGiven = false;
+            RevVersion = 0;
+            RevSupply = 0;
+            RevTier = 0;
+            RevComplete = false;
+            RevEndingShown = false;
+            RevLegacyCompleted = false;
+            RevLydiaTold = false;
+            RevStockR02 = false;
+            RevStockR05 = false;
+            RevStockR08 = false;
+            RevStockR13 = false;
+            RevLastVisitDay = -1;
+            RevLastShort = 0;
+            RevR13EarliestDay = -1;
+            RevDailyStockDay = -1;
+            RevLastLootDay = -1;
             ScavAssist = false;
             LydiaFairBracelet = false;
             LydiaVisited = false;

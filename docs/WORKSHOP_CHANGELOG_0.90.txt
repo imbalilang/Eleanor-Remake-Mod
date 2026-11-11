@@ -1,0 +1,15 @@
+0.90｜革命军线 R01—R14
+
+• 革命军线完整实装：13次主线事件，从母亲遇害、加入革命军、首次杀人后的清晨，到三档补给、护送任务和归来。
+• 新增补给累计与门槛 G1=400／G2=1000／G3=1800；等待期间可继续采购、出售战利品。
+• R14完成后立即显示独立完美结局页《我想见你》，并使用已选定的革命军结局CG。
+• 旧八次丙线存档按最近阶段续接；旧短版完成不追溯获得新结局。
+• 保留0.89像素风结局CG、0.88 Lydia独立画像与立绘兼容；E1—E14编号与完美集合不变。
+
+0.90 | Revolution route R01—R14
+
+• The revolution route is complete: 13 main events from her mother's death and joining the revolution through her first kill, three supply tiers, the escort operation and the return.
+• Supply gates at 400/1000/1800 item value; business and loot visits continue while waiting.
+• Completing R14 immediately shows the standalone ending page and the selected revolution ending CG.
+• Old eight-visit route-C saves resume at the nearest stage without retroactive completion.
+• Retains 0.89 pixel-art ending CGs, Lydia's independent portraits and E1—E14 numbering.

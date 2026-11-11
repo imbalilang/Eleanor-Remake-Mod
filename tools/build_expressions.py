@@ -39,10 +39,19 @@ def _add_dual(exprs, data):
                     exprs[f"er_dual_{block['id']}_{index:02d}"] = expr
 
 
+def _add_revolution(exprs, data):
+    for block in data.get("blocks", []):
+        for index, line in enumerate(block.get("lines", []), 1):
+            expr = line.get("expr")
+            if expr:
+                exprs[f"er_rev_{block['id']}_{index:02d}"] = expr
+
+
 def build(root):
     root = Path(root)
     exprs = {}
-    for name, fn in (("story_v06.json", _add_story), ("maid_v05.json", _add_maid), ("dual_romance_v04.json", _add_dual)):
+    for name, fn in (("story_v06.json", _add_story), ("maid_v05.json", _add_maid),
+                     ("dual_romance_v04.json", _add_dual), ("revolution_v1.json", _add_revolution)):
         path = root / "Content" / name
         if path.exists():
             fn(exprs, json.loads(path.read_text(encoding="utf-8")))

@@ -1,0 +1,665 @@
+{
+  "blocks": [
+    {
+      "id": "rv01_b001",
+      "scene": "R01 消息是真的",
+      "lines": [
+        {"speaker": "eleanor", "text": "她死了。我去认过尸。", "en": "She's dead. I went and identified the body."},
+        {"speaker": "eleanor", "text": "报纸上那篇研究，是我交出去的。登出来了。同一天早上，他们说她突发急病。", "en": "That research in the paper—I handed it over. It ran. The same morning, they said she died of a sudden illness."},
+        {"speaker": "eleanor", "text": "他们让我签一张确认死亡的纸。", "en": "They had me sign a paper confirming the death."},
+        {"speaker": "eleanor", "text": "签的时候手没抖。出来以后才抖。", "en": "My hand didn't shake while I signed. It started after I came out."},
+        {"speaker": "eleanor", "text": "公司问我要不要对报纸说两句。我说不用。他们看起来还挺高兴。", "en": "The company asked if I wanted to say something to the paper. I said no. They looked rather pleased."},
+        {"speaker": "eleanor", "text": "我不打算去闹。闹了，他们只会说家属情绪不稳。", "en": "I'm not going to make a scene. If I did, they'd just say the family is unstable."}
+      ]
+    },
+    {
+      "id": "rv01_b002",
+      "scene": "R01 共同后续",
+      "lines": [
+        {"speaker": "eleanor", "text": "我不打算再从头讲一遍。你只要知道，她没有等到我。", "en": "I'm not going to tell it from the beginning again. You only need to know she didn't wait for me."},
+        {"speaker": "eleanor", "text": "我不想让别人替她写她。她的死不该拿去做文章。", "en": "I don't want other people writing her for her. Her death shouldn't be turned into copy."},
+        {"speaker": "eleanor", "text": "我今天不想说研究，也不想说下一步。你这儿安静，暂时够了。", "en": "I don't want to talk about the research today, or what comes next. It's quiet here. For now that's enough."},
+        {"speaker": "eleanor", "text": "你这椅子还是老样子。挺好。", "en": "Your chair is the same as ever. Good."}
+      ]
+    },
+    {
+      "id": "rv01_b003",
+      "scene": "R01 旧侍从约定差分",
+      "lines": [
+        {"speaker": "eleanor", "text": "以前那件事，到这儿为止。工钱是我干活挣的。以后别再提。", "en": "That old arrangement ends here. I earned the wages by working. Don't bring it up again."}
+      ]
+    },
+    {
+      "id": "rv01_b004",
+      "scene": "R01 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我走了。明天我可能还来，别问为什么。", "en": "I'm going. I might come again tomorrow. Don't ask why."}
+      ]
+    },
+    {
+      "id": "rv02_b001",
+      "scene": "R02 剩下的东西",
+      "lines": [
+        {"speaker": "eleanor", "text": "旧居退回来的，只有这些。能拿回来的，比我想的少。", "en": "This is all the old place gave back. Less than I expected to recover."},
+        {"speaker": "eleanor", "text": "银梳子、手套、一只钟，还有几块没裁的料子。以前留着，好像那条路还在。", "en": "A silver comb, gloves, a clock, and a few uncut lengths of cloth. I kept them as if that road were still open."},
+        {"speaker": "eleanor", "text": "有几件是给我妈挑的。她没等到。", "en": "Some of it I picked out for my mother. She didn't live to see it."}
+      ]
+    },
+    {
+      "id": "rv02_b002",
+      "scene": "R02 莉迪亚",
+      "lines": [
+        {"speaker": "eleanor", "text": "莉迪亚找过我。我没回。她让我回上面避一避，我不想听。", "en": "Lydia came looking for me. I didn't answer. She wanted me to go back upstairs and lie low. I didn't want to hear it."},
+        {"speaker": "eleanor", "text": "她要是来问你，别替她劝。", "en": "If she comes asking you, don't plead her case."}
+      ]
+    },
+    {
+      "id": "rv02_b003",
+      "scene": "R02 母亲的清单",
+      "lines": [
+        {"speaker": "eleanor", "text": "箱底还有一张我妈写的农场清单。", "en": "There's a farm list my mother wrote at the bottom of the box."},
+        {"speaker": "eleanor", "text": "二号培养槽该换滤芯，三号灯不亮。", "en": "Tank two needs a new filter. Lamp three is out."},
+        {"speaker": "eleanor", "text": "都是小事。她到最后还在操心哪个灯不亮。这个不卖。", "en": "Small things. At the end she was still worrying about which lamp was out. This isn't for sale."}
+      ]
+    },
+    {
+      "id": "rv02_b004",
+      "scene": "R02 交易",
+      "lines": [
+        {"speaker": "eleanor", "text": "看仔细。那只钟以前整点会响，现在不响了，但还能走。", "en": "Look closely. That clock used to chime on the hour. It doesn't now, but it still runs."},
+        {"speaker": "eleanor", "text": "你挑能卖的。该多少就多少，别压价，也别因为是我的东西多给。", "en": "Pick what you can sell. Pay what it's worth. Don't lowball me, and don't pay extra because it was mine."}
+      ]
+    },
+    {
+      "id": "rv02_b005",
+      "scene": "R02 成交后",
+      "lines": [
+        {"speaker": "eleanor", "text": "行了，剩下的我带走。空箱子也有用。", "en": "All right, I'll take the rest. An empty box is still useful."}
+      ]
+    },
+    {
+      "id": "rv02_b006",
+      "scene": "R02 未成交",
+      "lines": [
+        {"speaker": "eleanor", "text": "这次收不了就下次。东西我带走，不放在你这儿。", "en": "If you can't take it this time, then next time. I'll take it with me. I'm not leaving it here."}
+      ]
+    },
+    {
+      "id": "rv02_b007",
+      "scene": "R02 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "下次来，我不带这些了。带什么，再说。", "en": "Next time I won't bring these. What I bring, we'll see."}
+      ]
+    },
+    {
+      "id": "rv04_b001",
+      "scene": "R04 我要能用的",
+      "lines": [
+        {"speaker": "eleanor", "text": "我入队了。以后来买武器和药品。", "en": "I joined up. From now on I'll come for weapons and medicine."},
+        {"speaker": "eleanor", "text": "他们没答应替我报仇，可他们真在做事。队里肯继续把研究的事往外捅，我在里面跑补给。", "en": "They didn't promise to avenge me, but they're actually doing something. The unit will keep pushing the research out. I run supplies for them."},
+        {"speaker": "eleanor", "text": "队里缺止血的、退烧的、消毒的。武器要轻一点，我还没那么大力气。", "en": "We're short on bleeding control, fever meds, disinfectant. Weapons should be light. I'm not that strong yet."},
+        {"speaker": "eleanor", "text": "好看没用。我要能开枪、能收起来，坏了也不会卡住我。", "en": "Looking good is useless. I need something that fires, folds up, and won't jam on me when it breaks."},
+        {"speaker": "eleanor", "text": "开枪我学过了。挑枪还不会，坏了也不会修。", "en": "I've learned to shoot. I can't pick a gun yet, and I can't fix one when it breaks."},
+        {"speaker": "eleanor", "text": "钱是我自己的，够多少算多少。别给我算成你养的。", "en": "The money is mine, and I'll buy what it covers. Don't count me as your dependent."}
+      ]
+    },
+    {
+      "id": "rv04_b002",
+      "scene": "R04 选项3回应",
+      "lines": [
+        {"speaker": "eleanor", "text": "钱照算。真想送，就送给队里，别送给我一个人。", "en": "Charge me properly. If you really want to give something away, give it to the unit. Not to me alone."}
+      ]
+    },
+    {
+      "id": "rv04_b003",
+      "scene": "R04 有货并可实际检视",
+      "lines": [
+        {"speaker": "eleanor", "text": "这个能用。这个不要。我不会用。", "en": "This one works. Not that one. I don't know how to use it."},
+        {"speaker": "eleanor", "text": "药别拆包装，路上要分。", "en": "Don't open the medicine. It has to be split up on the road."}
+      ]
+    },
+    {
+      "id": "rv04_b004",
+      "scene": "R04 无货或未成交",
+      "lines": [
+        {"speaker": "eleanor", "text": "这次没有合适的。下次有货再说。", "en": "Nothing suitable this time. We'll talk when you have stock."},
+        {"speaker": "eleanor", "text": "药和工具的单子我留下，你按能弄到的来。", "en": "I'll leave the medicine and tool list. Bring what you can get."}
+      ]
+    },
+    {
+      "id": "rv04_b005",
+      "scene": "R04 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我不带人来这儿。你这店还要开，我不能让它变成革命军的门房。", "en": "I won't bring people here. Your shop still has to run. I can't turn it into the revolution's front desk."},
+        {"speaker": "eleanor", "text": "下次来，我再带新单子。现在是我自己的，以后不一定。", "en": "Next time I'll bring a new list. Right now it's mine. Later, maybe not."}
+      ]
+    },
+    {
+      "id": "rv04_b006",
+      "scene": "R04 莉迪亚补句",
+      "lines": [
+        {"speaker": "eleanor", "text": "我没再回她消息。她总会明白的。", "en": "I haven't answered her messages. She'll understand eventually."}
+      ]
+    },
+    {
+      "id": "rv05_b001",
+      "scene": "R05 第一袋战利品",
+      "lines": [
+        {"speaker": "eleanor", "text": "公司的仓库。后墙有个卸货口，锁是旧的，警报都没响。", "en": "A company warehouse. There's a loading door in the back wall. The lock was old. The alarm didn't even go off."},
+        {"speaker": "eleanor", "text": "一开始挺痛快。真的。出来以后我才发现，我一路没敢喘气。", "en": "At first it felt good. Really. Only after we got out did I realize I hadn't dared breathe the whole way."},
+        {"speaker": "eleanor", "text": "到巷子里，手一直抖，东西都差点掉了。", "en": "In the alley my hands kept shaking. I almost dropped everything."},
+        {"speaker": "eleanor", "text": "现在看见货就想起价钱，没那么抖。", "en": "Now when I look at the goods I think of the price. It shakes less."},
+        {"speaker": "eleanor", "text": "没人受伤，这次没有。", "en": "No one was hurt. Not this time."},
+        {"speaker": "eleanor", "text": "搬东西时外面还有人抽烟。我听见他咳嗽，差点把箱子扔了。", "en": "While we were moving things, someone outside was smoking. I heard him cough and almost dropped the crate."},
+        {"speaker": "eleanor", "text": "后来他走了。我们搬完才敢喘气。", "en": "Then he left. We didn't breathe until we were done."},
+        {"speaker": "eleanor", "text": "这事别跟别人说。", "en": "Don't tell anyone about this."},
+        {"speaker": "eleanor", "text": "两盒针，三把钳子，还有一箱阀门。阀门你看着给。", "en": "Two boxes of needles, three pairs of pliers, and a crate of valves. Price the valves as you see fit."}
+      ]
+    },
+    {
+      "id": "rv05_b002",
+      "scene": "R05 成交后",
+      "lines": [
+        {"speaker": "eleanor", "text": "这算第一袋。钱我收下，东西归你。", "en": "That's the first bag. I'll take the money. The goods are yours."}
+      ]
+    },
+    {
+      "id": "rv05_b003",
+      "scene": "R05 未成交",
+      "lines": [
+        {"speaker": "eleanor", "text": "你不收，我找别家。东西不能压在我手里。", "en": "If you won't take it, I'll find someone else. I can't let this sit on me."}
+      ]
+    },
+    {
+      "id": "rv05_b004",
+      "scene": "R05 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我走了，别把这事想得太重。", "en": "I'm going. Don't make too much of it."},
+        {"speaker": "eleanor", "text": "下次什么时候来，等行动完再说。", "en": "When I come next depends on the next job."}
+      ]
+    },
+    {
+      "id": "rv06_b001",
+      "scene": "R06 开门之前",
+      "lines": [
+        {"speaker": "eleanor", "text": "我回过住处，坐不住。天没亮就出来了，换了衣服还是坐不住。", "en": "I went back to my room and couldn't sit still. I left before dawn. I changed clothes and still couldn't sit still."}
+      ]
+    },
+    {
+      "id": "rv06_b002",
+      "scene": "R06 首杀",
+      "lines": [
+        {"speaker": "eleanor", "text": "我杀了人。", "en": "I killed someone."},
+        {"speaker": "eleanor", "text": "他先开的枪，冲着乔去的。我没有犹豫，至少当时没有。", "en": "He fired first. At Joe. I didn't hesitate. Not then, at least."},
+        {"speaker": "eleanor", "text": "我开了一枪，就一枪。他打偏了，我没受伤。", "en": "I fired once. Just once. He missed. I wasn't hurt."},
+        {"speaker": "eleanor", "text": "乔吓坏了，我让他先走。他活下来了。", "en": "Joe was terrified. I told him to go first. He made it."},
+        {"speaker": "eleanor", "text": "枪响比我以为的闷。", "en": "The shot was duller than I expected."},
+        {"speaker": "eleanor", "text": "乔问我怎么了。我说没事。他信了。", "en": "Joe asked what was wrong. I said nothing. He believed me."}
+      ]
+    },
+    {
+      "id": "rv06_b003",
+      "scene": "R06 那根烟",
+      "lines": [
+        {"speaker": "eleanor", "text": "他倒下的时候，手里还夹着烟。烟掉在地上，没灭。", "en": "When he fell, he still had a cigarette between his fingers. It dropped and kept burning."},
+        {"speaker": "eleanor", "text": "我一直看见那根烟。我不后悔，可我闭眼就看见它。", "en": "I keep seeing that cigarette. I don't regret it, but when I close my eyes it's there."},
+        {"speaker": "eleanor", "text": "我连他叫什么都不知道。有没有孩子也不知道。只知道他差点打死乔。", "en": "I don't even know his name. Whether he had kids. I only know he almost killed Joe."},
+        {"speaker": "eleanor", "text": "住处也安静，可那儿静得不对。一静下来，我就觉得门外有人。", "en": "My room is quiet too, but it's the wrong kind of quiet. When it's still, I think someone's outside the door."},
+        {"speaker": "eleanor", "text": "你这儿不一样。我反而想坐。", "en": "It's different here. Here I actually want to sit."}
+      ]
+    },
+    {
+      "id": "rv06_b004",
+      "scene": "R06 面包",
+      "lines": [
+        {"speaker": "eleanor", "text": "你这儿有没有吃的。给我留一点，别问我要不要紧。", "en": "Do you have anything to eat? Leave me some. Don't ask if I'm all right."},
+        {"speaker": "player", "text": "有面包。", "en": "There's bread."},
+        {"speaker": "eleanor", "text": "也别告诉队里我来过。", "en": "And don't tell the unit I came here."}
+      ]
+    },
+    {
+      "id": "rv06_b005",
+      "scene": "R06 选项3外套",
+      "lines": [
+        {"speaker": "eleanor", "text": "外套还我。", "en": "Give me my coat back."}
+      ]
+    },
+    {
+      "id": "rv06_b006",
+      "scene": "R06 留坐",
+      "lines": [
+        {"speaker": "eleanor", "text": "今晚我回队里，不回去更麻烦。", "en": "I'm going back to the unit tonight. Not going back would be more trouble."},
+        {"speaker": "eleanor", "text": "我再坐一会儿。就一会儿。", "en": "I'll sit a little longer. Just a little."}
+      ]
+    },
+    {
+      "id": "rv06_b007",
+      "scene": "R06 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我走了。下次不用等到开门。", "en": "I'm going. Next time you don't have to wait for opening."},
+        {"speaker": "eleanor", "text": "看情况。", "en": "Depends."}
+      ]
+    },
+    {
+      "id": "rv07_b001",
+      "scene": "R07 这次不只买我的",
+      "lines": [
+        {"speaker": "eleanor", "text": "这次单子归我管。米拉膝盖不好，雨天也得跟队。", "en": "This time the list is mine. Mira's knees are bad, and she still has to march in the rain."},
+        {"speaker": "eleanor", "text": "米拉的药以前是我顺手带的。现在整队的单子都归我。", "en": "I used to pick up Mira's medicine along the way. Now the whole unit's list is mine."},
+        {"speaker": "eleanor", "text": "她管仓库，膝盖是搬货时坏的。她不肯用拐，说拄着拐跑不快。", "en": "She runs the stores. She wrecked her knees hauling goods. She won't use a cane—says she can't run fast with one."},
+        {"speaker": "eleanor", "text": "她让我别跟队里说她膝盖疼。", "en": "She made me promise not to tell the unit her knees hurt."},
+        {"speaker": "eleanor", "text": "她走路慢，可从不让人等。她要知道我替她记着，肯定不乐意。", "en": "She walks slow, but she never makes anyone wait. If she knew I was keeping track for her, she'd hate it."},
+        {"speaker": "eleanor", "text": "还有两个人的工具，老是坏。这次有多的，给新来的留一份。我自己的排后面。", "en": "Two others' tools keep breaking. If there are extras this time, leave a set for the new one. My own can wait."},
+        {"speaker": "eleanor", "text": "新来的连药名都认不全，我让他先背。", "en": "The new one can't even name the medicines. I told him to memorize them first."},
+        {"speaker": "eleanor", "text": "我把单子按人分开，谁缺什么写谁名字。", "en": "I split the list by person. Whoever's short, their name goes next to it."},
+        {"speaker": "eleanor", "text": "一天要对三遍，还是怕漏。", "en": "I check it three times a day and still worry I'll miss something."}
+      ]
+    },
+    {
+      "id": "rv07_b002",
+      "scene": "R07 交易后",
+      "lines": [
+        {"speaker": "eleanor", "text": "昨晚没睡好。今天能把单子对完就行。", "en": "Didn't sleep well. Today I just need to get through the list."},
+        {"speaker": "eleanor", "text": "他们连绷带都缠不好。教，骂完再教。", "en": "They can't even wrap a bandage. I teach them, yell, then teach them again."}
+      ]
+    },
+    {
+      "id": "rv07_b003",
+      "scene": "R07 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "下次带好货来。我尽量带得回来。", "en": "Bring good stock next time. I'll try to bring myself back."}
+      ]
+    },
+    {
+      "id": "rv08_b001",
+      "scene": "R08 我以前用过这个",
+      "lines": [
+        {"speaker": "eleanor", "text": "行动里分到的。来源干净不干净，你自己看。", "en": "Got it in the job. Whether it's clean or not, judge for yourself."},
+        {"speaker": "eleanor", "text": "银的，盖子内侧有镜子。这个不能这么掰，会把铰链弄松。", "en": "Silver, with a mirror inside the lid. Don't pry it like that. You'll loosen the hinge."},
+        {"speaker": "eleanor", "text": "以前我用过同款。盖子内侧要这样擦。", "en": "I used to have the same kind. You wipe the inside of the lid like this."},
+        {"speaker": "eleanor", "text": "我记得怎么擦。可我想不起她最后一次笑是什么样。", "en": "I remember how to clean it. But I can't remember the last time I saw her smile."},
+        {"speaker": "eleanor", "text": "只记得那天在农场，她手上全是泥。", "en": "I only remember that day at the farm. Her hands were covered in mud."},
+        {"speaker": "eleanor", "text": "我讨厌那套日子。可这东西做得挺好看。", "en": "I hated that life. But this thing is well made."},
+        {"speaker": "eleanor", "text": "家里以前有一整套。我母亲挑东西，先看用，再看样子。", "en": "We had a whole set at home. My mother picked things by use first, looks second."},
+        {"speaker": "eleanor", "text": "以前买这种东西要提前订，店员会把盒子送到家里，连价签都不留。", "en": "We used to order things like this ahead. The clerk would deliver the box to the house and not even leave the price tag."},
+        {"speaker": "eleanor", "text": "现在我自己搬，挺好。", "en": "Now I carry it myself. That's fine."}
+      ]
+    },
+    {
+      "id": "rv08_b002",
+      "scene": "R08 成交",
+      "lines": [
+        {"speaker": "player", "text": "按货算。", "en": "Price it by the goods."},
+        {"speaker": "eleanor", "text": "别给我情面价。该多少是多少，别因为我用过就多给。", "en": "Don't give me a pity price. What it's worth is what it's worth. Don't pay extra because I used it."}
+      ]
+    },
+    {
+      "id": "rv08_b003",
+      "scene": "R08 未成交",
+      "lines": [
+        {"speaker": "eleanor", "text": "这次不买就下次。东西我带走，不放在你这儿。", "en": "If you don't buy it now, next time. I'll take it with me. Not leaving it here."}
+      ]
+    },
+    {
+      "id": "rv08_b004",
+      "scene": "R08 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "下次带别的来。", "en": "I'll bring something else next time."}
+      ]
+    },
+    {
+      "id": "rv09_b001",
+      "scene": "R09 少了一份",
+      "lines": [
+        {"speaker": "eleanor", "text": "米拉没回来。名单上少了一个。", "en": "Mira didn't come back. One name short on the list."},
+        {"speaker": "eleanor", "text": "她的名字还在上面。我划了一道，没划透。", "en": "Her name is still there. I crossed it out once. Didn't press hard enough."},
+        {"speaker": "eleanor", "text": "我不想说战斗。单子还要对完。", "en": "I don't want to talk about the fight. The list still has to be checked."},
+        {"speaker": "eleanor", "text": "她领药总把糖纸留下，说攒够一把能换糖。", "en": "She always kept the candy wrappers when she picked up medicine. Said a handful could be traded for candy."},
+        {"speaker": "eleanor", "text": "她死的时候，桌上还有半把。", "en": "When she died, there was half a handful on the table."},
+        {"speaker": "eleanor", "text": "她总把绷带叠成很小的方块。我说那样拆起来慢，她说省地方。", "en": "She always folded bandages into tiny squares. I said it was slow to unfold. She said it saved space."},
+        {"speaker": "eleanor", "text": "她比我小两岁。总说要活到战争结束。", "en": "She was two years younger than me. Always said she'd live to see the war end."},
+        {"speaker": "eleanor", "text": "队里知道了。有人哭，有人去擦枪。我来对单子。", "en": "The unit knows. Some cried. Some went to clean their guns. I came to check the list."},
+        {"speaker": "eleanor", "text": "她那半把糖纸我收起来了。她家里没人来，东西是我收的。", "en": "I kept those wrappers. No one from her family came. I collected her things."}
+      ]
+    },
+    {
+      "id": "rv09_b002",
+      "scene": "R09 交易",
+      "lines": [
+        {"speaker": "eleanor", "text": "按单子来。多的留给别人，她那份不用留了。", "en": "Follow the list. Extras go to the others. There's no need to keep her share."},
+        {"speaker": "eleanor", "text": "她那份，我给新来的了。", "en": "Her share—I gave it to the new one."}
+      ]
+    },
+    {
+      "id": "rv09_b003",
+      "scene": "R09 短得让人不敢看",
+      "lines": [
+        {"speaker": "eleanor", "text": "少一个人，单子就短一行。短得让人不敢看。", "en": "One person less, and the list is one line shorter. So short I can't stand to look at it."}
+      ]
+    },
+    {
+      "id": "rv09_b004",
+      "scene": "R09 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我走了。等我把这行看习惯再来。", "en": "I'm going. I'll come back when I'm used to seeing that line."}
+      ]
+    },
+    {
+      "id": "rv10_b001",
+      "scene": "R10 他们开始听我的",
+      "lines": [
+        {"speaker": "eleanor", "text": "我放跑了一个。不重要。追下去能打死两个，可乔的腿等不了。", "en": "I let one go. It doesn't matter. If I'd chased, I could have killed two. But Joe's leg couldn't wait."},
+        {"speaker": "eleanor", "text": "背不动，我拖着他走了两条街。后来有人来接，我手到现在还酸。", "en": "He couldn't be carried. I dragged him two streets. Someone came for us later. My arms still ache."},
+        {"speaker": "eleanor", "text": "他醒过来第一句话是问枪还在不在。我说在，他才睡。", "en": "The first thing he asked when he woke was whether the gun was still there. I said yes. Then he slept."}
+      ]
+    },
+    {
+      "id": "rv10_b002",
+      "scene": "R10 乔的腿",
+      "lines": [
+        {"speaker": "player", "text": "乔的腿怎么样？", "en": "How's Joe's leg?"},
+        {"speaker": "eleanor", "text": "保住了。人还在。", "en": "Saved. He's still here."},
+        {"speaker": "eleanor", "text": "他们问我追不追。我说不追。说完就想反悔。", "en": "They asked if I wanted to chase. I said no. The moment I said it, I wanted to take it back."},
+        {"speaker": "eleanor", "text": "可反悔也不能把人扔下。", "en": "But taking it back wouldn't mean leaving him behind."},
+        {"speaker": "eleanor", "text": "下次也一样，先带活的回来。", "en": "Next time too. Bring the living back first."},
+        {"speaker": "eleanor", "text": "丢的那批货，队里没人提。越没人提，我越记得。", "en": "No one in the unit mentions the lost shipment. The less they mention it, the more I remember."},
+        {"speaker": "eleanor", "text": "我还是恨他们。", "en": "I still hate them."}
+      ]
+    },
+    {
+      "id": "rv10_b003",
+      "scene": "R10 责任",
+      "lines": [
+        {"speaker": "eleanor", "text": "他们开始听我的。我把药分得明白，能活命的事，他们当然听。", "en": "They've started listening to me. I divide the medicine clearly. When it's about staying alive, of course they listen."},
+        {"speaker": "eleanor", "text": "乔要是恨我放跑那个人，让他自己追。他昨天先问我，药够不够。", "en": "If Joe hates me for letting that one go, he can chase him himself. Yesterday the first thing he asked was whether we had enough medicine."},
+        {"speaker": "eleanor", "text": "清单带来了，这次多两个人的。谁缺药，谁的工具该换，我都记着。", "en": "I brought the list. Two more people this time. Who's short on medicine, whose tools need replacing—I've got it."},
+        {"speaker": "eleanor", "text": "我缺觉，这个你补不了。", "en": "I'm short on sleep. That's not something you can supply."}
+      ]
+    },
+    {
+      "id": "rv10_b004",
+      "scene": "R10 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "货备齐了叫我。乔的腿别再问，他不喜欢。我的也别问。", "en": "Call me when the stock's ready. Don't ask about Joe's leg again. He doesn't like it. Don't ask about mine either."},
+        {"speaker": "eleanor", "text": "走了。", "en": "I'm off."}
+      ]
+    },
+    {
+      "id": "rv11_b001",
+      "scene": "R11 今天没有货",
+      "lines": [
+        {"speaker": "eleanor", "text": "今天没货。", "en": "No goods today."},
+        {"speaker": "eleanor", "text": "那你还让我进来？", "en": "And you still let me in?"},
+        {"speaker": "player", "text": "门又没锁。", "en": "The door isn't locked."},
+        {"speaker": "eleanor", "text": "你这话说得真难接。", "en": "That's really hard to answer."},
+        {"speaker": "eleanor", "text": "队里今天没安排。我坐不住。", "en": "Nothing scheduled today. I couldn't sit still."},
+        {"speaker": "eleanor", "text": "今天客人少。正好。", "en": "Few customers today. Good."}
+      ]
+    },
+    {
+      "id": "rv11_b002",
+      "scene": "R11 缺口杯子",
+      "lines": [
+        {"speaker": "eleanor", "text": "这只杯子有缺口。你也不换。", "en": "This cup's chipped. You still haven't replaced it."},
+        {"speaker": "eleanor", "text": "缺口朝外。客人拿了不割手？", "en": "The chip faces out. Won't a customer cut themselves?"},
+        {"speaker": "eleanor", "text": "换一个吧，又不贵。", "en": "Replace it. It's not expensive."},
+        {"speaker": "eleanor", "text": "货架也歪了。你天天从这儿过，也不扶。", "en": "The shelf's crooked too. You walk past it every day and don't straighten it."},
+        {"speaker": "eleanor", "text": "他们现在说话都先看我。我不喜欢。", "en": "Now they all look at me before they speak. I don't like it."},
+        {"speaker": "eleanor", "text": "累。还行。", "en": "Tired. It's all right."}
+      ]
+    },
+    {
+      "id": "rv11_b003",
+      "scene": "R11 坐下",
+      "lines": [
+        {"speaker": "eleanor", "text": "我坐一会儿。你忙你的，不用陪我说话。", "en": "I'll sit for a while. Do your work. You don't have to talk to me."},
+        {"speaker": "eleanor", "text": "有人问，你自己解释。", "en": "If anyone asks, you explain it yourself."}
+      ]
+    },
+    {
+      "id": "rv11_b004",
+      "scene": "R11 视线",
+      "lines": [
+        {"speaker": "eleanor", "text": "看什么？没什么就别看了。", "en": "What are you looking at? If there's nothing, don't look."}
+      ]
+    },
+    {
+      "id": "rv11_b005",
+      "scene": "R11 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我走了。下次来，杯子再不换，我就自己动手。", "en": "I'm going. Next time, if the cup isn't replaced, I'll do it myself."},
+        {"speaker": "eleanor", "text": "没货也来。", "en": "I'll come even when there's no stock."}
+      ]
+    },
+    {
+      "id": "rv12_b001",
+      "scene": "R12 出发前",
+      "lines": [
+        {"speaker": "eleanor", "text": "这次送人。", "en": "This time I'm moving people."},
+        {"speaker": "eleanor", "text": "一个抄过研究记录的技工，一个给研究所送过货的司机。还有司机七岁的妹妹。", "en": "A technician who copied research records. A driver who delivered to the institute. And the driver's seven-year-old sister."},
+        {"speaker": "eleanor", "text": "妹妹什么都不知道，只是跟着走。公司追他们，所以不能走大路。", "en": "The sister knows nothing. She's just coming along. The company is after them, so we can't take the main road."},
+        {"speaker": "eleanor", "text": "路线我安排好了，不跟你说。", "en": "I've planned the route. I'm not telling you."},
+        {"speaker": "eleanor", "text": "他们也不知道路，只要知道跟着我。我跟另一个人轮流带路。", "en": "They don't know the route either. They just need to follow me. Another one and I take turns leading."},
+        {"speaker": "eleanor", "text": "那个技工把经手人和路线都背下来了。他说纸会被搜走，脑子不会。", "en": "The technician memorized the handlers and the route. He said paper gets searched. Brains don't."},
+        {"speaker": "eleanor", "text": "药别装在最上面，路上潮。绷带单独包一层。", "en": "Don't pack the medicine on top. It's damp on the road. Wrap the bandages separately."},
+        {"speaker": "eleanor", "text": "食物够两天，多了跑不快。", "en": "Food for two days. More will slow us down."},
+        {"speaker": "eleanor", "text": "两天不够也得够。你以前不用管这些。", "en": "Two days will have to be enough. You never had to worry about this before."},
+        {"speaker": "eleanor", "text": "回来以后，我想吃硬糖。随便哪种。别买多，占地方。", "en": "When I get back, I want hard candy. Any kind. Don't buy much. It takes up space."},
+        {"speaker": "eleanor", "text": "那个技工一直在看一张画，是他女儿画的。她没跟来。", "en": "The technician keeps looking at a drawing his daughter made. She isn't coming."},
+        {"speaker": "eleanor", "text": "司机妹妹一直问我，外面是不是比里面好。", "en": "The driver's sister keeps asking me if it's better outside than inside."},
+        {"speaker": "eleanor", "text": "我说不一定，至少能自己走。", "en": "I said not necessarily. At least you can walk on your own."},
+        {"speaker": "eleanor", "text": "她鞋不合脚，走两步就掉。我给她绑了根绳。", "en": "Her shoes don't fit. They slip off after two steps. I tied them on for her."}
+      ]
+    },
+    {
+      "id": "rv12_b002",
+      "scene": "R12 清单齐了",
+      "lines": [
+        {"speaker": "eleanor", "text": "再检查一遍。检查三遍了，那就第四遍。", "en": "Check it again. I've checked three times, so this makes four."},
+        {"speaker": "eleanor", "text": "最后一批也到了，清单齐了。我自己都嫌烦。", "en": "The last batch is in. The list is complete. Even I'm sick of it."}
+      ]
+    },
+    {
+      "id": "rv12_b003",
+      "scene": "R12 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "账本别记错。回来我查。", "en": "Don't mess up the ledger. I'll check when I'm back."},
+        {"speaker": "player", "text": "店开着，人也等。", "en": "The shop stays open. And someone waits."},
+        {"speaker": "eleanor", "text": "你这个人。回来以后先说糖，别的再说。别弄太多，我不一定吃得下。", "en": "You. When I'm back, candy first. Everything else after. Don't get too much. I might not be able to eat it all."}
+      ]
+    },
+    {
+      "id": "rv13_b001",
+      "scene": "R13 回来的人",
+      "lines": [
+        {"speaker": "eleanor", "text": "店还开着。那就好。", "en": "The shop's still open. Good."},
+        {"speaker": "eleanor", "text": "人送到了，一个没少。我也回来了，你看得见。", "en": "Everyone delivered. Not one missing. And I'm back. You can see that."},
+        {"speaker": "eleanor", "text": "那个七岁的妹妹一路问到了没有。我说没有，问了三遍。", "en": "The seven-year-old asked the whole way whether we were there yet. I said no. Three times."},
+        {"speaker": "eleanor", "text": "她到地方就睡着了。她哥抱着她下的车。", "en": "She fell asleep as soon as we arrived. Her brother carried her off."},
+        {"speaker": "eleanor", "text": "她鞋上那根绳还在。", "en": "The string's still on her shoe."},
+        {"speaker": "eleanor", "text": "路上不算顺利。有一辆车坏了，我们推了两里。人没事，车扔了。", "en": "The road wasn't smooth. A car broke down. We pushed it two li. No one was hurt. We left the car."},
+        {"speaker": "eleanor", "text": "我胳膊擦了一下，没伤到骨头。换了药，自己换的。你先看货。", "en": "I scraped my arm. Nothing broken. Changed the dressing myself. Look at the goods first."}
+      ]
+    },
+    {
+      "id": "rv13_b002",
+      "scene": "R13 货",
+      "lines": [
+        {"speaker": "eleanor", "text": "这批是路上分到的。公司给押运队的，现在到我们手里了。", "en": "This is what we picked up on the road. Company issue for the escort team. Now it's ours."},
+        {"speaker": "eleanor", "text": "路上遇到追兵。我们没停，绕过去了。", "en": "We ran into pursuers. We didn't stop. Went around them."},
+        {"speaker": "eleanor", "text": "货也带回来了。", "en": "The goods came back too."},
+        {"speaker": "eleanor", "text": "这批你好好看，别当普通货收。价钱照谈，我不白送。", "en": "Look this batch over properly. Don't take it as ordinary stock. We'll still talk price. I'm not giving it away."}
+      ]
+    },
+    {
+      "id": "rv13_b003",
+      "scene": "R13 店里",
+      "lines": [
+        {"speaker": "eleanor", "text": "店里没人来找麻烦就好。我最怕回来看到门关着。", "en": "Good, no one came looking for trouble. What I feared most was coming back to a closed door."},
+        {"speaker": "eleanor", "text": "队里说这次算成了。就这一次，别想太远。", "en": "The unit says this one counts as a success. Just this one. Don't think too far ahead."},
+        {"speaker": "eleanor", "text": "这两天我想把货架收拾一遍，你别拦我。", "en": "I want to sort the shelves these next couple of days. Don't stop me."}
+      ]
+    },
+    {
+      "id": "rv13_b004",
+      "scene": "R13 收束",
+      "lines": [
+        {"speaker": "eleanor", "text": "我得回去交差。明天早上我再来，别太早开门。我说了别太早。", "en": "I have to report back. I'll come tomorrow morning. Don't open too early. I said not too early."}
+      ]
+    },
+    {
+      "id": "rv14_b001",
+      "scene": "R14 我想见你",
+      "lines": [
+        {"speaker": "eleanor", "text": "队里放两天。我睡到天亮才起。", "en": "The unit gave us two days. I slept until dawn."},
+        {"speaker": "eleanor", "text": "今天没货，也没单子。", "en": "No goods today. No list either."},
+        {"speaker": "eleanor", "text": "昨晚又是面包，方便。", "en": "Bread again last night. Convenient."},
+        {"speaker": "eleanor", "text": "外面风大。我走过来的时候，街上还没人。", "en": "It's windy out. The street was empty when I walked over."},
+        {"speaker": "eleanor", "text": "那你别忙。坐会儿。", "en": "Then don't be busy. Sit for a while."}
+      ]
+    },
+    {
+      "id": "rv14_b002",
+      "scene": "R14 停留",
+      "lines": [
+        {"speaker": "eleanor", "text": "下次进货，给我留两盒你店里那种饼干。", "en": "Next time you stock up, save me two boxes of those biscuits you carry."},
+        {"speaker": "eleanor", "text": "队里新来的孩子，第一次出任务吐了一路。总不能让他饿着。", "en": "The new kid in the unit threw up the whole first mission. Can't let him go hungry."},
+        {"speaker": "eleanor", "text": "队里下个月要换驻地，不算远，还能来。", "en": "The unit's moving next month. Not far. I can still come."},
+        {"speaker": "eleanor", "text": "我以后可能还会带伤回来。你别每次都问要不要紧。", "en": "I might come back hurt again. Don't ask every time if it's serious."},
+        {"speaker": "eleanor", "text": "问我要不要吃点什么。我还不饿。", "en": "Ask if I want something to eat. I'm not hungry yet."},
+        {"speaker": "eleanor", "text": "你今天不开门？", "en": "Aren't you opening today?"},
+        {"speaker": "player", "text": "晚点开。", "en": "Later."},
+        {"speaker": "eleanor", "text": "那我不占你太久。你这店里还是这么冷。炉子坏了就坐近点。", "en": "Then I won't keep you long. It's still so cold in here. If the heater's broken, sit closer."},
+        {"speaker": "eleanor", "text": "今天没有打算，就在这儿待着。", "en": "No plans today. Just staying here."},
+        {"speaker": "eleanor", "text": "空着的时候，我会想下一批货、下一队人。", "en": "When there's nothing else, I think about the next shipment, the next group of people."},
+        {"speaker": "eleanor", "text": "今天不想。", "en": "Today I don't."}
+      ]
+    },
+    {
+      "id": "rv14_b003",
+      "scene": "R14 选项1杯子",
+      "lines": [
+        {"speaker": "eleanor", "text": "我把杯子放这儿。", "en": "I'll put the cup here."}
+      ]
+    },
+    {
+      "id": "rv14_b004",
+      "scene": "R14 终句",
+      "lines": [
+        {"speaker": "eleanor", "text": "我想见你。", "en": "I want to see you."}
+      ]
+    },
+    {
+      "id": "rv_short_01",
+      "scene": "日常 R04—R05 买药",
+      "lines": [
+        {"speaker": "eleanor", "text": "这盒别给我算便宜，队里用的是这个数。包装别拆，路上不好带。", "en": "Don't give me a discount on this box. The unit uses this price. Don't open the packaging. It's hard to carry on the road."},
+        {"speaker": "eleanor", "text": "检查可以，别拆坏。药这种东西，省不得。", "en": "You can inspect it. Don't break it. You can't skimp on medicine."}
+      ]
+    },
+    {
+      "id": "rv_short_02",
+      "scene": "日常 R04—R05 卖小批货",
+      "lines": [
+        {"speaker": "eleanor", "text": "这批里有三个一样的。", "en": "There are three identical ones in this batch."},
+        {"speaker": "eleanor", "text": "你挑着收，我不想为三件一样的东西讲三遍价。给我算一批。", "en": "Take what you want. I don't want to haggle three times for three identical things. Price it as one lot."},
+        {"speaker": "eleanor", "text": "这才像做生意。", "en": "Now that's doing business."}
+      ]
+    },
+    {
+      "id": "rv_short_03",
+      "scene": "日常 R04—R05 买工具",
+      "lines": [
+        {"speaker": "eleanor", "text": "有没有不容易坏的？我不想再拿一把拧两下就断的。", "en": "Got anything that won't break? I don't want another one that snaps after two turns."},
+        {"speaker": "eleanor", "text": "这把贵可以，断了更贵。你倒是会算，跟你学的。", "en": "This one can be expensive. A broken one costs more. You're good at this. I learned from you."}
+      ]
+    },
+    {
+      "id": "rv_short_04",
+      "scene": "日常 R04—R05 正常买卖",
+      "lines": [
+        {"speaker": "eleanor", "text": "营养果现在多少钱？老价钱的话拿两袋，路上吃。别问那么多。", "en": "How much is nutrifruit now? If it's the old price, two bags for the road. Don't ask so many questions."},
+        {"speaker": "eleanor", "text": "你店里也小心。", "en": "Be careful in the shop too."}
+      ]
+    },
+    {
+      "id": "rv_short_05",
+      "scene": "日常 R06 后至 G1 声响",
+      "lines": [
+        {"speaker": "eleanor", "text": "没事。", "en": "It's nothing."},
+        {"speaker": "eleanor", "text": "你这杯子有缺口。我还是那句话：先用着，用惯了。", "en": "This cup's chipped. I'll say it again: keep using it until you're used to it."}
+      ]
+    },
+    {
+      "id": "rv_short_06",
+      "scene": "日常 R06 后至 G1 核对清单",
+      "lines": [
+        {"speaker": "eleanor", "text": "米拉的药别拿错，她吃错会起疹子。这次是我替她带的。", "en": "Don't mix up Mira's medicine. The wrong one gives her a rash. This time I'm picking it up for her."},
+        {"speaker": "eleanor", "text": "还有那个扳手，别拿细柄的。那种断了，差点割到我。", "en": "And the wrench—not the thin-handled one. That kind snapped and nearly cut me."},
+        {"speaker": "eleanor", "text": "这次我自己出钱，别算队里的账。", "en": "This time it's my money. Don't put it on the unit's account."}
+      ]
+    },
+    {
+      "id": "rv_short_07",
+      "scene": "日常 G1—G2 队里的习惯",
+      "lines": [
+        {"speaker": "eleanor", "text": "他们现在会先问我，这件东西值不值。我说先看接口，再看价钱。", "en": "Now they ask me first whether something's worth it. I say check the fittings first, price second."},
+        {"speaker": "eleanor", "text": "别看我说得顺，都是你教的。", "en": "Don't think I sound smooth. You taught me."}
+      ]
+    },
+    {
+      "id": "rv_short_08",
+      "scene": "日常 G1—G2 旧日记忆",
+      "lines": [
+        {"speaker": "eleanor", "text": "这个牌子的扣子不能硬掰。认得，没什么好夸的。", "en": "You can't force the clasp on this brand. Knowing it isn't worth praising."},
+        {"speaker": "eleanor", "text": "扣子给我留着，别当废料称。", "en": "Keep the buttons for me. Don't weigh them as scrap."}
+      ]
+    },
+    {
+      "id": "rv_short_09",
+      "scene": "日常 G2—G3 新人",
+      "lines": [
+        {"speaker": "eleanor", "text": "新来的那个，第一次出任务吐了一路。我没吐，我手抖。", "en": "The new one threw up the whole first mission. I didn't throw up. My hands shook."},
+        {"speaker": "eleanor", "text": "现在先看货，抖不抖另说。带新人先教他们别把枪口对着自己人。", "en": "Look at the goods first. Whether I shake is another matter. The first thing you teach a new one is not to point a gun at your own people."}
+      ]
+    },
+    {
+      "id": "rv_short_10",
+      "scene": "日常 G2—G3 没有货的短访",
+      "lines": [
+        {"speaker": "eleanor", "text": "今天不买什么，就看看。你忙你的，我看完就走。还没看完，你别催。", "en": "Not buying anything today. Just looking. Do your work. I'll go when I'm done. I'm not done yet. Don't rush me."}
+      ]
+    },
+    {
+      "id": "rv_short_11",
+      "scene": "日常 完成后 饼干",
+      "lines": [
+        {"speaker": "eleanor", "text": "你店里那种饼干还有吗？", "en": "Do you still have those biscuits?"},
+        {"speaker": "eleanor", "text": "拿两盒，一盒给队里，一盒放你这儿，我下次来吃。", "en": "Two boxes. One for the unit, one here. I'll eat it next time."},
+        {"speaker": "eleanor", "text": "那孩子不知道爱不爱吃甜的，先买着，吃不吃随他。", "en": "I don't know if the kid likes sweets. I'll buy it anyway. Whether he eats it is up to him."}
+      ]
+    },
+    {
+      "id": "rv_short_12",
+      "scene": "日常 完成后 打盹",
+      "lines": [
+        {"speaker": "eleanor", "text": "我坐一会儿。别关灯。不用叫我，我睡不沉。", "en": "I'll sit for a while. Don't turn off the light. You don't have to wake me. I don't sleep deep."}
+      ]
+    },
+    {
+      "id": "rv_short_13",
+      "scene": "日常 完成后 挑剔",
+      "lines": [
+        {"speaker": "eleanor", "text": "这个摆得难看。我来摆。行了，别动。", "en": "This is displayed badly. Let me do it. There. Don't touch it."},
+        {"speaker": "eleanor", "text": "别动。我刚摆好。", "en": "Don't touch it. I just fixed it."}
+      ]
+    },
+    {
+      "id": "rv_short_14",
+      "scene": "日常 完成后 短暂亲近",
+      "lines": [
+        {"speaker": "eleanor", "text": "你忙你的。我本来也没打算走。闭嘴可以，别走。", "en": "Do your work. I wasn't planning to leave anyway. You can shut up. Don't leave."}
+      ]
+    }
+  ]
+}

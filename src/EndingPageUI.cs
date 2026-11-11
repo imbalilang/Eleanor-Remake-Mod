@@ -79,6 +79,14 @@ namespace EleanorRomance
             if (ShowRoutePage(page)) DualState.Flag("ending_card_shown", true);
         }
 
+        public static void ShowRevolutionCompletion()
+        {
+            if (RomanceState.RevEndingShown) return;
+            EndingPages.Page page = EndingPages.TryRevolutionCompletion();
+            if (page == null) return;
+            if (ShowRoutePage(page)) RomanceState.RevEndingShown = true;
+        }
+
         public static void HideRoutePage()
         {
             if (routeRoot != null)

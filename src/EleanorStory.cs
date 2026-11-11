@@ -18,6 +18,8 @@ namespace EleanorRomance
             {
                 StoreClient maidClient = MaidStory.CreateMainChapter(chapter);
                 if (maidClient != null) return maidClient;
+                if (RomanceState.Route == 3 && RevolutionStory.IsChapter(chapter))
+                    return RevolutionStory.CreateChapter(chapter);
                 switch (chapter)
                 {
                     case 1: return CreateFoodChapter();
@@ -45,14 +47,6 @@ namespace EleanorRomance
                     case 22: return CreateLydiaSecondChapter();
                     case 23: return CreateFutureChapter();
                     case 24: return CreateConclusionChapter();
-                    case 101: return CreateRouteC1();
-                    case 102: return CreateRouteC2();
-                    case 103: return CreateRouteC3();
-                    case 104: return CreateRouteC4();
-                    case 105: return CreateRouteC5();
-                    case 106: return CreateRouteC6();
-                    case 107: return CreateRouteC7();
-                    case 108: return CreateRouteC8();
                     case 201: return CreateRouteD();
                     default:
                         StoryDirector.LogError("Unknown chapter " + chapter);
@@ -978,7 +972,11 @@ namespace EleanorRomance
             StoryEngine.Tail(routeC).SetEndAction(() =>
             {
                 RomanceState.Route = 3;
-                Advance(15, 101);
+                RomanceState.DriveState = 5;
+                RomanceState.MotherState = 2;
+                RomanceState.RevVersion = 1;
+                StoryEngine.FreeNutrifruitForLeak();
+                Advance(15, RevolutionStory.ChR01);
                 StoryEngine.Dismiss();
             });
 
@@ -1522,146 +1520,6 @@ namespace EleanorRomance
             });
 
             client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        // ------------------------------------------------------------------
-        // Route C
-        // ------------------------------------------------------------------
-
-        private static StoreClient CreateRouteC1()
-        {
-            StoreClient client = NewEleanorClient("rc1", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
-            Dialogue root = StoryEngine.Build(StoryV06Content.B_RC_B001);
-            StoryEngine.Tail(root).SetEndAction(() =>
-            {
-                RomanceState.DriveState = 5;
-                Advance(101, 102);
-                StoryEngine.Dismiss();
-            });
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC2()
-        {
-            StoreClient client = NewEleanorClient("rc2", "eleanor3", StoreClient.ClientIntent.DIALOGUE);
-            Dialogue root = StoryEngine.Build(StoryV06Content.B_RC_B002);
-            StoryEngine.Tail(root).SetEndAction(() =>
-            {
-                RomanceState.MotherState = 2;
-                StoryEngine.FreeNutrifruitForLeak();
-                Advance(102, 103);
-                StoryEngine.Dismiss();
-            });
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC3()
-        {
-            StoreClient client = NewEleanorClient("rc3", "eleanor3", StoreClient.ClientIntent.BUY);
-            client.clientBuyingTagList.Add("FOOD");
-            client.SetBudget(40);
-            bool dealt = false;
-            client.onItemBought = (item, paid) => { if (paid >= 0) dealt = true; };
-            Dialogue main = StoryEngine.Build(StoryV06Content.B_RC_B003);
-            client.mainDialogue = main;
-            FinishWhenLeaving(client, 103, 104, () =>
-            {
-                Dialogue dialogue = dealt
-                    ? StoryEngine.Build(StoryV06Content.B_RC_B004)
-                    : StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_no_food"));
-                return Head(dialogue);
-            });
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC4()
-        {
-            StoreClient client = NewEleanorClient("rc4", "eleanor3", StoreClient.ClientIntent.DIALOGUE, upper: false);
-            Dialogue root = StoryEngine.Build(StoryV06Content.B_RC_B005);
-            StoryEngine.Tail(root).SetEndAction(() =>
-            {
-                RomanceState.WorkState = 3;
-                Advance(104, 105);
-                StoryEngine.Dismiss();
-            });
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC5()
-        {
-            StoreClient client = NewEleanorClient("rc5", "eleanor3", StoreClient.ClientIntent.BUY, upper: false);
-            client.clientBuyingTagList.Add("WEAPON");
-            client.SetBudget(350);
-            bool dealt = false;
-            client.onItemBought = (item, paid) => { if (paid >= 0) dealt = true; };
-            Dialogue main = StoryEngine.Build(StoryV06Content.B_RC_B006);
-            client.mainDialogue = main;
-            FinishWhenLeaving(client, 105, 106, () =>
-            {
-                Dialogue dialogue = dealt
-                    ? StoryEngine.Chain(StoryV06Content.B_RC_B007, StoryV06Content.B_RC_B009)
-                    : StoryEngine.Chain(StoryV06Content.B_RC_B008, StoryV06Content.B_RC_B009);
-                return Head(dialogue);
-            });
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC6()
-        {
-            StoreClient client = NewNpcClient("rc6", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
-            Dialogue root = StoryEngine.Build(StoryV06Content.B_RC_B010);
-            StoryEngine.Tail(root).SetEndAction(() =>
-            {
-                Advance(106, 107);
-                StoryEngine.Dismiss();
-            });
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC7()
-        {
-            StoreClient client = NewEleanorClient("rc7", "eleanor_rev", StoreClient.ClientIntent.DIALOGUE, upper: false);
-            Dialogue root = StoryEngine.Build(StoryV06Content.B_RC_B011);
-            StoryEngine.Append(root, RomanceState.RomanceConfirmed || RomanceState.Romance == 2
-                ? StoryV06Content.B_RC_B012
-                : StoryV06Content.B_RC_B013);
-            StoryEngine.Tail(root).SetEndAction(() =>
-            {
-                Advance(107, 108);
-                StoryEngine.Dismiss();
-            });
-            client.mainDialogue = root;
-            client.CompleteClientCreation();
-            return client;
-        }
-
-        private static StoreClient CreateRouteC8()
-        {
-            StoreClient client = NewEleanorClient("rc8", "eleanor_rev", StoreClient.ClientIntent.BUY, upper: false);
-            client.clientBuyingTagList.Add("FOOD");
-            client.SetBudget(120);
-            Dialogue main = StoryEngine.Build(StoryV06Content.B_RC_B014);
-            client.mainDialogue = main;
-            FinishWhenLeaving(client, 108, 300, () =>
-            {
-                Dialogue dialogue = StoryEngine.Build(StoryV06Content.B_RC_B015);
-                Dialogue gift = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_leak_perfume"));
-                StoryEngine.Tail(dialogue).SetNextDialogue(gift);
-                gift.SetStartAction(StoryEngine.GiveSelfRefillingPerfume);
-                return Head(dialogue);
-            }, () => RomanceState.WorkState = 3);
             client.CompleteClientCreation();
             return client;
         }

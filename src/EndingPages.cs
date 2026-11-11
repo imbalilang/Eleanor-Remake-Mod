@@ -29,6 +29,9 @@ namespace EleanorRomance
         private static Page MaidPage() => new Page("er_ending_maid_title", "er_ending_maid_cg",
             "er_ending_maid_01", "er_ending_maid_02", "er_ending_maid_03", "er_ending_maid_04");
 
+        private static Page RevolutionPage() => new Page("er_ending_rev_title", "er_ending_revolution_cg",
+            "er_ending_rev_01", "er_ending_rev_02", "er_ending_rev_03", "er_ending_rev_04");
+
         /// <summary>Route-completion page for dr20; independent of the run's GameOver timing.</summary>
         public static Page TryDualCompletion()
         {
@@ -47,6 +50,15 @@ namespace EleanorRomance
             return MaidPage();
         }
 
+        /// <summary>Route-completion page for R14; never granted by the old short route C.</summary>
+        public static Page TryRevolutionCompletion()
+        {
+            if (!RomanceState.StoryActive) return null;
+            if (RomanceState.Route != 3 || RomanceState.MotherState != 2) return null;
+            if (!RomanceState.RevComplete || RomanceState.RevEndingShown) return null;
+            return RevolutionPage();
+        }
+
         /// <summary>
         /// Native GameOver fallback.  Once a route has shown its standalone page,
         /// do not show the same CG again behind the failure panel.  Old saves that
@@ -56,6 +68,14 @@ namespace EleanorRomance
         {
             if (!RomanceState.StoryActive) return null;
             if (Terminal(description)) return null;
+            if (RomanceState.Route == 3)
+            {
+                // Fallback only if the standalone R14 page did not manage to show
+                // and the reported result is not a death/arrest/departure.
+                return RomanceState.MotherState == 2
+                    ? TryRevolutionCompletion()
+                    : null;
+            }
             if (RomanceState.Route != 1 || RomanceState.MotherState != 1) return null;
 
             if (DualState.Writable && DualState.HasHistory && DualState.Confirmed && DualState.Done("dr20"))
