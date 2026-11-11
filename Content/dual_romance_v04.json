@@ -56,7 +56,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……算了，这话我自己去跟她说。",
+              "text": "算了，这话我自己去跟她说。",
               "en": "...Never mind. I'll tell her that myself."
             }
           ]
@@ -202,7 +202,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "行，我不管了。……不过她要是问起，我就说你今天总算说了句像样的话。",
+              "text": "行，我不管了。她要是问起，我就说你今天总算说了句像样的话。",
               "en": "Fine, I'll stay out of it. ...But if she asks, I'll say you finally said something decent today."
             }
           ]
@@ -248,7 +248,7 @@
             },
             {
               "speaker": "Player",
-              "text": "教了几句。不过留你多坐一会儿，是我自己想的。你今天……气色不错。",
+              "text": "教了几句。留你多坐一会儿，是我自己想的。你今天……气色不错。",
               "en": "A few lines. But asking you to stay longer was my own idea. You look... well today."
             },
             {
@@ -353,8 +353,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "所以不是我不懂欣赏，是我不用连那个故事一起买单？",
-              "en": "So it's not that I don't know how to appreciate it—it's that I don't have to pay for the story too?"
+              "text": "所以我不算不懂欣赏，只是不用连那个故事一起买单？",
+              "en": "So it's not that I don't appreciate it - I just don't have to pay for the story too?"
             },
             {
               "speaker": "Lydia",
@@ -368,7 +368,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……我是来教你怎么关心她的，你倒先拿我练上了。好吧，这句我就不转告她了。",
+              "text": "我是来教你怎么关心她的，你倒先拿我练上了。好吧，这句我就不转告她了。",
               "en": "...I came to teach you how to care about her, and you practiced on me first. Fine, I won't pass that part on."
             }
           ]
@@ -412,7 +412,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……这句也是她教的？",
+              "text": "这句也是她教的？",
               "en": "...Did she teach you that too?",
               "expr": "shy"
             },
@@ -423,7 +423,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……我也是。喜欢你！听清楚了没有？",
+              "text": "我也是。喜欢你！听清楚了没有？",
               "en": "...Me too. I like you! Did you hear me?",
               "expr": "shy"
             },
@@ -454,7 +454,7 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "……知道了。",
+              "text": "知道了。",
               "en": "...I understand."
             },
             {
@@ -495,7 +495,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "我订了个位置，三个人的。她最近忙得饭都顾不上吃，正好拉她出来。我当然也去——不然你们俩大眼瞪小眼，谁找话说？",
+              "text": "我订了个位置，三个人的。她最近忙得饭都顾不上吃，正好拉她出来。我也去——不然你们俩大眼瞪小眼，谁找话说？",
               "en": "I booked a table for three. She's been too busy to eat lately, so I'm dragging her out. Of course I'm coming too—otherwise you two would stare at each other and who'd start the conversation?"
             }
           ]
@@ -528,7 +528,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……还有另一家！总之你们慢慢吃！",
+              "text": "还有另一家！总之你们慢慢吃！",
               "en": "...There is another one! Just enjoy yourselves!"
             },
             {
@@ -572,7 +572,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "你们那天后来没光聊货吧。我费心腾地方，可不是让你们拿我找乐子的。",
+              "text": "你们没光聊货吧。我费心腾地方，可不是让你们拿我找乐子的。",
               "en": "You two didn't spend the whole time talking about goods afterward, did you? I went to trouble to clear the space. I wasn't doing it for your entertainment.",
               "expr": "tease"
             },
@@ -583,7 +583,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "她那天还把披肩递给我。……她一向记得这些。",
+              "text": "她还把披肩递给我。……她一向记得这些。",
               "en": "She even handed me my shawl that day. ...She always remembers things like that.",
               "expr": "hurt"
             },
@@ -595,8 +595,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "也不是听你一说就不喜欢了……就是喜欢的时候，不用再担心又当冤大头。",
-              "en": "It's not that I stopped liking it because of what you said... it's that I can like something without worrying I'm being fleeced.",
+              "text": "也没听你一说就不喜欢了……只是喜欢的时候，不用再担心又当冤大头。",
+              "en": "It's not that one word from you made me stop liking it... It's just that now I can like it without worrying about being fleeced.",
               "expr": "tease"
             },
             {
@@ -628,7 +628,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "试了两天。头一天只让我照着单子点货。后来我挑出一箱型号写错了，他们才肯让我自己记账。",
+              "text": "试了两天。头一天只让我照着单子点货。我挑出一箱型号写错了，他们才肯让我自己记账。",
               "en": "I tried it for two days. The first day they only let me count against the list. Then I caught a crate with the wrong model number, and they let me keep the books myself."
             },
             {
@@ -695,8 +695,8 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "反正这回上去，不是回去当那个什么都不用管的大小姐。",
-              "en": "Either way, this time going up doesn't mean going back to being the young lady who doesn't have to worry about anything."
+              "text": "反正这回上去，不再当那个什么都不用管的大小姐。",
+              "en": "Anyway, this time I'm going up there as someone who doesn't just have everything handled for her."
             }
           ]
         },
@@ -713,7 +713,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……你怎么不问，我以后还来不来？",
+              "text": "你怎么不问，我以后还来不来？",
               "en": "...Why have you not asked whether I will still come?"
             },
             {
@@ -723,7 +723,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……会来。只是不能每回一想起你，就拎着货跑下来。",
+              "text": "会来。只是不能每回一想起你，就拎着货跑下来。",
               "en": "...I will. I just cannot run down here with a bag of stock every time I think of you."
             },
             {
@@ -738,7 +738,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……有时候也没想错。",
+              "text": "有时候也没想错。",
               "en": "...Sometimes she's not wrong."
             }
           ]
@@ -764,7 +764,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "头一回把最亮的全挤在一起，站远一看什么都看不清。后来留了点空，连最不起眼的那枚都有人问。老板还想让我下回接着摆。",
+              "text": "头一回把最亮的全挤在一起，站远一看什么都看不清。留了点空，连最不起眼的那枚都有人问。老板还想让我下回接着摆。",
               "en": "The first time, I packed all the brightest pieces together. From a distance you couldn't see anything. Then I left some space, and even the plainest piece got questions. The owner wants me to do it again."
             },
             {
@@ -779,7 +779,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……这句比夸我会摆柜子好多了。",
+              "text": "这句比夸我会摆柜子好多了。",
               "en": "...That's much better than praising my display arranging."
             }
           ]
@@ -810,7 +810,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……你、你怎么看得这么仔细？我是让你看她！",
+              "text": "你、你怎么看得这么仔细？我是让你看她！",
               "en": "...You—why are you looking so closely? I told you to look at her!"
             }
           ]
@@ -823,7 +823,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "……谢谢。",
+              "text": "谢谢。",
               "en": "...Thank you."
             }
           ]
@@ -836,7 +836,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "……那是我送她的！你这眼力，到底是好还是不好？",
+              "text": "那是我送她的！你这眼力，到底是好还是不好？",
               "en": "...I gave her that one! Is your eye for detail good or bad?"
             }
           ]
@@ -900,7 +900,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "那两天，算我们的事。你也记着。",
+              "text": "那两天，算我们的事。",
               "en": "Those two days are ours. Remember that."
             }
           ]
@@ -926,7 +926,7 @@
             },
             {
               "speaker": "Player",
-              "text": "前几天来过。后来就没再来。",
+              "text": "前几天来过。就没再来。",
               "en": "She came a few days ago. Then she stopped."
             },
             {
@@ -951,7 +951,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……以前她跟我说起你，全是“他该这样”“你该那样”。最近一个字都不提了。",
+              "text": "以前她跟我说起你，全是“他该这样”“你该那样”。最近一个字都不提了。",
               "en": "...Before, whenever she talked about you, it was all 'he should do this' and 'you should do that.' Lately she doesn't say a word."
             },
             {
@@ -999,7 +999,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……后来有别的安排。",
+              "text": "有别的安排。",
               "en": "...I had other plans later."
             },
             {
@@ -1046,12 +1046,12 @@
             },
             {
               "speaker": "Player",
-              "text": "我问的不是客人。你不来的这几天，我总忍不住看门口。",
-              "en": "I'm not asking about customers. These past few days you haven't come, I keep looking at the door."
+              "text": "我没问客人。你不来的这几天，我总忍不住看门口。",
+              "en": "I didn't ask about customers. These past few days you didn't come, I kept looking at the door."
             },
             {
               "speaker": "Lydia",
-              "text": "……我知道。你这么说，我就更不知道该怎么走了。",
+              "text": "我知道。你这么说，我就更不知道该怎么走了。",
               "en": "...I know. Hearing you say that makes it even harder to leave."
             }
           ]
@@ -1077,7 +1077,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "一开始，我真的只是想让她过得好一点。后来她们在上面夸你，我差点又抢着说，是我先发现这家店的。",
+              "text": "一开始，我只是想让她过得好一点。",
               "en": "At first I only wanted things to go better for her. Then, when they praised you upstairs, I nearly interrupted to say I had found this shop first."
             },
             {
@@ -1100,7 +1100,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "……那你去说。我一想到她会怎么看我，就一句话也想不好了。",
+              "text": "那你去说。我一想到她会怎么看我，就一句话也想不好了。",
               "en": "...Then tell her. Every time I think of how she will look at me, I lose all my words."
             },
             {
@@ -1146,13 +1146,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……然后呢？你还真敢当着我的面说！",
+              "text": "然后呢？你还真敢当着我的面说！",
               "en": "...And then? You really dare say it to my face!",
               "expr": "angry"
             },
             {
               "speaker": "Eleanor",
-              "text": "我当然生气！……我早就觉得不对劲了。她不来，你也不提。我还以为是我自己多心。",
+              "text": "我生气！我早就觉得不对劲了。她不来，你也不提。我还以为是我自己多心。",
               "en": "Of course I'm angry! ...I've felt something was off for a while. She didn't come, and you didn't mention her. I thought I was imagining things.",
               "expr": "angry"
             },
@@ -1174,7 +1174,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……你倒是坦白。她呢？她怎么说？",
+              "text": "你倒是坦白。她呢？她怎么说？",
               "en": "...You're honest, at least. What about her? What did she say?",
               "expr": "sad"
             },
@@ -1191,13 +1191,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "前两天我还在想，她要是再也不来了，是不是就能当作什么都没发生。后来我自己想去找她。想问她到底在躲什么……又怕她真说出来。",
+              "text": "前两天我还在想，她要是再也不来了，是不是就能当作什么都没发生。我自己想去找她。想问她到底在躲什么……又怕她真说出来。",
               "en": "A couple of days ago I was still thinking that if she never came again, maybe I could pretend none of it happened. Then I wanted to go find her myself. To ask what she was hiding... and afraid she'd actually tell me.",
               "expr": "sad"
             },
             {
               "speaker": "Eleanor",
-              "text": "那天三个人吃饭，她拿块面包学别人挑货，我笑得差点把水洒了。后来她回来拿披肩，我还想叫她坐下。",
+              "text": "三个人吃饭，她拿块面包学别人挑货，我笑得差点把水洒了。她回来拿披肩，我还想叫她坐下。",
               "en": "At dinner she held up that bread and imitated a customer. I nearly spilled my water laughing. When she came back for her shawl, I wanted to ask her to sit down again."
             },
             {
@@ -1236,7 +1236,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……哼。",
+              "text": "哼。",
               "en": "...Hmph."
             }
           ]
@@ -1300,7 +1300,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "后来她问我到底想要什么。我说，我想见你。不是把你送到门口，自己站在外面等。",
+              "text": "她问我到底想要什么。我说，我想见你。不是把你送到门口，自己站在外面等。",
               "en": "Then she asked what I actually wanted. I said I wanted to see you. Not to walk you to the door and stand outside waiting."
             },
             {
@@ -1450,7 +1450,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……今天想让我陪你多久？",
+              "text": "今天想让我陪你多久？",
               "en": "...How long do you want me to stay today?"
             },
             {
@@ -1506,7 +1506,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……我还以为得我提醒你呢。",
+              "text": "我还以为得我提醒你呢。",
               "en": "...I thought I'd have to remind you."
             }
           ]
@@ -1519,12 +1519,12 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "……再亲一下。",
+              "text": "再亲一下。",
               "en": "...Kiss me again."
             },
             {
               "speaker": "Lydia",
-              "text": "……原来真到了这时候，我也没那么会说话。",
+              "text": "原来真到了这时候，我也没那么会说话。",
               "en": "...So when it actually happens, I'm not that good with words after all."
             }
           ]
@@ -1597,12 +1597,12 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "工作顺。上面的人都知道我哪天要早走。我跟他们说了，是来见你，不是偷偷摸摸来的。",
-              "en": "Work's fine. Everyone upstairs knows which day I leave early. I told them I'm coming to see you, not sneaking around."
+              "text": "工作顺。上面的人都知道我哪天要早走。我跟他们说了，是来见你，不用偷偷摸摸。",
+              "en": "Work's fine. Everyone upstairs knows which day I leave early. I told them I'm coming to see you - no sneaking around."
             },
             {
               "speaker": "Eleanor",
-              "text": "……上回是她来陪你的吧。我不问待到几点。有一点吃醋！你别笑，我就是想知道。",
+              "text": "上回是她来陪你的吧。我不问待到几点。有一点吃醋！你别笑，我就是想知道。",
               "en": "...Last time it was her turn to keep you company, right? I won't ask how long. I'm a little jealous! Don't laugh. I just want to know.",
               "expr": "shy"
             },
@@ -1690,7 +1690,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我又没说要走。只是……上回坐在这儿，到这时候，就该我找借口了。",
+              "text": "我又没说要走。上回坐在这儿，到这时候，就该我找借口了。",
               "en": "I didn't say I was leaving. It's just... last time I sat here, at this point I'd be finding an excuse."
             },
             {
@@ -1700,7 +1700,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……那我不走了。点心还没吃呢。",
+              "text": "那我不走了。点心还没吃呢。",
               "en": "...Then I won't go. We haven't had the pastries yet."
             },
             {
@@ -1808,8 +1808,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "所以才来问他呀。来，先别看账。",
-              "en": "Which is why I am asking him! Come on, leave the accounts a moment."
+              "text": "所以才来问他呀。来，先别看本子。",
+              "en": "That's why I'm asking him. Come on, don't look at the books first."
             },
             {
               "speaker": "Player",
@@ -1854,7 +1854,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "好啊。不过先给你看看，我今天戴的这只耳夹。",
+              "text": "好啊。先给你看看，我今天戴的这只耳夹。",
               "en": "Gladly. But first, have a look at these earrings."
             }
           ]
@@ -1957,7 +1957,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "那我坐会儿，你忙你的——不过这只耳夹，我都戴一路了，你还没看见？",
+              "text": "那我坐会儿，你忙你的——这只耳夹，我都戴一路了，你还没看见？",
               "en": "Then I'll sit a while. You do your work—but I've been wearing this ear clip the whole way here. You haven't noticed?"
             }
           ]
@@ -1993,7 +1993,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……也讲一点。你还不是一样，说是下来卖东西，坐下就不想走。",
+              "text": "也讲一点。你还不是一样，说是下来卖东西，坐下就不想走。",
               "en": "...I still talk about them a little. You're the same—you say you're coming down to sell goods, then you sit down and don't want to leave."
             },
             {
@@ -2049,7 +2049,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "当然！东西俗一点，摆得可不能也俗。",
+              "text": "东西俗一点，摆得可不能也俗。",
               "en": "Of course! A gaudy ornament does not need a gaudy display."
             }
           ]
@@ -2070,7 +2070,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "不过有件事，我想亲口问你。",
+              "text": "有件事，我想亲口问你。",
               "en": "But there's one thing I want to ask you myself."
             }
           ]
@@ -2085,8 +2085,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "摆橱窗里，别压账本底下。认识我的人看见，就知道没走错门。",
-              "en": "Put it in the showcase. Do not bury it under your ledger. People who know me will know they have the right door."
+              "text": "摆橱窗里，别压在本子底下。认识我的人看见，就知道没走错门。",
+              "en": "Put it in the display window, not under the books. Anyone who knows me will see it and know they came to the right place."
             },
             {
               "speaker": "Lydia",
@@ -2125,7 +2125,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……我说的是客人。这个也给你，摆橱窗里。碰上满意的客人，她们也愿意多留谢意。",
+              "text": "我说的是客人。这个也给你，摆橱窗里。碰上满意的客人，她们也愿意多留谢意。",
               "en": "...I mean for customers. This one's for you too. Put it in the display. Satisfied customers are more willing to leave a token of thanks."
             },
             {
@@ -2155,8 +2155,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "今天也不是来查账的——我有件自己的事。",
-              "en": "I'm not here to audit the accounts today either. I have something of my own."
+              "text": "今天不查数——我有件自己的事。",
+              "en": "I'm not here to check the numbers today. I have something of my own."
             }
           ]
         },
@@ -2165,7 +2165,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "快告诉我，上回那顿饭，后来吃得怎么样？",
+              "text": "快告诉我，上回那顿饭，吃得怎么样？",
               "en": "Tell me—how did the rest of that dinner go?"
             }
           ]
@@ -2280,7 +2280,7 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "这件首饰，我最后还是没买。试了三次，每次都想问别人好不好看。后来一想，我自己都没那么喜欢。",
+              "text": "这件首饰，我最后还是没买。试了三次，每次都想问别人好不好看。一想，我自己都没那么喜欢。",
               "en": "I didn't buy that piece in the end. I tried it three times, and every time I wanted to ask someone whether it looked good. Then I thought, I didn't even like it that much."
             },
             {
@@ -2310,7 +2310,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "……那就一会儿。别以为我要替你看店。",
+              "text": "那就一会儿。别以为我要替你看店。",
               "en": "...Just a little while. Do not expect me to watch the shop."
             }
           ]

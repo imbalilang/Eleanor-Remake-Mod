@@ -27,8 +27,8 @@
       "lines": [
         {
           "speaker": "Player",
-          "text": "先把那天的事说完。以后查到什么，记录都给你看。",
-          "en": "Let me tell you the rest of that day. From now on, you see the records of everything I find."
+          "text": "先把事情说完。以后查到什么，记录都给你看。",
+          "en": "Let me finish explaining the matter. From now on, you see the records of everything I find."
         },
         {
           "speaker": "Eleanor",
@@ -37,8 +37,8 @@
         },
         {
           "speaker": "Eleanor",
-          "text": "我会看的。答应过的事，你自己记住。",
-          "en": "I'll read it. You remember what you promised."
+          "text": "我会看的。",
+          "en": "I'll read it."
         }
       ]
     },
@@ -105,8 +105,8 @@
         },
         {
           "speaker": "Eleanor",
-          "text": "……谁拿它当借口了！",
-          "en": "...Who says it was an excuse?"
+          "text": "谁拿它当借口了！",
+          "en": "Who says it was an excuse?"
         },
         {
           "speaker": "Player",

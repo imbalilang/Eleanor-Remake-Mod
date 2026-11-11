@@ -19,7 +19,7 @@
     "You said 'you'll do as I say from now on' and 'not just in business.' I heard you.",
     "I was wrong. None of that counts. You can refuse what I say today and still keep investigating.",
     "I can't repay a loan. I won't take charity.",
-    "Work in the shop. Check goods, keep accounts, run errands. Whatever you can't handle, I'll find a way.",
+    "Come work at the shop. Check stock, sort goods, run errands. Anything you can't handle, I'll find a way.",
     "Can you?",
     "We'll take it one thing at a time. If I can't do it, I'll tell you first.",
     "Fine. First tell me exactly what the work is. Don't think I've forgotten what you said that day."
@@ -43,7 +43,6 @@
   ],
   "m11_b001": [
     "Done! I've saved up the eight hundred for the detective. Counted three times. Not a credit short.",
-    "Before, that much money was one line on a bill. Now point at any note and I can tell you how I earned it.",
     "Including that thing I refused to admit was scrap. The parts from it sold for money, so don't look down on it."
   ],
   "m11_b002": [
@@ -77,12 +76,12 @@
     "Also, Mother and the research aren't part of the deal. Who gets the files and which road we take have to be decided together.",
     "Don't tell me you've already decided what I should call you.",
     "You choose what I call you.",
-    "I'll be watching. The day I think you're using me to settle a debt, I walk. Work can be negotiated. Don't stuff anything else into it."
+    "I'll be watching. The day I think you're taking payment out of me, I'm gone. We can talk work. Keep the rest out of it."
   ],
   "m11_b008": [
     "I have one condition too. Eight hundred, as an advance on wages.",
     "I said I don't want a handout—",
-    "It's not charity. It's wages. Your mother will need medicine and a place to live when she's out. Advances before work are normal.",
+    "This is an advance on wages, not charity. Your mother will need medicine and a place to stay when she's out. An advance before work starts - that's the rule.",
     "Whose normal? This shop's?",
     "You really know how to word things. I'm paying the detective myself. That's money I earned.",
     "...Leave that stack here for now. If Mother needs it, I'll take it."
@@ -90,7 +89,7 @@
   "m11_b011": [
     "Set my work days first. If there's news about mother, I have to go.",
     "See the detective first tomorrow. We'll schedule after we hear something.",
-    "This money is for her medicine and a place to stay. It's not because I'm short on investigation money.",
+    "This money is for her medicine and a place to stay. I'll find another way to cover the investigation.",
     "I won't shirk the work. Don't just talk about what you promised me.",
     "...See you tomorrow."
   ],
@@ -174,7 +173,7 @@
     "I've got everything here. Just not what you're looking for."
   ],
   "m13_b007": [
-    "Her name and yours will both be on the record. Think about that.",
+    "Both of you will be on the record. Think carefully.",
     "So will the message you brought."
   ],
   "m13_b008": [
@@ -231,7 +230,6 @@
   ],
   "m14_b011": [
     "I've thought it through. I'm out of the investigation, and the shop agreement ends here. Here's the drive.",
-    "...",
     "You promised me an Upper Level.",
     "I know. That's why I'm saying it now, before I make a mess of it.",
     "...Good. At least you didn't pretend you could carry it.",
@@ -248,12 +246,12 @@
     "Look at the files first. Food can wait."
   ],
   "m15_b002": [
-    "The name on the medication record checks out. But they changed the collection point.",
+    "The medicine list checks out. But they changed the handoff location again.",
     "I turned back halfway. The man said if I don't bring the drive, I won't see the next person.",
     "I almost went. If you want to say 'I told you so,' go ahead.",
     "You brought it back. We can still negotiate.",
     "I found the original handler. He agreed to let me see the release paperwork without going through the messenger.",
-    "Write down the name, time and place separately. Once the handler is fixed, we talk about when to hand over the drive.",
+    "The handler, the time, the place - keep them separate. Once the handler is fixed, then we talk about when to hand over the drive.",
     "...Go through it with me again. Especially the two steps he said we could skip."
   ],
   "m15_b003": [
@@ -379,7 +377,7 @@
   "m18_b004": [
     "My own goods first, then your work. Payment for goods and wages are separate.",
     "I've put the damaged ones aside. Don't value them all together.",
-    "This is a fair price, not a favor to save me trouble."
+    "It's a fair price. You don't need to make it easy for me."
   ],
   "m18_b005": [
     "All right. About what I worked out."
@@ -389,7 +387,7 @@
   ],
   "m18_b007": [
     "I priced this too high. Saw the new casing, missed the wear inside.",
-    "The faults I found on the other one have to be recorded too.",
+    "The other sheet - the problems I found - also needs to go on the record.",
     "...Give me both.",
     "The pen's right here. I'll get it myself."
   ],
@@ -426,7 +424,7 @@
     "When you told me to hold on to the drive, I really thought of taking it myself.",
     "After Mother got out, I thought I wouldn't have to come to you for everything anymore.",
     "But the lot, those two labels...my first thought is still to bring them for you to check.",
-    "It's not that I want you to do everything for me.",
+    "I didn't want you to do everything for me.",
     "It's just... when you've decided, I can work steadily without worrying the whole time that I've missed something."
   ],
   "m19_b006": [
@@ -451,7 +449,7 @@
   ],
   "m20_b003": [
     "That customer I sent to buy used equipment. Did he come by?",
-    "They looked at the goods and discussed the price. I'm not asking for a report. I'm asking how my eye was!"
+    "I looked at the goods. We talked price. Don't recite the numbers. I'm asking how good my eye is!"
   ],
   "m20_b004": [
     "If it didn't work out with that used-equipment buyer I sent, leave it. You don't have to sell to him just because I sent him."
@@ -485,7 +483,7 @@
     "End it? ...And your half upstairs?",
     "If you want to go back, you can do it under your own name. You don't need to work for it.",
     "...You really do have faith in me.",
-    "All right. I'll call you by your name from now on. Don't pretend you didn't hear."
+    "Good. Then when I call you, don't pretend you didn't hear."
   ],
   "m20_b011": [
     "You're important to me. But I think we should stay friends.",
@@ -518,7 +516,7 @@
     "People upstairs are already talking. Saying she's down here, working as a pawnbroker's maid.",
     "That she's dating the owner too. Telling half a story and leaving half out just sounds spiteful.",
     "They reacted about the same as I did when I first heard. You can be a little smug. Just not this obviously.",
-    "But seriously. She wants to go back under her own name. When that day comes, someone will definitely throw this in her face.",
+    "But seriously. She wants to get back on her own. When that day comes, someone will throw it in her face.",
     "I think she's ready. You sound more sure of it than she does."
   ],
   "m21_b007": [
@@ -528,7 +526,7 @@
   ],
   "m22_b001": [
     "Mother's found a little work. Growing things. Nothing large, but she's taking it very seriously.",
-    "I'll help. But she won't let me hover all day. She says if I stand there, I won't be able to stop picking at her work."
+    "I'll help. But she won't let me hover all day. Says if I stand there, I can't help picking at her mistakes."
   ],
   "m22_b002": [
     "There's news about the research on making Nutrifruit seed again. That doesn't mean everyone will be eating their own crop tomorrow. There are trials to run, and people willing to run them.",
@@ -536,7 +534,7 @@
   ],
   "m22_b003": [
     "Lydia says she can find me a position upstairs. I asked what it was. She said, first there's a place, the details later.",
-    "I won't take it. I don't want a position. I want them to remember my name.",
+    "I'm not going. I don't want an empty position. I want them to remember me.",
     "I know she means well. But I don't want to sit in a job nobody can explain, waiting every month for pay that comes because of her.",
     "An introduction isn't a bad thing. If she finds people willing to look at samples, I'll go. But next time they should come to me because the goods are good and the deliveries are on time.",
     "We agreed it would be under my own name.",
@@ -582,7 +580,7 @@
   ],
   "m23_b005": [
     "I'll keep an eye on the scavenging sites too. I know a few places with things left, and a few people whose word isn't worth much.",
-    "It's to save you wasted trips. Not to save you doing anything at all."
+    "I wanted to save you some wrong turns, not have you wash your hands of it!"
   ],
   "m23_b006": [
     "Almost forgot. Mother's review materials were formally submitted.",
@@ -602,10 +600,8 @@
   ],
   "m23_b009": [
     "One more thing. If I don't say it today, I'll put it off again.",
-    "I used to think that once I got back upstairs, I could pretend none of this had happened.",
-    "I still want to go back. But not to forget this place.",
-    "I want them to see it clearly. Down here, I learned to judge goods, keep accounts, earn my own meals. I want to walk back under this name, without hiding from anyone, or hiding you.",
-    "Someone has to remember the half you promised me. Wilde has a list.",
+    "I want the people upstairs to see it clearly - I learned to judge stock, negotiate, and earn my own meals down here. I'll walk back under my own name. No hiding from anyone, and no hiding you.",
+    "Wilde has a list for the half you promised me.",
     "...I'll do my part properly. Don't ruin the shop trying to hurry yours.",
     "I don't want to end up supporting you one day."
   ],
@@ -624,25 +620,25 @@
     "Then he asked, 'I hear you're working as a pawnbroker's maid down below?'",
     "Someone nearby laughed. A man who used to come to our house for dinner. I called him uncle when I was little.",
     "The funniest part is, I wasn't nervous at all.",
-    "I stood there thinking about the way you inspect goods. However fine someone's words, you look at the goods. If there's nothing wrong with them, the words don't need an answer."
+    "Standing there, I thought of the way you inspect stock. Other people can talk all they want; you look at the goods. If they're sound, you don't have to answer the talk."
   ],
   "m24_b003": [
-    "Your contact submitted the materials the day before. He kept the name of everyone who handled each step.",
-    "When the inspector saw the handler's name, his face changed and he flipped through the last pages fast.",
+    "The contact you arranged submitted the papers the day before. He noted who handled every step.",
+    "When the inspector saw who had handled it, his expression changed and he flipped through the rest in a hurry.",
     "Your contact said, 'When the pawnshop owner asks, nobody in the lower district wants to botch it.'",
     "...How many favors do you owe down here, and how many do you have saved up?"
   ],
   "m24_b004": [
     "Everything went through normal procedure. Every page stamped. Every fee itemized.",
     "He went back and forth, couldn't find a single fault, and finally had to push my papers back.",
-    "When the goods are clean, you can hold your price. Turns out paperwork works the same way."
+    "When the goods are sound, you can stand firm on the price. Turns out paperwork is the same."
   ],
   "m24_b005": [
     "In the end he only said, 'You can go, Miss Eleanor.'",
     "He pushed the papers to the window and went to call the next person. I picked them up and walked through myself.",
     "Only when the gate clicked behind me did I notice how tightly I was clutching the papers.",
-    "I memorized the inspector's name. I won't buy anything from him again.",
-    "...Note it down.",
+    "I remembered that inspector. I won't take anything from him again.",
+    "...Checking stock.",
     "That walk was long. I never used to think it was that long.",
     "Someone recognized me and asked about Mother first, then how I make a living. I said I work in the lower district. The owner knows goods, and his accounts are cleaner than theirs."
   ],
@@ -658,9 +654,9 @@
     "One step at a time."
   ],
   "m24_b009": [
-    "The pass has my name on it. The agreement—not yet.",
-    "The papers say my name. But they still call me 'that case's daughter' and 'the pawnshop attendant.'",
-    "When I say going back, I don't mean just getting a pass. I mean when they mention me, they say 'Eleanor.'",
+    "The pass has my name on it. But the agreement - not yet.",
+    "The papers say me. But the names they use are still 'that case's daughter' and 'the pawnshop attendant.'",
+    "Getting the pass isn't the end. When they talk about me, I want them to say 'Eleanor.'",
     "So I'll keep at it. ...You're still owing me."
   ],
   "m24_b010": [
@@ -752,7 +748,7 @@
   ],
   "m27_b004": [
     "Mother didn't come. The formal result isn't out yet, and she doesn't want to stand in public until the case is closed.",
-    "I rehearsed it for her last night. She picked out three things, and people asked about all three today. When the notice arrives, I'll take her to see it."
+    "I rehearsed it with her last night. She found three things wrong. Today, wouldn't you know it, people asked about all three. Once the notice comes, I'll take her to see it."
   ],
   "m27_b005": [
     "Mother still can't go upstairs. The night before, she made me rehearse it in our room and found three weak points.",
@@ -793,7 +789,7 @@
   "m28_b002": [
     "There is something to settle today. Afterwards, I want to spend a little longer here.",
     "Do you remember the condition I set? Waiting for you to walk back into the upper district under your own name.",
-    "That day has come. They remember my name, and trust me with their business.",
+    "That day came. They remember Eleanor now, and they trust me with their business.",
     "You did what you promised, and I finished the work I promised. That agreement ends today.",
     "Who said I'm leaving? Someone upstairs asked me to dinner to discuss next quarter's order. I made them reschedule.",
     "Because I made plans with you today. ...This outfit doesn't count as work anymore.",
@@ -843,7 +839,7 @@
     "She told me to tell you: don't bring anything. Just come."
   ],
   "world_b005": [
-    "Next time, I'll take her upstairs to see the showroom. Not to make up for a missed reception. I just want her to see what I've built."
+    "Next time I'll take her up to see the showroom. No business dinner. I just want her to see what I've made of it."
   ],
   "wait_b001": [
     "Don't rush this by handing over money the shop still needs.",
@@ -867,7 +863,7 @@
     "...If you want to talk to me, say so. Don't use misplaced things as an excuse."
   ],
   "daily_b003": [
-    "Brought something to eat. Don't ask what it cost first. I keep my own accounts.",
+    "Brought some food. Don't ask what it cost. I keep track of my own spending.",
     "I used to turn my nose up at this stuff. I still do. This place just makes it edible.",
     "This is the best I've picked! Do you know how long I spent choosing?",
     "Tell me after you eat. Should I bring it again next time?"
@@ -933,12 +929,12 @@
     "I will. I haven't forgotten everything you taught me."
   ],
   "tragic_b010": [
-    "I need a working weapon. Not something that looks frightening. Something reliable.",
+    "I need a weapon that works. Something reliable. No display piece.",
     "If I have one, I'll show you. If I don't, I won't pass off something broken.",
     "All right. We judge the goods."
   ],
   "tragic_b012": [
-    "That's today's account settled.",
+    "That's enough for today.",
     "Don't rush to calculate the rest. The rest... I can't make sense of it now either."
   ],
   "tragic_b013": [
@@ -966,7 +962,7 @@
     "You too. Don't get so busy you forget to eat."
   ],
   "exit_b002": [
-    "I told you: the day this starts to feel like I'm being used to settle a debt, I leave.",
+    "I said it: the day I think you're taking payment out of me, I'm gone.",
     "You don't want to talk about the crate again. I can't pretend it never happened. This ends here."
   ],
   "exit_b005": [
@@ -975,7 +971,7 @@
     "Where's Mother? Did you see the release papers?"
   ],
   "exit_b006": [
-    "I didn't ask how much you got. I asked where she is.",
+    "I didn't ask how much you got. I asked where she is!",
     "On the first day I told you. Mother and the research were outside the agreement.",
     "I did the work we agreed on. I told you everything I knew and waited for you to find out the truth. You promised to tell me when there was danger. Why was this the one thing that didn't count?",
     "Don't call me back here. I'm done working in this place."

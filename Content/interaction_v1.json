@@ -20,7 +20,7 @@
         },
         {
           "speaker": "Eleanor",
-          "text": "……以前别人来找我，多半想打听母亲的事。这回他们先问的是我。",
+          "text": "以前别人来找我，多半想打听母亲的事。这回他们先问的是我。",
           "en": "...Before, when people came to me, it was usually to ask about Mother. This time they asked about me first."
         },
         {
@@ -75,7 +75,7 @@
         },
         {
           "speaker": "Player",
-          "text": "……这身是穿给谁看的？",
+          "text": "这身是穿给谁看的？",
           "en": "...Who are you wearing that for?"
         },
         {
@@ -95,7 +95,7 @@
         },
         {
           "speaker": "Eleanor",
-          "text": "我提过你，可总有人以为我只是客气地谢一谢出钱的老板。",
+          "text": "我提过你，可总有人以为我客气地谢一谢出钱的老板。",
           "en": "I've mentioned you, but people still assume I'm just politely thanking the shopkeeper who put up the money."
         },
         {
@@ -105,8 +105,8 @@
         },
         {
           "speaker": "Eleanor",
-          "text": "穿件干净外套就行。我带的是你，又不是你的衣服。",
-          "en": "Just wear a clean jacket. I'm bringing you, not your clothes."
+          "text": "穿件干净外套就行。我带的是你，跟衣服没关系。",
+          "en": "A clean coat is enough. I'm bringing you, not your clothes."
         }
       ]
     },
@@ -170,8 +170,8 @@
       "lines": [
         {
           "speaker": "Eleanor",
-          "text": "今天的时间留出来了吗？请柬我带来了，名字还是你自己填。",
-          "en": "Kept the time free today? I've brought the invitation. You still have to write your own name."
+          "text": "今天的时间留出来了吗？请柬我带来了，同行人还是你自己写。",
+          "en": "Did you keep the time clear today? I brought the invitation. You still fill in your companion yourself."
         }
       ]
     },
@@ -190,7 +190,7 @@
       "lines": [
         {
           "speaker": "Eleanor",
-          "text": "……好，那这场我自己去。你也早点休息，别又忙到半夜。",
+          "text": "好，那这场我自己去。你也早点休息，别又忙到半夜。",
           "en": "...All right. I will go on my own. Get some rest yourself. Do not work until midnight again."
         }
       ]
