@@ -8,15 +8,11 @@ $dest = Join-Path $destDir "index.html"
 
 if (-not (Test-Path $src)) { throw "Missing route map: $src" }
 New-Item -ItemType Directory -Force -Path $destDir | Out-Null
+Copy-Item -LiteralPath $src -Destination $dest -Force
 
-# The source lives in docs/ and loads artwork from site/assets when opened
-# locally; the published copy sits at the site root and uses assets/ instead.
-$html = Get-Content -LiteralPath $src -Raw -Encoding UTF8
-$html = $html.Replace('../site/assets/', 'assets/')
-if ($html -match '\.\./site/assets/') { throw "Site sync left an unresolved asset path" }
-
-$utf8 = New-Object System.Text.UTF8Encoding($false)
-[IO.File]::WriteAllText($dest, $html, $utf8)
+$srcHash = (Get-FileHash -LiteralPath $src -Algorithm SHA256).Hash
+$destHash = (Get-FileHash -LiteralPath $dest -Algorithm SHA256).Hash
+if ($srcHash -ne $destHash) { throw "Site sync hash mismatch" }
 
 Write-Host "Synced docs/route_map.html -> site/index.html"
 Write-Host "Version: $((Select-String -LiteralPath $src -Pattern '"version": "([^"]+)"').Matches.Groups[1].Value)"
