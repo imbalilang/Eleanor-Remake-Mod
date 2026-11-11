@@ -6,10 +6,11 @@ For artwork generation, edits, expression variants or export, read `Art/ART_REQU
 
 ## Route map maintenance (required)
 
-Any change to story chapters, scene order, target days, story-impacting choices, routes, relationships, or endings must update these two files in the same change:
+Any change to story chapters, scene order, target days, story-impacting choices, routes, relationships, or endings must update these files in the same change:
 
 - `docs/route_map.html` — the visual route/ending preview.
 - `docs/ROUTE_MAP_MAINTENANCE.md` — the numbering and maintenance rules.
+- `site/index.html` — the public GitHub Pages copy; run `tools/sync_site.ps1` after editing the route map.
 
 Keep the existing ending numbers **E1–E14 stable**. Append new endings as E15, E16, …; never renumber or reuse an old number. Death/arrest/leaving the station are ending suffixes, not new numbers.
 
