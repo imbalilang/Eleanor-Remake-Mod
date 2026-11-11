@@ -3,25 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Eleanor Story Expand · 四条主路线与完美结局</title>
+<title>埃莉诺路线完全攻略 · Eleanor Story Expand</title>
 <style>
-:root{--bg:#0c0f15;--line:#33405a;--gold:#d9b26f;--text:#f2eee5;--muted:#b9c3d2;
-  --regular:#79b8ff;--harem:#ff8fb3;--maid:#e6c15c;--rev:#c49bff;--bad:#ff8d7a;--perfect:#ffd77a}
+:root{--bg:#0b0d13;--panel:#11151f;--panel-2:#161b28;--line:#2a3347;--gold:#d9b26f;
+  --text:#f3efe7;--muted:#a7b2c4;--rose:#f29ab4;--perfect:#ffd77a;
+  --regular:#79b8ff;--harem:#ff8fb3;--maid:#e6c15c;--rev:#c49bff;--bad:#ff8d7a}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;
-  background:radial-gradient(1200px 700px at 15% -5%,rgba(217,178,111,.10),transparent 60%),
-             radial-gradient(900px 700px at 90% 0%,rgba(229,138,160,.08),transparent 55%),
-             linear-gradient(180deg,var(--bg),#080b10 70%);min-height:100vh}
-header{padding:28px 32px 18px;border-bottom:1px solid var(--line)}
-.kicker{color:var(--gold);font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
-h1{margin:0;font-size:28px;letter-spacing:.04em}
-h1 span{color:#ff8fb3}
-.sub{color:var(--muted);margin:8px 0 0;font-size:14px;line-height:1.7}
-.warn{margin-top:14px;padding:11px 15px;border:1px solid rgba(229,138,160,.42);background:linear-gradient(90deg,rgba(229,138,160,.12),rgba(229,138,160,.02));border-radius:10px;color:#f3cdd5;font-size:13px;line-height:1.7}
-.warn b{color:#fff}
-.meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;color:var(--muted);font-size:12px}
-.meta span{border:1px solid var(--line);padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.02)}
-.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:14px 32px 0}
+  background:radial-gradient(1200px 700px at 12% -8%,rgba(217,178,111,.12),transparent 60%),
+             radial-gradient(900px 600px at 92% 2%,rgba(255,143,179,.10),transparent 55%),
+             linear-gradient(180deg,#0d1017,#080a0f 65%,#07080c);min-height:100vh}
+.site-nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:14px 18px;
+  flex-wrap:wrap;padding:14px clamp(18px,4vw,48px);background:rgba(10,12,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{color:var(--gold);text-decoration:none;font-weight:700;letter-spacing:.08em;font-size:14px;white-space:nowrap}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13.5px}
+.nav-links a:hover{color:#fff}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:clamp(26px,5vw,64px);align-items:center;
+  max-width:1280px;margin:0 auto;padding:clamp(34px,6vw,80px) clamp(18px,4vw,48px) clamp(36px,6vw,72px)}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{margin:14px 0 0;font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:.02em}
+.hero h1 span{color:var(--rose)}
+.lead{color:var(--muted);font-size:clamp(15px,1.6vw,18px);line-height:1.85;margin:22px 0 0;max-width:34em}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.facts span{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:999px;padding:8px 14px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--gold);font-size:15px;margin-right:4px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;transition:transform .16s ease,border-color .16s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,#e8c88a,#c89a4f);color:#241a08}
+.btn.ghost{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.hero-art{position:relative;justify-self:center;width:100%;max-width:560px;border:1px solid rgba(217,178,111,.32);border-radius:24px;
+  overflow:hidden;background:#141019;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.hero-art img{display:block;width:100%;height:auto;max-height:620px;object-fit:cover;object-position:center 16%}
+.hero-caption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 15px;font-size:13px;line-height:1.6;color:#f8ecda;
+  background:linear-gradient(transparent,rgba(8,10,15,.9))}
+main{padding-bottom:40px}
+.route-section,.ending-section,.faq{max-width:1280px;margin:0 auto;padding:clamp(24px,4vw,44px) clamp(18px,4vw,48px)}
+.map-section{max-width:1500px;margin:0 auto;padding:clamp(24px,4vw,44px) clamp(18px,4vw,48px)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px}
+.section-head h2{margin:0;font-size:clamp(24px,3vw,34px)}
+.section-head p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.7;max-width:46em}
+.route-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.route-card{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-top:2px solid var(--line);
+  border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease}
+.route-card:hover{transform:translateY(-4px);border-color:rgba(217,178,111,.45)}
+.route-card.regular{border-top-color:var(--regular)}.route-card.harem{border-top-color:var(--harem)}
+.route-card.maid{border-top-color:var(--maid)}.route-card.rev{border-top-color:var(--rev)}
+.card-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:radial-gradient(120% 120% at 50% 15%,#2c1a2b,#121019)}
+.card-media img{display:block;width:100%;height:100%;object-fit:cover}
+.route-card.regular .card-media img{object-fit:contain;object-position:center 30%}
+.card-tag{position:absolute;left:10px;top:10px;background:rgba(10,12,18,.8);border:1px solid rgba(255,215,122,.5);
+  color:var(--perfect);font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;letter-spacing:.06em}
+.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h3{margin:0;font-size:18px}
+.card-body p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}
+.card-meta{margin-top:auto;font-size:12px;color:var(--muted);border-top:1px solid rgba(255,255,255,.06);padding-top:10px;display:grid;gap:5px}
+.card-meta b{color:var(--text);font-weight:600}
+.chart-note{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 14px;background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 16px}
+.chart-note b{color:var(--gold)}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:12px}
 .legend{display:flex;gap:9px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:12px}
 .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.02)}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
@@ -30,88 +74,176 @@ h1 span{color:#ff8fb3}
 .zoom button{cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;min-width:38px}
 .zoom button:hover{border-color:var(--gold);color:#fff}
 .zoom span{color:var(--muted);font-size:12px;min-width:52px;text-align:center}
-main{padding:16px 32px 60px;max-width:3200px;margin:0 auto}
 .chart-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));padding:16px;min-height:420px}
 .chart-wrap svg{display:block;margin:0 auto;width:100%;height:auto}
-.chart-note{color:var(--muted);font-size:12.5px;line-height:1.7;margin:10px 0 24px}
-.chart-note b{color:var(--gold)}
-.section-head{display:flex;align-items:baseline;gap:14px;margin:22px 0 12px}
-.section-head h2{margin:0;font-size:19px}
-.section-head p{margin:0;color:var(--muted);font-size:13px}
-table{width:100%;border-collapse:collapse;font-size:13px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+table{width:100%;min-width:1180px;border-collapse:collapse;font-size:13px}
 th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55}
 th{color:var(--gold);font-weight:600;background:rgba(217,178,111,.06);white-space:nowrap}
 td.eid{font-family:ui-monospace,Consolas,monospace;font-weight:800;color:var(--gold);white-space:nowrap}
+td.route,td.etype,td.terminals{white-space:nowrap}
 tr:last-child td{border-bottom:0}
 .tag{display:inline-block;font-size:10.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:1px 3px 1px 0}
 .perfect{color:var(--perfect);font-weight:700}
 .bad{color:var(--bad);font-weight:600}
-.rules{margin-top:22px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02);padding:0}
-.rules summary{cursor:pointer;padding:15px 18px;color:var(--gold);font-size:15px;font-weight:600}
-.rules .body{padding:0 18px 18px;color:#dbe2ec;font-size:13.5px;line-height:1.8}
-.rules ul{margin:9px 0 0;padding-left:20px}
-.rules li{margin:5px 0}
-code{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:#f0d4a0;font-size:12px}
-footer{color:var(--muted);font-size:12px;padding:0 32px 34px;text-align:center}
+.faq h2{font-size:clamp(22px,2.6vw,28px);margin:0 0 14px}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:14px 18px;font-weight:600;color:#f0e7d8;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--gold);margin-right:10px;font-weight:700}
+.faq details[open] summary::before{content:"−"}
+.faq .answer{padding:0 18px 16px;color:var(--muted);font-size:13.5px;line-height:1.85}
+footer{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.06);
+  margin-top:24px;padding:26px 18px 36px;color:var(--muted);font-size:12.5px}
+footer a{color:var(--gold);text-decoration:none}
+@media (max-width:1080px){.route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero{grid-template-columns:1fr}.hero-art{max-width:620px;justify-self:start}}
+@media (max-width:600px){.route-grid{grid-template-columns:1fr}.nav-links{gap:12px}
+  .nav-links a{font-size:12.5px}.site-nav{padding:12px 16px}
+  .hero{padding-top:28px}.hero-art img{max-height:460px}}
 </style>
 </head>
 <body>
-<header>
-  <div class="kicker">Probably Stolen · Eleanor Story Expand</div>
-  <h1>四条主路线与完美结局 <span>v0.90</span></h1>
-  <p class="sub">常规恋爱线 / 后宫线 / 侍从线 / 革命军线。每条主路线对应一个 <b>★ 完美结局</b>；其他 E1～E14 结局全部视为非完美。</p>
-  <div class="warn"><b>维护要求：</b>任何剧情、选项、日期或结局改动，必须同步更新本流程图、<code>docs/ROUTE_MAP_MAINTENANCE.md</code> 与 <code>tools/check_route_map.py</code>。四条主路线的完美结局固定为 E1 / E4 / E3 / E9；旧编号不重排，新增结局追加 E15、E16……并标注完美/非完美。</div>
-  <div class="meta"><span>最后更新：2026-11-11</span><span>普通天 / 提前开局 = 普通天 − 11</span><span>★ = 完美结局</span><span>其余 E = 非完美</span></div>
-<div class="warn" id="revolution-v01-plan"><b>已实施：革命军线 R01—R14（2026-11-11 v0.4）</b><br>丧母与断联 → 革命军采购及战利品贸易 → 首次杀人后的清晨、私人背心首秀 → 三档累计补给成长（G1=400／G2=1000／G3=1800）→ 护送成功归来 → 最终完美结局《我想见你》。补给提示固定为“革命军补给：当前累计／下一阶段目标”，累计按交付物品实际价值而非成交价/玩家收款计算，正常价、让利与免费赠送同值。全程不告白；“我想见你”只在 R14 最后一句出现，之前不出现。R14 完成后立即显示独立结局页；E1～E14 不改号，E10 保留旧档/朋友用途。旧八次丙线存档按最近阶段续接，不追溯授予新结局。<a href="全局剧本.md" style="color:inherit">查看全局剧本</a></div>
+<nav class="site-nav">
+  <a class="brand" href="#top">Eleanor Story Expand</a>
+  <div class="nav-links">
+    <a href="#routes">路线选择</a>
+    <a href="#map">流程图</a>
+    <a href="#endings">结局一览</a>
+    <a href="#faq">常见问题</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-copy">
+    <div class="kicker">Probably Stolen · 埃莉诺剧情扩展</div>
+    <h1>埃莉诺路线<br><span>完全攻略</span></h1>
+    <p class="lead">四条主路线，十四种结局。先决定你想和她走到哪里，再对照路线图安排每一天。</p>
+    <div class="facts">
+      <span><b>4</b> 条主路线</span>
+      <span><b>14</b> 个结局</span>
+      <span><b>4</b> 个完美结局</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn primary" href="#routes">选择路线</a>
+      <a class="btn ghost" href="#map">查看流程图</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="assets/hero-eleanor.webp" alt="埃莉诺在当铺柜台后" width="872" height="941">
+    <div class="hero-caption">上层区的富家千金，正在下层区的当铺里等你。</div>
+  </div>
 </header>
-<div class="toolbar">
+
+<main>
+<section id="routes" class="route-section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Route Select</div>
+      <h2>四条主路线</h2>
+    </div>
+    <p>每条路线只有一个 ★ 完美结局。选错选项不等于坏档，其他结局同样是完整的收束。</p>
+  </div>
+  <div class="route-grid">
+    <article class="route-card regular">
+      <div class="card-media"><img src="assets/route-regular.webp" alt="埃莉诺礼服立绘" loading="lazy" width="960" height="540"><span class="card-tag">★ E1</span></div>
+      <div class="card-body">
+        <h3>常规恋爱线</h3>
+        <p>在当铺的日常里慢慢靠近她，查清母亲与研究的事，最后确认彼此的心意。</p>
+        <div class="card-meta"><span><b>完美结局：</b>E1 · 甲·普通恋人</span><span><b>关键：</b>普通恋爱确认，不进入侍从或双恋</span></div>
+      </div>
+    </article>
+    <article class="route-card harem">
+      <div class="card-media"><img src="assets/route-harem.webp" alt="埃莉诺与莉迪亚" loading="lazy" width="960" height="540"><span class="card-tag">★ E4</span></div>
+      <div class="card-body">
+        <h3>后宫线</h3>
+        <p>埃莉诺与莉迪亚。想走到最后，需要三个人都明确点头，缺一不可。</p>
+        <div class="card-meta"><span><b>完美结局：</b>E4 · 甲·双恋</span><span><b>关键：</b>双恋入口、第 5 场告白、三方确认</span></div>
+      </div>
+    </article>
+    <article class="route-card maid">
+      <div class="card-media"><img src="assets/route-maid.webp" alt="女仆装埃莉诺" loading="lazy" width="960" height="540"><span class="card-tag">★ E3</span></div>
+      <div class="card-body">
+        <h3>侍从线</h3>
+        <p>支付 800 建立侍从契约，在契约、工作和感情之间做出取舍。</p>
+        <div class="card-meta"><span><b>完美结局：</b>E3 · 甲·侍从恋人</span><span><b>关键：</b>完成或续约侍从线；双恋不开放</span></div>
+      </div>
+    </article>
+    <article class="route-card rev">
+      <div class="card-media"><img src="assets/route-revolution.webp" alt="革命军线结局" loading="lazy" width="960" height="540"><span class="card-tag">★ E9</span></div>
+      <div class="card-body">
+        <h3>革命军线</h3>
+        <p>选择未保护公开，母亲死后与她一起加入革命军，用补给与战功走到最后。</p>
+        <div class="card-meta"><span><b>完美结局：</b>E9 · 革命·牵挂/同行</span><span><b>关键：</b>完成 R01—R14 与三档补给</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="map" class="map-section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Route Map</div>
+      <h2>路线流程图</h2>
+    </div>
+    <p>纵轴是最早触发日。提前开局模式下，所有日期整体提前 11 天。</p>
+  </div>
+  <div class="chart-note"><b>怎么看：</b>四条主路线各有自己的纵向路线，每条路线左侧的金色是完美走向，右侧红色是其他走向；最左侧是共同失败分支。图中日期是“最早目标日”，声望等待、顾客日槽或独立买家可能让后续顺延，并不是固定在当天发生。</div>
+  <div class="toolbar">
   <div class="legend">
     <span class="chip"><i class="dot regular"></i>常规恋爱线</span>
     <span class="chip"><i class="dot harem"></i>后宫线</span>
     <span class="chip"><i class="dot maid"></i>侍从线</span>
     <span class="chip"><i class="dot rev"></i>革命军线</span>
-    <span class="chip"><i class="dot bad"></i>非完美分支/结局</span>
+    <span class="chip"><i class="dot bad"></i>其他结局</span>
     <span class="chip"><i class="dot perfect"></i>★ 完美结局</span>
   </div>
   <div class="zoom"><button id="zoom-out" title="缩小">−</button><span id="zoom-label">100%</span><button id="zoom-in" title="放大">+</button><button id="zoom-reset" title="适应宽度">适应宽度</button></div>
 </div>
-<main>
-  <section id="dual-v05-plan" class="rules" style="padding:16px 18px;margin:0 0 18px" aria-label="0.82后宫线v0.5实现">
-    <h2 style="margin-top:0">0.82：后宫线 v0.5</h2>
-    <p>0.82修复晚会延迟调用的兼容警告，并改为原生顾客走入后开始邀请对白；剧情节点、分支与结局保持0.81内容。<a href="RELEASE_0.82.md" style="color:var(--gold)">查看发布记录</a>；<a href="后宫线_v0.5_声望检查点与问题修复_完整执行计划.md" style="color:var(--gold)">阅读执行计划</a>。</p>
-    <p>2026-11-10文本修订：三人饭局补足共同相处的快乐，三次声望反馈进入莉迪亚的心动；侍从终局承认此前已自愿相爱。甲线母亲仍流放，只有乙线实际撤案后才使用正式结果。普通入口去重，结局与日常同步润色。<a href="archive/script_docs/全剧情_人物动机与行文修订_落实记录_2026-11-10.md" style="color:var(--gold)">查看逐项落实记录</a>。</p>
-    <p>2026-11-10事件调整：侍从19直接接续新衣与称呼对白，移除螺丝刀估价及后续回忆；筹资来访只轮换正常卖货与采购。旧档未完成的估价来访改为采购，保留到期日。第一单免费样品按正常交易领取；日期、项目门槛与结局编号保持。</p>
-    <p>2026-11-10晚会终章：归来28完成至少3天后，最后一位客人离开、玩家点击关门才出现邀请，不占营业队列。答应后门口收束，黑屏跳过夜间并正常结算进入次日；晚会经过留白，由次日报纸侧写。拒绝照常收店；旧延期／预约按关门流程兼容，结局编号不变。</p>
-    <table><thead><tr><th>上层区声望</th><th>主线检查位置</th><th>显性奖励</th><th>橱窗效果（首轮参数）</th></tr></thead><tbody>
-      <tr><td>50</td><td>接受扩展后，正式引荐前</td><td>莉迪亚的荐店铭牌</td><td>额外上层买家机会50%，到访至少间隔一个营业日</td></tr>
-      <tr><td>100</td><td>工作场景后，莉迪亚个人来访前</td><td>上层宾客珐琅座饰</td><td>上层普通买家购买预算＋30%</td></tr>
-      <tr><td>150</td><td>核心收束后，退让与坦白前</td><td>名媛致意银饰</td><td>上层普通买家成交额外小费10%，每次来访最高150</td></tr>
-    </tbody></table>
-    <p>声望不足仅暂停对应主线，正常营业与阶段日常继续；达标保留资格、不扣声望、不判出路线。三件饰品分别放入橱窗生效。新方案删除主动暂缓和订单补做；原49～67天为最早日程，实际可随声望等待顺延。E1～E14编号保持稳定。时间轴为最早目标日；声望等待与独立合作买家占用日槽会使后续顺延。</p>
-  </section>
   <section class="chart-wrap" id="chart-wrap"><svg id="route-svg" viewBox="0 0 3020 2300" role="img" aria-label="四条主路线与完美结局流程图"></svg></section>
-  <div class="chart-note"><b>读法：</b>纵轴是普通天刻度（提前开局 = 普通天 − 11），图中日期为最早目标日，等待门槛或独立合作买家会顺延；并非保证当天发生。四条主路线分在独立泳道中；每条泳道左侧是金色完美路径，右侧是红色非完美路径；共同失败分支单独放在最左侧。甲/乙/丙/丁不再作为主路线，只作为世界结果或失败分支。</div>
-  <div class="section-head"><h2>结局索引</h2><p>四条主路线各有一个 ★ 完美结局；其余全部为非完美结局。</p></div>
-  <table id="ending-table"><thead><tr><th>编号</th><th>结局</th><th>主路线</th><th>判定</th><th>关系</th><th>母亲 / 世界</th><th>进入条件</th><th>后缀</th></tr></thead><tbody></tbody></table>
-  <details class="rules">
-    <summary>四条主路线、完美结局与维护规则</summary>
-    <div class="body">
-      <ul>
-        <li><b>常规恋爱线</b>：普通埃莉诺恋人/朋友；完美 E1（甲·普通恋人），非完美 E2/E5/E6（朋友、乙线变体）。</li>
-        <li><b>后宫线</b>：埃莉诺 + 莉迪亚，三方明确同意；完美 E4（甲·双恋），非完美 E8（乙·双恋）以及拒绝/朋友回到 E1/E2/E5/E6。</li>
-        <li><b>侍从线</b>：侍从入口付800，契约完成/续约；完美 E3（甲·侍从恋人），非完美 E7（乙）或 E3 未完成/部分状态。</li>
-        <li><b>革命军线</b>：主线方向选择未保护公开；完成 R01—R14 后完美 E9（牵挂/同行，即时结局页），E10 保留旧档/朋友/无恋爱用途。</li>
-        <li><b>共同失败分支</b>：第41/43/44天的退出、交盘、卖盘、擅自公开 → E11～E14，全部非完美。</li>
-        <li>双恋进入后 dr14/dr15/dr17 不再提供反复退出选项；只有入口拒绝和第5场“做朋友”会停止双恋。dr14两项均为分别表达意愿，dr10不预告隐藏分流。</li>
-        <li>共用09回礼：免费收下／支付20信用点／婉拒；实际交付或婉拒后推进。余额不足或放不下不扣款、不推进，成功结果保存，中断不重复领取。</li>
-        <li>G2等待日常交替由埃莉诺、莉迪亚本人来访。后宫16／18／19不写死次日约会；乙线后宫尾声按真实复核与撤案消息状态区分。</li>
-        <li>E1～E14 编号保持稳定；完美集合固定为 E1/E4/E3/E9。新增结局追加 E15、E16……并明确完美/非完美。</li>
-        <li>改剧情时同步更新本页的 <code>CHART</code> 与 <code>DATA</code>，运行 <code>python tools/check_route_map.py</code>。</li>
-      </ul>
+</section>
+
+<section id="endings" class="ending-section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Ending List</div>
+      <h2>结局一览</h2>
     </div>
+    <p><b>甲、乙</b> 代表两种世界结果：甲线母亲安全留在下层区，乙线是另一走向。★ 为完美结局。</p>
+  </div>
+  <div class="table-wrap">
+  <table id="ending-table"><thead><tr><th>编号</th><th>结局</th><th>主路线</th><th>类型</th><th>关系</th><th>母亲 / 世界</th><th>进入条件</th><th>可能后缀</th></tr></thead><tbody></tbody></table>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <h2>常见问题</h2>
+  <details open>
+    <summary>完美结局有哪几个？</summary>
+    <div class="answer">四个：<b>E1</b> 常规恋爱线、<b>E4</b> 后宫线、<b>E3</b> 侍从线、<b>E9</b> 革命军线。其余结局不是完美结局，但同样是完整的收束，不会中途断掉。</div>
   </details>
+  <details>
+    <summary>声望不够会让路线失败吗？</summary>
+    <div class="answer">不会直接失败。后宫线的 50／100／150 声望门槛只会让对应主线暂停等待，正常营业和阶段日常继续进行；达标后资格保留，不会因为后续声望下降而撤销。</div>
+  </details>
+  <details>
+    <summary>路线图上的日期是固定的吗？</summary>
+    <div class="answer">不是。图中是“最早目标日”，声望等待、顾客日槽和其他来访都可能让后续事件顺延。普通模式第 23 天开始，提前开局第 12 天开始，所有日期整体提前 11 天。</div>
+  </details>
+  <details>
+    <summary>侍从线和后宫线能同时走吗？</summary>
+    <div class="answer">不能。有效的侍从契约不开放双恋，朋友档也不会收到双恋入口。想走后宫线，就不要先建立侍从关系。</div>
+  </details>
+  <details>
+    <summary>甲线和乙线是什么？</summary>
+    <div class="answer">两种世界结果。甲线母亲安全留在下层区；乙线母亲与研究的走向不同。先选关系路线，再看世界结果，不需要把它们当成额外的两条主线。</div>
+  </details>
+</section>
 </main>
-<footer>Eleanor Story Expand · Four Main Routes · 路线图编号不是游戏内 ID</footer>
+<footer>
+  <span>Eleanor Story Expand · 玩家攻略</span>
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3834588749" target="_blank" rel="noopener">Steam 创意工坊</a>
+</footer>
 <script>
 const DATA = {
   "version": "0.90",
@@ -563,7 +695,7 @@ const DATA = {
       "title": "甲·双恋",
       "relationship": "埃莉诺 + 莉迪亚",
       "mother": "母亲安全",
-      "condition": "甲线 + 双恋入口 + dr05告白 + dr17三方确认；完整收束需dr20完成",
+      "condition": "甲线 + 双恋入口 + 第5场告白 + 第17场三方确认；完整收束需第20场完成",
       "note": "50/100/150分阶段锁存；饰品需陈列。dr17已确认但dr20未完用未完成后缀，不能提前描述晚饭或完整完美收束。原奖励不重复。",
       "terminals": [
         "死亡",
@@ -641,7 +773,7 @@ const DATA = {
       "title": "乙·双恋",
       "relationship": "埃莉诺 + 莉迪亚",
       "mother": "母女团聚",
-      "condition": "乙线 + 双恋入口 + dr05告白 + dr17三方确认；完整收束需dr20完成",
+      "condition": "乙线 + 双恋入口 + 第5场告白 + 第17场三方确认；完整收束需第20场完成",
       "note": "50/100/150分阶段锁存；饰品需陈列。dr17已确认但dr20未完用未完成后缀，不能提前描述晚饭或完整完美收束。原奖励不重复。",
       "terminals": [
         "死亡",
@@ -660,7 +792,7 @@ const DATA = {
       "title": "革命·牵挂/同行",
       "relationship": "牵挂 / 同行（无告白）",
       "mother": "母亲死亡",
-      "condition": "第44天方向选择丙；完成 R01—R14，含 G1/G2/G3 与 R13 归还",
+      "condition": "第44天选择未保护公开；完成革命军线全部事件、三档补给累计与最终归还",
       "note": "R14 最后一句后立即显示独立结局页；不调用恋人确认。旧八次丙线不追溯授予；双恋与侍从成功后半不进入。",
       "terminals": [
         "死亡",
@@ -679,7 +811,7 @@ const DATA = {
       "title": "丙·旧档/朋友/无恋爱",
       "relationship": "朋友 / 无恋爱",
       "mother": "母亲死亡",
-      "condition": "旧八次丙线完成，或未进入新 R14",
+      "condition": "革命军线未完成最终事件，或走朋友／无恋爱收束",
       "note": "保留旧档、朋友与无恋爱用途；不授予新 R14 完成、最高档资格或《我想见你》结局页。",
       "terminals": [
         "死亡",
@@ -1707,10 +1839,10 @@ function renderEndingTable(){
   const tbody=$('#ending-table tbody');
   tbody.innerHTML=DATA.endings.map(e=>`<tr>
     <td class="eid">${e.id}</td><td><b>${e.title}</b></td>
-    <td>${DATA.routes[e.mainRoute]?.name||e.mainRoute}</td>
-    <td>${e.perfect?'<span class="perfect">★ 完美</span>':'<span class="bad">非完美</span>'}</td>
+    <td class="route">${DATA.routes[e.mainRoute]?.name||e.mainRoute}</td>
+    <td class="etype">${e.perfect?'<span class="perfect">★ 完美</span>':'<span class="bad">非完美</span>'}</td>
     <td>${e.relationship}</td><td>${e.mother}</td><td>${e.condition}</td>
-    <td>${(e.terminals||[]).map(t=>`<span class="tag">-${t}</span>`).join('')}</td>
+    <td class="terminals">${(e.terminals||[]).map(t=>`<span class="tag">-${t}</span>`).join('')}</td>
   </tr>`).join('');
 }
 let zoom=1;
