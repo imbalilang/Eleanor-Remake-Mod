@@ -9,6 +9,7 @@
 - 门槛等待期间保留补给/战利品短访；R05 初始档、R07 第一档、R10 第二档、R13 最高档货源。R06 与 R14 使用清晨优先队列；R12 完成后间隔 3 天触发 R13。
 - R14 最后一句“我想见你”之后立即显示独立 E9 结局页，复用 `er_ending_revolution_cg`；GameOver 不重复。E1—E14 编号与完美集合 E1/E4/E3/E9 不变，E10 保留旧档/朋友用途。
 - 旧八次丙线存档按最近阶段续接；已完成的旧短版只标记 legacy，不追溯授予新 R14、最高档或结局页。
+- 工坊说明新增“旧存档说明”：原版 Eleanor 剧情已结束的存档不会自动启用重制线，首次开店可用“旧档案”重置（清进度、保留物品、从第 1 章重开，不是无缝续接）；已选保留、无尽模式或旧版 MOD 路线完成档不会自动再询问，需要新档或 F9 重置。
 - 中文正文 73 个 block，英文同步；旧 `rc.b001—b015` 已从 Content 移除。
 
 ## 2026-11-11 文风修订审核
@@ -40,6 +41,7 @@
 - ZIP：`dist/EleanorRomance-0.90.zip`；SHA-256 `BA0874C870BAD93E3C677BFCFE5442E6CAE374B74B75BF3C818EEFDBED255A48`。
 - 工坊发布：`k_EResultOK`，条目 `3834588749`，内容与说明同时提交，无待接受协议；完成于 2026-11-11T06:27:26Z，耗时 6.05 秒；回执 `dist/workshop-0.90/publish-result.json`。
 - 远程复核：`result=1`、`file_size=5,234,340`、`time_updated=1794378445`、公开、未封禁；远程快照 `dist/workshop-0.90/remote-after.json`。
-- 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，6,899 UTF-8 字节，低于 8,000 限制；更新日志 `docs/WORKSHOP_CHANGELOG_0.90.txt`。
+- 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，首次发布 6,899 UTF-8 字节；补充“旧存档说明”后为 7,969 字节，仍低于 8,000 限制；更新日志 `docs/WORKSHOP_CHANGELOG_0.90.txt`。
+- 说明补充发布：`description-only`，`k_EResultOK`，耗时 0.52 秒；回执 `dist/workshop-0.90/publish-description-result.json`，远程复核 `remote-after-description.json`，远程说明 7,969 字节且包含中英“旧存档说明”。
 - 扫描说明：本机没有 PowerShell 7，游戏自带 ModScanner 在 PowerShell 5.1 下报 `MissingMethodException`，因此本轮未取得原生扫描回执；已人工核对新增代码未引入 files/network/reflection/process/native 能力，0.89 的清理扫描结果仍作为上一次基线。
 - GitHub：发布提交 `9becd8e` 已推送到 `https://github.com/imbalilang/Eleanor-Remake-Mod.git` 的 `main`；同步细节保存在本地 `dist/workshop-0.90/github-sync.json`（发布证据目录不随仓库提交）。

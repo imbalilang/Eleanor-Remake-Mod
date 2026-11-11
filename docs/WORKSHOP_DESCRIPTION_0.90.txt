@@ -73,6 +73,12 @@ A、恋人线：你和埃莉诺一起在下层相恋、相伴，一起坚强地�
 
 
 
+[h2]旧存档说明[/h2]
+[list]
+[*]已推进或完成原版 Eleanor 剧情的存档不会自动启用重制线；首次开店可用“旧档案”重置或保留。重置清除原版与 MOD 的 Eleanor 进度、保留物品，并从第 1 章重开，不是无缝续接。
+[*]已选保留、无尽模式或已完成旧版 MOD 路线的存档不会自动再询问；旧路线完成不追溯新 R14/E9，请开新档或用 F9 重置。重置不回滚整个存档，想要干净体验建议新档。
+[/list]
+
 [h2]画面推荐[/h2]
 
 强烈建议订阅[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3829696854][b]少女当铺[/b][/url]。本 MOD 为埃莉诺设计了新的服装和妆造，在该 MOD 开启时有更好的表现；未开启时，Lydia 继续使用本 MOD 的独立形象，母亲使用原游戏 femaleUpper3；女仆装、礼服和战术背心直接使用原游戏 Eleanor 立绘；其他美化 MOD 不会被当作服装来源。晚会使用原作上层区形象。
@@ -100,6 +106,9 @@ A、恋人线：你和埃莉诺一起在下层相恋、相伴，一起坚强地�
 [h2]English[/h2]
 
 0.90 completes the revolution route: her mother's death, joining the revolution, her first kill, three supply tiers, the escort operation and the return, followed by an immediate ending page. Supply waits at 400/1000/1800 item value; old route-C saves resume at the nearest stage without retroactive completion.
+
+[h2]Existing saves[/h2]
+Saves that already progressed or completed vanilla Eleanor's story do not auto-enable the remake. The first shop day offers an “old file” reset/keep choice. Reset clears vanilla and mod Eleanor progress, keeps items and restarts from chapter 1; it is not a seamless continuation. If you chose Keep, use endless mode or completed an older mod route, the prompt will not return and R14/E9 is not retroactively unlocked; start a new save or use the F9 debug reset. Reset does not rewind the rest of the save, so a new save is recommended.
 
 She is the only daughter of the former director of the Upper Level's largest hydroponic farm. Her mother is arrested for embezzlement, her family collapses overnight, and she falls into the Lower Level she once despised. You own a pawnshop.
 
