@@ -5,7 +5,7 @@
 • R14完成后立即显示独立完美结局页《我想见你》，并使用已选定的革命军结局CG。
 • 旧八次丙线存档按最近阶段续接；旧短版完成不追溯获得新结局。
 • 保留0.89像素风结局CG、0.88 Lydia独立画像与立绘兼容；E1—E14编号与完美集合不变。
-• 补充旧存档说明：原版剧情已结束的存档不会自动启用重制线；可在“旧档案”提示中重置并保留物品，从第1章重开；旧版MOD路线完成档不追溯新R14/E9。
+• 旧存档兼容：从未订阅过本MOD的存档，首次开店会触发“旧档案”事件；无论原埃莉诺进度如何，可选择重置她的故事并从本MOD第1章重开。
 
 0.90 | Revolution route R01—R14
 
@@ -14,4 +14,4 @@
 • Completing R14 immediately shows the standalone ending page and the selected revolution ending CG.
 • Old eight-visit route-C saves resume at the nearest stage without retroactive completion.
 • Retains 0.89 pixel-art ending CGs, Lydia's independent portraits and E1—E14 numbering.
-• Clarified existing saves: a completed vanilla Eleanor save does not auto-enable the remake; the “old file” prompt can reset it, keep items and restart from chapter 1; completed older mod routes do not retroactively unlock R14/E9.
+• Existing saves: a save that has never subscribed to this mod gets an “old file” event on its first shop day. Regardless of prior Eleanor progress, you can reset her story and restart from chapter 1.

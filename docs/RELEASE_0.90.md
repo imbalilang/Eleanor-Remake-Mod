@@ -9,7 +9,7 @@
 - 门槛等待期间保留补给/战利品短访；R05 初始档、R07 第一档、R10 第二档、R13 最高档货源。R06 与 R14 使用清晨优先队列；R12 完成后间隔 3 天触发 R13。
 - R14 最后一句“我想见你”之后立即显示独立 E9 结局页，复用 `er_ending_revolution_cg`；GameOver 不重复。E1—E14 编号与完美集合 E1/E4/E3/E9 不变，E10 保留旧档/朋友用途。
 - 旧八次丙线存档按最近阶段续接；已完成的旧短版只标记 legacy，不追溯授予新 R14、最高档或结局页。
-- 工坊说明新增“旧存档说明”：原版 Eleanor 剧情已结束的存档不会自动启用重制线，首次开店可用“旧档案”重置（清进度、保留物品、从第 1 章重开，不是无缝续接）；已选保留、无尽模式或旧版 MOD 路线完成档不会自动再询问，需要新档或 F9 重置。
+- 工坊说明新增“旧存档兼容”：从未订阅过本 MOD 的存档，首次开店会触发“旧档案”事件；无论原埃莉诺进度如何，可选择重置她的故事并从本 MOD 第 1 章重开。
 - 中文正文 73 个 block，英文同步；旧 `rc.b001—b015` 已从 Content 移除。
 
 ## 2026-11-11 文风修订审核
@@ -41,14 +41,14 @@
 - ZIP：`dist/EleanorRomance-0.90.zip`；SHA-256 `BA0874C870BAD93E3C677BFCFE5442E6CAE374B74B75BF3C818EEFDBED255A48`。
 - 工坊发布：`k_EResultOK`，条目 `3834588749`，内容与说明同时提交，无待接受协议；完成于 2026-11-11T06:27:26Z，耗时 6.05 秒；回执 `dist/workshop-0.90/publish-result.json`。
 - 远程复核：`result=1`、`file_size=5,234,340`、`time_updated=1794378445`、公开、未封禁；远程快照 `dist/workshop-0.90/remote-after.json`。
-- 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，首次发布 6,899 UTF-8 字节；补充“旧存档说明”后为 7,969 字节，仍低于 8,000 限制；更新日志 `docs/WORKSHOP_CHANGELOG_0.90.txt`。
-- 说明补充发布：`description-only`，`k_EResultOK`，耗时 0.52 秒；回执 `dist/workshop-0.90/publish-description-result.json`，远程复核 `remote-after-description.json`，远程说明 7,969 字节且包含中英“旧存档说明”。
+- 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，采用简短“旧存档兼容”口径后为 7,375 UTF-8 字节，低于 8,000 限制；更新日志 `docs/WORKSHOP_CHANGELOG_0.90.txt`。
+- 说明补充发布：两次 `description-only` 更新均为 `k_EResultOK`；回执 `dist/workshop-0.90/publish-description-result.json`、`publish-description-concise-result.json`；远程复核 `remote-after-concise.json`，远程说明 7,375 字节且包含中英“旧存档兼容”口径。
 - 扫描说明：本机没有 PowerShell 7，游戏自带 ModScanner 在 PowerShell 5.1 下报 `MissingMethodException`，因此本轮未取得原生扫描回执；已人工核对新增代码未引入 files/network/reflection/process/native 能力，0.89 的清理扫描结果仍作为上一次基线。
 - GitHub：发布提交 `9becd8e` 已推送到 `https://github.com/imbalilang/Eleanor-Remake-Mod.git` 的 `main`；同步细节保存在本地 `dist/workshop-0.90/github-sync.json`（发布证据目录不随仓库提交）。
 
 ## Nexus
 
-- `docs/NEXUS_README.txt` 已更新到 0.90：包含革命军线、三档补给、E9 结局页，以及原版/旧 MOD 路线的旧存档说明。
-- 0.90 Nexus Beauty 包已构建：271 个文件，15,664,785 字节，DLL SHA-256 `144CCB3DE88636847A545E2E0A3935CF89724691426A8944056341F67B6390E8`。
-- ZIP：`dist/EleanorRomance-0.90-nexus.zip`；SHA-256 `08616B9D5B10EB658B9A027CAC532DD672DC74CF4A8A16AC005C81483F4C456F`。
+- `docs/NEXUS_README.txt` 已更新到 0.90：包含革命军线、三档补给、E9 结局页，以及简短的“旧存档兼容”口径。
+- 0.90 Nexus Beauty 包已重新构建：271 个文件，15,663,723 字节，DLL SHA-256 `BA10D09EEEA7A74FA15FE9E207D5614E8DC298917C04956426786F6D6F29E8F6`。
+- ZIP：`dist/EleanorRomance-0.90-nexus.zip`；SHA-256 `EC36CE60867518B90ECE4CCE3B76FDDB539B6449B2CACC746B6DC36FE0431B04`。
 - 尚未上传到 Nexus；Nexus 页面说明与包体为手动发布准备。

@@ -16,11 +16,8 @@ Eleanor Story Expand 0.90 — Nexus Beauty Edition
 - R14 完成后立即显示独立完美结局页《我想见你》，并使用已选定的革命军结局 CG。
 - 保留 0.89 的像素风结局 CG 与 E3/E4 即时结局页、0.88 的 Lydia 独立画像与立绘兼容；E1—E14 编号与完美集合不变。
 
-旧存档说明
-- 已经推进或完成原版 Eleanor 剧情的存档不会自动启用重制线；第一次开店会出现“旧档案”，可以选择重置或保留。
-- 重置会清除原版与 MOD 的 Eleanor 剧情进度，但保留已获得物品，并从重制线第 1 章重新开始；这不是从原结局无缝续接。
-- 已选“保留”、无尽模式或已完成旧版 MOD 路线（包括 0.89 旧丙线）的存档不会自动再次询问；请开新档或使用 F9 调试菜单的重置。旧版路线完成不会追溯获得新 R14/E9。
-- 重置不会回滚整个存档的新闻、经济、其他任务和物品，剧情上可能有接缝；想要干净体验，建议使用新档。
+旧存档兼容
+从未订阅过本 MOD 的存档，在首次开店时会触发“旧档案”事件；无论原埃莉诺进度如何，可选择重置埃莉诺的故事，并从本 MOD 剧情的第 1 章重开。
 
 安装：将 EleanorRomance 文件夹放进
 `Probably Stolen/Mods/EleanorRomance`，在模组菜单启用后重启游戏。
@@ -48,10 +45,7 @@ This is the Nexus beauty-portrait edition. Differences from the Workshop build:
 - Retains 0.89 pixel-art ending CGs, 0.88 Lydia portraits and E1—E14 numbering.
 
 Existing saves
-- A save that already progressed or completed vanilla Eleanor's story does not auto-enable the remake. The first shop day offers an “old file” reset/keep choice.
-- Reset clears vanilla and mod Eleanor progress, keeps items and restarts the remake from chapter 1; it is not a seamless continuation after the original ending.
-- If you chose Keep, use endless mode, or completed an older mod route (including the 0.89 route C), the prompt will not return automatically and R14/E9 is not retroactively unlocked; start a new save or use the F9 debug reset.
-- Reset does not rewind the rest of the save's news, economy, other quests or items; a new save is recommended for a clean run.
+A save that has never subscribed to this mod will trigger an “old file” event on its first shop day. Regardless of prior Eleanor progress, you can choose to reset her story and restart from chapter 1 of the mod's storyline.
 
 Install: extract the EleanorRomance folder into
 `Probably Stolen/Mods/EleanorRomance`, enable it in the Mods menu, and restart.
