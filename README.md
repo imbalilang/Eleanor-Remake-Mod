@@ -52,7 +52,7 @@
 - 恢复 800 调查款进度：同步原版 `eleanorSavings`，C07/C08 每笔拾荒交易在上方提示已攒金额与剩余金额。
 - C08“照常付款”回礼由废金属改为电子元件（普通）。
 - 保留 0.85 表情/CG 美术、0.84 游戏 1.0.0.14 兼容与全部路线数值。
-- 另提供 Nexus 专用美化立绘包：运行 `tools/package_nexus.ps1`，默认强制使用美化立绘并内置经授权的 CutePortraits 人像；输出 `dist/EleanorRomance-0.86-nexus.zip`，不上传。
+- 另提供 Nexus 专用美化立绘包：运行 `tools/package_nexus.ps1`，默认强制使用美化立绘并内置经授权的 CutePortraits 人像；输出 `dist/EleanorRomance-0.90-nexus.zip`，不上传。Nexus 页面说明见 `docs/NEXUS_README.txt`。
 
 ## 0.85：埃莉诺表情与侍从结局 CG
 

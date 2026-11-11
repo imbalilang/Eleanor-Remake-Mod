@@ -45,3 +45,10 @@
 - 说明补充发布：`description-only`，`k_EResultOK`，耗时 0.52 秒；回执 `dist/workshop-0.90/publish-description-result.json`，远程复核 `remote-after-description.json`，远程说明 7,969 字节且包含中英“旧存档说明”。
 - 扫描说明：本机没有 PowerShell 7，游戏自带 ModScanner 在 PowerShell 5.1 下报 `MissingMethodException`，因此本轮未取得原生扫描回执；已人工核对新增代码未引入 files/network/reflection/process/native 能力，0.89 的清理扫描结果仍作为上一次基线。
 - GitHub：发布提交 `9becd8e` 已推送到 `https://github.com/imbalilang/Eleanor-Remake-Mod.git` 的 `main`；同步细节保存在本地 `dist/workshop-0.90/github-sync.json`（发布证据目录不随仓库提交）。
+
+## Nexus
+
+- `docs/NEXUS_README.txt` 已更新到 0.90：包含革命军线、三档补给、E9 结局页，以及原版/旧 MOD 路线的旧存档说明。
+- 0.90 Nexus Beauty 包已构建：271 个文件，15,664,785 字节，DLL SHA-256 `144CCB3DE88636847A545E2E0A3935CF89724691426A8944056341F67B6390E8`。
+- ZIP：`dist/EleanorRomance-0.90-nexus.zip`；SHA-256 `08616B9D5B10EB658B9A027CAC532DD672DC74CF4A8A16AC005C81483F4C456F`。
+- 尚未上传到 Nexus；Nexus 页面说明与包体为手动发布准备。
