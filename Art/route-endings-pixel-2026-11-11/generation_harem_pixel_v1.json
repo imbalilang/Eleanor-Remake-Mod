@@ -1,0 +1,103 @@
+{
+  "route": "harem",
+  "revision": "pixel_v1",
+  "status": "user_approved_published_0.89",
+  "tool": "codexzh-image/scripts/image.mjs",
+  "model": "gpt-image-2",
+  "endpoint_mode": "images/edits",
+  "requested_size": "1536x1024",
+  "requested_count": 1,
+  "prompt_file": "Art/route-endings-pixel-2026-11-11/prompts/ending_harem_pixel_v1.txt",
+  "prompt_sha256": "45ce7d61d43071b987eeb9a056783e27f6746c538024fd5726859dd30aa27666",
+  "sources": [
+    {
+      "path": "Art/revolution-ending-2026-11-11/references_local/wall_36.png",
+      "role": "Original game ending pixel medium and palette; style only",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1"
+    },
+    {
+      "path": "Art/revolution-ending-2026-11-11/endings/er_ending_revolution_cg_v3.png",
+      "role": "User-selected CG set continuity; no scene or outfit copying",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41"
+    },
+    {
+      "path": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+      "role": "Eleanor identity and upper-district daily purple-gold dress and capelet",
+      "size": [
+        1462,
+        1076
+      ],
+      "mode": "RGBA",
+      "sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e"
+    },
+    {
+      "path": "Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "role": "User-approved Lydia daily v4 identity, proportions and cream/rose upper-district outfit",
+      "size": [
+        1461,
+        1076
+      ],
+      "mode": "RGBA",
+      "sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5"
+    },
+    {
+      "path": "Art/revolution-ending-2026-11-11/references_local/native_pawnshop_composite_no_ui.png",
+      "role": "Native pawnshop setting only; no UI",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "d8efdc0e225c2e32b5e716c05fd67c7bbd62076817b5bf5f078b7c0c36b25491"
+    }
+  ],
+  "master": "masters/ending_harem_pixel_master_v1.png",
+  "runtime_replaced": true,
+  "published": true,
+  "generation_attempts": 1,
+  "successful_images": 1,
+  "actual_master": {
+    "path": "masters/ending_harem_pixel_master_v1.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "496dd49eb2266b1ae8a6ce39dddaa3d1c7322789819ce00debc1c6702f0ca2e6",
+    "bytes": 2314710
+  },
+  "visual_review": {
+    "reviewed": [
+      "provider master",
+      "960x540 export",
+      "640x360 integer 2x preview"
+    ],
+    "result": "candidate visually reviewed; distinct identities and expressions, no obvious extra/fused limbs",
+    "runtime_ui_verified": false,
+    "known_ui_limitation": "0.89 uses separate image/text regions and preserves image aspect ratio. Source layout and compile checks passed; actual in-game display remains unverified."
+  },
+  "user_approval": {
+    "date": "2026-11-11",
+    "instruction": "确认通过，替换为正式资源"
+  },
+  "installed_version": "0.89",
+  "runtime_file": "Textures/Items/er_ending_harem_cg.png",
+  "runtime_sha256": "d088018f1ab7a15911031d7a8601daf11058df18f5416ebcbd5fe2e23f57b641",
+  "workshop": {
+    "item": "3834588749",
+    "version": "0.89",
+    "result": "k_EResultOK",
+    "completedUtc": "2026-11-11T01:49:18.6085723Z",
+    "remote_verified": true
+  }
+}

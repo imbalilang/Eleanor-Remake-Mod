@@ -1,0 +1,93 @@
+{
+  "route": "maid",
+  "revision": "pixel_v1",
+  "status": "user_approved_published_0.89",
+  "tool": "codexzh-image/scripts/image.mjs",
+  "model": "gpt-image-2",
+  "endpoint_mode": "images/edits",
+  "requested_size": "1536x1024",
+  "requested_count": 1,
+  "prompt_file": "Art/route-endings-pixel-2026-11-11/prompts/ending_maid_pixel_v1.txt",
+  "prompt_sha256": "005cd62c4fe6014e785e6663e2f4bed71e38e9c301e327e4e51ab7bd902ecceb",
+  "sources": [
+    {
+      "path": "Art/revolution-ending-2026-11-11/references_local/wall_36.png",
+      "role": "Original game ending pixel medium and palette; style only",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1"
+    },
+    {
+      "path": "Art/revolution-ending-2026-11-11/endings/er_ending_revolution_cg_v3.png",
+      "role": "User-selected CG set continuity; no scene or outfit copying",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41"
+    },
+    {
+      "path": "Art/v0.5/masters/eleanor_maid_master.png",
+      "role": "Authoritative Eleanor maid identity, exact outfit and adult proportions",
+      "size": [
+        1461,
+        1077
+      ],
+      "mode": "RGBA",
+      "sha256": "435d45e50d539d0c274230d2fe8290ffb90604dcf4e7c60973cb5b40677cc16e"
+    },
+    {
+      "path": "Art/revolution-ending-2026-11-11/references_local/native_pawnshop_composite_no_ui.png",
+      "role": "Native pawnshop setting only; no UI",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "d8efdc0e225c2e32b5e716c05fd67c7bbd62076817b5bf5f078b7c0c36b25491"
+    }
+  ],
+  "master": "masters/ending_maid_pixel_master_v1.png",
+  "runtime_replaced": true,
+  "published": true,
+  "generation_attempts": 1,
+  "successful_images": 1,
+  "actual_master": {
+    "path": "masters/ending_maid_pixel_master_v1.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "971827edf3f93d7f8eb553f2002886c5547297f9ebdcefa0c83ff710bf18fc2d",
+    "bytes": 2076869
+  },
+  "visual_review": {
+    "reviewed": [
+      "provider master",
+      "960x540 export",
+      "640x360 integer 2x preview"
+    ],
+    "result": "candidate visually reviewed; distinct identities and expressions, no obvious extra/fused limbs",
+    "runtime_ui_verified": false,
+    "known_ui_limitation": "0.89 uses separate image/text regions and preserves image aspect ratio. Source layout and compile checks passed; actual in-game display remains unverified."
+  },
+  "user_approval": {
+    "date": "2026-11-11",
+    "instruction": "确认通过，替换为正式资源"
+  },
+  "installed_version": "0.89",
+  "runtime_file": "Textures/Items/er_ending_maid_cg.png",
+  "runtime_sha256": "a23dee95a7576a26532af4b0c12342b0d18c62642dd85c49149a6cb856c8cbd8",
+  "workshop": {
+    "item": "3834588749",
+    "version": "0.89",
+    "result": "k_EResultOK",
+    "completedUtc": "2026-11-11T01:49:18.6085723Z",
+    "remote_verified": true
+  }
+}

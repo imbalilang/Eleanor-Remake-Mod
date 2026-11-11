@@ -1,8 +1,8 @@
 {
   "revision": "v3",
-  "status": "generation_requested",
+  "status": "user_approved_asset_ready_pending_r14",
   "generation_attempts": 1,
-  "successful_images": 0,
+  "successful_images": 1,
   "model": "gpt-image-2",
   "requested_size": "1536x1024",
   "requested_count": 1,
@@ -53,5 +53,31 @@
     }
   ],
   "forbidden_reference_images_opened": [],
-  "runtime_installation": false
+  "runtime_installation": true,
+  "actual_master": {
+    "path": "masters/ending_revolution_master_v3.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "2c5b5066b93266698622772f5036c3b2344babd3afb81fad198c57dd16819982"
+  },
+  "user_approval": {
+    "date": "2026-11-11",
+    "instruction": "使用该CG作为革命军线结局"
+  },
+  "selected_texture_key": "er_ending_revolution_cg",
+  "selected_texture_path": "Textures/Items/er_ending_revolution_cg.png",
+  "selected_texture_sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41",
+  "route_trigger_registered": false,
+  "r14_route_implemented": false,
+  "published": true,
+  "published_as": "approved_asset_only_pending_r14",
+  "workshop": {
+    "item": "3834588749",
+    "version": "0.89",
+    "result": "k_EResultOK",
+    "completedUtc": "2026-11-11T01:49:18.6085723Z"
+  }
 }

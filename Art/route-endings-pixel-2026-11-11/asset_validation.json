@@ -1,0 +1,109 @@
+{
+  "runtime_existing_images_unchanged": true,
+  "routes": [
+    {
+      "route": "maid",
+      "revision": "pixel_v1",
+      "master": {
+        "path": "masters/ending_maid_pixel_master_v1.png",
+        "size": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "sha256": "971827edf3f93d7f8eb553f2002886c5547297f9ebdcefa0c83ff710bf18fc2d",
+        "bytes": 2076869
+      },
+      "crop_box_half_open_source_pixels": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "method": "Separable exact rectangular overlap area average in 8-bit RGB; floor(v+0.5)",
+      "sampler_source": "Art/revolution-ending-2026-11-11/export_cg_v2.py",
+      "sampler_sha256": "099d9c27be39f1ecb928fe494512502f5af4771246f293add4b7d4387ad6affe",
+      "isotropic": true,
+      "palette_reduction": false,
+      "added_dither": false,
+      "sharpening": false,
+      "master_modified": false,
+      "runtime_replaced": false,
+      "published": false,
+      "outputs": [
+        {
+          "path": "endings/er_ending_maid_cg_pixel_v1_native640.png",
+          "size": [
+            640,
+            360
+          ],
+          "mode": "RGB",
+          "sha256": "a1941bf8af639a4f2d0b79d85824e89a011acc83927c96c3801bfd8e4dfef73e",
+          "bytes": 354963
+        },
+        {
+          "path": "endings/er_ending_maid_cg_pixel_v1.png",
+          "size": [
+            960,
+            540
+          ],
+          "mode": "RGB",
+          "sha256": "a23dee95a7576a26532af4b0c12342b0d18c62642dd85c49149a6cb856c8cbd8",
+          "bytes": 731805
+        }
+      ]
+    },
+    {
+      "route": "harem",
+      "revision": "pixel_v1",
+      "master": {
+        "path": "masters/ending_harem_pixel_master_v1.png",
+        "size": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "sha256": "496dd49eb2266b1ae8a6ce39dddaa3d1c7322789819ce00debc1c6702f0ca2e6",
+        "bytes": 2314710
+      },
+      "crop_box_half_open_source_pixels": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "method": "Separable exact rectangular overlap area average in 8-bit RGB; floor(v+0.5)",
+      "sampler_source": "Art/revolution-ending-2026-11-11/export_cg_v2.py",
+      "sampler_sha256": "099d9c27be39f1ecb928fe494512502f5af4771246f293add4b7d4387ad6affe",
+      "isotropic": true,
+      "palette_reduction": false,
+      "added_dither": false,
+      "sharpening": false,
+      "master_modified": false,
+      "runtime_replaced": false,
+      "published": false,
+      "outputs": [
+        {
+          "path": "endings/er_ending_harem_cg_pixel_v1_native640.png",
+          "size": [
+            640,
+            360
+          ],
+          "mode": "RGB",
+          "sha256": "986cb34f10a59480562f9472ac5d3be4ceb3db84c6b30d640d8a6c3aa67aa035",
+          "bytes": 389065
+        },
+        {
+          "path": "endings/er_ending_harem_cg_pixel_v1.png",
+          "size": [
+            960,
+            540
+          ],
+          "mode": "RGB",
+          "sha256": "d088018f1ab7a15911031d7a8601daf11058df18f5416ebcbd5fe2e23f57b641",
+          "bytes": 804394
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+0.89｜像素风结局 CG
+
+• 侍从线与后宫线结局CG正式替换为用户确认的蓝紫/珊瑚色像素风定稿。
+• E3/E4即时结局页改为上方完整等比图片、下方结局文字，避免文字遮挡人物和端茶动作。
+• 旧档GameOver回退图片保持比例。
+• 革命军CG随包保存为已选定资源，新14章与R14结局触发仍在开发中。
+• 保留0.88的Lydia独立画像与立绘兼容；路线、数值和E1～E14判定不变。
+
+0.89 | Pixel-art ending CGs
+
+• Installs approved blue-violet/coral pixel-art CGs for the attendant and shared-romance endings.
+• Immediate E3/E4 ending pages show the full proportional illustration above separate ending text.
+• Legacy GameOver CGs preserve their aspect ratio.
+• The selected revolutionary CG is included as an asset; the new 14-chapter route and R14 trigger remain in development.
+• Retains Lydia's independent portraits, compatibility and existing route conditions.

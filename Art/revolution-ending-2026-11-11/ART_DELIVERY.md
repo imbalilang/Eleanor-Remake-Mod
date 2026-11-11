@@ -1,4 +1,18 @@
-# 革命军线终局 CG：v2 像素风候选
+# 革命军线终局 CG：v3 已选定
+
+2026-11-11。用户已明确“使用该CG作为革命军线结局”，选定 v3。已将960×540成图保存为工作区正式资源 [er_ending_revolution_cg.png](../../Textures/Items/er_ending_revolution_cg.png)，SHA-256 为 `cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41`。该已选定资源随0.89发布到原创意工坊条目3834588749，但新R14仍未实施，不会因此解锁旧路线结局。
+
+v3以v2为编辑底图，按用户反馈恢复原人设的丰满胸部、正常大臂体积，并重建手臂遮挡前后连续的腰部承托线和侧腰开口。已查看母图、960图、640整数2倍图与v2/v3躯干并排对照；不把生成编辑声称为其余区域逐像素不变。
+
+- [选定母图](masters/ending_revolution_master_v3.png)：1672×941 RGB，SHA-256 `2c5b5066b93266698622772f5036c3b2344babd3afb81fad198c57dd16819982`。
+- [选定960图](endings/er_ending_revolution_cg_v3.png)、[640图](endings/er_ending_revolution_cg_v3_native640.png)、[整数2倍预览](previews/v3/ending_revolution_native640_2x.png)。
+- [实际v3提示词](prompts/ending_revolution_v3.txt)、[生成与确认记录](generation_manifest_v3.json)、[导出校验](validation_v3.json)。导出方法沿用下文的等比面积采样，不减色、不锐化。
+
+**接入仍待新R14实施。** 当前运行代码仅有侍从/后宫独立结局页，新革命军14章尚未接入。本次只保存选定资源，不将新CG挂到旧丙线、普通朋友、死亡、被捕或离站结局，也不声称已经可以在游戏中触发。R14接入时需使用独立图片区/文字区或适配构图；现有下半部文字覆盖仍未通过验收。
+
+此前完整v2交付另存 [ART_DELIVERY_v2.md](ART_DELIVERY_v2.md)。以下保留v2制作经过；其中“未接入/候选”均指当时的v2状态。
+
+## 历史：v2 像素风候选
 
 日期：2026-11-11。状态：**已成功生成并导出候选，尚未接入游戏或发布。**
 

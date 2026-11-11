@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-11",
+  "version": "0.89",
+  "files": [
+    {
+      "route": "maid",
+      "source": "Art/route-endings-pixel-2026-11-11/endings/er_ending_maid_cg_pixel_v1.png",
+      "runtime": "Textures/Items/er_ending_maid_cg.png",
+      "before_sha256": "b43ec7b24d91c24c79695ce1066c33ec9bc7ac73fe634d01594a867a93ee6e32",
+      "after_sha256": "a23dee95a7576a26532af4b0c12342b0d18c62642dd85c49149a6cb856c8cbd8",
+      "backup": "dist/rollback-cg-0.89/er_ending_maid_cg.png"
+    },
+    {
+      "route": "harem",
+      "source": "Art/route-endings-pixel-2026-11-11/endings/er_ending_harem_cg_pixel_v1.png",
+      "runtime": "Textures/Items/er_ending_harem_cg.png",
+      "before_sha256": "9124c2c610c41ab208a037dd98ce734ec0c4bc3b5eb26f2c4905a505926d894d",
+      "after_sha256": "d088018f1ab7a15911031d7a8601daf11058df18f5416ebcbd5fe2e23f57b641",
+      "backup": "dist/rollback-cg-0.89/er_ending_harem_cg.png"
+    }
+  ],
+  "published": true,
+  "workshop_item": "3834588749",
+  "workshop_result": "k_EResultOK",
+  "workshop_remote_verified": true
+}

@@ -41,7 +41,7 @@ namespace EleanorRomance
                     rect.offsetMax = Vector2.zero;
                     Image image = cgObject.GetComponent<Image>();
                     image.raycastTarget = false;
-                    image.preserveAspect = false;
+                    image.preserveAspect = true;
                 }
 
                 cgObject.GetComponent<Image>().sprite = sprite;
@@ -113,7 +113,13 @@ namespace EleanorRomance
                 if (cg != null)
                 {
                     Image image = NewImage(root.transform, "cg", Color.white);
-                    Stretch(image.rectTransform);
+                    // Keep the whole 16:9 CG above the text, including hands
+                    // and gestures near the counter at the bottom of the art.
+                    RectTransform imageRect = image.rectTransform;
+                    imageRect.anchorMin = new Vector2(0.03f, 0.44f);
+                    imageRect.anchorMax = new Vector2(0.97f, 0.98f);
+                    imageRect.offsetMin = Vector2.zero;
+                    imageRect.offsetMax = Vector2.zero;
                     image.sprite = cg;
                     image.preserveAspect = true;
                     image.raycastTarget = false;
@@ -121,8 +127,8 @@ namespace EleanorRomance
 
                 Image panel = NewImage(root.transform, "panel", new Color(0.03f, 0.035f, 0.05f, 0.90f));
                 RectTransform panelRect = panel.rectTransform;
-                panelRect.anchorMin = new Vector2(0.055f, 0.055f);
-                panelRect.anchorMax = new Vector2(0.945f, 0.555f);
+                panelRect.anchorMin = new Vector2(0.055f, 0.035f);
+                panelRect.anchorMax = new Vector2(0.945f, 0.415f);
                 panelRect.offsetMin = Vector2.zero;
                 panelRect.offsetMax = Vector2.zero;
 
@@ -138,10 +144,13 @@ namespace EleanorRomance
 
                 TextMeshProUGUI body = NewText(panel.transform, "body", page.Text, font,
                     20, TextAlignmentOptions.TopLeft, Color.white);
+                body.enableAutoSizing = true;
+                body.fontSizeMin = 16f;
+                body.fontSizeMax = 20f;
                 RectTransform bodyRect = body.rectTransform;
                 bodyRect.anchorMin = Vector2.zero;
                 bodyRect.anchorMax = Vector2.one;
-                bodyRect.offsetMin = new Vector2(32f, 82f);
+                bodyRect.offsetMin = new Vector2(32f, 118f);
                 bodyRect.offsetMax = new Vector2(-32f, -76f);
 
                 TextMeshProUGUI note = NewText(panel.transform, "note", L.Get("er_ending_content_end"), font,
