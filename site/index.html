@@ -75,10 +75,9 @@ main{padding-bottom:40px}
 .zoom button:hover{border-color:var(--gold);color:#fff}
 .zoom span{color:var(--muted);font-size:12px;min-width:52px;text-align:center}
 .chart-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));padding:16px;min-height:420px;
-  scrollbar-width:thin;scrollbar-color:#5d6d8c rgba(255,255,255,.04)}
-.chart-wrap::-webkit-scrollbar{height:12px;width:12px}
-.chart-wrap::-webkit-scrollbar-thumb{background:#3c4a63;border-radius:8px;border:2px solid #0f131c}
-.chart-wrap::-webkit-scrollbar-track{background:rgba(255,255,255,.03)}
+  cursor:grab;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+.chart-wrap::-webkit-scrollbar{display:none}
+.chart-wrap.dragging{cursor:grabbing;user-select:none}
 .chart-wrap svg{display:block;margin:0 auto;width:3020px;max-width:none;height:auto}
 .zoom-hint{color:var(--muted);font-size:12px;margin-right:4px}
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
@@ -193,7 +192,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <p>纵轴是最早触发日。提前开局模式下，所有日期整体提前 11 天。</p>
   </div>
-  <div class="chart-note"><b>怎么看：</b>四条主路线各有自己的纵向路线，每条路线左侧的金色是完美走向，右侧红色是其他走向；最左侧是共同失败分支。图中日期是“最早目标日”，声望等待、顾客日槽或独立买家可能让后续顺延，并不是固定在当天发生。图表保持原始尺寸，可左右拖动、使用 ‹ › 按钮滚动，或缩放查看。</div>
+  <div class="chart-note"><b>怎么看：</b>四条主路线各有自己的纵向路线，每条路线左侧的金色是完美走向，右侧红色是其他走向；最左侧是共同失败分支。图中日期是“最早目标日”，声望等待、顾客日槽或独立买家可能让后续顺延，并不是固定在当天发生。图表保持原始尺寸，可直接按住图表左右拖动，或使用 ‹ › 按钮滚动。</div>
   <div class="toolbar">
   <div class="legend">
     <span class="chip"><i class="dot regular"></i>常规恋爱线</span>
@@ -203,7 +202,7 @@ footer a{color:var(--gold);text-decoration:none}
     <span class="chip"><i class="dot bad"></i>其他结局</span>
     <span class="chip"><i class="dot perfect"></i>★ 完美结局</span>
   </div>
-  <div class="zoom"><button id="pan-left" title="向左滚动">‹</button><button id="pan-right" title="向右滚动">›</button><span class="zoom-hint">可左右拖动</span><button id="zoom-out" title="缩小">−</button><span id="zoom-label">100%</span><button id="zoom-in" title="放大">+</button><button id="zoom-native" title="原始尺寸">原始尺寸</button><button id="zoom-reset" title="适应宽度">适应宽度</button></div>
+  <div class="zoom"><button id="pan-left" title="向左滚动">‹</button><button id="pan-right" title="向右滚动">›</button><span class="zoom-hint">按住图表拖动</span><button id="zoom-out" title="缩小">−</button><span id="zoom-label">100%</span><button id="zoom-in" title="放大">+</button><button id="zoom-native" title="原始尺寸">原始尺寸</button><button id="zoom-reset" title="适应宽度">适应宽度</button></div>
 </div>
   <section class="chart-wrap" id="chart-wrap"><svg id="route-svg" viewBox="0 0 3020 2300" role="img" aria-label="四条主路线与完美结局流程图"></svg></section>
 </section>
@@ -1871,6 +1870,26 @@ function initPage(){
   const chart=$('#chart-wrap');
   $('#pan-left').addEventListener('click',()=>chart.scrollBy({left:-chart.clientWidth*0.7,behavior:'smooth'}));
   $('#pan-right').addEventListener('click',()=>chart.scrollBy({left:chart.clientWidth*0.7,behavior:'smooth'}));
+
+  let drag=null;
+  chart.addEventListener('pointerdown',e=>{
+    if(e.pointerType==='touch'||e.button!==0)return;
+    drag={id:e.pointerId,x:e.clientX,left:chart.scrollLeft};
+    chart.classList.add('dragging');
+    chart.setPointerCapture(e.pointerId);
+  });
+  chart.addEventListener('pointermove',e=>{
+    if(!drag||e.pointerId!==drag.id)return;
+    chart.scrollLeft=drag.left-(e.clientX-drag.x);
+  });
+  const endDrag=e=>{
+    if(!drag)return;
+    chart.classList.remove('dragging');
+    try{chart.releasePointerCapture(drag.id);}catch(_){}
+    drag=null;
+  };
+  chart.addEventListener('pointerup',endDrag);
+  chart.addEventListener('pointercancel',endDrag);
 }
 document.addEventListener('DOMContentLoaded',initPage);
 </script>
