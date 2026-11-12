@@ -146,6 +146,9 @@ namespace EleanorRomance
         public const string B_C18_B001 = "c18.b001";
         public const string B_C18_B002 = "c18.b002";
         public const string B_C18_B003 = "c18.b003";
+        public const string B_C18_B003A = "c18.b003a";
+        public const string B_C18_B003B = "c18.b003b";
+        public const string B_C18_B003C = "c18.b003c";
         public const string B_C18_B004 = "c18.b004";
         public const string B_C19_B001 = "c19.b001";
         public const string B_C19_B002 = "c19.b002";
@@ -308,7 +311,10 @@ namespace EleanorRomance
                 { "c17.b005", new[] { new StoryLine(StorySpeaker.Mother, "er_v06_c17_b005_01"), new StoryLine(StorySpeaker.Mother, "er_v06_c17_b005_02"), new StoryLine(StorySpeaker.Mother, "er_v06_c17_b005_03"), new StoryLine(StorySpeaker.Mother, "er_v06_c17_b005_04") } },
                 { "c18.b001", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b001_01"), new StoryLine(StorySpeaker.Player, "er_v06_c18_b001_02"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b001_03"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b001_04") } },
                 { "c18.b002", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b002_01"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b002_02"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b002_03"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b002_04"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b002_05") } },
-                { "c18.b003", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_01"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_02"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_03"), new StoryLine(StorySpeaker.Player, "er_v06_c18_b003_04"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_05") } },
+                { "c18.b003", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_01"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_02"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003_03") } },
+                { "c18.b003a", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003a_01") } },
+                { "c18.b003b", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003b_01") } },
+                { "c18.b003c", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b003c_01") } },
                 { "c18.b004", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b004_01"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c18_b004_02") } },
                 { "c19.b001", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b001_01"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b001_02"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b001_03"), new StoryLine(StorySpeaker.Player, "er_v06_c19_b001_04") } },
                 { "c19.b002", new[] { new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_01"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_02"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_03"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_04"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_05"), new StoryLine(StorySpeaker.Player, "er_v06_c19_b002_06"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_07"), new StoryLine(StorySpeaker.Eleanor, "er_v06_c19_b002_08") } },

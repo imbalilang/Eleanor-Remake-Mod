@@ -15,8 +15,8 @@ namespace EleanorRomance
 
         // Lydia is a romance lead and keeps a dedicated dual-version portrait.
         // femaleUpper10 is only an emergency fallback if the local Lydia art
-        // is missing. Mother is not romanceable and falls back to original
-        // femaleUpper3 when CutePortraits is not active.
+        // is missing. Sophia's approved outfits are beauty-style assets;
+        // femaleUpper3 remains the fallback until separate vanilla art exists.
         public const string LydiaSprite = "femaleUpper10";
         public const string MotherSprite = "femaleUpper3";
 
@@ -26,5 +26,6 @@ namespace EleanorRomance
         public const string LydiaPortraitBeauty = "er_portrait_lydia_female_beauty";
         public const string MotherPortraitVanilla = "er_portrait_mother_female_vanilla";
         public const string MotherPortraitBeauty = "er_portrait_mother_female_beauty";
+        public const string MotherHomePortraitBeauty = "er_portrait_mother_home_female_beauty";
     }
 }

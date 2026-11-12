@@ -1,0 +1,13 @@
+1.00｜修复后宫线合作采购场景的拾荒者立绘
+
+• 后宫线 dr08 后埃莉诺已回到上层工作：甲线在办工作通行、先两头跑；乙线做上层交接记录并短住附近。
+• dr11／dr15／dr17／dr19／dr20 与日常原本就使用 eleanor1 上层装；例外是 coop（莉迪亚介绍的采购客，约第 72 天）复用了普通线第 21 章逻辑，仍显示 eleanor_scav 拾荒装。
+• 现在后宫线 coop 使用 eleanor1；普通线第 21 章、dr03 与救母段仍按原剧情使用拾荒装。
+• 仅改立绘选择，不改剧情、选项、数值、路线或结局；0.99 的误弹提示修复保留。
+
+1.00 | Fix the dual-route coop visit's scavenger portrait
+
+• After dr08, Eleanor is back at Upper Level work: branch A is processing her work pass and commuting; branch B is handling upper-level transfer records with a short-stay room nearby.
+• dr11/dr15/dr17/dr19/dr20 and the dailies already used her Upper Level portrait; the exception was coop (Lydia's referral buyer, around day 72), which reused the common chapter 21 client and still showed the scavenger portrait.
+• The dual coop visit now uses eleanor1; common chapter 21, dr03 and the rescue arc keep the scavenger outfit as written.
+• Portrait-only change: story, choices, values, routes and endings are unchanged; 0.99's notification fix remains.

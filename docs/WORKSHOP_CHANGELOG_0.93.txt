@@ -1,0 +1,15 @@
+0.93｜修复朋友线结局后的空来访循环
+
+• 朋友线核心结局后的后日谈此前使用纯对话来访并在对白结束时离场，同一段“这回的货我分好了……”最多排入五次，玩家会反复看到同样两句且买不到任何东西。
+• 现在每次朋友后日谈都是真实卖货来访：进场生成一批搜获货物，按正常收购价与议价流程结算，不白送钱或好感。
+• 首次来访仍播放原朋友段；之后的来访改用简短交易问候，不再原样重播整段对白。
+• 排期仍为最多 5 次、至少间隔 8 天；读档重进同一次来访不会重复生成货物。
+• 恋爱线四段日常、0.92 的双恋入口与画像、路线、数值和 E1—E14 编号不变。
+
+0.93 | Fix friend-route post-ending visits selling nothing
+
+• The friend-route post-ending visit used a dialogue-only client and dismissed itself when the lines ended, so the same “I sorted this batch…” scene could play up to five times while offering nothing to buy.
+• Each friend epilogue visit is now a real sell visit: scavenged goods are stocked on arrival and settle through the normal offer/bargain flow. No free money or affection.
+• The written friend scene still plays on the first visit; later visits use a short trade greeting instead of replaying the whole scene.
+• The schedule remains up to five visits, at least eight days apart; loading back into the same visit does not duplicate the goods.
+• The four lover dailies, 0.92's dual-romance entry and portraits, routes, values and E1–E14 numbering are unchanged.

@@ -455,8 +455,19 @@ namespace EleanorRomance
                 StoryEngine.Dismiss();
                 EndingPageUI.ShowRevolutionCompletion();
             };
-            StoryEngine.Tail(withCup).SetEndAction(finish);
-            StoryEngine.Tail(withoutCup).SetEndAction(finish);
+            Dialogue yes = StoryEngine.Build(RevolutionContent.B_RV14_REPLY_YES);
+            Dialogue stay = StoryEngine.Build(RevolutionContent.B_RV14_REPLY_STAY);
+            Dialogue care = StoryEngine.Build(RevolutionContent.B_RV14_REPLY_CARE);
+            StoryEngine.Tail(yes).SetEndAction(finish);
+            StoryEngine.Tail(stay).SetEndAction(finish);
+            StoryEngine.Tail(care).SetEndAction(finish);
+
+            Action<Dialogue> addFinalChoice = branch => StoryEngine.AddChoices(branch, L.Get("er_rev_prompt_r14_final"),
+                new StoryEngine.Choice(L.Get("er_rev_choice_r14_final_yes"), L.Get("er_rev_choice_r14_final_yes_desc"), yes, null),
+                new StoryEngine.Choice(L.Get("er_rev_choice_r14_final_stay"), L.Get("er_rev_choice_r14_final_stay_desc"), stay, null),
+                new StoryEngine.Choice(L.Get("er_rev_choice_r14_final_care"), L.Get("er_rev_choice_r14_final_care_desc"), care, null));
+            addFinalChoice(withCup);
+            addFinalChoice(withoutCup);
 
             StoryEngine.AddChoices(root, L.Get("er_rev_prompt_r14"),
                 new StoryEngine.Choice(L.Get("er_rev_choice_r14_1"), L.Get("er_rev_choice_r14_1_desc"), withCup, null),

@@ -1,0 +1,16 @@
+Use case: identity-preserve / targeted outfit edit.
+Asset: ONE transparent high-resolution intimate private-homewear portrait master for Eleanor Story Expand.
+
+IMAGE 1 is the full-canvas EDIT TARGET: Sophia, Eleanor's mother, actual age 38 with the appearance of a beautiful fully ADULT woman around 28. Preserve exactly the same adult face, green eyes, warm copper-orange hair, long side-draped hair gathered near its lower end, gentle closed-mouth expression, head angle, body proportions, generous supported bust volume, shoulders, arms, hands, pose, lighting, transparent canvas and illustration style. Preserve her recognizable resemblance to Eleanor. Do not alter face, age, hair, anatomy, chest size, framing or camera angle.
+
+IMAGE 2 is a COSTUME REFERENCE ONLY from the user's attached example. It shows a fitted rib-knit homewear top with a wide softly folded neckline, close-fitting long sleeves, vertical knit ribs and a smooth waist-hugging silhouette. Borrow only the garment construction and knit surface language. Do not copy its white-haired character, face, eyes, neck ribbon, spoon, kitchen, camera angle, background, pose or photographic blur.
+
+CHANGE ONLY SOPHIA'S CURRENT UPPER-DISTRICT CLOTHING into an elegant intimate at-home outfit:
+- Warm ivory / very pale cream fine rib-knit top or knit dress, opaque and fully covering the torso. Fine closely spaced vertical ribs, soft woven yarn texture, subtle directional knit highlights and natural stretch folds.
+- A wide softly folded off-shoulder-to-bateau neckline inspired by the reference, but modest and secure on an adult woman; it may reveal only the upper collarbone and shoulders, with no exposed breasts or underwear. Keep the same large clothed bust silhouette and realistic fabric support; do not enlarge the body.
+- Close-fitting long sleeves with neat ribbed cuffs, a smooth fitted waist and clean hem below the visible crop. The garment should feel comfortable, expensive and cared-for, suitable for a private family evening in an upper-district home, not worn-out workwear.
+- Remove the jade dress, gold shoulder capelet, lattice sleeves, gemstone clasp and formal waist ornament. Tiny gold ear studs and wedding band may remain only if already visible.
+
+This is an intimate family-home state, not erotic lingerie and not a sexualized pose. She remains a warm capable married woman and former hydroponic farm manager. No cleavage window, transparent knit, deep plunging neckline, fetish styling, swimsuit, corset, bodysuit, school uniform, prison clothing, apron, patched fabric, fraying, holes, giant jewellery, props, extra people, text, UI or watermark.
+
+Normal detailed source illustration with the same delicate warm linework and clean cel shading as IMAGE 1; do not pre-pixelate, dither, mosaic or add grain. Keep actual transparent background and one character only. We will perform the project's B/detail area-downsample offline.

@@ -374,5 +374,17 @@
   "er_maid_notice_migrated": [
     "主从恋爱已确认。",
     "Attendant romance confirmed."
+  ],
+  "er_maid_outfit_a": [
+    "这身是穿给上面的人看的。那身，穿给我看的。",
+    "This one is for the people upstairs. That one is for me."
+  ],
+  "er_maid_outfit_b": [
+    "两身都好看。反正你都得回来。",
+    "Both look good. You have to come back either way."
+  ],
+  "er_maid_outfit_c": [
+    "先过来。让我看清楚。",
+    "Come here first. Let me see for myself."
   ]
 }

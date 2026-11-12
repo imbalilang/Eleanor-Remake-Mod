@@ -660,9 +660,7 @@
     "So I'll keep at it. ...You're still owing me."
   ],
   "m24_b010": [
-    "Master, tell me. Do I look better in this, or the other outfit?",
-    "This one is for the people upstairs. That one is for me.",
-    "...Correct answer."
+    "Master, tell me. Do I look better in this, or the other outfit?"
   ],
   "m25_b001": [
     "Don't speak yet. Look at this."
@@ -982,5 +980,14 @@
     "My mother has no protection yet. You knew. So did I.",
     "So you wanted me to tell you everything, while you said nothing yourself.",
     "The agreement ends here. From now on, what I do is none of your business."
+  ],
+  "m24_b010a": [
+    "...I suppose that is the right answer."
+  ],
+  "m24_b010b": [
+    "...You certainly know how to press your advantage."
+  ],
+  "m24_b010c": [
+    "Master, I cannot answer properly when you do that."
   ]
 }

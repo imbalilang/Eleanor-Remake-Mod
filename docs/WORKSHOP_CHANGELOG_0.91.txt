@@ -1,0 +1,13 @@
+0.91｜修复选项气泡把 NPC 分支当成玩家选项
+
+• 原生选项气泡显示下一段对话文本；所有直接 AddChoice 菜单现在先插入玩家回应节点。
+• 修复 C08 回礼婉拒、侍从入口返回、保护失败 fallback、吊坠婉拒、稍后领取与保释后再救选项的发言归属。
+• 选项文本、分支结果、数值、路线和 E1—E14 不变。
+• 保留 0.90 的革命军线、0.89 像素结局CG、0.88 Lydia 独立画像与全部既有内容。
+
+0.91 | Fix choice bubbles attributing NPC lines to the player
+
+• Native choice bubbles display the next dialogue's text; all direct AddChoice menus now insert a player reply node first.
+• Fixes speaker attribution for the C08 gift refusal, attendant entry back, protection fallback, locket refusal, reward-later and bail rescue-later choices.
+• Option text, branch results, values, routes and E1–E14 are unchanged.
+• Retains 0.90's revolution route, 0.89 pixel ending CGs, 0.88 Lydia portrait and all existing content.

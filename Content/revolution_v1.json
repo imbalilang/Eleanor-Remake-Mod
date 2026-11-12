@@ -1330,6 +1330,39 @@
       ]
     },
     {
+      "id": "rv14_reply_yes",
+      "scene": "R14 回应：我也想你",
+      "lines": [
+        {
+          "speaker": "eleanor",
+          "text": "……那就别只站在柜台后面看我。",
+          "en": "...Then don't just stand behind the counter looking at me."
+        }
+      ]
+    },
+    {
+      "id": "rv14_reply_stay",
+      "scene": "R14 回应：多留一会儿",
+      "lines": [
+        {
+          "speaker": "eleanor",
+          "text": "我又没说要走。",
+          "en": "I didn't say I was leaving."
+        }
+      ]
+    },
+    {
+      "id": "rv14_reply_care",
+      "scene": "R14 回应：先吃点东西",
+      "lines": [
+        {
+          "speaker": "eleanor",
+          "text": "你比我妈还啰嗦。……不过，好。",
+          "en": "You nag more than my mother. ...But all right."
+        }
+      ]
+    },
+    {
       "id": "rv_short_01",
       "scene": "日常 R04—R05 买药",
       "lines": [

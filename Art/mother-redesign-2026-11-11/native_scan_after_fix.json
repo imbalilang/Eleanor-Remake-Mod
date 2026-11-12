@@ -1,0 +1,11 @@
+{
+  "refused": false,
+  "error": null,
+  "methods": 1515,
+  "capabilities": [],
+  "hardFlags": [],
+  "findings": 0,
+  "pending": [],
+  "deprecatedCapabilities": [],
+  "usesDeprecatedCapability": false
+}

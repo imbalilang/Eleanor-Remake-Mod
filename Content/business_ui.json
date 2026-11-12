@@ -25,6 +25,7 @@
   "er_biz_sample_close": ["收好了。这回的账上，别把它也算进去。", "Keep it safe. And don't put that one on today's bill."],
   "er_biz_restock_intro": ["今天有笔正经生意。上面下一批要补工具、材料和日用品，我替他们来收，预算九百。先按东西谈，等会儿再说那场亮相。", "Proper business today. They need tools, materials and household goods upstairs. I'm buying for them, with nine hundred to spend. Goods first. I'll tell you about the launch afterwards."],
   "er_biz_routine_sell": ["两件东西。这批是我自己的，货款另算。你先看，我保证这回没把标签弄丢。", "Two items. My own goods; separate payment. Look them over. I promise the labels survived this time."],
+  "er_ep_friend_trade": ["货在台上了。都是这阵子攒下的，能用不能用的都分开了。今天也照常算，价钱不合适你就直说。", "The goods are on the counter: everything I've gathered lately, usable and not, sorted apart. Same as usual today. If a price doesn't work, just say so."],
   "er_biz_routine_buy": ["配给站那边凑了点钱，托我带些工具和日用品。照常开价，别因为是我来的，就连该挣的也不挣了。", "Some people near the ration station pooled money for tools and household goods. Quote normally. Don't give up your margin just because it's me."],
   "er_biz_routine_end": ["行，今天先到这儿。店照常开，我也照常过日子。王尔德那边的事，准备好了再办。", "All right, that's enough for today. The shop keeps opening; I keep getting on with life. We can deal with Wilde when we're ready."],
   "er_biz_locket_space": ["吊坠需要一块2×2空位。现有物品已保留，腾挪后会重试整理。", "The locket needs a 2×2 space. Existing items are preserved; move it into room and its shape will be updated."]

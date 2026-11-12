@@ -49,8 +49,8 @@ def main() -> int:
             if plan.get("status") == "planned_not_implemented":
                 if plan_marker not in html:
                     errors.append("dual v0.5 plan exists but its pending-design notice is missing")
-                if [g.get("reputation") for g in plan.get("gates", [])] != [50, 100, 150]:
-                    errors.append("dual v0.5 reputation checkpoints must be 50/100/150")
+                if [g.get("reputation") for g in plan.get("gates", [])] != [30, 60, 90]:
+                    errors.append("dual v0.5 reputation checkpoints must be 30/60/90")
                 policy = plan.get("policy", {})
                 if not policy.get("mainlineWaits") or not policy.get("nativeCustomersContinue"):
                     errors.append("dual v0.5 must wait at gates while native business continues")
@@ -64,7 +64,7 @@ def main() -> int:
         if data.get('dualDesignVersion') != '0.5':errors.append('runtime map missing dual v0.5 implementation')
         for i in range(1,4):
             if f'HG{i}' not in html:errors.append('runtime reputation checkpoint missing')
-        if [g.get('reputation') for g in plan['gates']] != [50,100,150]:errors.append('checkpoint threshold drift')
+        if [g.get('reputation') for g in plan['gates']] != [30,60,90]:errors.append('checkpoint threshold drift')
         if '待实施的声望检查点' in html:errors.append('stale planned-only banner')
         for day in data.get('days',[]):
             if day.get('id') == 'dr05' and any('暂缓' in str(c) for c in day.get('choices',[])):errors.append('deferred confession returned')

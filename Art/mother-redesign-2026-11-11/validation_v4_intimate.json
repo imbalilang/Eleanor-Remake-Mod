@@ -1,0 +1,137 @@
+{
+  "source_size": [
+    1145,
+    1374
+  ],
+  "clean_bbox": [
+    104,
+    1,
+    994,
+    1374
+  ],
+  "parameters": {
+    "visible_height": 171.625,
+    "centre_x": 146.4375,
+    "bottom_exclusive": 244.4375,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": false,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.125,
+    "tx": 77.8125,
+    "ty": 72.6875
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 4954,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    93,
+    74,
+    201,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 5713,
+  "master": "masters/mother_beauty_master_v4_intimate.png",
+  "master_sha256": "18942091249da4ae2590c3037163d2aeca5f97b8579ad859b252b4fda69c034f",
+  "prompt": "prompts/mother_intimate_v4.txt",
+  "prompt_sha256": "10a82869be9a3e677ed9b3479bf2ea96528f5da3f4ace313a2a8658cee7eed28",
+  "output": "portraits/er_portrait_mother_sophia_home_beauty_v4.png",
+  "output_sha256": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44",
+  "manual_landmarks_source": {
+    "left_iris_centre": [
+      454,
+      343
+    ],
+    "right_iris_centre": [
+      605,
+      318
+    ],
+    "chin": [
+      541,
+      510
+    ],
+    "left_cheek": [
+      397,
+      389
+    ],
+    "right_cheek": [
+      694,
+      369
+    ]
+  },
+  "projected_landmarks_native": {
+    "left_iris_centre": [
+      134.56,
+      116.56
+    ],
+    "right_iris_centre": [
+      153.44,
+      113.44
+    ],
+    "chin": [
+      145.44,
+      137.44
+    ],
+    "left_cheek": [
+      127.44,
+      122.31
+    ],
+    "right_cheek": [
+      164.56,
+      119.81
+    ]
+  },
+  "landmark_method": "Manual visual estimates on the generated master; not automated anatomy measurements",
+  "reference_sha256": {
+    "Textures/Items/er_expr_eleanor1_soft.png": "089b068b368ed25792e6cfe3edd03f57278e06f4724e348c1dda0ac8b85bce58",
+    "Textures/Items/er_portrait_lydia_female_beauty.png": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "Art/mother-redesign-2026-11-11/portraits/er_portrait_mother_sophia_home_beauty_v4.png": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44",
+    "Art/mother-redesign-2026-11-11/portraits/er_portrait_mother_sophia_beauty_upper_v3.png": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364"
+  },
+  "repeat_identical": true,
+  "runtime_replaced": true,
+  "runtime_baseline_unchanged": false,
+  "unrelated_runtime_unchanged": true,
+  "published": false,
+  "status": "User-approved final; installed in workspace",
+  "actual_post_receipt": "request_receipts.jsonl",
+  "visual_review": {
+    "costume": "Opaque warm ivory fine rib knit, wide folded off-shoulder neckline, fitted long sleeves and natural fitted waist; no kitchen, spoon, white-haired reference character or formal cape/clasp retained",
+    "identity": "Viewed source-face crops at the same coordinates: adult face, green irises, head angle and smile remain visually consistent with upper v3. Copper forward-draped hair and near-tip tie retained. Not claimed pixel-identical outside outfit.",
+    "inspected_previews": [
+      "mother_beauty_master_v4_intimate_review.jpg",
+      "face_upper_vs_knit_v4.jpg",
+      "comparison_v4_intimate_native.png",
+      "mattes_v4_intimate_3x.png"
+    ],
+    "remaining_limitations": [
+      "No in-game UI verification; restart is needed to load changed sprites and assembly",
+      "Source waist, hands and low hair tie are outside the calibrated runtime crop",
+      "Larger bust than Lydia was not independently measured; existing v3/v4 accepted as final by user"
+    ]
+  },
+  "actual_serialized_post_body_bytes": 1117237,
+  "same_transform_as_upper_v3": true,
+  "approval": "approved/approval.json"
+}

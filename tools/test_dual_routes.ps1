@@ -25,18 +25,18 @@ function Dual-Finish($id,$choice=-1){
 Dual-Run
 $c=Dual-Finish 'entry' 0
 Assert ([EleanorRomance.DualState]::Done('entry') -and ![EleanorRomance.DualState]::Done('dr02')) 'Entry consumed the separate reward scene.'
-Assert (![EleanorRomance.DualProgression]::Passed(1) -and ![EleanorRomance.DualState]::PlaqueReceived) 'Entry below 50 granted progression/reward.'
+Assert (![EleanorRomance.DualProgression]::Passed(1) -and ![EleanorRomance.DualState]::PlaqueReceived) 'Entry below 30 granted progression/reward.'
 Assert ([EleanorRomance.DualDirector]::SuppressMainChapter(19) -and [EleanorRomance.DualDirector]::SuppressMainChapter(20)) 'Old chapter can bypass the checkpoint.'
 foreach($stage in 1..3){
     if($stage -gt 1){[EleanorRomance.DualState]::Flag($(if($stage -eq 2){'scene.dr08'}else{'scene.dr11'}),$true);[EleanorRomance.RomanceState]::Romance=1;[EleanorRomance.DualState]::CoreCommitted=$true}
-    Set-Reps ($stage*50-1) 0;[EleanorRomance.DualProgression]::Check()
+    Set-Reps ($stage*30-1) 0;[EleanorRomance.DualProgression]::Check()
     Assert (![EleanorRomance.DualProgression]::Passed($stage)) "Stage $stage passed below its threshold."
-    Set-Reps ($stage*50) 0;[EleanorRomance.DualProgression]::Check()
+    Set-Reps ($stage*30) 0;[EleanorRomance.DualProgression]::Check()
     Assert ([EleanorRomance.DualProgression]::Passed($stage) -and [EleanorRomance.DualProgression]::Earned($stage)) "Stage $stage did not latch."
     Set-Reps 0 0;[EleanorRomance.DualProgression]::Check()
     Assert ([EleanorRomance.DualProgression]::Passed($stage)) 'Reputation decrease revoked progress.'
 }
-Dual-Run 150
+Dual-Run 90
 [EleanorRomance.DualProgression]::Check()
 Assert (![EleanorRomance.DualProgression]::Passed(1)) 'Early reputation peak passed inactive checkpoint.'
 $null=Dual-Finish 'entry' 0
@@ -53,7 +53,7 @@ foreach($stage in 1..3){
         Assert ([EleanorRomance.DualDaily]::Next($station.dayCounter+1,$stage) -eq $null) 'Stage daily ignored cooldown.'
     }
 }
-'PASS: explicit entry, 49/50 99/100 149/150 boundaries, no spending/regression, stage activation, main suppression and six rotating wait dailies.'
+'PASS: explicit entry, 29/30 59/60 89/90 boundaries, no spending/regression, stage activation, main suppression and six rotating wait dailies.'
 
 # Migrate automatic dr05 separately from real consent, preserve future schemas.
 Dual-Run;[EleanorRomance.RomanceState]::Romance=1
@@ -126,7 +126,7 @@ $station.dayCounter=70;[EleanorRomance.DualState]::LastDailyDay=70
 $manager=$store.storeClientManager
 [EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
 Assert ($manager.clientStack.Count -eq 0 -and [EleanorRomance.RomanceState]::LastQueuedDay -eq -1 -and [EleanorRomance.DualState]::PendingId -eq '') 'Waiting reserved a native customer slot or bypassed the gate.'
-Set-Reps 50 0
+Set-Reps 30 0
 [EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
 Assert ($manager.clientStack.Count -eq 1 -and [EleanorRomance.DualState]::PendingId -eq 'dr02') 'Reached checkpoint did not schedule its actual reward scene.'
 # No surviving native client: the same scene resumes without repeat consent.

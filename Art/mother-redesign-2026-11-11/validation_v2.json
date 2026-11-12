@@ -1,0 +1,124 @@
+{
+  "source_size": [
+    1145,
+    1374
+  ],
+  "clean_bbox": [
+    90,
+    2,
+    1041,
+    1374
+  ],
+  "parameters": {
+    "visible_height": 171.5,
+    "centre_x": 148.5,
+    "bottom_exclusive": 244.4375,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": false,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.125,
+    "tx": 77.8125,
+    "ty": 72.6875
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 5673,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    90,
+    74,
+    206,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 6717,
+  "master": "masters/mother_beauty_master_v2.png",
+  "master_sha256": "28dacb8c0e419407fb974de72d0a4ada5b4c79d30ea889701e4ee0882da2a311",
+  "prompt": "prompts/mother_beauty_v2.txt",
+  "prompt_sha256": "68f1b0e641e17e1b1618ea487797b05e6cc55d8b08873cc1c324f980b947d16f",
+  "output": "portraits/er_portrait_mother_sophia_beauty.png",
+  "output_sha256": "a0eb448d28f263a187647029110c1a742673fd38923c4e2d1ebccefc4d661d8d",
+  "manual_landmarks_source": {
+    "left_iris_centre": [
+      454,
+      343
+    ],
+    "right_iris_centre": [
+      605,
+      318
+    ],
+    "chin": [
+      541,
+      510
+    ],
+    "left_cheek": [
+      397,
+      389
+    ],
+    "right_cheek": [
+      694,
+      369
+    ]
+  },
+  "projected_landmarks_native": {
+    "left_iris_centre": [
+      134.56,
+      116.56
+    ],
+    "right_iris_centre": [
+      153.44,
+      113.44
+    ],
+    "chin": [
+      145.44,
+      137.44
+    ],
+    "left_cheek": [
+      127.44,
+      122.31
+    ],
+    "right_cheek": [
+      164.56,
+      119.81
+    ]
+  },
+  "landmark_method": "Manual visual estimates on the generated master; not automated anatomy measurements",
+  "reference_sha256": {
+    "Textures/Items/er_expr_eleanor1_soft.png": "089b068b368ed25792e6cfe3edd03f57278e06f4724e348c1dda0ac8b85bce58",
+    "Textures/Items/er_portrait_lydia_female_beauty.png": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "Art/mother-redesign-2026-11-11/portraits/er_portrait_mother_sophia_beauty.png": "a0eb448d28f263a187647029110c1a742673fd38923c4e2d1ebccefc4d661d8d",
+    "Textures/Items/er_portrait_mother_female_beauty.png": "c31f55f025cde777b0fff8d0cbeba87ec617b4ce57b32fcd0260aa902c3076cc"
+  },
+  "repeat_identical": true,
+  "runtime_replaced": false,
+  "runtime_baseline_unchanged": true,
+  "published": false,
+  "status": "Historical base identity candidate; user requested upper-district costume replacement, v3 pending",
+  "actual_post_receipt": "request_receipts.jsonl",
+  "visual_review": {
+    "age_family_resemblance": "Young adult face, copper hair and green eyes present; clear family resemblance to Eleanor",
+    "costume": "User rejected v2 clothing as too worn; replacing shirt and cardigan with upper-district dress",
+    "bust_comparison": "Full clothed silhouette; same-scale v2 comparison does not establish clearly larger volume than Lydia due to draped hair and garment shape; retain issue for v3 visual check",
+    "native_and_mattes_viewed": true
+  }
+}

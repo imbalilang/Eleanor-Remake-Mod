@@ -110,7 +110,8 @@ namespace EleanorRomance
             var success=MaidText.Build("m11_b011");
             FinishMain(success,12,13,()=>StoryDirector.Notify(L.Get("er_maid_notice_entry")));
             GuardedOption(menu,"er_maid_entry_confirm",success,MaidProjects.TryEnter,"er_maid_entry_confirm_desc",()=>StoryEngine.HasCash(800));
-            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_entry_back"),L.Get("er_maid_choice_no_cost"),withdraw,null,null);
+            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_entry_back"),L.Get("er_maid_choice_no_cost"),
+                StoryEngine.PlayerReply(L.Get("er_maid_entry_back"),withdraw),null,null);
             Choices(root,Option("er_maid_entry_normal",ordinary),Option("er_maid_entry_offer",offer,description:"er_maid_entry_offer_desc"));
             return Ready(client,root);
         }
@@ -265,7 +266,8 @@ namespace EleanorRomance
                 ()=>StoryEngine.UlRep()>=30 && RomanceState.DriveState!=0 && StoryEngine.HasCash(400));
             GuardedOption(menu,"er_choice_protect_case",approved,()=>PayProtection(200,3),"er_choice_protect_case_desc",
                 ()=>RomanceState.UncleReported && StoryEngine.HasCash(200));
-            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_choice_protect_fallback"),L.Get("er_choice_protect_fallback_desc"),fallback,null,null);
+            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_choice_protect_fallback"),L.Get("er_choice_protect_fallback_desc"),
+                StoryEngine.PlayerReply(L.Get("er_choice_protect_fallback"),fallback),null,null);
             return Ready(c,root);
         }
         private static bool PayProtection(int amount,int channel)
@@ -420,7 +422,8 @@ namespace EleanorRomance
                 var refused=MaidText.Build("m22_b007");FinishMain(refused,23,24,relationship,true);
                 var menu=StoryEngine.Text(L.Player,L.Get("er_prompt_locket"));StoryEngine.Tail(head).SetNextDialogue(menu);
                 GuardedOption(menu,"er_choice_take_locket",accepted,TryLocket,"er_choice_take_locket_desc",()=>true);
-                menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_choice_refuse_locket"),L.Get("er_choice_refuse_locket_desc"),refused,null,null);
+                menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_choice_refuse_locket"),L.Get("er_choice_refuse_locket_desc"),
+                    StoryEngine.PlayerReply(L.Get("er_choice_refuse_locket"),refused),null,null);
             }
             else
             {
@@ -451,7 +454,8 @@ namespace EleanorRomance
             GuardedOption(menu,"er_maid_reward_claim",reward,()=>
             { StoryEngine.GiveSelfRefillingPerfume();return RomanceState.PerfumeGiven; },"er_maid_reward_desc",()=>true);
             menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_reward_later"),L.Get("er_maid_reward_desc"),
-                MaidText.Finish(StoryEngine.Text(L.Eleanor,L.Get("er_maid_reward_keep")),null),null,null);
+                StoryEngine.PlayerReply(L.Get("er_maid_reward_later"),
+                    MaidText.Finish(StoryEngine.Text(L.Eleanor,L.Get("er_maid_reward_keep")),null)),null,null);
             return Ready(c,root);
         }
         internal static void GateOriginalReward(Dialogue head,Dialogue reward)
@@ -460,13 +464,15 @@ namespace EleanorRomance
             GuardedOption(menu,"er_maid_reward_claim",reward,()=>
             {StoryEngine.GiveSelfRefillingPerfume();return RomanceState.PerfumeGiven;},"er_maid_reward_desc",()=>true);
             menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_reward_later"),L.Get("er_maid_reward_desc"),
-                MaidText.Finish(StoryEngine.Text(L.Eleanor,L.Get("er_maid_reward_keep")),null),null,null);
+                StoryEngine.PlayerReply(L.Get("er_maid_reward_later"),
+                    MaidText.Finish(StoryEngine.Text(L.Eleanor,L.Get("er_maid_reward_keep")),null)),null,null);
         }
         internal static void GateOriginalLocket(Dialogue head,Dialogue accept,Dialogue refuse)
         {
             var menu=StoryEngine.Text(L.Player,L.Get("er_prompt_locket"));StoryEngine.Tail(head).SetNextDialogue(menu);
             GuardedOption(menu,"er_choice_take_locket",accept,TryLocket,"er_choice_take_locket_desc",()=>true);
-            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_choice_refuse_locket"),L.Get("er_choice_refuse_locket_desc"),refuse,null,null);
+            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_choice_refuse_locket"),L.Get("er_choice_refuse_locket_desc"),
+                StoryEngine.PlayerReply(L.Get("er_choice_refuse_locket"),refuse),null,null);
         }
         private static StoreClient AttachOriginalSafe(StoreClient client)
         {

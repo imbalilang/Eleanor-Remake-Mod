@@ -1,0 +1,96 @@
+{
+  "revision": "v5_redesign",
+  "status": "cancelled_by_user_no_result",
+  "actual_age": 38,
+  "apparent_adult_age": 28,
+  "scope": "User-directed face, hairstyle and private knit costume redesign",
+  "references": [
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/redesign_v5/sophia_v4_context.png",
+      "role": "Previous Sophia for copper hair colour, green eyes, adult age, project drawing style and waist-up pose ONLY. Face, hairstyle and knit outfit must change as directed by image2.",
+      "size": [
+        853,
+        1024
+      ],
+      "bytes": 1026780,
+      "sha256": "09d84a6b061c776f2644aae3489730b9b859ec39923c1fd59e4eba304efbad37"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/redesign_v5/user_face_hair_knit_reference.jpg",
+      "role": "USER DESIGN AUTHORITY for revised face, long straight half-up side-braided hair, charcoal fitted turtleneck and rounded clothed bust contours. Recolour hair copper and eyes green; ignore pen, text and background.",
+      "size": [
+        451,
+        720
+      ],
+      "bytes": 69241,
+      "sha256": "b0a4a14f542b8bfecea52bdf10278430adb0ed1698753ff06965e94ed9853f0c"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/upload_compressed/ref_02.jpg",
+      "role": "Approved adult Lydia; SIZE COMPARISON ONLY. Sophia clothed bust to be visibly larger at equal head scale; ignore face, hair and clothes.",
+      "size": [
+        543,
+        640
+      ],
+      "bytes": 87641,
+      "sha256": "15ff443fa3047eac5b97b376510c457a77b21b52fccaced55a543f49224e5dc4"
+    }
+  ],
+  "source_master": {
+    "path": "Art/mother-redesign-2026-11-11/masters/mother_beauty_master_v4_intimate.png",
+    "sha256": "18942091249da4ae2590c3037163d2aeca5f97b8579ad859b252b4fda69c034f",
+    "bytes": 1883929
+  },
+  "original_user_attachment": {
+    "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-bd0824aa-9e89-4fd3-9661-12883efb428e.png",
+    "local_copy": "Art/mother-redesign-2026-11-11/references/redesign_v5/user_face_hair_knit_original.png",
+    "sha256": "da14dcb0fae7e9bb533f8e64b61496aefa8efd65862e5bea041c240209043882",
+    "bytes": 445392,
+    "size": [
+      461,
+      736
+    ]
+  },
+  "reference_preprocessing": "Originals preserved; separate full-canvas Sophia max1024 transparent PNG and user reference max720 optimized JPEG89 4:4:4. Lydia uses existing verified compressed upload copy.",
+  "prompt": "prompts/mother_redesign_v5.txt",
+  "master": "masters/mother_beauty_master_v5_redesign.png",
+  "requested_count": 1,
+  "requested_size": "1024x1024",
+  "model": "gpt-image-2",
+  "runtime_replaced": false,
+  "published": false,
+  "prompt_sha256": "d5542a662691e119d5077580341ab5377288ddccf9b417d7e1d8c4eb03f37d4b",
+  "request_size_preflight": {
+    "image_payload_bytes": 1183662,
+    "prompt_bytes": 5081,
+    "conservative_encoded_request_upper_bound_bytes": 1648837,
+    "hard_limit_bytes": 20000000,
+    "working_limit_bytes": 16000000,
+    "verified_before_submission": true,
+    "actual_serialized_post_body_bytes": 1189647
+  },
+  "generation_attempts": 2,
+  "tool": "codexzh-image/scripts/image.mjs",
+  "actual_request_receipt": "request_receipts.jsonl",
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "result": "Response timed out; no local result image",
+      "actual_serialized_post_body_bytes": 1189647
+    },
+    {
+      "attempt": 2,
+      "result": "Local retry stopped at user request; no returned image",
+      "actual_serialized_post_body_bytes": 1189647
+    }
+  ],
+  "protection_checks": {
+    "runtime_matches_original_baseline": true,
+    "previous_v4_master_unchanged": true,
+    "attachment_local_copy_unchanged": true
+  },
+  "cancel_reason": "不再继续等待，使用现有两版作为定稿导入游戏",
+  "local_request_terminated": true,
+  "result_received": false,
+  "automatic_retry_allowed": false
+}

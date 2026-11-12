@@ -27,10 +27,14 @@ namespace EleanorRomance
         public static void ClearMemory(){visits.Clear();sales.Clear();busy=0;paying=false;deferredSave=false;}
         public static bool Eligible(StoreClient c)
         {
-            if(c==null || c.clientIntent!=StoreClient.ClientIntent.BUY || !c.useClientBudget)return false;
+            // The ornaments apply shop-wide to Upper Level customers, including
+            // SELLNBUY clients such as the water stockpiler. Story clients,
+            // other mods and native Eleanor's scripted appearances stay out.
+            if(c==null || !c.IsClientBuying() || !c.useClientBudget)return false;
             if(c.sourceModId==ModConstants.ModId)return (c.identifier??"").StartsWith("er_story_dual_referral_",StringComparison.Ordinal);
             if(!string.IsNullOrEmpty(c.sourceModId))return false;
-            return c.identifier=="upperLowerVisitor" || c.identifier=="upperLowerVisitorLuxury" || c.identifier=="ulDiscerningShopper";
+            if((c.identifier??"").StartsWith("eleanor",StringComparison.OrdinalIgnoreCase))return false;
+            return c.IsFaction("FACTION_UPPER_LEVEL");
         }
         public static bool Placed(int stage)
         {

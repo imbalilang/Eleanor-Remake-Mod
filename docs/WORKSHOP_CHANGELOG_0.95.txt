@@ -1,0 +1,13 @@
+0.95｜补回莉迪亚的僚机铺垫
+
+• 双恋入口现在先播放莉迪亚“我可以帮你一把”的提议和理由，再出现“那你教我几句”／“我想自己跟她说”的选择。该段早已写好，但此前没有接入对白。
+• dr04 增加一小段莉迪亚认真教玩家的话：她最烦别人让她猜，真到开口时别等她问，也别背她的原话。
+• dr05 开场由埃莉诺提到莉迪亚最近一直提玩家、劝她听玩家把话说完；随后才是原来的告白，因此“这句也是她教的？”有明确来处。
+• 选项结果、好感／数值、路线与 E1—E14 不变；0.94 的莉迪亚奢侈品交易与日常买入保留。
+
+0.95 | Restore Lydia's matchmaking setup
+
+• The dual entry now plays Lydia's written offer to help before the accept/decline choice. The scene existed but was never appended to the dialogue.
+• dr04 adds a short coaching beat: Eleanor hates being left to guess, so don't wait for her to ask, and don't recite Lydia's lines.
+• dr05 now opens with Eleanor mentioning that Lydia keeps bringing the player up and told her to hear the player out, so "did she teach you that?" has a clear setup.
+• Choices, values, routes and E1–E14 are unchanged; 0.94's Lydia purchases and daily buying remain.

@@ -113,11 +113,14 @@
    - 没有 `DEPRECATED` 行；
    - 没有一律拒绝的标记。
 3. 检查发布文件夹：只包含 `manifest.xml`、`README.md`、`preview.png`、`EleanorRomance.dll`、`EleanorRomance.deps.json`、`Localization/*.csv`、`Textures/Items/*.png`；没有未列出的 DLL、脚本、可执行文件、压缩包或高熵资源。
+   - 本地部署同样适用：旧DLL备份必须放在整个模组目录之外，不能在根目录或子目录保留改名为 `.bak` 的程序文件。扫描器按文件内容识别，改扩展名仍会报 `payload-file -> executable content`。
+   - 文件哈希和程序集测试通过后，还须对实际安装目录运行 `pwsh -File tools/scan_package.ps1 -Managed '<游戏Managed目录>' -Package '<实际安装模组目录>'`。只扫描打包暂存目录不能发现安装残留。
 4. 递增 `<ModVersion>` 并更新发布说明；任何新增能力都会导致所有已订阅玩家重新授权，发布前先确认是否真的需要。
 5. 本机安装用于开发时不受创意工坊验证限制；创意工坊发布包必须通过完整扫描。
 
 ## 变更记录
 
+- 2026-11-11：修复本地索菲娅导入遗留的旧DLL备份导致的激活失败，将备份移至工作区 `dist/`，实际安装目录原生扫描通过（1515方法，0硬标记、0发现、0能力）。正式程序、图片及存档未改动。
 - 2026-11-09：建立本规范；把 `AddTrapWatcher` 的延迟回调从 `DialogUIManager.Instance.StartCoroutine(MetaHelper.WaitAndDo(...))` 改为 `ModHelper.Delay(ModConstants.ModId, 0.3f, ...)`，消除 `threads` 发现。该修复尚未作为新版本发布，发布时应递增 `<ModVersion>`。
 
 ## 参考

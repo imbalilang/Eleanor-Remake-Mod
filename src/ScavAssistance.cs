@@ -7,7 +7,11 @@ namespace EleanorRomance
         public const float DailyChance = 70f;
         public const int ExtraAttempts = 2;
 
-        public static bool Eligible => RomanceState.StoryActive && RomanceState.ScavAssist && !DualState.Flag("scav.transferred");
+        // The landfill assist belongs to the ordinary romance line. The dual
+        // route keeps its own epilogue and must not offer Eleanor as the
+        // scavenging partner after she returns to Upper Level work in dr08.
+        public static bool Eligible => RomanceState.StoryActive && RomanceState.ScavAssist
+            && !DualState.Flag("scav.transferred") && !DualState.Active;
 
         // Registration only stores definitions and deferred providers. It is safe
         // in the mod menu, where the lazy PlayerStore singleton must not be read.

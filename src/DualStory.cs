@@ -13,7 +13,7 @@ namespace EleanorRomance
                 case "entry": return CreateEntry();
                 case "dr02": return CreatePlaqueScene();
                 case "resolve": return CreateDr05();
-                case "coop": return EleanorStory.CreateCooperationChapter(()=>DualDirector.CompleteScene("coop"));
+                case "coop": return EleanorStory.CreateCooperationChapter(()=>DualDirector.CompleteScene("coop"),"eleanor1");
                 case "claim": return CreateClaim();
                 case "dr03": return CreateDr03();
                 case "dr04": return CreateDr04();
@@ -68,6 +68,34 @@ namespace EleanorRomance
             });
         }
 
+        /// <summary>
+        /// Lydia is an Upper Level patron, never a seller. Scenes using this
+        /// helper continue the written conversation, then let her buy luxury,
+        /// art or high-end stock through the native haggling flow. The scene
+        /// commits only when she leaves, so a mid-visit save cannot skip the
+        /// trade half.
+        /// </summary>
+        private static void FinishAfterTrade(StoreClient client, string scene, Action commit = null, int budget = 500)
+        {
+            bool bought = false;
+            client.clientIntent = StoreClient.ClientIntent.BUY;
+            client.clientBuyingTagList.Add(TypeHelper.LUXURY_ITEM);
+            client.clientBuyingTagList.Add(TypeHelper.ART);
+            client.clientBuyingTagList.Add(TypeHelper.HIGHEND);
+            client.SetBudget(budget);
+            client.SetVariety();
+            client.onItemBought += (item, paid) => { if (item != null) bought = true; };
+            StoryEngine.InterceptDismiss(client,
+                () => StoryEngine.Text(L.Get("er_name_lydia"),
+                    L.Get(bought ? "er_dual_trade_close_bought" : "er_dual_trade_close_none")),
+                () =>
+                {
+                    commit?.Invoke();
+                    DualState.SetSceneDay(scene, DualState.Today);
+                    DualDirector.CompleteScene(scene);
+                });
+        }
+
         private static StoreClient CreateEntry()
         {
             var client=Lydia("dual_entry");
@@ -77,6 +105,11 @@ namespace EleanorRomance
             }
             bool legacy=DualState.Flag("migration.consent_pending") && RomanceState.RomanceConfirmed;
             var open=DualText.Build(legacy?"v05_legacy_entry":"dr01_open");
+            // Lydia's offer to act as the go-between was written but never
+            // appended, so the entry choice arrived before the player heard
+            // why she was helping. The legacy consent confirmation already
+            // knows the history and skips this pitch.
+            if(!legacy)DualText.Append(open,"dr01_notice");
             var accept=DualText.Build("dr01_accept");
             var decline=DualText.Build("dr01_decline");
             DualText.Choices(open,"er_dual_prompt",
@@ -111,8 +144,11 @@ namespace EleanorRomance
 
         private static StoreClient CreateDr04()
         {
-            var c=Lydia("dual_dr04");var root=DualText.Build("v05_dr04_feedback","dr04_consult_open","dr04_consult");
-            DualRewards.AppendClaims(root);Finish(c,root,"dr04");return Ready(c,root);
+            var c=Lydia("dual_dr04");
+            var root=DualText.Build("v05_dr04_feedback","dr04_consult_open","dr04_consult","dr04_lesson","dr04_shop");
+            DualRewards.AppendClaims(root);
+            FinishAfterTrade(c,"dr04");
+            return Ready(c,root);
         }
 
         private static StoreClient CreateDr05()
@@ -147,8 +183,17 @@ namespace EleanorRomance
 
         private static StoreClient CreateDr07()
         {
-            var c=Lydia("dual_dr07");var root=DualText.Build("v05_dr07_open","dr07_confirmed");
-            Finish(c,root,"dr07",()=>StoryCoreFacts.CompleteReplacement(22));return Ready(c,root);
+            var c=Lydia("dual_dr07");
+            var root=DualText.Build("v05_dr07_open","dr07_confirmed");
+            var warm=DualText.Build("dr07_reply_warm","dr07_shop");
+            var practical=DualText.Build("dr07_reply_practical","dr07_shop");
+            var guarded=DualText.Build("dr07_reply_guarded","dr07_shop");
+            DualText.Choices(root,"er_dual_prompt",
+                DualText.Choice("dr07_warm",warm),
+                DualText.Choice("dr07_practical",practical),
+                DualText.Choice("dr07_guarded",guarded));
+            FinishAfterTrade(c,"dr07",()=>StoryCoreFacts.CompleteReplacement(22));
+            return Ready(c,root);
         }
 
         private static StoreClient CreateDr08()
@@ -165,9 +210,20 @@ namespace EleanorRomance
 
         private static StoreClient CreateDr09()
         {
-            var c=Lydia("dual_dr09");var root=DualText.Build("v05_reward100","dr09_open");
-            DualRewards.AppendClaims(root);
-            Finish(c,root,"dr09",()=>{if(DualProgression.Earned(2))DualRewards.Give(2);});return Ready(c,root);
+            var c=Lydia("dual_dr09");
+            var root=DualText.Build("v05_reward100","dr09_open");
+            var compliment=DualText.Build("dr09_reply_compliment","dr09_shop");
+            var work=DualText.Build("dr09_reply_work","dr09_shop");
+            var practical=DualText.Build("dr09_reply_practical","dr09_shop");
+            DualRewards.AppendClaims(compliment);
+            DualRewards.AppendClaims(work);
+            DualRewards.AppendClaims(practical);
+            DualText.Choices(root,"er_dual_prompt",
+                DualText.Choice("dr09_compliment",compliment),
+                DualText.Choice("dr09_work",work),
+                DualText.Choice("dr09_practical",practical));
+            FinishAfterTrade(c,"dr09",()=>{if(DualProgression.Earned(2))DualRewards.Give(2);});
+            return Ready(c,root);
         }
 
         private static StoreClient CreateDr10()
@@ -175,15 +231,14 @@ namespace EleanorRomance
             StoreClient client = Lydia("dual_dr10");
             Dialogue root = DualText.Build("dr10_open");
             if (root == null) root = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_entry_resume"));
-            Dialogue suit = DualText.Build("dr10_option1", "dr10_common");
-            Dialogue eleanor = DualText.Build("dr10_option2", "dr10_common");
+            Dialogue suit = DualText.Build("dr10_option1", "dr10_common", "dr10_shop");
+            Dialogue eleanor = DualText.Build("dr10_option2", "dr10_common", "dr10_shop");
             if (suit == null) suit = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr10_suit_label"));
             if (eleanor == null) eleanor = StoryEngine.Text(L.Get("er_name_lydia"), L.Get("er_dual_choice_dr10_eleanor_label"));
-            DualText.Finish(suit, () => DualDirector.CompleteScene("dr10"));
-            DualText.Finish(eleanor, () => DualDirector.CompleteScene("dr10"));
             DualText.Choices(root, "er_dual_prompt",
                 DualText.Choice("dr10_suit", suit),
                 DualText.Choice("dr10_eleanor", eleanor));
+            FinishAfterTrade(client, "dr10");
             return Ready(client, root);
         }
 
@@ -215,11 +270,21 @@ namespace EleanorRomance
                 DualState.Relation = 1;
                 DualDirector.CompleteScene("dr14");
             });
-            // Once the player has confirmed entry, both responses continue the
-            // discussion; there is no repeated "leave the route" option here.
-            DualText.Choices(root, "er_dual_prompt",
+            Dialogue yes = DualText.Build("dr14_reply_yes", "dr14_reason");
+            Dialogue time = DualText.Build("dr14_reply_time", "dr14_reason");
+            Dialogue tease = DualText.Build("dr14_reply_tease", "dr14_reason");
+            Action<Dialogue> addTellChoices = branch => DualText.Choices(branch, "er_dual_prompt",
                 DualText.Choice("dr14_accept", accept),
                 DualText.Choice("dr14_together", accept));
+            addTellChoices(yes);
+            addTellChoices(time);
+            addTellChoices(tease);
+            // The player answers her confession before the "tell Eleanor"
+            // decision; all three reactions continue through her explanation.
+            DualText.Choices(root, "er_dual_prompt",
+                DualText.Choice("dr14_yes", yes),
+                DualText.Choice("dr14_time", time),
+                DualText.Choice("dr14_tease", tease));
             return Ready(client, root);
         }
 
@@ -321,17 +386,22 @@ namespace EleanorRomance
         private static StoreClient CreateDaily()
         {
             int index = DualState.DailyIndex % 7 + 1;
-            StoreClient client = index == 2 ? Lydia("dual_daily_" + index)
+            bool lydia = index == 2;
+            StoreClient client = lydia ? Lydia("dual_daily_" + index)
                 : Eleanor("dual_daily_" + index, "eleanor1");
-            Dialogue root = DualText.Build("dr_daily_" + index + "_open");
+            Dialogue root = lydia
+                ? DualText.Build("dr_daily_" + index + "_open", "dr_daily_2_shop")
+                : DualText.Build("dr_daily_" + index + "_open");
             if (root == null) root = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_dual_entry_resume"));
             DualRewards.AppendClaims(root);
-            DualText.Finish(root, () =>
+            Action complete = () =>
             {
                 DualState.DailyIndex = index % 7;
                 DualState.LastDailyDay = DualState.Today;
                 DualDirector.CompleteScene("daily");
-            });
+            };
+            if (lydia) FinishAfterTrade(client, "daily", complete, 300);
+            else DualText.Finish(root, complete);
             return Ready(client, root);
         }
 

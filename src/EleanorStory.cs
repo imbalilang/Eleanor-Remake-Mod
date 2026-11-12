@@ -696,8 +696,9 @@ namespace EleanorRomance
                 }
                 AddGiftOption("er_choice_accept_gift", accept, false);
                 AddGiftOption("er_choice_pay_gift", pay, true);
+                var refuseReply = StoryEngine.PlayerReply(L.Get("er_choice_refuse_gift"), refuse);
                 menu.AddChoice(DirectoryMaster.Item("yes"), L.Get("er_choice_refuse_gift"),
-                    L.Get("er_choice_refuse_gift_desc"), refuse, () =>
+                    L.Get("er_choice_refuse_gift_desc"), refuseReply, () =>
                     {
                         if (RomanceState.ReturnGiftChoice == 0) RomanceState.ReturnGiftChoice = 3;
                     }, null);
@@ -1209,14 +1210,25 @@ namespace EleanorRomance
             });
             client.mainDialogue = main;
 
-            StoryEngine.InterceptDismiss(client, wrap ?? (() =>
+            Func<Dialogue> fallback = () =>
             {
-                Dialogue dialogue = StoryEngine.Build(
-                    StoryEngine.PositiveDeals >= 3 || RomanceState.Affection >= 10
-                        ? StoryV06Content.B_C18_B003
-                        : StoryV06Content.B_C18_B004);
+                bool positive = StoryEngine.PositiveDeals >= 3 || RomanceState.Affection >= 10;
+                Dialogue dialogue = StoryEngine.Build(positive
+                    ? StoryV06Content.B_C18_B003
+                    : StoryV06Content.B_C18_B004);
+                if (positive)
+                {
+                    Dialogue keep = StoryEngine.Build(StoryV06Content.B_C18_B003A);
+                    Dialogue always = StoryEngine.Build(StoryV06Content.B_C18_B003B);
+                    Dialogue space = StoryEngine.Build(StoryV06Content.B_C18_B003C);
+                    StoryEngine.AddChoices(dialogue, L.Get("er_prompt_c18"),
+                        new StoryEngine.Choice(L.Get("er_choice_c18_keep"), "", keep, null),
+                        new StoryEngine.Choice(L.Get("er_choice_c18_always"), "", always, null),
+                        new StoryEngine.Choice(L.Get("er_choice_c18_space"), "", space, null));
+                }
                 return Head(dialogue);
-            }), () => { RecordDeal(tracker, noSaleIsVisit: true); StoryCoreFacts.CompleteReplacement(19); if (complete != null) complete(); else { RomanceState.PendingChapter=19; Advance(19,20); } });
+            };
+            StoryEngine.InterceptDismiss(client, wrap ?? fallback, () => { RecordDeal(tracker, noSaleIsVisit: true); StoryCoreFacts.CompleteReplacement(19); if (complete != null) complete(); else { RomanceState.PendingChapter=19; Advance(19,20); } });
 
             client.CompleteClientCreation();
             return client;
@@ -1284,9 +1296,13 @@ namespace EleanorRomance
         // 21. Cooperation
         // ------------------------------------------------------------------
 
-        internal static StoreClient CreateCooperationChapter(System.Action complete = null)
+        internal static StoreClient CreateCooperationChapter(System.Action complete = null, string sprite = null)
         {
-            StoreClient client = NewEleanorClient(complete==null?"ch21":"dual_coop", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
+            // The common c21 visit happens before Eleanor's Upper Level job.
+            // The dual coop scene runs after dr08, so the caller passes eleanor1.
+            StoreClient client = NewEleanorClient(complete==null?"ch21":"dual_coop",
+                string.IsNullOrEmpty(sprite) ? "eleanor_scav" : sprite,
+                StoreClient.ClientIntent.DIALOGUE);
             Dialogue root = StoryEngine.Build(StoryV06Content.B_C20_B001);
             StoryEngine.Append(root, StoryV06Content.B_C20_B004);
             StoryEngine.Append(root, RomanceState.RomanceConfirmed
@@ -1589,12 +1605,34 @@ namespace EleanorRomance
                     block = StoryV06Content.B_EP_B005;
                 }
 
+                bool friend = !RomanceState.RomanceConfirmed;
                 StoreClient client = NewEleanorClient("ep" + index,
-                    RomanceState.RomanceConfirmed ? "eleanor1" : "eleanor_scav",
-                    StoreClient.ClientIntent.DIALOGUE);
+                    friend ? "eleanor_scav" : "eleanor1",
+                    friend ? StoreClient.ClientIntent.SELL : StoreClient.ClientIntent.DIALOGUE);
                 client.dismissable = true;
-                Dialogue root = StoryEngine.Build(block);
-                StoryEngine.Tail(root).SetEndAction(StoryEngine.Dismiss);
+                // The first friend visit is the written scene; later visits use
+                // a short trade greeting instead of replaying the same lines.
+                Dialogue root = friend && index > 0
+                    ? StoryEngine.Text(L.Eleanor, L.Get("er_ep_friend_trade"))
+                    : StoryEngine.Build(block);
+                if (friend)
+                {
+                    // The friend epilogue is a real goods visit: her line promises
+                    // today's prices, and the friend ending says she occasionally
+                    // brings scavenged goods. Stocking here (not only in dialogue)
+                    // stops her from leaving without offering anything to sell.
+                    client.SetWholesale(10);
+                    root.SetStartAction(() =>
+                    {
+                        if (RomanceState.EpilogueStockIndex == index) return;
+                        RomanceState.EpilogueStockIndex = index;
+                        StoreClientList.AddScavGeneralStock();
+                    });
+                }
+                else
+                {
+                    StoryEngine.Tail(root).SetEndAction(StoryEngine.Dismiss);
+                }
                 client.mainDialogue = root;
                 client.CompleteClientCreation();
                 return client;

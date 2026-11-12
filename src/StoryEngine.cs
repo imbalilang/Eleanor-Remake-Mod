@@ -252,6 +252,19 @@ namespace EleanorRomance
             return DialogueSpeakers.Mark(new Dialogue().SetText(speaker, text));
         }
 
+        /// <summary>
+        /// Native choice bubbles render the next dialogue's plainText, not the
+        /// item label. Direct AddChoice calls therefore need a player reply
+        /// node; otherwise they display the NPC branch's first line as the
+        /// option text.
+        /// </summary>
+        public static Dialogue PlayerReply(string text, Dialogue next = null)
+        {
+            Dialogue reply = Text(L.Player, text);
+            reply.SetNextDialogue(next);
+            return reply;
+        }
+
         public static void AddChoices(Dialogue head, string prompt, params Choice[] choices)
         {
             Dialogue tail = Tail(head);

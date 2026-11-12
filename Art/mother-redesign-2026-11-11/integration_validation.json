@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-11-11T21:43:10.451932+08:00",
+  "deployed_png_count": 43,
+  "only_runtime_changes": [
+    "Textures/Items/er_portrait_mother_female_beauty.png",
+    "Textures/Items/er_portrait_mother_home_female_beauty.png"
+  ],
+  "all_deployed_files_and_backups_match": true,
+  "unrelated_png_manifest_localization_unchanged": true,
+  "build": {
+    "configuration": "Release",
+    "errors": 0,
+    "warnings": 0
+  },
+  "project_checks": "passed",
+  "asset_audit": {
+    "total_png": 43,
+    "flagged": 0
+  },
+  "repeat_export": "approved hashes identical",
+  "mother_portrait_tests": "passed on workspace and deployed DLL",
+  "full_flow_regression": {
+    "passed": false,
+    "failure": "Chapter 103 has no bargaining",
+    "reproduced_on_pre_install_dll": true,
+    "pre_install_dll_sha256": "c5d8ba423ad823edc79dc1fc0e53cce33b8bbb8506f191bcf48628dbc9df731d"
+  },
+  "game_ui_verified": false,
+  "restart_required": true,
+  "published": false,
+  "native_installed_directory_scan": {
+    "initially_rejected": true,
+    "reason": "Executable backup left in mod directory",
+    "fixed_at": "2026-11-11T22:20:31.4514458+08:00",
+    "passed_after_backup_moved_outside_mod": true,
+    "methods": 1515,
+    "hard_flags": 0,
+    "findings": 0,
+    "report": "native_scan_after_fix.json",
+    "unrelated_deployed_files_unchanged": true,
+    "game_ui_reactivation_verified": false
+  }
+}

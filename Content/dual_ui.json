@@ -4,8 +4,8 @@
     "Lydia's Recommendation Plaque"
   ],
   "er_dual_plaque_desc": [
-    "1×1。玩家拥有并放入橱窗时，每个可用营业日有50%机会引荐一位上层普通买家；最短到访间隔2天，最多1位待来访。需有可售精品。取下停止新引荐，已预约客人照常来；仓库无效，同类不叠加。",
-    "1×1. When owned and displayed in the showcase, each available business day has a 50% chance of one ordinary Upper Level referral. At least 2 days between arrivals; at most one pending. Requires suitable stock. Removing it stops new referrals, not promised visits. Inactive in storage; duplicates do not stack."
+    "1×1。橱窗陈列时，每个营业日有50%机会引荐1位上层买家，最短间隔2天。",
+    "1×1. While displayed, each business day has a 50% chance to refer one Upper Level customer; minimum 2 days apart."
   ],
   "er_dual_plaque_flavor": [
     "底座背面刻着一行小字：莉迪亚，替朋友说话。",
@@ -20,28 +20,28 @@
     "Your answer."
   ],
   "er_dual_plaque_full": [
-    "先腾些位置。未能交付的饰品或纪念物仍可在后续来访补领。",
-    "Make some room. Undelivered ornaments or keepsakes remain available during a later visit."
+    "橱窗已满，奖励保留，可稍后补领。",
+    "Showcase full. The reward is kept for a later claim."
   ],
   "er_dual_entry_resume": [
     "这段话还没有说完。",
     "This conversation is not finished yet."
   ],
   "er_dual_notice_ending": [
-    "三个人的关系已经稳定下来。之后可以在日常来访中继续见到她们。",
-    "The three of you have settled into something steady. You can keep seeing them in everyday visits."
+    "三人关系已稳定，日常来访继续。",
+    "The three of you are steady. Everyday visits continue."
   ],
   "er_dual_gate_passed": [
-    "上层区声望检查点{0}已达成。后续来访已可安排，阶段资格已保留。",
-    "Upper Level reputation checkpoint {0} reached. The next visit can be arranged; this milestone is secured."
+    "上层区声望达到{0}，奖励已解锁。",
+    "Upper Level reputation reached {0}. Reward unlocked."
   ],
   "er_dual_gate_progress": [
-    "上层区声望：{0}／{1}。下一阶段奖励：{2}。达标后继续主线，日常与营业不受影响。",
-    "Upper Level reputation: {0}/{1}. Next reward: {2}. The main story resumes when reached; everyday visits and business continue."
+    "上层区声望：{0}／{1}",
+    "Upper Level reputation: {0} / {1}"
   ],
   "er_dual_reward_received": [
-    "获得{0}。放入橱窗后生效。",
-    "Received {0}. Display it in the showcase to activate it."
+    "获得{0}（放入橱窗生效）。",
+    "Received {0} (display it to activate)."
   ],
   "er_dual_tip_paid": [
     "上层买家额外小费 +{0}",
@@ -68,8 +68,8 @@
     "Upper Guest Enamel Ornament"
   ],
   "er_dual_patron_desc": [
-    "1×1。玩家拥有并放入橱窗时，上层普通买家最终购买预算+30%，向下取整。到店时确定，中途取下或重摆不重算。仓库无效，同类不叠加；具名剧情、固定订单和其他MOD客户除外。",
-    "1×1. When owned and displayed, ordinary Upper Level buyers receive 30% more final spending budget, rounded down. Snapshot at arrival; removing or replacing it during a visit does not recalculate. Inactive in storage; duplicates do not stack. Excludes named story clients, fixed orders and other mods."
+    "1×1。橱窗陈列时，上层顾客最终预算+30%。",
+    "1×1. While displayed, Upper Level customers get +30% final budget."
   ],
   "er_dual_patron_flavor": [
     "她说这只是个摆件，却替你把底座擦得很亮。",
@@ -80,8 +80,8 @@
     "Silver Token of Appreciation"
   ],
   "er_dual_gratitude_desc": [
-    "1×1。玩家拥有并放入橱窗时，上层普通买家实际购买商品后额外给10%小费，每次来访最多150信用点。到店时确定，不扣买家预算、不复利；仓库无效，同类不叠加。具名剧情、固定订单和其他MOD客户除外。",
-    "1×1. When owned and displayed, ordinary Upper Level buyers leave an extra tip of 10% of actual goods payments, capped at 150 credits per visit. Snapshot at arrival. Does not consume buyer budget or compound. Inactive in storage; duplicates do not stack. Excludes named story clients, fixed orders and other mods."
+    "1×1。橱窗陈列时，上层顾客实际付款后额外给10%小费，每次最多150。",
+    "1×1. While displayed, Upper Level customers pay an extra 10% tip after a real purchase, up to 150 per visit."
   ],
   "er_dual_gratitude_flavor": [
     "底座上的字很小：承蒙照应。",
@@ -102,5 +102,13 @@
   "er_dual_future_schema": [
     "后宫扩展存档版本{0}高于本版本，已暂停该扩展写入；现有数据保留。",
     "Harem save schema {0} is newer than this version. Extension writes are paused; existing data is preserved."
+  ],
+  "er_dual_trade_close_bought": [
+    "这几件我带走。账照算，别因为是我来，就少收。",
+    "I'll take these. Bill them properly. Don't undercharge just because it's me."
+  ],
+  "er_dual_trade_close_none": [
+    "今天没有合眼的。下回收到好货，记得给我留一件。",
+    "Nothing caught my eye today. Next time you get something good, remember to hold one for me."
   ]
 }

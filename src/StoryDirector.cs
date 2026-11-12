@@ -273,19 +273,25 @@ namespace EleanorRomance
                 && RomanceState.MotherState == 1
                 && RomanceState.RomanceConfirmed;
 
+            // The dual route calls CompleteCore at dr11, but its actual ending
+            // page is still ahead at dr20. Suppress the ordinary-route unlock
+            // notices there; the dual ending page is the completion signal, and
+            // the landfill assist is not offered in the dual route.
+            bool dualOwnsEnding = DualState.Writable && DualState.HasHistory && DualState.Active;
+
             if (partnerEnding)
             {
                 // Unlock the native landfill event; this is no longer a permanent stat bonus.
                 bool firstUnlock = !RomanceState.ScavAssist;
                 RomanceState.ScavAssist = true;
-                if (firstUnlock) Notify(L.Get("er_scav_event_unlocked"));
+                if (firstUnlock && !dualOwnsEnding) Notify(L.Get("er_scav_event_unlocked"));
             }
 
             if (partnerEnding && !RomanceState.TrueUnlocked)
             {
                 RomanceState.TrueUnlocked = true;
                 MetaProgress.UnlockTrueEnding();
-                Notify(L.Get("er_notice_true_unlock"));
+                if (!dualOwnsEnding) Notify(L.Get("er_notice_true_unlock"));
             }
 
             Log("Core story complete. route=" + RomanceState.Route

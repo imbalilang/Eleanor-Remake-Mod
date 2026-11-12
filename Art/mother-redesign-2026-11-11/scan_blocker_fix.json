@@ -1,0 +1,12 @@
+{
+  "fixed_at": "2026-11-11T22:20:31.4514458+08:00",
+  "original_error": "payload-file -> executable content",
+  "removed_from": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3834588749\\EleanorRomance.dll.pre-sophia-20261111-214239.bak",
+  "archived_to": "B:\\Eleanor Story Expand\\dist\\mother_portraits_local_20261111-214206\\removed_from_mod_scan\\EleanorRomance.dll.pre-sophia-20261111-214239.bak",
+  "sha256": "c5d8ba423ad823edc79dc1fc0e53cce33b8bbb8506f191bcf48628dbc9df731d",
+  "rollback_backup": "B:\\Eleanor Story Expand\\dist\\mother_portraits_local_20261111-214206\\before\\EleanorRomance.dll",
+  "unrelated_deployed_files_unchanged": true,
+  "other_file_count": 50,
+  "game_terminated": false,
+  "saves_modified": false
+}

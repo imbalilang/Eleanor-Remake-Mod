@@ -1,0 +1,13 @@
+0.98｜精简后宫线奖励饰品描述
+
+• 荐店铭牌：1×1；橱窗陈列时，每个营业日有50%机会引荐1位上层买家，最短间隔2天。
+• 上层宾客珐琅座饰：1×1；橱窗陈列时，上层普通买家最终预算+30%。
+• 名媛致意银饰：1×1；橱窗陈列时，上层普通买家实际付款后额外给10%小费，每次最多150。
+• 三件饰品的原风味描述保留；效果数值、触发条件、陈列要求和奖励规则不变。
+
+0.98 | Shorter harem ornament descriptions
+
+• Referral plaque: 1×1; while displayed, each business day has a 50% chance to refer one Upper Level customer, minimum 2 days apart.
+• Upper Guest enamel ornament: 1×1; while displayed, ordinary Upper Level customers get +30% final budget.
+• Lady's Gratitude silver ornament: 1×1; while displayed, ordinary Upper Level customers pay an extra 10% tip after a real purchase, up to 150 per visit.
+• The original flavor lines are kept; effects, conditions, display requirements and reward rules are unchanged.

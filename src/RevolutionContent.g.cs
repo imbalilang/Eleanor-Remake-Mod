@@ -62,6 +62,9 @@ public const string B_RV14_B001 = "rv14_b001";
 public const string B_RV14_B002 = "rv14_b002";
 public const string B_RV14_B003 = "rv14_b003";
 public const string B_RV14_B004 = "rv14_b004";
+public const string B_RV14_REPLY_YES = "rv14_reply_yes";
+public const string B_RV14_REPLY_STAY = "rv14_reply_stay";
+public const string B_RV14_REPLY_CARE = "rv14_reply_care";
 public const string B_RV_SHORT_01 = "rv_short_01";
 public const string B_RV_SHORT_02 = "rv_short_02";
 public const string B_RV_SHORT_03 = "rv_short_03";
@@ -136,6 +139,9 @@ private static readonly Dictionary<string,Line[]> Blocks = new Dictionary<string
 {"rv14_b002",new[] {new Line("eleanor","er_rev_rv14_b002_01"),new Line("eleanor","er_rev_rv14_b002_02"),new Line("eleanor","er_rev_rv14_b002_03"),new Line("eleanor","er_rev_rv14_b002_04"),new Line("eleanor","er_rev_rv14_b002_05"),new Line("eleanor","er_rev_rv14_b002_06"),new Line("player","er_rev_rv14_b002_07"),new Line("eleanor","er_rev_rv14_b002_08"),new Line("eleanor","er_rev_rv14_b002_09"),new Line("eleanor","er_rev_rv14_b002_10"),new Line("eleanor","er_rev_rv14_b002_11")}},
 {"rv14_b003",new[] {new Line("eleanor","er_rev_rv14_b003_01")}},
 {"rv14_b004",new[] {new Line("eleanor","er_rev_rv14_b004_01")}},
+{"rv14_reply_yes",new[] {new Line("eleanor","er_rev_rv14_reply_yes_01")}},
+{"rv14_reply_stay",new[] {new Line("eleanor","er_rev_rv14_reply_stay_01")}},
+{"rv14_reply_care",new[] {new Line("eleanor","er_rev_rv14_reply_care_01")}},
 {"rv_short_01",new[] {new Line("eleanor","er_rev_rv_short_01_01"),new Line("eleanor","er_rev_rv_short_01_02")}},
 {"rv_short_02",new[] {new Line("eleanor","er_rev_rv_short_02_01"),new Line("eleanor","er_rev_rv_short_02_02"),new Line("eleanor","er_rev_rv_short_02_03")}},
 {"rv_short_03",new[] {new Line("eleanor","er_rev_rv_short_03_01"),new Line("eleanor","er_rev_rv_short_03_02")}},

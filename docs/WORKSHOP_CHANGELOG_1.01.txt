@@ -1,0 +1,13 @@
+1.01｜后宫线饰品对所有上层顾客生效
+
+• 后宫线三件橱窗饰品此前只识别 upperLowerVisitor、upperLowerVisitorLuxury、ulDiscerningShopper 三个顾客 ID；囤水者（waterStockpiler）等其他正规上层顾客没有被计入，导致座饰预算和银饰小费不生效。
+• 现在按 FACTION_UPPER_LEVEL 判定，覆盖所有上层买家，包括 SELLNBUY 的上层顾客；囤水者、私人厨师、医院采购、上层女仆、私人安保等都会获得对应效果。
+• 仍排除具名剧情客户、原版埃莉诺剧情、其他 MOD 客户以及不做购买的顾客；黑市、下层、拾荒者不生效。
+• 三件饰品仍只在真实陈列时生效，每访小费最多150；只改顾客判定，不改奖励数值、路线或结局；1.00 的合作场景立绘修复保留。
+
+1.01 | Harem ornaments affect all Upper Level customers
+
+• The three harem showcase ornaments previously recognized only three customer IDs (upperLowerVisitor, upperLowerVisitorLuxury, ulDiscerningShopper); the water stockpiler and other proper Upper Level customers were not counted, so the patron budget and gratitude tip did not apply.
+• Eligibility now uses FACTION_UPPER_LEVEL and covers all Upper Level buyers, including SELLNBUY customers: water stockpiler, private chef, hospital supplier, upper maid, private security contractor and others.
+• Story clients, native Eleanor's scripted appearances, other mods and non-buyers remain excluded; black market, Lower Level and scavengers are unaffected.
+• The ornaments still require real showcase display, with the tip capped at 150 per visit. Only the eligibility range changed; rewards, routes and endings are unchanged; 1.00's portrait fix remains.

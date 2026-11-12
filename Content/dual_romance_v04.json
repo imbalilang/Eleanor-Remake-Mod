@@ -211,10 +211,10 @@
       "choices": [
         {
           "id": "dr01_accept",
-          "label_zh": "进入埃莉诺与莉迪亚的后宫剧情。",
-          "label_en": "Enter Eleanor and Lydia’s harem story.",
-          "description_zh": "保留原恋爱资格；上层区声望50／100／150依次推进，获得三件橱窗饰品。不扣声望，未达标可继续经营与日常。",
-          "description_en": "Original romance requirements apply. Progress at 50/100/150 Upper Level reputation and earn three showcase ornaments. No reputation is spent; keep trading and receiving visits while waiting."
+          "label_zh": "那你教我几句。",
+          "label_en": "Then teach me a few lines.",
+          "description_zh": "进入埃莉诺与莉迪亚的三人关系扩展；保留原恋爱资格。上层区声望30／60／90依次推进，获得三件橱窗饰品；不扣声望，未达标可继续经营与日常。",
+          "description_en": "Enter Eleanor and Lydia's three-way relationship expansion while keeping the original romance requirements. Progress at 30/60/90 Upper Level reputation and earn three showcase ornaments. No reputation is spent; keep trading and receiving visits while waiting."
         },
         {
           "id": "dr01_decline",
@@ -370,6 +370,50 @@
               "speaker": "Lydia",
               "text": "我是来教你怎么关心她的，你倒先拿我练上了。好吧，这句我就不转告她了。",
               "en": "...I came to teach you how to care about her, and you practiced on me first. Fine, I won't pass that part on."
+            },
+            {
+              "speaker": "Player",
+              "text": "你的事也可以拿来问我。",
+              "en": "You can bring your own problems to me too."
+            }
+          ]
+        },
+        {
+          "id": "dr04_lesson",
+          "label_zh": "她教到这儿",
+          "label_en": "She Teaches This Much",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "说回你。她最烦别人让她猜。真到了要开口的时候，别等她问，也别先想她会不会笑话你。",
+              "en": "Back to you. She hates being left to guess. When the time comes to speak, don't wait for her to ask, and don't start by worrying she'll laugh at you."
+            },
+            {
+              "speaker": "Player",
+              "text": "你教得倒认真。",
+              "en": "You're taking this seriously."
+            },
+            {
+              "speaker": "Lydia",
+              "text": "我只教到这儿。真见了她，说什么得你自己想。别把我的原话背出来，她一听就知道。",
+              "en": "I only teach this much. What you say to her, you'll have to come up with yourself. Don't recite my lines—she'll know."
+            }
+          ]
+        },
+        {
+          "id": "dr04_shop",
+          "label_zh": "她顺路看货",
+          "label_en": "She Looks at the Stock",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "既然说到胸针——你这儿有没有配得上它的东西？拿出来我看看。",
+              "en": "Speaking of the brooch—do you have anything here that goes with it? Show me."
+            },
+            {
+              "speaker": "Player",
+              "text": "先看货。价钱照算。",
+              "en": "Look first. The price is the price."
             }
           ]
         }
@@ -387,6 +431,11 @@
           "label_en": "Confession Conditions Met",
           "source_line": 702,
           "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "莉迪亚最近一见我就提你。她说我该听听你怎么说，别总拿货价把话堵回去。",
+              "en": "Lydia brings you up every time I see her lately. She says I should hear you out instead of shutting you down with prices."
+            },
             {
               "speaker": "Eleanor",
               "text": "最近谁见了我都问，接下来打算怎么办。",
@@ -606,9 +655,78 @@
               "expr": "smile"
             }
           ]
+        },
+        {
+          "id": "dr07_shop",
+          "label_zh": "她挑搭配",
+          "label_en": "She Picks a Match",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "对了，那两条裙子还缺件配的东西。你这儿最近收了什么？",
+              "en": "By the way, those two dresses still need something to go with them. What have you taken in lately?"
+            },
+            {
+              "speaker": "Player",
+              "text": "自己看。挑中了再谈价。",
+              "en": "Look for yourself. We'll talk price if you find something."
+            }
+          ]
+        },
+        {
+          "id": "dr07_reply_warm",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "……那我可记下了。",
+              "en": "...I'll hold you to that."
+            }
+          ]
+        },
+        {
+          "id": "dr07_reply_practical",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "真会煞风景。行吧，先看货。",
+              "en": "You really know how to kill the mood. Fine, let's look at the stock."
+            }
+          ]
+        },
+        {
+          "id": "dr07_reply_guarded",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "……好。那我先把自己的事想明白。",
+              "en": "...Fine. I'll think my own business through first."
+            }
+          ]
         }
       ],
-      "choices": []
+      "choices": [
+        {
+          "id": "dr07_warm",
+          "label_zh": "可以。别只带难题，想说什么都行。",
+          "label_en": "Yes. Don't only bring problems—anything you want to say is fine.",
+          "description_zh": "",
+          "description_en": ""
+        },
+        {
+          "id": "dr07_practical",
+          "label_zh": "可以。先把今天的货看了。",
+          "label_en": "Sure. Let's look at today's stock first.",
+          "description_zh": "",
+          "description_en": ""
+        },
+        {
+          "id": "dr07_guarded",
+          "label_zh": "你的事，先自己想清楚。",
+          "label_en": "Think your own business through first.",
+          "description_zh": "",
+          "description_en": ""
+        }
+      ]
     },
     {
       "id": "dr08",
@@ -771,21 +889,80 @@
               "speaker": "Lydia",
               "text": "你看这边，花瓣的颜色还不一样。",
               "en": "Look here. The petals aren't even the same color."
+            }
+          ]
+        },
+        {
+          "id": "dr09_shop",
+          "label_zh": "歇脚时看货",
+          "label_en": "Browsing While She Rests",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "正好，把你这儿新收的拿出来我看看。腿歇着，眼睛没歇。",
+              "en": "Good—show me what you've taken in lately. My legs are resting; my eyes aren't."
             },
             {
               "speaker": "Player",
-              "text": "很衬你。",
-              "en": "It suits you."
-            },
+              "text": "看中哪件再说价。",
+              "en": "Tell me which one you want, then we'll talk price."
+            }
+          ]
+        },
+        {
+          "id": "dr09_reply_compliment",
+          "lines": [
             {
               "speaker": "Lydia",
               "text": "这句比夸我会摆柜子好多了。",
-              "en": "...That's much better than praising my display arranging."
+              "en": "That is much better than praising how I arrange a display."
+            }
+          ]
+        },
+        {
+          "id": "dr09_reply_work",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "……你今天怎么这么会说话？",
+              "en": "...Why are you so good at talking today?"
+            }
+          ]
+        },
+        {
+          "id": "dr09_reply_practical",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "你倒是会心疼人。",
+              "en": "You do know how to be thoughtful."
             }
           ]
         }
       ],
-      "choices": []
+      "choices": [
+        {
+          "id": "dr09_compliment",
+          "label_zh": "很衬你。",
+          "label_en": "It suits you.",
+          "description_zh": "",
+          "description_en": ""
+        },
+        {
+          "id": "dr09_work",
+          "label_zh": "你替别人忙了一上午，也该有人夸你一句。",
+          "label_en": "You spent all morning working for someone else. Someone should compliment you too.",
+          "description_zh": "",
+          "description_en": ""
+        },
+        {
+          "id": "dr09_practical",
+          "label_zh": "先坐下歇歇。货不会跑。",
+          "label_en": "Sit down and rest first. The stock won't run away.",
+          "description_zh": "",
+          "description_en": ""
+        }
+      ]
     },
     {
       "id": "dr10",
@@ -856,6 +1033,23 @@
               "speaker": "Lydia",
               "text": "裙子又不会长腿跑掉。今天先来看看你有没有学会夸人——看来学得不错。",
               "en": "The dresses will not run away. Today I came to see whether you had learned to give a compliment—and it seems you have."
+            }
+          ]
+        },
+        {
+          "id": "dr10_shop",
+          "label_zh": "柜台前看货",
+          "label_en": "At the Counter",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "既然都站到柜台前了，把你新收的东西拿给我看看。别只拿最贵的糊弄我。",
+              "en": "Since I'm already at the counter, show me what you've recently taken in. Don't fob me off with just the most expensive piece."
+            },
+            {
+              "speaker": "Player",
+              "text": "看可以。买不买你自己决定。",
+              "en": "You can look. Whether you buy is up to you."
             }
           ]
         }
@@ -1074,21 +1268,6 @@
               "speaker": "Lydia",
               "text": "这回我不说路过了。我喜欢你。",
               "en": "I'm not saying I was just passing by this time. I like you."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "一开始，我只是想让她过得好一点。",
-              "en": "At first I only wanted things to go better for her. Then, when they praised you upstairs, I nearly interrupted to say I had found this shop first."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你还记得我那枚胸针，也肯听我讲那些零碎事。我越来越盼着来，又怕你只问她怎么样了。",
-              "en": "You remembered my brooch, and listened to all my little stories. I kept looking forward to coming, then worrying you would only ask how she was."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "可埃莉诺还不知道。你得把真话都告诉她。你到底怎么想，别让她和我都只能猜。",
-              "en": "But Eleanor doesn't know yet. You have to tell her the truth. Whatever you decide, don't leave us both guessing."
             }
           ]
         },
@@ -1109,6 +1288,56 @@
               "en": "Honestly... now it's my turn to wait for you to say it clearly. Until you do, don't make me wait in secret. I'll go see her myself too."
             }
           ]
+        },
+        {
+          "id": "dr14_reason",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "一开始，我只是想让她过得好一点。",
+              "en": "At first, I just wanted things to go better for her."
+            },
+            {
+              "speaker": "Lydia",
+              "text": "你还记得我那枚胸针，也肯听我讲那些零碎事。我越来越盼着来，又怕你只问她怎么样了。",
+              "en": "You remembered my brooch, and you listened to all those little things. I started looking forward to coming here—and then feared you only asked how she was."
+            },
+            {
+              "speaker": "Lydia",
+              "text": "可埃莉诺还不知道。你得把真话都告诉她。你到底怎么想，别让她和我都只能猜。",
+              "en": "But Eleanor doesn't know yet. You have to tell her the truth. What do you actually want? Don't leave us both guessing."
+            }
+          ]
+        },
+        {
+          "id": "dr14_reply_yes",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "……你、你先别这么快回答。听我说完。",
+              "en": "...You—don't answer so fast. Hear me out first."
+            }
+          ]
+        },
+        {
+          "id": "dr14_reply_time",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "好。我没让你今天就决定。",
+              "en": "All right. I'm not asking you to decide today."
+            }
+          ]
+        },
+        {
+          "id": "dr14_reply_tease",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "我怕说长了，你又要拿货价堵我。",
+              "en": "I was afraid a longer one would make you shut me down with prices again."
+            }
+          ]
         }
       ],
       "choices": [
@@ -1125,6 +1354,27 @@
           "label_en": "I won't promise you anything behind her back. We'll each speak to her ourselves.",
           "description_zh": "继续三人讨论；尚未提交双恋。",
           "description_en": "Continue the three-way discussion; nothing is committed yet."
+        },
+        {
+          "id": "dr14_yes",
+          "label_zh": "我也喜欢你。",
+          "label_en": "I like you too.",
+          "description_zh": "",
+          "description_en": ""
+        },
+        {
+          "id": "dr14_time",
+          "label_zh": "我很在意你。让我先把话理清楚。",
+          "label_en": "I care about you. Let me sort out what to say first.",
+          "description_zh": "",
+          "description_en": ""
+        },
+        {
+          "id": "dr14_tease",
+          "label_zh": "你连告白都挑最短的说？",
+          "label_en": "You picked the shortest possible confession?",
+          "description_zh": "",
+          "description_en": ""
         }
       ]
     },
@@ -1333,7 +1583,7 @@
             {
               "speaker": "Player",
               "text": "我也是。",
-              "en": "So do I."
+              "en": "Me too."
             },
             {
               "speaker": "Lydia",
@@ -1856,6 +2106,23 @@
               "speaker": "Lydia",
               "text": "好啊。先给你看看，我今天戴的这只耳夹。",
               "en": "Gladly. But first, have a look at these earrings."
+            }
+          ]
+        },
+        {
+          "id": "dr_daily_2_shop",
+          "label_zh": "耳夹的搭配",
+          "label_en": "Matching the Ear Clip",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "看都看了，顺便把你这儿新收的也拿出来。耳夹总要配件东西。",
+              "en": "Since I've shown you mine, bring out what you've taken in lately. An ear clip needs something to go with it."
+            },
+            {
+              "speaker": "Player",
+              "text": "自己挑。价钱照算。",
+              "en": "Pick something. The price is the price."
             }
           ]
         }

@@ -1,0 +1,36 @@
+{
+  "master": "masters/mother_beauty_master_v3_upper.png",
+  "master_sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+  "parameters": {
+    "visible_height": 171.625,
+    "centre_x": 149.4375,
+    "bottom": 244.4375,
+    "magenta_key": false,
+    "fringe": false
+  },
+  "manual_landmarks_source": {
+    "left_iris_centre": [
+      454,
+      343
+    ],
+    "right_iris_centre": [
+      605,
+      318
+    ],
+    "chin": [
+      541,
+      510
+    ],
+    "left_cheek": [
+      397,
+      389
+    ],
+    "right_cheek": [
+      694,
+      369
+    ]
+  },
+  "calibration_basis": "Preserve the v2 source-to-native isotropic transform exactly; generated v3 canvas is unchanged and manual iris/chin review shows same locations. Changed clothing bbox does not rescale face. Source landmarks are visual estimates, not exact anatomical measurements.",
+  "fringe_note": "Genuine alpha; legitimate green/gold/ivory colours; no magenta key or fringe correction.",
+  "prompt": "prompts/mother_beauty_v3_upper.txt"
+}

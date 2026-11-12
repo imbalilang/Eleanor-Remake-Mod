@@ -1,0 +1,136 @@
+[h2]0.99：修复后宫线误弹“完整恋爱线已达成”[/h2]
+[list]
+[*]后宫线在 dr11 完成核心时会调用共享的 CompleteCore，此前会顺带弹出普通线的“完整恋爱线已达成”提示，而 dr13—dr20 尚未播放。
+[*]现在检测到双恋扩展仍持有结局时不再显示该提示；后宫线自己的结局页仍在 dr20 正常出现。
+[*]仅改提示条件，不改 meta 解锁、声望、奖励、路线、选项或结局；0.98 的饰品描述精简保留。
+[/list]
+
+0.99 stops the dual route from showing the ordinary-route "A complete romance route has been reached" notification when the shared core completes at dr11, while dr13–dr20 are still ahead. The dual ending page still appears at dr20. This is a notification-only change: meta unlock, reputation, rewards, routes, choices and endings are unchanged.
+
+[h1]Eleanor Story Expand[/h1]
+
+[h2]上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展[/h2]
+
+
+
+“呵，你们下层区管这种地方叫‘商店’啊？”
+
+
+
+她是上层区最大水培农场前负责人的独女。母亲被以挪用公款罪关押，家族一夜崩塌，她跌进自己曾最看不起的下层区。
+
+你，是这里的一家当铺老板。
+
+
+
+这不是用钱刷好感的恋爱 MOD。她不会因为几次施舍就喜欢你。你要靠识货、开价、留证和承担风险，先成为她愿意信任的人。
+
+
+
+[h2]亮点[/h2]
+
+[list]
+
+[*][b]她的骄傲不会凭空消失。[/b]她仍然挑剔、嘴硬、看不起下层区；也会在真正被帮助时别扭地道谢。你不会一开始就被她仰慕，而是先被她记住，再被她认可。
+
+[*][b]关系由实际经营行为推进。[/b]公平收购、明显让利、趁火打劫，她都会记住；一件来路可疑的货物、一次该不该提醒她的判断，都会影响你们之间的信任。关键结果来自你真正做了什么，而不是“好感 +1”的选项。
+
+[*][b]阶级反差，但不是救世主与花瓶。[/b]她会主动回礼、当面维护你，也会坚持自己的判断。她要的是平等，不是一个替她做决定的人。你也不是隐藏大佬，只是靠眼光、账本和人脉吃饭的店主。
+
+[*][b]保留原作人物与世界观。[/b]假叔叔、黑市打手、治安部、帕斯泰尔、营养果、水培农场都沿用原作设定；原作 Eleanor 的尖锐、自尊和行动力会保留下来，再往前推进。
+
+[*][b]两种开局。[/b]普通模式从第 23 天开始，保留原版节奏；可选提前开场从第 12 天开始，不送好感或声望，仍走完整成长线。
+
+[/list]
+
+
+
+[h2]为什么值得一玩[/h2]
+
+如果你在玩原版时对 Eleanor 有过兴趣，却觉得她的个人线太短、太晚，这个 MOD 会给她一条更完整的个人线。
+
+
+
+如果你喜欢经营 + 人物关系，喜欢用报价、眼光和风险判断赢得信任，而不是靠选项刷数值；如果你希望女主角有自己的判断和选择权，而不只是奖励，这个 MOD 就是为这种体验做的。
+
+
+
+你的选择会改变故事的走向。至于最后会走到哪里，进店之后，你自己判断。
+
+
+
+[h2]四个主要路线和结局[/h2]
+
+A、恋人线：你和埃莉诺一起在下层相恋、相伴，一起坚强地走下去
+
+[spoiler]B、后宫线：埃莉诺与莉迪亚分别表达意愿，在三方明确同意后尝试共同相处。[/spoiler]
+
+[spoiler]C、侍从线：你成为埃莉诺的主人，并且帮助她重回上层区。无论她多么耀眼，你是她唯一的王[/spoiler]
+
+[spoiler]D、革命军线：你替她备货、收赃、等她从任务里活着回来；她不会告白，但会自己回到店里。[/spoiler]
+
+
+
+[h2]旧存档兼容[/h2]
+从未订阅过本 MOD 的存档，在首次开店时会触发“旧档案”事件；无论原埃莉诺进度如何，可选择重置埃莉诺的故事，并从本 MOD 剧情的第 1 章重开。
+
+[h2]画面推荐[/h2]
+
+强烈建议订阅[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3829696854][b]少女当铺[/b][/url]。本 MOD 为埃莉诺设计了新的服装和妆造，在该 MOD 开启时有更好的表现；未开启时，Lydia 继续使用本 MOD 的独立形象，母亲使用原游戏 femaleUpper3；开启时母亲使用索菲娅 v3 日常装或 v4 私服定稿；女仆装、礼服和战术背心直接使用原游戏 Eleanor 立绘；其他美化 MOD 不会被当作服装来源。晚会使用原作上层区形象。
+
+
+
+[h2]体量与兼容[/h2]
+
+[list]
+
+[*]埃莉诺调查主线、多条关系分支、后日谈与日常经营来访。
+
+[*]简体中文 / English，全年龄。
+
+[*]复用原版交易、检视、举报、拘捕、新闻和经营流程，不新建后间或独立案卷 UI。
+
+[*]旧存档默认受保护，可选择重置。
+
+[*]适配游戏 1.0.0.14 / 1.0.0.13 / build 26525552（内部 0.46D）。解压 EleanorRomance 文件夹到 Mods\EleanorRomance，在模组菜单启用并重启。手动版与 Steam 工坊订阅版只保留一个，不要同时使用。
+
+[/list]
+
+
+
+[h2]English[/h2]
+
+0.90 completes the revolution route: her mother's death, joining the revolution, her first kill, three supply tiers, the escort operation and the return, followed by an immediate ending page. Supply waits at 400/1000/1800 item value; old route-C saves resume at the nearest stage without retroactive completion.
+
+[h2]Existing saves[/h2]
+A save that has never subscribed to this mod will trigger an “old file” event on its first shop day. Regardless of prior Eleanor progress, you can choose to reset her story and restart from chapter 1 of the mod's storyline.
+
+She is the only daughter of the former director of the Upper Level's largest hydroponic farm. Her mother is arrested for embezzlement, her family collapses overnight, and she falls into the Lower Level she once despised. You own a pawnshop.
+
+
+
+This is not a romance you can buy with gifts. She will not fall for a few handouts. Earn her trust through real deals, hard choices and the risks you take — not +1 affection options. Her pride, judgment and right to choose remain hers. You are not a hidden billionaire, just a shopkeeper living by a good eye, a ledger and the people you know.
+
+
+
+The original world stays: the fake uncle, black-market enforcers, Security, Pastel Inc., Nutrifruit and the hydroponic farms.
+
+
+
+Two starts: day 23 normal, or an optional day-12 early start with no free affection or reputation.
+
+
+
+Eleanor’s investigation story, multiple relationship routes, epilogues and recurring business visits. Simplified Chinese and English, all-ages. Old saves are protected by default.
+
+
+
+The four main routes: A — lovers; B — Eleanor and Lydia romance; C — attendant; D — revolution, now complete through R14.
+
+
+
+For the best look, subscribe to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3829696854][b]Maiden's Pawnshop / CutePortraits[/b][/url]. Eleanor has new outfits and styling designed for it; without it, the original-style variants are used.
+
+
+
+Tested on Probably Stolen 1.0.0.13 / build 26525552 (internal 0.46D). Extract the EleanorRomance folder into Mods\EleanorRomance and enable it in the Mods menu. Use either the manual or Workshop copy, not both.

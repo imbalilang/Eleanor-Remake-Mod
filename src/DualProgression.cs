@@ -4,7 +4,7 @@ namespace EleanorRomance
 {
     public static class DualProgression
     {
-        public static readonly int[] Targets = { 50, 100, 150 };
+        public static readonly int[] Targets = { 30, 60, 90 };
         public static bool Passed(int stage) => DualState.Flag("gate." + stage + ".passed") || DualState.Flag("gate." + stage + ".waived");
         public static bool Earned(int stage) => DualState.Flag("reward." + stage + ".earned");
         public static bool Active(int stage) => DualState.Active && (stage == 1 ? DualState.Done("entry") : stage == 2

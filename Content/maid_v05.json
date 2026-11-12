@@ -3006,16 +3006,39 @@
           "speaker": "Eleanor",
           "text": "主人，我问你。是这身好看，还是那身好看？",
           "source_line": 2441
-        },
-        {
-          "speaker": "Player",
-          "text": "这身是穿给上面的人看的。那身，穿给我看的。",
-          "source_line": 2444
-        },
+        }
+      ]
+    },
+    {
+      "id": "m24_b010a",
+      "scene": "主人问衣服：答对了",
+      "lines": [
         {
           "speaker": "Eleanor",
           "text": "算你答对了。",
-          "source_line": 2447
+          "en": "...I suppose that is the right answer."
+        }
+      ]
+    },
+    {
+      "id": "m24_b010b",
+      "scene": "主人问衣服：都得回来",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "……你倒是会顺杆往上爬。",
+          "en": "...You certainly know how to press your advantage."
+        }
+      ]
+    },
+    {
+      "id": "m24_b010c",
+      "scene": "主人问衣服：过来看清楚",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "主人，你这样，我可没法好好回答。",
+          "en": "Master, I cannot answer properly when you do that."
         }
       ]
     },

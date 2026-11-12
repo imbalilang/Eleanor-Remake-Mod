@@ -532,6 +532,14 @@ namespace EleanorRomance
             set => SetInt("last_epilogue_day", value);
         }
 
+        // Last friend-epilogue visit that actually stocked its scavenged goods.
+        // Prevents a save/load during the visit from spawning the same batch twice.
+        public static int EpilogueStockIndex
+        {
+            get => GetInt("epilogue_stock_index", -1);
+            set => SetInt("epilogue_stock_index", value);
+        }
+
         public static bool TrueUnlocked
         {
             get => GetBool("true_unlocked", false);
@@ -656,6 +664,7 @@ namespace EleanorRomance
             EpilogueDone = false;
             EpilogueIndex = 0;
             LastEpilogueDay = -1;
+            EpilogueStockIndex = -1;
             TrueUnlocked = keepMeta;
 
             ModEntry.Log("Story state initialized. earlyStart=" + earlyStart + ", next=" + NextVisitDay);

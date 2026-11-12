@@ -10,7 +10,7 @@ function Display-Ornaments($mask){
     }
 }
 function Upper-Buyer($id='upperLowerVisitorLuxury',$budget=2000,$source=''){
-    $c=[StoreClient]::new();$c.identifier=$id;$c.clientIntent=[StoreClient+ClientIntent]::BUY
+    $c=[StoreClient]::new();$c.identifier=$id;$c.clientFaction='FACTION_UPPER_LEVEL';$c.clientIntent=[StoreClient+ClientIntent]::BUY
     $c.sourceModId=$source;$c.SetBudget($budget);Use-Client $c
     [EleanorRomance.DualShowcaseEffects]::Arrive($c);return $c
 }
@@ -44,11 +44,15 @@ Display-Ornaments 0;$store.playerCash=0;$null=Sell-Goods 100
 Assert ($store.playerCash -eq 110) 'Removing ornaments changed the current arrival snapshot.'
 $other=Upper-Buyer 'upperLowerVisitor' 500
 Assert ($other.GetBudget() -eq 500) 'New customer ignored removal.'
-foreach($pair in @(@('eleanor1',''),@('er_story_coop_buyer','eleanor_romance'),@('upperLowerVisitor','another_mod'),@('random_upper',''))){
+foreach($pair in @(@('eleanor1',''),@('er_story_coop_buyer','eleanor_romance'),@('upperLowerVisitor','another_mod'))){
     Display-Ornaments 7;$c=Upper-Buyer $pair[0] 500 $pair[1]
     Assert ($c.GetBudget() -eq 500 -and ![EleanorRomance.DualShowcaseEffects]::Eligible($c)) 'Whitelist modified a story/foreign client.'
 }
-'PASS: all eight showcase combinations, independent effects, snapshot/removal/duplicate safety, live-versus-missing visit reload and verified whitelist exclusions.'
+$lower=[StoreClient]::new();$lower.identifier='generic_water_buyer';$lower.clientFaction='FACTION_LOWER_LEVEL';$lower.clientIntent=[StoreClient+ClientIntent]::BUY;$lower.SetBudget(500)
+Assert (![EleanorRomance.DualShowcaseEffects]::Eligible($lower)) 'Lower Level customer received Upper Level ornament effects.'
+$stock=[StoreClient]::new();$stock.identifier='waterStockpiler';$stock.clientFaction='FACTION_UPPER_LEVEL';$stock.clientIntent=[StoreClient+ClientIntent]::SELLNBUY;$stock.SetBudget(500)
+Assert ([EleanorRomance.DualShowcaseEffects]::Eligible($stock)) 'Upper Level SELLNBUY customer was excluded.'
+'PASS: all eight showcase combinations, independent effects, snapshot/removal/duplicate safety, live-versus-missing visit reload, all Upper Level customer types and story/foreign exclusions.'
 
 Dual-Run;Display-Ornaments 4;$store.playerCash=1000;$c=Upper-Buyer
 $sold=Sell-Goods 500

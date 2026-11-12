@@ -1,0 +1,11 @@
+0.99｜修复后宫线误弹“完整恋爱线已达成”
+
+• 后宫线在 dr11 完成核心时会调用共享的 CompleteCore，此前会顺带弹出普通线的“完整恋爱线已达成”提示，但 dr13—dr20 仍未播放，容易让人误以为剧情已经结束。
+• 现在检测到双恋扩展仍持有结局时不再显示该提示；后宫线自己的结局页仍在 dr20 正常出现。
+• 仅改提示条件，不改 meta 解锁、声望、奖励、路线、选项或结局；0.98 的饰品描述精简保留。
+
+0.99 | Fix premature full-romance notification in the dual route
+
+• The dual route shares CompleteCore at dr11; it used to show the ordinary-route "A complete romance route has been reached" notice while dr13–dr20 were still ahead, making the route feel finished.
+• The notice is now suppressed while the dual extension still owns the ending; the dual ending page still appears at dr20.
+• Notification-only change: meta unlock, reputation, rewards, routes, choices and endings are unchanged; 0.98's shorter ornament descriptions remain.

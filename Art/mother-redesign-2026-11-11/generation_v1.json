@@ -1,0 +1,159 @@
+{
+  "revision": "v1",
+  "status": "generation_requested",
+  "tool": "codexzh-image/scripts/image.mjs",
+  "model": "gpt-image-2",
+  "endpoint_mode": "images/edits",
+  "requested_count": 1,
+  "requested_size": "1024x1024",
+  "prompt": "Art/mother-redesign-2026-11-11/prompts/mother_beauty_v1.txt",
+  "prompt_sha256": "68f1b0e641e17e1b1618ea487797b05e6cc55d8b08873cc1c324f980b947d16f",
+  "actual_age": 38,
+  "apparent_adult_age": 28,
+  "hairstyle": "Most hair draped over one shoulder to front; one loose tie near tips below chest; no scalp/nape tie",
+  "references": [
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/upload_compressed/ref_01.jpg",
+      "role": "Adult family resemblance and author character rendering; not costume or hairstyle",
+      "size": [
+        633,
+        640
+      ],
+      "sha256": "70775b3896f44198ad35a45dd31c649cd708c81c72ce7b7cca0cabfb89f507f6",
+      "bytes": 108548,
+      "original": {
+        "path": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+        "role": "Adult family resemblance and author character rendering; not costume or hairstyle",
+        "size": [
+          1462,
+          1076
+        ],
+        "mode": "RGBA",
+        "sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e"
+      },
+      "source_bytes": 802737,
+      "crop_box_source_pixels": [
+        359,
+        291,
+        1136,
+        1076
+      ],
+      "method": "Crop transparent margins, max640 edge isotropic downscale; neutral matte; optimized JPEG quality88, 4:4:4. Upload reference only; originals preserved.",
+      "original_unchanged": true,
+      "mode": "RGB"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/upload_compressed/ref_02.jpg",
+      "role": "Approved adult figure; mother bust must be larger at equivalent face scale",
+      "size": [
+        543,
+        640
+      ],
+      "sha256": "15ff443fa3047eac5b97b376510c457a77b21b52fccaced55a543f49224e5dc4",
+      "bytes": 87641,
+      "original": {
+        "path": "Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+        "role": "Approved adult figure; mother bust must be larger at equivalent face scale",
+        "size": [
+          1461,
+          1076
+        ],
+        "mode": "RGBA",
+        "sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5"
+      },
+      "source_bytes": 1224588,
+      "crop_box_source_pixels": [
+        278,
+        6,
+        1187,
+        1076
+      ],
+      "method": "Crop transparent margins, max640 edge isotropic downscale; neutral matte; optimized JPEG quality88, 4:4:4. Upload reference only; originals preserved.",
+      "original_unchanged": true,
+      "mode": "RGB"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/upload_compressed/ref_03.jpg",
+      "role": "Old olive/ivory blouse and plum cardigan only; face and age excluded; source crop [390,745,1090,1077]",
+      "size": [
+        640,
+        304
+      ],
+      "sha256": "02cb02f0fec58a2c0d98ebe007bcb85df7e9593448ae9644f53b5e964435f96d",
+      "bytes": 43294,
+      "original": {
+        "path": "Art/mother-redesign-2026-11-11/references/mother_old_outfit_only.png",
+        "role": "Old olive/ivory blouse and plum cardigan only; face and age excluded; source crop [390,745,1090,1077]",
+        "size": [
+          700,
+          332
+        ],
+        "mode": "RGBA",
+        "sha256": "6f3965c2878ba1614378bc2a1b8abe2dc309ad3dc2e3c493de16f7d95eea159d"
+      },
+      "source_bytes": 260865,
+      "crop_box_source_pixels": [
+        0,
+        0,
+        700,
+        332
+      ],
+      "method": "Crop transparent margins, max640 edge isotropic downscale; neutral matte; optimized JPEG quality88, 4:4:4. Upload reference only; originals preserved.",
+      "original_unchanged": true,
+      "mode": "RGB"
+    }
+  ],
+  "master": "masters/mother_beauty_master_v1.png",
+  "runtime_replaced": false,
+  "published": false,
+  "references_original": [
+    {
+      "path": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+      "role": "Adult family resemblance and author character rendering; not costume or hairstyle",
+      "size": [
+        1462,
+        1076
+      ],
+      "mode": "RGBA",
+      "sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e"
+    },
+    {
+      "path": "Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "role": "Approved adult figure; mother bust must be larger at equivalent face scale",
+      "size": [
+        1461,
+        1076
+      ],
+      "mode": "RGBA",
+      "sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/mother_old_outfit_only.png",
+      "role": "Old olive/ivory blouse and plum cardigan only; face and age excluded; source crop [390,745,1090,1077]",
+      "size": [
+        700,
+        332
+      ],
+      "mode": "RGBA",
+      "sha256": "6f3965c2878ba1614378bc2a1b8abe2dc309ad3dc2e3c493de16f7d95eea159d"
+    }
+  ],
+  "reference_upload_preprocessing": {
+    "user_requirement": "Compress every reference locally before uploading; preserve original masters.",
+    "max_edge": 640,
+    "total_source_bytes": 2288190,
+    "total_upload_bytes": 239483,
+    "reduction_percent": 89.5,
+    "file_format": "JPEG quality88 chroma4:4:4",
+    "max_per_image_bytes": 160000
+  },
+  "request_size_preflight": {
+    "image_payload_bytes": 239483,
+    "prompt_bytes": 6009,
+    "conservative_encoded_request_upper_bound_bytes": 390861,
+    "hard_limit_bytes": 20000000,
+    "working_limit_bytes": 16000000,
+    "verified_before_submission": true
+  },
+  "generation_attempts": 1
+}

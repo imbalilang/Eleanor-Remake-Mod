@@ -1,0 +1,36 @@
+{
+  "master": "masters/mother_beauty_master_v4_intimate.png",
+  "master_sha256": "18942091249da4ae2590c3037163d2aeca5f97b8579ad859b252b4fda69c034f",
+  "parameters": {
+    "visible_height": 171.625,
+    "centre_x": 146.4375,
+    "bottom": 244.4375,
+    "magenta_key": false,
+    "fringe": false
+  },
+  "manual_landmarks_source": {
+    "left_iris_centre": [
+      454,
+      343
+    ],
+    "right_iris_centre": [
+      605,
+      318
+    ],
+    "chin": [
+      541,
+      510
+    ],
+    "left_cheek": [
+      397,
+      389
+    ],
+    "right_cheek": [
+      694,
+      369
+    ]
+  },
+  "calibration_basis": "Retain v3 source-to-native isotropic transform. Output canvas is still 1145x1374; evaluate eyes/chin and head angle in explicit side-by-side preview before acceptance. Garment bbox is not used to rescale the face. Prior source coordinates are approximate visual landmarks.",
+  "fringe_note": "Genuine transparent PNG; opaque cream knit. No magenta key or fringe correction.",
+  "prompt": "prompts/mother_intimate_v4.txt"
+}

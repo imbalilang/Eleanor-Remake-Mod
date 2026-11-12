@@ -1,0 +1,9 @@
+{"time_utc":"2026-11-11T11:52:05.884Z","endpoint":"/v1/images/edits","serialized_body_bytes":246362,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T11:55:14.940Z","endpoint":"/v1/images/edits","serialized_body_bytes":246362,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T12:06:59.076Z","endpoint":"/v1/images/edits","serialized_body_bytes":246362,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T12:12:45.675Z","endpoint":"/v1/images/edits","serialized_body_bytes":246362,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T12:22:15.761Z","endpoint":"/v1/images/edits","serialized_body_bytes":1103346,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T12:33:09.420Z","endpoint":"/v1/images/edits","serialized_body_bytes":1117237,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T12:41:20.069Z","endpoint":"/v1/images/edits","serialized_body_bytes":1117237,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T13:11:46.841Z","endpoint":"/v1/images/edits","serialized_body_bytes":1189647,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}
+{"time_utc":"2026-11-11T13:23:40.918Z","endpoint":"/v1/images/edits","serialized_body_bytes":1189647,"working_limit_bytes":16000000,"hard_limit_bytes":20000000,"allowed":true}

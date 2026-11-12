@@ -1,0 +1,139 @@
+{
+  "source_size": [
+    1145,
+    1374
+  ],
+  "clean_bbox": [
+    104,
+    1,
+    1042,
+    1374
+  ],
+  "parameters": {
+    "visible_height": 171.625,
+    "centre_x": 149.4375,
+    "bottom_exclusive": 244.4375,
+    "sampling_canvas": [
+      288,
+      211
+    ],
+    "add_top_row": true,
+    "coverage_threshold": 0.35,
+    "magenta_key": false,
+    "fringe": false,
+    "detail": true,
+    "bleed": true
+  },
+  "transform": {
+    "s": 0.125,
+    "tx": 77.8125,
+    "ty": 72.6875
+  },
+  "keying_counts": {
+    "strong": 0,
+    "weak_near_strong": 0,
+    "residual_edge": 0
+  },
+  "source_fringe_pixels": 0,
+  "detail_pixels": 6126,
+  "target_fringe_pixels": 0,
+  "output_size": [
+    288,
+    212
+  ],
+  "output_bbox": [
+    93,
+    74,
+    208,
+    212
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "opaque_colours": 7508,
+  "master": "masters/mother_beauty_master_v3_upper.png",
+  "master_sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+  "prompt": "prompts/mother_beauty_v3_upper.txt",
+  "prompt_sha256": "54034297f3e15a8502493dff2bde6be47c315897a0890566df5f90c40a3f30d6",
+  "output": "portraits/er_portrait_mother_sophia_beauty_upper_v3.png",
+  "output_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364",
+  "manual_landmarks_source": {
+    "left_iris_centre": [
+      454,
+      343
+    ],
+    "right_iris_centre": [
+      605,
+      318
+    ],
+    "chin": [
+      541,
+      510
+    ],
+    "left_cheek": [
+      397,
+      389
+    ],
+    "right_cheek": [
+      694,
+      369
+    ]
+  },
+  "projected_landmarks_native": {
+    "left_iris_centre": [
+      134.56,
+      116.56
+    ],
+    "right_iris_centre": [
+      153.44,
+      113.44
+    ],
+    "chin": [
+      145.44,
+      137.44
+    ],
+    "left_cheek": [
+      127.44,
+      122.31
+    ],
+    "right_cheek": [
+      164.56,
+      119.81
+    ]
+  },
+  "landmark_method": "Manual visual estimates on the generated master; not automated anatomy measurements",
+  "reference_sha256": {
+    "Textures/Items/er_expr_eleanor1_soft.png": "089b068b368ed25792e6cfe3edd03f57278e06f4724e348c1dda0ac8b85bce58",
+    "Textures/Items/er_portrait_lydia_female_beauty.png": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "Art/mother-redesign-2026-11-11/portraits/er_portrait_mother_sophia_beauty_upper_v3.png": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364",
+    "Art/mother-redesign-2026-11-11/portraits/er_portrait_mother_sophia_beauty.png": "a0eb448d28f263a187647029110c1a742673fd38923c4e2d1ebccefc4d661d8d"
+  },
+  "repeat_identical": true,
+  "runtime_replaced": true,
+  "runtime_baseline_unchanged": false,
+  "unrelated_runtime_unchanged": true,
+  "published": false,
+  "status": "User-approved final; installed in workspace",
+  "actual_post_receipt": "request_receipts.jsonl",
+  "visual_review": {
+    "costume": "Replaced patched olive shirt/plum cardigan with jade dress, ivory collar and sleeves, gold lattice and trim, green gemstone clasp and shoulder capelet. Matches the actual Upper10/11/12 clothing language.",
+    "identity": "Same young-adult green-eyed copper-haired identity, forward side-draped hair and near-tip tie, relaxed smile and hand pose retained by visual comparison. Not claimed pixel-identical outside garment edit.",
+    "framing": "Exact v2 source-to-native transform retained; manual iris/chin coordinate review confirms approximate alignment. Source drawing changed within same canvas; body and alpha are not claimed identical.",
+    "inspected_previews": [
+      "mother_beauty_master_v3_upper_review.jpg",
+      "sophia_v3_face_coordinates.jpg",
+      "comparison_v3_upper_native.png",
+      "comparison_v3_upper_2x.png",
+      "mattes_v3_upper_3x.png"
+    ],
+    "remaining_limitations": [
+      "No in-game UI verification; restart is needed to load changed sprites and assembly",
+      "Source waist, hands and low hair tie are outside the calibrated runtime crop",
+      "Larger bust than Lydia was not independently measured; existing v3/v4 accepted as final by user"
+    ]
+  },
+  "all_uploads_precompressed": true,
+  "actual_serialized_post_body_bytes": 1103346,
+  "approval": "approved/approval.json"
+}

@@ -1,3 +1,5 @@
+using System;
+
 namespace EleanorRomance
 {
     public static class DualDaily
@@ -12,7 +14,11 @@ namespace EleanorRomance
                 : EleanorStory.NewNpcClient("dual_"+id,L.Get("er_name_lydia"),EleanorStory.LydiaSpriteKey(),EleanorStory.FactionKind.Upper);
             var root=DualText.Build(id);
             string progress=DualProgression.ProgressText(stage);
-            if(!string.IsNullOrEmpty(progress))StoryEngine.Tail(root).SetNextDialogue(StoryEngine.Text(L.Get("er_name_narrator"),progress));
+            if(!string.IsNullOrEmpty(progress))
+            {
+                Action previous=root.startAction;
+                root.SetStartAction(()=>{previous?.Invoke();StoryDirector.Notify(progress);});
+            }
             DualRewards.AppendClaims(root);
             DualText.FinishAll(root,()=>
             {

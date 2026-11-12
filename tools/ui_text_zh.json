@@ -171,5 +171,9 @@
   "er_notice_savings_progress": "调查款：{0} / 800（还差 {1} 信用点）",
   "er_notice_savings_complete": "调查款已攒够 800 信用点。",
   "er_ending_content_end": "本 MOD 的这段剧情到此结束。之后仍可继续经营与日常。",
-  "er_ending_return_button": "返回当铺"
+  "er_ending_return_button": "返回当铺",
+  "er_prompt_c18": "……",
+  "er_choice_c18_keep": "不找理由也能来。",
+  "er_choice_c18_always": "想来就来，别把自己当客人。",
+  "er_choice_c18_space": "先把日子过顺，来不来都行。"
 }

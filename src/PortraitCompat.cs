@@ -13,8 +13,8 @@ namespace EleanorRomance
     /// with a Harmony postfix.  We additionally expose those sprites through
     /// SpriteDict so our named clients can request them directly.  If the mod
     /// is absent or disabled, Resolve() returns the original vanilla key, and
-    /// every custom outfit (Lydia, Mother, maid, gala, vest) falls back to an
-    /// existing game portrait instead of a local "_vanilla" replacement.
+    /// Sophia, maid, gala and vest outfits fall back to existing game portraits.
+    /// Lydia retains her separate authored vanilla portraits.
     /// </summary>
     public static class PortraitCompat
     {
@@ -120,6 +120,18 @@ namespace EleanorRomance
         public static string ResolveMother()
         {
             return ResolveCharacter(ModConstants.MotherPortraitBeauty, ModConstants.MotherSprite);
+        }
+
+        /// <summary>
+        /// Approved private knit outfit. Public shop visits use ResolveMother;
+        /// home scenes must request this explicitly. Missing home art falls
+        /// back to the approved daily outfit before the generic game portrait.
+        /// </summary>
+        public static string ResolveMotherHome()
+        {
+            return IsBeautyActive && EnsureLocalPortrait(ModConstants.MotherHomePortraitBeauty)
+                ? ModConstants.MotherHomePortraitBeauty
+                : ResolveMother();
         }
 
         public static bool IsMaidScene(string id)
@@ -341,8 +353,14 @@ namespace EleanorRomance
             {
                 client.spriteName = ResolveLydia();
             }
+            else if (client.spriteName == ModConstants.MotherHomePortraitBeauty)
+            {
+                client.spriteName = ResolveMotherHome();
+            }
             else if (client.spriteName == ModConstants.MotherPortraitVanilla
-                || client.spriteName == ModConstants.MotherPortraitBeauty)
+                || client.spriteName == ModConstants.MotherPortraitBeauty
+                || client.identifier == "er_story_mother"
+                || client.identifier == "er_story_maid_m17")
             {
                 client.spriteName = ResolveMother();
             }

@@ -5,8 +5,8 @@
   "date": "2026-11-09",
   "gates": [
     {
-      "id": "upper50",
-      "reputation": 50,
+      "id": "upper30",
+      "reputation": 30,
       "after": "entry",
       "before": "dr02",
       "earliestNormalDay": 49,
@@ -15,8 +15,8 @@
       "effect": "extra_upper_buyers"
     },
     {
-      "id": "upper100",
-      "reputation": 100,
+      "id": "upper60",
+      "reputation": 60,
       "after": "dr08",
       "before": "dr09",
       "earliestNormalDay": 56,
@@ -25,8 +25,8 @@
       "effect": "upper_buyer_budget"
     },
     {
-      "id": "upper150",
-      "reputation": 150,
+      "id": "upper90",
+      "reputation": 90,
       "after": "dr11",
       "before": "dr13",
       "earliestNormalDay": 60,

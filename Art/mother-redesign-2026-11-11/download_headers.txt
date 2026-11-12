@@ -1,0 +1,26 @@
+HTTP/1.1 206 Partial Content
+Date: Wed, 11 Nov 2026 12:16:01 GMT
+Content-Type: image/png
+Content-Length: 81948
+Connection: keep-alive
+Age: 71
+alt-svc: h3=":443"; ma=86400
+etag: "72a36c2a3909accbf117d1f261369bfb"
+last-modified: Wed, 11 Nov 2026 12:13:29 GMT
+Server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains
+vary: Origin
+vary: Accept-Encoding
+via: 1.1 Caddy
+x-amz-id-2: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8
+x-amz-request-id: 18E6FCA59344796A
+x-content-type-options: nosniff
+x-ratelimit-limit: 18320
+x-ratelimit-remaining: 18320
+x-xss-protection: 1; mode=block
+content-range: bytes 83053-165000/1843946
+Cache-Control: max-age=14400
+cf-cache-status: HIT
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=kLAHYFxMnQ9anplhqsrRPDTfyoZnGs5KcWuXDpWseXN2hyrUQPfE9SlQ1QSLgcajCT1wG2PtlB6td3nSh7lkoWW3JE0DjtRcElWUZt%2FhIjxc6TAhNjCKKhRkyCZpypAd6Ek%3D"}]}
+CF-RAY: a58d39c77a8251e7-LAX

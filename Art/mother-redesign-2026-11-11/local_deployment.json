@@ -1,0 +1,52 @@
+{
+  "deployed_at": "2026-11-11T21:42:39.8656367+08:00",
+  "target": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3834588749",
+  "backup": "B:\\Eleanor Story Expand\\dist\\mother_portraits_local_20261111-214206\\before",
+  "mapped_old_dll": "B:\\Eleanor Story Expand\\dist\\mother_portraits_local_20261111-214206\\removed_from_mod_scan\\EleanorRomance.dll.pre-sophia-20261111-214239.bak",
+  "mapped_dll_handling": "Old mapped DLL moved outside the scanned mod tree after payload-file rejection; external rollback backup retained",
+  "version": "0.91",
+  "scope": "Local installation only",
+  "files": [
+    {
+      "source": "bin\\Release\\EleanorRomance.dll",
+      "target": "EleanorRomance.dll",
+      "previous_sha256": "c5d8ba423ad823edc79dc1fc0e53cce33b8bbb8506f191bcf48628dbc9df731d",
+      "source_sha256": "d7d3848c19a9e47f195c9f3148159acaf27653bf2d9886c1f3a81ecc3e410a15",
+      "deployed_sha256": "d7d3848c19a9e47f195c9f3148159acaf27653bf2d9886c1f3a81ecc3e410a15",
+      "backup_exists": true
+    },
+    {
+      "source": "Textures\\Items\\er_portrait_mother_female_beauty.png",
+      "target": "Textures\\Items\\er_portrait_mother_female_beauty.png",
+      "previous_sha256": "c31f55f025cde777b0fff8d0cbeba87ec617b4ce57b32fcd0260aa902c3076cc",
+      "source_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364",
+      "deployed_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364",
+      "backup_exists": true
+    },
+    {
+      "source": "Textures\\Items\\er_portrait_mother_home_female_beauty.png",
+      "target": "Textures\\Items\\er_portrait_mother_home_female_beauty.png",
+      "previous_sha256": null,
+      "source_sha256": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44",
+      "deployed_sha256": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44",
+      "backup_exists": false
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "previous_sha256": "bbff71f12ed8563359d0c7f9cf5effc8edcc60e1d8037af141c574a0efe4a337",
+      "source_sha256": "96559975efdf21f69c4026b9fecc31facdc34b44a22186f0e53711e70862dbfd",
+      "deployed_sha256": "96559975efdf21f69c4026b9fecc31facdc34b44a22186f0e53711e70862dbfd",
+      "backup_exists": true
+    }
+  ],
+  "hashes_verified": true,
+  "game_restart_required": true,
+  "game_ui_verified": false,
+  "game_process_terminated": false,
+  "saves_modified": false,
+  "published": false,
+  "mapped_old_dll_original_location": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3834588749\\EleanorRomance.dll.pre-sophia-20261111-214239.bak",
+  "scan_blocker_fix": "scan_blocker_fix.json",
+  "native_scan_after_fix": "native_scan_after_fix.json"
+}

@@ -1,0 +1,106 @@
+{
+  "revision": "v4_intimate",
+  "status": "candidate_delivered",
+  "scope": "Sophia intimate/private homewear costume edit",
+  "actual_age": 38,
+  "apparent_adult_age": 28,
+  "target_original": {
+    "path": "Art/mother-redesign-2026-11-11/masters/mother_beauty_master_v3_upper.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "bytes": 1920258,
+    "sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+    "alpha_bbox": [
+      104,
+      1,
+      1042,
+      1374
+    ],
+    "upload_path": "Art/mother-redesign-2026-11-11/references/intimate_v4/sophia_upper_edit_target_full.png"
+  },
+  "user_attachment_original": {
+    "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-8e45c53c-fc55-4303-a64d-d3fc3437f4d7.jpg",
+    "size": [
+      1080,
+      608
+    ],
+    "bytes": 76403,
+    "sha256": "c3a3765dc7700d332b80bb3345df7c0b210fbf8125a25331d0e0175d71b925d3"
+  },
+  "references": [
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/intimate_v4/sophia_upper_edit_target_full.png",
+      "role": "EDIT TARGET; full-canvas Sophia upper-district beauty candidate; preserve identity, hair, face, body and framing",
+      "size": [
+        853,
+        1024
+      ],
+      "bytes": 1047529,
+      "sha256": "4e61d6baf53c8b614d040da97a5c7196919426880026b3bcf88d39f16a7f7e2d"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/intimate_v4/intimate_knit_reference.jpg",
+      "role": "COSTUME REFERENCE ONLY; fitted rib-knit homewear silhouette and collar/knit structure; do not copy subject, pose or kitchen",
+      "size": [
+        640,
+        509
+      ],
+      "bytes": 66031,
+      "sha256": "ca7e630e36395ed5027a5b0828825210c3d0877620ecf5b81e90de19ca874fa5"
+    }
+  ],
+  "reference_method": "Original target and user attachment preserved; target isotropically downscaled to max1024 with full transparent canvas; user reference cropped to garment area and downscaled to max640; originals preserved",
+  "runtime_replaced": false,
+  "published": false,
+  "requested_count": 1,
+  "requested_size": "1024x1024",
+  "model": "gpt-image-2",
+  "prompt": "prompts/mother_intimate_v4.txt",
+  "master": "masters/mother_beauty_master_v4_intimate.png",
+  "prompt_sha256": "10a82869be9a3e677ed9b3479bf2ea96528f5da3f4ace313a2a8658cee7eed28",
+  "request_size_preflight": {
+    "image_payload_bytes": 1113560,
+    "prompt_bytes": 2924,
+    "conservative_encoded_request_upper_bound_bytes": 1553212,
+    "hard_limit_bytes": 20000000,
+    "working_limit_bytes": 16000000,
+    "verified_before_submission": true,
+    "actual_serialized_post_body_bytes": 1117237
+  },
+  "generation_attempts": 2,
+  "tool": "codexzh-image/scripts/image.mjs",
+  "actual_request_receipt": "request_receipts.jsonl",
+  "pre_generation_protection": {
+    "runtime_unchanged": true,
+    "upper_v3_master_unchanged": true,
+    "reference_original_preserved": true
+  },
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "result": "Connection terminated before receiving image result; no local image file",
+      "actual_serialized_post_body_bytes": 1117237
+    },
+    {
+      "attempt": 2,
+      "result": "Succeeded; complete transparent PNG downloaded",
+      "actual_serialized_post_body_bytes": 1117237
+    }
+  ],
+  "master_sha256": "18942091249da4ae2590c3037163d2aeca5f97b8579ad859b252b4fda69c034f",
+  "actual_master_size": [
+    1145,
+    1374
+  ],
+  "actual_master_bytes": 1883929,
+  "download": "Existing image skill client downloaded complete PNG successfully",
+  "output_portrait": "portraits/er_portrait_mother_sophia_home_beauty_v4.png",
+  "validation": "validation_v4_intimate.json",
+  "post_generation_protection": {
+    "upper_v3_master_unchanged": true,
+    "user_attachment_original_unchanged": true,
+    "runtime_baseline_unchanged": true
+  }
+}

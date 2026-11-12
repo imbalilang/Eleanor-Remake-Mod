@@ -112,8 +112,10 @@ namespace EleanorRomance
             if (client.identifier == "eleanorBailOfficer")
             {
                 Dialogue choices = FindChoices(client.mainDialogue);
+                Dialogue rescueLater = StoryEngine.PlayerReply(L.Get("er_choice_rescue_later"));
+                rescueLater.SetEndAction(StoryEngine.Dismiss);
                 choices.AddChoice(DirectoryMaster.Item("yes"), L.Get("er_choice_rescue_later"),
-                    L.Get("er_choice_rescue_later_desc"), null, StoryEngine.Dismiss);
+                    L.Get("er_choice_rescue_later_desc"), rescueLater, null);
                 client.OnDismiss += SynchronizeRescue;
                 return;
             }

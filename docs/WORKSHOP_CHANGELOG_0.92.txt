@@ -1,0 +1,15 @@
+0.92｜双恋入口改为角色口吻，声望进度改为顶部提示
+
+• 双恋入口选项改为角色口吻“那你教我几句”，路线、奖励与声望说明移入选项说明。
+• 双恋等待期的上层区声望进度改为顶部提示，不再作为旁白/对白出现。
+• 加入索菲娅 v3 上层日常装与 v4 奶油白针织私服定稿；少女当铺启用时使用新图，未启用仍回退 femaleUpper3。
+• 选项结果、数值、路线与 E1—E14 编号不变。
+• 保留 0.91 的选项发言归属修复与全部既有内容。
+
+0.92 | In-character dual-romance entry and top-notification reputation progress
+
+• The dual-romance entry option is now the in-character line "Then teach me a few lines"; route, reward and reputation details moved into the option description.
+• The waiting-gate Upper Level reputation progress is now shown as a top notification instead of narration.
+• Includes Sophia's approved v3 upper outfit and v4 cream knit home portraits; with CutePortraits the new art is used, without it the original femaleUpper3 fallback remains.
+• Choice results, values, routes and E1–E14 numbering are unchanged.
+• Retains 0.91's choice speaker-attribution fixes and all existing content.

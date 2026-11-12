@@ -1,0 +1,13 @@
+0.97｜后宫线声望要求下调为 30／60／90
+
+• 上层区声望检查点由 50／100／150 下调为 30／60／90，避免主线快通关时仍卡在第二阶段。
+• 仍然只在对应前置完成时检查当时声望，达标一次即锁存，后续下降不撤销；不消耗声望，也没有付费替代。
+• 奖励、等待期日常、目标日、路线和结局不变；已有存档会按新阈值重新判定尚未通过的检查点。
+• 0.96 的短提示、0.95 的僚机铺垫与 0.94 的莉迪亚交易保留。
+
+0.97 | Dual-route reputation checkpoints lowered to 30/60/90
+
+• Upper Level reputation checkpoints are lowered from 50/100/150 to 30/60/90 so the route can progress before the main story ends.
+• Checkpoints still latch once reached, spend no reputation and have no paid alternative; a later reputation drop does not revoke them.
+• Rewards, waiting dailies, target days, routes and endings are unchanged; existing saves re-check any checkpoint not yet passed against the new thresholds.
+• 0.96's shorter tips, 0.95's matchmaking setup and 0.94's Lydia purchases remain.

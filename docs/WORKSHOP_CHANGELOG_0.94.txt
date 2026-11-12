@@ -1,0 +1,15 @@
+0.94｜莉迪亚在双恋主线中实际购买奢侈品
+
+• 双恋线 dr04、dr07、dr09、dr10 在原有对白后加入“顺路看货”短段：她会在同一次来访里实际购买奢侈品／艺术品／高档品，预算 500，走原生开价、议价和成交流程。
+• 双恋结局后的日常第 2 段（莉迪亚）也改为真实买入，预算 300；其余六段日常不变。
+• 她只会买，不会卖；不会白送钱或好感。成交后与未成交时的离店收尾不同。
+• 场景完成改为在她离店后提交，读档或中途退出不会跳过交易部分。
+• 原有对白、选项、关系和路线节点不变；0.93 的朋友线后日谈真实卖货修复保留。
+
+0.94 | Lydia actually buys luxury goods in the dual main route
+
+• Four dual-route scenes (dr04, dr07, dr09, dr10) now follow their written dialogue with a short browsing segment: Lydia buys luxury, art and high-end stock in the same visit, with a 500-credit budget through the normal offer/bargain flow.
+• Lydia's post-route daily visit (rotation 2) is also a real purchase visit with a 300-credit budget; the other six dailies are unchanged.
+• She only buys, never sells; no free money or affection. The closing line differs depending on whether a deal happened.
+• The scene now commits when she leaves, so saving or quitting mid-visit does not skip the trade.
+• Existing dialogue, choices, relationships and route nodes are unchanged; 0.93's friend-route goods visits remain.

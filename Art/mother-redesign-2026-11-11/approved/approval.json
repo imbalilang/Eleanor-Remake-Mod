@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-11",
+  "approved_at": "2026-11-11T21:36:28.616535+08:00",
+  "user_instruction": "不再继续等待，使用现有两版作为定稿导入游戏",
+  "actual_age": 38,
+  "apparent_adult_age": 28,
+  "scope": "Existing v3 upper outfit and v4 ivory knit accepted without further generation",
+  "v5_status": "Cancelled locally by user instruction; no returned image; no automatic retry",
+  "assets": [
+    {
+      "revision": "v3",
+      "style": "beauty",
+      "runtime_key": "er_portrait_mother_female_beauty",
+      "runtime_path": "Textures/Items/er_portrait_mother_female_beauty.png",
+      "master": "approved/sophia_upper_beauty_master.png",
+      "original_master": "masters/mother_beauty_master_v3_upper.png",
+      "master_sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+      "portrait": "approved/er_portrait_mother_female_beauty.png",
+      "candidate_portrait": "portraits/er_portrait_mother_sophia_beauty_upper_v3.png",
+      "portrait_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364",
+      "portrait_size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "revision": "v4_intimate",
+      "style": "beauty",
+      "runtime_key": "er_portrait_mother_home_female_beauty",
+      "runtime_path": "Textures/Items/er_portrait_mother_home_female_beauty.png",
+      "master": "approved/sophia_home_beauty_master.png",
+      "original_master": "masters/mother_beauty_master_v4_intimate.png",
+      "master_sha256": "18942091249da4ae2590c3037163d2aeca5f97b8579ad859b252b4fda69c034f",
+      "portrait": "approved/er_portrait_mother_home_female_beauty.png",
+      "candidate_portrait": "portraits/er_portrait_mother_sophia_home_beauty_v4.png",
+      "portrait_sha256": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44",
+      "portrait_size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ]
+    }
+  ],
+  "daily_scenes": [
+    "er_story_mother",
+    "er_story_maid_m17"
+  ],
+  "home_entry_point": "PortraitCompat.ResolveMotherHome()",
+  "home_story_implemented": false,
+  "vanilla_policy": "No separate approved vanilla art; retain existing femaleUpper3 fallback without passing beauty artwork off as vanilla",
+  "published": false,
+  "in_game_ui_verified": false
+}

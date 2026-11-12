@@ -2673,14 +2673,42 @@
               "speaker": "eleanor",
               "text": "我不用再为了求你帮忙，找个理由来这儿了。",
               "expr": "shy"
-            },
-            {
-              "speaker": "player",
-              "text": "不找理由也能来。"
-            },
+            }
+          ]
+        },
+        {
+          "id": "c18.b003a",
+          "chapter": "c18",
+          "scene": "关系稳定分支：不找理由也能来",
+          "label": "",
+          "lines": [
             {
               "speaker": "eleanor",
               "text": "这可是你说的。"
+            }
+          ]
+        },
+        {
+          "id": "c18.b003b",
+          "chapter": "c18",
+          "scene": "关系稳定分支：想来就来",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "……你最近说话倒是越来越直接。行，我记住了。"
+            }
+          ]
+        },
+        {
+          "id": "c18.b003c",
+          "chapter": "c18",
+          "scene": "关系稳定分支：先把日子过顺",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你倒会替我省心。好，我先把日子过顺。"
             }
           ]
         },

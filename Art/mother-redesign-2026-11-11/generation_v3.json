@@ -1,0 +1,103 @@
+{
+  "revision": "v3",
+  "status": "user_approved_final_installed_in_workspace",
+  "actual_age": 38,
+  "apparent_adult_age": 28,
+  "scope": "Sophia upper-district costume edit; preserve v2 identity and figure",
+  "target_original": {
+    "path": "Art/mother-redesign-2026-11-11/masters/mother_beauty_master_v2.png",
+    "bytes": 1843946,
+    "sha256": "28dacb8c0e419407fb974de72d0a4ada5b4c79d30ea889701e4ee0882da2a311"
+  },
+  "references": [
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/upper_v3/sophia_edit_target.png",
+      "role": "EDIT TARGET; preserve Sophia identity, hair, expression, anatomy and pose",
+      "size": [
+        853,
+        1024
+      ],
+      "bytes": 966102,
+      "sha256": "28519d05b229418b33716b8629c26057751a4926239f25d3abaa3f2ad6206427"
+    },
+    {
+      "path": "Art/mother-redesign-2026-11-11/references/upper_v3/upper_women_costume_reference.jpg",
+      "role": "Costume reference only: Upper10 jade/gold, Upper11 ivory neckline/gold lattice sleeves, Upper12 tailored formal trim",
+      "size": [
+        960,
+        500
+      ],
+      "bytes": 132843,
+      "sha256": "e2f23b3d2257a2d64bfb4e619c387e23bb057dafb84cc8a683d3b20ae4bff7c3"
+    }
+  ],
+  "costume_reference_originals": [
+    {
+      "original_path": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_femaleUpper10.png",
+      "sha256": "9e36bb7a1cf627387f04b02fc2ef5bc9742d78460bae37dca260c688b72bbe74",
+      "bytes": 41860,
+      "crop_box": [
+        65,
+        59,
+        223,
+        212
+      ],
+      "role": "Costume structure and palette only; ignore identity, hair, pose and age"
+    },
+    {
+      "original_path": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_femaleUpper11.png",
+      "sha256": "073478497436e2eb2bb9cb0010adfe0d0787f4f662309d49a0352b27c96670da",
+      "bytes": 38548,
+      "crop_box": [
+        74,
+        62,
+        215,
+        212
+      ],
+      "role": "Costume structure and palette only; ignore identity, hair, pose and age"
+    },
+    {
+      "original_path": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_femaleUpper12.png",
+      "sha256": "c2d2dc3822c0b2914cb373d7571b8aa95abc86b6909dddb7ba18f06babc4ce14",
+      "bytes": 36378,
+      "crop_box": [
+        87,
+        62,
+        202,
+        212
+      ],
+      "role": "Costume structure and palette only; ignore identity, hair, pose and age"
+    }
+  ],
+  "reference_method": "Original target preserved; separate isotropic max1024 transparent PNG upload copy; native upper women cropped to alpha bbox and displayed at integer2x in a compressed JPEG reference collage",
+  "runtime_replaced": true,
+  "published": false,
+  "requested_count": 1,
+  "requested_size": "1024x1024",
+  "model": "gpt-image-2",
+  "prompt": "prompts/mother_beauty_v3_upper.txt",
+  "master": "masters/mother_beauty_master_v3_upper.png",
+  "prompt_sha256": "54034297f3e15a8502493dff2bde6be47c315897a0890566df5f90c40a3f30d6",
+  "request_size_preflight": {
+    "image_payload_bytes": 1098945,
+    "prompt_bytes": 3653,
+    "conservative_encoded_request_upper_bound_bytes": 1534449,
+    "hard_limit_bytes": 20000000,
+    "working_limit_bytes": 16000000,
+    "verified_before_submission": true,
+    "actual_serialized_post_body_bytes": 1103346
+  },
+  "generation_attempts": 1,
+  "tool": "codexzh-image/scripts/image.mjs",
+  "actual_request_receipt": "request_receipts.jsonl",
+  "master_sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+  "actual_master_size": [
+    1145,
+    1374
+  ],
+  "actual_master_bytes": 1920258,
+  "download": "Original skill client downloaded complete image successfully",
+  "output_portrait": "portraits/er_portrait_mother_sophia_beauty_upper_v3.png",
+  "validation": "validation_v3.json",
+  "approval": "approved/approval.json"
+}

@@ -171,5 +171,9 @@
   "er_notice_savings_progress": "Investigation fund: {0} / 800 ({1} credits to go)",
   "er_notice_savings_complete": "The investigation fund has reached 800 credits.",
   "er_ending_content_end": "This is the end of this mod's story. You can continue running the shop and its dailies.",
-  "er_ending_return_button": "Return to the shop"
+  "er_ending_return_button": "Return to the shop",
+  "er_prompt_c18": "...",
+  "er_choice_c18_keep": "I don't need a reason to come.",
+  "er_choice_c18_always": "Come whenever you want. Don't treat yourself like a customer.",
+  "er_choice_c18_space": "Get your life steady first. Come or don't—it's fine."
 }

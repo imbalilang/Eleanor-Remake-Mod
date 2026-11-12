@@ -1,0 +1,11 @@
+0.96｜缩短后宫线顶部提示
+
+• 等待期声望提示：由“上层区声望：X／Y。下一阶段奖励：……。达标后继续主线，日常与营业不受影响。”缩短为“上层区声望：X／Y”。
+• 检查点提示缩短为“上层区声望达到Y，奖励已解锁。”；奖励提示为“获得〈饰品〉（放入橱窗生效）。”；关系稳定与橱窗已满提示也各压缩成一句。
+• 只改顶部提示文本，不改声望阈值、奖励、路线、选项或结局；0.95 的僚机铺垫与 0.94 的交易改动保留。
+
+0.96 | Shorter dual-route top notifications
+
+• The waiting-gate reputation tip is now just "Upper Level reputation: X / Y", matching the length of the revolution supply tip.
+• The checkpoint line is now "Upper Level reputation reached Y. Reward unlocked."; reward, steady-relationship and full-showcase notices each keep one short clause.
+• Text-only change: thresholds, rewards, routes, choices and endings are unchanged; 0.95's matchmaking setup and 0.94's Lydia purchases remain.

@@ -1,0 +1,35 @@
+{
+  "master": "masters/mother_beauty_master_v2.png",
+  "master_sha256": "28dacb8c0e419407fb974de72d0a4ada5b4c79d30ea889701e4ee0882da2a311",
+  "parameters": {
+    "visible_height": 171.5,
+    "centre_x": 148.5,
+    "bottom": 244.4375,
+    "magenta_key": false,
+    "fringe": false
+  },
+  "manual_landmarks_source": {
+    "left_iris_centre": [
+      454,
+      343
+    ],
+    "right_iris_centre": [
+      605,
+      318
+    ],
+    "chin": [
+      541,
+      510
+    ],
+    "left_cheek": [
+      397,
+      389
+    ],
+    "right_cheek": [
+      694,
+      369
+    ]
+  },
+  "calibration_basis": "Manual source coordinate review; align mean eye y=115 and chin near y=138 against project Eleanor/Lydia. Isotropic transform only. Approximate visual landmarks, not anatomical measurements.",
+  "fringe_note": "Generated PNG has genuine alpha and legitimate purple cardigan; no magenta key or fringe desaturation."
+}

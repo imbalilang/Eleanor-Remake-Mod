@@ -103,7 +103,13 @@ namespace EleanorRomance
                 MaidText.Append(ending,RomanceState.Route==1?"m24_b006":MaidWorldEvents.Acquitted?"m24_b008":"m24_b007");
                 if(RomanceState.Route==2 && !MaidWorldEvents.Acquitted)
                     StoryEngine.Tail(ending).SetNextDialogue(StoryEngine.Text(L.Player,L.Get("er_maid_one_step")));
-                MaidText.Append(ending,"m24_b009","m24_b010");extra=AppendSafeExtras(ending);return ending;
+                MaidText.Append(ending,"m24_b009","m24_b010");
+                extra=AppendSafeExtras(ending);
+                Choices(ending,
+                    Option("er_maid_outfit_a",MaidText.Build("m24_b010a")),
+                    Option("er_maid_outfit_b",MaidText.Build("m24_b010b")),
+                    Option("er_maid_outfit_c",MaidText.Build("m24_b010c")));
+                return ending;
             },()=>CompleteEvent(24,()=>{extra?.Invoke();AdvanceReturn(24);}));
             return Ready(c,opening);
         }
