@@ -1,0 +1,37 @@
+1.03｜修复第6章求食援助分支
+
+• 第6章（c05）求食来访现在与原版 Eleanor4 一样以 0 预算到店。此前固定 40 预算会被店铺吸引力与特性加成抬高（常见显示约 68），赠食被当成购买，小额或免费食物会误播“你开的是店，不是救济站”。
+• 现在任何被她收下的食物都算真实援助，必定进入道谢与道歉分支；只有什么都没给时才播放拒绝台词。她也不会再带着“本不该有”的钱离开。
+• 同时包含 1.02 的后期回应选择与路线修复、1.01 的上层顾客饰品判定修复，以及一轮对白与留白整理。
+• 不改章节顺序、选项结果、声望数值、奖励、路线或 E1—E14。
+
+1.03 | Fix chapter 6's hardship food-aid branch
+
+• Chapter 6's (c05) hardship visit now uses a zero budget like vanilla Eleanor4. The old fixed budget of 40 was raised by store attractiveness and perks (often shown as about 68), so gifts were treated as purchases and small or free food played the "this is a shop, not a charity" line.
+• Any food she accepts now counts as real aid and always plays the thank-you and apology branch; the refusal line only plays if the player gives her nothing. She also no longer leaves with credits she should not have.
+• Includes 1.02's late-route response choices and route fixes, 1.01's Upper Level customer eligibility fix, and a dialogue/whitespace polish pass.
+• Chapter order, choice outcomes, reputation values, rewards, routes and endings are unchanged.
+
+1.02｜后期回应选择化与路线修复
+
+• 后宫线 dr07、dr09、dr14 增加玩家回应选择；埃莉诺 c18、侍从线 m24、革命军线 R14 也加入同类短选择；双恋线选项由 13 个增加到 22 个。
+• 后宫线不再触发普通恋爱线的拾荒协助事件，也不再弹出该事件解锁提示。
+• 包含 1.01 的上层顾客饰品判定修复；所有选择只改变当场反应，不改变路线、声望、奖励或 E1—E14。
+
+1.02 | Late-route response choices and route fixes
+
+• dr07, dr09 and dr14 on the dual route gain player response choices; c18 on Eleanor's route, maid m24 and revolution R14 gain the same kind of short choices; the dual route grows from 13 to 22 choices.
+• The dual route no longer triggers the ordinary route's landfill-assist event or its unlock notice.
+• Includes 1.01's Upper Level customer eligibility fix. Choices only change the immediate reaction; routes, reputation, rewards and endings are unchanged.
+
+1.01｜后宫线饰品对所有上层顾客生效
+
+• 后宫线三件橱窗饰品此前只识别 upperLowerVisitor、upperLowerVisitorLuxury、ulDiscerningShopper 三个顾客 ID；囤水者（waterStockpiler）等其他正规上层顾客没有被计入。
+• 现在按 FACTION_UPPER_LEVEL 判定，覆盖所有上层买家，包括 SELLNBUY 顾客；具名剧情、原版埃莉诺剧情、其他 MOD 客户和不做购买的顾客仍排除。
+• 三件饰品仍只在真实陈列时生效，每访小费最多 150；只改判定范围，不改奖励数值、路线或结局。
+
+1.01 | Harem ornaments affect all Upper Level customers
+
+• The three harem showcase ornaments previously recognized only three customer IDs (upperLowerVisitor, upperLowerVisitorLuxury, ulDiscerningShopper); the water stockpiler and other proper Upper Level customers were not counted.
+• Eligibility now uses FACTION_UPPER_LEVEL and covers all Upper Level buyers, including SELLNBUY customers. Story clients, native Eleanor's scripted appearances, other mods and non-buyers remain excluded.
+• The ornaments still require real showcase display, with the tip capped at 150 per visit. Only the eligibility range changed; rewards, routes and endings are unchanged.

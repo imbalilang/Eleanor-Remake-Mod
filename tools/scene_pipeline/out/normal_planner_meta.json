@@ -1,0 +1,16 @@
+{
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4164,
+    "completion_tokens": 8961,
+    "total_tokens": 13125,
+    "prompt_tokens_details": {
+      "cached_tokens": 4096
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6370
+    },
+    "prompt_cache_hit_tokens": 4096,
+    "prompt_cache_miss_tokens": 68
+  }
+}

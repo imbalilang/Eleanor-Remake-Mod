@@ -1,0 +1,461 @@
+{
+  "route": "normal",
+  "title": "回家",
+  "summary": "索菲娅获救后搬进下层，玩家借一批营养果和一场种子买卖赢下母亲的认可，并在小店后院与埃莉诺完婚。",
+  "chapters": [
+    {
+      "chapter": "nl01",
+      "title": "母亲搬来了",
+      "summary": "索菲娅第一次进店，感激玩家救命却保留对女儿选择的判断；玩家接下八颗营养果委托，埃莉诺在母亲面前护着他。",
+      "pleasure_beats": [
+        "玩家不卑不亢接下委托，当场报出下层区营养果行情",
+        "埃莉诺当面护玩家，让索菲娅第一次正眼看他"
+      ],
+      "blocks": [
+        {
+          "id": "nl01_b001",
+          "scene": "到店",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "回来了？妈还在后面，先别关门。"},
+            {"speaker": "sophia", "text": "铺面比我想的小，倒也干净。"},
+            {"speaker": "player", "text": "进来说。"}
+          ],
+          "actions": ["埃莉诺先一步进店，在柜台后抱住玩家又松手。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b002",
+          "scene": "母亲开口",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "你救了我们，我记着。"},
+            {"speaker": "sophia", "text": "可我得看她是喜欢你，还是因为那时候只有你伸手。"},
+            {"speaker": "eleanor", "text": "喂，妈，你审他归审，别把我说得像没长眼睛。"}
+          ],
+          "actions": ["索菲娅站在柜台前，手指按着包带。"],
+          "choices": [
+            {"label": "接话", "next": "nl01_b003", "note": "玩家短句回她，不卑不亢"},
+            {"label": "先倒水", "next": "nl01_b004", "note": "玩家先倒水，缓和气氛"}
+          ],
+          "state": {}
+        },
+        {
+          "id": "nl01_b003",
+          "scene": "夹板",
+          "label": "",
+          "lines": [
+            {"speaker": "player", "text": "先看货再谈人。"},
+            {"speaker": "sophia", "text": "也行。"},
+            {"speaker": "eleanor", "text": "你们俩别在我店里一来一回。"}
+          ],
+          "actions": ["玩家从柜台下拿出账本拍在台面。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b004",
+          "scene": "端水",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "你盯着我干什么。"},
+            {"speaker": "player", "text": "帮你倒水。"},
+            {"speaker": "sophia", "text": "坐下说。"}
+          ],
+          "actions": ["玩家把两杯热水推到母女面前。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b005",
+          "scene": "询价",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "八颗营养果，三天交。你敢接吗。"},
+            {"speaker": "player", "text": "先报行情。下层区整颗收，市价九十二一块。"},
+            {"speaker": "eleanor", "text": "这价还成。"}
+          ],
+          "actions": ["玩家翻账本，指着一行给索菲娅看。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b006",
+          "scene": "三选一",
+          "label": "接委托",
+          "lines": [
+            {"speaker": "eleanor", "text": "你还在想什么？"},
+            {"speaker": "sophia", "text": "让他自己说。"}
+          ],
+          "actions": ["索菲娅把三颗营养果推到灯下。"],
+          "choices": [
+            {"label": "接下委托", "next": "nl01_b007", "note": "玩家直接报收购价"},
+            {"label": "让埃莉诺帮腔", "next": "nl01_b008", "note": "索菲娅堵埃莉诺，要求玩家自己说"},
+            {"label": "先坐下喝热水", "next": "nl01_b009", "note": "索菲娅觉得玩家会办事"}
+          ],
+          "state": {}
+        },
+        {
+          "id": "nl01_b007",
+          "scene": "报价",
+          "label": "",
+          "lines": [
+            {"speaker": "player", "text": "八颗，每颗九十五，我当定金。"},
+            {"speaker": "sophia", "text": "价不低，倒是没压价。"},
+            {"speaker": "eleanor", "text": "他比你想的可靠。"}
+          ],
+          "actions": ["玩家取出小秤，把第一颗营养果放上去。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b008",
+          "scene": "埃莉诺帮腔",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "他铺子里最懂果，就按九十五给。"},
+            {"speaker": "sophia", "text": "我是问你，还是问他？"},
+            {"speaker": "eleanor", "text": "你明知道。"}
+          ],
+          "actions": ["埃莉诺被堵得脸热，别过脸去。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b009",
+          "scene": "先坐下喝热水",
+          "label": "",
+          "lines": [
+            {"speaker": "player", "text": "先坐下，水还热。"},
+            {"speaker": "sophia", "text": "会办事。"},
+            {"speaker": "eleanor", "text": "你倒会哄我妈。"}
+          ],
+          "actions": ["玩家把两张旧椅拉出来，放在柜台内侧。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b010",
+          "scene": "反击",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "店面小，能销出去吗。"},
+            {"speaker": "player", "text": "能销。三天出，不压价。"},
+            {"speaker": "sophia", "text": "那记着。"}
+          ],
+          "actions": ["索菲娅从包里拿出一条旧手帕，摊开在柜台上。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b011",
+          "scene": "定金",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "八颗先留这里。三天后我来看成色。"},
+            {"speaker": "eleanor", "text": "妈，你这就走了？"},
+            {"speaker": "sophia", "text": "不耽误他做事。"}
+          ],
+          "actions": ["索菲娅把八颗营养果一字排开。"],
+          "choices": [
+            {"label": "先和埃莉诺说话", "next": "nl01_b012", "note": "留下陪埃莉诺"},
+            {"label": "送索菲娅出门", "next": "nl01_b013", "note": "送母亲到门口"}
+          ],
+          "state": {}
+        },
+        {
+          "id": "nl01_b012",
+          "scene": "留店收拾",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "她那个样子，就是见不得我帮你说话。"},
+            {"speaker": "player", "text": "没事。"},
+            {"speaker": "eleanor", "text": "谁担心你。"}
+          ],
+          "actions": ["埃莉诺把柜台上的果按大小重新摆。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b013",
+          "scene": "母亲离开",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "埃莉诺，别在外人前太护短。"},
+            {"speaker": "eleanor", "text": "他不是外人。"},
+            {"speaker": "sophia", "text": "我先回住处。"}
+          ],
+          "actions": ["索菲娅提包出门，脚步很轻。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b014",
+          "scene": "埃莉诺留堂",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "你刚才报价，少了。妈其实会多给。"},
+            {"speaker": "player", "text": "少说。"},
+            {"speaker": "eleanor", "text": "我偏说。"}
+          ],
+          "actions": ["埃莉诺拿起抹布擦柜台，擦得很重。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl01_b015",
+          "scene": "关门",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "今天算你过关。"},
+            {"speaker": "player", "text": "回家。"},
+            {"speaker": "eleanor", "text": "回哪，我住你楼上。"}
+          ],
+          "actions": ["玩家关掉门外灯，埃莉诺抓住他手腕。"],
+          "choices": [
+            {"label": "抓住她", "next": "nl01_b016", "note": "玩家也扣住她的手"},
+            {"label": "先锁门", "next": "nl01_b016", "note": "玩家顺手挂上锁"}
+          ],
+          "state": {}
+        },
+        {
+          "id": "nl01_b016",
+          "scene": "后院",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "亲一下，算是给我妈的见面礼。"},
+            {"speaker": "player", "text": "这又怪妈的账？"},
+            {"speaker": "eleanor", "text": "对，你欠我的。"}
+          ],
+          "actions": ["埃莉诺踮脚亲玩家一下，然后去后院搬藤。"],
+          "choices": [],
+          "state": {"mother_approval": 1}
+        }
+      ]
+    },
+    {
+      "chapter": "nl02",
+      "title": "种子的价钱",
+      "summary": "玩家交付营养果并拿到快生种子，拒绝买家和公司压价，保下试种权；索菲娅当众认可，埃莉诺吃醋又护夫，三人在后院完婚。",
+      "pleasure_beats": [
+        "玩家拒绝买家压价和公司威胁，保下试种权",
+        "索菲娅当众认可玩家，埃莉诺公开护夫并要婚礼"
+      ],
+      "blocks": [
+        {
+          "id": "nl02_b001",
+          "scene": "交付",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "货齐了，我帮你摆的，不许说乱。"},
+            {"speaker": "player", "text": "来。"},
+            {"speaker": "sophia", "text": "别动，我先看。"}
+          ],
+          "actions": ["玩家把第一批营养果摆上柜台，埃莉诺站在一旁看。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b002",
+          "scene": "检查",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "这批皮色还行，压伤没有。"},
+            {"speaker": "sophia", "text": "你做过预冷？"},
+            {"speaker": "player", "text": "下层区夜里冷，没让闷。"}
+          ],
+          "actions": ["索菲娅逐颗检查，只点头不说好，气氛先紧后松。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b003",
+          "scene": "快生种子",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "这袋快生种子给你。"},
+            {"speaker": "sophia", "text": "值钱，也容易招眼。"},
+            {"speaker": "eleanor", "text": "妈，你给他这么早。"}
+          ],
+          "actions": ["索菲娅从内袋掏出一个小布袋，搁在柜台上。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b004",
+          "scene": "买家上门",
+          "label": "",
+          "lines": [
+            {"speaker": "npc", "text": "小老板，这些种子我全要，价你开。"},
+            {"speaker": "eleanor", "text": "你哪位？"},
+            {"speaker": "npc", "text": "黑市来的，现款。"}
+          ],
+          "actions": ["黑市商人斜靠在门框，手里夹着一张运输签。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b005",
+          "scene": "公司代表",
+          "label": "",
+          "lines": [
+            {"speaker": "npc", "text": "帕斯泰尔的人，外面等着。"},
+            {"speaker": "sophia", "text": "让他进来。"},
+            {"speaker": "npc", "text": "种子许可，按公司价收走。"}
+          ],
+          "actions": ["公司职员跟进，拿许可压价，索菲娅不说话看玩家。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b006",
+          "scene": "三选一",
+          "label": "留试种",
+          "lines": [
+            {"speaker": "player", "text": "我留着试种。"},
+            {"speaker": "eleanor", "text": "你一个人种？"},
+            {"speaker": "sophia", "text": "让他选。"}
+          ],
+          "actions": ["玩家捏住种子袋，黑市商人和公司代表都往前半步。"],
+          "choices": [
+            {"label": "卖一部分", "next": "nl02_b007", "note": "买家付款，母亲摇头，埃莉诺帮玩家解释"},
+            {"label": "留试种", "next": "nl02_b008", "note": "公司代表黑脸离开，母亲说像她当年"},
+            {"label": "交母亲代种", "next": "nl02_b009", "note": "索菲娅收下种子，埃莉诺吃醋排第三"}
+          ],
+          "state": {}
+        },
+        {
+          "id": "nl02_b007",
+          "scene": "压价反击",
+          "label": "",
+          "lines": [
+            {"speaker": "player", "text": "买一半，双倍价。"},
+            {"speaker": "npc", "text": "你趁机坐地起价。"},
+            {"speaker": "sophia", "text": "至少该留六颗。"}
+          ],
+          "actions": ["埃莉诺站到玩家身侧，盯着买家。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b008",
+          "scene": "埃莉诺吃醋",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "你最近陪种子比陪我多。"},
+            {"speaker": "player", "text": "没那回事。"},
+            {"speaker": "eleanor", "text": "那就证明。"}
+          ],
+          "actions": ["埃莉诺用脚尖踢了踢柜台。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b009",
+          "scene": "公开护夫",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "店里的货不卖不讲价。"},
+            {"speaker": "npc", "text": "小姐，你不懂许可。"},
+            {"speaker": "eleanor", "text": "我只管谁欺负他。"}
+          ],
+          "actions": ["埃莉诺挡在公司代表前，双手抱在胸前。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b010",
+          "scene": "母亲认可",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "这单交给他，我放心。"},
+            {"speaker": "player", "text": "谢了。"},
+            {"speaker": "eleanor", "text": "你总算说句好话。"}
+          ],
+          "actions": ["索菲娅走到买家面前，把许可证推回去。"],
+          "choices": [],
+          "state": {"mother_approval": 1}
+        },
+        {
+          "id": "nl02_b011",
+          "scene": "试种决定",
+          "label": "",
+          "lines": [
+            {"speaker": "player", "text": "留六颗，后院代种。"},
+            {"speaker": "sophia", "text": "我还得给你翻土。"},
+            {"speaker": "eleanor", "text": "我也去，省得你们又在后院不出声。"}
+          ],
+          "actions": ["玩家把那袋种子递到索菲娅手里，被她捏了捏袋口。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b012",
+          "scene": "婚礼准备",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "手给我。"},
+            {"speaker": "player", "text": "做什么。"},
+            {"speaker": "eleanor", "text": "量指围。你该去找白裙了。"}
+          ],
+          "actions": ["埃莉诺拉过玩家的手，用一段旧绳绕了绕。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b013",
+          "scene": "后院布置",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "这种藤要绑紧，别风一吹就塌。"},
+            {"speaker": "eleanor", "text": "妈，你拆台归拆，手比谁都快。"},
+            {"speaker": "player", "text": "我搬梯子。"}
+          ],
+          "actions": ["三人用营养果藤布置后院，索菲娅把藤条绕成拱门。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b014",
+          "scene": "婚礼",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "裙子旧，我改了一晚上。"},
+            {"speaker": "player", "text": "好看。"},
+            {"speaker": "eleanor", "text": "你倒是把戒指戴对。"}
+          ],
+          "actions": ["埃莉诺穿旧改婚纱，玩家给她戴戒指。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b015",
+          "scene": "母亲祝福",
+          "label": "",
+          "lines": [
+            {"speaker": "sophia", "text": "以后别欺负她。"},
+            {"speaker": "eleanor", "text": "妈，哪有你这样祝的。"},
+            {"speaker": "sophia", "text": "你也是，别总使唤他。"}
+          ],
+          "actions": ["索菲娅祝福后别过脸，飞快擦了下眼角。"],
+          "choices": [],
+          "state": {}
+        },
+        {
+          "id": "nl02_b016",
+          "scene": "回家收束",
+          "label": "",
+          "lines": [
+            {"speaker": "eleanor", "text": "亲我。"},
+            {"speaker": "player", "text": "就一下？"},
+            {"speaker": "eleanor", "text": "你想几下，都行。"}
+          ],
+          "actions": ["埃莉诺亲玩家，三人坐下吃后院晚火。"],
+          "choices": [],
+          "state": {}
+        }
+      ]
+    }
+  ]
+}

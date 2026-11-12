@@ -516,14 +516,14 @@ namespace EleanorRomance
             client.clientBuyingTagList.Add("FOOD");
             client.clientBuyingTagList.Add("TREAT");
             client.clientBuyingTagList.Add("BREVAGE");
-            client.SetBudget(40);
-            client.tradeReputationMultiplier = 2.0; // vanilla Eleanor4 parity
+            // Vanilla Eleanor4 parity: she arrives with nothing, so food can
+            // only be handed over, never sold. Any accepted item is the aid
+            // itself; a price ratio would misread her store-budget modifiers
+            // as payment and skip the thank-you branch.
+            client.SetBudget(0);
+            client.tradeReputationMultiplier = 2.0;
 
-            client.onItemBought = (item, paid) =>
-            {
-                long market = StoryEngine.MarketValue(item, 1);
-                if (paid <= Math.Max(1L, market / 3)) RomanceState.HardshipAidGiven = true;
-            };
+            client.onItemBought = (item, paid) => RomanceState.HardshipAidGiven = true;
 
             client.mainDialogue = StoryEngine.Build(StoryV06Content.B_C05_B001);
             VanillaEleanorBridge.AttachCashAid(client);

@@ -738,7 +738,7 @@
           "id": "c05.b002",
           "chapter": "c05",
           "scene": "玩家处理：真正提供可食用物品",
-          "label": "接受零价或合理援助交易后",
+          "label": "接受食物援助后",
           "lines": [
             {
               "speaker": "eleanor",
