@@ -1,0 +1,39 @@
+{
+  "installed_directory": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3834588749",
+  "installed_version": "1.03",
+  "assets": [
+    {
+      "source": "Art/love-ending-2026-11-13/endings/er_ending_love_wedding_v6.png",
+      "workspace": "Textures/Items/er_ending_love_wedding.png",
+      "installed": "Textures/Items/er_ending_love_wedding.png",
+      "sha256": "1e4afe5f501bf69069ea1effa585df01d22fbe544b0d2b8e006040d7282bc9e2",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "source": "Art/love-intimate-outfit-2026-11-13/portraits/er_portrait_eleanor_love_intimate_female_beauty_v1.png",
+      "workspace": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+      "installed": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+      "sha256": "abd0ed1a19156ead1784ed7b83e60c1b860cb67023bd75916ebf838e72eb5955",
+      "size": [
+        288,
+        212
+      ]
+    }
+  ],
+  "existing_installed_files_verified": 51,
+  "runtime_scene_status": "nl05, nl06 and nl08 are screenplay stages without runtime callers in installed 1.03",
+  "steam_upload": false,
+  "installed_directory_scan": {
+    "methods_scanned": 1526,
+    "refused": false,
+    "error": null,
+    "capabilities": [],
+    "hard_flags": [],
+    "findings": 0,
+    "pending": [],
+    "deprecated_capabilities": []
+  }
+}

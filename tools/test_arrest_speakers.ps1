@@ -18,11 +18,18 @@ foreach($name in @('假叔叔','Fake Uncle')){
     Assert ($history[0] -eq ($name+': reported stolen goods')) "Native old attribution differs: $($history[0])"
     $history=@(Render-ArrestHistory $c.customOnArrestDialogue)
     $officer=[LocHelper]::GetLocalizedClientName('name_security_officer')
-    $speakers=@($officer,$name,$officer,$name,$officer,$name,'Player')
-    Assert ($history.Count -eq 7) 'Reported uncle scene lost or duplicated lines.'
-    for($i=0;$i -lt 7;$i++){
-        $key='er_v06_c04_b003_'+($i+1).ToString('00')
-        Assert ($history[$i] -eq ($speakers[$i]+': '+$key)) "Wrong actual recorder speaker on uncle line $($i+1): $($history[$i])"
+    $narrator=[EleanorRomance.L]::Get('er_name_narrator')
+    $speakers=@($officer,$name,$officer,$officer,$name,'Player',
+        $narrator,$officer,'Player',$officer,$officer,'Player',$officer,$narrator)
+    $keys=@(
+        'er_v06_c04_b003_01','er_v06_c04_b003_02','er_v06_c04_b003_03',
+        'er_v06_c04_b003_04','er_v06_c04_b003_05','er_v06_c04_b003_06',
+        'er_v06_c04_n005_01','er_v06_c04_n005_02','er_v06_c04_n005_03',
+        'er_v06_c04_n005_04','er_v06_c04_n005_05','er_v06_c04_n005_06',
+        'er_v06_c04_n005_07','er_v06_c04_n005_08')
+    Assert ($history.Count -eq 14) 'Reported uncle scene lost or duplicated lines.'
+    for($i=0;$i -lt 14;$i++){
+        Assert ($history[$i] -eq ($speakers[$i]+': '+$keys[$i])) "Wrong actual recorder speaker on uncle line $($i+1): $($history[$i])"
     }
     $c.onReportAction.Invoke();$c.onCaptureAction.Invoke()
     $due=[EleanorRomance.RomanceState]::NextVisitDay

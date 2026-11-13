@@ -572,7 +572,6 @@ foreach($fallback in @($false,$true)){
 # Whitelist, current and queued saved keys, missing art and optional mod toggles.
 New-MaidRun;Set-Partner
 $own=Blank ([LoadedMod]);$own.Manifest=[ModManifest]::new();$own.Manifest.ID='eleanor_romance';$own.IsEnabled=$true
-$beauty=Blank ([LoadedMod]);$beauty.Manifest=[ModManifest]::new();$beauty.Manifest.ID='cute_portraits';$beauty.IsEnabled=$true
 $own.Sprites=[System.Collections.Generic.Dictionary[string,UnityEngine.Sprite]]::new()
 $sprite=Blank ([UnityEngine.Sprite])
 ([UnityEngine.Object]).GetField('m_CachedPtr',[Reflection.BindingFlags]'NonPublic,Instance').SetValue($sprite,[IntPtr]1)
@@ -580,7 +579,7 @@ $own.Sprites['er_portrait_eleanor_maid_female_beauty']=$sprite
 $vanillaSprite=Blank ([UnityEngine.Sprite])
 ([UnityEngine.Object]).GetField('m_CachedPtr',[Reflection.BindingFlags]'NonPublic,Instance').SetValue($vanillaSprite,[IntPtr]2)
 $own.Sprites['er_portrait_eleanor_maid_female_vanilla']=$vanillaSprite
-[ModLoader]::TestMods=[System.Collections.Generic.List[LoadedMod]]::new();[ModLoader]::TestMods.Add($own);[ModLoader]::TestMods.Add($beauty)
+[ModLoader]::TestMods=[System.Collections.Generic.List[LoadedMod]]::new();[ModLoader]::TestMods.Add($own)
 [SpriteDict]::TestInstance=Blank ([SpriteDict]);[SpriteDict]::TestInstance.spriteDictionary=[System.Collections.Generic.Dictionary[string,UnityEngine.Sprite]]::new()
 ([UnityEngine.Object]).GetField('m_CachedPtr',[Reflection.BindingFlags]'NonPublic,Instance').SetValue([SpriteDict]::TestInstance,[IntPtr]1)
 [EleanorRomance.PortraitCompat]::Refresh()
@@ -594,21 +593,18 @@ foreach($scene in @('er_story_maid_m17','er_story_maid_m21','er_story_maid_m26',
 }
 $queued=[StoreClient]::new();$queued.identifier='er_story_maid_m19';$queued.spriteName='er_portrait_eleanor_maid_female_beauty';$store.storeClientManager.clientStack.Add($queued)
 $current=[StoreClient]::new();$current.identifier='er_story_maid_m28';$current.spriteName='er_portrait_eleanor_maid_female_beauty';Use-Client $current
-$beauty.IsEnabled=$false
-[EleanorRomance.PortraitCompat]::Refresh();[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
-Assert ($queued.spriteName -eq 'er_portrait_eleanor_maid_female_vanilla' -and $current.spriteName -eq 'er_portrait_eleanor_maid_female_vanilla') 'Disabled optional mod did not switch saved maid visitors to vanilla maid art.'
-Assert ([EleanorRomance.PortraitCompat]::CanUseMaid('er_story_maid_m19') -and
-    [EleanorRomance.PortraitCompat]::ResolveMaid('er_story_maid_m19','eleanor_scav') -eq 'er_portrait_eleanor_maid_female_vanilla') 'Vanilla maid art still depends on the beauty mod.'
-$debut=[EleanorRomance.EleanorStory]::CreateClient(20)
-Assert ($debut.spriteName -eq 'er_portrait_eleanor_maid_female_vanilla') 'Actual debut factory did not select the vanilla maid portrait.'
-$beauty.IsEnabled=$true;[EleanorRomance.PortraitCompat]::Refresh();[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
-Assert ($current.spriteName -eq 'er_portrait_eleanor_maid_female_vanilla') 'Re-enabling replaced an existing vanilla maid visitor.'
-Assert ([EleanorRomance.PortraitCompat]::ResolveMaid('er_story_maid_m19','eleanor_scav') -eq 'er_portrait_eleanor_maid_female_beauty') 'New private visitor did not select the re-enabled beauty style.'
-$beauty.IsEnabled=$false;[EleanorRomance.PortraitCompat]::Refresh()
-$own.Sprites.Remove('er_portrait_eleanor_maid_female_vanilla') | Out-Null
 [EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
-Assert ($current.spriteName -eq 'eleanor_scav' -and $queued.spriteName -eq 'eleanor_scav') 'Missing vanilla maid art left stale saved keys.'
-$beauty.IsEnabled=$true;[EleanorRomance.PortraitCompat]::Refresh()
+Assert ($queued.spriteName -eq 'er_portrait_eleanor_maid_female_beauty' -and $current.spriteName -eq 'er_portrait_eleanor_maid_female_beauty') 'Bundled maid art was changed during save sanitisation.'
+$queued.spriteName='er_portrait_eleanor_maid_female_vanilla';$current.spriteName='er_portrait_eleanor_maid_female_vanilla'
+[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
+Assert ($queued.spriteName -eq 'er_portrait_eleanor_maid_female_beauty' -and $current.spriteName -eq 'er_portrait_eleanor_maid_female_beauty') 'Legacy vanilla maid keys were not upgraded to bundled beauty art.'
+$debut=[EleanorRomance.EleanorStory]::CreateClient(20)
+Assert ($debut.spriteName -eq 'er_portrait_eleanor_maid_female_beauty') 'Actual debut factory did not select the bundled maid portrait.'
+$own.Sprites.Remove('er_portrait_eleanor_maid_female_beauty') | Out-Null
+[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
+Assert ($current.spriteName -eq 'eleanor_scav' -and $queued.spriteName -eq 'eleanor_scav') 'Missing maid art left stale saved keys.'
+Assert (![EleanorRomance.PortraitCompat]::CanUseMaid('er_story_maid_m19') -and
+    [EleanorRomance.PortraitCompat]::ResolveMaid('er_story_maid_m19','eleanor_scav') -eq 'eleanor_scav') 'Missing maid art did not fall back to the current outfit.'
 $own.Sprites.Clear()
 Assert ([EleanorRomance.PortraitCompat]::ResolveMaid('er_story_maid_m19','eleanor_scav') -eq 'eleanor_scav') 'Missing local art did not silently fall back.'
 'PASS: route A/fallback compensation, both maid styles, actual debut, scene whitelist, saved-key switching, re-enable and missing-art fallback.'

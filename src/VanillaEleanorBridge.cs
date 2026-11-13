@@ -152,7 +152,7 @@ namespace EleanorRomance
             return dialogue ?? throw new InvalidOperationException("Native Eleanor choices are unavailable.");
         }
 
-        public static void AttachCashAid(StoreClient client)
+        public static void AttachCashAid(StoreClient client, Dialogue target = null)
         {
             Dialogue nativeChoices = FindChoices(StoreClientUniqueList.Eleanor4().mainDialogue);
             var choice = nativeChoices.choices[0];
@@ -160,7 +160,7 @@ namespace EleanorRomance
             Func<Dialogue, bool> nativeDisabled = response.isDisabledFunc;
             StoryEngine.Tail(response).SetEndAction(() =>
                 PlayerStore.Instance.TryPlayerDismissCurrentClient(callNextWhenPossible: true));
-            StoryEngine.Tail(client.mainDialogue).AddChoice(choice.Item1, choice.Item1.name,
+            StoryEngine.Tail(target ?? client.mainDialogue).AddChoice(choice.Item1, choice.Item1.name,
                 choice.Item1.shortDescription, response, () =>
                 {
                     if (RomanceState.HardshipAidGiven) return;

@@ -167,14 +167,16 @@ Assert (!$station.storeEventManager.IsEventActive([EleanorRomance.GalaStory]::Ne
 'PASS: next-morning publication respects urgent/threat/important and due/pending/active mother news, defers safely and never duplicates.'
 
 Closing-Run;$own.Sprites[[EleanorRomance.PortraitCompat]::GalaKey]=$sprite
-$beauty.IsEnabled=$true;[EleanorRomance.PortraitCompat]::Refresh();$c=Closing-Client
+[EleanorRomance.PortraitCompat]::Refresh();$c=Closing-Client
 Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::GalaKey) 'Closing visitor lost the gown.'
-$beauty.IsEnabled=$false;[EleanorRomance.PortraitCompat]::Refresh();[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
-Assert ($c.spriteName -eq 'eleanor1') 'Disabled beauty left a stale gown.'
+[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
+Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::GalaKey) 'Bundled gown was removed during sanitisation.'
+$own.Sprites.Remove([EleanorRomance.PortraitCompat]::GalaKey)|Out-Null
+[EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
+Assert ($c.spriteName -eq 'eleanor1') 'Missing gown did not fall back to original clothes.'
 Closing-Run;$c=Closing-Client
-Assert ($c.spriteName -eq 'eleanor1') 'Vanilla close did not use Eleanor original clothes.'
+Assert ($c.spriteName -eq 'eleanor1') 'Missing gown did not fall back for a new visitor.'
 [EleanorRomance.RomanceState]::MotherState=0
 Assert (![EleanorRomance.GalaStory]::Eligible) 'Gala lost its safe-mother relationship gate.'
-$beauty.IsEnabled=$true;[EleanorRomance.PortraitCompat]::Refresh();$own.Sprites.Remove([EleanorRomance.PortraitCompat]::GalaKey)|Out-Null
 [EleanorRomance.GalaClosing]::Reset()
 'PASS: closing gown/native fallback and relationship gates.'

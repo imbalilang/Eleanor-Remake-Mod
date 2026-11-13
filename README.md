@@ -301,8 +301,10 @@
 ## 行为与状态
 
 - `RomanceState` 分开记录母亲状态、研究/数据盘去向、恋爱状态、工作去向与行为事实，不再用一个 true_ending 布尔值承担所有含义。
-- 交易通过 `onItemBought` / `onItemSold` 读取真实成交价，并按物品基础价值判断公平、让利、抬价或压价。
-- 拾荒调查款按实际收购收入累计到 800；若玩家收货不足，她会在第 42 天前用其他售货与短工补齐，不会凭空要求玩家掏整笔钱。
+- 第 1–6 章已换成 Opus-5-5 第一幕文本；第 1/3/4/6 章增加对话选择；原生食品/家居/旧货交易、叔叔箱子/举报/拘捕、警告/谢礼、救援/保释和 50 信用点援助全部保留。
+- 常规买卖通过 `onItemBought` / `onItemSold` 读取真实成交价，并按物品基础价值判断公平、让利、抬价或压价；第 7–8 章拾荒和第 10 章手镯沿用原生交易与砍价界面，成交后按实际价格分支。
+- 第 7–8 章拾荒走原生收购：玩家可在原生交易/砍价界面按 -10%／-25% 等实际价格成交；成交后按公平／让利／压价／未成交播放对应回应。付款逐笔计入调查款，最多 800；未成交只记一次未成交来访。若玩家收货不足，她会在第 42 天前用其他售货与短工补齐，不会凭空要求玩家掏整笔钱。
+- 第 10 章莉迪亚的手镯走原生收购与砍价：实际成交价至少为基础价值 90% 时记录“莉迪亚认可的公道价”，低于 90% 不记录；成交后接新的工作对话。
 - 假叔叔箱子沿用原生物品与举报/拘捕流程；警告她会解除陷阱。举报和“只是起疑”是两回事。
 - 被捕后的保释交回原版埃莉诺调度：两天后警官来访，支付 500 信用点或治安部声望 40 免费担保，次日释放回访后接回重制章节；可先回去筹钱。旧 MOD 被捕存档使用原版迁移规则补齐日期。
 - 困境援助可选择原版的 50 信用点现金选项，也可继续用食物帮助她；同次援助与好感只结算一次。
@@ -378,7 +380,7 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Stolen_Data\Managed' -Maid
 ```
 
-测试在内存中替换渲染、本地化等边界，保留原生交易完成判断、对话衔接和占格碰撞检查；覆盖 13 个交易章节的自动/手动收尾、溢价好感和手镯旧占格迁移。不会修改游戏文件或存档，实机交互仍需验收。
+测试在内存中替换渲染、本地化等边界，保留原生交易完成判断、对话衔接和占格碰撞检查；覆盖 13 个交易章节的自动/手动收尾、第二幕第 7–11 章的原生收购/砍价/回礼与存档去重，以及手镯旧占格迁移。不会修改游戏文件或存档，实机交互仍需验收。
 
 ## 0.66 原版兼容
 
@@ -416,17 +418,18 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 ## 美术与立绘兼容
 
-- 检测美化 MOD `少女当铺 / Maiden's Pawnshop`（Workshop ID **3829696854**，manifest ID `cute_portraits`）。
-  - Eleanor、假叔叔、黑市打手、治安部警官、档案员、合作买家：启用少女当铺时使用其 `cp_portrait_*` 美化立绘；未启用时回退原版。
-  - **Lydia：** 恋爱对象，始终使用本 MOD 的独立画像，不因美化 MOD 状态改成通用 NPC。
-    - 无少女当铺：`er_portrait_lydia_female_vanilla`
-    - 有少女当铺：`er_portrait_lydia_female_beauty`
-    - 约会服同理使用 `er_portrait_lydia_date_female_vanilla` / `er_portrait_lydia_date_female_beauty`；仅自定义文件缺失时才回退 `femaleUpper10` 防崩溃。
-  - **母亲索菲娅：** 少女当铺开启时日常使用 `er_portrait_mother_female_beauty`（已替换为v3定稿）；私服为 `er_portrait_mother_home_female_beauty`（v4定稿），经独立入口调用。现有到店出场只用日常装，居家剧情待实装。未开启少女当铺时暂使用原游戏 `femaleUpper3`，不显示旧自定义母亲 `_vanilla` 图。
-- **Eleanor 新服装：** 少女当铺开启时使用本 MOD 的女仆装、礼服和后续战术背心美化图；未开启时直接复用原游戏 Eleanor 画像：女仆装回退当前场景常服（`eleanor_scav` / `eleanor1`），礼服回退 `eleanor1`，战术背心回退 `eleanor_rev`。`er_portrait_eleanor_maid_female_vanilla` 不再作为运行显示图。
-- **其他美化 MOD：** 本 MOD 只识别少女当铺。其他替换普通埃莉诺立绘的 MOD 不会被当作服装美化来源；女仆装、礼服、战术背心会回退原游戏 Eleanor 立绘，因此不会再出现“普通立绘美化、女仆装却是本 MOD 原版风”的混搭。Lydia 始终保持本 MOD 的独立形象，不会跟随其他美化 MOD 变成通用 NPC。
-- 实现位于 `src/PortraitCompat.cs`：从 CutePortraits 的 `LoadedMod.Sprites` 读取普通角色美化 Sprite；本 MOD 自有画像桥接到游戏字典。无少女当铺时 Lydia 保留独立原版画像，母亲/女仆/礼服/战术背心按各自规则回退游戏画像。旧档母亲通用键与历史键会重新解析，私服键保持私服选择。
-- 莉迪亚/母亲的美化立绘用于少女当铺环境；Lydia `_vanilla` 仍在原版环境主动显示，母亲旧 `_vanilla` 仅保留作历史参考。母亲新定稿见 `Art/mother-redesign-2026-11-11/FINAL_INTEGRATION.md`；早期规格见 `Art/v0.6/ART_DELIVERY.md`、`asset_validation.json`。
+- 本 MOD 已内置经作者授权的《少女当铺 / CutePortraits》Eleanor 基础立绘：`cp_portrait_eleanor1/2/3/scav/rev`。**不再检测或依赖外部《少女当铺》**，也不需要为其他替换立绘的 MOD 做兼容；建议不要同时启用《少女当铺》，避免重复贴图或覆盖。
+- **莉迪亚：** 始终使用 `er_portrait_lydia_female_beauty`；约会服 `er_portrait_lydia_date_female_beauty`。`_vanilla` 只作为旧档迁移键，载入时升级为美化；仅美化文件缺失时才回退 `femaleUpper10` 防崩溃。
+- **母亲索菲娅：** 始终使用 `er_portrait_mother_female_beauty`（日常）与 `er_portrait_mother_home_female_beauty`（私服，独立入口）；不显示 `_vanilla`。仅美化文件缺失时才回退 `femaleUpper3`。
+- **埃莉诺服装：** 女仆 `er_portrait_eleanor_maid_female_beauty`；礼服 `er_portrait_eleanor_gala_female_beauty`；基础常服走内置 `cp_portrait_eleanor*`。
+- **革命线：** 公开/队伍场合绿色正装 `eleanor_rev`（少女当铺设计，内置 `cp_portrait_eleanor_rev`）；R06 第一次杀人后的私下/亲密场合用黑色战术背心 `er_portrait_eleanor_revolution_undersuit_female_beauty`（用户设计，v3 已导入）。资源缺失时回退绿色正装；现在与革命结局 CG/宣传图一致。
+- **常规恋爱线：** 亲密私服与结婚结局 CG 仍在计划中，未就位；当前 E1/E5 没有独立 CG，不要写成已存在的婚礼画面。
+- **表情差分：** 17 张 Eleanor 表情已随资源内置（`er_expr_*`），与中性底图在眼/眉/嘴区域约 900 像素差异，alpha 不变；Lydia 表情沿用现有资源。
+- **旧档迁移：** `cp_portrait_*`、莉迪亚/母亲 `_vanilla`、`femaleUpper10`/`femaleUpper3` 等历史键在载入时解析到内置美化；未内置的通用 `cp_portrait_*` 回退原版常服；私服键保持私服选择。
+- 资源缺失时保留防崩溃回退：莉迪亚→`femaleUpper10`，母亲→`femaleUpper3`，女仆/礼服→当前常服，战术背心→`eleanor_rev`。
+- 实现位于 `src/PortraitCompat.cs`：从本 MOD 的 `LoadedMod.Sprites` 读取内置 `cp_portrait_*` / `er_portrait_*`，桥接到游戏 SpriteDict；不再查找 CutePortraits 的 LoadedMod。
+- Credits：CutePortraits by 远风肆业（Steam Workshop 3829696854），included with the author's permission。
+- 上方历史版本记录中的“启用/未启用少女当铺”开关已废弃，仅作历史参考。
 - 物品图标已替换为正式 16 色像素图：吊坠、上层区手工镯。
 - `preview.png` 已使用 `workshop_cover_master.png` 生成的 768×768 版本。
 

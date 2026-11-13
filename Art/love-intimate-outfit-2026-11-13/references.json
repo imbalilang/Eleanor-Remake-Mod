@@ -1,0 +1,49 @@
+{
+  "references": [
+    {
+      "source": "B:\\Eleanor Story Expand\\Art\\expressions-and-endings-2026-11-10\\masters\\er_expr_eleanor1_soft.png",
+      "source_sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e",
+      "source_size": [
+        1462,
+        1076
+      ],
+      "crop_box": [
+        379,
+        311,
+        1116,
+        1076
+      ],
+      "file": "references_local/eleanor-edit.png",
+      "size": [
+        737,
+        765
+      ],
+      "sha256": "0826c5ca2dcd11b3905f8f8ec14752d57c47a32e5ac5aec5df929bfe9c116170",
+      "bytes": 730892,
+      "role": "Exact identity, pose and style edit target"
+    },
+    {
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-f312db22-1a76-4deb-9cb8-8b00b8de866b.png",
+      "source_sha256": "6d12cf1ec423acf984d25e2bdf7afdded9e1ffa967c3ff45346110e7c41efff7",
+      "source_size": [
+        633,
+        1029
+      ],
+      "crop_box": [
+        184,
+        272,
+        551,
+        556
+      ],
+      "file": "references_local/dress-cut.jpg",
+      "size": [
+        367,
+        284
+      ],
+      "sha256": "91dfe480c802b65df4416ff34c1761b31b334f4a437e02a3c0f7547c398c705e",
+      "bytes": 38840,
+      "role": "Dress construction only"
+    }
+  ],
+  "base64_plus_64k_overhead": 1091848
+}

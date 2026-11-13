@@ -1,0 +1,143 @@
+{
+  "status": "CG candidate for E1 回家",
+  "tool": "built-in image generation",
+  "source_story": "docs/常规恋爱线_具体剧本_v0.1_2026-11-11.md §nl08",
+  "masters": [
+    {
+      "file": "masters/ending_love_wedding_master_v1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "169d0002413bac235a92613f71d782dbdac43cf6b8c7c35cbfc1fffafbb3ea43",
+      "bytes": 2667580
+    },
+    {
+      "file": "masters/ending_love_wedding_master_v2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "75e3b843d00d413122a1eca03ec8cd2dbdc1d3822d70281d8077bf1f16269f47",
+      "bytes": 2529798
+    }
+  ],
+  "initial_references": {
+    "references": [
+      {
+        "source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+        "source_size": [
+          1462,
+          1076
+        ],
+        "source_sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e",
+        "reference": "Art/love-ending-2026-11-13/references_local/eleanor-upload.jpg",
+        "upload_size": [
+          880,
+          640
+        ],
+        "bytes": 88558,
+        "sha256": "c12be19d0eb8cd05069d8500697644c685dd940ba34bb995aa0de30cb6b9a16e",
+        "role": "Eleanor facial identity and copper hair only"
+      },
+      {
+        "source": "Art/mother-redesign-2026-11-11/approved/sophia_upper_beauty_master.png",
+        "source_size": [
+          1145,
+          1374
+        ],
+        "source_sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+        "reference": "Art/love-ending-2026-11-13/references_local/sophia-upload.jpg",
+        "upload_size": [
+          722,
+          880
+        ],
+        "bytes": 172876,
+        "sha256": "817db9e8f2d2e0307a33c02ffabc5ec4aefcd459f2391c9b36308c821906bce3",
+        "role": "Sophia identity, hairstyle and jade upper-district dress"
+      },
+      {
+        "source": "Art/revolution-ending-2026-11-11/endings/er_ending_revolution_cg_v3.png",
+        "source_size": [
+          960,
+          540
+        ],
+        "source_sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41",
+        "reference": "Art/love-ending-2026-11-13/references_local/ending-style-upload.jpg",
+        "upload_size": [
+          880,
+          495
+        ],
+        "bytes": 171725,
+        "sha256": "dbe9f36e623d936e8517324d03f151e5ca018e603eba5fbb4cec10605d9d6139",
+        "role": "Approved ending art medium, linework and palette only"
+      },
+      {
+        "source": "Art/love-ending-2026-11-13/references_local/nutrifruit-source.png",
+        "source_size": [
+          32,
+          32
+        ],
+        "source_sha256": "d4f07ec12cd9773a0a6e86fd32ad5bd902c6e8163f2bf25fa161446c54b1c54f",
+        "reference": "Art/love-ending-2026-11-13/references_local/nutrifruit-upload.jpg",
+        "upload_size": [
+          320,
+          320
+        ],
+        "bytes": 10776,
+        "sha256": "57d9c04166bf61826eec0d882f9210eec88981308a0602664d747841feb79097",
+        "role": "Native Nutrifruit appearance and colours"
+      }
+    ],
+    "base64_total_bytes": 591920,
+    "preflight_with_64k_overhead_bytes": 657456
+  },
+  "edit_reference": {
+    "file": "references_local/wedding-v1-edit-upload.jpg",
+    "size": [
+      1439,
+      810
+    ],
+    "mode": "RGB",
+    "sha256": "b829e91ba4e4b72f6d4a6be378dbda0d9298837068734d1513c580717960c0a6",
+    "bytes": 742100
+  },
+  "prompts": [
+    "prompts/ending_love_wedding_v1.txt",
+    "prompts/ending_love_wedding_v2.txt"
+  ],
+  "selected_revision": "v2",
+  "outputs": [
+    {
+      "file": "endings/er_ending_love_wedding_v2.png",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "c0b26acee09c0758d433d4e6baf2412bfd772f263ca2a081b1bd21009ee4c639",
+      "bytes": 905323
+    },
+    {
+      "file": "endings/er_ending_love_wedding_v2_native640.png",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "8718f6e3dcf9afa1fba357d3d3f723d4a318c98d5d5f5cf53a097f0fb7c3a0a2",
+      "bytes": 437974
+    }
+  ],
+  "area_sampler": "Art/revolution-ending-2026-11-11/export_cg_v2.py",
+  "crop_source_px": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "runtime_status": "E1 standalone wedding page is planned; candidate stored under Art",
+  "published": false
+}

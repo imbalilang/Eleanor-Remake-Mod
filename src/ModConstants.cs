@@ -13,15 +13,13 @@ namespace EleanorRomance
         public const string MetaFile = "meta.json";
         public const string LogTag = "[EleanorRomance]";
 
-        // Lydia is a romance lead and keeps a dedicated dual-version portrait.
-        // femaleUpper10 is only an emergency fallback if the local Lydia art
-        // is missing. Sophia's approved outfits are beauty-style assets;
-        // femaleUpper3 remains the fallback until separate vanilla art exists.
+        // Lydia and Sophia always use their beautified portraits.  The generic
+        // game keys are emergency fallbacks only when a local file is missing.
         public const string LydiaSprite = "femaleUpper10";
         public const string MotherSprite = "femaleUpper3";
 
-        // Lydia's _vanilla art remains active when CutePortraits is absent;
-        // the Mother _vanilla file is legacy/cleanup-only.
+        // Legacy _vanilla keys remain for save migration only; they are
+        // upgraded to the beauty portraits when a save is loaded.
         public const string LydiaPortraitVanilla = "er_portrait_lydia_female_vanilla";
         public const string LydiaPortraitBeauty = "er_portrait_lydia_female_beauty";
         public const string MotherPortraitVanilla = "er_portrait_mother_female_vanilla";
