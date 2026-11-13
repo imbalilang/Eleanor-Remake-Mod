@@ -25,6 +25,11 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Local archived pipeline assets (kept on disk, not in the repo)
+tools/_archive/
+tools/NovelWorkFlow_Eleanor/Novel_Draft_Cache/
+tools/NovelWorkFlow_Eleanor/Novel_SOS_Ward/
+
 # Local art backups / old placeholders
 Art/v0.6/backups/
 Art/v0.5/backups/

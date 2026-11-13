@@ -1,5 +1,11 @@
 # Project instructions
 
+## Content rating (user requirement)
+
+- This project is **Mature**, not all-ages. Do not describe it as “全年龄” or “all ages” in README, Workshop, Nexus, site copy, or active docs.
+- Minimum compliance: **no direct R18 / explicit sexual scenes**. Mature themes, sexual tension, innuendo, and non-explicit suggestive or body description are allowed.
+- Keep platform age-gating and mature-content tags accurate when publishing. Historical release notes and archives may keep their original wording.
+
 ## Request size limit (user requirement)
 
 - Every individual POST request, for every task (including image viewing, generation and text processing), must stay below 20,000,000 bytes of serialized parameters/body. Include base64 expansion and multipart/JSON overhead when estimating; target at most 16,000,000 bytes to leave margin.

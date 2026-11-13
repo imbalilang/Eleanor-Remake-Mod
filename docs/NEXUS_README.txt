@@ -8,6 +8,7 @@ Eleanor Story Expand 1.02 — Nexus package
 - 革命线：公开/队伍场合绿色正装；R06 后私下/亲密场合黑色战术背心（v3 已导入）。常规恋爱线的亲密私服与结婚结局 CG 仍在计划中。
 - 不再检测或兼容其他替换立绘的 MOD；请不要同时启用《少女当铺》，避免重复贴图或覆盖。
 - 版本 1.02；游戏 1.0.0.14 / 1.0.0.13 / 0.46D 兼容。
+- 内容分级：成熟向；含性张力、暗示与非露骨身体描写，不直接出现 R18 场景。
 - 主要改动：后宫线、埃莉诺线、侍从线和革命军线的后期回应选择；后宫线停用普通恋爱线拾荒协助；保留全部路线、数值与 E1—E14 结局。
 
 旧存档兼容
@@ -32,6 +33,7 @@ English
 - Revolution route: green formal wear in public/team scenes; black tactical undersuit in private/intimate scenes after R06 (v3 imported). The regular romance intimate outfit and wedding ending CG are still planned.
 - Other portrait-replacement mods are not detected or supported; do not enable CutePortraits alongside this package.
 - Version 1.02; game 1.0.0.14 / 1.0.0.13 / 0.46D compatible.
+- Content rating: Mature; sexual tension, innuendo and non-explicit suggestive content; no explicit sexual scenes.
 - Highlights: late-route response choices across the harem, Eleanor, maid and revolution routes; the ordinary-route scavenging assist is suppressed in the dual route; routes, values and E1—E14 endings are unchanged.
 
 Existing saves
