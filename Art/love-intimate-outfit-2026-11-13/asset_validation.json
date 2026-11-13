@@ -1,0 +1,78 @@
+{
+  "status": "portrait candidate",
+  "tool": "built-in image generation",
+  "prompt": "prompts/eleanor_love_intimate_v1.txt",
+  "references": "references.json",
+  "master": {
+    "file": "masters/eleanor_love_intimate_master_v1.png",
+    "sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+    "mode": "RGBA"
+  },
+  "reference": {
+    "file": "Textures/Items/cp_portrait_eleanor1.png",
+    "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0"
+  },
+  "output": {
+    "file": "portraits/er_portrait_eleanor_love_intimate_female_beauty_v1.png",
+    "sha256": "abd0ed1a19156ead1784ed7b83e60c1b860cb67023bd75916ebf838e72eb5955"
+  },
+  "framing": "Visual comparison of crown, eye line, chin and chest at fixed isotropic scale; iris colour diagnostic not used as acceptance",
+  "source_top_edge_covered_pixels": 15,
+  "deterministic": true,
+  "pipeline": {
+    "source_size": [
+      1231,
+      1277
+    ],
+    "clean_bbox": [
+      28,
+      0,
+      1204,
+      1277
+    ],
+    "parameters": {
+      "visible_height": 166.01000000000002,
+      "centre_x": 146.22,
+      "bottom_exclusive": 229.68,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.13,
+      "tx": 66.14,
+      "ty": 63.66999999999999
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 7164,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      70,
+      65,
+      223,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 8575
+  },
+  "runtime_installed": false
+}

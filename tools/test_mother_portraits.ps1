@@ -37,19 +37,14 @@ $dailySelector = Method ($mod.MainModule.GetType('EleanorRomance.EleanorStory'))
 Assert (@($dailySelector.Body.Instructions | Where-Object {
     $_.OpCode.Code -eq 'Call' -and $_.Operand.Name -eq 'ResolveMother'
 }).Count -eq 1) 'Daily portrait selector calls the wrong outfit resolver.'
-$beauty = [Mono.Cecil.FieldDefinition]::new('TestBeauty',[Mono.Cecil.FieldAttributes]'Public,Static',$mod.MainModule.TypeSystem.Boolean)
 $has = [Mono.Cecil.FieldDefinition]::new('TestHasPortrait',[Mono.Cecil.FieldAttributes]'Public,Static',
     $mod.MainModule.ImportReference([Func[string,bool]]))
-$compat.Fields.Add($beauty); $compat.Fields.Add($has)
-$il = Body (Method $compat 'get_IsBeautyActive')
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldsfld,$beauty); $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
+$compat.Fields.Add($has)
 $il = Body (Method $compat 'EnsureLocalPortrait')
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldsfld,$has)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$mod.MainModule.ImportReference([Func[string,bool]].GetMethod('Invoke')))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
-$il = Body (Method $compat 'FindBeautyMod')
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldnull); $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 $stream = [IO.MemoryStream]::new()
 $mod.Write($stream); $stream.Position = 0
 $null = [System.Runtime.Loader.AssemblyLoadContext]::Default.LoadFromStream($stream)
@@ -67,9 +62,8 @@ function Restore-Portrait($key,$id='er_story_mother') {
     return $client.spriteName
 }
 $null = $script:portraits.Add($daily); $null = $script:portraits.Add($homeKey)
-[EleanorRomance.PortraitCompat]::TestBeauty = $true
-Assert ([EleanorRomance.PortraitCompat]::ResolveMother() -eq $daily) 'Daily art is unavailable with beauty active.'
-Assert ([EleanorRomance.PortraitCompat]::ResolveMotherHome() -eq $homeKey) 'Home art is unavailable with beauty active.'
+Assert ([EleanorRomance.PortraitCompat]::ResolveMother() -eq $daily) 'Daily art is unavailable.'
+Assert ([EleanorRomance.PortraitCompat]::ResolveMotherHome() -eq $homeKey) 'Home art is unavailable.'
 Assert ((Restore-Portrait $homeKey) -eq $homeKey) 'Save migration changed home clothes to daily clothes.'
 foreach ($key in @($daily,$legacy,'femaleUpper3','cp_portrait_femaleUpper3_female')) {
     foreach ($id in @('er_story_mother','er_story_maid_m17')) {
@@ -85,12 +79,6 @@ $null = $script:portraits.Remove($daily)
 Assert ([EleanorRomance.PortraitCompat]::ResolveMother() -eq 'femaleUpper3') 'Missing daily art did not use the game fallback.'
 Assert ([EleanorRomance.PortraitCompat]::ResolveMotherHome() -eq 'femaleUpper3') 'Missing both outfits did not use the game fallback.'
 $null = $script:portraits.Add($daily); $null = $script:portraits.Add($homeKey)
-[EleanorRomance.PortraitCompat]::TestBeauty = $false
-Assert ([EleanorRomance.PortraitCompat]::ResolveMother() -eq 'femaleUpper3') 'Beauty daily art leaked into vanilla.'
-Assert ([EleanorRomance.PortraitCompat]::ResolveMotherHome() -eq 'femaleUpper3') 'Beauty home art leaked into vanilla.'
-foreach ($key in @($daily,$homeKey,$legacy)) {
-    Assert ((Restore-Portrait $key) -eq 'femaleUpper3') 'Disabled beauty left a stale saved mother key.'
-}
-[EleanorRomance.PortraitCompat]::TestBeauty = $true
-Assert ((Restore-Portrait 'femaleUpper3') -eq $daily) 'Re-enabling beauty did not upgrade a saved public visit.'
-'PASS: missing home/daily art, beauty enable/disable, stale save repair and re-enable upgrade.'
+Assert ([EleanorRomance.PortraitCompat]::ResolveMother() -eq $daily) 'Restored daily art is unavailable.'
+Assert ((Restore-Portrait 'femaleUpper3') -eq $daily) 'A saved public visit was not upgraded.'
+'PASS: missing home/daily art, save repair and restored-art upgrade.'

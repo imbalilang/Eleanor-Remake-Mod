@@ -346,6 +346,22 @@ function Finish-Dialogue($head) {
         $node = $node.nextDialogue
     }
 }
+function Finish-Dialogue-WithChoices($head) {
+    $node = $head
+    $guard = 0
+    while ($node -and $guard -lt 200) {
+        $guard++
+        if ($node.startAction) { $node.startAction.Invoke() }
+        $node.ExecuteEndAction()
+        if ($node.choices.Count -gt 0) {
+            $choice = $node.choices[0]
+            if ($choice.Item3) { $choice.Item3.Invoke() }
+            $node = $choice.Item2
+            continue
+        }
+        $node = $node.nextDialogue
+    }
+}
 # Native accept callback adds a continuation while stock remains, then the same
 # callback selects the chapter's dynamic allDone chain after the last purchase.
 $c = New-Trade ([StoreClient+ClientIntent]::SELL)
@@ -499,7 +515,7 @@ foreach($paid in @(101,110,120,125,130)){
 }
 'PASS: small and large overpayment classifications.'
 
-# All 13 trading chapter factories use the same native automatic completion
+# All trading chapter factories use the same native automatic completion
 # flow as well as the optional manual finish; assert real persisted progression.
 [ModHelper]::TestData=[System.Collections.Generic.Dictionary[string,string]]::new()
 $station=Blank ([StoreStation]);$station.dayCounter=40
@@ -529,7 +545,7 @@ foreach($manual in @($false,$true)){
             }
             $c.TestOnDealAccepted($null)
         }
-        Finish-Dialogue $ui.currentDialog
+        Finish-Dialogue-WithChoices $ui.currentDialog
         Assert ([EleanorRomance.RomanceState]::Chapter -eq $next[$chapter] -and
             [EleanorRomance.RomanceState]::PendingChapter -eq 0 -and
             [PlayerStore]::TestDismissCount -eq 1) "Chapter $chapter progression failed (manual=$manual)."
@@ -569,7 +585,8 @@ Reset-Run 6
 $store.playerCash=49
 $c=[EleanorRomance.EleanorStory]::CreateClient(6)
 Use-Client $c
-$choices=Choice-Node $c.mainDialogue
+$opening=Choice-Node $c.mainDialogue
+$choices=Choice-Node $opening.choices[0].Item2
 Assert ($choices -and !$choices.IsChoiceEnabledAt(0)) 'Cash aid should exist but be disabled below 50.'
 $store.playerCash=50
 Assert ($choices.IsChoiceEnabledAt(0)) 'Cash aid did not unlock after taking out cash.'
@@ -588,8 +605,25 @@ $aidSnapshot=[System.Collections.Generic.Dictionary[string,string]]::new([ModHel
 [ModHelper]::TestData=[System.Collections.Generic.Dictionary[string,string]]::new($aidSnapshot)
 $again=[EleanorRomance.EleanorStory]::CreateClient(6)
 $store.playerCash=100
-Assert (!(Choice-Node $again.mainDialogue).IsChoiceEnabledAt(0)) 'Reloaded aid allowed a duplicate payment.'
+$againOpening=Choice-Node $again.mainDialogue
+$againAid=Choice-Node $againOpening.choices[0].Item2
+Assert (!$againAid.IsChoiceEnabledAt(0)) 'Reloaded aid allowed a duplicate payment.'
 'PASS: native 50-credit aid, dynamic funds, persisted deduplication and cash-specific dialogue.'
+
+# Chapter 6 "只问，不给": complete without aid or opening the trade path.
+Reset-Run 6
+$store.playerCash=100
+$c=[EleanorRomance.EleanorStory]::CreateClient(6);Use-Client $c
+$opening=Choice-Node $c.mainDialogue
+$noFoodChoice=$opening.choices[2]
+if($noFoodChoice.Item3){$noFoodChoice.Item3.Invoke()}
+Finish-Dialogue $noFoodChoice.Item2
+Assert ([EleanorRomance.RomanceState]::Chapter -eq 7 -and
+    [EleanorRomance.RomanceState]::NoSaleVisits -eq 1 -and
+    ![EleanorRomance.RomanceState]::HardshipAidGiven -and
+    ![EleanorRomance.RomanceState]::HardshipCashGiven -and
+    $store.playerCash -eq 100) 'Chapter 6 no-aid choice changed money or failed to advance.'
+'PASS: chapter 6 "只问，不给" completes without aid.'
 
 # Native warning rewards are captured before placement, then use the mod's
 # tested placement/retry mechanism. The numbers below are expectations for the

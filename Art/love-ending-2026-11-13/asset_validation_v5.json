@@ -1,0 +1,48 @@
+{
+  "status": "E1 wedding CG candidate",
+  "revision": "v5",
+  "tool": "built-in image generation",
+  "prompt": "prompts/ending_love_wedding_v5.txt",
+  "references": "references.json",
+  "master": {
+    "file": "masters/ending_love_wedding_master_v5.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "43caff74e89a4d451df90d89b7a4c1f803c41309eae702a47a01c964b48cae1d",
+    "bytes": 2680566
+  },
+  "outputs": [
+    {
+      "file": "endings/er_ending_love_wedding_v5.png",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "ad1891693a7225a039cbde432a16e4adf0bae6142c32241864658f5aee9b4659",
+      "bytes": 961650
+    },
+    {
+      "file": "endings/er_ending_love_wedding_v5_native640.png",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "5fec713acd07b67af4d555a77ca0030911b6c183ad48e996c6b96f6c764a1279",
+      "bytes": 468220
+    }
+  ],
+  "crop_source_px": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "sampler": "Art/revolution-ending-2026-11-11/export_cg_v2.py",
+  "runtime_replaced": false,
+  "published": false
+}

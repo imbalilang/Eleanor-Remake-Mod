@@ -49,13 +49,12 @@ namespace EleanorRomance
     {
         private static bool Prefix(string key, ref Sprite __result)
         {
-#if NEXUS_BEAUTY
-            if (PortraitCompat.TryNexusBeauty(key, out Sprite beauty))
+            // Bundled beauty portraits replace vanilla keys such as eleanor1.
+            if (PortraitCompat.TryBundledBeauty(key, out Sprite beauty))
             {
                 __result = beauty;
                 return false;
             }
-#endif
             PortraitCompat.EnsureKey(key);
             return true;
         }

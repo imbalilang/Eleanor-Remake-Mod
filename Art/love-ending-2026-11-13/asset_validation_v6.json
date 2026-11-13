@@ -1,0 +1,75 @@
+{
+  "status": "current E1 wedding CG candidate",
+  "revision": "v6",
+  "tool": "built-in image generation",
+  "base": {
+    "file": "masters/ending_love_wedding_master_v1.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "169d0002413bac235a92613f71d782dbdac43cf6b8c7c35cbfc1fffafbb3ea43",
+    "bytes": 2667580
+  },
+  "edit_reference": {
+    "file": "references_local/wedding-v1-edit-upload.jpg",
+    "size": [
+      1439,
+      810
+    ],
+    "mode": "RGB",
+    "sha256": "b829e91ba4e4b72f6d4a6be378dbda0d9298837068734d1513c580717960c0a6",
+    "bytes": 742100
+  },
+  "request_size_upper_bound_bytes": 1057378,
+  "prompt": "prompts/ending_love_wedding_v6.txt",
+  "prompt_sha256": "79c21363d639c5aca14518a6fecd02e80566c764e116f5b1d57d78e6944dc202",
+  "master": {
+    "file": "masters/ending_love_wedding_master_v6.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "1c4a31b96170328b288c85f0dcb7949a9ebfc06518bdcfdabcee29d8b917ffc8",
+    "bytes": 2595343
+  },
+  "outputs": [
+    {
+      "file": "endings/er_ending_love_wedding_v6.png",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sha256": "1e4afe5f501bf69069ea1effa585df01d22fbe544b0d2b8e006040d7282bc9e2",
+      "bytes": 916081
+    },
+    {
+      "file": "endings/er_ending_love_wedding_v6_native640.png",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sha256": "e3d802cbaf4d70b9bea205d0778abcb00d3926cf3e88746de649dcb2d0d48c9f",
+      "bytes": 441947
+    }
+  ],
+  "sampler": "Art/revolution-ending-2026-11-11/export_cg_v2.py",
+  "crop_source_px": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "visual_review": {
+    "player_hands": "removed both hands and cuffs",
+    "ring": "narrow gold band already seated at the base of the left ring finger, adjacent to the bare shorter little finger",
+    "hand": "four visible non-thumb fingers with a partly occluded thumb",
+    "mother": "hand rests on bride shoulder"
+  },
+  "runtime_replaced": false,
+  "published": false
+}

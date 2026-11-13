@@ -163,6 +163,7 @@ namespace EleanorRomance
             set => SetInt("return_gift_choice", value);
         }
 
+
         public static bool HardshipAidGiven
         {
             get => GetBool("hardship_aid_given", false);
