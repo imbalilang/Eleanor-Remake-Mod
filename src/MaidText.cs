@@ -15,8 +15,8 @@ namespace EleanorRomance
                 foreach (var line in lines)
                 {
                     string speaker=line.Speaker=="Player" ? L.Player : line.Speaker=="Eleanor" ? L.Eleanor
-                        : L.Get(line.Speaker=="Buyer" ? "er_name_upper_buyer" : "er_name_"+line.Speaker.ToLowerInvariant());
-                    foreach(string paragraph in L.Get(line.Key).Split(new[]{'\n'},StringSplitOptions.RemoveEmptyEntries))
+                        : L.Get(line.Speaker=="Buyer" || line.Speaker=="UpperBuyer" ? "er_name_upper_buyer" : "er_name_"+line.Speaker.ToLowerInvariant());
+                    foreach(string paragraph in StoryEngine.SplitParagraphs(L.Get(line.Key)))
                     {
                         Dialogue node=StoryEngine.Text(speaker,paragraph);
                         PortraitExpression.Apply(node,line.Key,speaker);
@@ -39,8 +39,7 @@ namespace EleanorRomance
         }
         public static Dialogue Finish(Dialogue head,Action commit)
         {
-            bool done=false;
-            StoryEngine.CompletionTail(head).SetEndAction(()=>{ if(done)return;done=true;commit?.Invoke();StoryEngine.Dismiss(); });
+            StoryEngine.OnDialogueFinished(head, () => { commit?.Invoke(); StoryEngine.Dismiss(); });
             return head;
         }
     }

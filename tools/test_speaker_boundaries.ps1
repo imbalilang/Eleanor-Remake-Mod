@@ -20,11 +20,25 @@ foreach($name in @('DisplayClientText','DisplaySecText','DisplayerPlayerText')){
         $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference((Method $mod 'EleanorRomance.DialogueSpeakers' 'Begin')))
         $il.Emit([Mono.Cecil.Cil.OpCodes]::Stloc,$previous)
     }
+    if($name -eq 'DisplaySecText'){
+        $begin=Method $mod 'EleanorRomance.DialogueSpeakers' 'BeginBackup'
+        $restore=Method $mod 'EleanorRomance.DialogueSpeakers' 'RestoreBackup'
+        foreach($helper in @($begin,$restore)){$helper.IsAssembly=$false;$helper.IsPublic=$true}
+        $backupPrevious=[Mono.Cecil.Cil.VariableDefinition]::new($game.MainModule.ImportReference($begin.ReturnType))
+        $method.Body.Variables.Add($backupPrevious);$method.Body.InitLocals=$true
+        $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
+        $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference($begin))
+        $il.Emit([Mono.Cecil.Cil.OpCodes]::Stloc,$backupPrevious)
+    }
     foreach($instruction in $expression){$il.Append($instruction)}
     if($name -eq 'DisplayClientText'){
         $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
         $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldloc,$previous)
         $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference((Method $mod 'EleanorRomance.DialogueSpeakers' 'End')))
+    }
+    if($name -eq 'DisplaySecText'){
+        $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldloc,$backupPrevious)
+        $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference($restore))
     }
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 }

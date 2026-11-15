@@ -7,7 +7,13 @@ param(
     [string]$NotesFile,
     [string]$ResultFile,
     [string]$Version='0.81',
+    [ValidateSet('english','schinese')][string]$Language='english',
+    [string]$Title,
+    [switch]$Mature,
     [switch]$DescriptionOnly,
+    [switch]$KeepDescription,
+    [switch]$MetadataOnly,
+    [switch]$ClearContentDescriptors,
     [switch]$CheckOnly
 )
 $ErrorActionPreference='Stop'
@@ -29,13 +35,19 @@ try {
     if([Steamworks.SteamUser]::GetSteamID().m_SteamID -ne $expectedOwner){throw 'Steam account does not own the intended Workshop item.'}
     Write-Output 'Steam client and original item owner verified.'
     if($CheckOnly){return}
-    if(!$DescriptionFile -or !$ResultFile){throw 'Description and result paths are required.'}
-    if(!$DescriptionOnly -and (!$ContentFolder -or !$NotesFile)){throw 'Content, description, notes, and result paths are required.'}
-    $description=Get-Content -LiteralPath $DescriptionFile -Raw -Encoding utf8
+    if(!$ResultFile){throw 'Result path is required.'}
+    if($DescriptionOnly -and $MetadataOnly){throw '-DescriptionOnly and -MetadataOnly cannot be combined.'}
+    if($DescriptionOnly -and $KeepDescription){throw '-DescriptionOnly and -KeepDescription cannot be combined.'}
+    if($Mature -and $ClearContentDescriptors){throw '-Mature and -ClearContentDescriptors cannot be combined.'}
+    if(!$MetadataOnly -and !$DescriptionOnly -and (!$ContentFolder -or !$NotesFile)){
+        throw 'Content, notes, and result paths are required unless -MetadataOnly is used.'
+    }
+    if(!$KeepDescription -and !$DescriptionFile){throw 'Description path is required unless -KeepDescription is used.'}
+    $description=if($DescriptionFile){Get-Content -LiteralPath $DescriptionFile -Raw -Encoding utf8}else{''}
     $notes=if($NotesFile){Get-Content -LiteralPath $NotesFile -Raw -Encoding utf8}else{''}
-    if([Text.Encoding]::UTF8.GetByteCount($description) -ge 8000){throw 'Description exceeds conservative 8000-byte limit.'}
+    if(!$KeepDescription -and [Text.Encoding]::UTF8.GetByteCount($description) -ge 8000){throw 'Description exceeds conservative 8000-byte limit.'}
     $inventory=$null
-    if(!$DescriptionOnly){
+    if(!$DescriptionOnly -and !$MetadataOnly){
         $folder=[IO.Path]::GetFullPath($ContentFolder)
         [xml]$manifest=Get-Content -LiteralPath (Join-Path $folder 'manifest.xml') -Raw
         if($manifest.Manifest.ID -ne 'eleanor_romance' -or $manifest.Manifest.ModVersion -ne $Version){throw 'Package ID/version mismatch.'}
@@ -50,10 +62,28 @@ try {
     $app=[Steamworks.AppId_t]::new($expectedApp)
     $item=[Steamworks.PublishedFileId_t]::new($expectedItem)
     $handle=[Steamworks.SteamUGC]::StartItemUpdate($app,$item)
-    if(!$DescriptionOnly){
+    if(![Steamworks.SteamUGC]::SetItemUpdateLanguage($handle,$Language)){throw 'SetItemUpdateLanguage failed.'}
+    if($Title -and ![Steamworks.SteamUGC]::SetItemTitle($handle,$Title)){throw 'SetItemTitle failed.'}
+    if(!$DescriptionOnly -and !$MetadataOnly){
         if(![Steamworks.SteamUGC]::SetItemContent($handle,$folder)){throw 'SetItemContent failed.'}
     }
-    if(![Steamworks.SteamUGC]::SetItemDescription($handle,$description)){throw 'SetItemDescription failed.'}
+    if(!$KeepDescription){
+        if(![Steamworks.SteamUGC]::SetItemDescription($handle,$description)){throw 'SetItemDescription failed.'}
+    }
+    $descriptors=@(
+        [Steamworks.EUGCContentDescriptorID]::k_EUGCContentDescriptor_NudityOrSexualContent,
+        [Steamworks.EUGCContentDescriptorID]::k_EUGCContentDescriptor_AnyMatureContent
+    )
+    if($Mature){
+        foreach($descriptor in $descriptors){
+            if(![Steamworks.SteamUGC]::AddContentDescriptor($handle,$descriptor)){throw 'Setting mature content descriptor failed.'}
+        }
+    }
+    if($ClearContentDescriptors){
+        foreach($descriptor in $descriptors){
+            if(![Steamworks.SteamUGC]::RemoveContentDescriptor($handle,$descriptor)){throw 'Removing mature content descriptor failed.'}
+        }
+    }
     $call=[Steamworks.SteamUGC]::SubmitItemUpdate($handle,$notes)
     $clock=[Diagnostics.Stopwatch]::StartNew()
     $lastStatus=''
@@ -82,8 +112,11 @@ try {
     if($inventory){$localBytes=($inventory|Measure-Object length -Sum).Sum;$localFiles=$inventory.Count}
     $report=[pscustomobject]@{
         version=$Version;item=[string]$result.m_nPublishedFileId.m_PublishedFileId
+        language=$Language
         result=[string]$result.m_eResult;needsLegalAgreement=$result.m_bUserNeedsToAcceptWorkshopLegalAgreement
-        mode=$(if($DescriptionOnly){'description-only'}else{'content-and-description'})
+        mode=$(if($DescriptionOnly){'description-only'}elseif($MetadataOnly){'metadata-only'}elseif($KeepDescription){'content-only'}else{'content-and-description'})
+        matureDescriptorsRequested=[bool]$Mature
+        contentDescriptorsCleared=[bool]$ClearContentDescriptors
         elapsedSeconds=[Math]::Round($clock.Elapsed.TotalSeconds,2)
         localBytes=$localBytes
         localFiles=$localFiles;completedUtc=[DateTime]::UtcNow.ToString('o')

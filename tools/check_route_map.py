@@ -39,37 +39,8 @@ def main() -> int:
         return 1
 
     errors = []
-    # The planned design is deliberately separate from the shipped DATA/CHART.
-    plan_path = root / "docs" / "后宫线_v0.5_声望检查点与问题修复_执行参数.json"
-    plan = {}
-    plan_marker = 'id="dual-v05-plan"'
-    if plan_path.exists():
-        try:
-            plan = json.loads(plan_path.read_text(encoding="utf-8"))
-            if plan.get("status") == "planned_not_implemented":
-                if plan_marker not in html:
-                    errors.append("dual v0.5 plan exists but its pending-design notice is missing")
-                if [g.get("reputation") for g in plan.get("gates", [])] != [30, 60, 90]:
-                    errors.append("dual v0.5 reputation checkpoints must be 30/60/90")
-                policy = plan.get("policy", {})
-                if not policy.get("mainlineWaits") or not policy.get("nativeCustomersContinue"):
-                    errors.append("dual v0.5 must wait at gates while native business continues")
-                if policy.get("failToOrdinaryWhenBelowGate") or policy.get("reputationConsumed"):
-                    errors.append("dual v0.5 gates must not consume reputation or reject the route")
-                if "v0.5" not in maintenance.read_text(encoding="utf-8"):
-                    errors.append("route maintenance is missing the planned dual v0.5 rules")
-        except (ValueError, TypeError, AttributeError) as exc:
-            errors.append("invalid dual v0.5 plan: " + str(exc))
-    if plan_path.exists() and plan.get('status') == 'implemented_pending_playtest':
-        if data.get('dualDesignVersion') != '0.5':errors.append('runtime map missing dual v0.5 implementation')
-        for i in range(1,4):
-            if f'HG{i}' not in html:errors.append('runtime reputation checkpoint missing')
-        if [g.get('reputation') for g in plan['gates']] != [30,60,90]:errors.append('checkpoint threshold drift')
-        if '待实施的声望检查点' in html:errors.append('stale planned-only banner')
-        for day in data.get('days',[]):
-            if day.get('id') == 'dr05' and any('暂缓' in str(c) for c in day.get('choices',[])):errors.append('deferred confession returned')
-        for edge in (json.JSONDecoder().raw_decode(html.split('const CHART = ',1)[1])[0]['edges']):
-            if edge.get('from','').startswith('HG') and edge.get('to','').startswith('E'):errors.append('reputation gate exits to an ending')
+    if data.get('scope') != 'current_rewrite':
+        errors.append('player guide must describe the current rewrite')
     version = re.search(r"<ModVersion>([^<]+)</ModVersion>", manifest.read_text(encoding="utf-8"))
     if not version:
         errors.append("manifest ModVersion missing")
@@ -78,18 +49,27 @@ def main() -> int:
 
     endings = data.get("endings", [])
     ids = [e.get("id") for e in endings]
-    expected = [f"E{i}" for i in range(1, 15)]
+    expected = ['E1', 'E2', 'E3', 'E4', 'E9']
     if sorted(ids) != sorted(expected):
-        errors.append("endings must contain E1-E14 exactly; found " + ", ".join(ids))
+        errors.append("current guide must contain E1/E2/E3/E4/E9 exactly; found " + ", ".join(ids))
     if len(set(ids)) != len(ids):
         errors.append("duplicate ending ids")
-    expected_perfect = {"E1", "E3", "E4", "E9"}
-    perfect_ids = {e.get("id") for e in endings if e.get("perfect")}
-    if perfect_ids != expected_perfect:
-        errors.append("perfect endings must be E1/E4/E3/E9; found " + ", ".join(sorted(perfect_ids)))
+    expected_completed = {"E1", "E3", "E4", "E9"}
+    completed_ids = {e.get("id") for e in endings if e.get("kind") == 'route'}
+    if completed_ids != expected_completed:
+        errors.append("route completions must be E1/E3/E4/E9; found " + ", ".join(sorted(completed_ids)))
+    aliases = {'E5': 'E1', 'E6': 'E2', 'E7': 'E3', 'E8': 'E4'}
+    if data.get('endingAliases') != aliases:
+        errors.append('historical duplicate ending IDs must map to their relationship endings')
+    if data.get('endingPolicy') != 'relationship_and_route_completion':
+        errors.append('ending policy must depend on relationship and route completion')
     for e in endings:
         if not e.get("mainRoute"):
             errors.append("ending missing mainRoute: " + str(e.get("id")))
+        if 'perfect' in e or any(word in e.get('title', '') for word in ('研究归还', '研究保留')):
+            errors.append('ending must not split or rank the research choice: ' + e['id'])
+    if {e['id'] for e in endings if e.get('kind') == 'friend'} != {'E2'}:
+        errors.append('E2 must be the single friend ending')
 
     chart_marker = "const CHART = "
     chart_start = html.find(chart_marker)
@@ -114,9 +94,11 @@ def main() -> int:
         non_terminal = [eid for eid in expected if eid in outgoing]
         if non_terminal:
             errors.append("ending nodes must be terminal (no outgoing edges): " + ", ".join(non_terminal))
-        perfect_nodes = {n.get("id") for n in chart.get("nodes", []) if n.get("cls") == "perfect"}
-        if perfect_nodes != expected_perfect:
-            errors.append("CHART perfect nodes must be E1/E4/E3/E9; found " + ", ".join(sorted(perfect_nodes)))
+        completed_nodes = {n.get("id") for n in chart.get("nodes", []) if n.get("cls") == "completed"}
+        if completed_nodes != expected_completed:
+            errors.append("CHART completed nodes must be E1/E3/E4/E9; found " + ", ".join(sorted(completed_nodes)))
+        if any(n.get('cls') == 'perfect' for n in chart.get('nodes', [])):
+            errors.append('old perfect/non-perfect ending classification remains')
         axis = chart.get("axis")
         if not axis:
             errors.append("CHART axis is missing")
@@ -141,29 +123,68 @@ def main() -> int:
                                 f"CHART node {n.get('id')} y={n.get('y')} does not match day {n['day']} (expected {expected:.0f})"
                             )
 
-    days = data.get("days", [])
-    required_days = {"start", "maid_entry", "drive", "threat", "direction", "resolution",
-                     "dual_entry", "dr05", "dr07", "dr11", "dr14", "dr15", "dr17", "dr20", "gala_closing"}
-    day_ids = {d.get("id") for d in days}
-    missing_days = required_days - day_ids
-    if missing_days:
-        errors.append("missing timeline nodes: " + ", ".join(sorted(missing_days)))
-    for day in days:
-        for eid in day.get("endings", []):
-            if eid not in ids:
-                errors.append(f"timeline node {day.get('id')} references unknown ending {eid}")
+    guides = data.get('guides', [])
+    guide_ids = [g.get('id') for g in guides]
+    if guide_ids != ['common', 'regular', 'harem', 'maid', 'rev']:
+        errors.append('guide order must be common, regular, harem, maid, rev')
+    acts = [a for g in guides for a in g.get('acts', [])]
+    act_ids = [a.get('id') for a in acts]
+    if len(act_ids) != len(set(act_ids)):
+        errors.append('duplicate act anchors')
+    required_counts = {'common': 4, 'regular': 3, 'harem': 4, 'maid': 5, 'rev': 4}
+    for guide in guides:
+        if not guide.get('entry'):
+            errors.append('missing entry requirements: ' + guide['id'])
+        if len(guide.get('acts', [])) != required_counts.get(guide['id']):
+            errors.append('incorrect act count: ' + guide['id'])
+        for act in guide.get('acts', []):
+            for key in ('title', 'day', 'early', 'scenes', 'summary', 'checks', 'sourceIds'):
+                if not act.get(key):
+                    errors.append(f'missing {key} in act {act.get("id")}')
+    sources = [s for a in acts for s in a['sourceIds']]
+    if len(sources) != len(set(sources)):
+        errors.append('a scene is assigned to more than one act')
+    required_sources = set()
+    for filename in ('maid_v2.json', 'revolution_v2.json', 'love_romance_v01.json',
+                     'love_romance_v02.json', 'love_romance_v03.json'):
+        content = json.loads((root / 'Content' / filename).read_text(encoding='utf-8'))
+        required_sources.update(s['id'] for s in content['scenes'])
+    required_sources.update(['d01'] + [f'dv{i:02d}' for i in range(1, 14)])
+    required_sources.update(f'c{i:02d}' for i in list(range(1, 15)) + list(range(17, 24)))
+    missing_sources = required_sources - set(sources)
+    if missing_sources:
+        errors.append('current scenes missing from guide: ' + ', '.join(sorted(missing_sources)))
+    anchors = set(act_ids) | {'guide-' + key for key in guide_ids} | set(ids)
+    if chart:
+        for node in chart['nodes']:
+            if node.get('guide') not in anchors:
+                errors.append('node guide target missing: ' + node['id'])
+        retired = set(aliases) | {'E10', 'E11', 'E12', 'E13', 'E14', 'HG1', 'HG2', 'HG3', 'R_NON', 'O_NON'}
+        if retired & set(chart_nodes):
+            errors.append('retired nodes remain in current chart')
+    if 'renderGuides();' not in html or 'id="route-guides"' not in html:
+        errors.append('guide data is not rendered on the player page')
+    guide_text = json.dumps(guides, ensure_ascii=False)
+    if re.search(r'\bE[5-8]\b', guide_text) or any(word in html for word in ('非完美', '完美结局')):
+        errors.append('guide still presents duplicate research endings or ending quality ranks')
+    for fact in ('至少3次', '风险承担', '同一只', '实际差额', 'P2', '3000', '1500', '30／60／90'):
+        if fact not in guide_text:
+            errors.append('missing key entry fact: ' + fact)
+    site = root / 'site/index.html'
+    if not site.exists() or site.read_text(encoding='utf-8') != html.replace('../site/assets/', 'assets/'):
+        errors.append('site/index.html differs from docs/route_map.html; run sync_site.ps1')
 
     # The repeated-exit choice must not come back without a deliberate map update.
     if "dr17_withdraw" in html or "dr15_withdraw" in html or "dr14_reject" in html:
         errors.append("removed repeat-exit choices are still present in the route map")
 
     print(f"route map version: {data.get('version')} (manifest {version.group(1) if version else '?'})")
-    print(f"timeline nodes: {len(days)}, endings: {len(endings)}")
+    print(f"guides: {len(guides)}, acts: {len(acts)}, current endings: {len(endings)}")
     if errors:
         for error in errors:
             print("ERROR:", error)
         return 1
-    print("OK: route map matches the current ending set and manifest version.")
+    print("OK: current routes, scene coverage, guide links, endings and site copy agree.")
     return 0
 
 

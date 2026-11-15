@@ -81,13 +81,48 @@ namespace EleanorRomance
         private static bool IsRescueClient(StoreClient client) => client != null
             && (client.identifier == "eleanorBailOfficer" || client.identifier == "eleanorFreed");
 
-        /// <summary>Filter only vanilla Eleanor visitors while the remake owns her story.</summary>
-        public static bool FilterScheduledClient(StoreClientManager manager, StoreClient client)
+        /// <summary>
+        /// Exact native Eleanor identifiers used only for reset/tracker cleanup,
+        /// never for live story filtering.  Live takeover is method-scoped, so a
+        /// renamed native ID does not reopen the vanilla story.
+        /// </summary>
+        public static bool IsNativeEleanorClientId(string id)
         {
-            if (!StoryDirector.ShouldSuppressOriginal || client == null || IsOurClient(client)) return true;
+            switch (id)
+            {
+                case "eleanorIntro":
+                case "eleanor2":
+                case "eleanor3":
+                case "eleanor4":
+                case "eleanor5":
+                case "eleanor6":
+                case "eleanor7":
+                case "eleanor8":
+                case "eleanor9":
+                case "eleanorScav":
+                case "eleanorThreat":
+                case "eleanorUncle":
+                case "eleanorWarned":
+                case "eleanorBailOfficer":
+                case "eleanorFreed":
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        /// <summary>
+        /// Native story clients are stopped at the three scheduler methods, not
+        /// by their identifiers.  This hook only prepares and de-duplicates the
+        /// native bail/freed pair while the remake is linked to a native arrest;
+        /// all other clients pass through untouched.
+        /// </summary>
+        public static bool PrepareScheduledClient(StoreClientManager manager, StoreClient client)
+        {
+            if (manager == null || client == null) return true;
+            if (!RescuePending || !IsRescueClient(client)) return true;
             if (!string.IsNullOrEmpty(client.sourceModId)) return true;
-            if (!(client.identifier ?? "").StartsWith("eleanor", StringComparison.OrdinalIgnoreCase)) return true;
-            if (!RescuePending || !IsRescueClient(client)) return false;
+            if (manager.clientStack == null) return true;
 
             StoreClient current = PlayerStore.Instance.currentClientInstance?.GetClientBlueprint();
             if (IsRescueClient(current) || manager.clientStack.Any(IsOurClient)) return false;

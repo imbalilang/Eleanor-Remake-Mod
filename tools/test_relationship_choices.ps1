@@ -104,7 +104,7 @@ foreach($risk in @('handover','sell','secret','public')){
     $c=Main-Client $code;$review=Pick $c.mainDialogue $index
     Finish-Dialogue (Pick $review 0)
     if($risk -eq 'public'){
-        Assert ([EleanorRomance.RomanceState]::Route -eq 3 -and [EleanorRomance.RomanceState]::Chapter -eq 101 -and $store.playerCash -eq $cash) 'Confirmed public route lost its original high-risk outcome.'
+        Assert ([EleanorRomance.RomanceState]::Route -eq 3 -and [EleanorRomance.RomanceState]::Chapter -eq 101 -and [EleanorRomance.RomanceState]::RevVersion -lt 2 -and $store.playerCash -eq $cash) 'Confirmed legacy public choice failed to preserve its original continuation.'
     }else{
         $kind=switch($risk){handover{1}sell{2}secret{3}}
         $income=switch($risk){handover{300}sell{600}secret{0}}

@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
+using HarmonyLib;
 
 namespace EleanorRomance
 {
@@ -8,6 +10,8 @@ namespace EleanorRomance
         public const int CollectVisit=910, SellVisit=911, BuyVisit=912, SampleVisit=914;
         private const int RetiredAppraiseVisit=913; // Reserved for old pending visits; never schedule again.
         private const string LegacyAppraisalTag="ER_BUSINESS_APPRAISAL";
+        private static readonly ConditionalWeakTable<StoreClient,Func<GameItem,bool>> BuyerFilters=
+            new ConditionalWeakTable<StoreClient,Func<GameItem,bool>>();
         public const string SampleTag="ER_BUSINESS_SAMPLE";
         private static string K(string key)=>"biz."+key;
         public static int Number(string key,int fallback=0)=>MaidState.Int(K(key),fallback);
@@ -41,15 +45,18 @@ namespace EleanorRomance
         }
         private static bool SafeItem(GameItem item)=>item!=null && !item.IsTag("IMPORTANT_TAG") &&
             !item.IsTag(LegacyAppraisalTag) && !StolenHelper.IsStolenItem(item);
-        private static void Buyer(StoreClient c,int budget,string receipt,Func<GameItem,bool> filter=null)
+        public static bool RefusesBusinessItem(StoreClient client,GameItem item)=>
+            BuyerFilters.TryGetValue(client,out var accepts) && !accepts(item);
+        private static void Buyer(StoreClient c,int budget,string receipt,Func<GameItem,bool> filter=null,string[] interests=null)
         {
             string paidTag="ER_BIZ_PAID_"+receipt;
             c.clientIntent=StoreClient.ClientIntent.BUY;c.noAcceptingContraband=true;c.SetBudget(budget);
-            // Native IsClientBuyingThisItem accepts listed tags before consulting
-            // the predicate. Keep all restrictions in that predicate.
-            c.willAcceptItem=item=>SafeItem(item) && !item.IsTag(paidTag) &&
+            Func<GameItem,bool> accepts=item=>SafeItem(item) && !item.IsTag(paidTag) &&
                 (item.IsTag(TypeHelper.TOOL) || item.IsTag(TypeHelper.MATERIAL) || item.IsTag("HOUSEHOLD_GOOD")) &&
                 (filter==null || filter(item));
+            BuyerFilters.Add(c,accepts);
+            c.willAcceptItem=accepts;
+            c.clientBuyingTagList.AddRange(interests ?? new[]{TypeHelper.TOOL,TypeHelper.MATERIAL,"HOUSEHOLD_GOOD"});
             c.OnArrival+=()=>c.OverrideBudget(Math.Max(0,budget-Number(receipt)));
             c.onItemBought+=(item,paid)=>
             {
@@ -90,7 +97,7 @@ namespace EleanorRomance
         private static StoreClient Collect()
         {
             var c=EleanorStory.NewEleanorClient("biz_collect","eleanor_scav",StoreClient.ClientIntent.BUY);
-            Buyer(c,Number("order.budget",600),"order.spent",AcceptsOrderItem);
+            Buyer(c,Number("order.budget",600),"order.spent",AcceptsOrderItem,new[]{TypeHelper.TOOL,TypeHelper.MATERIAL});
             c.onItemBought+=RecordOrderItem;
             c.onDealAccepted+=()=>
             {
@@ -232,6 +239,16 @@ namespace EleanorRomance
             if(MaidState.PendingVisit!=id)return;
             MaidState.PendingVisit=0;MaidState.NextVisitDay=-1;MaidState.LastImportantDay=MaidState.Today;
             MaidProjects.RefreshStates(true);
+        }
+    }
+
+    [HarmonyPatch(typeof(StoreClient),nameof(StoreClient.IsClientRefusingItem))]
+    internal static class MaidBusinessBuyerFilterPatch
+    {
+        private static bool Prefix(StoreClient __instance,GameItem gameItem,ref bool __result)
+        {
+            if(!MaidBusiness.RefusesBusinessItem(__instance,gameItem))return true;
+            __result=true;return false;
         }
     }
 }

@@ -1,0 +1,58 @@
+{
+  "er_name_sophia": [
+    "索菲娅",
+    "Sophia"
+  ],
+  "er_love_prompt_c1": [
+    "索菲娅在等你回答。",
+    "Sophia is waiting for your answer."
+  ],
+  "er_love_prompt_c2": [
+    "索菲娅半开玩笑地问。",
+    "Sophia asks, half joking."
+  ],
+  "er_love_prompt_a2_c1": [
+    "埃莉诺问该买多少。",
+    "Eleanor asks how much to buy."
+  ],
+  "er_love_prompt_a2_c2": [
+    "索菲娅问为什么不涨价。",
+    "Sophia asks why you have not raised prices."
+  ],
+  "er_love_prompt_a2_c3": [
+    "埃莉诺问母亲这身怎么样。",
+    "Eleanor asks how her mother looks."
+  ],
+  "er_love_prompt_a3_c1": [
+    "埃莉诺在等你开口。",
+    "Eleanor is waiting for you to speak."
+  ],
+  "er_love_prompt_a3_c2": [
+    "埃莉诺问想请谁来。",
+    "Eleanor asks who to invite."
+  ],
+  "er_ending_love_title": [
+    "回家",
+    "Home"
+  ],
+  "er_ending_love_01": [
+    "婚礼散场后，我们回到当铺。索菲娅在窗口外站了一会儿，才把吊坠重新戴好。",
+    "After the wedding, we went back to the pawnshop. Sophia stood outside the window for a while before putting the locket back on."
+  ],
+  "er_ending_love_02_research_returned": [
+    "研究交回去了。种子没有留下，果园里的那批果子还是老样子。埃莉诺说，没关系，慢慢来。",
+    "The research went back. No seeds were kept, and the fruit in the garden is the same as before. Eleanor says it's all right. We'll take it slowly."
+  ],
+  "er_ending_love_02_research_public": [
+    "研究公开了，种子留了下来。索菲娅说，等下一批果子结籽，第一颗先留给我们。",
+    "The research is public, and the seeds were kept. Sophia says when the next batch seeds, the first fruit is ours."
+  ],
+  "er_ending_love_03": [
+    "埃莉诺把戒指转了半圈，说这间店、这些账、这些果子，往后都算两个人的。",
+    "Eleanor turned the ring half a circle and said the shop, the accounts, and the fruit would belong to both of us from now on."
+  ],
+  "er_love_resume": [
+    "……",
+    "..."
+  ]
+}

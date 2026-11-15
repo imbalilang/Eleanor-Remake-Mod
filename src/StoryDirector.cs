@@ -18,6 +18,10 @@ namespace EleanorRomance
         public static void OnGameLoadedEarly()
         {
             GalaClosing.Reset();
+            DualClosingDay.Reset();
+            LoveA2Closing.Reset();
+            EndingPageUI.HideRoutePage();
+            StoryPresentation.Clear();
             VersionGate.Refresh();
             DualShowcaseEffects.OnLoaded();
             PortraitCompat.Refresh();
@@ -50,6 +54,8 @@ namespace EleanorRomance
             MaidBusiness.OnLoaded();
             MaidInteractions.OnLoaded();
             GalaClosing.OnLoaded();
+            DualClosingDay.OnLoaded();
+            LoveA2Closing.OnLoaded();
             MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
             GalaStory.TickNews(StoreStation.Instance?.storeEventManager);
         }
@@ -57,6 +63,10 @@ namespace EleanorRomance
         public static void OnNewGameStarted(string scenarioId)
         {
             GalaClosing.Reset();
+            DualClosingDay.Reset();
+            LoveA2Closing.Reset();
+            EndingPageUI.HideRoutePage();
+            StoryPresentation.Clear();
             VersionGate.Refresh();
             if (!VersionGate.IsSupported) return;
 
@@ -68,6 +78,9 @@ namespace EleanorRomance
                     Notify(L.Get("er_notice_early_start"));
                 }
             }
+            // New runs use the maid v2 rewrite; loaded v1 saves keep FeatureVersion==1.
+            if (!MaidState.HasHistory && MaidState.FeatureVersion == 0)
+                MaidState.FeatureVersion = MaidState.V2Version;
 
             ModEntry.Log("New game. scenario=" + scenarioId + ", chapter=" + RomanceState.Chapter
                 + ", next=" + RomanceState.NextVisitDay);
@@ -83,6 +96,8 @@ namespace EleanorRomance
 
             try
             {
+                LoveDirector.EnsureA2FirstLast(manager);
+                LoveWaterShortage.Ensure(StoreStation.Instance?.storeEventManager);
                 PortraitCompat.SanitizeLoadedClients();
                 // Daily refresh runs before every early return: a story that is
                 // not active must still hide stale project rows, and a new shop
@@ -115,8 +130,10 @@ namespace EleanorRomance
                 DualProgression.Check();
                 DualShowcaseEffects.FlushPending();
                 DualDirector.RecoverPending(manager);
-                if (RomanceState.LastQueuedDay == day) return;
-                if (MaidState.LastImportantDay == day) return;
+                LoveDirector.RecoverPending(manager);
+                bool eveningFollowUp = DualDirector.SameDayFollowUpDue(day);
+                if (RomanceState.LastQueuedDay == day && !eveningFollowUp) return;
+                if (MaidState.LastImportantDay == day && !eveningFollowUp) return;
                 if (HasModClient(manager)) return;
                 if (MaidStory.HasUrgentClient(manager)) return;
                 MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
@@ -129,9 +146,12 @@ namespace EleanorRomance
                     return;
                 }
                 if (DualDirector.TryQueue(manager, day)) return;
+                if (DualState.Active && DualState.Flag("d.route") && DualDirector.NextScene(day) == "d06") return;
                 if (MaidStory.TryQueue(manager, day)) return;
                 if (MaidState.LegacyResume == 1) return; // Await its dedicated due day and explicit choice.
                 if (DualBusiness.TryQueue(manager, day)) return;
+                if (LoveDirector.TryQueue(manager, day)) return;
+                if (TryQueueRouteResetPrompt(manager, day)) return;
                 DualDirector.ReconcileMainProgression(day);
 
                 // A romance lock is not a world-story termination. In particular
@@ -160,6 +180,14 @@ namespace EleanorRomance
                     return;
                 }
 
+                if (chapter == 11 && RomanceState.DPreludeState == 1 && RomanceState.DPreludeStep > 0
+                    && !EleanorStory.HasPreludeBracelet())
+                {
+                    RomanceState.PendingChapter = 11;
+                    AdvanceChapter(11, 12, EleanorStory.MarkPreludeBraceletUnavailable);
+                    return;
+                }
+
                 StoreClient client = EleanorStory.CreateClient(chapter);
                 if (client == null)
                 {
@@ -168,7 +196,8 @@ namespace EleanorRomance
                 }
 
                 ModHelper.SetClientSource(client, ModConstants.ModId);
-                if (RomanceState.Route == 3 && RevolutionStory.UseMorningQueue(chapter))
+                if (RomanceState.Route == 3
+                    && (RevolutionStory.UseMorningQueue(chapter) || RevolutionV2Story.UseMorningQueue(chapter)))
                     manager.AddNextClient(client);
                 else
                     manager.AddClient(client);
@@ -198,11 +227,20 @@ namespace EleanorRomance
 
             // The investigator's money can be completed by her own sales at any
             // time; the deadline visit only happens once 800 is reached or the
-            // story's day 42 has arrived (her other work fills the gap).
-            if (chapter == 12 && RomanceState.Savings < 800 && day < 42 - StoryOffset()) return 0;
+            // story's day 42 has arrived (her other work fills the gap).  A v2
+            // player who already answered the detective-fee choice must not be
+            // locked out while a declined/unsettled gap waits for day 42.
+            bool maidGapAnswered = MaidState.V2
+                && (MaidV2State.GapPaid || MaidV2State.GapChoice != 0);
+            if (chapter == 12 && !maidGapAnswered
+                && RomanceState.Savings < 800 && day < 42 - StoryOffset()) return 0;
 
-            if (chapter == 18 && RomanceState.MotherState != 1) return 19;
-            if (chapter == 19 && RomanceState.MotherState != 1) return 0;
+            bool maidV2Route = MaidState.V2 && MaidState.Active;
+            if (!maidV2Route && chapter == 18 && RomanceState.MotherState != 1) return 19;
+            if (!maidV2Route && chapter == 19 && RomanceState.MotherState != 1) return 0;
+
+            // v2: P2 is the first and only mainline Wilde project; Act 3 waits for it.
+            if (maidV2Route && chapter == 20 && !MaidProjects.Paid(2)) return 0;
 
             if (chapter == 20 && RomanceState.Route == 3) return 0;
             // Revolution supply gates and the R12-R13 interval wait for the
@@ -211,6 +249,7 @@ namespace EleanorRomance
             // The dual extension replaces the c21/c22/c23 visits while it owns
             // the post-rescue schedule; its own director queues those scenes.
             if (DualDirector.SuppressMainChapter(chapter)) return 0;
+            if (LoveDirector.SuppressMainChapter(chapter, day)) return 0;
 
             if (day < RomanceState.NextVisitDay) return 0;
             return chapter;
@@ -312,6 +351,7 @@ namespace EleanorRomance
         private static bool TryQueueEpilogue(StoreClientManager manager, int day)
         {
             if (MaidState.Active) return false;
+            if (LoveState.Act3Done) return false;
             // The dual extension supplies its own confirmed ending/epilogue;
             // an exited dual route falls back to the ordinary epilogue.
             if (DualState.Active && DualState.Relation != 3) return false;
@@ -332,6 +372,35 @@ namespace EleanorRomance
             RomanceState.EpilogueIndex = index + 1;
             RomanceState.LastEpilogueDay = day;
             Log("Queued epilogue " + index + " on day " + day + ".");
+            return true;
+        }
+
+        /// <summary>
+        /// After any written route ending, the archivist offers to rewind the run
+        /// to the common line.  The offer can be deferred or permanently
+        /// suppressed; the reset itself clears all route state, keeps items and
+        /// meta unlocks, and rebuilds new-game caches.
+        /// </summary>
+        private static bool TryQueueRouteResetPrompt(StoreClientManager manager, int day)
+        {
+            if (manager == null || RomanceState.RouteResetSuppressed) return false;
+            PlayerStore store = PlayerStore.Instance;
+            if (store == null || store.isClientBeingArrested || store.isHandlingShootout) return false;
+            if (!EndingPages.HasExperiencedRouteEnding()) return false;
+            if (RomanceState.RouteResetNextOfferDay >= 0 && day < RomanceState.RouteResetNextOfferDay) return false;
+            if (RomanceState.LastQueuedDay == day) return false;
+            if (HasModClient(manager)) return false;
+
+            StoreClient client = EleanorStory.CreateRouteResetPromptClient();
+            if (client == null) return false;
+
+            ModHelper.SetClientSource(client, ModConstants.ModId);
+            manager.AddNextClient(client);
+            // A queued prompt that is lost on save/load may be offered again
+            // tomorrow; "later" advances this to day + 8 explicitly.
+            RomanceState.RouteResetNextOfferDay = day + 1;
+            RomanceState.LastQueuedDay = day;
+            Log("Queued route-reset prompt on day " + day + ".");
             return true;
         }
 
@@ -393,6 +462,10 @@ namespace EleanorRomance
                 case 22: return 55;
                 case 23: return 57;
                 case 24: return 59;
+                case 25: return 61;
+                case 26: return 63;
+                case 27: return 65;
+                case 28: return 67;
                 case 101: return 46;
                 case 102: return 48;
                 case 103: return 49;
@@ -406,6 +479,17 @@ namespace EleanorRomance
                 case 111: return 65;
                 case 112: return 68;
                 case 113: return 0; // R14 is the next safe morning after R13.
+                case 280: return 46;
+                case 281: return 48;
+                case 282: return 51;
+                case 283: return 54;
+                case 284: return 57;
+                case 285: return 60;
+                case 286: return 62;
+                case 287: return 64;
+                case 288: return 66;
+                case 289: return 69;
+                case 290: return 72;
                 case 201: return 45;
                 case 202: return 46;
                 case 203: return 48;

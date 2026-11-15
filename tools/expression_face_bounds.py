@@ -27,6 +27,39 @@ LOWER_FACE_EDGES = {
 }
 
 
+# Native coordinates for the brow on the viewer's left. Each patch includes the
+# neutral brow and the space the aligned brow moves through, inside the bangs.
+LEFT_BROW_PATCHES = {
+    'eleanor_scav': (('angry', 'determined'),
+                     [(113, 103), (120, 102), (122, 104), (123, 107), (125, 110),
+                      (126, 112), (120, 113), (112, 112), (111, 109)]),
+    'eleanor1': (('angry', 'serious'),
+                 [(120, 105), (127, 103), (129, 103), (130, 105), (132, 108),
+                  (134, 112), (133, 114), (120, 113), (119, 111), (119, 107)]),
+    'eleanor_maid': (('angry', 'serious', 'tsun'),
+                     [(120, 105), (126, 103), (129, 103), (130, 105), (132, 109),
+                      (135, 112), (132, 114), (119, 112), (117, 110), (119, 107)]),
+    'lydia_daily': (('angry', 'determined', 'sad'),
+                    [(124, 104), (126, 103), (128, 103), (130, 105), (131, 108),
+                     (130, 110), (124, 111), (122, 110), (123, 107)]),
+    'lydia_date': (('angry', 'determined', 'sad'),
+                   [(125, 104), (127, 103), (129, 103), (131, 105), (132, 108),
+                    (131, 110), (124, 111), (123, 110), (124, 107)]),
+}
+
+
+def include_left_brow(weight, family, expression, origin=(0, 0)):
+    profile = LEFT_BROW_PATCHES.get(family)
+    if profile is None or expression not in profile[0]:
+        return weight
+
+    x0, y0 = origin
+    stencil = Image.new('L', (weight.shape[1], weight.shape[0]))
+    ImageDraw.Draw(stencil).polygon([(x - x0, y - y0) for x, y in profile[1]], fill=255)
+    feather = np.asarray(stencil.filter(ImageFilter.GaussianBlur(.4))) / 255
+    return np.maximum(weight, (np.asarray(stencil) > 0) * feather)
+
+
 def jaw_guard(size, family):
     if size != (288, 212):
         raise ValueError('Review facial bounds for a different native canvas')

@@ -10,6 +10,7 @@ import json
 import os
 import re
 import sys
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -115,7 +116,7 @@ def main() -> int:
     dual=json.load(open(os.path.join(ROOT,'Content','dual_romance_v04.json'),encoding='utf-8'))
     dual_blocks={}
     choices={}
-    speakers={'Player','Eleanor','Lydia','Mother','Uncle','Thug','Officer','News','SecurityNotice','UpperBuyer','Narrator'}
+    speakers={'Player','Eleanor','Lydia','Mother','Uncle','Thug','Officer','News','SecurityNotice','UpperBuyer','Narrator','SEC'}
     for scene in dual['scenes']:
         for b in scene['blocks']:
             if b['id'] in dual_blocks:errors.append('Duplicate dual block: '+b['id'])
@@ -128,12 +129,17 @@ def main() -> int:
                 if re.search(r'[\u4e00-\u9fff]',line.get('en','')):errors.append('Untranslated dual English: '+key)
         for c in scene.get('choices',[]):choices[c['id']]=c
     # Match literals inside calls rather than assuming a particular block prefix.
-    for call in re.findall(r'DualText\.(?:Build|Append|Plain)\((.*?)\)',source,re.S):
+    for call in re.findall(r'DualText\.(?:Build|Append|Plain|BuildBackup)\((.*?)\)',source,re.S):
         for bid in re.findall(r'"([^"\n]+)"',call):
             if bid in {'dr_daily_','_open'}:continue  # complete dynamic set checked below
             if bid not in dual_blocks:errors.append('Unknown dual block reference: '+bid)
     for cid in re.findall(r'DualText\.Choice\("([^"\n]+)"',source):
         if cid not in choices:errors.append('Unknown dual choice: '+cid)
+    v2_ids=[f"dv{i:02d}" for i in range(1,14)]
+    if [s.get('id') for s in dual['scenes'] if str(s.get('id','')).startswith('dv')] != v2_ids:
+        errors.append('Harem v2 scenes must be present in dv01-dv13 order')
+    for bid in set(re.findall(r'"(dv\d+_b\d+)"',source)):
+        if bid not in dual_blocks:errors.append('Unknown harem v2 block: '+bid)
     for stage in range(1,4):
         for variant in range(1,3):
             if f'wait_{stage}_{variant}' not in dual_blocks:errors.append('Missing stage daily')
@@ -152,6 +158,51 @@ def main() -> int:
     for forbidden in ('dr05_defer','dr02_hold_plaque','dr07_book','dr07_decline'):
         if forbidden in choices:errors.append('Retired dual choice registered: '+forbidden)
     print(f"dual blocks: {len(dual_blocks)}, choices: {len(choices)} (source/generated/bilingual checked)")
+
+    # Solo-romance source, generated table and runtime references.
+    love_blocks = {}
+    love_choices = {}
+    love_speakers = {'Player', 'Eleanor', 'Sophia', 'Lydia', 'Resident', 'Narrator', 'SEC'}
+    love_files = ('love_romance_v01.json', 'love_romance_v02.json', 'love_romance_v03.json')
+    for love_name in love_files:
+        love_path = os.path.join(ROOT, 'Content', love_name)
+        if not os.path.exists(love_path):
+            continue
+        love = json.load(open(love_path, encoding='utf-8'))
+        for scene in love['scenes']:
+            for b in scene['blocks']:
+                if b['id'] in love_blocks:
+                    errors.append('Duplicate love block: ' + b['id'])
+                love_blocks[b['id']] = b
+                for i, line in enumerate(b['lines'], 1):
+                    key = f"er_love_{b['id']}_{i:02d}"
+                    if line.get('speaker') not in love_speakers:
+                        errors.append('Unknown love speaker: ' + key)
+                    if not line.get('text') or not line.get('en'):
+                        errors.append('Incomplete love translation: ' + key)
+                    if zh.get(key) != line.get('text') or en.get(key) != line.get('en'):
+                        errors.append('Stale love generation: ' + key)
+                    if re.search(r'[\u4e00-\u9fff]', line.get('en', '')):
+                        errors.append('Untranslated love English: ' + key)
+            for c in scene.get('choices', []):
+                love_choices[c['id']] = c
+    if love_blocks:
+        for call in re.findall(r'LoveText\.(?:Build|Append)\((.*?)\)', source, re.S):
+            for bid in re.findall(r'"([^"\n]+)"', call):
+                if bid not in love_blocks:
+                    errors.append('Unknown love block reference: ' + bid)
+        for cid in re.findall(r'Choice\("([^"\n]+)"', source):
+            if cid.startswith(('la1_', 'la2_', 'la3_')) and cid not in love_choices:
+                errors.append('Unknown love choice: ' + cid)
+        lovegen = open(os.path.join(ROOT, 'src', 'LoveContent.g.cs'), encoding='utf8').read()
+        generated = set(re.findall(r'\{"([^"\n]+)",new\[\]', lovegen))
+        if generated != set(love_blocks):
+            errors.append('Love generated block set differs from source')
+        loveui = json.load(open(os.path.join(ROOT, 'Content', 'love_ui.json'), encoding='utf8'))
+        for k, pair in loveui.items():
+            if not all(pair) or zh.get(k) != pair[0] or en.get(k) != pair[1]:
+                errors.append('Stale love UI: ' + k)
+        print(f"love blocks: {len(love_blocks)}, choices: {len(love_choices)} (source/generated/bilingual checked)")
 
     # Revolution route source, generated table and UI.
     rev_path = os.path.join(ROOT, 'Content', 'revolution_v1.json')
@@ -203,6 +254,13 @@ def main() -> int:
     print(f"content blocks: {len(content_blocks)}")
     print(f"content lines: {len(content_keys)}")
     print(f"code L.Get keys: {len(keys)}")
+
+    from check_maid_v2 import main as check_maid_v2
+    if check_maid_v2(Path(ROOT)) != 0:
+        errors.append("maid v2 scene graph check failed")
+    from check_revolution_v2 import main as check_revolution_v2
+    if check_revolution_v2(Path(ROOT)) != 0:
+        errors.append("revolution v2 scene graph check failed")
 
     if errors:
         for e in errors:

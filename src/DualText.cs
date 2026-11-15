@@ -7,7 +7,10 @@ namespace EleanorRomance
     /// <summary>Builds dual-route dialogue from the generated DualContent table.</summary>
     public static class DualText
     {
-        public static Dialogue Build(params string[] ids)
+        public static Dialogue Build(params string[] ids) => BuildBackup(null, ids);
+
+        /// <summary>Builds SEC lines with the displayed name of the visible backup.</summary>
+        public static Dialogue BuildBackup(string companionName, params string[] ids)
         {
             Dialogue head = null, tail = null;
             foreach (string id in ids)
@@ -23,11 +26,14 @@ namespace EleanorRomance
                 foreach (DualContent.Line line in lines)
                 {
                     string speaker = SpeakerName(line.Speaker);
-                    foreach (string paragraph in L.Get(line.Key).Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries))
+                    foreach (string paragraph in StoryEngine.SplitParagraphs(L.Get(line.Key)))
                     {
                         int next=++position;
                         if(next<=cursor)continue;
                         Dialogue node = StoryEngine.Text(speaker, paragraph);
+                        if (line.Speaker == "SEC")
+                            StoryPresentation.MarkCompanion(node,
+                                string.IsNullOrEmpty(companionName) ? L.Eleanor : companionName);
                         PortraitExpression.Apply(node,line.Key,speaker);
                         node.SetEndAction(()=>DualState.SetInt("cursor."+id,Math.Max(next,DualState.Int("cursor."+id))));
                         if (head == null) head = node;
@@ -50,6 +56,8 @@ namespace EleanorRomance
                 case "Uncle": return L.Get("er_name_uncle");
                 case "Thug": return L.Get("er_name_thug");
                 case "Officer": return "SEC";
+                // Writer-facing backup speaker: uses the native second bubble.
+                case "SEC": return "SEC";
                 case "News": return L.Get("er_name_news");
                 case "SecurityNotice": return L.Get("er_name_security_notice");
                 case "UpperBuyer": return L.Get("er_name_upper_buyer");
@@ -87,28 +95,11 @@ namespace EleanorRomance
         /// <summary>Commits once when any branch reaches a leaf.</summary>
         public static Dialogue FinishAll(Dialogue head, Action commit)
         {
-            bool done = false;
-            Action finish = () =>
+            StoryEngine.OnDialogueFinished(head, () =>
             {
-                if (done) return;
-                done = true;
                 commit?.Invoke();
                 StoryEngine.Dismiss();
-            };
-            var seen = new System.Collections.Generic.HashSet<Dialogue>();
-            Action<Dialogue> walk = null;
-            walk = node =>
-            {
-                if (node == null || !seen.Add(node)) return;
-                if (node.nextDialogue != null) walk(node.nextDialogue);
-                foreach (var choice in node.choices) walk(choice.Item2);
-                if (node.nextDialogue == null && node.choices.Count == 0)
-                {
-                    Action previous = node.endAction;
-                    node.SetEndAction(() => { previous?.Invoke(); finish(); });
-                }
-            };
-            walk(head);
+            });
             return head;
         }
 

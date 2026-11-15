@@ -21,6 +21,17 @@ namespace EleanorRomance
             if (!DualState.Writable || !RomanceState.StoryActive) return;
             int rep;
             if (!TryReputation(out rep)) return;
+            if (DualState.Flag("d.route"))
+            {
+                if (!DualState.Active) return;
+                for (int stage = 1; stage <= Targets.Length; stage++)
+                {
+                    if (Earned(stage) || rep < Targets[stage - 1]) continue;
+                    DualState.SetInt("reward." + stage + ".earned_day", DualState.Today);
+                    DualState.Flag("reward." + stage + ".earned", true);
+                }
+                return;
+            }
             for (int stage = 1; stage <= 3; stage++)
             {
                 if (!Active(stage)) continue;

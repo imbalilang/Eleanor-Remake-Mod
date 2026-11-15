@@ -1,0 +1,13 @@
+1.06：统一埃莉诺立绘、物品点击区与通关后路线重置
+
+- 无论原版、其他 MOD 还是本 MOD 场景，识别为埃莉诺的访客一律使用本 MOD 立绘；本 MOD 的女仆装、晚礼服、革命装、亲密装与表情保留。外部立绘键与外部补丁不再造成同一存档内立绘混用。
+- 吊坠、手镯以及推荐/赞助/谢礼饰品增加约 1% 不透明度的白色命中底，整件物品矩形都可点击；不透明像素与外观不变。
+- 任一现行结局（E1/E2/E3/E4/E9）后，下一次开店空闲时“下层区档案员”来访，可重置本轮剧情、重开另一条路线；已获得物品、真结局元进度与已经发生的新闻/声望等世界效果保留。可延后 8 天再问，或让本存档不再询问。
+- 不新增或重排结局编号；不改路线条件、目标日或正文。
+
+1.06: Unified Eleanor portraits, item hit areas, and post-ending route reset
+
+- Any visitor recognised as Eleanor now uses this mod's portrait, including vanilla and other-mod scenes; this mod's maid, gala, revolution, intimate outfits and expressions stay. External portrait keys and patches no longer produce a mixed Eleanor portrait in one save.
+- The locket, bracelet and recommendation/patron/gratitude ornaments have a ~1% white hit backing, making the whole item rectangle clickable without changing opaque art.
+- After any current ending (E1/E2/E3/E4/E9), the archivist visits on a free shop day and offers a route reset to try another line; items, true-ending meta progress and completed news/reputation world effects stay. The offer can be deferred for 8 days or suppressed for this save.
+- No ending renumbering and no route-condition, target-day or dialogue changes.

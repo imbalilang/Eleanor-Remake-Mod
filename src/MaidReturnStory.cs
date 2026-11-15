@@ -7,6 +7,12 @@ namespace EleanorRomance
     {
         public static int EventForDay(int day)
         {
+            if(MaidState.V2)
+            {
+                if(MaidState.PendingVisit>0)
+                    return day>=MaidState.NextVisitDay?MaidState.PendingVisit:0;
+                return MaidV2Story.EventForDay(day);
+            }
             MaidBusiness.OnLoaded();
             // Invitation 916 belongs exclusively to the player's empty-shop
             // close action, including old queued/pending saves.
@@ -47,6 +53,11 @@ namespace EleanorRomance
         }
         public static StoreClient CreateEvent(int id)
         {
+            if(MaidState.V2)
+            {
+                StoreClient v2=MaidV2Story.CreateEvent(id);
+                if(v2!=null)return v2;
+            }
             switch(id)
             {
                 case LegacyVisit:return CreateLegacy();case HousingVisit:return CreateStandalone("housing");

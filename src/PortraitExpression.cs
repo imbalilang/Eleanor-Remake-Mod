@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -14,14 +13,13 @@ namespace EleanorRomance
     {
         private sealed class Tag
         {
-            public readonly string Key;
+            public readonly string Expression;
             public readonly string Speaker;
-            public Tag(string key, string speaker) { Key = key; Speaker = speaker; }
+            public Tag(string expression, string speaker) { Expression = expression; Speaker = speaker; }
         }
 
         private static readonly ConditionalWeakTable<Dialogue, Tag> Tags =
             new ConditionalWeakTable<Dialogue, Tag>();
-        private static readonly Dictionary<string, Sprite> Cache = new Dictionary<string, Sprite>();
 
         /// <summary>Attach metadata only; no scene/current-client lookup at build time.</summary>
         public static void Apply(Dialogue node, string key, string speaker)
@@ -29,53 +27,60 @@ namespace EleanorRomance
             if (node == null || string.IsNullOrEmpty(key)) return;
             if (!ExpressionContent.ByKey.TryGetValue(key, out var expr) || string.IsNullOrEmpty(expr)) return;
             Tags.Remove(node);
-            Tags.Add(node, new Tag(key, speaker));
+            Tags.Add(node, new Tag(expr, speaker));
         }
 
-        /// <summary>Resolve and attach the sprite immediately before the line is shown.</summary>
-        public static void Resolve(Dialogue node)
+        /// <summary>Resolve the sprite against the current client immediately before display.</summary>
+        internal static Sprite Resolve(Dialogue node)
         {
-            if (node == null || !PortraitCompat.IsBeautyActive) return;
-            if (!Tags.TryGetValue(node, out var tag)) return;
+            if (node == null || !PortraitCompat.IsBeautyActive) return null;
+            if (!Tags.TryGetValue(node, out var tag)) return null;
 
-            var client = PlayerStore.Instance != null ? PlayerStore.Instance.currentClientInstance : null;
-            if (client == null) return;
+            var client = PlayerStore.Instance?.currentClientInstance;
+            if (client == null) return null;
             var blueprint = client.GetClientBlueprint();
-            if (blueprint == null) return;
+            if (blueprint == null) return null;
 
             // Only the visible client has a portrait. Do not put Eleanor's face on Lydia.
-            if (!string.Equals(tag.Speaker, blueprint.displayName, StringComparison.Ordinal)) return;
+            if (!string.Equals(tag.Speaker, blueprint.displayName, StringComparison.Ordinal)) return null;
 
             string baseKey = BaseKey(blueprint.spriteName);
-            if (string.IsNullOrEmpty(baseKey)) return;
-            string expr = ExpressionContent.ByKey[tag.Key];
+            if (baseKey == null) return null;
 
-            if (expr == "neutral")
-            {
-                node.SetPortrait(BaseSprite(blueprint));
-                return;
-            }
-
-            string asset = "er_expr_" + baseKey + "_" + expr;
-            if (!Cache.TryGetValue(asset, out var sprite))
-            {
-                sprite = PortraitCompat.GetLocalSprite(asset);
-                Cache[asset] = sprite;
-            }
-            node.SetPortrait(sprite != null ? sprite : BaseSprite(blueprint));
+            Sprite sprite = tag.Expression == "neutral" ? null : FindExpression(baseKey, tag.Expression);
+            return sprite != null ? sprite : BaseSprite(blueprint);
         }
 
-        public static void Reset()
+        private static Sprite FindExpression(string baseKey, string expression)
         {
-            Cache.Clear();
+            string prefix = "er_expr_" + baseKey + "_";
+            Sprite sprite = PortraitCompat.GetLocalSprite(prefix + expression);
+            if (sprite != null) return sprite;
+
+            switch (expression)
+            {
+                case "shy": return PortraitCompat.GetLocalSprite(prefix + "flustered");
+                case "flustered":
+                case "tsun": return PortraitCompat.GetLocalSprite(prefix + "shy");
+                case "tease": return PortraitCompat.GetLocalSprite(prefix + "smile");
+                default: return null;
+            }
         }
 
         private static Sprite BaseSprite(StoreClient blueprint)
         {
             try
             {
+                // Our own story keeps its authored outfit/variant.  The
+                // SpriteDict fallback intentionally returns the external default
+                // for any Eleanor key, so ask the client-aware resolver first.
+                if (PortraitCompat.IsEleanorClient(blueprint))
+                {
+                    Sprite own = PortraitCompat.ResolveEleanorClientSprite(blueprint);
+                    if (own != null) return own;
+                }
                 if (SpriteDict.Instance != null && !string.IsNullOrEmpty(blueprint.spriteName))
-                    return SpriteDict.Instance.ShowClientSprite(blueprint.spriteName);
+                    return SpriteDict.Instance.GetSprite(blueprint.spriteName);
             }
             catch (Exception ex)
             {
@@ -87,21 +92,25 @@ namespace EleanorRomance
         private static string BaseKey(string spriteName)
         {
             if (string.IsNullOrEmpty(spriteName)) return null;
-            if (spriteName.StartsWith("cp_portrait_", StringComparison.Ordinal))
+            if (spriteName.StartsWith(PortraitCompat.BeautyKeyPrefix, StringComparison.Ordinal))
             {
-                spriteName = spriteName.Substring("cp_portrait_".Length);
+                spriteName = spriteName.Substring(PortraitCompat.BeautyKeyPrefix.Length);
                 if (spriteName.EndsWith("_female", StringComparison.Ordinal))
                     spriteName = spriteName.Substring(0, spriteName.Length - "_female".Length);
             }
-            if (spriteName.IndexOf("eleanor_maid", StringComparison.OrdinalIgnoreCase) >= 0) return "eleanor_maid";
-            if (spriteName.IndexOf("eleanor_gala", StringComparison.OrdinalIgnoreCase) >= 0) return "eleanor_gala";
-            if (spriteName.IndexOf("lydia_date", StringComparison.OrdinalIgnoreCase) >= 0) return "lydia_date";
-            if (spriteName.IndexOf("er_portrait_lydia", StringComparison.OrdinalIgnoreCase) >= 0) return "lydia_daily";
             switch (spriteName)
             {
                 case "eleanor1": case "eleanor2": case "eleanor3":
                 case "eleanor_scav": case "eleanor_rev":
                     return spriteName;
+                case PortraitCompat.MaidKey: return "eleanor_maid";
+                case PortraitCompat.GalaKey: return "eleanor_gala";
+                case ModConstants.EleanorVestPortrait: return "eleanor_revolution_undersuit";
+                case ModConstants.EleanorIntimatePortrait: return "eleanor_love_intimate";
+                case ModConstants.LydiaPortraitBeauty: return "lydia_daily";
+                case PortraitCompat.LydiaDateBeautyKey: return "lydia_date";
+                case ModConstants.MotherPortraitBeauty: return "sophia";
+                case ModConstants.MotherHomePortraitBeauty: return "sophia_home";
                 default:
                     return null;
             }

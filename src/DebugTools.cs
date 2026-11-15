@@ -24,22 +24,42 @@ namespace EleanorRomance
             Add("测试：第 5 章 救援", TestRescue);
             Add("测试：第 7 章 拾荒", TestScavenger);
             Add("测试：第 10 章 莉迪亚", TestLydia);
+            Add("测试：后宫线入口（手镯）", TestD01, tall: true);
+            Add("测试：后宫线 v2 第一幕（怀表）", TestDv01, tall: true);
+            Add("测试：后宫线 v2 矿石交易", TestDv03, tall: true);
+            Add("测试：后宫线 v2 保护（关门前）", TestDv06, tall: true);
+            Add("测试：后宫线 v2 黑幕（开门）", TestDv10, tall: true);
+            Add("测试：后宫线 v2 三人确认 / E4（点头）", TestDv13, tall: true);
+            Add("测试：多人演出 POC / Multi presentation", TestPresentation, true);
             Add("测试：第 12 章 调查款（正常）", TestSavingsNormal);
             Add("测试：第 12 章 调查款（逾期补款）", TestSavingsLate);
             Add("测试：第 13 章 数据盘", TestDrive);
             Add("测试：第 14 章 威胁", TestThreat);
             Add("测试：第 15 章 方向选择", TestDecision);
-            Add("测试：第 16 章 准备（路线乙）", TestPreparationB);
-            Add("测试：第 17 章 团聚（路线甲）", TestReunionA);
-            Add("测试：第 17 章 团聚（路线乙）", TestReunionB);
+            Add("测试：第 16 章 准备（研究保留）", TestPreparationB);
+            Add("测试：第 17 章 团聚（研究归还）", TestReunionA);
+            Add("测试：第 17 章 团聚（研究保留）", TestReunionB);
             Add("测试：第 20 章 表白", TestConfession);
             Add("测试：第 21 章 合作买家", TestCooperation);
             Add("测试：第 24 章 恋爱收束", TestConclusionRomance);
             Add("测试：第 24 章 朋友收束", TestConclusionFriends);
-            Add("测试：路线丙第 1 段", TestRouteC);
-            Add("测试：路线丁（擅自交盘）", TestRouteD);
+            Add("测试：恋爱线 第一幕A（日用品）", () => TestLoveVisit(1), true);
+            Add("测试：恋爱线 第一幕B（营养果）", () => TestLoveVisit(2), true);
+            Add("测试：恋爱线 第一幕C（关门前）", () => TestLoveVisit(3), true);
+            Add("测试：恋爱线 第二幕A（停水）", () => TestLoveVisit(4), true);
+            Add("测试：恋爱线 第二幕B（价签）", () => TestLoveVisit(5), true);
+            Add("测试：恋爱线 第二幕C（家常衣服）", () => TestLoveVisit(6), true);
+            Add("测试：恋爱线 第三幕A（旧友）", () => TestLoveVisit(7), true);
+            Add("测试：恋爱线 第三幕B（求婚）", () => TestLoveVisit(8), true);
+            Add("测试：恋爱线 第三幕C（名单）", () => TestLoveVisit(9), true);
+            Add("测试：恋爱线 第三幕D（婚礼）", () => TestLoveVisit(10), true);
+            Add("测试：打印恋爱线状态 / Print love state", PrintLoveState);
+            Add("测试：重置恋爱线 / Reset love", ResetLove, true);
+            Add("测试：革命军线第 1 段", TestRouteC);
+            Add("测试：失败分支（擅自交盘）", TestRouteD);
             Add("测试：后日谈", TestEpilogue);
             Add("测试：旧档档案员", TestOldSavePrompt);
+            Add("测试：通关后重置档案员", TestRouteResetPrompt, true);
             Add("测试：好感 +5", AddAffection);
             Add("标记完整恋爱线（测试）", MarkRomanceComplete);
             RegisterMaidTests();
@@ -89,6 +109,42 @@ namespace EleanorRomance
             if (id != "dr07" && id != "dr17") DualState.FirstTraded = true;
             bool queued = DualDirector.ForceQueue(id);
             StoryDirector.Notify(queued ? "已排队双恋场景 " + id : "双恋场景 " + id + " 排队失败。");
+        }
+
+        private static void TestLoveVisit(int visit)
+        {
+            SetupCommon();
+            RomanceState.MotherState = 1;
+            RomanceState.Route = 2;
+            RomanceState.Chapter = 21;
+            RomanceState.NextVisitDay = 0;
+            RomanceState.UncleReported = true;
+            StoryCoreFacts.Confess(1);
+            LoveState.Reset();
+            bool queued = LoveDirector.ForceQueue(visit);
+            StoryDirector.Notify(queued
+                ? "已排队恋爱线场景 " + visit
+                : "恋爱线场景 " + visit + " 排队失败。");
+        }
+
+        private static void PrintLoveState()
+        {
+            StoryDirector.Notify("Love started=" + LoveState.Started
+                + " active=" + LoveState.Active
+                + " a1=" + LoveState.T1Done + "/" + LoveState.T2Done + "/" + LoveState.ClosingDone
+                + " act1=" + LoveState.Act1Done
+                + " a2=" + LoveState.A2T1Done + "/" + LoveState.A2T2Done + "/" + LoveState.A2T3Done
+                + " act2=" + LoveState.Act2Done
+                + " a3=" + LoveState.A3T1Done + "/" + LoveState.A3T2Done + "/" + LoveState.A3T3Done
+                + " wedding=" + LoveState.WeddingDone
+                + " act3=" + LoveState.Act3Done
+                + " next=" + LoveState.NextVisitDay);
+        }
+
+        private static void ResetLove()
+        {
+            LoveState.Reset();
+            StoryDirector.Notify("恋爱线状态已重置。");
         }
 
         private static void PrintDualState()
@@ -212,6 +268,111 @@ namespace EleanorRomance
         {
             SetupCommon();
             QueueTestChapter(10);
+        }
+
+        private static void TestD01()
+        {
+            SetupCommon();
+            DualState.Reset();
+            RomanceState.DPreludeState = 4;
+            RomanceState.DPreludeStep = 0;
+            RomanceState.DPreludeOriginalPrice = 140;
+            RomanceState.MotherState = 1;
+            RomanceState.MotherVisited = true;
+            RomanceState.Route = 1;
+            if (!DualDirector.ForceQueue("entry"))
+                StoryDirector.Notify("后宫线第一幕排队失败。");
+        }
+
+        private static void SetupDAct2Test()
+        {
+            SetupCommon();
+            DualState.Reset();
+            RomanceState.DPreludeState = 4;
+            RomanceState.DPreludeStep = 0;
+            RomanceState.DPreludeOriginalPrice = 140;
+            RomanceState.MotherState = 1;
+            RomanceState.MotherVisited = true;
+            RomanceState.Route = 1;
+            DualState.Accept(1);
+            DualState.Flag("d.route", true);
+            DualState.Flag("d.act1", true);
+        }
+
+        private static void MarkDvDone(int through)
+        {
+            for (int i = 1; i <= through; i++)
+                DualState.Flag("scene.dv" + i.ToString("00"), true);
+        }
+
+        private static void TestDv01()
+        {
+            SetupDAct2Test();
+            if (!DualDirector.ForceQueue("dv01"))
+                StoryDirector.Notify("后宫线 v2 第一幕排队失败。");
+        }
+
+        private static void TestDv03()
+        {
+            SetupDAct2Test();
+            MarkDvDone(2);
+            if (!DualDirector.ForceQueue("dv03"))
+                StoryDirector.Notify("后宫线 v2 矿石交易排队失败。");
+        }
+
+        private static void TestDv06()
+        {
+            SetupDAct2Test();
+            MarkDvDone(5);
+            if (!DualDirector.ForceQueue("dv06"))
+                StoryDirector.Notify("后宫线 v2 保护事件排队失败。");
+        }
+
+        private static void TestDv10()
+        {
+            SetupDAct2Test();
+            MarkDvDone(9);
+            DualState.Relation = 1;
+            if (!DualDirector.ForceQueue("dv10"))
+                StoryDirector.Notify("后宫线 v2 黑幕日排队失败。");
+        }
+
+        private static void TestDv13()
+        {
+            SetupDAct2Test();
+            MarkDvDone(12);
+            DualState.Relation = 1;
+            if (!DualDirector.ForceQueue("dv13"))
+                StoryDirector.Notify("后宫线 v2 三人确认排队失败。");
+        }
+
+        private static void TestPresentation()
+        {
+            SetupCommon();
+            if (PlayerStore.Instance == null || PlayerStore.Instance.storeClientManager == null)
+            {
+                StoryDirector.Notify("当前不在可测试的经营场景。");
+                return;
+            }
+            QueueTestClient(CreatePresentationPocClient);
+        }
+
+        private static StoreClient CreatePresentationPocClient()
+        {
+            StoreClient client = EleanorStory.NewNpcClient(
+                "presentation_poc", "黑市掮客", "maleBM5", EleanorStory.FactionKind.BlackMarket);
+            Dialogue root = StoryEngine.Text(client.displayName, "……");
+            Dialogue backup = StoryEngine.Text("SEC", "……");
+            Dialogue end = StoryEngine.Text(L.Get("er_name_narrator"), "……");
+            root.SetStartAction(() =>
+                StoryPresentation.ShowBackups("maleBM5", "maleLower1", "immediate", "掮客", "打手"));
+            root.SetNextDialogue(backup);
+            backup.SetNextDialogue(end);
+            end.SetEndAction(StoryPresentation.Clear);
+            client.mainDialogue = root;
+            client.OnDismiss += StoryPresentation.Clear;
+            client.CompleteClientCreation();
+            return client;
         }
 
         private static void TestSavingsNormal()
@@ -374,6 +535,26 @@ namespace EleanorRomance
             }
         }
 
+        private static void TestRouteResetPrompt()
+        {
+            try
+            {
+                RomanceState.RouteResetSuppressed = false;
+                RomanceState.RouteResetNextOfferDay = -1;
+                StoreClient client = EleanorStory.CreateRouteResetPromptClient();
+                if (client != null)
+                {
+                    ModHelper.SetClientSource(client, ModConstants.ModId);
+                    PlayerStore.Instance.storeClientManager.AddNextClient(client);
+                    StoryDirector.Notify("已排队通关后重置档案员。");
+                }
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("TestRouteResetPrompt failed: " + ex);
+            }
+        }
+
         private static void QueueNextChapter()
         {
             if (!RomanceState.StoryActive)
@@ -490,6 +671,10 @@ namespace EleanorRomance
             RomanceState.ThreatRecorded = false;
             RomanceState.LydiaVisited = false;
             RomanceState.LydiaFairBracelet = false;
+            RomanceState.DPreludeStep = 0;
+            RomanceState.DPreludeState = 0;
+            RomanceState.DPreludeOriginalPrice = 0;
+            RomanceState.DPreludeBuybackMode = 0;
         }
 
         private static void AddAffection()
@@ -544,7 +729,7 @@ namespace EleanorRomance
                     QueueMaidEvent(chapter);
                 },true);
             }
-            Add("测试：乙线撤案新闻 / Review news",()=>
+            Add("测试：研究保留撤案新闻 / Review news",()=>
             {
                 SetupMaidFixture(true);StoryDirector.CompleteCore();MaidWorldEvents.SubmitReceipt();
                 MaidState.SetInt("world.due_day",MaidState.Today);MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);

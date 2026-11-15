@@ -104,10 +104,10 @@ foreach($choice in 0..2){
     [EleanorRomance.MaidState]::BasicComplete=$true;[EleanorRomance.MaidState]::Flag('p2.paid',$true)
     [EleanorRomance.MaidState]::PendingVisit=24
     $c=[EleanorRomance.MaidStory]::CreateEvent(24);Use-Client $c
-    Finish-Dialogue (Pick $c.mainDialogue $choice)
+    Finish-Dialogue-WithChoices (Pick $c.mainDialogue $choice)
     if($choice -ne 2){
         Assert ($script:businessStock.Count -eq 2 -and $c.isBargainAvailable) 'Supply lot missing goods/bargaining.'
-        [StoreClientInstance]::TestHasStock=$false;$c.TestOnDealAccepted($null);Finish-Dialogue $ui.currentDialog
+        [StoreClientInstance]::TestHasStock=$false;$c.TestOnDealAccepted($null);Finish-Dialogue-WithChoices $ui.currentDialog
     }
     Assert ([EleanorRomance.MaidState]::Progress -eq 24 -and [EleanorRomance.MaidProjects]::ResultShown(2)) 'Supply choice skipped/blocked the old result.'
 }

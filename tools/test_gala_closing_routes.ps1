@@ -172,10 +172,11 @@ Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::GalaKey) 'Closing vis
 [EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
 Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::GalaKey) 'Bundled gown was removed during sanitisation.'
 $own.Sprites.Remove([EleanorRomance.PortraitCompat]::GalaKey)|Out-Null
+[SpriteDict]::Instance.spriteDictionary.Remove([EleanorRomance.PortraitCompat]::GalaKey)|Out-Null
 [EleanorRomance.PortraitCompat]::SanitizeLoadedClients()
-Assert ($c.spriteName -eq 'eleanor1') 'Missing gown did not fall back to original clothes.'
+Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::Resolve('eleanor1')) 'Missing gown did not fall back to daily clothes.'
 Closing-Run;$c=Closing-Client
-Assert ($c.spriteName -eq 'eleanor1') 'Missing gown did not fall back for a new visitor.'
+Assert ($c.spriteName -eq [EleanorRomance.PortraitCompat]::Resolve('eleanor1')) 'Missing gown did not fall back for a new visitor.'
 [EleanorRomance.RomanceState]::MotherState=0
 Assert (![EleanorRomance.GalaStory]::Eligible) 'Gala lost its safe-mother relationship gate.'
 [EleanorRomance.GalaClosing]::Reset()

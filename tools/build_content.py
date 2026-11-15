@@ -24,6 +24,7 @@ SPEAKER_ENUM = {
     "uncle": "Uncle",
     "thug": "Thug",
     "officer": "Officer",
+    "broker": "Broker",
     "news": "News",
     "security_notice": "SecurityNotice",
 }
@@ -36,6 +37,33 @@ def key_for(block_id: str, index: int) -> str:
 
 def cs_const(block_id: str) -> str:
     return "B_" + block_id.replace(".", "_").replace("-", "_").upper()
+
+
+def presentation_cs(block: dict) -> str:
+    """Build a StoryPresentationSpec initializer from an optional block field.
+
+    JSON shape:
+      "presentation": {
+        "mode": "immediate" | "arrive",
+        "backup1": {"sprite": "maleBM5", "name": "..."},
+        "backup2": {"sprite": "maleBM6", "name": "..."}
+      }
+    """
+    spec = block.get("presentation") or {}
+    if not spec:
+        return ""
+    mode = str(spec.get("mode") or "immediate")
+    first = spec.get("backup1") or {}
+    second = spec.get("backup2") or {}
+
+    def esc(value):
+        return str(value or "").replace("\\", "\\\\").replace('"', '\\"')
+
+    return (
+        'new StoryPresentationSpec("%s", "%s", "%s", "%s", "%s")'
+        % (esc(mode), esc(first.get("sprite")), esc(first.get("name")),
+           esc(second.get("sprite")), esc(second.get("name")))
+    )
 
 
 def load_ui_text(root: str, code: str) -> dict:
@@ -135,6 +163,21 @@ def main() -> int:
     lines.append("        {")
     lines.append("            return Blocks.TryGetValue(id, out StoryLine[] block) ? block : null;")
     lines.append("        }")
+    lines.append("")
+    lines.append("        private static readonly Dictionary<string, StoryPresentationSpec> Presentations =")
+    lines.append("            new Dictionary<string, StoryPresentationSpec>")
+    lines.append("            {")
+    for ch in chapters:
+        for b in ch["blocks"]:
+            spec = presentation_cs(b)
+            if spec:
+                lines.append(f'                {{ "{b["id"]}", {spec} }},')
+    lines.append("            };")
+    lines.append("")
+    lines.append("        public static StoryPresentationSpec GetPresentation(string id)")
+    lines.append("        {")
+    lines.append("            return Presentations.TryGetValue(id, out StoryPresentationSpec spec) ? spec : null;")
+    lines.append("        }")
     lines.append("    }")
     lines.append("}")
 
@@ -152,17 +195,29 @@ def main() -> int:
     all_en.update(dialogue_en)
 
     from build_maid_content import build as build_maid
+    from build_maid_v2_content import build as build_maid_v2
     from build_dual_content import build as build_dual
     from build_revolution_content import build as build_revolution
+    from build_revolution_v2_content import build as build_revolution_v2
+    from build_love_content import build as build_love
     maid_zh, maid_en = build_maid(root)
     all_zh.update(maid_zh)
     all_en.update(maid_en)
+    maid_v2_zh, maid_v2_en = build_maid_v2(root)
+    all_zh.update(maid_v2_zh)
+    all_en.update(maid_v2_en)
     dual_zh, dual_en = build_dual(root)
     all_zh.update(dual_zh)
     all_en.update(dual_en)
     revolution_zh, revolution_en = build_revolution(root)
     all_zh.update(revolution_zh)
     all_en.update(revolution_en)
+    revolution_v2_zh, revolution_v2_en = build_revolution_v2(root)
+    all_zh.update(revolution_v2_zh)
+    all_en.update(revolution_v2_en)
+    love_zh, love_en = build_love(root)
+    all_zh.update(love_zh)
+    all_en.update(love_en)
 
     missing_en = sorted(set(all_zh) - set(all_en))
     os.makedirs(os.path.join(root, "Localization"), exist_ok=True)

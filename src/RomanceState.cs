@@ -51,6 +51,20 @@ namespace EleanorRomance
             set => SetBool("old_prompt_done", value);
         }
 
+        /// <summary>Next day the archivist may offer a route-completion reset; -1 means not yet scheduled.</summary>
+        public static int RouteResetNextOfferDay
+        {
+            get => GetInt("route_reset_next_offer_day", -1);
+            set => SetInt("route_reset_next_offer_day", value);
+        }
+
+        /// <summary>Player asked not to be offered another route reset in this save.</summary>
+        public static bool RouteResetSuppressed
+        {
+            get => GetBool("route_reset_suppressed", false);
+            set => SetBool("route_reset_suppressed", value);
+        }
+
         public static bool EarlyStart
         {
             get => GetBool("scenario_boost", false);
@@ -515,6 +529,60 @@ namespace EleanorRomance
             set => SetBool("lydia_visited", value);
         }
 
+        // D prelude (same common-line c09/c10 window). 0=none, 1=bought,
+        // 2=not bought, 3=sold to broker, 4=returned, 5=gifted, 6=named price,
+        // 7=no longer held before handover.
+        public static int DPreludeStep
+        {
+            get => GetInt("d_prelude_step", 0);
+            set => SetInt("d_prelude_step", value);
+        }
+
+        public static int DPreludeState
+        {
+            get => GetInt("d_prelude_state", 0);
+            set => SetInt("d_prelude_state", value);
+        }
+
+        public static int DPreludeOriginalPrice
+        {
+            get => GetInt("d_prelude_original_price", 0);
+            set => SetInt("d_prelude_original_price", value);
+        }
+
+        public static bool DPreludeDUnlocked => DPreludeState >= 4 && DPreludeState <= 6;
+
+        public static int PreludeBraceletId
+        {
+            get => GetInt("prelude_bracelet_id", 0);
+            set => SetInt("prelude_bracelet_id", value);
+        }
+
+        public static bool MotherBoughtGoods
+        {
+            get => GetBool("mother_bought_goods", false);
+            set => SetBool("mother_bought_goods", value);
+        }
+
+        public static bool MotherBoughtFruit
+        {
+            get => GetBool("mother_bought_fruit", false);
+            set => SetBool("mother_bought_fruit", value);
+        }
+
+        public static bool MotherUsedNegotiatedPrice
+        {
+            get => GetBool("mother_used_negotiated_price", false);
+            set => SetBool("mother_used_negotiated_price", value);
+        }
+
+        // 0=none, 1=return at original cap, 2=gift, 3=let her name 500.
+        public static int DPreludeBuybackMode
+        {
+            get => GetInt("d_prelude_buyback_mode", 0);
+            set => SetInt("d_prelude_buyback_mode", value);
+        }
+
         public static bool EpilogueDone
         {
             get => GetBool("epilogue_done", false);
@@ -593,6 +661,8 @@ namespace EleanorRomance
             Initialized = true;
             OldBlocked = false;
             OldPromptDone = false;
+            RouteResetNextOfferDay = -1;
+            RouteResetSuppressed = false;
             EarlyStart = earlyStart;
             Chapter = 0;
             PendingChapter = 0;
@@ -662,11 +732,22 @@ namespace EleanorRomance
             ScavAssist = false;
             LydiaFairBracelet = false;
             LydiaVisited = false;
+            DPreludeStep = 0;
+            DPreludeState = 0;
+            DPreludeOriginalPrice = 0;
+            DPreludeBuybackMode = 0;
+            PreludeBraceletId = 0;
+            MotherBoughtGoods = false;
+            MotherBoughtFruit = false;
+            MotherUsedNegotiatedPrice = false;
             EpilogueDone = false;
             EpilogueIndex = 0;
             LastEpilogueDay = -1;
             EpilogueStockIndex = -1;
             TrueUnlocked = keepMeta;
+            // New runs use the maid v2 rewrite.  Loaded v1 saves keep their
+            // existing FeatureVersion and continue on the v1 branch code.
+            MaidState.FeatureVersion = MaidState.V2Version;
 
             ModEntry.Log("Story state initialized. earlyStart=" + earlyStart + ", next=" + NextVisitDay);
         }
@@ -773,6 +854,15 @@ namespace EleanorRomance
                 Initialized = false;
                 OldBlocked = false;
                 InitializeForSave();
+
+                // A mid-session route reset must also retire in-memory closing,
+                // ending-page and showcase state, then rebuild the same caches a
+                // new game would have.
+                EndingPageUI.Hide();
+                EndingPageUI.HideRoutePage();
+                DualShowcaseEffects.ClearMemory();
+                StoryDirector.OnNewGameStarted("route_reset");
+
                 StoryDirector.Notify(L.Get("er_notice_reset_done"));
                 ModEntry.Log("Manual Eleanor story reset completed.");
             }
@@ -801,7 +891,7 @@ namespace EleanorRomance
         {
             if (string.IsNullOrEmpty(id)) return false;
             return id.StartsWith("er_story_", StringComparison.Ordinal)
-                || id.StartsWith("eleanor", StringComparison.OrdinalIgnoreCase);
+                || VanillaEleanorBridge.IsNativeEleanorClientId(id);
         }
 
         private static bool GetBool(string key, bool fallback) => ModHelper.GetModDataBool(ModConstants.ModId, Prefix + key, fallback);

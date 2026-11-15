@@ -1,0 +1,76 @@
+[heading]Eleanor Story Expand[/heading]
+[b]The Upper Level's Rich Daughter Falls for a Lower Level Pawnshop Owner: Eleanor Story Expansion[/b]
+
+[i]She was raised to look down on the Lower Level. Now she has to survive it.[/i]
+
+[quote][center][b][size=5]“So this is what you Lower Level people call a ‘shop’?”[/size][/b][/center][/quote]
+
+She is the only daughter of the former director of the Upper Level's largest hydroponic farm. Her mother is arrested for embezzlement, her family collapses overnight, and she falls into the Lower Level she once despised.
+You own a pawnshop.
+
+This is not a romance you can buy with gifts. She will not fall for a few handouts. You earn her trust by knowing value, making fair offers, keeping records and taking risks.
+
+[heading]Highlights[/heading]
+[list]
+[*][b]Her pride does not disappear.[/b] She is still picky, sharp-tongued and convinced the Lower Level is beneath her. When you genuinely help her, her thanks come out awkward and reluctant. You do not start as someone she admires. You start as someone she remembers — and then, slowly, someone she respects.
+[*][b]The relationship grows from what you actually do.[/b] A fair purchase, a generous price, an opportunistic squeeze — she notices all of it. A suspicious crate, a warning you could give or withhold, a risk you take on her behalf: these matter more than a “+1 affection” button. Key outcomes come from real decisions, not from picking the flattering line.
+[*][b]Class contrast, not savior and trophy.[/b] She gives back. She defends you to your face and behind your back. She insists on her own judgment. What she wants is equality, not someone who decides for her. You are not a hidden billionaire or a chosen one — just a shopkeeper who lives by a good eye, a ledger and the people he knows.
+[*][b]The original world stays intact.[/b] The fake uncle, the black-market enforcers, Security, Pastel Inc., Nutrifruit and the hydroponic farms remain part of the story. Eleanor keeps her sharpness, pride and drive; the mod gives her more room to use them.
+[*][b]Two ways to begin.[/b] Normal start: the remade story begins on day 23, preserving the original pacing. Early start: an optional 0-point perk starts the story on day 12 without giving free affection, reputation or money. The same growth line, just earlier.
+[/list]
+
+[heading]What You Get[/heading]
+[list]
+[*]A 23-chapter core story with multiple branches, epilogues and ending pages.
+[*]More than 60,000 Chinese characters of story text; a normal single-route playthrough runs to around in-game day 70.
+[*]Two new characters, 13 outfits in total, with about 10 expression variants per outfit.
+[*]Simplified Chinese and English.
+[*]Native trade, inspection, reporting, arrest, news and shop systems; no separate backroom or case-file UI.
+[*]Old saves are protected by default; an optional reset is available.
+[/list]
+
+[heading]Why It's Worth Playing[/heading]
+If you were interested in Eleanor in the base game but found her personal line too short or too late, this mod gives her the full story she deserved.
+
+If you like shopkeeping and character relationships, and prefer earning trust through prices, judgment and risk instead of farming dialogue options; if you want a heroine with her own mind and the right to choose, not a reward — this is for you.
+
+Your choices change where the story goes. Where it ends is something you decide after you open the shop.
+
+[heading]The Four Main Routes and Endings[/heading]
+[b]Romance route:[/b] You and Eleanor fall in love in the Lower Level, stand together, and keep going.
+
+[spoiler][b]Harem route:[/b] Pursue both Eleanor and a new character added by this mod.[/spoiler]
+
+[spoiler][b]Attendant route:[/b] You become Eleanor's master and help her return to the Upper Level. However brightly she shines, you are her only king.[/spoiler]
+
+[spoiler][b]Revolution route:[/b] You join the revolution with Eleanor as comrades-in-arms and face life-and-death trials together.[/spoiler]
+
+There is also a friends ending: no romance, but the trust and visits remain.
+
+[heading]For the Best Look[/heading]
+This Nexus package already bundles the authorized CutePortraits / Maiden's Pawnshop Eleanor base portraits, along with this mod's Lydia, Mother, maid and gala portraits. The separate CutePortraits / Maiden's Pawnshop mod is not required.
+
+Do not enable CutePortraits / Maiden's Pawnshop or another mod that replaces the same portraits alongside this package; use one portrait source to avoid duplicate or overriding textures.
+
+If another mod overrides the visible portrait, this mod yields and pauses expression switching instead of forcing its own art back.
+
+[heading]Practical Notes[/heading]
+[list]
+[*]Version 1.10; compatible with Probably Stolen 1.0.0.14 / 1.0.0.13 / 0.46D (build 26525552 or later).
+[*]Extract the EleanorRomance folder into Mods\EleanorRomance, enable it in the Mods menu and restart.
+[*]No other mods are required. Use either the manual copy or the Steam Workshop copy — not both. Do not install two Nexus copies at the same time.
+[/list]
+
+[heading]Existing Saves[/heading]
+A save that has never subscribed to this mod will trigger an “old file” event on its first shop day. Regardless of prior Eleanor progress, you can choose to reset her story and restart from chapter 1 of the mod's storyline.
+
+After completing any current ending, the Archivist visits on a later free shop day and offers to reset the route so you can try another line. Received items, true-ending meta progress and completed world effects stay.
+
+[heading]Credits[/heading]
+Probably Stolen and its characters belong to Questing Goose Studio.
+
+CutePortraits / Maiden's Pawnshop belongs to its Workshop author, 远风肆业 (Steam Workshop 3829696854). The authorized Eleanor base portraits are bundled with this mod.
+
+Lydia, Mother, maid and gala portraits, item icons and the rewritten storyline were created for this mod.
+
+Mod code: Eleanor Story Expand team.

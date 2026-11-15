@@ -54,9 +54,11 @@ namespace EleanorRomance
         private static void PresentMorning(StoreClient client)
         {
             var ui=StoreUIManager.Instance;
+            // Make the client current before resolving its portrait so the
+            // client-aware Eleanor resolver keeps this scene's authored look.
+            PlayerStore.Instance.currentClientInstance=StoreClientInstance.CreateClientInstance(client);
             ui.clientGameObject.image.sprite=SpriteDict.Instance.ShowClientSprite(client.GetSprite());
             ui.clientGameObject.SetImmediatlyArrive();
-            PlayerStore.Instance.currentClientInstance=StoreClientInstance.CreateClientInstance(client);
             ui.RunMorningDialogue();
         }
         public static void ResolveMorning()

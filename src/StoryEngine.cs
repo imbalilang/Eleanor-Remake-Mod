@@ -7,6 +7,22 @@ namespace EleanorRomance
     /// <summary>Small helpers shared by all v0.6 chapters.</summary>
     public static class StoryEngine
     {
+        /// <summary>Split generated dialogue paragraphs without newer String.Split overloads.</summary>
+        public static string[] SplitParagraphs(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return new string[0];
+            var result = new List<string>();
+            int start = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] != '\n') continue;
+                if (i > start) result.Add(text.Substring(start, i - start));
+                start = i + 1;
+            }
+            if (start < text.Length) result.Add(text.Substring(start));
+            return result.ToArray();
+        }
+
         public sealed class Choice
         {
             public readonly string Label;
@@ -137,6 +153,7 @@ namespace EleanorRomance
                 case StorySpeaker.Lydia: return L.Get("er_name_lydia");
                 case StorySpeaker.Uncle: return L.Get("er_name_uncle");
                 case StorySpeaker.Thug: return L.Get("er_name_thug");
+                case StorySpeaker.Broker: return L.Get("er_name_broker");
                 // The native dialogue dispatcher recognizes SEC, not the
                 // localized name. It selects both the officer bubble and the
                 // recorder's officer attribution, independently of the client.
@@ -159,21 +176,27 @@ namespace EleanorRomance
         }
 
         private static Dialogue BuildFrom(string blockId, int start)
+            => BuildSelected(blockId, index => index >= start);
+
+        internal static Dialogue BuildSelected(string blockId, Func<int, bool> include,
+            StorySpeaker? backup = null, Action[] starts = null)
         {
-            StoryLine[] lines = StoryV06Content.Get(blockId);
+            StoryLine[] lines = GetContentBlock(blockId);
             if (lines == null || lines.Length == 0)
             {
                 StoryDirector.LogError("Missing story block: " + blockId);
                 return null;
             }
+            StoryPresentationSpec presentation = StoryV06Content.GetPresentation(blockId);
 
             Dialogue head = null;
             Dialogue tail = null;
-            for (int i = start; i < lines.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
+                if (!include(i)) continue;
                 StoryLine line = lines[i];
-                Dialogue node = Text(SpeakerName(line.Speaker), L.Get(line.Key));
-                PortraitExpression.Apply(node, line.Key, SpeakerName(line.Speaker));
+                Dialogue node = ContentLine(line, backup);
+                if (starts != null && i < starts.Length && starts[i] != null) node.SetStartAction(starts[i]);
                 if (head == null)
                 {
                     head = node;
@@ -185,6 +208,8 @@ namespace EleanorRomance
                     tail = node;
                 }
             }
+            if (presentation != null && head != null)
+                head.SetStartAction(() => StoryPresentation.Apply(presentation));
             return head;
         }
 
@@ -206,17 +231,20 @@ namespace EleanorRomance
         /// </summary>
         public static Dialogue Append(Dialogue current, string blockId)
         {
-            StoryLine[] lines = StoryV06Content.Get(blockId);
+            StoryLine[] lines = GetContentBlock(blockId);
             if (lines == null || lines.Length == 0)
             {
                 StoryDirector.LogError("Missing story block: " + blockId);
                 return Tail(current);
             }
+            StoryPresentationSpec presentation = StoryV06Content.GetPresentation(blockId);
 
             Dialogue tail = Tail(current);
+            Dialogue firstNode = null;
             foreach (StoryLine line in lines)
             {
-                Dialogue node = Text(SpeakerName(line.Speaker), L.Get(line.Key));
+                Dialogue node = ContentLine(line);
+                if (firstNode == null) firstNode = node;
                 if (tail == null)
                 {
                     tail = node;
@@ -227,7 +255,30 @@ namespace EleanorRomance
                     tail = node;
                 }
             }
+            if (presentation != null && firstNode != null)
+                firstNode.SetStartAction(() => StoryPresentation.Apply(presentation));
             return tail;
+        }
+
+        private static StoryLine[] GetContentBlock(string blockId)
+        {
+            StoryLine[] lines = StoryV06Content.Get(blockId);
+            if (lines != null) return lines;
+
+            return Array.ConvertAll(RevolutionContent.Get(blockId) ?? Array.Empty<RevolutionContent.Line>(),
+                line => new StoryLine(
+                    line.Speaker == "player" ? StorySpeaker.Player
+                        : line.Speaker == "news" ? StorySpeaker.News : StorySpeaker.Eleanor,
+                    line.Key));
+        }
+
+        private static Dialogue ContentLine(StoryLine line, StorySpeaker? backup = null)
+        {
+            string speaker = line.Speaker == backup ? DialogUIManager.SEC : SpeakerName(line.Speaker);
+            Dialogue node = Text(speaker, L.Get(line.Key));
+            if (line.Speaker == backup) StoryPresentation.MarkCompanion(node, SpeakerName(line.Speaker));
+            PortraitExpression.Apply(node, line.Key, speaker);
+            return node;
         }
 
         /// <summary>Appends a block to a dialogue graph without changing its head.</summary>
@@ -318,11 +369,8 @@ namespace EleanorRomance
                     if (!client.isBusinessComplete) client.CompleteBusiness();
                     start?.Invoke();
                 });
-                Dialogue tail = CompletionTail(completion);
-                Action end = tail.endAction;
-                tail.SetEndAction(() =>
+                OnDialogueFinished(completion, () =>
                 {
-                    end?.Invoke();
                     commit();
                     Dismiss(callNextWhenPossible: true);
                 });
@@ -341,7 +389,7 @@ namespace EleanorRomance
                 built = false;
                 completion = null;
                 Dialogue dialogue = getCompletion();
-                if (dialogue != null) client.allDoneDialogue = dialogue;
+                client.allDoneDialogue = dialogue;
             };
             client.onItemSold += (item, paid) => refreshAllDone();
             client.onItemBought += (item, paid) => refreshAllDone();
@@ -359,9 +407,17 @@ namespace EleanorRomance
                 }
             };
 
+            // Some trade visits have no authored wrap. Their native all-done
+            // dialogue dismisses the customer without going through the bell.
+            client.OnDismiss += () =>
+            {
+                if (getCompletion() == null) commit();
+            };
+
             // The bell checks dismissable before invoking this interceptor.
             client.dismissable = true;
-            client.tryInterceptDismiss = () =>
+            Func<bool> tryDismiss = null;
+            tryDismiss = () =>
             {
                 Dialogue dialogue = getCompletion();
                 if (dialogue == null)
@@ -369,20 +425,24 @@ namespace EleanorRomance
                     commit();
                     return false;
                 }
-                return DialogUIManager.Instance.StartDialogue(dialogue, forcedStart: true);
+                DialogUIManager.Instance.StartDialogue(dialogue, forcedStart: true);
+                // A failed start must not dismiss past the wrap or lose the interceptor.
+                if (!started) client.tryInterceptDismiss = tryDismiss;
+                return true;
             };
+            client.tryInterceptDismiss = tryDismiss;
         }
 
         public static void Dismiss() => Dismiss(callNextWhenPossible: false);
 
-        // A light invitation may split and then rejoin the host's original
-        // closing line. Keep its completion on that common leaf, never on the
-        // choice prompt, whose END runs before the player has answered.
-        public static Dialogue CompletionTail(Dialogue head)
+        // Choice prompts end before the player answers. Only terminal responses
+        // may commit; a rejoined tail needs just one hook.
+        public static void OnDialogueFinished(Dialogue head, Action finish)
         {
             var seen=new System.Collections.Generic.HashSet<Dialogue>();
             var pending=new System.Collections.Generic.Stack<Dialogue>();
-            pending.Push(head);Dialogue leaf=null;
+            bool done = false;
+            pending.Push(head);
             while(pending.Count>0)
             {
                 var node=pending.Pop();if(node==null || !seen.Add(node))continue;
@@ -390,11 +450,16 @@ namespace EleanorRomance
                 foreach(var choice in node.choices)pending.Push(choice.Item2);
                 if(node.nextDialogue==null && node.choices.Count==0)
                 {
-                    if(leaf!=null && leaf!=node)return Tail(head);
-                    leaf=node;
+                    Action previous = node.endAction;
+                    node.SetEndAction(() =>
+                    {
+                        if (done) return;
+                        done = true;
+                        previous?.Invoke();
+                        finish?.Invoke();
+                    });
                 }
             }
-            return leaf ?? Tail(head);
         }
 
         private static void Dismiss(bool callNextWhenPossible)

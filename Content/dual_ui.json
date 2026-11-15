@@ -51,6 +51,10 @@
     "这个替你收着呢——{0}。这次腾出地方了吧？",
     "I have been keeping this for you: {0}. Have you made room this time?"
   ],
+  "er_dual_reputation_gift": [
+    "最近上层有不少人问起你的店。喏，这件{0}是给你的。",
+    "People upstairs have been asking about your shop. Here, this is for you: {0}."
+  ],
   "er_dual_perfume_claim": [
     "那瓶香水还替你留着。这次拿好。",
     "I still have that perfume for you. Take it this time."
@@ -110,5 +114,49 @@
   "er_dual_trade_close_none": [
     "今天没有合眼的。下回收到好货，记得给我留一件。",
     "Nothing caught my eye today. Next time you get something good, remember to hold one for me."
+  ],
+  "er_d01_c1_prompt": [
+    "她的手悬在表上方，没落下去。",
+    "Her hand hovers over the watch without touching it."
+  ],
+  "er_d01_c2_prompt": [
+    "笔尖悬在纸上。",
+    "The pen hovers over the paper."
+  ],
+  "er_d02_c1_prompt": [
+    "他的手搭在柜沿，人还站着没动。",
+    "His hand rests on the counter's edge. He has not moved."
+  ],
+  "er_d03_c2_prompt": [
+    "纸上两行字摊在柜面，两个人都在看他。",
+    "Two lines of handwriting lie on the counter. Both women are looking at him."
+  ],
+  "er_d_act2a_done": [
+    "后宫线第二幕（上）已完成；几天后继续。",
+    "D Act 2, part one, is complete. The rest comes in a few days."
+  ],
+  "er_d_act2_done": [
+    "后宫线第二幕已完成；第三幕「双螺旋」接入中。",
+    "D Act 2 is complete. Act 3, Double Helix, is being connected."
+  ],
+  "er_d04_c1_prompt": [
+    "她捏着布袋口，话说完了，人还没走。",
+    "She is holding the bag closed. She has said it, and she has not left."
+  ],
+  "er_d05_c2_prompt": [
+    "她说完那句话，自己先把手缩了回去。",
+    "She has pulled her hand back before he can answer."
+  ],
+  "er_d_act3_done": [
+    "后宫线第三幕已完成；第四幕「结局」接入中。",
+    "D Act 3 is complete. Act 4, the ending, is being connected."
+  ],
+  "er_d08_c1_prompt": [
+    "她说要退出，手已经搭上凳子边，准备起身。",
+    "She says she is leaving, one hand already on the stool."
+  ],
+  "er_d09_c2_prompt": [
+    "埃莉诺看着莉迪亚，莉迪亚看着地，两个人都在等下一句。",
+    "Eleanor looks at Lydia. Lydia looks at the floor. Both are waiting."
   ]
 }

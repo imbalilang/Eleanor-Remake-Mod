@@ -93,6 +93,10 @@ foreach($early in @($false,$true)){
     foreach($id in @('dr04','dr05','dr06','dr07','dr08','dr09','dr10','coop')){
         $station.dayCounter++
         if($id -eq 'dr05'){$null=Dual-Finish $id 0}else{$c=Dual-Finish $id}
+        if($id -in @('dr07','dr09','dr10')){Finish-Dialogue-WithChoices (Pick $c.mainDialogue 0)}
+        if($id -in @('dr04','dr07','dr09','dr10')){
+            $store.TryPlayerDismissCurrentClient($true);Finish-Dialogue-WithChoices $ui.currentDialog
+        }
         if($id -eq 'dr08' -and $ui.currentDialog -and (Choice-Node $ui.currentDialog)){
             Finish-Dialogue (Pick $ui.currentDialog 1)
         }
@@ -112,7 +116,7 @@ foreach($early in @($false,$true)){
         if($id -in @('dr14','dr15','dr17','dr18')){$null=Dual-Finish $id 0}else{$null=Dual-Finish $id}
     }
     Assert ([EleanorRomance.DualState]::Confirmed -and [EleanorRomance.DualState]::Done('dr20') -and ![EleanorRomance.ScavAssistance]::Eligible) 'Confirmation/final reward source incorrect.'
-    Assert ([EleanorRomance.DualOutcomes]::Ending('dead').Contains('dr_epilogue_death')) 'Actual death ending suffix missing.'
+    Assert ($null -ne [EleanorRomance.EndingPages]::TryDualCompletion() -and $null -eq [EleanorRomance.EndingPages]::TryGet('dead')) 'Completed harem page is missing or overwrites a death result.'
 }
 Dual-Run 50;[EleanorRomance.DualState]::Accept(1)
 $null=Dual-Finish 'dr05' 1
@@ -198,7 +202,8 @@ foreach($work in @(0,1)){
         [EleanorRomance.MaidWorldEvents]::State=$case[1]
         $c=[EleanorRomance.DualStory]::CreateScene('dr08')
         $actual=@((Motivation-Nodes $c.mainDialogue) | Where-Object {$_.plainText -like 'er_dual_dr08_mother_*'})
-        Assert ($actual.Count -eq 1 -and $actual[0].plainText -eq "er_dual_$($case[2])_01") "Wrong mother facts for route $($case[0]), review $($case[1]), work $work."
+        if($case[0] -eq 1){Assert ($actual.Count -eq 0) 'Research-return dialogue included a protection-review line.'}
+        else{Assert ($actual.Count -eq 1 -and $actual[0].plainText -eq "er_dual_$($case[2])_01") "Wrong mother facts for route $($case[0]), review $($case[1]), work $work."}
     }
 }
 'PASS: route-A exile and route-B pending/withdrawn mother dialogue stay distinct for both new and existing employment.'

@@ -22,6 +22,9 @@ namespace EleanorRomance
         {
             DialogueSpeakers.Enabled=true;
             GalaClosing.Enabled=true;
+            DualClosingDay.Enabled=true;
+            LoveA2Closing.Enabled=true;
+            LoveWaterShortage.Enabled=true;
             DualShowcaseEffects.Enabled=true;
             if (!subscribed)
             {
@@ -38,6 +41,7 @@ namespace EleanorRomance
                 subscribed = true;
             }
 
+            PortraitCompat.RegisterConfig();
             DebugTools.Register();
             StartingPerkRegistration.Register();
             ScavAssistance.Register();
@@ -48,6 +52,12 @@ namespace EleanorRomance
         {
             DialogueSpeakers.Enabled=false;
             GalaClosing.Enabled=false;GalaClosing.Reset();
+            DualClosingDay.Enabled=false;
+            DualClosingDay.Reset();
+            LoveA2Closing.Enabled=false;
+            LoveA2Closing.Reset();
+            LoveWaterShortage.Enabled=false;
+            StoryPresentation.Clear();
             DualShowcaseEffects.Enabled=false;
             DualShowcaseEffects.ClearMemory();
             if (subscribed)

@@ -86,6 +86,11 @@ namespace EleanorRomance
         }
         public static StoreClient CreateEntry()
         {
+            if(MaidState.V2)
+            {
+                StoreClient v2=MaidV2Story.CreateEntry();
+                if(v2!=null)return v2;
+            }
             var client=Eleanor("entry");
             // A successful payment interrupted before the final line resumes its response;
             // it must never offer another payment or a fictitious refund.
@@ -93,16 +98,15 @@ namespace EleanorRomance
             {
                 var paid=MaidText.Build("m11_b011");FinishMain(paid,12,13);return Ready(client,paid);
             }
-            bool autofill=RomanceState.Savings<800;
-            if(autofill)
+            // The rewritten common scene already shows the last payment and
+            // confirms the pendant is still hers. Play a single opening.
+            var root = RomanceState.LocketSold
+                ? MaidText.Build(RomanceState.Savings < 800 ? "m11_b002" : "m11_b001", "m11_b003", "m11_b004")
+                : StoryEngine.Build(StoryV06Content.B_C11_B001);
+            if(RomanceState.Savings<800)
             {
                 RomanceState.Savings=800;RomanceState.SavingsAutoFilled=true;
-                if(StoryEngine.PositiveDeals<2){RomanceState.LocketSold=true;RomanceState.LocketWithEleanor=false;}
             }
-            var root=MaidText.Build(autofill?"m11_b002":"m11_b001");
-            if(RomanceState.LocketSold)MaidText.Append(root,"m11_b003");
-            MaidText.Append(root,"m11_b004");
-            var ordinary=StoryEngine.Build(StoryV06Content.B_C11_B002);FinishMain(ordinary,12,13);
             var withdraw=MaidText.Build("m11_b012");FinishMain(withdraw,12,13);
             var offer=MaidText.Build("m11_b006","m11_b007","m11_b008");
             var menu=StoryEngine.Text(L.Player,L.Get("er_maid_prompt"));
@@ -112,7 +116,13 @@ namespace EleanorRomance
             GuardedOption(menu,"er_maid_entry_confirm",success,MaidProjects.TryEnter,"er_maid_entry_confirm_desc",()=>StoryEngine.HasCash(800));
             menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_entry_back"),L.Get("er_maid_choice_no_cost"),
                 StoryEngine.PlayerReply(L.Get("er_maid_entry_back"),withdraw),null,null);
-            Choices(root,Option("er_maid_entry_normal",ordinary),Option("er_maid_entry_offer",offer,description:"er_maid_entry_offer_desc"));
+            // The native choice UI jumps from the selected option to its Next
+            // line; a null Next skips the end action attached to the choice
+            // line itself.  Give the ordinary "go see the detective" answer a
+            // real displayed line so chapter completion always fires.
+            Dialogue normal=StoryEngine.PlayerReply(L.Get("er_maid_entry_normal"),null);
+            FinishMain(normal,12,13);
+            Choices(root,Option("er_maid_entry_normal",normal),Option("er_maid_entry_offer",offer,description:"er_maid_entry_offer_desc"));
             return Ready(client,root);
         }
         public static StoreClient CreateLegacy()
@@ -144,6 +154,11 @@ namespace EleanorRomance
         }
         public static StoreClient CreateMainChapter(int code)
         {
+            if(MaidState.V2)
+            {
+                StoreClient v2=MaidV2Story.CreateChapter(code);
+                if(v2!=null)return v2;
+            }
             if(!MaidState.HasHistory)return null;
             MaidRouteMigration.PreserveEstablishedAddress();
             if(code>=101 && code<=108)return CreateTragic(code);

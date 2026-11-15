@@ -30,6 +30,24 @@ def _add_maid(exprs, data):
                 exprs[f"er_maid_{block['id']}_{index:02d}"] = expr
 
 
+def _add_maid_v2(exprs, data):
+    for scene in data.get("scenes", []):
+        for block_id, block in scene.get("blocks", {}).items():
+            for index, line in enumerate(block.get("lines", []), 1):
+                expr = line.get("expr")
+                if expr:
+                    exprs[f"er_maid_v2_{block_id}_{index:02d}"] = expr
+
+
+def _add_revolution_v2(exprs, data):
+    for scene in data.get("scenes", []):
+        for block_id, block in scene.get("blocks", {}).items():
+            for index, line in enumerate(block.get("lines", []), 1):
+                expr = line.get("expr")
+                if expr:
+                    exprs[f"er_rev_v2_{block_id}_{index:02d}"] = expr
+
+
 def _add_dual(exprs, data):
     for scene in data.get("scenes", []):
         for block in scene.get("blocks", []):
@@ -47,11 +65,25 @@ def _add_revolution(exprs, data):
                 exprs[f"er_rev_{block['id']}_{index:02d}"] = expr
 
 
+def _add_love(exprs, data):
+    for scene in data.get("scenes", []):
+        for block in scene.get("blocks", []):
+            for index, line in enumerate(block.get("lines", []), 1):
+                expr = line.get("expr")
+                if expr:
+                    exprs[f"er_love_{block['id']}_{index:02d}"] = expr
+
+
 def build(root):
     root = Path(root)
     exprs = {}
     for name, fn in (("story_v06.json", _add_story), ("maid_v05.json", _add_maid),
-                     ("dual_romance_v04.json", _add_dual), ("revolution_v1.json", _add_revolution)):
+                     ("interaction_v1.json", _add_maid), ("relationship_choices_v1.json", _add_maid),
+                     ("maid_v2.json", _add_maid_v2),
+                     ("revolution_v2.json", _add_revolution_v2),
+                     ("dual_romance_v04.json", _add_dual), ("revolution_v1.json", _add_revolution),
+                     ("love_romance_v01.json", _add_love), ("love_romance_v02.json", _add_love),
+                     ("love_romance_v03.json", _add_love)):
         path = root / "Content" / name
         if path.exists():
             fn(exprs, json.loads(path.read_text(encoding="utf-8")))

@@ -8,13 +8,23 @@ namespace EleanorRomance
         public static StoreClient CreateScene(string id)
         {
             if(id.StartsWith("wait_",StringComparison.Ordinal))return DualDaily.Create(id);
+            if(id.StartsWith("dv",StringComparison.Ordinal))return DualV2Story.Create(id);
             switch (id)
             {
                 case "entry": return CreateEntry();
+                case "d02": return CreateD02();
+                case "d03": return CreateD03();
+                case "d04": return CreateD04();
+                case "d05": return CreateD05();
+                case "d06": return CreateD06();
+                case "d07": return CreateD07();
+                case "d08": return CreateD08();
+                case "d09": return CreateD09();
                 case "dr02": return CreatePlaqueScene();
                 case "resolve": return CreateDr05();
                 case "coop": return EleanorStory.CreateCooperationChapter(()=>DualDirector.CompleteScene("coop"),"eleanor1");
                 case "claim": return CreateClaim();
+                case "reward": return CreateRewrittenReward();
                 case "dr03": return CreateDr03();
                 case "dr04": return CreateDr04();
                 case "dr05": return CreateDr05();
@@ -50,8 +60,17 @@ namespace EleanorRomance
                 EleanorStory.LydiaSpriteKey(), EleanorStory.FactionKind.Upper);
         }
 
-        private static StoreClient Ready(StoreClient client, Dialogue root)
+        private static StoreClient LydiaDate(string id)
         {
+            return EleanorStory.NewNpcClient(id, L.Get("er_name_lydia"),
+                PortraitCompat.ResolveLydiaDate(), EleanorStory.FactionKind.Upper);
+        }
+
+        private static StoreClient Ready(StoreClient client, Dialogue root, string presentationBlock = null)
+        {
+            var presentation = presentationBlock == null ? null : DualContent.GetPresentation(presentationBlock);
+            if (presentation != null)
+                root.SetStartAction(() => StoryPresentation.Apply(presentation));
             client.mainDialogue = root;
             client.CompleteClientCreation();
             return client;
@@ -96,7 +115,196 @@ namespace EleanorRomance
                 });
         }
 
+        private static StoreClient CreateD01()
+        {
+            StoreClient client = Lydia("dual_d01");
+
+            Dialogue root = DualText.Build("d01_b001", "d01_b002");
+            Dialogue push = BuildD01Rest("d01_b003");
+            Dialogue refuse = BuildD01Rest("d01_b004");
+            Dialogue putBack = BuildD01Rest("d01_b005");
+            DualText.Choices(root, "er_d01_c1_prompt",
+                DualText.Choice("d01_c1_1", push),
+                DualText.Choice("d01_c1_2", refuse),
+                DualText.Choice("d01_c1_3", putBack));
+
+            DualText.Finish(root, () =>
+            {
+                DualState.Accept(1);
+                DualState.Flag("d.route", true);
+                DualState.Flag("d.act1", true);
+                DualDirector.CompleteScene("entry");
+            });
+            return Ready(client, root, "d01_b001");
+        }
+
+        private static Dialogue BuildD01Rest(string firstBlock)
+        {
+            Dialogue head = DualText.Build(firstBlock);
+            DualText.Append(head, "d01_b006");
+            Dialogue list = DualText.Build("d01_b008", "d01_b010");
+            Dialogue noSend = DualText.Build("d01_b007", "d01_b010");
+            Dialogue take = DualText.Build("d01_b009", "d01_b010");
+            DualText.Choices(head, "er_d01_c2_prompt",
+                DualText.Choice("d01_c2_1", list),
+                DualText.Choice("d01_c2_2", noSend),
+                DualText.Choice("d01_c2_3", take));
+            return head;
+        }
+
+        private static StoreClient CreateD02()
+        {
+            StoreClient client = Lydia("dual_d02");
+            Dialogue root = DualText.Build("d02_b001");
+            Dialogue between = DualText.Build("d02_b002");
+            Dialogue ask = DualText.Build("d02_b003");
+            Dialogue door = DualText.Build("d02_b004");
+            DualText.Append(between, "d02_b005", "d02_b006");
+            DualText.Append(ask, "d02_b005", "d02_b006");
+            DualText.Append(door, "d02_b005", "d02_b006");
+            DualText.Choices(root, "er_d02_c1_prompt",
+                DualText.Choice("d02_c1_1", between),
+                DualText.Choice("d02_c1_2", ask),
+                DualText.Choice("d02_c1_3", door));
+            DualText.Finish(root, () =>
+            {
+                DualDirector.CompleteScene("d02", () => DualState.Flag("d.act2a", true));
+            });
+            return Ready(client, root);
+        }
+
+        private static StoreClient CreateD03()
+        {
+            StoreClient client = Lydia("dual_d03");
+            Dialogue root = DualText.Build("d03_b001");
+            Dialogue report = DualText.Build("d03_b002");
+            Dialogue salvage = DualText.Build("d03_b003");
+            Dialogue hide = DualText.Build("d03_b004");
+            DualText.Append(report, "d03_b005");
+            DualText.Append(salvage, "d03_b005");
+            DualText.Append(hide, "d03_b005");
+            DualText.Choices(root, "er_d03_c2_prompt",
+                DualText.Choice("d03_c2_1", report),
+                DualText.Choice("d03_c2_2", salvage),
+                DualText.Choice("d03_c2_3", hide));
+            DualText.Finish(root, () =>
+            {
+                DualDirector.CompleteScene("d03", () => DualState.Flag("d.act2", true));
+            });
+            return Ready(client, root, "d03_b001");
+        }
+
+        private static StoreClient CreateD04()
+        {
+            StoreClient client = Eleanor("dual_d04");
+            Dialogue root = DualText.Build("d04_b001");
+            Dialogue stand = DualText.Build("d04_b002");
+            Dialogue name = DualText.Build("d04_b003");
+            Dialogue water = DualText.Build("d04_b004");
+            DualText.Append(stand, "d04_b005");
+            DualText.Append(name, "d04_b005");
+            DualText.Append(water, "d04_b005");
+            DualText.Choices(root, "er_d04_c1_prompt",
+                DualText.Choice("d04_c1_1", stand),
+                DualText.Choice("d04_c1_2", name),
+                DualText.Choice("d04_c1_3", water));
+            DualText.Finish(root, () => DualDirector.CompleteScene("d04"));
+            return Ready(client, root);
+        }
+
+        private static StoreClient CreateD05()
+        {
+            StoreClient client = LydiaDate("dual_d05");
+            Dialogue root = DualText.Build("d05_b001");
+            Dialogue no = DualText.Build("d05_b002");
+            Dialogue ask = DualText.Build("d05_b003");
+            Dialogue tags = DualText.Build("d05_b004");
+            DualText.Append(no, "d05_b005");
+            DualText.Append(ask, "d05_b005");
+            DualText.Append(tags, "d05_b005");
+            DualText.Choices(root, "er_d05_c2_prompt",
+                DualText.Choice("d05_c2_1", no),
+                DualText.Choice("d05_c2_2", ask),
+                DualText.Choice("d05_c2_3", tags));
+            DualText.Finish(root, () =>
+            {
+                DualClosingDay.PayOnce();
+                DualDirector.CompleteScene("d05");
+            });
+            return Ready(client, root);
+        }
+
+        private static StoreClient CreateD06()
+        {
+            StoreClient client = LydiaDate("dual_d06");
+            Dialogue root = DualText.Build("d06_b001");
+            StoryEngine.OnDialogueFinished(root, DualClosingDay.Finish);
+            return Ready(client, root);
+        }
+
+        private static StoreClient CreateD07()
+        {
+            StoreClient client = Lydia("dual_d07");
+            Dialogue root = DualText.Build("d07_b001");
+            DualText.Finish(root, () =>
+            {
+                DualDirector.CompleteScene("d07", () => DualState.Flag("d.act3", true));
+            });
+            return Ready(client, root);
+        }
+
+        private static StoreClient CreateD08()
+        {
+            StoreClient client = Lydia("dual_d08");
+            Dialogue root = DualText.Build("d08_b001");
+            Dialogue like = DualText.Build("d08_b002");
+            Dialogue ask = DualText.Build("d08_b003");
+            Dialogue food = DualText.Build("d08_b004");
+            DualText.Append(like, "d08_b005");
+            DualText.Append(ask, "d08_b005");
+            DualText.Append(food, "d08_b005");
+            DualText.Choices(root, "er_d08_c1_prompt",
+                DualText.Choice("d08_c1_1", like),
+                DualText.Choice("d08_c1_2", ask),
+                DualText.Choice("d08_c1_3", food));
+            DualText.Finish(root, () => DualDirector.CompleteScene("d08"));
+            return Ready(client, root);
+        }
+
+        private static StoreClient CreateD09()
+        {
+            StoreClient client = Lydia("dual_d09");
+            Dialogue root = DualText.Build("d09_b001");
+            Dialogue first = DualText.Build("d09_b002");
+            Dialogue say = DualText.Build("d09_b003");
+            Dialogue close = DualText.Build("d09_b004");
+            DualText.Append(first, "d09_b005");
+            DualText.Append(say, "d09_b005");
+            DualText.Append(close, "d09_b005");
+            DualText.Choices(root, "er_d09_c2_prompt",
+                DualText.Choice("d09_c2_1", first),
+                DualText.Choice("d09_c2_2", say),
+                DualText.Choice("d09_c2_3", close));
+            DualText.Finish(root, () =>
+            {
+                DualDirector.CompleteScene("d09", () =>
+                {
+                    DualState.Relation = 2;
+                    DualState.Flag("d.act4", true);
+                });
+                DualDirector.FinishRewrittenCore();
+                EndingPageUI.ShowDualCompletion();
+            });
+            return Ready(client, root, "d09_b001");
+        }
+
         private static StoreClient CreateEntry()
+        {
+            if (RomanceState.DPreludeDUnlocked || DualState.Flag("d.route")) return CreateD01();
+            return CreateLegacyEntry();
+        }
+
+        private static StoreClient CreateLegacyEntry()
         {
             var client=Lydia("dual_entry");
             if(DualState.Flag("entry.explicit") && DualState.HasHistory)
@@ -129,6 +337,22 @@ namespace EleanorRomance
         {
             var c=StoryCoreFacts.PerfumePending?Eleanor("dual_claim"):Lydia("dual_claim");var root=DualText.Build("v05_claim_open");DualRewards.AppendClaims(root);
             Finish(c,root,"claim",()=>DualState.LastDailyDay=DualState.Today);return Ready(c,root);
+        }
+
+        private static StoreClient CreateRewrittenReward()
+        {
+            int stage = DualRewards.DueRewrittenReward(DualState.Today);
+            if (stage == 0) return null;
+            var client = Lydia("dual_reward");
+            var root = StoryEngine.Text(client.displayName,
+                L.Get(DualRewards.Received(stage) ? "er_dual_claim_line" : "er_dual_reputation_gift",
+                    DualRewards.Name(stage)));
+            Finish(client, root, "reward", () =>
+            {
+                if (!DualRewards.Give(stage)) StoryDirector.Notify(L.Get("er_dual_plaque_full"));
+                DualState.SetInt("reward.visit_day", DualState.Today);
+            });
+            return Ready(client, root);
         }
 
         private static StoreClient Eleanor(string id, string sprite = "eleanor1")
@@ -385,7 +609,12 @@ namespace EleanorRomance
 
         private static StoreClient CreateDaily()
         {
-            int index = DualState.DailyIndex % 7 + 1;
+            // The rewritten route never established Eleanor's Upper Level job.
+            // Reuse the daily scenes that do not refer to that history.
+            int[] scenes = DualState.Flag("d.route") ? new[] { 2, 3 }
+                : new[] { 1, 2, 3, 4, 5, 6, 7 };
+            int rotation = DualState.DailyIndex % scenes.Length;
+            int index = scenes[rotation];
             bool lydia = index == 2;
             StoreClient client = lydia ? Lydia("dual_daily_" + index)
                 : Eleanor("dual_daily_" + index, "eleanor1");
@@ -393,15 +622,18 @@ namespace EleanorRomance
                 ? DualText.Build("dr_daily_" + index + "_open", "dr_daily_2_shop")
                 : DualText.Build("dr_daily_" + index + "_open");
             if (root == null) root = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_dual_entry_resume"));
-            DualRewards.AppendClaims(root);
-            Action complete = () =>
+            if (!DualState.Flag("d.route")) DualRewards.AppendClaims(root);
+            Action advance = () =>
             {
-                DualState.DailyIndex = index % 7;
+                DualState.DailyIndex = (rotation + 1) % scenes.Length;
                 DualState.LastDailyDay = DualState.Today;
-                DualDirector.CompleteScene("daily");
             };
-            if (lydia) FinishAfterTrade(client, "daily", complete, 300);
-            else DualText.Finish(root, complete);
+            if (lydia) FinishAfterTrade(client, "daily", advance, 300);
+            else DualText.Finish(root, () =>
+            {
+                advance();
+                DualDirector.CompleteScene("daily");
+            });
             return Ready(client, root);
         }
 

@@ -78,7 +78,7 @@ namespace EleanorRomance
             Flag("scene." + scene, true);
             SetSceneDay(scene, Today);
             if (scene != "daily" && !scene.StartsWith("wait_", StringComparison.Ordinal)
-                && scene != "claim" && scene != "coop_buyer") LastImportantDay = Today;
+                && scene != "claim" && scene != "reward" && scene != "coop_buyer") LastImportantDay = Today;
         }
         public static int SceneDay(string scene) => Int("scene_day." + scene, -1);
         public static void SetSceneDay(string scene, int day) => SetInt("scene_day." + scene, day);

@@ -73,7 +73,7 @@ namespace EleanorRomance
                 if(mod.Sprites.ContainsKey(key))return;
                 Sprite source;
                 if(!mod.Sprites.TryGetValue("er_lydia_recommendation_plaque",out source))return;
-                Sprite padded=CreatePaddedHitSprite(source,4);
+                Sprite padded=CreateHitSprite(source,source.rect,4);
                 mod.Sprites[key]=padded!=null?padded:Sprite.Create(source.texture,source.rect,
                     new Vector2(0.5f,0.5f),source.pixelsPerUnit*4,0,SpriteMeshType.FullRect);
                 return;
@@ -81,34 +81,39 @@ namespace EleanorRomance
         }
 
         /// <summary>
-        /// The game's item click uses per-pixel alpha hit testing.  A 1x1 ornament
-        /// whose badge has transparent margins therefore loses most of its cell
-        /// to click-through.  Give fully transparent pixels a 1/255 alpha floor:
-        /// the whole cell becomes clickable while remaining visually transparent.
-        /// The layout is unchanged; this only widens the hit area.
+        /// The game's item click uses per-pixel alpha hit testing (threshold
+        /// 1e-05).  A badge with transparent margins therefore loses most of its
+        /// rectangle to click-through.  Give fully transparent pixels a ~1%
+        /// white backing (alpha 3/255): the whole item rectangle stays clickable
+        /// while remaining visually transparent.  Opaque art and layout are
+        /// unchanged; only the empty area gets a hit surface.
         /// </summary>
-        private static Sprite CreatePaddedHitSprite(Sprite source,int scale)
+        private static Sprite CreateHitSprite(Sprite source,Rect rect,float pixelsPerUnitScale)
         {
             try
             {
-                Rect r=source.rect;
-                int w=Mathf.RoundToInt(r.width),h=Mathf.RoundToInt(r.height);
+                int x=Mathf.RoundToInt(rect.x),y=Mathf.RoundToInt(rect.y);
+                int w=Mathf.RoundToInt(rect.width),h=Mathf.RoundToInt(rect.height);
                 if(w<=0 || h<=0)return null;
-                Color[] pixels=source.texture.GetPixels(Mathf.RoundToInt(r.x),Mathf.RoundToInt(r.y),w,h);
-                const float hitAlpha=1f/255f;
+                Color[] pixels=source.texture.GetPixels(x,y,w,h);
+                Color backing=new Color(1f,1f,1f,3f/255f);
                 for(int i=0;i<pixels.Length;i++)
-                    if(pixels[i].a<hitAlpha)pixels[i].a=hitAlpha;
+                {
+                    if(pixels[i].a<=0f)pixels[i]=backing;
+                    else if(pixels[i].a<backing.a)pixels[i].a=backing.a;
+                }
                 var texture=new Texture2D(w,h,TextureFormat.RGBA32,false);
+                texture.name=source.texture.name+"_hit";
                 texture.filterMode=source.texture.filterMode;
                 texture.wrapMode=source.texture.wrapMode;
                 texture.SetPixels(pixels);
                 texture.Apply(false,false);
                 return Sprite.Create(texture,new Rect(0,0,w,h),new Vector2(0.5f,0.5f),
-                    source.pixelsPerUnit*scale,0,SpriteMeshType.FullRect);
+                    source.pixelsPerUnit*pixelsPerUnitScale,0,SpriteMeshType.FullRect);
             }
             catch(System.Exception ex)
             {
-                ModEntry.Log("Ornament hit-area padding unavailable; using the compact sprite: "+ex.Message);
+                ModEntry.Log("Item hit-area backing unavailable; using the compact sprite: "+ex.Message);
                 return null;
             }
         }
@@ -144,7 +149,8 @@ namespace EleanorRomance
                 // All opaque pixels lie within this strip. Retain the source
                 // texture's point filtering and use UI.Image's native PPU scaling.
                 Rect strip = new Rect(rect.x, rect.y + 16, 64, 32);
-                mod.Sprites[BraceletSprite] = Sprite.Create(source.texture, strip,
+                Sprite hit = CreateHitSprite(source, strip, 2);
+                mod.Sprites[BraceletSprite] = hit ?? Sprite.Create(source.texture, strip,
                     new Vector2(0.5f, 0.5f), source.pixelsPerUnit * 2, 0, SpriteMeshType.FullRect);
                 return;
             }
@@ -158,7 +164,8 @@ namespace EleanorRomance
                 if(mod==null || mod.Manifest==null || mod.Manifest.ID!=ModConstants.ModId)continue;
                 if(mod.Sprites.ContainsKey(LocketSprite))return;
                 Sprite source=mod.Sprites["eleanor_locket"];
-                mod.Sprites[LocketSprite]=Sprite.Create(source.texture,source.rect,
+                Sprite hit=CreateHitSprite(source,source.rect,2);
+                mod.Sprites[LocketSprite]=hit!=null?hit:Sprite.Create(source.texture,source.rect,
                     new Vector2(0.5f,0.5f),source.pixelsPerUnit*2,0,SpriteMeshType.FullRect);
                 return;
             }

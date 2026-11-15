@@ -13,7 +13,11 @@ namespace EleanorRomance
                 {warnedFuture=DualState.FeatureVersion;ModEntry.Log("Dual paused: future schema "+warnedFuture);StoryDirector.Notify(L.Get("er_dual_future_schema",warnedFuture));}
                 return;
             }
-            if (DualState.FeatureVersion == DualState.CurrentVersion) return;
+            if (DualState.FeatureVersion == DualState.CurrentVersion)
+            {
+                DualDirector.FinishRewrittenCore();
+                return;
+            }
             int oldVersion = DualState.FeatureVersion;
             bool oldAuto = oldVersion == 1 && DualState.Entry == 2;
             // v0.81 auto-wrote dr05: it is not evidence of consent.

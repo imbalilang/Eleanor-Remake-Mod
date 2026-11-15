@@ -45,7 +45,18 @@ namespace EleanorRomance
             StoryDirector.Notify(L.Get("er_dual_reward_received",Name(s)));
             return true;
         }
-        public static bool NeedsClaim => Enumerable.Range(1,3).Any(Ready) || StoryCoreFacts.PerfumePending || StoryCoreFacts.LocketPending || MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24);
+        public static bool NeedsClaim => !DualState.Flag("d.route")
+            && (Enumerable.Range(1,3).Any(Ready) || StoryCoreFacts.PerfumePending || StoryCoreFacts.LocketPending || MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24));
+
+        public static int DueRewrittenReward(int day)
+        {
+            if (!DualState.Active || !DualState.Flag("d.route") || day <= DualState.Int("reward.visit_day", -1))
+                return 0;
+            for (int stage = 1; stage <= ItemIds.Length; stage++)
+                if (day > DualState.Int("reward." + stage + ".earned_day", -1) && Ready(stage))
+                    return stage;
+            return 0;
+        }
         public static void AppendClaims(Dialogue root)
         {
             for(int s=1;s<=3;s++)

@@ -12,7 +12,7 @@ namespace EleanorRomance
         // 0 available, 1 first invitation, 2 legacy postponed, 3 legacy booked, 4 departing,
         // 5 completed, 6 published, 7 solo reply pending, 8 closed, 9 second invitation.
         public static int Attempts=>MaidState.Int("gala.attempts");
-        public static bool Eligible=>MaidInteractions.Active && MaidState.BasicComplete && MaidState.Progress>=28;
+        public static bool Eligible=>!MaidState.V2 && MaidInteractions.Active && MaidState.BasicComplete && MaidState.Progress>=28;
         public static void Initialize()
         {
             if(!RomanceState.StoryActive)return;
@@ -50,6 +50,7 @@ namespace EleanorRomance
                 var line=lines[i];int index=i+1;
                 string speaker=line.Speaker=="Eleanor"?L.Eleanor:line.Speaker=="Player"?L.Player:L.Get("er_name_narrator");
                 var node=StoryEngine.Text(speaker,block=="gala_b001" && i==2?PortraitCompat.GalaDescription:L.Get(line.Key));
+                PortraitExpression.Apply(node,line.Key,speaker);
                 if(cursor!=null)node.SetEndAction(()=>MaidState.SetInt("gala."+cursor,Math.Max(index,MaidState.Int("gala."+cursor))));
                 if(head==null)head=node;else tail.SetNextDialogue(node);tail=node;
             }

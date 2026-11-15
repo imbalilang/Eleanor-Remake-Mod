@@ -7,6 +7,7 @@
         {
           "speaker": "eleanor",
           "text": "她死了。我去认过尸。",
+          "expr": "sad",
           "en": "She's dead. I went and identified the body."
         },
         {
@@ -393,6 +394,7 @@
         {
           "speaker": "eleanor",
           "text": "我回过住处，坐不住。天没亮就出来了，换了衣服还是坐不住。",
+          "expr": "tired",
           "en": "I went back to my room and couldn't sit still. I left before dawn. I changed clothes and still couldn't sit still."
         }
       ]
@@ -404,6 +406,7 @@
         {
           "speaker": "eleanor",
           "text": "我杀了人。",
+          "expr": "hurt",
           "en": "I killed someone."
         },
         {
@@ -535,6 +538,7 @@
         {
           "speaker": "eleanor",
           "text": "这次单子归我管。米拉膝盖不好，雨天也得跟队。",
+          "expr": "serious",
           "en": "This time the list is mine. Mira's knees are bad, and she still has to march in the rain."
         },
         {

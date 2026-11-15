@@ -31,7 +31,6 @@ namespace EleanorRomance
 
         private const string RevPortrait = "eleanor_rev";
         private const string HardshipPortrait = "eleanor3";
-        private const string VestPortrait = "er_portrait_eleanor_revolution_undersuit_female_beauty";
 
         public static bool IsChapter(int chapter)
         {
@@ -490,6 +489,7 @@ namespace EleanorRomance
         public static bool TryQueueDaily(StoreClientManager manager, int day)
         {
             if (manager == null) return false;
+            if (RomanceState.RevVersion >= 2) return false;
             if (RomanceState.Route != 3 || !RomanceState.StoryActive) return false;
             if (RomanceState.RevLegacyCompleted && RomanceState.Chapter >= RomanceState.ChapterComplete)
                 return TryQueuePostDaily(manager, day);
@@ -701,7 +701,7 @@ namespace EleanorRomance
 
         private static string PrivatePortrait()
         {
-            return PortraitCompat.ResolveOutfit(VestPortrait, RevPortrait);
+            return PortraitCompat.ResolveOutfit(ModConstants.EleanorVestPortrait, RevPortrait);
         }
 
         private static void FinishTrade(StoreClient client, Func<Dialogue> wrap, Action onComplete)

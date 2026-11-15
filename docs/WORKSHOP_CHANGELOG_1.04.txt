@@ -1,0 +1,5 @@
+1.04：共同剧情与四条路线重制
+
+重制共同剧情、恋爱线、后宫线、侍从线、革命军线；接入作者修订对白及重写的后宫第12、13场。修正售卖亭空间：玩家在亭内、来客在窗外，移除推门进店、绑门绳和店内贴身互动等不符场景的动作。修复路线交接、续访、续读、陪同姓名、货物交割与条件对白，更新立绘和表情，中英同步。未完成的后宫终章旧游标仅重置一次。
+
+1.04: Remade common story and all four routes, with author-revised dialogue and a rewritten harem finale. Corrected kiosk/window staging, route handoffs, follow-up visits, save/resume behavior, companion names, goods exchanges and conditional dialogue. Updated portraits and expressions; Chinese and English synchronized. Unfinished harem closing scenes restart their rewritten dialogue once.

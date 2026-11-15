@@ -25,5 +25,7 @@ namespace EleanorRomance
         public const string MotherPortraitVanilla = "er_portrait_mother_female_vanilla";
         public const string MotherPortraitBeauty = "er_portrait_mother_female_beauty";
         public const string MotherHomePortraitBeauty = "er_portrait_mother_home_female_beauty";
+        public const string EleanorVestPortrait = "er_portrait_eleanor_revolution_undersuit_female_beauty";
+        public const string EleanorIntimatePortrait = "er_portrait_eleanor_love_intimate_female_beauty";
     }
 }

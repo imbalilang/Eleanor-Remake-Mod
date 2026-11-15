@@ -2,6 +2,7 @@
 # what Dialogue.title is supposed to mean. No real UI or player saves are used.
 $displayLine=[DialogUIManager].GetMethod('DisplayLine',[Reflection.BindingFlags]'NonPublic,Instance')
 [StoreUIManager]::TestInstance=Blank ([StoreUIManager])
+[EleanorRomance.DialogueSpeakers]::Enabled=$true
 function Render-ArrestHistory($head){
     $store.dialogHistory=[System.Collections.Generic.Queue[string]]::new()
     $node=$head
@@ -19,16 +20,17 @@ foreach($name in @('假叔叔','Fake Uncle')){
     $history=@(Render-ArrestHistory $c.customOnArrestDialogue)
     $officer=[LocHelper]::GetLocalizedClientName('name_security_officer')
     $narrator=[EleanorRomance.L]::Get('er_name_narrator')
-    $speakers=@($officer,$name,$officer,$officer,$name,'Player',
-        $narrator,$officer,'Player',$officer,$officer,'Player',$officer,$narrator)
+    $uncle=[EleanorRomance.L]::Get('er_name_uncle')
+    $speakers=@($narrator,$officer,'Player',$uncle,$officer,$officer,$uncle,'Player',
+        $officer,$officer,'Player',$officer,$narrator)
     $keys=@(
-        'er_v06_c04_b003_01','er_v06_c04_b003_02','er_v06_c04_b003_03',
-        'er_v06_c04_b003_04','er_v06_c04_b003_05','er_v06_c04_b003_06',
         'er_v06_c04_n005_01','er_v06_c04_n005_02','er_v06_c04_n005_03',
+        'er_v06_c04_b003_02','er_v06_c04_b003_03','er_v06_c04_b003_04',
+        'er_v06_c04_b003_05','er_v06_c04_b003_06',
         'er_v06_c04_n005_04','er_v06_c04_n005_05','er_v06_c04_n005_06',
         'er_v06_c04_n005_07','er_v06_c04_n005_08')
-    Assert ($history.Count -eq 14) 'Reported uncle scene lost or duplicated lines.'
-    for($i=0;$i -lt 14;$i++){
+    Assert ($history.Count -eq $keys.Count) 'Reported uncle scene lost or duplicated lines.'
+    for($i=0;$i -lt $keys.Count;$i++){
         Assert ($history[$i] -eq ($speakers[$i]+': '+$keys[$i])) "Wrong actual recorder speaker on uncle line $($i+1): $($history[$i])"
     }
     $c.onReportAction.Invoke();$c.onCaptureAction.Invoke()
@@ -50,7 +52,8 @@ foreach($name in @('埃莉诺','Eleanor')){
     $head=$factory.Invoke($null,@())
     $history=@(Render-ArrestHistory $head)
     $officer=[LocHelper]::GetLocalizedClientName('name_security_officer')
-    $speakers=@($officer,$name,$officer,$name)
+    $eleanor=[EleanorRomance.L]::Eleanor
+    $speakers=@($officer,$eleanor,$officer,$eleanor)
     Assert ($history.Count -eq 4) 'Crate-arrest dialogue lost lines.'
     for($i=0;$i -lt 4;$i++){
         Assert ($history[$i] -eq ($speakers[$i]+': er_v06_c05_b007_'+($i+1).ToString('00'))) 'Crate arrest also attributed the officer to Eleanor.'

@@ -70,7 +70,7 @@ foreach($early in @($false,$true)){foreach($route in @('exchange','protection','
     Assert (![EleanorRomance.MaidState]::AddressAccepted) 'Address was accepted before reading the dialogue.'
     Assert (Has-MotivationBlock $c.mainDialogue 'm19_b006') 'First deliberate address is missing from the direct dialogue.'
     $node=$c.mainDialogue
-    while($node -and $node.plainText -ne 'er_maid_m19_b006_07'){
+    while($node -and $node.plainText -ne 'er_maid_m19_b006_04'){
         if($node.startAction){$node.startAction.Invoke()};$node.ExecuteEndAction();$node=$node.nextDialogue
     }
     Assert ($node -ne $null -and ![EleanorRomance.MaidState]::AddressAccepted) 'The private address was committed before its line.'

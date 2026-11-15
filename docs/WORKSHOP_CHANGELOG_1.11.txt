@@ -1,0 +1,19 @@
+1.11：埃莉诺立绘可在游戏内选择
+
+- MOD 菜单新增「立绘 / Portraits → Eleanor portrait mode」，配置保存在 `ModConfigs/eleanor_romance.json`：
+  - Auto（默认）：原版和本 MOD 剧情使用本 MOD 立绘；其他 MOD 的埃莉诺立绘保留；被覆盖时让位并暂停表情切换。
+  - Force：所有 MOD 的埃莉诺都使用本 MOD 立绘，会覆盖其他 MOD 的埃莉诺立绘。
+  - Other：完全使用原版/其他 MOD 立绘；本 MOD 不替换、不切换表情，剧情客户回退到原版键。
+- 原版埃莉诺接管改为按原版调度方法的作用域，不再用宽泛 eleanor* 标识过滤；其他 MOD 自己新增的埃莉诺事件不会被误拦。
+- 1.10 voice pass 与 1.07–1.09 的入线卡住、物品点击区、手镯重查和立绘兼容修复保留。
+- 不改正文、路线、结局或排期。
+
+1.11: in-game Eleanor portrait selection
+
+- Added "Portraits → Eleanor portrait mode" to the mod settings, stored in `ModConfigs/eleanor_romance.json`:
+  - Auto (default): native calls and this mod's story use this mod's portraits; another mod's Eleanor art is kept and expression switching pauses while it is visible.
+  - Force: every mod's Eleanor uses this mod's portrait, overriding another mod's Eleanor art.
+  - Other: use vanilla/other-mod portraits everywhere; this mod does not replace portraits or switch expressions, and its story clients fall back to native keys.
+- Native Eleanor takeover is now scoped to the native scheduler methods instead of a broad eleanor* identifier filter, so another mod's own Eleanor events are not blocked.
+- The 1.10 voice pass and 1.07–1.09 attendant-entry, item hit-area, bracelet-recheck and portrait-compatibility fixes remain.
+- No dialogue, route, ending or schedule changes.

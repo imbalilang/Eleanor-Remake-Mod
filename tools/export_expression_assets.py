@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from author_portrait_pipeline import render, bleed_transparent_rgb, exact_area_sample, enhance_details
-from expression_face_bounds import jaw_guard
+from expression_face_bounds import include_left_brow, jaw_guard
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / 'Art/expressions-and-endings-2026-11-10'
@@ -72,6 +72,22 @@ def face_mask(base, iris):
     return np.asarray(mask).astype(float) / 255
 
 
+def assemble_face(base, aligned, iris, family, expression):
+    neutral, face = np.asarray(base), np.asarray(aligned)
+    weight = include_left_brow(face_mask(base, iris), family, expression)
+    guard = jaw_guard(base.size, family)
+    weight *= guard
+    weight *= (neutral[:, :, 3] == 255) & (face[:, :, 3] == 255)
+    final = neutral.copy()
+    final[:, :, :3] = np.floor(neutral[:, :, :3] * (1 - weight[:, :, None])
+                               + face[:, :, :3] * weight[:, :, None] + .5).astype(np.uint8)
+    assert np.array_equal(final[:, :, 3], neutral[:, :, 3])
+    assert np.array_equal(final[weight == 0], neutral[weight == 0])
+    jaw_and_neck = (guard == 0) & (neutral[:, :, 3] == 255)
+    assert np.array_equal(final[jaw_and_neck], neutral[jaw_and_neck])
+    return bleed_transparent_rgb(final)
+
+
 def export(install=False):
     jobs_path = ART / 'generation_jobs.json'
     data = json.loads(jobs_path.read_text(encoding='utf-8'))
@@ -108,20 +124,8 @@ def export(install=False):
         bottom = ty + scale * bbox[3]
         aligned, pipeline, _ = render(master, height, cx, bottom, fringe=False)
         aligned.save(ART / 'portraits' / (job['id'] + '_aligned.png'))
-        neutral, face = np.asarray(base).copy(), np.asarray(aligned)
-        weight = face_mask(base, ref_eyes)
-        guard = jaw_guard(base.size, job['family'])
-        weight *= guard
-        weight *= (neutral[:, :, 3] == 255) & (face[:, :, 3] == 255)
-        final = neutral.copy()
-        final[:, :, :3] = np.floor(neutral[:, :, :3] * (1 - weight[:, :, None])
-                                   + face[:, :, :3] * weight[:, :, None] + .5).astype(np.uint8)
-        assert np.array_equal(final[:, :, 3], neutral[:, :, 3])
-        outside = weight == 0
-        assert np.array_equal(final[outside], neutral[outside])
-        jaw_and_neck = (guard == 0) & (neutral[:, :, 3] == 255)
-        assert np.array_equal(final[jaw_and_neck], neutral[jaw_and_neck])
-        final = bleed_transparent_rgb(final)
+        final = assemble_face(base, aligned, ref_eyes, job['family'], job['expression'])
+        neutral = np.asarray(base)
         output = ART / 'portraits' / (job['id'] + '.png')
         Image.fromarray(final).save(output)
         prompt_path = ART / 'prompts' / (job['id'] + '.txt')

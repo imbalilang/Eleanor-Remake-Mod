@@ -8,8 +8,7 @@ namespace EleanorRomance
     /// <summary>
     /// Two page shapes share this file:
     ///  - SetPage: legacy full-screen CG behind the native GameOver panel;
-    ///  - ShowMaidCompletion / ShowDualCompletion: standalone route-ending page
-    ///    shown immediately when m28/dr20 finishes.
+    ///  - Standalone pages for route endings and illustrated story scenes.
     /// </summary>
     public static class EndingPageUI
     {
@@ -87,6 +86,14 @@ namespace EleanorRomance
             if (ShowRoutePage(page)) RomanceState.RevEndingShown = true;
         }
 
+        public static void ShowLoveCompletion()
+        {
+            if (LoveState.A3EndingShown) return;
+            EndingPages.Page page = EndingPages.TryLoveCompletion();
+            if (page == null) return;
+            if (ShowRoutePage(page)) LoveState.A3EndingShown = true;
+        }
+
         public static void HideRoutePage()
         {
             if (routeRoot != null)
@@ -96,14 +103,24 @@ namespace EleanorRomance
             }
         }
 
-        private static bool ShowRoutePage(EndingPages.Page page)
+        internal static bool ShowStoryScene(string titleKey, string cgKey, string textKey, Action onContinue = null)
+            => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), true, onContinue);
+
+        private static bool ShowRoutePage(EndingPages.Page page, bool storyScene = false, Action onContinue = null)
         {
             try
             {
+                Sprite cg = PortraitCompat.GetLocalSprite(page.CgKey);
+                if (storyScene && cg == null)
+                {
+                    ModEntry.LogError("Story CG missing: " + page.CgKey);
+                    return false;
+                }
                 HideRoutePage();
 
                 GameObject root = new GameObject(RouteRootName,
                     typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+                routeRoot = root;
                 UnityEngine.Object.DontDestroyOnLoad(root);
                 Canvas canvas = root.GetComponent<Canvas>();
                 canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -117,14 +134,13 @@ namespace EleanorRomance
                 Stretch(background.rectTransform);
                 background.raycastTarget = true;
 
-                Sprite cg = PortraitCompat.GetLocalSprite(page.CgKey);
                 if (cg != null)
                 {
                     Image image = NewImage(root.transform, "cg", Color.white);
                     // Keep the whole 16:9 CG above the text, including hands
                     // and gestures near the counter at the bottom of the art.
                     RectTransform imageRect = image.rectTransform;
-                    imageRect.anchorMin = new Vector2(0.03f, 0.44f);
+                    imageRect.anchorMin = new Vector2(0.03f, storyScene ? 0.265f : 0.44f);
                     imageRect.anchorMax = new Vector2(0.97f, 0.98f);
                     imageRect.offsetMin = Vector2.zero;
                     imageRect.offsetMax = Vector2.zero;
@@ -136,7 +152,7 @@ namespace EleanorRomance
                 Image panel = NewImage(root.transform, "panel", new Color(0.03f, 0.035f, 0.05f, 0.90f));
                 RectTransform panelRect = panel.rectTransform;
                 panelRect.anchorMin = new Vector2(0.055f, 0.035f);
-                panelRect.anchorMax = new Vector2(0.945f, 0.415f);
+                panelRect.anchorMax = new Vector2(0.945f, storyScene ? 0.25f : 0.415f);
                 panelRect.offsetMin = Vector2.zero;
                 panelRect.offsetMax = Vector2.zero;
 
@@ -151,24 +167,27 @@ namespace EleanorRomance
                 titleRect.sizeDelta = new Vector2(-40f, 48f);
 
                 TextMeshProUGUI body = NewText(panel.transform, "body", page.Text, font,
-                    20, TextAlignmentOptions.TopLeft, Color.white);
+                    20, storyScene ? TextAlignmentOptions.Center : TextAlignmentOptions.TopLeft, Color.white);
                 body.enableAutoSizing = true;
                 body.fontSizeMin = 16f;
-                body.fontSizeMax = 20f;
+                body.fontSizeMax = storyScene ? 25f : 20f;
                 RectTransform bodyRect = body.rectTransform;
                 bodyRect.anchorMin = Vector2.zero;
                 bodyRect.anchorMax = Vector2.one;
-                bodyRect.offsetMin = new Vector2(32f, 118f);
+                bodyRect.offsetMin = new Vector2(32f, storyScene ? 78f : 118f);
                 bodyRect.offsetMax = new Vector2(-32f, -76f);
 
-                TextMeshProUGUI note = NewText(panel.transform, "note", L.Get("er_ending_content_end"), font,
-                    17, TextAlignmentOptions.Center, new Color(0.80f, 0.84f, 0.90f));
-                RectTransform noteRect = note.rectTransform;
-                noteRect.anchorMin = new Vector2(0f, 0f);
-                noteRect.anchorMax = new Vector2(1f, 0f);
-                noteRect.pivot = new Vector2(0.5f, 0f);
-                noteRect.anchoredPosition = new Vector2(0f, 82f);
-                noteRect.sizeDelta = new Vector2(-40f, 28f);
+                if (!storyScene)
+                {
+                    TextMeshProUGUI note = NewText(panel.transform, "note", L.Get("er_ending_content_end"), font,
+                        17, TextAlignmentOptions.Center, new Color(0.80f, 0.84f, 0.90f));
+                    RectTransform noteRect = note.rectTransform;
+                    noteRect.anchorMin = new Vector2(0f, 0f);
+                    noteRect.anchorMax = new Vector2(1f, 0f);
+                    noteRect.pivot = new Vector2(0.5f, 0f);
+                    noteRect.anchoredPosition = new Vector2(0f, 82f);
+                    noteRect.sizeDelta = new Vector2(-40f, 28f);
+                }
 
                 GameObject buttonObject = new GameObject("continue",
                     typeof(RectTransform), typeof(Image), typeof(Button));
@@ -182,19 +201,23 @@ namespace EleanorRomance
                 Image buttonImage = buttonObject.GetComponent<Image>();
                 buttonImage.color = new Color(0.72f, 0.58f, 0.32f, 0.96f);
                 Button button = buttonObject.GetComponent<Button>();
-                button.onClick.AddListener(HideRoutePage);
+                button.onClick.AddListener(() =>
+                {
+                    if (routeRoot != root) return;
+                    HideRoutePage();
+                    onContinue?.Invoke();
+                });
 
                 TextMeshProUGUI buttonText = NewText(buttonObject.transform, "label",
-                    L.Get("er_ending_return_button"), font, 20, TextAlignmentOptions.Center,
+                    L.Get(storyScene ? "er_story_cg_continue" : "er_ending_return_button"), font, 20, TextAlignmentOptions.Center,
                     new Color(0.10f, 0.08f, 0.04f));
                 Stretch(buttonText.rectTransform);
 
-                routeRoot = root;
                 return true;
             }
             catch (Exception ex)
             {
-                ModEntry.LogError("Standalone ending page failed: " + ex);
+                ModEntry.LogError((storyScene ? "Story CG failed: " : "Standalone ending page failed: ") + ex);
                 HideRoutePage();
                 return false;
             }

@@ -45,8 +45,8 @@
         },
         {
           "speaker": "Player",
-          "text": "进来说。",
-          "en": "Come inside."
+          "text": "到窗口前说。",
+          "en": "Come up to the window."
         }
       ]
     },
@@ -60,8 +60,8 @@
         },
         {
           "speaker": "Player",
-          "text": "进来说。",
-          "en": "Come inside."
+          "text": "到窗口前说。",
+          "en": "Come up to the window."
         }
       ]
     },
@@ -71,6 +71,7 @@
         {
           "speaker": "Eleanor",
           "text": "今天轮到我来接你了。",
+          "expr": "smile",
           "en": "Today it's my turn to pick you up."
         },
         {
@@ -86,6 +87,7 @@
         {
           "speaker": "Eleanor",
           "text": "上面有一场晚会。请柬上有一栏，要填同行人的名字。",
+          "expr": "neutral",
           "en": "There's a party upstairs. The invitation has a space for a companion's name."
         },
         {
@@ -101,6 +103,7 @@
         {
           "speaker": "Eleanor",
           "text": "所以今晚要把话说清楚。我也想跟你跳支舞！别光听前半句。",
+          "expr": "shy",
           "en": "So tonight I'm making it clear. I want to dance with you too! Don't just hear the first half."
         },
         {
@@ -121,6 +124,7 @@
         {
           "speaker": "Eleanor",
           "text": "走吧。今晚的时间，归我了。",
+          "expr": "smile",
           "en": "Come on. Tonight, your time is mine."
         }
       ]

@@ -16,6 +16,14 @@ Art/expressions-and-endings-2026-11-10/references_local/
 Art/revolution-ending-2026-11-11/references_local/
 Art/love-ending-2026-11-13/references_local/
 Art/love-intimate-outfit-2026-11-13/references_local/
+Art/sophia-white-gold-redesign-2026-11-13/references_local/
+Art/sophia-three-directions-2026-11-13/references_local/
+Art/sophia-european-teal-2026-11-13/references_local/
+Art/sophia-ruan-mei-home-2026-11-13/references_local/
+Art/sophia-scale-2026-11-14/head-study/references_local/
+Art/lydia-three-directions-2026-11-14/references_local/
+Art/expression-expansion-2026-11-13/references_local/
+Art/expression-expansion-2026-11-14/references_local/
 
 # OS
 Thumbs.db
@@ -39,3 +47,24 @@ Art/expression-chin-fix-2026-11-10/before/
 
 # Temporary excerpts used while reviewing route text
 docs/_mother_route_content.txt
+
+# Local QA / agent skills (may contain API keys)
+.claude/
+tools/super_qa/
+tools/NovelWorkFlow_Eleanor/
+tools/NovelWorkFlow_Eleanor_Test/
+tools/NovelWorkFlow_Eleanor_backup_*/
+docs/SUPER_QA_*
+docs/AGENT_TEXT_PIPELINE_USAGE.md
+docs/DECISIONS_REQUIRED.md
+docs/TEXT_REWRITE_REGISTRY.md
+docs/RELEASE_QA_2026-11-15.md
+
+# Local review scratch
+tmp_*
+output/
+1.png
+Facial.jpg
+Facial.png
+portrait-gallery.jpg
+*.bak_before_*

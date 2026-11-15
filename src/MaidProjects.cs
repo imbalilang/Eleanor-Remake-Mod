@@ -53,6 +53,16 @@ namespace EleanorRomance
         public static bool Available(int p)
         {
             if (!RomanceState.StoryActive || !MaidState.Active || !MaidState.SafeMother || Paid(p)) return false;
+            if (MaidState.V2)
+            {
+                // P2 is the first Wilde option and the Act 3 gate.  P1/P3/P4
+                // remain available as optional background after it.
+                if (p == 2) return MaidV2State.Act2Done;
+                if (p == 1) return Paid(2);
+                if (p == 3) return Paid(2);
+                if (p == 4) return Paid(3);
+                return false;
+            }
             // Reveal after completed story beats, never by calendar day:
             // reunion (16), base conclusion + housing feedback (23),
             // legal return (24), and the procurement visit (26).
@@ -262,6 +272,7 @@ namespace EleanorRomance
 
         public static bool TryEnter()
         {
+            if (LoveState.Started) return false;
             if (MaidState.HasHistory) return MaidState.EntryKind==1 && MaidState.Contract==1;
             if (busy || !StoryEngine.HasCash(800)) return false;
             bool success=false;

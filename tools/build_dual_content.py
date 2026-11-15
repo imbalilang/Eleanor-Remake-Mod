@@ -11,6 +11,24 @@ import json
 from pathlib import Path
 
 
+def presentation_cs(block: dict) -> str:
+    spec = block.get("presentation") or {}
+    if not spec:
+        return ""
+    mode = str(spec.get("mode") or "immediate")
+    first = spec.get("backup1") or {}
+    second = spec.get("backup2") or {}
+
+    def esc(value):
+        return str(value or "").replace("\\", "\\\\").replace('"', '\\"')
+
+    return (
+        'new StoryPresentationSpec("%s", "%s", "%s", "%s", "%s")'
+        % (esc(mode), esc(first.get("sprite")), esc(first.get("name")),
+           esc(second.get("sprite")), esc(second.get("name")))
+    )
+
+
 def build(root):
     root = Path(root)
     path = root / "Content" / "dual_romance_v04.json"
@@ -58,6 +76,16 @@ def build(root):
     code += [
         "};",
         "public static Line[] Get(string id) => Blocks.TryGetValue(id,out var block) ? block : null;",
+        "private static readonly Dictionary<string,StoryPresentationSpec> Presentations = new Dictionary<string,StoryPresentationSpec> {",
+    ]
+    for scene in data.get("scenes", []):
+        for block in scene.get("blocks", []):
+            spec = presentation_cs(block)
+            if spec:
+                code.append('{"' + block["id"] + '",' + spec + "},")
+    code += [
+        "};",
+        "public static StoryPresentationSpec GetPresentation(string id) => Presentations.TryGetValue(id,out var spec) ? spec : null;",
         "}}",
     ]
     (root / "src" / "DualContent.g.cs").write_text("\n".join(code) + "\n", encoding="utf-8")

@@ -9,6 +9,7 @@ namespace EleanorRomance
     {
         private static readonly ConditionalWeakTable<Dialogue,object> authored=new ConditionalWeakTable<Dialogue,object>();
         [ThreadStatic] private static Dialogue displaying;
+        [ThreadStatic] private static string backupSpeaker;
         public static bool Enabled { get; set; }=true;
 
         public static Dialogue Mark(Dialogue line)
@@ -40,6 +41,13 @@ namespace EleanorRomance
         {
             var line=displaying;
             if(!Enabled || line==null)return;
+            if (backupSpeaker != null && line.title == DialogUIManager.SEC)
+            {
+                string native = LocHelper.GetLocalizedClientName("name_security_officer");
+                if (text == "<color=#eb4034>" + native + ":</color> " + line.plainText)
+                    text = "<color=#eb4034>" + backupSpeaker + ":</color> " + line.plainText;
+                return;
+            }
             var client=PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
             string prefix=client==null?"<color=#eb4034>Customer :</color> ":"<color=#eb4034>"+client.displayName+":</color> ";
             // Only the current native rendering call's own log entry is ours.
@@ -61,6 +69,25 @@ namespace EleanorRomance
             finally{displaying=previous;}
         }
         public static void Restore(Dialogue previous)=>displaying=previous;
+
+        internal static (Dialogue, string) BeginBackup(Dialogue line)
+        {
+            var previous = (displaying, backupSpeaker);
+            backupSpeaker = Enabled ? StoryPresentation.NameFor(line) : null;
+            displaying = backupSpeaker != null ? line : null;
+            return previous;
+        }
+
+        internal static void EndBackup(Dialogue line)
+        {
+            if (ReferenceEquals(displaying, line) && backupSpeaker != null)
+                StoryPresentation.SetBackupName(backupSpeaker);
+        }
+
+        internal static void RestoreBackup((Dialogue, string) previous)
+        {
+            (displaying, backupSpeaker) = previous;
+        }
     }
 
     [HarmonyPatch(typeof(DialogUIManager),nameof(DialogUIManager.DisplayClientText))]
@@ -74,4 +101,17 @@ namespace EleanorRomance
     [HarmonyPatch(typeof(DialogUIManager),nameof(DialogUIManager.UpdateDialogHistory))]
     internal static class ModDialogueHistoryPatch
     {private static void Prefix(ref string __0)=>DialogueSpeakers.RewriteHistory(ref __0);}
+
+    [HarmonyPatch(typeof(DialogUIManager), nameof(DialogUIManager.DisplaySecText))]
+    internal static class ModBackupDialogueSpeakerPatch
+    {
+        private static void Prefix(Dialogue __0, out (Dialogue, string) __state)
+            => __state = DialogueSpeakers.BeginBackup(__0);
+        private static void Postfix(Dialogue __0) => DialogueSpeakers.EndBackup(__0);
+        private static Exception Finalizer(Exception __exception, (Dialogue, string) __state)
+        {
+            DialogueSpeakers.RestoreBackup(__state);
+            return __exception;
+        }
+    }
 }

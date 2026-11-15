@@ -30,10 +30,11 @@ namespace EleanorRomance
         public static bool TryQueue(StoreClientManager manager,int day)
         {
             if(manager==null || !DualState.Writable || RomanceState.LastQueuedDay==day)return false;
+            bool rewritten = DualState.Flag("d.route");
             StoreClient client=null;
-            if(StoryCoreFacts.CooperationPending && DualState.HasHistory)
+            if(!rewritten && StoryCoreFacts.CooperationPending && DualState.HasHistory)
                 client=EleanorStory.CreateCooperationBuyer();
-            else if(DualState.Flag("biz.legacy_second") && !DualState.SecondTraded && day>=DualState.BusinessDueDay)
+            else if(!rewritten && DualState.Flag("biz.legacy_second") && !DualState.SecondTraded && day>=DualState.BusinessDueDay)
                 client=CreateSecondBuyer(DualState.Int("biz.second.serial")+1);
             else
             {

@@ -70,11 +70,11 @@ if($Dual) {
         while($node){$lines.Add($node.plainText);$node=$node.nextDialogue}
         foreach($block in @('dr_epilogue_route_b_unsubmitted','dr_epilogue_route_b','dr_epilogue_route_b_acquitted')) {
             $text=[EleanorRomance.DualText]::Plain($block)
-            Assert ($lines.Contains($text) -eq ($block -eq $caseBlocks[$state])) 'Route-B epilogue invented case submission/withdrawal or used another status.'
+            Assert (!$lines.Contains($text)) 'Retired epilogue replayed old case narration.'
         }
-        Assert ([EleanorRomance.MaidWorldEvents]::State -eq $state) 'Reading the epilogue changed case progress.'
+        Assert ([EleanorRomance.MaidWorldEvents]::State -eq $state -and [EleanorRomance.DualState]::Done('dual_epilogue')) 'Retired epilogue recovery changed case progress or was not retired.'
     }
-    'PASS: route-B epilogue selects unsubmitted/pending/published narration from actual state without mutation.'
+    'PASS: retired epilogue becomes a regular visit without replaying case narration or mutating case state.'
 
     Dual-Run;[EleanorRomance.DualState]::Accept(1)
     $day=[EleanorRomance.DualState]::LastImportantDay

@@ -1,0 +1,294 @@
+        // ------------------------------------------------------------------
+        // 10-11. D prelude: native bracelet trade, Eleanor reaction, broker, buyback
+        // ------------------------------------------------------------------
+
+        private const int PreludeBraceletFallbackPrice = 140;
+
+        private static bool RemovePreludeBracelet()
+        {
+            try
+            {
+                GameInventory[] inventories =
+                {
+                    EmporiumEntry.Instance.frontInvinvElement,
+                    EmporiumEntry.Instance.backInvinvElement,
+                    EmporiumEntry.Instance.invElement,
+                    EmporiumEntry.Instance.afterhourInventory,
+                    EmporiumEntry.Instance.showcaseElement,
+                };
+                foreach (GameInventory inventory in inventories)
+                {
+                    if (inventory == null) continue;
+                    for (int i = inventory.childItems.Count - 1; i >= 0; i--)
+                    {
+                        GameItem item = inventory.childItems[i];
+                        if (item != null && item.identifier == ModConstants.BraceletItemId)
+                        {
+                            item.Destroy();
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("RemovePreludeBracelet failed: " + ex);
+            }
+            return false;
+        }
+
+        private static void PreludeNoBuy()
+        {
+            RomanceState.DPreludeState = 2;
+            RomanceState.LydiaFairBracelet = false;
+        }
+
+        private static void PreludeBrokerSold()
+        {
+            RomanceState.DPreludeState = 3;
+            RomanceState.LydiaFairBracelet = false;
+        }
+
+        private static void PreludeBuybackSold(int mode)
+        {
+            RomanceState.DPreludeState = mode == 1 ? 4 : 6;
+            RomanceState.LydiaFairBracelet = true;
+        }
+
+        private static void PreludeGift()
+        {
+            RemovePreludeBracelet();
+            RomanceState.DPreludeState = 5;
+            RomanceState.LydiaFairBracelet = true;
+        }
+
+        private static void SchedulePreludeStep(int step, int days)
+        {
+            RomanceState.DPreludeStep = step;
+            int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;
+            RomanceState.NextVisitDay = Math.Max(1, day + days);
+            StoryEngine.Dismiss();
+        }
+
+        private static void FinishPrelude(int expected, int next, Action flags = null)
+        {
+            Advance(expected, next, flags);
+            StoryEngine.Dismiss();
+        }
+
+        private static StoreClient CreateLydiaChapter()
+        {
+            StoreClient client = NewNpcClient("d0_lydia", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
+            client.clientIntent = StoreClient.ClientIntent.SELL;
+            client.SetWholesale(45);
+
+            bool bought = false;
+            int paid = 0;
+            bool fair = false;
+            client.onItemSold = (item, price) =>
+            {
+                if (item == null || item.identifier != ModConstants.BraceletItemId) return;
+                bought = true;
+                paid = price;
+                long market = StoryEngine.MarketValue(item, PreludeBraceletFallbackPrice);
+                fair = (long)price * 10 >= market * 9;
+            };
+
+            Action spawnBracelet = () =>
+            {
+                if (RomanceState.LydiaBraceletSpawned) return;
+                RomanceState.LydiaBraceletSpawned = true;
+                try
+                {
+                    GameItem bracelet = Items.SpawnBracelet();
+                    if (bracelet != null)
+                        PlayerStore.Instance.AddDirectSellingItemToTableMiddle(bracelet, isOwend: false);
+                }
+                catch (Exception ex)
+                {
+                    StoryDirector.LogError("D prelude bracelet spawn failed: " + ex);
+                }
+            };
+
+            Dialogue root = StoryEngine.Build(StoryV06Content.B_C09_N101);
+            StoryEngine.Tail(root).SetEndAction(spawnBracelet);
+            client.mainDialogue = root;
+
+            StoryEngine.InterceptDismiss(client, () =>
+            {
+                if (bought)
+                {
+                    RomanceState.DPreludeState = 1;
+                    RomanceState.DPreludeOriginalPrice = paid;
+                    RomanceState.LydiaFairBracelet = fair;
+                    Dialogue head = StoryEngine.Build(
+                        fair ? StoryV06Content.B_C09_N102 : StoryV06Content.B_C09_N105);
+                    StoryEngine.Append(head, StoryV06Content.B_C09_N106);
+                    return head;
+                }
+
+                Dialogue menu = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_prelude_c1_no_buy"));
+                Dialogue asked = StoryEngine.Build(StoryV06Content.B_C09_N103);
+                Dialogue refused = StoryEngine.Build(StoryV06Content.B_C09_N104);
+                StoryEngine.AddChoices(menu, L.Get("er_prelude_c1_prompt"),
+                    new StoryEngine.Choice(L.Get("er_prelude_c1_opt2"), "", asked, null),
+                    new StoryEngine.Choice(L.Get("er_prelude_c1_opt3"), "", refused, null));
+                return menu;
+            }, () =>
+            {
+                if (bought)
+                {
+                    Advance(10, 11, () => RomanceState.LydiaVisited = true);
+                }
+                else
+                {
+                    Advance(10, 12, () =>
+                    {
+                        PreludeNoBuy();
+                        RomanceState.LydiaVisited = true;
+                    });
+                }
+            });
+
+            client.CompleteClientCreation();
+            return client;
+        }
+
+        private static StoreClient CreateLydiaResponseChapter()
+        {
+            if (RomanceState.DPreludeStep == 1) return CreatePreludeBrokerChapter();
+            if (RomanceState.DPreludeStep == 2) return CreatePreludeBuybackChapter();
+            return CreatePreludeEleanorChapter();
+        }
+
+        private static StoreClient CreatePreludeEleanorChapter()
+        {
+            StoreClient client = NewEleanorClient("d0_c10", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
+            Dialogue root = StoryEngine.Build(StoryV06Content.B_C10_N201);
+            Dialogue told = StoryEngine.Chain(StoryV06Content.B_C10_N202, StoryV06Content.B_C10_N205);
+            Dialogue onlyCame = StoryEngine.Chain(StoryV06Content.B_C10_N203, StoryV06Content.B_C10_N205);
+            Dialogue askKnown = StoryEngine.Chain(StoryV06Content.B_C10_N204, StoryV06Content.B_C10_N205);
+
+            Action finish = () =>
+            {
+                if (RomanceState.DPreludeState == 1)
+                {
+                    SchedulePreludeStep(1, 2);
+                }
+                else
+                {
+                    FinishPrelude(11, 12);
+                }
+            };
+            foreach (Dialogue branch in new[] { told, onlyCame, askKnown })
+                StoryEngine.Tail(branch).SetEndAction(finish);
+
+            StoryEngine.AddChoices(root, L.Get("er_prelude_c2_prompt"),
+                new StoryEngine.Choice(L.Get("er_prelude_c2_opt1"), "", told, null),
+                new StoryEngine.Choice(L.Get("er_prelude_c2_opt2"), "", onlyCame, null),
+                new StoryEngine.Choice(L.Get("er_prelude_c2_opt3"), "", askKnown, null));
+
+            client.mainDialogue = root;
+            client.CompleteClientCreation();
+            return client;
+        }
+
+        private static StoreClient CreatePreludeBrokerChapter()
+        {
+            StoreClient client = NewNpcClient("d0_broker", L.Get("er_name_broker"), "maleBM5", FactionKind.BlackMarket);
+            client.clientIntent = StoreClient.ClientIntent.BUY;
+            client.SetBudget(1000);
+            client.clientBuyingTagList.Add(TypeHelper.LUXURY_ITEM);
+
+            bool sold = false;
+            client.onItemBought = (item, price) =>
+            {
+                if (item != null && item.identifier == ModConstants.BraceletItemId) sold = true;
+            };
+
+            Dialogue root = StoryEngine.Build(StoryV06Content.B_C10_N206);
+            client.mainDialogue = root;
+
+            StoryEngine.InterceptDismiss(client, () => sold
+                ? StoryEngine.Build(StoryV06Content.B_C10_N208)
+                : StoryEngine.Build(StoryV06Content.B_C10_N207), () =>
+            {
+                if (sold)
+                {
+                    PreludeBrokerSold();
+                    Advance(11, 12);
+                }
+                else
+                {
+                    SchedulePreludeStep(2, 1);
+                }
+            });
+
+            client.CompleteClientCreation();
+            return client;
+        }
+
+        private static StoreClient CreatePreludeBuybackChapter()
+        {
+            StoreClient client = NewNpcClient("d0_buyback", L.Get("er_name_lydia"), LydiaSpriteKey(), FactionKind.Upper);
+            client.clientIntent = StoreClient.ClientIntent.BUY;
+            client.SetBudget(500);
+            client.clientBuyingTagList.Add(TypeHelper.LUXURY_ITEM);
+
+            bool sold = false;
+            client.onItemBought = (item, price) =>
+            {
+                if (item != null && item.identifier == ModConstants.BraceletItemId) sold = true;
+            };
+
+            int mode = 0;
+            Dialogue root = StoryEngine.Build(StoryV06Content.B_C10_N209);
+            Dialogue wait = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_prelude_buyback_wait"));
+            Dialogue offerAndWait = StoryEngine.Build(StoryV06Content.B_C10_N212);
+            StoryEngine.Tail(offerAndWait).SetNextDialogue(wait);
+            Dialogue gift = StoryEngine.Chain(StoryV06Content.B_C10_N211, StoryV06Content.B_C10_N213);
+
+            StoryEngine.Tail(gift).SetEndAction(() => FinishPrelude(11, 12));
+
+            StoryEngine.AddChoices(root, L.Get("er_prelude_c4_prompt"),
+                new StoryEngine.Choice(L.Get("er_prelude_c4_opt1"), "", wait, () =>
+                {
+                    mode = 1;
+                    RomanceState.DPreludeBuybackMode = 1;
+                    client.SetBudget(Math.Max(1, RomanceState.DPreludeOriginalPrice));
+                }),
+                new StoryEngine.Choice(L.Get("er_prelude_c4_opt2"), "", gift, () =>
+                {
+                    mode = 2;
+                    RomanceState.DPreludeBuybackMode = 2;
+                    PreludeGift();
+                }),
+                new StoryEngine.Choice(L.Get("er_prelude_c4_opt3"), "", offerAndWait, () =>
+                {
+                    mode = 3;
+                    RomanceState.DPreludeBuybackMode = 3;
+                    client.SetBudget(500);
+                }));
+
+            client.mainDialogue = root;
+
+            StoryEngine.InterceptDismiss(client, () =>
+            {
+                if (sold)
+                {
+                    Dialogue head = StoryEngine.Build(
+                        mode == 1 ? StoryV06Content.B_C10_N210 : StoryV06Content.B_C10_N214);
+                    StoryEngine.Append(head, StoryV06Content.B_C10_N213);
+                    return head;
+                }
+                return StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_prelude_buyback_nosale"));
+            }, () =>
+            {
+                if (sold) PreludeBuybackSold(mode);
+                Advance(11, 12);
+            });
+
+            client.CompleteClientCreation();
+            return client;
+        }
+

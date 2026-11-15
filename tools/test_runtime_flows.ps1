@@ -5,8 +5,11 @@ param(
     [Parameter(Mandatory=$true)][string]$Managed,
     [string]$ModDll = (Join-Path $PSScriptRoot '..\bin\Release\EleanorRomance.dll'),
     [switch]$Maid,
-    [switch]$Dual
+    [switch]$Dual,
+    [switch]$Rewrite,
+    [switch]$ReleaseQA
 )
+if($ReleaseQA){$Rewrite=$true}
 $ErrorActionPreference = 'Stop'
 Add-Type -Path (Join-Path $Managed 'Unity.Burst.Cecil.dll')
 $resolve = [Func[System.Runtime.Loader.AssemblyLoadContext,System.Reflection.AssemblyName,System.Reflection.Assembly]]({
@@ -122,7 +125,24 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldsfld,$countField)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldc_I4_1)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Add)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Stsfld,$countField)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
+$instanceField = $storeType.Fields | Where-Object Name -eq 'currentClientInstance'
+$getClient = Method $game 'StoreClientInstance' 'GetClientBlueprint'
+$dismissField = (GetCType $game 'StoreClient').Fields | Where-Object Name -eq 'OnDismiss'
+$return = [Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ret)
+$noCallback = [Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Pop)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,$instanceField)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Brfalse,$return)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,$instanceField)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$getClient)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,$dismissField)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Dup)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Brfalse,$noCallback)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$game.MainModule.ImportReference([Action].GetMethod('Invoke')))
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Br,$return)
+$il.Append($noCallback)
+$il.Append($return)
 $instanceType = GetCType $game 'StoreClientInstance'
 $stockField = [Mono.Cecil.FieldDefinition]::new('TestHasStock',
     [Mono.Cecil.FieldAttributes]::Public -bor [Mono.Cecil.FieldAttributes]::Static,$game.MainModule.TypeSystem.Boolean)
@@ -247,7 +267,7 @@ $il=Body (Method $game 'PlayerStore' 'AddDirectSellingItemToTableMiddle')
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference((Method $mod 'EleanorRomance.VanillaEleanorBridge' 'CaptureReward')))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Pop);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
-foreach($getter in @('get_frontInvinvElement','get_invElement')){
+foreach($getter in @('get_frontInvinvElement','get_backInvinvElement','get_invElement','get_showcaseElement')){
     $il=Body (Method $game 'EmporiumEntry' $getter)
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldnull);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 }
@@ -280,6 +300,23 @@ if($Maid){
 }
 if($Dual){. (Join-Path $PSScriptRoot 'test_dual_boundaries.ps1')}
 . (Join-Path $PSScriptRoot 'test_speaker_boundaries.ps1')
+if($Rewrite){
+    $il=Body (Method $mod 'EleanorRomance.ModEntry' 'LogError')
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$mod.MainModule.ImportReference([Console].GetMethod('WriteLine',[type[]]@([string]))))
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
+    $inventoryGetter = Method $game 'EmporiumEntry' 'get_invElement'
+    $fixtureInventory = [Mono.Cecil.FieldDefinition]::new('TestRewriteInventory',
+        [Mono.Cecil.FieldAttributes]'Public,Static',$inventoryGetter.ReturnType)
+    (GetCType $game 'EmporiumEntry').Fields.Add($fixtureInventory)
+    $il=Body $inventoryGetter
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldsfld,$fixtureInventory)
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
+    $method = Method $mod 'EleanorRomance.StoryPresentation' 'MarkCompanion'
+    $method.IsAssembly=$false
+    $method.IsPublic=$true
+}
+if($ReleaseQA){. (Join-Path $PSScriptRoot 'test_release_qa_boundaries.ps1')}
 foreach ($assembly in @($game,$mod)) {
     $stream = [IO.MemoryStream]::new()
     $assembly.Write($stream)
@@ -434,6 +471,12 @@ function New-Item($mask,$width=4,$x=0,$y=0,$flip=$false,$rotation=0) {
     return $item
 }
 [EmporiumEntry]::TestInstance=Blank ([EmporiumEntry])
+if($Rewrite){
+    # Unity's null operator treats an uninitialized MonoBehaviour as destroyed.
+    # Give the inventory-host fixture a live handle without invoking Unity.
+    [UnityEngine.Object].GetField('m_CachedPtr',[Reflection.BindingFlags]'NonPublic,Instance').SetValue(
+        [EmporiumEntry]::TestInstance,[IntPtr]1)
+}
 function Count-Cells($shape) {
     $n=0
     for($y=0;$y -lt $shape.height;$y++){for($x=0;$x -lt $shape.width;$x++){if($shape.GetLocal($x,$y)){$n++}}}
@@ -520,7 +563,7 @@ foreach($paid in @(101,110,120,125,130)){
 [ModHelper]::TestData=[System.Collections.Generic.Dictionary[string,string]]::new()
 $station=Blank ([StoreStation]);$station.dayCounter=40
 [StoreStation]::TestInstance=$station
-$next=@{1=2;2=3;3=4;6=7;7=8;8=9;10=11;18=19;19=20;22=23;103=104;105=106;108=300}
+$next=@{1=2;2=3;3=4;6=7;7=8;8=9;10=11;18=19;19=20;22=23}
 foreach($manual in @($false,$true)){
     foreach($chapter in ($next.Keys | Sort-Object)){
         [ModHelper]::TestData.Clear()
@@ -533,6 +576,7 @@ foreach($manual in @($false,$true)){
         Assert ($c.acceptDealDialogue.plainText -eq 'er_line_trade_accept') "Chapter $chapter has a placeholder acceptance."
         $instance=Blank ([StoreClientInstance]);$instance.storeClient=$c
         $store.currentClientInstance=$instance
+        $ui.currentDialog=$null
         if($manual) {
             $store.TryPlayerDismissCurrentClient($true)
         } else {
@@ -546,16 +590,20 @@ foreach($manual in @($false,$true)){
             $c.TestOnDealAccepted($null)
         }
         Finish-Dialogue-WithChoices $ui.currentDialog
-        Assert ([EleanorRomance.RomanceState]::Chapter -eq $next[$chapter] -and
+        $expected = if ($chapter -eq 10 -and $manual) {12} else {$next[$chapter]}
+        Assert ([EleanorRomance.RomanceState]::Chapter -eq $expected -and
             [EleanorRomance.RomanceState]::PendingChapter -eq 0 -and
             [PlayerStore]::TestDismissCount -eq 1) "Chapter $chapter progression failed (manual=$manual)."
         if(!$manual -and $chapter -in @(3,7,8,19)) {
             Assert ([EleanorRomance.RomanceState]::Affection -eq 2 -and
                 [EleanorRomance.RomanceState]::Discounts -eq 1) "Chapter $chapter did not reward overpayment."
         }
+        if($chapter -eq 18) {
+            Assert ([EleanorRomance.RomanceState]::MotherVisited) 'Mother left without committing her visit.'
+        }
     }
 }
-'PASS: 13 chapters x automatic/manual completion, bargaining and actual affection/progression state.'
+'PASS: common trade chapters x automatic/manual completion, bargaining and actual affection/progression state.'
 
 function Reset-Run($chapter=5) {
     [ModHelper]::TestData.Clear()
@@ -740,7 +788,7 @@ foreach($decline in @($false,$true)){
     $manager=$store.storeClientManager;$manager.CheckStoryLineEleanor()
     $officer=$manager.clientStack[0];$manager.clientStack.Clear();Use-Client $officer
     $node=Choice-Node $officer.mainDialogue
-    if($decline){$node.choices[2].Item3.Invoke()}else{$node.choices[3].Item3.Invoke()}
+    if($decline){$node.choices[2].Item3.Invoke()}else{Finish-Dialogue $node.choices[3].Item2}
     if($officer.OnDismiss){$officer.OnDismiss.Invoke()}
     $store.currentClientInstance=$null
     $station.dayCounter=43
@@ -786,6 +834,7 @@ $locket=[EleanorRomance.Items]::CreateLocket()
 Assert ($locket.IsTag('IMPORTANT_TAG')) 'New keepsake did not inherit story-item protection.'
 'PASS: native reward claim retry/deduplication and keepsake protection.'
 . (Join-Path $PSScriptRoot 'test_arrest_speakers.ps1')
+if($Rewrite){. (Join-Path $PSScriptRoot 'test_rewritten_routes.ps1')}
 if($Maid){
     . (Join-Path $PSScriptRoot 'test_maid_routes.ps1')
     . (Join-Path $PSScriptRoot 'test_business_routes.ps1')
@@ -796,7 +845,12 @@ if($Maid){
     . (Join-Path $PSScriptRoot 'test_interaction_routes.ps1')
     . (Join-Path $PSScriptRoot 'test_relationship_choices.ps1')
     . (Join-Path $PSScriptRoot 'test_named_speakers.ps1')
+    . (Join-Path $PSScriptRoot 'test_reported_issues.ps1')
 }
 
 if($Dual){. (Join-Path $PSScriptRoot 'test_dual_routes.ps1');. (Join-Path $PSScriptRoot 'test_dual_showcase.ps1')}
 . (Join-Path $PSScriptRoot 'test_reading_fixes.ps1')
+if($ReleaseQA){
+    . (Join-Path $PSScriptRoot 'test_release_qa.ps1')
+    . (Join-Path $PSScriptRoot 'test_release_qa_schedule.ps1')
+}

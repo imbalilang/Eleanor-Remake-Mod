@@ -173,8 +173,10 @@ foreach($case in @('confirm','retract','back')){
         Assert (![EleanorRomance.MaidState]::HasHistory) 'Retracting the old proposal opened the attendant line.'
     }
     $station.dayCounter++
-    $c=Main-Client 13;Finish-Dialogue (Pick $c.mainDialogue 1)
-    Assert ([EleanorRomance.RomanceState]::Chapter -eq 14 -and [EleanorRomance.RomanceState]::DriveState -eq 2) 'Real legacy facts did not reach drive custody.'
+    $c=Main-Client 13
+    if($case -eq 'confirm'){Finish-Dialogue (Pick $c.mainDialogue 1);$drive=2}
+    else{Finish-Dialogue-WithChoices $c.mainDialogue;$drive=1}
+    Assert ([EleanorRomance.RomanceState]::Chapter -eq 14 -and [EleanorRomance.RomanceState]::DriveState -eq $drive) 'Real legacy facts did not reach the correct drive custody.'
 }
 foreach($change in @(@('PendingChapter',13),@('SchemaVersion',3),@('OldBlocked',$true),@('Route',4),@('BetrayalKind',1),@('DriveState',1),@('MotherState',2),@('Chapter',14))){
     New-MaidRun
@@ -350,7 +352,7 @@ function Play-Event($id){
     $c=[EleanorRomance.MaidStory]::CreateEvent($id);Assert ($c -ne $null) "Event $id is missing."
     Use-Client $c
     if($id -eq 26){$branch=Pick $c.mainDialogue 0;Finish-Dialogue $branch;Leave-Trade $c}
-    elseif($id -eq 24){Finish-Dialogue (Pick $c.mainDialogue 2)}
+    elseif($id -eq 24){Finish-Dialogue-WithChoices (Pick $c.mainDialogue 2)}
     elseif($id -in @(25,27)){Finish-Dialogue $c.mainDialogue;Leave-Trade $c}
     elseif($id -eq 28){Finish-Dialogue (Pick $c.mainDialogue 2)}
     else{Finish-Dialogue $c.mainDialogue}
@@ -618,14 +620,13 @@ New-MaidRun;Set-Partner
 [EleanorRomance.MaidState]::Flag('p2.paid',$true);[EleanorRomance.MaidState]::SetInt('p2.day',59)
 [EleanorRomance.RomanceState]::Chapter=300;[EleanorRomance.RomanceState]::PendingChapter=0;[EleanorRomance.RomanceState]::EpilogueDone=$true
 Assert ([EleanorRomance.MaidStory]::EventForDay(60) -eq 0) 'Paid project waiting for its date triggered a false unpaid chat.'
-Assert (![EleanorRomance.MaidStory]::Ending('survived').Contains('er_maid_ending_b002_02')) 'Paid but unshown pass was claimed in the ending.'
+Assert ($null -eq [EleanorRomance.EndingPages]::TryMaidCompletion()) 'Paid but unshown project granted a completion page.'
 [EleanorRomance.MaidState]::Progress=27
-Assert ([EleanorRomance.MaidStory]::Ending('survived').Contains('er_maid_ending_b002_05') -and
-    ![EleanorRomance.MaidStory]::Ending('survived').Contains('er_maid_ending_b003_01')) 'Chapter 27 falsely claimed the renewed agreement.'
-Assert ([EleanorRomance.MaidStory]::Ending('dead').Contains('er_maid_ending_b008_01')) 'Player death used a peaceful ending.'
-[EleanorRomance.MaidState]::BasicComplete=$false;[EleanorRomance.RomanceState]::Chapter=22
-Assert ([EleanorRomance.MaidStory]::Ending('survived') -ne $null) 'Early game ending lost a mutually confirmed relationship.'
-'PASS: actual-stage endings, early confirmed relationship and no unpaid chat during paid delivery gaps.'
+Assert ($null -eq [EleanorRomance.EndingPages]::TryMaidCompletion()) 'Progress 27 falsely claimed the renewed agreement.'
+[EleanorRomance.MaidState]::Progress=28;[EleanorRomance.MaidState]::Contract=3
+Assert ($null -ne [EleanorRomance.EndingPages]::TryMaidCompletion()) 'Fulfilled agreement lost the completion page.'
+Assert ($null -eq [EleanorRomance.EndingPages]::TryGet('dead')) 'Player death used a peaceful ending.'
+'PASS: actual-stage completion pages and no unpaid chat during paid delivery gaps.'
 
 New-MaidRun;[EleanorRomance.MaidState]::Enter(1)
 [EleanorRomance.RomanceState]::Route=2;[EleanorRomance.RomanceState]::ProtectionChannel=2
@@ -634,7 +635,7 @@ $c=Main-Client 16;Finish-Dialogue $c.mainDialogue
 Assert ([EleanorRomance.RomanceState]::ProtectionReady -and $store.playerCash -eq 0) 'Interrupted paid protection was charged or gated again.'
 'PASS: already-paid protection channel resumes after interruption without a second charge.'
 
-# Original equal romance from its unchanged entry choice through its conclusion.
+# The rewritten common story hands a non-maid romance to the solo director.
 New-MaidRun
 [EleanorRomance.RomanceState]::Savings=800;[EleanorRomance.RomanceState]::FairDeals=3
 [EleanorRomance.RomanceState]::UncleReported=$true
@@ -642,18 +643,11 @@ $c=Main-Client 12;Finish-Dialogue (Pick $c.mainDialogue 0)
 $c=Main-Client 13;Finish-Dialogue (Pick $c.mainDialogue 1)
 $c=Main-Client 14;Finish-Dialogue (Pick $c.mainDialogue 0)
 $c=Main-Client 15;Finish-Dialogue (Pick $c.mainDialogue 0)
-$c=Main-Client 16;Finish-Dialogue $c.mainDialogue
-$c=Main-Client 17;Finish-Dialogue (Pick $c.mainDialogue 1)
+Assert ([EleanorRomance.RomanceState]::Chapter -eq 18 -and [EleanorRomance.RomanceState]::DriveState -eq 3) 'Research return failed to hand off to the mother visit.'
 $c=Main-Client 18;Leave-Trade $c
-$c=Main-Client 19;Leave-Trade $c
-$c=Main-Client 20;Finish-Dialogue (Pick $c.mainDialogue 0)
-$c=Main-Client 21;Finish-Dialogue $c.mainDialogue
-Assert (($store.storeClientManager.clientStack | Where-Object identifier -eq 'er_story_coop_buyer').Count -eq 1) 'Original cooperation buyer did not queue.'
-$c=Main-Client 22;Leave-Trade $c
-$c=Main-Client 23;Finish-Dialogue (Pick $c.mainDialogue 1)
-Finish-Dialogue (Pick $ui.currentDialog 1)
-$c=Main-Client 24;Finish-Dialogue (Pick $c.mainDialogue 0)
+$c=Main-Client 19;Leave-Trade $c;Finish-Dialogue-WithChoices $ui.currentDialog
+$c=Main-Client 20;Finish-Dialogue-WithChoices $c.mainDialogue
 Assert (![EleanorRomance.MaidState]::HasHistory -and [EleanorRomance.RomanceState]::RomanceConfirmed -and
-    [EleanorRomance.RomanceState]::PerfumeGiven -and [EleanorRomance.RomanceState]::ScavAssist -and
-    [EleanorRomance.RomanceState]::Chapter -eq 300) 'Original equal romance was changed or blocked.'
-'PASS: original equal romance entry, A exchange, native trading, confession, future and base conclusion.'
+    [EleanorRomance.StoryCoreFacts]::Done(20)) 'Common romance handoff was changed or blocked.'
+Assert ([EleanorRomance.LoveDirector]::CanStart(100)) 'Common confession did not unlock the solo romance.'
+'PASS: ordinary common entry, research return, mother visit, confession and solo romance handoff.'

@@ -8,6 +8,7 @@ namespace EleanorRomance
     {
         private const string Prefix = "er.maid.";
         public const int CurrentVersion = 1;
+        public const int V2Version = 2;
         public static int Int(string key, int fallback = 0) => ModHelper.GetModDataInt(ModConstants.ModId, Prefix + key, fallback);
         public static void SetInt(string key, int value) => ModHelper.SetModDataInt(ModConstants.ModId, Prefix + key, value);
         public static bool Flag(string key) => ModHelper.GetModDataBool(ModConstants.ModId, Prefix + key, false);
@@ -27,7 +28,9 @@ namespace EleanorRomance
         // deferred value (migrated on load), 4 friends.
         public static int Confession { get => Int("confession"); set => SetInt("confession", value); }
         public static bool HasHistory => EntryKind != 0;
-        public static bool Active => HasHistory && FeatureVersion==CurrentVersion && (Contract == 1 || Contract == 3)
+        public static bool V2 => FeatureVersion == V2Version;
+        public static bool Active => HasHistory && (FeatureVersion==CurrentVersion || FeatureVersion==V2Version)
+            && (Contract == 1 || Contract == 3)
             && RomanceState.Route != 3 && RomanceState.Route != 4 && RomanceState.MotherState != 2;
         public static bool Lovers => Active && Confession == 1 && RomanceState.RomanceConfirmed;
         public static bool BasicComplete { get => Flag("basic_complete"); set => Flag("basic_complete", value); }
