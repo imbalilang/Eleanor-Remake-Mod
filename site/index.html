@@ -6,7 +6,7 @@
 <title>埃莉诺路线完全攻略 · Eleanor Story Expand</title>
 <style>
 :root{--bg:#0b0d13;--panel:#11151f;--panel-2:#161b28;--line:#2a3347;--gold:#d9b26f;
-  --text:#f3efe7;--muted:#a7b2c4;--rose:#f29ab4;--perfect:#ffd77a;
+  --text:#f3efe7;--muted:#a7b2c4;--rose:#f29ab4;--completed:#ffd77a;
   --regular:#79b8ff;--harem:#ff8fb3;--maid:#e6c15c;--rev:#c49bff;--bad:#ff8d7a}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -56,7 +56,7 @@ main{padding-bottom:40px}
 .card-media img{display:block;width:100%;height:100%;object-fit:cover}
 .route-card.regular .card-media img{object-fit:cover;object-position:center 50%}
 .card-tag{position:absolute;left:10px;top:10px;background:rgba(10,12,18,.8);border:1px solid rgba(255,215,122,.5);
-  color:var(--perfect);font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;letter-spacing:.06em}
+  color:var(--completed);font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;letter-spacing:.06em}
 .card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
 .card-body h3{margin:0;font-size:18px}
 .card-body p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}
@@ -69,8 +69,8 @@ main{padding-bottom:40px}
 .legend{display:flex;gap:9px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:12px}
 .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.02)}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
-.dot.regular{background:var(--regular)}.dot.harem{background:var(--harem)}.dot.maid{background:var(--maid)}.dot.rev{background:var(--rev)}.dot.bad{background:var(--bad)}.dot.perfect{background:var(--perfect)}
-.zoom{display:flex;gap:7px;align-items:center}
+.dot.regular{background:var(--regular)}.dot.harem{background:var(--harem)}.dot.maid{background:var(--maid)}.dot.rev{background:var(--rev)}.dot.bad{background:var(--bad)}.dot.completed{background:var(--completed)}
+.zoom{display:flex;gap:7px;align-items:center;flex-wrap:wrap;max-width:100%}
 .zoom button{cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;min-width:38px}
 .zoom button:hover{border-color:var(--gold);color:#fff}
 .zoom span{color:var(--muted);font-size:12px;min-width:52px;text-align:center}
@@ -88,7 +88,7 @@ td.eid{font-family:ui-monospace,Consolas,monospace;font-weight:800;color:var(--g
 td.route,td.etype,td.terminals{white-space:nowrap}
 tr:last-child td{border-bottom:0}
 .tag{display:inline-block;font-size:10.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:1px 3px 1px 0}
-.perfect{color:var(--perfect);font-weight:700}
+.completed{color:var(--completed);font-weight:700}
 .bad{color:var(--bad);font-weight:600}
 .faq h2{font-size:clamp(22px,2.6vw,28px);margin:0 0 14px}
 .faq details{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:10px;overflow:hidden}
@@ -105,6 +105,31 @@ footer a{color:var(--gold);text-decoration:none}
 @media (max-width:600px){.route-grid{grid-template-columns:1fr}.nav-links{gap:12px}
   .nav-links a{font-size:12.5px}.site-nav{padding:12px 16px}
   .hero{padding-top:28px}.hero-art img{max-height:460px}}
+
+[id]{scroll-margin-top:100px}
+.route-card{position:relative}.card-link{position:absolute;inset:0;z-index:1;border-radius:18px}
+.card-link:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.guide-section{max-width:1280px;margin:0 auto;padding:clamp(24px,4vw,44px) clamp(18px,4vw,48px)}
+.guide-filter{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}
+.guide-filter button{font:inherit;font-size:13px;padding:9px 15px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;cursor:pointer}
+.guide-filter button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold);background:#282113}
+.guide-route{border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:16px;padding:24px;margin-bottom:28px;background:var(--panel)}
+.guide-route[data-route="regular"]{border-top-color:var(--regular)}.guide-route[data-route="harem"]{border-top-color:var(--harem)}
+.guide-route[data-route="rev"]{border-top-color:var(--rev)}
+.guide-route h3{margin:0;font-size:24px}.guide-intro{color:var(--muted);line-height:1.8;font-size:14px}
+.entry-box{border:1px solid rgba(217,178,111,.35);background:rgba(217,178,111,.04);border-radius:12px;padding:16px 20px}
+.entry-box h4{color:var(--gold);margin:0 0 8px;font-size:15px}
+.entry-box ul,.act-checks{padding-left:21px;margin:0;line-height:1.9;font-size:14px}
+.entry-box li+li,.act-checks li+li{margin-top:7px}
+.act-list{list-style:none;padding:0;margin:24px 0 0}.guide-act{padding:22px 0;border-top:1px solid var(--line)}
+.guide-act:last-child{padding-bottom:0}.act-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px 20px;flex-wrap:wrap}
+.act-heading h4{font-size:18px;margin:0}.act-date{color:var(--gold);font-size:12px}
+.scene-list{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:13px 0}
+.scene-list li{font-size:12px;line-height:1.5;border:1px solid var(--line);border-radius:7px;background:var(--panel-2);padding:5px 9px}
+.act-summary{color:var(--muted);font-size:14px;line-height:1.8;margin:12px 0}
+.guide-back{display:inline-block;color:var(--gold);font-size:12px;margin-top:20px}.chart-node{cursor:pointer}
+.chart-node:focus-visible rect{stroke-width:4}.guide-act:target,.guide-route:target{outline:2px solid var(--gold);outline-offset:6px}
+@media(max-width:600px){.guide-route{padding:18px 15px}.entry-box{padding:14px}.entry-box ul,.act-checks{font-size:13px}.guide-route h3{font-size:22px}}
 </style>
 </head>
 <body>
@@ -113,6 +138,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="nav-links">
     <a href="#routes">路线选择</a>
     <a href="#map">流程图</a>
+    <a href="#guide">入线条件与分幕攻略</a>
     <a href="#endings">结局一览</a>
     <a href="#faq">常见问题</a>
   </div>
@@ -122,11 +148,11 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="hero-copy">
     <div class="kicker">Probably Stolen · 埃莉诺剧情扩展</div>
     <h1>埃莉诺路线<br><span>完全攻略</span></h1>
-    <p class="lead">四条主路线，十四种结局。先决定你想和她走到哪里，再对照路线图安排每一天。</p>
+    <p class="lead">四条主路线，另有朋友结局。先决定你想和她走到哪里，再对照路线图安排每一天。</p>
     <div class="facts">
       <span><b>4</b> 条主路线</span>
-      <span><b>14</b> 个结局</span>
-      <span><b>4</b> 个完美结局</span>
+      <span><b>5</b> 个现行结局</span>
+      <span><b>4</b> 张路线结局 CG</span>
     </div>
     <div class="hero-actions">
       <a class="btn primary" href="#routes">选择路线</a>
@@ -134,8 +160,8 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
   </div>
   <div class="hero-art">
-    <img src="assets/hero-eleanor.webp" alt="埃莉诺在当铺柜台后" width="872" height="941">
-    <div class="hero-caption">上层区的富家千金，正在下层区的当铺里等你。</div>
+    <img src="assets/hero-eleanor.webp" alt="埃莉诺与当铺窗口" width="872" height="941">
+    <div class="hero-caption">上层区的富家千金，正在当铺窗口外等你。</div>
   </div>
 </header>
 
@@ -146,39 +172,39 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="eyebrow">Route Select</div>
       <h2>四条主路线</h2>
     </div>
-    <p>每条路线只有一个 ★ 完美结局。选错选项不等于坏档，其他结局同样是完整的收束。</p>
+    <p>按当前重制新档整理。先核对入线条件，再按幕推进；点路线卡查看具体操作。</p>
   </div>
   <div class="route-grid">
-    <article class="route-card regular">
+    <article class="route-card regular"><a class="card-link" href="#guide-regular" data-route="regular" aria-label="查看恋爱线条件与分幕攻略"></a>
       <div class="card-media"><img src="assets/route-regular-ending.webp" alt="E1 恋爱线结局 CG：小店后院的婚礼" loading="lazy" width="960" height="540"><span class="card-tag">★ E1</span></div>
       <div class="card-body">
-        <h3>常规恋爱线</h3>
+        <h3>恋爱线</h3>
         <p>在当铺的日常里慢慢靠近她，查清母亲与研究的事，最后确认彼此的心意。</p>
-        <div class="card-meta"><span><b>完美结局：</b>E1 · 甲·普通恋人</span><span><b>关键：</b>普通恋爱确认，不进入侍从或双恋</span></div>
+        <div class="card-meta"><span><b>路线结局：</b>E1 · 婚礼</span><span><b>关键：</b>有效交易≥3次＋风险承担；接受普通告白</span></div>
       </div>
     </article>
-    <article class="route-card harem">
+    <article class="route-card harem"><a class="card-link" href="#guide-harem" data-route="harem" aria-label="查看后宫线条件与分幕攻略"></a>
       <div class="card-media"><img src="assets/route-harem.webp" alt="埃莉诺与莉迪亚" loading="lazy" width="960" height="540"><span class="card-tag">★ E4</span></div>
       <div class="card-body">
         <h3>后宫线</h3>
-        <p>埃莉诺与莉迪亚。想走到最后，需要三个人都明确点头，缺一不可。</p>
-        <div class="card-meta"><span><b>完美结局：</b>E4 · 甲·双恋</span><span><b>关键：</b>双恋入口、第 5 场告白、三方确认</span></div>
+        <p>埃莉诺与莉迪亚，从窗口前的旧物交易，到三人确认彼此的心意。</p>
+        <div class="card-meta"><span><b>路线结局：</b>E4 · 三人关系</span><span><b>关键：</b>手镯实际交还＋安全救母＋共同交接</span></div>
       </div>
     </article>
-    <article class="route-card maid">
+    <article class="route-card maid"><a class="card-link" href="#guide-maid" data-route="maid" aria-label="查看侍从线条件与分幕攻略"></a>
       <div class="card-media"><img src="assets/route-maid.webp" alt="女仆装埃莉诺" loading="lazy" width="960" height="540"><span class="card-tag">★ E3</span></div>
       <div class="card-body">
         <h3>侍从线</h3>
-        <p>支付 800 建立侍从契约，在契约、工作和感情之间做出取舍。</p>
-        <div class="card-meta"><span><b>完美结局：</b>E3 · 甲·侍从恋人</span><span><b>关键：</b>完成或续约侍从线；双恋不开放</span></div>
+        <p>拾荒成交后补足实际缺口，答应共事；P2开启第三幕，驻场与晚会邀请收束。</p>
+        <div class="card-meta"><span><b>路线结局：</b>E3 · 柜台灯下</span><span><b>关键：</b>真实补款＋答应共事；王尔德购买P2</span></div>
       </div>
     </article>
-    <article class="route-card rev">
+    <article class="route-card rev"><a class="card-link" href="#guide-rev" data-route="rev" aria-label="查看革命军线条件与分幕攻略"></a>
       <div class="card-media"><img src="assets/route-revolution.webp" alt="革命军线结局" loading="lazy" width="960" height="540"><span class="card-tag">★ E9</span></div>
       <div class="card-body">
         <h3>革命军线</h3>
-        <p>选择未保护公开，母亲死后与她一起加入革命军，用补给与战功走到最后。</p>
-        <div class="card-meta"><span><b>完美结局：</b>E9 · 革命·牵挂/同行</span><span><b>关键：</b>完成 R01—R14 与三档补给</span></div>
+        <p>选择立即公开，母亲死后她加入革命军。四幕写补给、队伍损失、第一次杀人和远征归来。</p>
+        <div class="card-meta"><span><b>路线结局：</b>E9 · 远征归来</span><span><b>关键：</b>救母方向选“立即公开”，读完第四幕</span></div>
       </div>
     </article>
   </div>
@@ -190,21 +216,34 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="eyebrow">Route Map</div>
       <h2>路线流程图</h2>
     </div>
-    <p>纵轴是最早触发日。提前开局模式下，所有日期整体提前 11 天。</p>
+    <p>常规节点统一按幕；金色为四条主路线的完成结局。点击节点查看条件与操作。</p>
   </div>
-  <div class="chart-note"><b>怎么看：</b>四条主路线各有自己的纵向路线，每条路线左侧的金色是完美走向，右侧红色是其他走向；最左侧是共同失败分支。图中日期是“最早目标日”，声望等待、顾客日槽或独立买家可能让后续顺延，并不是固定在当天发生。图表保持原始尺寸，可直接按住图表左右拖动，或使用 ‹ › 按钮滚动。</div>
+  <div class="chart-note"><b>先看判定，再看日期：</b>普通告白的交易记录、手镯交割、侍从实际补款和P2付款是主要门槛。点击图中节点可跳到下面对应的分幕攻略。日期只是及时推进示例；入线失败不会靠等天数自动修复。两个安全救母方案都可继续恋爱E1、侍从E3、后宫E4或朋友E2；营养果开源不另分结局。立即公开转革命军E9。</div>
   <div class="toolbar">
   <div class="legend">
-    <span class="chip"><i class="dot regular"></i>常规恋爱线</span>
+    <span class="chip"><i class="dot regular"></i>恋爱线</span>
     <span class="chip"><i class="dot harem"></i>后宫线</span>
     <span class="chip"><i class="dot maid"></i>侍从线</span>
     <span class="chip"><i class="dot rev"></i>革命军线</span>
     <span class="chip"><i class="dot bad"></i>其他结局</span>
-    <span class="chip"><i class="dot perfect"></i>★ 完美结局</span>
+    <span class="chip"><i class="dot completed"></i>★ 路线完成</span>
   </div>
   <div class="zoom"><button id="pan-left" title="向左滚动">‹</button><button id="pan-right" title="向右滚动">›</button><span class="zoom-hint">按住图表拖动</span><button id="zoom-out" title="缩小">−</button><span id="zoom-label">100%</span><button id="zoom-in" title="放大">+</button><button id="zoom-native" title="原始尺寸">原始尺寸</button><button id="zoom-reset" title="适应宽度">适应宽度</button></div>
 </div>
-  <section class="chart-wrap" id="chart-wrap"><svg id="route-svg" viewBox="0 0 3020 2300" role="img" aria-label="四条主路线与完美结局流程图"></svg></section>
+  <section class="chart-wrap" id="chart-wrap"><svg id="route-svg" viewBox="0 0 3020 2520" role="img" aria-label="四条主路线与朋友结局流程图"></svg></section>
+</section>
+
+<section id="guide" class="guide-section" aria-labelledby="guide-title">
+  <div class="section-head"><div><div class="eyebrow">Walkthrough</div><h2 id="guide-title">入线条件与分幕攻略</h2></div><p>先读“必须做到”，再按幕看剧情顺序和推进条件。这里只写当前新档流程。</p></div>
+  <div class="guide-filter" role="group" aria-label="筛选路线攻略">
+    <button type="button" data-guide-filter="all" aria-pressed="true">全部</button>
+    <button type="button" data-guide-filter="common" aria-pressed="false">共同剧情</button>
+    <button type="button" data-guide-filter="regular" aria-pressed="false">恋爱线</button>
+    <button type="button" data-guide-filter="harem" aria-pressed="false">后宫线</button>
+    <button type="button" data-guide-filter="maid" aria-pressed="false">侍从线</button>
+    <button type="button" data-guide-filter="rev" aria-pressed="false">革命军线</button>
+  </div>
+  <div id="route-guides"></div>
 </section>
 
 <section id="endings" class="ending-section">
@@ -213,34 +252,34 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="eyebrow">Ending List</div>
       <h2>结局一览</h2>
     </div>
-    <p><b>甲、乙</b> 代表两种世界结果：甲线母亲安全留在下层区，乙线是另一走向。★ 为完美结局。</p>
+    <p>四条主路线各一个结局，另有朋友结局；★表示主路线完成。营养果是否开源只影响经营与背景台词，不另拆结局、不区分好坏。</p>
   </div>
   <div class="table-wrap">
-  <table id="ending-table"><thead><tr><th>编号</th><th>结局</th><th>主路线</th><th>类型</th><th>关系</th><th>母亲 / 世界</th><th>进入条件</th><th>可能后缀</th></tr></thead><tbody></tbody></table>
+  <table id="ending-table"><thead><tr><th>编号</th><th>结局</th><th>主路线</th><th>类型</th><th>关系</th><th>母亲</th><th>进入条件</th><th>可能后缀</th></tr></thead><tbody></tbody></table>
   </div>
 </section>
 
 <section id="faq" class="faq">
   <h2>常见问题</h2>
   <details open>
-    <summary>完美结局有哪几个？</summary>
-    <div class="answer">四个：<b>E1</b> 常规恋爱线、<b>E4</b> 后宫线、<b>E3</b> 侍从线、<b>E9</b> 革命军线。其余结局不是完美结局，但同样是完整的收束，不会中途断掉。</div>
+    <summary>现在有几个结局？</summary>
+    <div class="answer">五个：<b>E1</b> 恋爱线、<b>E3</b> 侍从线、<b>E4</b> 后宫线、<b>E9</b> 革命军线，以及<b>E2</b> 朋友结局。安全救母的两个方案都能继续对应关系结局；不会因为营养果开源与否，把同一结局再算一次。</div>
   </details>
   <details>
     <summary>声望不够会让路线失败吗？</summary>
-    <div class="answer">不会直接失败。后宫线的 30／60／90 声望门槛只会让对应主线暂停等待，正常营业和阶段日常继续进行；达标后资格保留，不会因为后续声望下降而撤销。</div>
+    <div class="answer">后宫线30／60／90上层声望只给独立奖励，不拦四幕；侍从P2下层声望30只给优惠，不是入线或购买门槛。普通恋爱看有效交易与风险承担，不看高好感替代。</div>
   </details>
   <details>
     <summary>路线图上的日期是固定的吗？</summary>
-    <div class="answer">不是。图中是“最早目标日”，声望等待、顾客日槽和其他来访都可能让后续事件顺延。普通模式第 23 天开始，提前开局第 12 天开始，所有日期整体提前 11 天。</div>
+    <div class="answer">不是。主图按及时交接、无额外日槽占用的重制新档排期展示；晚交接、侍从P2尚未购买或其他来访可能使后续顺延。后宫声望奖励独立排队，不拦主线。普通模式第 23 天开始，提前开局第 12 天开始，所有日期整体提前 11 天。</div>
   </details>
   <details>
     <summary>侍从线和后宫线能同时走吗？</summary>
-    <div class="answer">不能。有效的侍从契约不开放双恋，朋友档也不会收到双恋入口。想走后宫线，就不要先建立侍从关系。</div>
+    <div class="answer">不能。想走后宫就不要答应建立侍从共事。新后宫资格在手镯前奏决定，安全救母与共同交接完成后优先接管后续；不能先进入普通恋爱卷，再临时改成新后宫。</div>
   </details>
   <details>
-    <summary>甲线和乙线是什么？</summary>
-    <div class="answer">两种世界结果。甲线母亲安全留在下层区；乙线母亲与研究的走向不同。先选关系路线，再看世界结果，不需要把它们当成额外的两条主线。</div>
+    <summary>营养果是否开源会改变结局吗？</summary>
+    <div class="answer">不会。“交盘换人”和“先保人再公开”（侍从版为“申请保护”）都能保住母亲，营养果开源与种子的差异属于经营内容，同一路线共用结局。普通告白仍需有效交易与风险承担，具体取得方式见共同剧情。“立即公开”使母亲死亡并转入革命军，仍是实际换线选择。</div>
   </details>
 </section>
 </main>
@@ -250,1436 +289,1322 @@ footer a{color:var(--gold);text-decoration:none}
 </footer>
 <script>
 const DATA = {
-  "version": "1.03",
-  "updated": "2026-11-13",
+  "version": "1.05",
+  "updated": "2026-11-15",
+  "scope": "current_rewrite",
   "routes": {
     "regular": {
-      "name": "常规恋爱线",
-      "sub": "普通埃莉诺恋人/朋友；不进入侍从或双恋。"
+      "name": "恋爱线"
     },
     "harem": {
-      "name": "后宫线",
-      "sub": "埃莉诺 + 莉迪亚；三方明确同意。"
+      "name": "后宫线"
     },
     "maid": {
-      "name": "侍从线",
-      "sub": "侍从契约；与双恋互斥。"
+      "name": "侍从线"
     },
     "rev": {
-      "name": "革命军线",
-      "sub": "未保护公开；母亲死亡，埃莉诺加入革命军。"
-    },
-    "failure": {
-      "name": "共同失败分支",
-      "sub": "退出/交盘/卖盘/擅自公开；全部非完美。"
+      "name": "革命军线"
     }
   },
-  "days": [
+  "guides": [
     {
-      "id": "start",
-      "day": "23",
-      "early": "12",
-      "title": "共同线开始",
-      "type": "common",
-      "desc": "埃莉诺个人线开始。普通模式第23天；提前开局第12天。",
-      "choices": [],
-      "endings": []
-    },
-    {
-      "id": "maid_entry",
-      "day": "39",
-      "early": "28",
-      "title": "侍从线入口",
-      "type": "maid",
-      "desc": "最早在第39天左右出现，实际受800调查款或第42天补齐影响。",
-      "choices": [
-        [
-          "普通路线",
-          "不建立侍从契约，继续主线"
-        ],
-        [
-          "侍从路线",
-          "支付800，进入侍从线；后续可到 E3/E7"
-        ],
-        [
-          "还是算了",
-          "不建立侍从契约"
-        ]
+      "id": "common",
+      "name": "共同剧情",
+      "intro": "先看这里，再选关系路线。救母方向决定研究与母亲的结果，关系路线决定之后和谁、以什么关系相处。",
+      "entry": [
+        "普通开局第23天、提前开局第12天开始。以下日期都是及时完成前一场的示例；被捕、手镯后续、主线插队与缺钱等待会使日程顺延。",
+        "想走普通恋爱：在告白前累计至少3次有效的公平／让利记录，并完成“举报假叔叔、救出被捕的埃莉诺、保护路线正式记录威胁”中的至少一项。好感高不能代替这两个判定。",
+        "想走后宫：重点完成旧手镯实际交割，且不要建立有效侍从关系；不需要先通过普通告白，也不要求先刷到30／60／90声望。",
+        "想走侍从：第二次拾荒时选“差多少我补”，实际买货后仍有缺口并成功补款，再在共事来访中答应。单纯多付货款或等她自己凑齐不算入线。"
       ],
-      "endings": [
-        "E3",
-        "E7"
+      "acts": [
+        {
+          "id": "common-act1",
+          "title": "第一幕 · 相识与箱子",
+          "day": "23–30",
+          "early": "12–19",
+          "scenes": [
+            "不是给上层区开的店",
+            "缺口不在喝水那边",
+            "你按东西开价",
+            "自称叔叔的人／警告回访",
+            "她最不愿意开口的事"
+          ],
+          "summary": "前三次交易是积累普通告白资格最直接的机会；假叔叔事件决定是否留下风险承担记录。",
+          "checks": [
+            "有效记录按一次完整交易来访结算，不是每件商品加一次。尽量按正常价格成交；她卖货时不要压价，她买货时不要抬价或威胁。同一来访中有压价／抬价记录，会优先按较差行为结算。",
+            "最稳妥的风险承担方式：收下假叔叔带来的箱子后举报，并完成治安部带走他的流程。只在后续提醒埃莉诺箱子有问题，不等于完成举报。",
+            "若埃莉诺被捕，等原生保释来访：现金500，或治安部声望40免费担保；缺钱可暂缓，明确拒绝救援会结束剧情。办妥后还要完成获释回访，后续才恢复。"
+          ],
+          "sourceIds": [
+            "c01",
+            "c02",
+            "c03",
+            "c04",
+            "c05"
+          ]
+        },
+        {
+          "id": "common-act2",
+          "title": "第二幕 · 侦探费与旧手镯",
+          "day": "31–37起",
+          "early": "20–26起",
+          "scenes": [
+            "她自己带来的货",
+            "第二次，她记住了",
+            "不是拿来卖的",
+            "旧手镯",
+            "她看见的／掮客／回购"
+          ],
+          "summary": "侍从资格在第二次拾荒的实际补款中取得；后宫资格在莉迪亚手镯交还中取得。两者都不能只靠选了对白却没有交割。",
+          "checks": [
+            "侍从：按货成交后补到侦探费800，扣的是剩余差额。她已经自己凑满800、未成交、未补款或现金不足，都不会触发共事入口。",
+            "后宫：实际买下莉迪亚出售的那只家传手镯，收在可找到的玩家库存里；掮客1000报价时不卖，等莉迪亚回购。选“按原价还”或“让她自己出价”后，还要实际把同一只手镯卖给她；500回购也有效。“直接送她”会直接交还，同样有效。",
+            "手镯不买、卖给掮客、提前卖给其他人、丢失或回购来访未交还就离场，都会失去新后宫资格。想留在普通恋爱路线，可在前奏不买手镯或卖给掮客。",
+            "未走侍从时，调查来访会等侦探费累计800，或到普通第42／提前第31天由她补齐；等到日期不等于获得侍从资格。手镯后续也会占用额外来访。"
+          ],
+          "sourceIds": [
+            "c06",
+            "c07",
+            "c08",
+            "c09",
+            "c10"
+          ]
+        },
+        {
+          "id": "common-act3",
+          "title": "第三幕 · 调查与救母",
+          "day": "39–44",
+          "early": "28–33",
+          "scenes": [
+            "最后一截或共事约定",
+            "生日",
+            "跑腿钱",
+            "三条路"
+          ],
+          "summary": "调查款到位后继续追查；两个安全救母方案都能继续当前关系，立即公开则转入革命军。",
+          "checks": [
+            "“替她收着／先问她盘里还有什么”都继续；威胁中的“不收，话带到／叫他出去”也都继续，并不要求交盘给打手。",
+            "“交盘换人”与“先保人再公开”（侍从版为“申请保护”）都能保住母亲，继续恋爱、后宫、侍从或朋友后续。营养果是否开源只影响经营与少量背景台词，不拆分结局，也不区分好坏。“立即公开”使母亲死亡，转革命军。",
+            "选择保护方向后，完成当次买卖与收尾才写入正式威胁记录；交盘换人不会额外写入这条记录，想接受普通告白需此前完成举报或救援。"
+          ],
+          "sourceIds": [
+            "c11",
+            "c12",
+            "c13",
+            "c14"
+          ]
+        },
+        {
+          "id": "common-act4",
+          "title": "第四幕 · 新生活与关系分流",
+          "day": "48–52／朋友续至59",
+          "early": "37–41／朋友续至48",
+          "scenes": [
+            "母亲来买东西",
+            "事情结束以后，她还是来了",
+            "她没有把这件事算进账里",
+            "这回轮到她帮忙（朋友后续）",
+            "莉迪亚又来了一次（朋友后续）",
+            "她可以去别处（朋友后续）",
+            "今天不为别的事（朋友收束）"
+          ],
+          "summary": "安全救母后完成共同交接，继续后宫、普通恋爱或朋友后续。侍从有自己的第一、二幕，不经过这里。",
+          "checks": [
+            "普通路线要完成母亲来访，再完成埃莉诺的交接来访。具备手镯资格且没有有效侍从关系时，后宫入口会优先出现，接管原本的普通告白；新入口并没有“接受／拒绝后宫”按钮。",
+            "没有后宫接管时，普通告白检查“至少3次有效公平／让利记录＋至少一次风险承担”。保护救母路径会记录威胁；交盘换人则要在此前举报过假叔叔或实际救出过被捕的埃莉诺。满足后选“我也喜欢你。跟你以前住在哪儿没关系。”；不满足或选做朋友，进入朋友结局E2。",
+            "朋友后续仍有合作来客、莉迪亚再访、工作安排与最后回访，普通目标日为54／55／57／59天。按来访顺序完成即可，不会进入恋爱三幕或婚礼；这些是当前仍可触发的剧情。"
+          ],
+          "sourceIds": [
+            "c17",
+            "c18",
+            "c19",
+            "c20",
+            "c21",
+            "c22",
+            "c23"
+          ]
+        }
       ]
     },
     {
-      "id": "drive",
-      "day": "41",
-      "early": "30",
-      "title": "数据盘归属",
-      "type": "main",
-      "desc": "第13章。数据盘由谁保管，会影响后续威胁与路线丁。",
-      "choices": [
-        [
-          "玩家保管",
-          "继续主线"
-        ],
-        [
-          "她保管",
-          "继续主线"
-        ],
-        [
-          "退出调查",
-          "路线丁 → E14"
-        ]
+      "id": "regular",
+      "name": "恋爱线",
+      "intro": "共同告白之后的三幕恋爱日常，最终走到婚礼。营养果是否开源不改变本线结局。",
+      "entry": [
+        "先按共同剧情积累至少3次有效公平／让利记录和一次风险承担，安全救母后明确接受告白。仅把好感刷高不够。",
+        "不要进入侍从共事或取得会接管后续的后宫入口。新档想稳定走本线，旧手镯前奏不要取得后宫资格。",
+        "完成共同告白后，下一次合适的来访开始第一幕；之后每场完成后至少隔一天。买卖结果影响反应，不设母亲认可分数或额外刷好感门槛。"
       ],
-      "endings": [
-        "E14"
+      "acts": [
+        {
+          "id": "regular-act1",
+          "title": "第一幕 · 母亲搬下来了",
+          "day": "54–56",
+          "early": "43–45",
+          "scenes": [
+            "母亲搬下来了",
+            "营养果",
+            "关门前"
+          ],
+          "summary": "索菲娅通过买东西认识店主，埃莉诺在关门前来访。",
+          "checks": [
+            "前两场准备日用品、食物；对话后仍要完成或结束当次交易，听完收尾才算该场完成。没成交也有对应收尾，不会因此锁死路线。",
+            "“埃莉诺／反问她／钱花得完”等是当场回应，都会继续，没有母亲的隐藏通过分数。"
+          ],
+          "sourceIds": [
+            "love_a1_01",
+            "love_a1_02",
+            "love_a1_03"
+          ]
+        },
+        {
+          "id": "regular-act2",
+          "title": "第二幕 · 停水与配给",
+          "day": "57–59",
+          "early": "46–48",
+          "scenes": [
+            "停水",
+            "价签",
+            "家常衣服"
+          ],
+          "summary": "停水、配给和街坊的生意让她们逐渐把店主当作自己人。",
+          "checks": [
+            "三场分别采购日用品、食物、甜食。正常结束每次买卖即可继续；定价只改变交易反应。",
+            "本幕没有要求玩家记录真实涨价百分比，也没有必须选择的“认可”答案。"
+          ],
+          "sourceIds": [
+            "love_a2_01",
+            "love_a2_02",
+            "love_a2_03"
+          ]
+        },
+        {
+          "id": "regular-act3",
+          "title": "第三幕 · 婚礼与回家",
+          "day": "60–63",
+          "early": "49–52",
+          "scenes": [
+            "旧友",
+            "嫁给我",
+            "名单",
+            "婚礼"
+          ],
+          "summary": "莉迪亚来访、求婚、商量宾客，最后完成婚礼与结局页。",
+          "checks": [
+            "求婚不要求持有元件、项链、戒指或前期回礼；“开口求婚／等她先说／让她先挑货”都继续。",
+            "“就你们几个”只改为小型婚礼，其余答案也继续婚礼。读完最后一场《婚礼》，完成恋爱线结局E1；营养果是否开源都相同。"
+          ],
+          "sourceIds": [
+            "love_a3_01",
+            "love_a3_02",
+            "love_a3_03",
+            "love_a3_04"
+          ]
+        }
       ]
     },
     {
-      "id": "threat",
-      "day": "43",
-      "early": "32",
-      "title": "威胁",
-      "type": "main",
-      "desc": "第14章。黑市打手索要数据盘。",
-      "choices": [
-        [
-          "离开/举报/上层渠道",
-          "继续主线"
-        ],
-        [
-          "交出数据盘",
-          "路线丁 → E11；母亲被释放但疏远"
-        ],
-        [
-          "出售数据盘",
-          "路线丁 → E12；母亲死亡"
-        ]
+      "id": "harem",
+      "name": "后宫线",
+      "intro": "手镯前奏、共同交接之后，按四幕推进三人的关系；新档不再走旧版撮合与声望关卡。",
+      "entry": [
+        "共同线实际买下莉迪亚的家传手镯，不卖给掮客，最终按原价／500回购或直接赠还给她，完成同一只物品的交割。",
+        "母亲必须安全获救，母亲来访与埃莉诺交接都已完成；没有有效侍从关系，也没有先进入普通恋爱卷。",
+        "资格成立后，莉迪亚带埃莉诺来访《窗口》，新后宫开始。这里的两组选项只改变回应，均入线；不存在图上旧写法的“明确接受／拒绝后宫”。不需要普通告白的3次交易门槛。",
+        "上层声望30／60／90只在后续空闲来访送独立经营奖励，不阻挡四幕或终章，也不消耗声望。"
       ],
-      "endings": [
-        "E11",
-        "E12"
+      "acts": [
+        {
+          "id": "harem-act1",
+          "title": "第一幕 · 窗口与旧物",
+          "day": "51–56",
+          "early": "40–45",
+          "scenes": [
+            "窗口（入口）",
+            "怀表",
+            "血袋",
+            "矿石"
+          ],
+          "summary": "完成入口后隔2天开始怀表，随后按来访顺序推进。",
+          "checks": [
+            "入口及本幕各组选项都会接回主线。收回怀表、先不说血袋结局或不让碰矿石，不会关闭后宫。"
+          ],
+          "sourceIds": [
+            "d01",
+            "dv01",
+            "dv02",
+            "dv03"
+          ]
+        },
+        {
+          "id": "harem-act2",
+          "title": "第二幕 · 打手与保护",
+          "day": "57–60",
+          "early": "46–49",
+          "scenes": [
+            "问路",
+            "傍晚（同日续访）",
+            "关门前",
+            "扫玻璃"
+          ],
+          "summary": "打手打听来访者，三人遭到袭击，再一起善后。",
+          "checks": [
+            "《问路》完成后，《傍晚》可在同一天继续来访，先等这次续访完成，再按后续日期推进。",
+            "“隔窗护住她们／让她们从巷子另一头走”均继续，不另检查战斗属性、现金、声望或所谓保护成功分数。"
+          ],
+          "sourceIds": [
+            "dv04",
+            "dv05",
+            "dv06",
+            "dv07"
+          ]
+        },
+        {
+          "id": "harem-act3",
+          "title": "第三幕 · 两次靠近",
+          "day": "61–64",
+          "early": "50–53",
+          "scenes": [
+            "搬货",
+            "开价",
+            "开门",
+            "停下"
+          ],
+          "summary": "埃莉诺先告白；莉迪亚约下休店一天，再得知她的心意。",
+          "checks": [
+            "本幕的回答只改变反应；两段关系都随剧情推进，不需要额外先完成普通告白。",
+            "2000信用点是莉迪亚支付给玩家的休店款，玩家不需要预存2000。约定的次日来访会关店、黑幕并结算一次；之后继续下一次来访。"
+          ],
+          "sourceIds": [
+            "dv08",
+            "dv09",
+            "dv10",
+            "dv11"
+          ]
+        },
+        {
+          "id": "harem-act4",
+          "title": "第四幕 · 祝福与点头",
+          "day": "65–67",
+          "early": "54–56",
+          "scenes": [
+            "祝福",
+            "点头"
+          ],
+          "summary": "莉迪亚说出自己的感情，三人确认共同关系，完成结局页。",
+          "checks": [
+            "《祝福》的三个回应都继续；终章吻埃莉诺、吻莉迪亚或隔窗揽住两人，都确认同一段三人关系。",
+            "读完《点头》完成后宫线结局E4。营养果是否开源、亲吻对象以及声望奖励是否领齐，都不拆分结局。"
+          ],
+          "sourceIds": [
+            "dv12",
+            "dv13"
+          ]
+        }
       ]
     },
     {
-      "id": "direction",
-      "day": "44",
-      "early": "33",
-      "title": "主线方向",
-      "type": "main",
-      "desc": "第15章，决定甲/乙/丙/丁四条世界路线。",
-      "choices": [
-        [
-          "甲：归还研究",
-          "→ E1/E2/E3/E4"
-        ],
-        [
-          "乙：保护后留下种子",
-          "→ E5/E6/E7/E8"
-        ],
-        [
-          "丙：未保护公开",
-          "→ R01—R14 → E9；旧档/朋友 → E10"
-        ],
-        [
-          "擅自公开",
-          "→ E13"
-        ],
-        [
-          "彻底退出调查",
-          "→ E14"
-        ]
+      "id": "maid",
+      "name": "侍从线",
+      "intro": "序幕的缺口借款和共事约定决定入线，之后四幕走向驻场、晚会邀请与私下尾声。",
+      "entry": [
+        "第二次拾荒《还差一截》选“差多少我补”。选项要求当前持有现金足够覆盖侦探费800的缺口；之后必须实际买下一件有付款的拾荒货。",
+        "当次交易结束时，系统重新计算800减去她累计所得，只补仍大于0的实际差额。钱不足、未成交、未补款或她自己已经凑齐800，都不取得共事资格。",
+        "补款成功后，等《用我自己的名字》来访，选“点头答应”才正式入线；“婉拒”回共同线，已垫调查款不退。",
+        "第三幕之前必须在王尔德购买P2“通行与正装”。P1／P3／P4只是可选经营项目。新侍从告白的三种回答都继续，不套用普通告白的3次交易门槛。"
       ],
-      "endings": [
-        "E1",
-        "E2",
-        "E3",
-        "E4",
-        "E5",
-        "E6",
-        "E7",
-        "E8",
-        "E9",
-        "E10",
-        "E13",
-        "E14"
+      "acts": [
+        {
+          "id": "maid-prologue",
+          "title": "序幕 · 借款与共事",
+          "day": "33、39起",
+          "early": "22、28起",
+          "scenes": [
+            "还差一截",
+            "用我自己的名字"
+          ],
+          "summary": "先成交并补缺口，再答应按天计工的共事约定。",
+          "checks": [
+            "不能靠单纯等到800调查款自动补齐来入线，也不能只点“差多少我补”后不买货就离场。",
+            "如果没有看到共事选项，先回查这次真实补款，而不是去补买P1。想走恋爱或后宫，可在共事来访婉拒。"
+          ],
+          "sourceIds": [
+            "v2_a0c1",
+            "v2_a0c2"
+          ]
+        },
+        {
+          "id": "maid-act1",
+          "title": "第一幕 · 数据盘与救母",
+          "day": "41–46",
+          "early": "30–35",
+          "scenes": [
+            "夹层里的盘",
+            "跑腿钱",
+            "原话",
+            "换了地方（保护路径）",
+            "日用品"
+          ],
+          "summary": "在《原话》中选择救母方向；不同安全结果都能继续侍从。",
+          "checks": [
+            "“交盘换人”与“申请保护”都保住母亲，继续侍从线结局E3。两者仅保留研究处理、经营与背景台词的差异，没有额外声望或保护款门槛。",
+            "“立即公开”会使母亲死亡并结束侍从关系，转入革命军四幕；这是换路线，不是侍从线的普通语气选项。",
+            "交盘换人会略过保护路径的《换了地方》，之后同样完成母亲来访。"
+          ],
+          "sourceIds": [
+            "v2_a1c1",
+            "v2_a1c2",
+            "v2_a1c3",
+            "v2_a1c4",
+            "v2_a1c5"
+          ]
+        },
+        {
+          "id": "maid-act2",
+          "title": "第二幕 · 合伙人与告白",
+          "day": "48–50",
+          "early": "37–39",
+          "scenes": [
+            "按人摆",
+            "交完班"
+          ],
+          "summary": "她自己讲货、改变称呼，再主动告白。",
+          "checks": [
+            "告白的“说我也是／两样都给／叫她名字”都会确认侍从恋人。",
+            "本幕完成后，王尔德才开放P2“通行与正装”：基础3000信用点，下层声望达到30时基础优惠价1500；最终价格还受原生难度与其他折扣影响，以界面报价为准。声望只给折扣，不是购买资格。",
+            "若下一幕一直不来，先确认P2已实际付款，再继续营业等来访；不用先买P1，P3／P4也不拦主线。"
+          ],
+          "sourceIds": [
+            "v2_a2c1",
+            "v2_a2c2"
+          ]
+        },
+        {
+          "id": "maid-act3",
+          "title": "第三幕 · 第一次登台",
+          "day": "52–55",
+          "early": "41–44",
+          "scenes": [
+            "想试一次",
+            "唱快了",
+            "再唱一晚"
+          ],
+          "summary": "P2已付款后进入试唱、第一次失利和再次登台。",
+          "checks": [
+            "“让她自己换曲／问她学到什么／提一首稳的歌”都会继续第二次登台，没有额外唱功数值检查。",
+            "完成成功返场后，继续营业等第四幕；不是到这里就已经出现最终CG。"
+          ],
+          "sourceIds": [
+            "v2_a3c1",
+            "v2_a3c2",
+            "v2_a3c3"
+          ]
+        },
+        {
+          "id": "maid-act4",
+          "title": "第四幕 · 驻场与嘉宾栏",
+          "day": "61–67",
+          "early": "50–56",
+          "scenes": [
+            "多搬了一排椅子",
+            "旧约那一页",
+            "嘉宾栏",
+            "柜台灯下"
+          ],
+          "summary": "正式驻场、结清旧约与续约、上层晚会邀请，最后回到窗口。",
+          "checks": [
+            "旧约、邀请的三个回应都接回收束，不需要在结局前额外购买P3／P4，也没有另一笔续约费。",
+            "这里按常规剧情来访推进；不用沿旧版攻略等清空队列后点关门来触发另一个晚会。读完《柜台灯下》完成侍从线结局E3；两个安全救母方案都相同。"
+          ],
+          "sourceIds": [
+            "v2_a4c1",
+            "v2_a4c2",
+            "v2_a4c3",
+            "v2_a4c4"
+          ]
+        }
       ]
     },
     {
-      "id": "resolution",
-      "day": "46–59",
-      "early": "35–48",
-      "title": "救母与核心收束",
-      "type": "main",
-      "desc": "团聚、工作、普通告白、原核心收束；甲/乙可与双恋并行。",
-      "choices": [],
-      "endings": []
-    },
-    {
-      "id": "dual_entry",
-      "day": "49",
-      "early": "38",
-      "title": "后宫入口与声望30",
-      "type": "dual",
-      "desc": "先检查原恋爱资格并完成母亲来访，再明确选择后宫方向；entry与dr02独立，达到上层声望30后交付铭牌。",
-      "choices": [
-        [
-          "明确接受后宫",
-          "激活G1；未达50继续经营与阶段日常"
-        ],
-        [
-          "拒绝",
-          "保留原关系和世界事实，不进入双恋"
-        ]
+      "id": "rev",
+      "name": "革命军线",
+      "intro": "在救母方向中立即公开研究后进入，按四幕完成远征归来。",
+      "entry": [
+        "共同线《三条路》选“立即公开”，或侍从第一幕《原话》选同名选项。母亲会死亡；侍从关系若已建立也会在此结束。",
+        "不要求先成为恋人，不检查普通告白的交易次数，不要求上层／革命军声望或旧版补给次数。",
+        "完成每场对话及交易收尾，等下一次来访；部分场景安排在安全的清晨。这里的“门还没开”是剧情标题，不要求玩家额外操作侧门。"
       ],
-      "endings": [
-        "E1",
-        "E2",
-        "E5",
-        "E6"
+      "acts": [
+        {
+          "id": "rev-act1",
+          "title": "第一幕 · 入队与补给",
+          "day": "46–48",
+          "early": "35–37",
+          "scenes": [
+            "第一张单子",
+            "药先拿"
+          ],
+          "summary": "她加入队伍，通过当铺销货和采购药品。",
+          "checks": [
+            "交易完成或正常结束并听完收尾即可推进，成交／未成交分别有反应；不需要刷旧版反复补给来开下一幕。"
+          ],
+          "sourceIds": [
+            "v2_r1c1",
+            "v2_r1c2"
+          ]
+        },
+        {
+          "id": "rev-act2",
+          "title": "第二幕 · 名单与损失",
+          "day": "51–57",
+          "early": "40–46",
+          "scenes": [
+            "短了一行",
+            "空着手",
+            "第七行"
+          ],
+          "summary": "名单缩短、空手来访，逐步写出队伍的损失。",
+          "checks": [
+            "本幕回复均继续当前四幕，没有用钱或声望扭转母亲死亡的隐藏分支。"
+          ],
+          "sourceIds": [
+            "v2_r2c1",
+            "v2_r2c2",
+            "v2_r2c3"
+          ]
+        },
+        {
+          "id": "rev-act3",
+          "title": "第三幕 · 等候与空位",
+          "day": "60–62",
+          "early": "49–51",
+          "scenes": [
+            "门还没开",
+            "不用等"
+          ],
+          "summary": "她第一次杀人后再来，谈到等候与给她留下的位置。",
+          "checks": [
+            "按来访顺序读完两场即可继续，不需要告白、侍从称呼或额外夜间约会。"
+          ],
+          "sourceIds": [
+            "v2_r3c1",
+            "v2_r3c2"
+          ]
+        },
+        {
+          "id": "rev-act4",
+          "title": "第四幕 · 远征归来",
+          "day": "64–72",
+          "early": "53–61",
+          "scenes": [
+            "折价",
+            "带话",
+            "快到了",
+            "门外"
+          ],
+          "summary": "她远征离站，革命军来客带话，最后她回到窗口。",
+          "checks": [
+            "最后一场《门外》全部读完，听到“我好想你”后完成E9并显示CG。未读完终章是未完成状态，不单列成一条新结局。"
+          ],
+          "sourceIds": [
+            "v2_r4c1",
+            "v2_r4c2",
+            "v2_r4c3",
+            "v2_r4c4"
+          ]
+        }
       ]
-    },
-    {
-      "id": "dr05",
-      "day": "52",
-      "early": "41",
-      "title": "双恋第5场：普通恋爱确认",
-      "type": "dual",
-      "desc": "原资格在入口前检查；仅恋人/朋友两项，朋友=3。原告白不重复播放。",
-      "choices": [
-        [
-          "明确恋爱",
-          "后宫继续"
-        ],
-        [
-          "做朋友",
-          "归还原流程；不锁定，不重复已完成事实"
-        ]
-      ],
-      "endings": [
-        "E2",
-        "E6",
-        "E4",
-        "E8"
-      ]
-    },
-    {
-      "id": "dr07",
-      "day": "54",
-      "early": "43",
-      "title": "双恋第7场：闺蜜与口碑",
-      "type": "dual",
-      "desc": "承接三人饭局后的反馈与莉迪亚的失落，替代原22节点；不再预约第二笔任务。她对“以后能来问你吧”的回应改为三个选择；本场对白后莉迪亚会实际采购奢侈品，买卖在同一次来访完成。",
-      "choices": [],
-      "endings": []
-    },
-    {
-      "id": "dr11",
-      "day": "59",
-      "early": "48",
-      "title": "双恋第11场：核心收束",
-      "type": "dual",
-      "desc": "复用实际售货、工作、吊坠、独立合作买家与香水/回执流程。实际事实具备后完成核心；满仓保留补领。",
-      "choices": [],
-      "endings": []
-    },
-    {
-      "id": "dr14",
-      "day": "61",
-      "early": "50",
-      "title": "双恋第14场：坦白",
-      "type": "dual",
-      "desc": "莉迪亚坦白，回扣上层人主动夸玩家带来的骄傲与心动。进入双恋后不再有“只要埃莉诺”的退出项。",
-      "choices": [
-        [
-          "我会亲口告诉她",
-          "继续三人讨论"
-        ],
-        [
-          "我们各自跟她说清楚",
-          "继续三人讨论"
-        ]
-      ],
-      "endings": []
-    },
-    {
-      "id": "dr15",
-      "day": "62",
-      "early": "51",
-      "title": "双恋第15场：告诉埃莉诺",
-      "type": "dual",
-      "desc": "玩家承担自己的感情；埃莉诺回扣饭局，表达也想要三人共同生活。两个回答都继续讨论，不产生跨天暂缓状态。",
-      "choices": [
-        [
-          "等你们谈完",
-          "继续"
-        ],
-        [
-          "我会把答应你们的事做到",
-          "继续"
-        ]
-      ],
-      "endings": []
-    },
-    {
-      "id": "dr17",
-      "day": "64",
-      "early": "53",
-      "title": "双恋第17场：三方确认",
-      "type": "dual",
-      "desc": "两人明确愿意共同交往，缩短重复规则讨论。两份独立同意播放完成后提交三方关系，并转移未来拾荒资格；已激活事件自然结束。",
-      "choices": [
-        [
-          "确认三人关系",
-          "→ E4/E8"
-        ]
-      ],
-      "endings": [
-        "E4",
-        "E8"
-      ]
-    },
-    {
-      "id": "dr20",
-      "day": "67",
-      "early": "56",
-      "title": "双恋第20场：共同晚饭",
-      "type": "dual",
-      "desc": "共同晚饭完成后才使用完整收束文案；未到此处的已确认关系保留未完成后缀。约3天后尾声，此后每4天低频日常。",
-      "choices": [],
-      "endings": [
-        "E4",
-        "E8"
-      ]
-    },
-    {
-      "id": "upper30",
-      "day": "50",
-      "early": "39",
-      "title": "上层声望30检查点",
-      "type": "dual",
-      "desc": "dr02之前；莉迪亚仍在牵线，熟人因相信她愿意来店。未达标只等待，营业和每4天阶段日常继续。达标不消耗声望，后续下降不撤销。奖励需实际陈列。",
-      "choices": [
-        [
-          "达标",
-          "荐店铭牌：额外上层买家50%"
-        ],
-        [
-          "未达标",
-          "继续经营，不退出、不失败"
-        ]
-      ],
-      "endings": []
-    },
-    {
-      "id": "upper60",
-      "day": "56",
-      "early": "45",
-      "title": "上层声望60检查点",
-      "type": "dual",
-      "desc": "dr09之前；上层熟人开始主动向莉迪亚夸玩家的眼光。未达标只等待，营业和每4天阶段日常继续。达标不消耗声望，后续下降不撤销。奖励需实际陈列。",
-      "choices": [
-        [
-          "达标",
-          "珐琅座饰：最终预算+30%"
-        ],
-        [
-          "未达标",
-          "继续经营，不退出、不失败"
-        ]
-      ],
-      "endings": []
-    },
-    {
-      "id": "upper90",
-      "day": "60",
-      "early": "49",
-      "title": "上层声望90检查点",
-      "type": "dual",
-      "desc": "dr13之前；有人托莉迪亚约玩家，她既骄傲又失落，承接随后的退让。未达标只等待，营业和每4天阶段日常继续。达标不消耗声望，后续下降不撤销。奖励需实际陈列。",
-      "choices": [
-        [
-          "达标",
-          "银饰：实际商品付款额外小费10%，每访最多150"
-        ],
-        [
-          "未达标",
-          "继续经营，不退出、不失败"
-        ]
-      ],
-      "endings": []
-    },
-    {
-      "id": "gala_closing",
-      "day": "归来28完成至少3天后／关门时",
-      "early": "同样按实际完成日+3",
-      "title": "侍从终章：关门后的邀请",
-      "type": "maid",
-      "desc": "最后一位顾客离开且队列为空，点击关门才出现Eleanor。答应后门口收束、黑屏跳过夜间并沿用原生结算进入次日；晚会现场留白，报纸侧写。旧延期／预约统一走关门。",
-      "choices": [
-        [
-          "答应同行",
-          "收店、正常结算并进入次日清晨"
-        ],
-        [
-          "本次不参加",
-          "正常收店、保留夜间；感情与分红不变"
-        ]
-      ],
-      "endings": []
     }
   ],
   "endings": [
     {
       "id": "E1",
-      "route": "A",
-      "tags": [
-        "A"
-      ],
-      "title": "甲·普通恋人",
-      "relationship": "普通埃莉诺恋人",
-      "mother": "母亲安全，留在下层区",
-      "condition": "甲线 + 普通恋爱确认；未进入侍从或双恋",
-      "note": "最标准的甲线恋爱结局。",
+      "title": "恋爱线·婚礼",
+      "relationship": "恋人／夫妻",
+      "mother": "母亲安全",
+      "condition": "安全救母；未进入侍从／后宫；至少3次有效公平／让利记录＋至少一次风险承担；接受普通告白；完成恋爱第三幕《婚礼》。",
       "terminals": [
         "死亡",
         "被捕",
         "离站"
       ],
       "mainRoute": "regular",
-      "perfect": true
+      "kind": "route"
     },
     {
       "id": "E2",
-      "route": "A",
-      "tags": [
-        "A"
-      ],
-      "title": "甲·朋友",
-      "relationship": "朋友 / 未确认恋爱",
+      "title": "朋友结局",
+      "relationship": "朋友／未确认恋爱",
       "mother": "母亲安全",
-      "condition": "甲线 + 未确认恋爱或明确做朋友",
-      "note": "救母与经营结果保留；不扣好感、不撤销救援。",
+      "condition": "安全救母；普通告白条件不足或明确选择做朋友；完成共同第四幕的朋友后续《今天不为别的事》。",
       "terminals": [
         "死亡",
         "被捕",
         "离站"
       ],
       "mainRoute": "regular",
-      "perfect": false
+      "kind": "friend"
     },
     {
       "id": "E3",
-      "route": "A",
-      "tags": [
-        "A",
-        "maid"
-      ],
-      "title": "甲·侍从恋人",
-      "relationship": "侍从契约恋人",
+      "title": "侍从线·柜台灯下",
+      "relationship": "侍从恋人",
       "mother": "母亲安全",
-      "condition": "侍从路线有效 + 完成/续约侍从线",
-      "note": "包含契约进行中、完成/续约、死亡/被捕/离站子文本；双恋不开放。",
+      "condition": "第二次拾荒实际补缺口＋答应共事；安全救母；购买P2；读完侍从第四幕《柜台灯下》。",
       "terminals": [
         "死亡",
         "被捕",
         "离站"
       ],
       "mainRoute": "maid",
-      "perfect": true
+      "kind": "route"
     },
     {
       "id": "E4",
-      "route": "A",
-      "tags": [
-        "A",
-        "dual"
-      ],
-      "title": "甲·双恋",
-      "relationship": "埃莉诺 + 莉迪亚",
+      "title": "后宫线·三人关系",
+      "relationship": "埃莉诺＋莉迪亚",
       "mother": "母亲安全",
-      "condition": "甲线 + 双恋入口 + 第5场告白 + 第17场三方确认；完整收束需第20场完成",
-      "note": "30/60/90分阶段锁存；饰品需陈列。dr17已确认但dr20未完用未完成后缀，不能提前描述晚饭或完整完美收束。原奖励不重复。",
+      "condition": "实际买下并交还莉迪亚手镯；无有效侍从关系；安全救母；完成母亲来访和共同交接；读完后宫第四幕《点头》。",
       "terminals": [
         "死亡",
         "被捕",
         "离站"
       ],
       "mainRoute": "harem",
-      "perfect": true
-    },
-    {
-      "id": "E5",
-      "route": "B",
-      "tags": [
-        "B"
-      ],
-      "title": "乙·普通恋人",
-      "relationship": "普通埃莉诺恋人",
-      "mother": "母女在下层团聚，研究可能公开",
-      "condition": "乙线 + 普通恋爱确认；未进入侍从或双恋",
-      "note": "与甲线区别在母亲与研究结果。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "regular",
-      "perfect": false
-    },
-    {
-      "id": "E6",
-      "route": "B",
-      "tags": [
-        "B"
-      ],
-      "title": "乙·朋友",
-      "relationship": "朋友 / 未确认恋爱",
-      "mother": "母女团聚",
-      "condition": "乙线 + 未确认恋爱或朋友",
-      "note": "救母、种子与研究事实保留。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "regular",
-      "perfect": false
-    },
-    {
-      "id": "E7",
-      "route": "B",
-      "tags": [
-        "B",
-        "maid"
-      ],
-      "title": "乙·侍从恋人",
-      "relationship": "侍从契约恋人",
-      "mother": "母女团聚",
-      "condition": "侍从路线有效 + 完成/续约侍从线",
-      "note": "侍从子变体同 E3；双恋不开放。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "maid",
-      "perfect": false
-    },
-    {
-      "id": "E8",
-      "route": "B",
-      "tags": [
-        "B",
-        "dual"
-      ],
-      "title": "乙·双恋",
-      "relationship": "埃莉诺 + 莉迪亚",
-      "mother": "母女团聚",
-      "condition": "乙线 + 双恋入口 + 第5场告白 + 第17场三方确认；完整收束需第20场完成",
-      "note": "30/60/90分阶段锁存；饰品需陈列。dr17已确认但dr20未完用未完成后缀，不能提前描述晚饭或完整完美收束。原奖励不重复。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "harem",
-      "perfect": false
+      "kind": "route"
     },
     {
       "id": "E9",
-      "route": "C",
-      "tags": [
-        "C"
-      ],
-      "title": "革命·牵挂/同行",
-      "relationship": "牵挂 / 同行（无告白）",
+      "title": "革命军线·远征归来",
+      "relationship": "牵挂／同行（无告白）",
       "mother": "母亲死亡",
-      "condition": "第44天选择未保护公开；完成革命军线全部事件、三档补给累计与最终归还",
-      "note": "R14 最后一句后立即显示独立结局页；不调用恋人确认。旧八次丙线不追溯授予；双恋与侍从成功后半不进入。",
+      "condition": "救母方向选择立即公开；母亲死亡；读完革命军四幕，完成《门外》与“我好想你”。",
       "terminals": [
         "死亡",
         "被捕",
         "离站"
       ],
       "mainRoute": "rev",
-      "perfect": true
-    },
-    {
-      "id": "E10",
-      "route": "C",
-      "tags": [
-        "C"
-      ],
-      "title": "丙·旧档/朋友/无恋爱",
-      "relationship": "朋友 / 无恋爱",
-      "mother": "母亲死亡",
-      "condition": "革命军线未完成最终事件，或走朋友／无恋爱收束",
-      "note": "保留旧档、朋友与无恋爱用途；不授予新 R14 完成、最高档资格或《我想见你》结局页。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "rev",
-      "perfect": false
-    },
-    {
-      "id": "E11",
-      "route": "D",
-      "tags": [
-        "D"
-      ],
-      "title": "丁·交盘给打手",
-      "relationship": "关系结束",
-      "mother": "被释放但疏远",
-      "condition": "第43天威胁中交出数据盘",
-      "note": "获得300信用点；路线丁，关系结束。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "failure",
-      "perfect": false
-    },
-    {
-      "id": "E12",
-      "route": "D",
-      "tags": [
-        "D"
-      ],
-      "title": "丁·卖盘",
-      "relationship": "关系结束",
-      "mother": "母亲死亡",
-      "condition": "第43天威胁中出售数据盘",
-      "note": "获得600信用点；路线丁。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "failure",
-      "perfect": false
-    },
-    {
-      "id": "E13",
-      "route": "D",
-      "tags": [
-        "D"
-      ],
-      "title": "丁·擅自公开",
-      "relationship": "关系结束",
-      "mother": "母亲死亡，营养果种子公开",
-      "condition": "第44天方向中选择擅自公开",
-      "note": "路线丁；不进入双恋/侍从成功后半。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "failure",
-      "perfect": false
-    },
-    {
-      "id": "E14",
-      "route": "D",
-      "tags": [
-        "D"
-      ],
-      "title": "丁·退出调查",
-      "relationship": "关系结束",
-      "mother": "按实际进度保留",
-      "condition": "第41天数据盘退出，或第44天彻底退出调查",
-      "note": "不伪造死亡或救援结果；路线丁。",
-      "terminals": [
-        "死亡",
-        "被捕",
-        "离站"
-      ],
-      "mainRoute": "failure",
-      "perfect": false
+      "kind": "route"
     }
   ],
-  "dualDesignVersion": "0.5",
-  "status": "implemented_pending_playtest",
-  "galaPresentation": "empty_shop_close_then_native_next_morning"
+  "endingAliases": {
+    "E5": "E1",
+    "E6": "E2",
+    "E7": "E3",
+    "E8": "E4"
+  },
+  "endingPolicy": "relationship_and_route_completion"
 };
 const CHART = {
   "nodes": [
     {
-      "id": "S",
+      "id": "C_ACT1",
       "day": 23,
-      "x": 480,
+      "x": 230,
       "y": 172,
-      "w": 220,
-      "h": 34,
+      "w": 440,
+      "h": 62,
       "lines": [
-        "共同部分",
-        "第23/12天 开始"
+        "共同第一幕 23–30",
+        "相识 / 三次交易 / 假叔叔"
       ],
-      "cls": "common"
+      "cls": "common",
+      "guide": "common-act1"
     },
     {
-      "id": "MAIDCOM",
+      "id": "C_TRADE",
+      "day": 27,
+      "x": 230,
+      "y": 348,
+      "w": 440,
+      "h": 62,
+      "lines": [
+        "普通告白准备：有效交易 ≥3次",
+        "另需 举报 / 救出她 / 保护记录威胁 之一"
+      ],
+      "cls": "decision",
+      "guide": "common-act1"
+    },
+    {
+      "id": "C_ACT2",
+      "day": 31,
+      "x": 230,
+      "y": 524,
+      "w": 440,
+      "h": 50,
+      "lines": [
+        "共同第二幕 31–37起",
+        "侦探费 / 旧手镯 / 共事"
+      ],
+      "cls": "common",
+      "guide": "common-act2"
+    },
+    {
+      "id": "GAP",
+      "day": 33,
+      "x": 230,
+      "y": 612,
+      "w": 440,
+      "h": 56,
+      "lines": [
+        "侍从前提：差多少我补 → 实际买货",
+        "仍有差额并成功垫款，才取得共事资格"
+      ],
+      "cls": "decision",
+      "guide": "maid-prologue"
+    },
+    {
+      "id": "BRACELET",
+      "day": 36,
+      "x": 230,
+      "y": 744,
+      "w": 440,
+      "h": 56,
+      "lines": [
+        "后宫前提：买下手镯 → 不卖掮客",
+        "最终实际回购 / 赠还给莉迪亚"
+      ],
+      "cls": "decision",
+      "guide": "common-act2"
+    },
+    {
+      "id": "WORK",
       "day": 39,
-      "x": 480,
+      "x": 230,
       "y": 876,
-      "w": 220,
-      "h": 34,
+      "w": 440,
+      "h": 56,
       "lines": [
-        "共同分支",
-        "侍从入口 39/28"
+        "共事来访：点头答应 → 侍从",
+        "婉拒 / 未实际补款 → 继续共同剧情"
       ],
-      "cls": "common"
+      "cls": "decision",
+      "guide": "maid-prologue"
     },
     {
-      "id": "DRV",
+      "id": "C_ACT3",
       "day": 41,
-      "x": 480,
+      "x": 230,
       "y": 964,
-      "w": 220,
-      "h": 34,
+      "w": 440,
+      "h": 62,
       "lines": [
-        "共同分支",
-        "数据盘 41/30"
+        "共同第三幕 39起–44",
+        "调查款 / 数据盘 / 威胁 / 救母"
       ],
-      "cls": "common"
-    },
-    {
-      "id": "THR",
-      "day": 43,
-      "x": 480,
-      "y": 1052,
-      "w": 220,
-      "h": 34,
-      "lines": [
-        "共同分支",
-        "威胁 43/32"
-      ],
-      "cls": "common"
+      "cls": "common",
+      "guide": "common-act3"
     },
     {
       "id": "DIR",
       "day": 44,
-      "x": 480,
+      "x": 230,
       "y": 1096,
-      "w": 220,
-      "h": 34,
+      "w": 440,
+      "h": 64,
       "lines": [
-        "共同分支",
-        "主线方向 44/33"
+        "交盘换人 / 先保人再公开：母亲安全",
+        "营养果开源只影响经营；立即公开 → 革命军"
       ],
-      "cls": "common"
+      "cls": "decision",
+      "guide": "common-act3"
     },
     {
-      "id": "SAFE",
-      "day": 46,
-      "x": 480,
-      "y": 1184,
-      "w": 220,
-      "h": 34,
+      "id": "C_ACT4",
+      "day": 48,
+      "x": 230,
+      "y": 1272,
+      "w": 440,
+      "h": 62,
       "lines": [
-        "共同部分",
-        "救母成功 / 母亲安全"
+        "共同第四幕 48–52 / 朋友续至59",
+        "母亲来访 / 新生活交接 / 关系分流"
       ],
-      "cls": "common"
+      "cls": "common",
+      "guide": "common-act4"
+    },
+    {
+      "id": "HANDOFF",
+      "day": 50,
+      "x": 230,
+      "y": 1360,
+      "w": 440,
+      "h": 56,
+      "lines": [
+        "母亲来访 → 埃莉诺交接完成",
+        "手镯资格有效且无侍从关系 → 后宫优先"
+      ],
+      "cls": "common",
+      "guide": "common-act4"
     },
     {
       "id": "LOVE",
       "day": 52,
-      "x": 480,
+      "x": 230,
       "y": 1448,
-      "w": 220,
-      "h": 34,
+      "w": 440,
+      "h": 66,
       "lines": [
-        "共同部分",
-        "普通恋爱前置"
+        "无后宫接管 → 普通告白",
+        "有效交易 ≥3次＋风险承担 → 可接受告白",
+        "不满足 / 做朋友 → E2"
       ],
-      "cls": "common"
+      "cls": "decision",
+      "guide": "common-act4"
     },
     {
-      "id": "E11",
-      "day": 43,
-      "x": 185,
-      "y": 1052,
-      "w": 115,
-      "h": 32,
+      "id": "FRIEND",
+      "day": 54,
+      "x": 230,
+      "y": 1536,
+      "w": 440,
+      "h": 62,
       "lines": [
-        "E11 非完美",
-        "丁·交盘"
+        "朋友后续 54–59",
+        "合作 / 莉迪亚再访 / 工作 / 最后回访"
       ],
-      "cls": "bad"
-    },
-    {
-      "id": "E12",
-      "day": 43,
-      "x": 310,
-      "y": 1052,
-      "w": 115,
-      "h": 32,
-      "lines": [
-        "E12 非完美",
-        "丁·卖盘"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "E13",
-      "day": 44,
-      "x": 185,
-      "y": 1096,
-      "w": 115,
-      "h": 32,
-      "lines": [
-        "E13 非完美",
-        "丁·擅自公开"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "E14",
-      "day": 41,
-      "x": 310,
-      "y": 964,
-      "w": 115,
-      "h": 32,
-      "lines": [
-        "E14 非完美",
-        "丁·退出调查"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "ORD",
-      "day": 52,
-      "x": 790,
-      "y": 1448,
-      "w": 220,
-      "h": 40,
-      "lines": [
-        "常规恋爱线起点",
-        "第52/41天 普通恋爱"
-      ],
-      "cls": "regular"
-    },
-    {
-      "id": "O_CORE",
-      "day": 55,
-      "x": 790,
-      "y": 1580,
-      "w": 220,
-      "h": 38,
-      "lines": [
-        "核心分支",
-        "世界结果：甲 / 乙"
-      ],
-      "cls": "regular"
-    },
-    {
-      "id": "O_NON",
-      "day": 57,
-      "x": 940,
-      "y": 1668,
-      "w": 310,
-      "h": 34,
-      "lines": [
-        "非完美分支",
-        "朋友 / 乙线"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "E1",
-      "day": 59,
-      "x": 780,
-      "y": 1756,
-      "w": 150,
-      "h": 36,
-      "lines": [
-        "E1 常规·完美"
-      ],
-      "cls": "perfect"
+      "cls": "common",
+      "guide": "common-act4"
     },
     {
       "id": "E2",
       "day": 59,
-      "x": 940,
+      "x": 230,
       "y": 1756,
-      "w": 110,
-      "h": 34,
+      "w": 440,
+      "h": 48,
       "lines": [
-        "E2 非完美",
-        "甲·朋友"
+        "E2 · 朋友结局",
+        "共同后续完成"
       ],
-      "cls": "bad"
+      "cls": "bad",
+      "guide": "E2"
     },
     {
-      "id": "E5",
-      "day": 59,
-      "x": 1060,
-      "y": 1756,
-      "w": 110,
-      "h": 34,
-      "lines": [
-        "E5 非完美",
-        "乙·普通恋人"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "E6",
-      "day": 59,
-      "x": 1180,
-      "y": 1756,
-      "w": 110,
-      "h": 34,
-      "lines": [
-        "E6 非完美",
-        "乙·朋友"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "HAREM",
-      "day": 49,
-      "x": 1350,
-      "y": 1316,
-      "w": 220,
-      "h": 40,
-      "lines": [
-        "后宫线起点 · 明确接受",
-        "≥49/38天；先核原恋爱资格"
-      ],
-      "cls": "harem"
-    },
-    {
-      "id": "H5",
-      "day": 52,
-      "x": 1350,
-      "y": 1448,
-      "w": 220,
-      "h": 34,
-      "lines": [
-        "dr05 普通恋爱",
-        "第52/41天"
-      ],
-      "cls": "harem"
-    },
-    {
-      "id": "H7",
+      "id": "L1",
       "day": 54,
-      "x": 1350,
+      "x": 780,
       "y": 1536,
-      "w": 220,
-      "h": 32,
+      "w": 480,
+      "h": 62,
       "lines": [
-        "dr07 闺蜜与口碑",
-        "原22事实；不再预约任务"
+        "恋爱第一幕 54–56",
+        "母亲搬下来了 / 营养果 / 关门前"
       ],
-      "cls": "harem"
+      "cls": "regular",
+      "guide": "regular-act1"
     },
     {
-      "id": "H11",
-      "day": 59,
-      "x": 1350,
-      "y": 1756,
-      "w": 220,
-      "h": 32,
+      "id": "L2",
+      "day": 57,
+      "x": 780,
+      "y": 1668,
+      "w": 480,
+      "h": 62,
       "lines": [
-        "dr11/12 实际核心收束",
-        "合作买家/香水/乙线回执"
+        "恋爱第二幕 57–59",
+        "停水 / 价签 / 家常衣服"
       ],
-      "cls": "harem"
+      "cls": "regular",
+      "guide": "regular-act2"
     },
     {
-      "id": "H14",
+      "id": "L3",
+      "day": 60,
+      "x": 780,
+      "y": 1800,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "恋爱第三幕 60–63",
+        "旧友 / 嫁给我 / 名单 / 婚礼"
+      ],
+      "cls": "regular",
+      "guide": "regular-act3"
+    },
+    {
+      "id": "E1",
+      "day": 63,
+      "x": 780,
+      "y": 1932,
+      "w": 480,
+      "h": 50,
+      "lines": [
+        "★ E1 · 恋爱线结局",
+        "婚礼完成"
+      ],
+      "cls": "completed",
+      "guide": "E1"
+    },
+    {
+      "id": "H1",
+      "day": 51,
+      "x": 1340,
+      "y": 1404,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "后宫第一幕 51–56",
+        "窗口 / 怀表 / 血袋 / 矿石"
+      ],
+      "cls": "harem",
+      "guide": "harem-act1"
+    },
+    {
+      "id": "H2",
+      "day": 57,
+      "x": 1340,
+      "y": 1668,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "后宫第二幕 57–60",
+        "问路 / 傍晚 / 关门前 / 扫玻璃"
+      ],
+      "cls": "harem",
+      "guide": "harem-act2"
+    },
+    {
+      "id": "H3",
       "day": 61,
-      "x": 1350,
+      "x": 1340,
       "y": 1844,
-      "w": 220,
-      "h": 32,
+      "w": 480,
+      "h": 62,
       "lines": [
-        "dr14 坦白",
-        "第61/50天"
+        "后宫第三幕 61–64",
+        "搬货 / 开价 / 开门 / 停下"
       ],
-      "cls": "harem"
+      "cls": "harem",
+      "guide": "harem-act3"
     },
     {
-      "id": "H15",
-      "day": 62,
-      "x": 1350,
-      "y": 1888,
-      "w": 220,
-      "h": 32,
-      "lines": [
-        "dr15 三方讨论",
-        "第62/51天"
-      ],
-      "cls": "harem"
-    },
-    {
-      "id": "H17",
-      "day": 64,
-      "x": 1350,
-      "y": 1976,
-      "w": 220,
-      "h": 32,
-      "lines": [
-        "dr17 三方确认",
-        "第64/53天"
-      ],
-      "cls": "harem"
-    },
-    {
-      "id": "H_CORE",
+      "id": "H4",
       "day": 65,
-      "x": 1350,
+      "x": 1340,
       "y": 2020,
-      "w": 220,
-      "h": 32,
+      "w": 480,
+      "h": 62,
       "lines": [
-        "核心分支",
-        "世界结果：甲 / 乙"
+        "后宫第四幕 65–67",
+        "祝福 / 点头"
       ],
-      "cls": "harem"
-    },
-    {
-      "id": "H_NON",
-      "day": 66,
-      "x": 1600,
-      "y": 2064,
-      "w": 240,
-      "h": 32,
-      "lines": [
-        "非完美分支",
-        "E8 乙·双恋；退出仅入口/朋友"
-      ],
-      "cls": "bad"
+      "cls": "harem",
+      "guide": "harem-act4"
     },
     {
       "id": "E4",
       "day": 67,
       "x": 1340,
       "y": 2108,
-      "w": 150,
-      "h": 36,
+      "w": 480,
+      "h": 50,
       "lines": [
-        "E4 后宫·完美"
+        "★ E4 · 后宫线结局",
+        "三人关系确认"
       ],
-      "cls": "perfect"
+      "cls": "completed",
+      "guide": "E4"
     },
     {
-      "id": "E8",
-      "day": 67,
-      "x": 1600,
-      "y": 2108,
-      "w": 110,
-      "h": 34,
-      "lines": [
-        "E8 非完美",
-        "乙·双恋"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "MAIDSTART",
+      "id": "M0",
       "day": 39,
-      "x": 1910,
-      "y": 876,
-      "w": 220,
-      "h": 40,
-      "lines": [
-        "侍从线起点",
-        "第39/28天 付800"
-      ],
-      "cls": "maid"
-    },
-    {
-      "id": "A_CORE",
-      "day": 59,
       "x": 1900,
-      "y": 1756,
-      "w": 210,
-      "h": 38,
+      "y": 876,
+      "w": 480,
+      "h": 56,
       "lines": [
-        "核心分支 · 契约/续约",
-        "世界结果：甲 / 乙"
+        "侍从序幕 33 / 39起",
+        "实际补款 → 点头答应共事"
       ],
-      "cls": "maid"
+      "cls": "maid",
+      "guide": "maid-prologue"
     },
     {
-      "id": "A_NON",
-      "day": 60,
-      "x": 2140,
-      "y": 1800,
-      "w": 260,
-      "h": 38,
+      "id": "M1",
+      "day": 41,
+      "x": 1900,
+      "y": 964,
+      "w": 480,
+      "h": 62,
       "lines": [
-        "非完美分支",
-        "E7 乙·侍从 / E3 未完成·部分"
+        "侍从第一幕 41–46",
+        "数据盘 / 跑腿钱 / 原话 / 救母"
       ],
-      "cls": "bad"
+      "cls": "maid",
+      "guide": "maid-act1"
+    },
+    {
+      "id": "M_DIR",
+      "day": 44,
+      "x": 1900,
+      "y": 1096,
+      "w": 480,
+      "h": 56,
+      "lines": [
+        "交盘换人 / 申请保护：继续侍从",
+        "营养果开源不拆结局；立即公开 → 革命军"
+      ],
+      "cls": "decision",
+      "guide": "maid-act1"
+    },
+    {
+      "id": "M2",
+      "day": 48,
+      "x": 1900,
+      "y": 1272,
+      "w": 480,
+      "h": 56,
+      "lines": [
+        "侍从第二幕 48–50",
+        "按人摆 / 交完班 / 告白"
+      ],
+      "cls": "maid",
+      "guide": "maid-act2"
+    },
+    {
+      "id": "P2",
+      "day": 50,
+      "x": 1900,
+      "y": 1360,
+      "w": 480,
+      "h": 56,
+      "lines": [
+        "王尔德：实际购买P2「通行与正装」",
+        "基础3000；下层声望30基础优惠1500"
+      ],
+      "cls": "decision",
+      "guide": "maid-act2"
+    },
+    {
+      "id": "M3",
+      "day": 52,
+      "x": 1900,
+      "y": 1448,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "侍从第三幕 52–55",
+        "想试一次 / 唱快了 / 再唱一晚"
+      ],
+      "cls": "maid",
+      "guide": "maid-act3"
+    },
+    {
+      "id": "M4",
+      "day": 61,
+      "x": 1900,
+      "y": 1844,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "侍从第四幕 61–67",
+        "驻场 / 旧约 / 嘉宾栏 / 柜台灯下"
+      ],
+      "cls": "maid",
+      "guide": "maid-act4"
     },
     {
       "id": "E3",
       "day": 67,
       "x": 1900,
       "y": 2108,
-      "w": 150,
-      "h": 36,
+      "w": 480,
+      "h": 50,
       "lines": [
-        "E3 侍从·完美"
+        "★ E3 · 侍从线结局",
+        "柜台灯下完成"
       ],
-      "cls": "perfect"
+      "cls": "completed",
+      "guide": "E3"
     },
     {
-      "id": "E7",
-      "day": 67,
-      "x": 2070,
-      "y": 2108,
-      "w": 110,
-      "h": 34,
-      "lines": [
-        "E7 非完美",
-        "乙·侍从恋人"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "REV",
+      "id": "R0",
       "day": 44,
-      "x": 2470,
-      "y": 1096,
-      "w": 220,
-      "h": 40,
-      "lines": [
-        "革命军线起点",
-        "第44/33天 未保护公开"
-      ],
-      "cls": "rev"
-    },
-    {
-      "id": "R_CORE",
-      "day": 59,
       "x": 2460,
-      "y": 1756,
-      "w": 220,
-      "h": 44,
+      "y": 1096,
+      "w": 480,
+      "h": 56,
       "lines": [
-        "革命军线 R01—R14",
-        "G1/G2/G3 补给与护送"
+        "革命军入口：立即公开",
+        "母亲死亡；不要求先确认恋爱"
       ],
-      "cls": "rev"
+      "cls": "rev",
+      "guide": "guide-rev"
     },
     {
-      "id": "R_NON",
-      "day": 59,
-      "x": 2720,
-      "y": 1756,
-      "w": 260,
-      "h": 44,
+      "id": "R1",
+      "day": 46,
+      "x": 2460,
+      "y": 1184,
+      "w": 480,
+      "h": 62,
       "lines": [
-        "旧档/朋友",
-        "不授予新 R14"
+        "革命军第一幕 46–48",
+        "第一张单子 / 药先拿"
       ],
-      "cls": "bad"
+      "cls": "rev",
+      "guide": "rev-act1"
+    },
+    {
+      "id": "R2",
+      "day": 51,
+      "x": 2460,
+      "y": 1404,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "革命军第二幕 51–57",
+        "短了一行 / 空着手 / 第七行"
+      ],
+      "cls": "rev",
+      "guide": "rev-act2"
+    },
+    {
+      "id": "R3",
+      "day": 60,
+      "x": 2460,
+      "y": 1800,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "革命军第三幕 60–62",
+        "门还没开 / 不用等"
+      ],
+      "cls": "rev",
+      "guide": "rev-act3"
+    },
+    {
+      "id": "R4",
+      "day": 64,
+      "x": 2460,
+      "y": 1976,
+      "w": 480,
+      "h": 62,
+      "lines": [
+        "革命军第四幕 64–72",
+        "折价 / 带话 / 快到了 / 门外"
+      ],
+      "cls": "rev",
+      "guide": "rev-act4"
     },
     {
       "id": "E9",
-      "day": 69,
+      "day": 72,
       "x": 2460,
-      "y": 2196,
-      "w": 170,
-      "h": 44,
+      "y": 2328,
+      "w": 480,
+      "h": 56,
       "lines": [
-        "E9 革命·完美",
-        "R14《我想见你》"
+        "★ E9 · 远征归来",
+        "读完「我好想你」后完成"
       ],
-      "cls": "perfect"
-    },
-    {
-      "id": "E10",
-      "day": 59,
-      "x": 2720,
-      "y": 1756,
-      "w": 130,
-      "h": 44,
-      "lines": [
-        "E10 非完美",
-        "旧档/朋友·无恋爱"
-      ],
-      "cls": "bad"
-    },
-    {
-      "id": "HG1",
-      "day": 50,
-      "x": 1350,
-      "y": 1360,
-      "w": 220,
-      "h": 32,
-      "lines": [
-        "上层声望 30",
-        "未达：营业＋阶段日常；不退出"
-      ],
-      "cls": "decision"
-    },
-    {
-      "id": "HG2",
-      "day": 56,
-      "x": 1350,
-      "y": 1624,
-      "w": 220,
-      "h": 32,
-      "lines": [
-        "上层声望 60",
-        "未达：营业＋阶段日常；不退出"
-      ],
-      "cls": "decision"
-    },
-    {
-      "id": "HG3",
-      "day": 60,
-      "x": 1350,
-      "y": 1800,
-      "w": 220,
-      "h": 32,
-      "lines": [
-        "上层声望 90",
-        "未达：营业＋阶段日常；不退出"
-      ],
-      "cls": "decision"
+      "cls": "completed",
+      "guide": "E9"
     }
   ],
   "edges": [
     {
-      "from": "S",
-      "to": "MAIDCOM",
-      "cls": "common"
-    },
-    {
-      "from": "MAIDCOM",
-      "to": "DRV",
-      "cls": "common"
-    },
-    {
-      "from": "DRV",
-      "to": "THR",
-      "cls": "common"
-    },
-    {
-      "from": "THR",
-      "to": "DIR",
-      "cls": "common"
-    },
-    {
-      "from": "DIR",
-      "to": "SAFE",
+      "to": "C_TRADE",
       "cls": "common",
-      "label": "甲/乙"
+      "from": "C_ACT1"
     },
     {
-      "from": "SAFE",
+      "to": "C_ACT2",
+      "cls": "common",
+      "from": "C_TRADE"
+    },
+    {
+      "to": "GAP",
+      "cls": "common",
+      "from": "C_ACT2"
+    },
+    {
+      "to": "BRACELET",
+      "cls": "common",
+      "from": "GAP"
+    },
+    {
+      "to": "WORK",
+      "cls": "common",
+      "from": "BRACELET"
+    },
+    {
+      "to": "C_ACT3",
+      "cls": "common",
+      "from": "WORK"
+    },
+    {
+      "to": "DIR",
+      "cls": "common",
+      "from": "C_ACT3"
+    },
+    {
+      "to": "C_ACT4",
+      "cls": "common",
+      "from": "DIR"
+    },
+    {
+      "to": "HANDOFF",
+      "cls": "common",
+      "from": "C_ACT4"
+    },
+    {
       "to": "LOVE",
-      "cls": "common"
+      "cls": "common",
+      "from": "HANDOFF"
     },
     {
-      "from": "MAIDCOM",
-      "to": "MAIDSTART",
-      "cls": "maid",
-      "label": "侍从路线 800",
-      "labelT": 0.9
+      "to": "FRIEND",
+      "cls": "common",
+      "from": "LOVE"
     },
     {
-      "from": "DIR",
-      "to": "REV",
-      "cls": "rev",
-      "label": "丙·未保护公开",
-      "labelT": 0.94
-    },
-    {
-      "from": "SAFE",
-      "to": "HAREM",
-      "cls": "harem",
-      "label": "双恋前置",
-      "labelT": 0.72
-    },
-    {
-      "from": "LOVE",
-      "to": "ORD",
-      "cls": "regular"
-    },
-    {
-      "from": "THR",
-      "to": "E11",
-      "cls": "bad"
-    },
-    {
-      "from": "THR",
-      "to": "E12",
-      "cls": "bad"
-    },
-    {
-      "from": "DIR",
-      "to": "E13",
-      "cls": "bad"
-    },
-    {
-      "from": "DRV",
-      "to": "E14",
-      "cls": "bad"
-    },
-    {
-      "from": "ORD",
-      "to": "O_CORE",
-      "cls": "regular"
-    },
-    {
-      "from": "O_CORE",
-      "to": "E1",
-      "cls": "perfect",
-      "label": "甲"
-    },
-    {
-      "from": "O_CORE",
-      "to": "O_NON",
-      "cls": "bad",
-      "label": "乙 / 朋友"
-    },
-    {
-      "from": "O_NON",
       "to": "E2",
-      "cls": "bad"
+      "cls": "bad",
+      "from": "FRIEND"
     },
     {
-      "from": "O_NON",
-      "to": "E5",
-      "cls": "bad"
+      "to": "L1",
+      "cls": "regular",
+      "from": "LOVE",
+      "label": "条件满足并接受告白",
+      "labelT": 0.75
     },
     {
-      "from": "O_NON",
-      "to": "E6",
-      "cls": "bad"
+      "to": "L2",
+      "cls": "regular",
+      "from": "L1"
     },
     {
-      "from": "H5",
-      "to": "H7",
-      "cls": "harem"
+      "to": "L3",
+      "cls": "regular",
+      "from": "L2"
     },
     {
-      "from": "H14",
-      "to": "H15",
-      "cls": "harem"
+      "to": "E1",
+      "cls": "completed",
+      "from": "L3"
     },
     {
-      "from": "H15",
-      "to": "H17",
-      "cls": "harem"
+      "to": "H1",
+      "cls": "harem",
+      "from": "HANDOFF",
+      "label": "手镯交割＋无有效侍从",
+      "labelT": 0.75
     },
     {
-      "from": "H17",
-      "to": "H_CORE",
-      "cls": "harem"
+      "to": "H2",
+      "cls": "harem",
+      "from": "H1"
     },
     {
-      "from": "H_CORE",
+      "to": "H3",
+      "cls": "harem",
+      "from": "H2"
+    },
+    {
+      "to": "H4",
+      "cls": "harem",
+      "from": "H3"
+    },
+    {
       "to": "E4",
-      "cls": "perfect",
-      "label": "甲 + 确认 + 完整"
+      "cls": "completed",
+      "from": "H4"
     },
     {
-      "from": "H_CORE",
-      "to": "H_NON",
-      "cls": "bad",
-      "label": "乙"
+      "to": "M0",
+      "cls": "maid",
+      "from": "WORK",
+      "label": "答应共事",
+      "labelT": 0.75
     },
     {
-      "from": "H_NON",
-      "to": "E8",
-      "cls": "bad"
+      "to": "M1",
+      "cls": "maid",
+      "from": "M0"
     },
     {
-      "from": "MAIDSTART",
-      "to": "A_CORE",
-      "cls": "maid"
+      "to": "M_DIR",
+      "cls": "maid",
+      "from": "M1"
     },
     {
-      "from": "A_CORE",
+      "to": "M2",
+      "cls": "maid",
+      "from": "M_DIR"
+    },
+    {
+      "to": "P2",
+      "cls": "maid",
+      "from": "M2"
+    },
+    {
+      "to": "M3",
+      "cls": "maid",
+      "from": "P2"
+    },
+    {
+      "to": "M4",
+      "cls": "maid",
+      "from": "M3"
+    },
+    {
       "to": "E3",
-      "cls": "perfect",
-      "label": "甲 + 完成/续约"
+      "cls": "completed",
+      "from": "M4"
     },
     {
-      "from": "A_CORE",
-      "to": "A_NON",
-      "cls": "bad"
-    },
-    {
-      "from": "A_NON",
-      "to": "E7",
-      "cls": "bad"
-    },
-    {
-      "from": "REV",
-      "to": "R_CORE",
+      "to": "R0",
       "cls": "rev",
-      "label": "R01—R14"
+      "from": "DIR",
+      "label": "立即公开",
+      "path": "M 670 1120 H 710 V 1060 H 2420 V 1110 H 2460",
+      "labelX": 1240,
+      "labelY": 1050
     },
     {
-      "from": "R_CORE",
+      "to": "R0",
+      "cls": "rev",
+      "from": "M_DIR",
+      "label": "立即公开",
+      "labelT": 0.75
+    },
+    {
+      "to": "R1",
+      "cls": "rev",
+      "from": "R0"
+    },
+    {
+      "to": "R2",
+      "cls": "rev",
+      "from": "R1"
+    },
+    {
+      "to": "R3",
+      "cls": "rev",
+      "from": "R2"
+    },
+    {
+      "to": "R4",
+      "cls": "rev",
+      "from": "R3"
+    },
+    {
       "to": "E9",
-      "cls": "perfect",
-      "label": "R14 完成（即时结局页）"
-    },
-    {
-      "from": "R_CORE",
-      "to": "R_NON",
-      "cls": "bad",
-      "label": "旧档/朋友"
-    },
-    {
-      "from": "R_NON",
-      "to": "E10",
-      "cls": "bad"
-    },
-    {
-      "to": "HG1",
-      "cls": "harem",
-      "from": "HAREM"
-    },
-    {
-      "to": "H5",
-      "cls": "harem",
-      "from": "HG1"
-    },
-    {
-      "to": "HG2",
-      "cls": "harem",
-      "from": "H7"
-    },
-    {
-      "to": "H11",
-      "cls": "harem",
-      "from": "HG2"
-    },
-    {
-      "to": "HG3",
-      "cls": "harem",
-      "from": "H11"
-    },
-    {
-      "to": "H14",
-      "cls": "harem",
-      "from": "HG3"
+      "cls": "completed",
+      "from": "R4"
     }
   ],
   "axis": {
     "x": 150,
     "top": 20,
-    "bottom": 70,
+    "bottom": 75,
     "yTop": 40,
-    "yBottom": 2240,
+    "yBottom": 2460,
     "step": 5,
     "earlyOffset": 11,
     "label": "普通天 / 提前开局 = −11"
@@ -1688,32 +1613,24 @@ const CHART = {
     {
       "x": 180,
       "y": 20,
-      "w": 260,
-      "h": 2240,
-      "cls": "bad",
-      "label": "共同失败分支"
-    },
-    {
-      "x": 460,
-      "y": 20,
-      "w": 260,
-      "h": 2240,
+      "w": 550,
+      "h": 2460,
       "cls": "common",
-      "label": "共同部分"
+      "label": "共同剧情 / 入线条件"
     },
     {
       "x": 760,
       "y": 20,
       "w": 540,
-      "h": 2240,
+      "h": 2460,
       "cls": "regular",
-      "label": "常规恋爱线"
+      "label": "恋爱线"
     },
     {
       "x": 1320,
       "y": 20,
       "w": 540,
-      "h": 2240,
+      "h": 2460,
       "cls": "harem",
       "label": "后宫线"
     },
@@ -1721,7 +1638,7 @@ const CHART = {
       "x": 1880,
       "y": 20,
       "w": 540,
-      "h": 2240,
+      "h": 2460,
       "cls": "maid",
       "label": "侍从线"
     },
@@ -1729,7 +1646,7 @@ const CHART = {
       "x": 2440,
       "y": 20,
       "w": 540,
-      "h": 2240,
+      "h": 2460,
       "cls": "rev",
       "label": "革命军线"
     }
@@ -1737,13 +1654,45 @@ const CHART = {
 };
 
 const $ = (s, el=document) => el.querySelector(s);
-const COLORS = {common:"#d9b26f",decision:"#e6c15c",regular:"#79b8ff",harem:"#ff8fb3",maid:"#e6c15c",rev:"#c49bff",bad:"#ff8d7a",perfect:"#ffd77a"};
-const FILLS = {common:"#161d29",decision:"#1c2534",regular:"#0f2238",harem:"#30121f",maid:"#2b2412",rev:"#221636",bad:"#2a1513",perfect:"#30250f"};
+const COLORS = {common:"#d9b26f",decision:"#e6c15c",regular:"#79b8ff",harem:"#ff8fb3",maid:"#e6c15c",rev:"#c49bff",bad:"#ff8d7a",completed:"#ffd77a"};
+const FILLS = {common:"#161d29",decision:"#1c2534",regular:"#0f2238",harem:"#30121f",maid:"#2b2412",rev:"#221636",bad:"#2a1513",completed:"#30250f"};
 function svgEl(name, attrs={}){
   const el=document.createElementNS("http://www.w3.org/2000/svg",name);
   for(const [k,v] of Object.entries(attrs)) el.setAttribute(k,v);
   return el;
 }
+
+function escapeText(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function showGuide(route){
+  document.querySelectorAll('.guide-route').forEach(el=>{el.hidden=route!=='all'&&el.dataset.route!==route;});
+  document.querySelectorAll('[data-guide-filter]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.guideFilter===route)));
+}
+function followGuide(id){
+  id=DATA.endingAliases[id]||id;
+  const target=document.getElementById(id);if(!target)return;
+  const route=target.closest('.guide-route');if(route)showGuide(route.dataset.route);
+  location.hash=id;target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function restoreGuideHash(){
+  let id;try{id=decodeURIComponent(location.hash.slice(1));}catch(_){return;}
+  if(DATA.endingAliases[id]){id=DATA.endingAliases[id];history.replaceState(null,'','#'+id);}
+  const target=document.getElementById(id);if(!target)return;
+  const route=target.closest('.guide-route');if(route)showGuide(route.dataset.route);
+  target.scrollIntoView({behavior:'instant',block:'start'});
+}
+function renderGuides(){
+  $('#route-guides').innerHTML=DATA.guides.map(g=>`<article class="guide-route" id="guide-${g.id}" data-route="${g.id}">
+    <h3>${escapeText(g.name)}</h3><p class="guide-intro">${escapeText(g.intro)}</p>
+    <div class="entry-box"><h4>必须做到</h4><ul>${g.entry.map(t=>`<li>${escapeText(t)}</li>`).join('')}</ul></div>
+    <ol class="act-list">${g.acts.map(a=>`<li class="guide-act" id="${a.id}"><div class="act-heading"><h4>${escapeText(a.title)}</h4><span class="act-date">普通 ${escapeText(a.day)} 天 · 提前 ${escapeText(a.early)} 天</span></div>
+      <ol class="scene-list" aria-label="剧情顺序">${a.scenes.map(t=>`<li>${escapeText(t)}</li>`).join('')}</ol>
+      <p class="act-summary">${escapeText(a.summary)}</p><ul class="act-checks">${a.checks.map(t=>`<li>${escapeText(t)}</li>`).join('')}</ul></li>`).join('')}</ol>
+    <a class="guide-back" href="#map">↑ 回到流程图</a></article>`).join('');
+  document.querySelectorAll('[data-guide-filter]').forEach(el=>el.addEventListener('click',()=>showGuide(el.dataset.guideFilter)));
+  document.querySelectorAll('[data-route].card-link').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();followGuide('guide-'+el.dataset.route);}));
+}
+let suppressNodeClickUntil=0;
+
 function renderChart(){
   const svg=$("#route-svg");
   const defs=svgEl("defs");
@@ -1752,7 +1701,7 @@ function renderChart(){
     marker.appendChild(svgEl("path",{d:"M0,0 L10,5 L0,10 z",fill:color}));
     defs.appendChild(marker);
   }
-  const glow=svgEl("filter",{id:"perfect-glow",x:"-50%",y:"-50%",width:"200%",height:"200%"});
+  const glow=svgEl("filter",{id:"completed-glow",x:"-50%",y:"-50%",width:"200%",height:"200%"});
   glow.appendChild(svgEl("feGaussianBlur",{stdDeviation:"3",result:"blur"}));
   const merge=svgEl("feMerge");
   merge.appendChild(svgEl("feMergeNode",{in:"blur"}));
@@ -1811,12 +1760,12 @@ function renderChart(){
       x1=a.x+a.w/2; y1=a.y+a.h/2; x2=b.x+b.w/2; y2=b.y+b.h/2;
       c1x=x1; c1y=y1; c2x=x2; c2y=y2;
     }
-    const path=svgEl("path",{d:`M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`,fill:"none",stroke:COLORS[edge.cls]||COLORS.common,"stroke-width":edge.cls==="perfect"?2.2:1.4,"marker-end":`url(#arrow-${edge.cls})`,opacity:edge.cls==="bad"?0.78:0.9});
+    const path=svgEl("path",{d:edge.path||`M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`,fill:"none",stroke:COLORS[edge.cls]||COLORS.common,"stroke-width":edge.cls==="completed"?2.2:1.4,"marker-end":`url(#arrow-${edge.cls})`,opacity:edge.cls==="bad"?0.78:0.9});
     if(edge.dashed) path.setAttribute("stroke-dasharray","6 5");
     svg.appendChild(path);
     if(edge.label){
       const t=edge.labelT==null?0.5:edge.labelT;
-      const mx=x1+(x2-x1)*t,my=y1+(y2-y1)*t-4;
+      const mx=edge.labelX??x1+(x2-x1)*t,my=edge.labelY??y1+(y2-y1)*t-4;
       const label=svgEl("text",{x:mx,y:my,"text-anchor":"middle","font-size":"11",fill:"#e3e9f3","paint-order":"stroke",stroke:"#0c0f15","stroke-width":"3","stroke-linejoin":"round"});
       label.textContent=edge.label;
       svg.appendChild(label);
@@ -1824,15 +1773,18 @@ function renderChart(){
   }
   for(const n of CHART.nodes){
     const color=COLORS[n.cls]||COLORS.common;
-    const group=svgEl("g");
-    if(n.cls==="perfect") group.setAttribute("filter","url(#perfect-glow)");
-    group.appendChild(svgEl("rect",{x:n.x,y:n.y,width:n.w,height:n.h,rx:10,fill:FILLS[n.cls]||FILLS.common,stroke:color,"stroke-width":n.cls==="perfect"?2.6:1.5}));
+    const group=svgEl("g",{class:"chart-node",tabindex:"0",role:"link","aria-label":n.lines.join('，')+'，查看攻略',"data-guide":n.guide});
+    const title=svgEl('title');title.textContent=n.lines.join('，')+'：点击查看条件与分幕攻略';group.appendChild(title);
+    group.addEventListener('click',()=>{if(Date.now()>suppressNodeClickUntil)followGuide(n.guide);});
+    group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();followGuide(n.guide);}});
+    if(n.cls==="completed") group.setAttribute("filter","url(#completed-glow)");
+    group.appendChild(svgEl("rect",{x:n.x,y:n.y,width:n.w,height:n.h,rx:10,fill:FILLS[n.cls]||FILLS.common,stroke:color,"stroke-width":n.cls==="completed"?2.6:1.5}));
     const cx=n.x+n.w/2;
     const lines=n.lines||[];
     const step=lines.length>2?14:18;
     const startY=n.y+n.h/2-(lines.length-1)*step/2+4;
     lines.forEach((line,i)=>{
-      const t=svgEl("text",{x:cx,y:startY+i*step,"text-anchor":"middle","font-size":lines.length>2?"11":"13",fill:n.cls==="perfect"?"#fff7df":"#ffffff","font-weight":"600"});
+      const t=svgEl("text",{x:cx,y:startY+i*step,"text-anchor":"middle","font-size":lines.length>2?"11":"13",fill:n.cls==="completed"?"#fff7df":"#ffffff","font-weight":"600"});
       t.textContent=line;
       group.appendChild(t);
     });
@@ -1841,10 +1793,10 @@ function renderChart(){
 }
 function renderEndingTable(){
   const tbody=$('#ending-table tbody');
-  tbody.innerHTML=DATA.endings.map(e=>`<tr>
+  tbody.innerHTML=DATA.endings.map(e=>`<tr id="${e.id}">
     <td class="eid">${e.id}</td><td><b>${e.title}</b></td>
     <td class="route">${DATA.routes[e.mainRoute]?.name||e.mainRoute}</td>
-    <td class="etype">${e.perfect?'<span class="perfect">★ 完美</span>':'<span class="bad">非完美</span>'}</td>
+    <td class="etype">${e.kind==='route'?'<span class="completed">★ 路线完成</span>':'<span>朋友</span>'}</td>
     <td>${e.relationship}</td><td>${e.mother}</td><td>${e.condition}</td>
     <td class="terminals">${(e.terminals||[]).map(t=>`<span class="tag">-${t}</span>`).join('')}</td>
   </tr>`).join('');
@@ -1858,7 +1810,7 @@ function applyZoom(){
 }
 function changeZoom(d){ zoom=Math.max(0.4,Math.min(2,zoom+d)); applyZoom(); }
 function initPage(){
-  renderChart(); renderEndingTable(); applyZoom();
+  renderGuides(); renderChart(); renderEndingTable(); applyZoom();
   $('#zoom-in').addEventListener('click',()=>changeZoom(0.1));
   $('#zoom-out').addEventListener('click',()=>changeZoom(-0.1));
   $('#zoom-native').addEventListener('click',()=>{zoom=1;applyZoom();});
@@ -1874,22 +1826,26 @@ function initPage(){
   let drag=null;
   chart.addEventListener('pointerdown',e=>{
     if(e.pointerType==='touch'||e.button!==0)return;
-    drag={id:e.pointerId,x:e.clientX,left:chart.scrollLeft};
-    chart.classList.add('dragging');
-    chart.setPointerCapture(e.pointerId);
+    drag={id:e.pointerId,x:e.clientX,y:e.clientY,left:chart.scrollLeft,moved:false};
   });
   chart.addEventListener('pointermove',e=>{
     if(!drag||e.pointerId!==drag.id)return;
+    if(!drag.moved&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<6)return;
+    if(!drag.moved){drag.moved=true;chart.classList.add('dragging');chart.setPointerCapture(e.pointerId);}
     chart.scrollLeft=drag.left-(e.clientX-drag.x);
   });
   const endDrag=e=>{
     if(!drag)return;
+    if(drag.moved)suppressNodeClickUntil=Date.now()+250;
     chart.classList.remove('dragging');
     try{chart.releasePointerCapture(drag.id);}catch(_){}
     drag=null;
   };
   chart.addEventListener('pointerup',endDrag);
   chart.addEventListener('pointercancel',endDrag);
+  chart.addEventListener('lostpointercapture',endDrag);
+  window.addEventListener('hashchange',restoreGuideHash);
+  if(location.hash)restoreGuideHash();
 }
 document.addEventListener('DOMContentLoaded',initPage);
 </script>
