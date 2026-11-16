@@ -117,6 +117,7 @@ namespace EleanorRomance
                 }
 
                 if (!RomanceState.StoryActive) return;
+                EleanorStory.EnsurePreludeBraceletCountInitialized();
                 RomanceState.SyncNativeSavings();
                 GalaClosing.RecoverQueuedVisits(manager);
 

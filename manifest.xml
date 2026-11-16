@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.11</ModVersion>
-  <Description>1.11 adds an in-game Eleanor portrait selector: Auto keeps this mod's art for native calls and its own story while yielding to another mod's portrait and pausing expressions; Force uses this mod's portrait for every Eleanor; Other uses vanilla/other-mod portraits everywhere, including this mod's story. Native Eleanor takeover is now method-scoped and no longer blocks another mod's own Eleanor events. 1.10 voice pass and 1.07–1.09 entry, hit-area, bracelet and portrait-compatibility fixes remain. Simplified Chinese / English. 1.11 新增游戏内埃莉诺立绘选择：Auto 原版/本 MOD 剧情用本 MOD 立绘，其他 MOD 覆盖时让位并暂停表情；Force 所有埃莉诺都用本 MOD 立绘；Other 完全使用原版/其他 MOD 立绘，本 MOD 剧情客户也回退原版键。原版接管改为按调度方法作用域，不再误拦其他 MOD 自己的埃莉诺事件。1.10 voice pass 与 1.07–1.09 入线、点击区、手镯与立绘兼容修复保留。简体中文 / English。</Description>
+  <ModVersion>1.12</ModVersion>
+  <Description>1.12 fixes the harem bracelet possession check: eligibility now follows buy, sell, buyback and gift events instead of an inventory-slot or instance-ID lookup, so giving the bracelet for free no longer fails to register the harem route. Existing saves scan once on first load; a failed gift can be repaired before the solo romance starts. The 1.11 portrait selector, 1.10 voice pass and earlier entry, hit-area and portrait-compatibility fixes remain. Simplified Chinese / English. 1.12 修复后宫线手镯持有判定：资格改为按买入、卖出、回购、赠送事件计数，不再依赖库存格或实例 ID，免费赠送后不会漏记后宫资格；旧档首次载入扫描一次，尚未进入普通恋爱/告白的失败赠送可修复。1.11 立绘选择、1.10 voice pass 与更早的入线、点击区、立绘兼容修复保留。简体中文 / English。</Description>
   <GameVersions>
     <Version>0.46</Version>
     <Version>0.46D</Version>

@@ -1,9 +1,16 @@
 # Project instructions
 
-## Content-rating labels (user requirement)
+## Required project principles (all agents)
 
-- Never add content-rating information or labels on your own — including Mature, all-ages, R18, adult, age-gating, age ratings, 成熟向, 全年龄, 年龄分级 or 年龄提示 — in README, manifest, Workshop/Nexus copy, site, docs, release notes, change logs, UI or configuration.
-- Remove such labels when touching existing files. Do not infer or declare the project's rating or target audience; describe only gameplay/story facts the user explicitly asked for.
+Before changing story, content, prompts, design, artwork direction, or release copy, read and follow `docs/PROJECT_PRINCIPLES.md`. It records the author's project-level positioning and constraints for the full project. Do not invent additional project principles, and do not treat an uncovered topic as permission to override those constraints. If a request conflicts with them, stop and ask the author. This is a self-funded personal hobby; the author's enjoyment is the success metric, not commercial metrics. Do not expand scope, recurring API cost, or asset spend without asking. Do not ask the author to specify chapter or act events by default; event-level planning belongs to the agent within these principles. Present finished scenes or a small set of concrete forks, not blank planning questions.
+
+## Content-rating labels and scene scale (user requirement)
+
+- Never add voluntary content-rating information or labels on your own — including Mature, all-ages, R18, adult, age-gating, age ratings, 成熟向, 全年龄, 年龄分级 or 年龄提示 — in README, manifest, Workshop/Nexus copy, site, docs, release notes, change logs, UI or configuration. The project does not market itself as R18/adult; its self-positioning is **non-R18**. If a platform requires a rating field, follow the platform rules and the author's decision.
+- Remove such labels when touching existing files.
+- Do not impose a content-scale limit on your own. Necessary sexual attraction, tension, innuendo, love talk and non-explicit body description are core to the romance; do not soften, desexualize or flatten scenes merely because of an assumed rating.
+- The current intended ceiling is suggestive/restricted-adjacent romance: sexual tension, innuendo, sexy CG/portraits and love talk are expected; no on-screen intercourse and no direct genital nudity. Do not escalate past this ceiling or water it down below it without explicit author direction.
+- The author controls the actual scale per scene. Follow the scene, ActCard and author direction; when the intended level is unclear, ask the author rather than self-censoring or escalating on your own.
 
 ## Request size limit (user requirement)
 

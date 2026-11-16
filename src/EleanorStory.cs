@@ -801,26 +801,44 @@ namespace EleanorRomance
 
         private const int PreludeBraceletFallbackPrice = 140;
 
+        private static GameInventory[] PreludeInventoryRoots()
+        {
+            var store = EmporiumEntry.Instance;
+            if (store == null) return Array.Empty<GameInventory>();
+            return new GameInventory[]
+            {
+                store.frontInvinvElement, store.backInvinvElement, store.invElement,
+                store.afterhourInventory, store.showcaseElement,
+                store.afterhourPocketSlotInvLeft, store.afterhourPocketSlotInvBackpack,
+                store.afterhourPocketSlotInvRight, store.backInvinvElementCounter,
+                store.swapBufferElement, store.soldElement, store.hiddenElement,
+                store.bazarLeftinvElement, store.hirelingInv, store.trashInvElement,
+                store.drainInvElement,
+            };
+        }
+
         private static GameItem FindPreludeBracelet(bool owned)
         {
             try
             {
-                var store = EmporiumEntry.Instance;
-                if (store == null) return null;
-                GameInventory[] inventories =
-                {
-                    store.frontInvinvElement, store.backInvinvElement, store.invElement,
-                    store.afterhourInventory, store.showcaseElement,
-                };
                 int id = RomanceState.PreludeBraceletId;
-                // Old saves have no instance ID. Adopt only an unambiguous match.
-                var matches = inventories.Where(inv => inv != null)
+                GameItem[] matches = PreludeInventoryRoots()
+                    .Where(inv => inv != null)
                     .SelectMany(inv => GraphUtils.FindAllChildrenType<GameItem>(inv))
                     .Where(item => item != null && item.identifier == ModConstants.BraceletItemId
-                        && GeneralHelper.IsItemOwned(item) == owned && (id == 0 || item.uniqueId == id))
-                    .Distinct().Take(2).ToArray();
+                        && GeneralHelper.IsItemOwned(item) == owned)
+                    .Distinct().ToArray();
+                if (matches.Length == 0) return null;
+
+                // Prefer the recorded instance, but do not let a stale ID hide
+                // the only matching bracelet.
+                if (id != 0)
+                {
+                    GameItem exact = matches.FirstOrDefault(item => item.uniqueId == id);
+                    if (exact != null) return exact;
+                }
                 if (matches.Length != 1) return null;
-                if (id == 0) RomanceState.PreludeBraceletId = matches[0].GetUniqueID();
+                RomanceState.PreludeBraceletId = matches[0].GetUniqueID();
                 return matches[0];
             }
             catch (Exception ex)
@@ -830,23 +848,164 @@ namespace EleanorRomance
             }
         }
 
-        internal static bool HasPreludeBracelet() => FindPreludeBracelet(owned: true) != null;
+        private static GameItem FindPreludeBraceletExact(int id)
+        {
+            if (id == 0) return null;
+            try
+            {
+                return PreludeInventoryRoots()
+                    .Where(inv => inv != null)
+                    .SelectMany(inv => GraphUtils.FindAllChildrenType<GameItem>(inv))
+                    .FirstOrDefault(item => item != null
+                        && item.identifier == ModConstants.BraceletItemId
+                        && GeneralHelper.IsItemOwned(item)
+                        && item.uniqueId == id);
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Prelude bracelet exact scan failed: " + ex);
+                return null;
+            }
+        }
 
-        internal static bool IsOwnedPreludeBracelet(GameItem item)
-            => item != null && item.identifier == ModConstants.BraceletItemId
-                && RomanceState.PreludeBraceletId != 0 && item.uniqueId == RomanceState.PreludeBraceletId
-                && GeneralHelper.IsItemOwned(item);
+        private static GameItem FindPreludeBraceletAnywhere()
+        {
+            try
+            {
+                GameItem[] matches = PreludeInventoryRoots()
+                    .Where(inv => inv != null)
+                    .SelectMany(inv => GraphUtils.FindAllChildrenType<GameItem>(inv))
+                    .Where(item => item != null && item.identifier == ModConstants.BraceletItemId)
+                    .Distinct().ToArray();
+                if (matches.Length == 0) return null;
+
+                int id = RomanceState.PreludeBraceletId;
+                if (id != 0)
+                {
+                    GameItem exact = matches.FirstOrDefault(item => item.uniqueId == id);
+                    if (exact != null) return exact;
+                }
+                return matches.FirstOrDefault(item => GeneralHelper.IsItemOwned(item)) ?? matches[0];
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Prelude bracelet cleanup scan failed: " + ex);
+                return null;
+            }
+        }
+
+        internal static bool HasPreludeBracelet() => RomanceState.PreludeBraceletCount > 0;
+
+        internal static void NotePreludeBraceletAcquired(GameItem item)
+        {
+            if (item == null || item.identifier != ModConstants.BraceletItemId) return;
+            RomanceState.PreludeBraceletCount = Math.Min(99, RomanceState.PreludeBraceletCount + 1);
+            StoryDirector.Log("Prelude bracelet acquired: count=" + RomanceState.PreludeBraceletCount);
+        }
+
+        internal static void NotePreludeBraceletReleased(GameItem item)
+        {
+            if (item != null && item.identifier != ModConstants.BraceletItemId) return;
+            if (RomanceState.PreludeBraceletCount <= 0)
+            {
+                StoryDirector.Log("Prelude bracelet release ignored: count already 0.");
+                return;
+            }
+            RomanceState.PreludeBraceletCount -= 1;
+            StoryDirector.Log("Prelude bracelet released: count=" + RomanceState.PreludeBraceletCount);
+        }
+
+        internal static void EnsurePreludeBraceletCountInitialized()
+        {
+            if (RomanceState.PreludeBraceletCountInitialized) return;
+            var store = EmporiumEntry.Instance;
+            // Save items are decoded after OnGameLoadedEarly. Wait until the
+            // inventory objects exist before taking the one-time legacy scan.
+            if (store == null || store.invElement == null) return;
+
+            int state = RomanceState.DPreludeState;
+            int count = 0;
+            if (state == 1)
+            {
+                count = CountOwnedPreludeBracelets();
+            }
+            else if (state == 7 && CanRepairFailedBraceletGift())
+            {
+                int owned = CountOwnedPreludeBracelets();
+                if (owned > 0)
+                {
+                    // Prefer the recorded instance. Old saves without an ID
+                    // may repair only when the inventory has one unambiguous
+                    // owned bracelet.
+                    GameItem item = RomanceState.PreludeBraceletId != 0
+                        ? FindPreludeBraceletExact(RomanceState.PreludeBraceletId)
+                        : owned == 1 ? FindPreludeBracelet(owned: true) : null;
+                    if (item != null)
+                    {
+                        try
+                        {
+                            item.Destroy();
+                        }
+                        catch (Exception ex)
+                        {
+                            StoryDirector.LogError("Legacy prelude bracelet repair cleanup failed: " + ex);
+                        }
+                        RomanceState.DPreludeState = 5;
+                        RomanceState.LydiaFairBracelet = true;
+                        StoryDirector.Log("Legacy failed bracelet gift repaired on load.");
+                    }
+                }
+            }
+
+            RomanceState.PreludeBraceletCount = count;
+            RomanceState.PreludeBraceletCountInitialized = true;
+            StoryDirector.Log("Prelude bracelet count initialized from legacy save: held="
+                + count + " state=" + state);
+        }
+
+        private static int CountOwnedPreludeBracelets()
+        {
+            try
+            {
+                return PreludeInventoryRoots()
+                    .Where(inv => inv != null)
+                    .SelectMany(inv => GraphUtils.FindAllChildrenType<GameItem>(inv))
+                    .Where(item => item != null && item.identifier == ModConstants.BraceletItemId
+                        && GeneralHelper.IsItemOwned(item))
+                    .Distinct().Count();
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Prelude bracelet count scan failed: " + ex);
+                return 0;
+            }
+        }
+
+        private static bool CanRepairFailedBraceletGift()
+        {
+            return !LoveState.Started
+                && !StoryCoreFacts.Done(20)
+                && !DualState.HasHistory
+                && !MaidState.Active
+                && !RomanceState.RomanceLocked
+                && (RomanceState.Route == 0 || RomanceState.Route == 1 || RomanceState.Route == 2)
+                && (RomanceState.MotherState == 0 || RomanceState.MotherState == 1);
+        }
 
         internal static void MarkPreludeBraceletUnavailable()
         {
             RomanceState.DPreludeState = 7;
             RomanceState.LydiaFairBracelet = false;
+            RomanceState.PreludeBraceletCount = 0;
         }
 
         internal static int PreludeFixedPrice(StoreClient client, GameItem item)
         {
             if (client == null || (client.identifier != Prefix + "d0_broker" && client.identifier != Prefix + "d0_buyback")
-                || !RomanceState.StoryActive || RomanceState.DPreludeState != 1 || !IsOwnedPreludeBracelet(item)) return 0;
+                || !RomanceState.StoryActive || RomanceState.DPreludeState != 1
+                || RomanceState.PreludeBraceletCount <= 0
+                || item == null || item.identifier != ModConstants.BraceletItemId
+                || !GeneralHelper.IsItemOwned(item)) return 0;
             if (client.identifier == Prefix + "d0_broker") return 1000;
             switch (RomanceState.DPreludeBuybackMode)
             {
@@ -885,9 +1044,29 @@ namespace EleanorRomance
         private static bool PreludeGift()
         {
             if (RomanceState.DPreludeState == 5) return true;
-            GameItem item = FindPreludeBracelet(owned: true);
-            if (item == null) return false;
-            item.Destroy();
+            if (RomanceState.PreludeBraceletCount <= 0) return false;
+
+            // The count is the route fact. The physical item cleanup is best
+            // effort: another mod may have moved, renamed or hidden the item.
+            try
+            {
+                GameItem item = FindPreludeBraceletAnywhere();
+                if (item != null)
+                {
+                    item.Destroy();
+                    StoryDirector.Log("Prelude gift consumed bracelet " + item.uniqueId + ".");
+                }
+                else
+                {
+                    StoryDirector.Log("Prelude gift: no physical bracelet found; count-only handover.");
+                }
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Prelude gift cleanup failed: " + ex);
+            }
+
+            NotePreludeBraceletReleased(null);
             RomanceState.DPreludeState = 5;
             RomanceState.LydiaFairBracelet = true;
             return true;

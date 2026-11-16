@@ -558,6 +558,21 @@ namespace EleanorRomance
             set => SetInt("prelude_bracelet_id", value);
         }
 
+        // Event-driven bracelet possession. The story no longer depends on
+        // finding the physical instance in a particular inventory; sales into
+        // and out of the player's hands adjust this count instead.
+        public static int PreludeBraceletCount
+        {
+            get => GetInt("prelude_bracelet_count", 0);
+            set => SetInt("prelude_bracelet_count", Math.Max(0, value));
+        }
+
+        public static bool PreludeBraceletCountInitialized
+        {
+            get => GetBool("prelude_bracelet_count_init", false);
+            set => SetBool("prelude_bracelet_count_init", value);
+        }
+
         public static bool MotherBoughtGoods
         {
             get => GetBool("mother_bought_goods", false);
@@ -737,6 +752,8 @@ namespace EleanorRomance
             DPreludeOriginalPrice = 0;
             DPreludeBuybackMode = 0;
             PreludeBraceletId = 0;
+            PreludeBraceletCount = 0;
+            PreludeBraceletCountInitialized = true;
             MotherBoughtGoods = false;
             MotherBoughtFruit = false;
             MotherUsedNegotiatedPrice = false;

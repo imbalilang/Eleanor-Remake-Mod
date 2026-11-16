@@ -38,3 +38,15 @@ Steam Web API 复核：
 发布证据位于 `dist/workshop-1.11/`：`remote-before.json`、`release-files.json`、`publish-result.json`、`publish.log`、`native-scan.log`、`remote-after.json`、`descriptor-removal-result.json`、`descriptor-removal.log`、`descriptors-after.json`、`remote-after-descriptor-removal.json`、`final-verification.json`。
 
 未执行本地 `Mods/` 部署；本地安装目录与存档未被修改。
+
+## 2026-11-16 热修：后宫手镯持有计数
+
+- 保持 manifest 1.11，不升版本；以 **content-only** 模式更新原条目，Steam 返回 `k_EResultOK`。
+- 后宫线手镯资格改为买入／卖出／回购／赠送事件计数，不再依赖库存格或实例 ID；修复免费赠送后手镯未取走、后宫资格未写入、最终进入单人恋爱线的问题。
+- 旧档首次载入后扫描一次：`DPreludeState=1` 按实际持有数恢复；`DPreludeState=7` 且同一手镯仍在、尚未进入普通恋爱/告白时修复为已赠送；已结婚或已进入普通恋爱的旧档不回改。
+- 本地包：139 个文件、13,257,331 bytes；`EleanorRomance.dll` SHA-256 `BD7F61E221E0E4196A5C80DFF32A41AA8EAE70F7F4C3386AC84F34C7D80F75C5`；ZIP SHA-256 `60881132B5F64A3809740F446A08BB7FEDB75C64C2F6263085B79443CB45A17A`。
+- 远程复核：标题 `Eleanor Story Expand`；visibility 0；未封禁；文件大小 13,257,331 bytes；说明 4,246 bytes、SHA-256 `94DAFD60363B34D2BD988D1D7CEBD8E86398E831BCB88C4CAEDD202D189086F7`（未改动）；内容句柄 `6506262506094433032`；更新时间 2026-11-16T09:33:19Z。
+- `dotnet build -c Release`、`check_project.py`、`check_route_map.py` 通过。本机缺少 PowerShell 7，运行时回归与原生能力扫描无法执行；`native-scan.log` 记录的是 PowerShell 5.1 的 `MissingMethodException` 环境错误，不是扫描能力发现。
+- 证据位于 `dist/workshop-1.11/`：`release-files.json`、`publish-result.json`、`publish.log`、`remote-after.json`、`final-verification.json`、`native-scan.log`；更新说明为 `docs/WORKSHOP_CHANGELOG_1.11_bracelet_hotfix.txt`。
+- 未执行本地 `Mods/` 部署；本地安装目录与存档未被修改。
+- 该 1.11 热修随后由 **1.12** 版本更新覆盖，见 `docs/RELEASE_1.12.md`。

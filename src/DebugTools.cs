@@ -675,6 +675,9 @@ namespace EleanorRomance
             RomanceState.DPreludeState = 0;
             RomanceState.DPreludeOriginalPrice = 0;
             RomanceState.DPreludeBuybackMode = 0;
+            RomanceState.PreludeBraceletId = 0;
+            RomanceState.PreludeBraceletCount = 0;
+            RomanceState.PreludeBraceletCountInitialized = true;
         }
 
         private static void AddAffection()
