@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.12</ModVersion>
-  <Description>1.12 fixes the harem bracelet possession check: eligibility now follows buy, sell, buyback and gift events instead of an inventory-slot or instance-ID lookup, so giving the bracelet for free no longer fails to register the harem route. Existing saves scan once on first load; a failed gift can be repaired before the solo romance starts. The 1.11 portrait selector, 1.10 voice pass and earlier entry, hit-area and portrait-compatibility fixes remain. Simplified Chinese / English. 1.12 修复后宫线手镯持有判定：资格改为按买入、卖出、回购、赠送事件计数，不再依赖库存格或实例 ID，免费赠送后不会漏记后宫资格；旧档首次载入扫描一次，尚未进入普通恋爱/告白的失败赠送可修复。1.11 立绘选择、1.10 voice pass 与更早的入线、点击区、立绘兼容修复保留。简体中文 / English。</Description>
+  <ModVersion>1.13</ModVersion>
+  <Description>1.13 fixes the mother's household-goods visit: she now accepts both Household Good and Food instead of a hidden Nutrifruit-only exception, and the normal-branch text matches. Linked arrest bail/release scheduling now reuses only the native rescue eligibility and factories. The 1.12 harem bracelet fix, 1.11 portrait selector, 1.10 voice pass and earlier entry, hit-area and portrait-compatibility fixes remain. Simplified Chinese / English. 1.13 修复母亲的日用品来访：改为同时接受日用品和食物，移除隐藏的营养果特例，普通分支台词同步；被捕保释/释放调度只复用原生救援资格与工厂。保留 1.12 手镯修复、1.11 立绘选择、1.10 voice pass 与更早的入线、点击区、立绘兼容修复。简体中文 / English。</Description>
   <GameVersions>
     <Version>0.46</Version>
     <Version>0.46D</Version>
