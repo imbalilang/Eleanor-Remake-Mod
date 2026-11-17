@@ -1,5 +1,5 @@
 #requires -Version 7.0
-# Offline checks against an installed 0.46D assembly. Game and mod DLLs are
+# Offline checks against the supplied installed game assemblies. Game and mod DLLs are
 # rewritten only in memory; no game files or saves are modified.
 param(
     [Parameter(Mandatory=$true)][string]$Managed,
@@ -7,10 +7,27 @@ param(
     [switch]$Maid,
     [switch]$Dual,
     [switch]$Rewrite,
-    [switch]$ReleaseQA
+    [switch]$ReleaseQA,
+    [switch]$SmokeOnly
 )
 if($ReleaseQA){$Rewrite=$true}
 $ErrorActionPreference = 'Stop'
+$script:TestPhase = 'fixture'
+trap {
+    $classification = if ($_.Exception.ToString() -match 'ECall|InternalCall') {
+        'ENVIRONMENT_FAILURE'
+    } elseif ($script:TestPhase -in @('fixture','load')) {
+        'TOOL_FAILURE'
+    } elseif ($_.Exception.Message -like '[[]STORY_FAILURE[]]*') {
+        'STORY_FAILURE'
+    } else {
+        'RUNTIME_OR_FIXTURE_FAILURE'
+    }
+    Write-Host "[$classification] phase=$script:TestPhase location=$($_.InvocationInfo.ScriptName):$($_.InvocationInfo.ScriptLineNumber)"
+    Write-Host $_.Exception.Message
+    Write-Host $_.ScriptStackTrace
+    break
+}
 Add-Type -Path (Join-Path $Managed 'Unity.Burst.Cecil.dll')
 $resolve = [Func[System.Runtime.Loader.AssemblyLoadContext,System.Reflection.AssemblyName,System.Reflection.Assembly]]({
     param($context,$name)
@@ -30,7 +47,23 @@ function GetCType($assembly, $name) { $assembly.MainModule.GetTypes() | Where-Ob
 function Method($assembly, $type, $name, $count = -1) {
     $methods = (GetCType $assembly $type).Methods | Where-Object Name -eq $name
     if ($count -ge 0) { $methods = $methods | Where-Object { $_.Parameters.Count -eq $count } }
-    return $methods | Select-Object -First 1
+    $result = $methods | Select-Object -First 1
+    if ($null -eq $result) { throw "Fixture method missing: $type.$name (parameter count $count)" }
+    return $result
+}
+function Import-Reference($module, $reference) {
+    if ($null -eq $reference) { throw 'Fixture attempted to import a null reference.' }
+    if ($reference -is [Mono.Cecil.MethodReference]) {
+        return $module.ImportReference([Mono.Cecil.MethodReference]$reference)
+    }
+    if ($reference -is [Reflection.MethodBase]) {
+        return $module.ImportReference([Reflection.MethodBase]$reference)
+    }
+    if ($reference -is [Mono.Cecil.TypeReference]) {
+        return $module.ImportReference([Mono.Cecil.TypeReference]$reference)
+    }
+    if ($reference -is [type]) { return $module.ImportReference([type]$reference) }
+    throw "Unsupported fixture import: $($reference.GetType().FullName)"
 }
 function Body($method) {
     $method.Body = [Mono.Cecil.Cil.MethodBody]::new($method)
@@ -96,7 +129,7 @@ if($Maid){
     $ready=[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ldsfld,$instance)
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldsfld,$instance);$il.Emit([Mono.Cecil.Cil.OpCodes]::Brtrue,$ready)
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldstr,'PlayerStore creating getter accessed before a run exists')
-    $il.Emit([Mono.Cecil.Cil.OpCodes]::Newobj,$game.MainModule.ImportReference([NullReferenceException].GetConstructor([type[]]@([string]))))
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Newobj,(Import-Reference $game.MainModule ([NullReferenceException].GetConstructor([type[]]@([string])))))
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Throw)
     $il.Append($ready);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 }
@@ -110,7 +143,7 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,($dialog.Fields | Where-Object Name -eq
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Dup)
 $end = [Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Pop)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Brfalse_S,$end)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$game.MainModule.ImportReference([Action].GetMethod('Invoke')))
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,(Import-Reference $game.MainModule ([Action].GetMethod('Invoke'))))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldc_I4_1)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 $il.Append($end)
@@ -139,7 +172,7 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$getClient)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,$dismissField)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Dup)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Brfalse,$noCallback)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$game.MainModule.ImportReference([Action].GetMethod('Invoke')))
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,(Import-Reference $game.MainModule ([Action].GetMethod('Invoke'))))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Br,$return)
 $il.Append($noCallback)
 $il.Append($return)
@@ -163,7 +196,7 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 foreach ($method in @('Log','LogError')) { Ret $mod 'EleanorRomance.ModEntry' $method }
 $il=Body (Method $mod 'EleanorRomance.ModEntry' 'LogError')
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$mod.MainModule.ImportReference([Console].GetMethod('WriteLine',[type[]]@([string]))))
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $mod.MainModule ([Console].GetMethod('WriteLine',[type[]]@([string])))))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 Ret $game 'GameGridInventory' 'Validate'
 Ret $game 'GameItemElement' 'Validate'
@@ -215,32 +248,40 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldstr,'maleSec1');$il.Emit([Mono.Cecil.Cil.Op
 $master=GetCType $game 'DirectoryMaster'
 $factoryField=[Mono.Cecil.FieldDefinition]::new('TestFactory',
     [Mono.Cecil.FieldAttributes]::Public -bor [Mono.Cecil.FieldAttributes]::Static,
-    $game.MainModule.ImportReference([Func[string,bool,object]]))
+    (Import-Reference $game.MainModule ([Func[string,bool,object]])))
 $master.Fields.Add($factoryField)
 $il=Body (Method $game 'DirectoryMaster' 'Item' 2)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldsfld,$factoryField)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$game.MainModule.ImportReference([Func[string,bool,object]].GetMethod('Invoke')))
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,(Import-Reference $game.MainModule ([Func[string,bool,object]].GetMethod('Invoke'))))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Castclass,(GetCType $game 'GameItem'))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
-# Keep the real native scheduler, and apply the same queue filter as Harmony.
-$queueMethod=Method $game 'StoreClientManager' 'AddClient'
-$il=Body $queueMethod
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference((Method $mod 'EleanorRomance.VanillaEleanorBridge' 'FilterScheduledClient')))
-$queueReturn=[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ret)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Brfalse,$queueReturn)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
-$queueField=(GetCType $game 'StoreClientManager').Fields|Where-Object Name -eq 'clientStack'
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,$queueField)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
-$listAdd=[Mono.Cecil.MethodReference]::new('Add',$game.MainModule.TypeSystem.Void,$queueField.FieldType)
-$listAdd.HasThis=$true
-$listAdd.Parameters.Add([Mono.Cecil.ParameterDefinition]::new($queueField.FieldType.ElementType.GenericParameters[0]))
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$listAdd)
-$il.Append($queueReturn)
+# Apply production Harmony prefixes while retaining native scheduler/queue bodies.
+# Takeover is scoped to the three native methods, never identifier filtering.
+foreach ($pair in @(
+    @('CheckStoryLineEleanor','Patch_CheckStoryLineEleanor'),
+    @('HandleEleanorEarlyClient','Patch_HandleEleanorEarlyClient'),
+    @('HandleEleanorUncleClient','Patch_HandleEleanorUncleClient'),
+    @('AddClient','Patch_NativeEleanorQueue'),
+    @('AddNextClient','Patch_NativeEleanorQueueNext')
+)) {
+    $target = Method $game 'StoreClientManager' $pair[0]
+    $prefixType = GetCType $mod ('EleanorRomance.' + $pair[1])
+    $prefixType.IsNotPublic = $false; $prefixType.IsPublic = $true
+    $prefix = Method $mod $prefixType.FullName 'Prefix'
+    $prefix.IsPrivate = $false; $prefix.IsPublic = $true
+    $il = $target.Body.GetILProcessor(); $first = $target.Body.Instructions[0]
+    if ($prefix.Parameters.Count -gt 0) {
+        $il.InsertBefore($first,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ldarg_0))
+    }
+    if ($prefix.Parameters.Count -gt 1) {
+        $il.InsertBefore($first,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ldarg_1))
+    }
+    $il.InsertBefore($first,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $game.MainModule $prefix)))
+    $il.InsertBefore($first,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Brtrue,$first))
+    $il.InsertBefore($first,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ret))
+}
 # Calendar anchoring and reputation values are run fixtures, not eligibility rules.
 $il=Body (Method $game 'StorylineSchedule' 'StartDay')
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldc_I4,23);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
@@ -265,7 +306,7 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 # Native gift construction is real; the placement boundary supplies space/full.
 $il=Body (Method $game 'PlayerStore' 'AddDirectSellingItemToTableMiddle')
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$game.MainModule.ImportReference((Method $mod 'EleanorRomance.VanillaEleanorBridge' 'CaptureReward')))
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $game.MainModule (Method $mod 'EleanorRomance.VanillaEleanorBridge' 'CaptureReward')))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Pop);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 foreach($getter in @('get_frontInvinvElement','get_backInvinvElement','get_invElement','get_showcaseElement')){
     $il=Body (Method $game 'EmporiumEntry' $getter)
@@ -303,7 +344,7 @@ if($Dual){. (Join-Path $PSScriptRoot 'test_dual_boundaries.ps1')}
 if($Rewrite){
     $il=Body (Method $mod 'EleanorRomance.ModEntry' 'LogError')
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
-    $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,$mod.MainModule.ImportReference([Console].GetMethod('WriteLine',[type[]]@([string]))))
+    $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $mod.MainModule ([Console].GetMethod('WriteLine',[type[]]@([string])))))
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
     $inventoryGetter = Method $game 'EmporiumEntry' 'get_invElement'
     $fixtureInventory = [Mono.Cecil.FieldDefinition]::new('TestRewriteInventory',
@@ -317,6 +358,7 @@ if($Rewrite){
     $method.IsPublic=$true
 }
 if($ReleaseQA){. (Join-Path $PSScriptRoot 'test_release_qa_boundaries.ps1')}
+$script:TestPhase = 'load'
 foreach ($assembly in @($game,$mod)) {
     $stream = [IO.MemoryStream]::new()
     $assembly.Write($stream)
@@ -325,9 +367,17 @@ foreach ($assembly in @($game,$mod)) {
     $stream.Dispose()
 }
 function Assert($condition,$message) {
-    if (!$condition) { throw $message }
+    if (!$condition) { throw "[STORY_FAILURE] $message" }
 }
 function Blank($type) { [System.Runtime.CompilerServices.RuntimeHelpers]::GetUninitializedObject($type) }
+if ($SmokeOnly) {
+    if ($null -eq [EleanorRomance.VanillaEleanorBridge].GetMethod('PrepareScheduledClient')) {
+        throw 'Current bridge API unavailable after fixture load.'
+    }
+    'PASS: fixture imports and patched game/mod assembly loading.'
+    return
+}
+$script:TestPhase = 'scenarios'
 if($Maid){
     [PlayerStore]::TestInstance=$null
     $reproduced=$false
@@ -763,7 +813,7 @@ Assert ($store.storeClientData.eleanorArrestDay -eq 40 -and
     [EleanorRomance.RomanceState]::Affection -eq 17 -and [EleanorRomance.RomanceState]::DriveState -eq 2) 'Repeated migration postponed bail or reset story progress.'
 [EleanorRomance.RomanceState]::OldBlocked=$true
 $store.storeClientData.eleanorArrestDay=7
-Assert ([EleanorRomance.VanillaEleanorBridge]::FilterScheduledClient($store.storeClientManager,
+Assert ([EleanorRomance.VanillaEleanorBridge]::PrepareScheduledClient($store.storeClientManager,
     [StoreClient]::new())) 'Preserved vanilla save was blocked.'
 [EleanorRomance.VanillaEleanorBridge]::SynchronizeRescue()
 Assert ($store.storeClientData.eleanorArrestDay -eq 7) 'Vanilla-preserved save was migrated by the remake.'
@@ -778,7 +828,7 @@ $store.storeClientManager.CheckStoryLineEleanor()
 Assert ($store.storeClientManager.clientStack.Count -eq 1 -and
     $store.storeClientManager.clientStack[0].identifier -eq 'eleanorBailOfficer') 'Vanilla introduction leaked into remake rescue.'
 $external=[StoreClient]::new();$external.identifier='eleanor_external';$external.sourceModId='another_mod'
-Assert ([EleanorRomance.VanillaEleanorBridge]::FilterScheduledClient($store.storeClientManager,$external)) 'Queue filter swallowed an unrelated mod client.'
+Assert ([EleanorRomance.VanillaEleanorBridge]::PrepareScheduledClient($store.storeClientManager,$external)) 'Queue preparation swallowed an unrelated mod client.'
 
 # Postponement leaves native bail eligibility intact; refusal ends only the remake.
 foreach($decline in @($false,$true)){

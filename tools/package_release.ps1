@@ -5,6 +5,12 @@ $root=Split-Path $PSScriptRoot -Parent
 if($manifest.Manifest.ModVersion -ne $Version){throw 'Release version differs from manifest.'}
 $parent=Join-Path $root ('dist/workshop-'+$Version)
 $stage=Join-Path $parent 'EleanorRomance'
+$distRoot=[IO.Path]::GetFullPath((Join-Path $root 'dist')).TrimEnd('\')+'\'
+$stageFull=[IO.Path]::GetFullPath($stage)
+if(-not $stageFull.StartsWith($distRoot,[StringComparison]::OrdinalIgnoreCase)){
+    throw "Refusing to clean staging path outside dist: $stageFull"
+}
+if(Test-Path -LiteralPath $stage){Remove-Item -LiteralPath $stage -Recurse -Force}
 $null=New-Item -ItemType Directory -Path $stage -Force
 foreach($file in @('manifest.xml','README.md','preview.png')){Copy-Item -LiteralPath (Join-Path $root $file) -Destination (Join-Path $stage $file) -Force}
 foreach($file in @('EleanorRomance.dll','EleanorRomance.deps.json')){Copy-Item -LiteralPath (Join-Path $root ('bin/Release/'+$file)) -Destination (Join-Path $stage $file) -Force}

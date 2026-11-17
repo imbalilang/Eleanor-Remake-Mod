@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-11-16",
+  "files": [
+    {
+      "path": "Content/story_v06.json",
+      "bytes": 194634,
+      "sha256": "6952ad6565cbf6afa1c5157b403a222dde5cce1d9c48c4532b924a09e2c0693d"
+    },
+    {
+      "path": "Content/love_romance_v02.json",
+      "bytes": 41259,
+      "sha256": "d4b63d30d6f4cf93f8dafac21d8fd7f50dd24ec4f4dc84e3778ead2e5251a2a2"
+    },
+    {
+      "path": "Content/dual_romance_v04.json",
+      "bytes": 490314,
+      "sha256": "3768061bd95bdac90321dbdb91fd4384a795c8acd2f756c2833a324d0af24d6a"
+    },
+    {
+      "path": "Content/revolution_v2.json",
+      "bytes": 146027,
+      "sha256": "b2a1d06977f54f9d1098fedef92b9a4da78cd1956325dcc64e8933b08c293252"
+    },
+    {
+      "path": "tools/NovelWorkFlow_Eleanor/world_book.json",
+      "bytes": 60514,
+      "sha256": "ded4652aa93bdf898039e211439ee72c97351278ac2afc668da6b52f46b67927"
+    },
+    {
+      "path": "tools/NovelWorkFlow_Eleanor/world_book_love.json",
+      "bytes": 60140,
+      "sha256": "cca9e56a097eb5c6ed8b60b021a15591ca1afa48c942dcf70a0fa6ece3e74199"
+    },
+    {
+      "path": "tools/NovelWorkFlow_Eleanor/world_book_D_v2.json",
+      "bytes": 63318,
+      "sha256": "a8c318fce33afd0a1a24bafc5bfef93cab0424458da319c71026812a06fd672b"
+    },
+    {
+      "path": "tools/NovelWorkFlow_Eleanor/world_book_revolution_v2.json",
+      "bytes": 55175,
+      "sha256": "91a6183a313d709407aea1781fcfc242075c5c51dea61cc50af5808821c0820b"
+    },
+    {
+      "path": "tools/NovelWorkFlow_Eleanor/writer_system_prompt.md",
+      "bytes": 11416,
+      "sha256": "41a7ca44d58dad52914a56410c844f586b3f2767ea27f9a0c06bfcab3de1f678"
+    },
+    {
+      "path": "tools/NovelWorkFlow_Eleanor/writer_prompt_template.md",
+      "bytes": 29533,
+      "sha256": "62efb618b895af643f6f3d764db5a4385b15bb84b287a451e8d3cafed064fded"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\C19_BRIEF_RUN_AND_HYBRID.md",
+      "bytes": 4530,
+      "sha256": "bc7fd284062d7a4940b21b7c43d6a6246d205fd9af55ebc0b39f8a5e1742f107"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\C19_MINIMAL_EDIT_AND_HYBRID.md",
+      "bytes": 8877,
+      "sha256": "904ae4e9eacb72b4683ab56741ab75b1867324778671d386d50960e2ca651cd5"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\C19_SKILL_RUN.md",
+      "bytes": 4301,
+      "sha256": "c1fe44bf39ad4283261746e50310db62fe35cedadfb6db6fde43b88d43458ea4"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\chapter_1_idiom_raw.txt",
+      "bytes": 1616,
+      "sha256": "6dcaac5548c0a54deed740f6429777939bb42e0535fc507d86c66b35047f6c14"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\HYBRID_C19.md",
+      "bytes": 10567,
+      "sha256": "074b66c12b29e71cf9ced914df4541d684b84e0b8d67b69fce0815efbd0cacad"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\SPLIT_C19_QA.md",
+      "bytes": 4301,
+      "sha256": "02fcd75b97e435c319beac78e47690baada337aec55d91eec6c3546ac3681d00"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\idiom_before_card\\chapter_1_idiom_raw.txt",
+      "bytes": 1265,
+      "sha256": "9b9c41de53e9cbfdddb00bf262b087d25eb0f2c4c118a72c39e4f82369f76e11"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\SUPER_QA_BATCH\\c19\\candidate_raw.txt",
+      "bytes": 2356,
+      "sha256": "42fa64b14947cef4c588ee810e1b583171dc6e2036eb257b1d9ee2235d6a0dfc"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\SUPER_QA_BATCH\\c19\\candidate_reordered.txt",
+      "bytes": 2314,
+      "sha256": "b1827bbe25d3087a0b2996b78de9b08d34b27ab8d44fb8ba59c71e78e06633a3"
+    },
+    {
+      "path": "tools\\NovelWorkFlow_Eleanor_Test\\Test_Output\\SUPER_QA_BATCH\\c19\\prompt.txt",
+      "bytes": 21775,
+      "sha256": "2c80e7684922321dad0e06adebe451528846029cdefbd2074d51275599215c19"
+    }
+  ]
+}

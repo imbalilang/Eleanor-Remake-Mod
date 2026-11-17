@@ -1,0 +1,11 @@
+1.12 追加修复
+
+- 母亲的日用品来访改为同时接受 Household Good 和 Food 两类物品，移除隐藏的单一 Nutrifruit 特例；界面会显示两个兴趣标签，普通分支台词同步改为“日用品，还有吃的”。
+- 被捕保释/释放调度只复用原生救援客户资格与工厂，不再顺带触发无关的固定日访谈。
+- 保留 1.12 后宫手镯事件计数修复与 1.11 立绘选择。
+
+1.12 follow-up
+
+- Eleanor's mother now accepts both Household Good and Food instead of a hidden Nutrifruit-only exception; both interest tags are shown, and the normal-branch line now says household goods and something to eat.
+- Arrest bail/release scheduling now reuses only the native rescue eligibility and factories, without pulling in unrelated fixed-day visits.
+- The 1.12 harem bracelet event-count fix and 1.11 portrait selector remain.

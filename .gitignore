@@ -54,6 +54,8 @@ tools/super_qa/
 tools/NovelWorkFlow_Eleanor/
 tools/NovelWorkFlow_Eleanor_Test/
 tools/NovelWorkFlow_Eleanor_backup_*/
+tools/PipelineReference/
+tools/novel_workflow_*.py
 docs/SUPER_QA_*
 docs/AGENT_TEXT_PIPELINE_USAGE.md
 docs/DECISIONS_REQUIRED.md

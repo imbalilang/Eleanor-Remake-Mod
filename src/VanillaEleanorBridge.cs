@@ -20,6 +20,19 @@ namespace EleanorRomance
 
         public static bool AllowOriginalSchedule => StoryDirector.ShouldSuppressOriginal && RescuePending;
 
+        // The native method also queues fixed-day introductions. During a linked
+        // arrest, reuse only the native rescue eligibility/factories so those
+        // unrelated visits cannot accompany the officer or the freed visitor.
+        public static void ScheduleRescue(StoreClientManager manager)
+        {
+            if (!RescuePending || manager == null) return;
+            int day = StoreStation.Instance.dayCounter;
+            if (StoreClientData.CanEleanorBailOfficerVisit(day))
+                manager.AddClient(StoreClientUniqueList.CreateEleanorBailOfficer());
+            if (StoreClientData.CanEleanorFreedVisit(day))
+                manager.AddClient(StoreClientUniqueList.EleanorFreed());
+        }
+
         public static bool IsOurClient(StoreClient client) => client != null
             && (client.sourceModId == ModConstants.ModId
                 || (client.identifier ?? "").StartsWith("er_story_", StringComparison.Ordinal));

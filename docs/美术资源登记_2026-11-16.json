@@ -1,0 +1,1856 @@
+{
+  "version": "1.12",
+  "date": "2026-11-16",
+  "scope": "Runtime assets under Textures/Items; Art candidates are not automatically runtime-approved.",
+  "testingStatus": "Game-window validation skipped by user; all runtimeStatus values remain not-tested-in-game.",
+  "assets": [
+    {
+      "file": "Textures/Items/cp_portrait_eleanor1.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "cp_portrait_eleanor1",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 38219,
+      "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor2.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "cp_portrait_eleanor2",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37605,
+      "sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor3.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "cp_portrait_eleanor3",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36269,
+      "sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor_rev.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "cp_portrait_eleanor_rev",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36302,
+      "sha256": "397e062f5b7949a0237b1c55e1683d8d5836bdd56f4d23d24f465a1fc57a8c56",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor_scav.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "cp_portrait_eleanor_scav",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37856,
+      "sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/eleanor_bracelet.png",
+      "role": "item_or_ui",
+      "runtimeKey": "eleanor_bracelet",
+      "dimensions": [
+        64,
+        64
+      ],
+      "bytes": 920,
+      "sha256": "40610a6776f0a198aef8ca2b3fc7f691cfc99cccf7e6b2e5e5b1396ab7c65c3c",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/eleanor_locket.png",
+      "role": "item_or_ui",
+      "runtimeKey": "eleanor_locket",
+      "dimensions": [
+        64,
+        64
+      ],
+      "bytes": 1147,
+      "sha256": "f985fa3420f781248644399fa3ec3120ffd52bf17089e208e3490aa7cd774291",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_ending_harem_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_ending_harem_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 804394,
+      "sha256": "d088018f1ab7a15911031d7a8601daf11058df18f5416ebcbd5fe2e23f57b641",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_ending_love_wedding.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_ending_love_wedding",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 916081,
+      "sha256": "1e4afe5f501bf69069ea1effa585df01d22fbe544b0d2b8e006040d7282bc9e2",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_ending_maid_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_ending_maid_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 731805,
+      "sha256": "a23dee95a7576a26532af4b0c12342b0d18c62642dd85c49149a6cb856c8cbd8",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_ending_revolution_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_ending_revolution_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 689522,
+      "sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_event_harem_lydia_date_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_event_harem_lydia_date_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 936290,
+      "sha256": "c0d649e3ce34b174a28be35f3de06000daa0874b7663f55d579290ec9944f609",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_event_love_water_cut_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_event_love_water_cut_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 687573,
+      "sha256": "5a4d923dce3027165a08724245ec7585e758fffea89ee40f1079dac89bd2f980",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_event_maid_gala_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_event_maid_gala_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 741824,
+      "sha256": "1f85d86bd42732af29c978ebc5c74fd1acbbd4445687be0995f0579486f38979",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "role": "ending_or_event_cg",
+      "runtimeKey": "er_event_revolution_embrace_cg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 808575,
+      "sha256": "195521fd28dc7d3f8406dd51aa7d8ce9015ccb8e113326dd23336c7784753545",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36546,
+      "sha256": "660e1e9e2223f8f22756645023072d759fc651cdf443c297f13eb96fde0d491f",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36666,
+      "sha256": "85c7accbde65d9740796d8ab4339db264b5b1a5446e568d98e97f2c748affb89",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36698,
+      "sha256": "3054f7564274430f6f95b838b148509c30da24798a686fcfc103b57bd1a1322a",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36526,
+      "sha256": "f56f6bbf2b09d35b28d6191c2b8a49057dbeb9a1e31404f2905dcd66760635b9",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36627,
+      "sha256": "d1b31c440ebd4e8c5cc81554858e09f891077e7a9d52273d057bf8bb64f74143",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36631,
+      "sha256": "e5988ffe1ba75c85a52348450d7fda4c29f2909693b95130d9705ef19ee32f4e",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36703,
+      "sha256": "bc2697e52d8a201da6ef87aed4a1482faf83f398c344134d3175b52b33d88b3b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36643,
+      "sha256": "922d5097959090a48bbebbff08d77cdf485584fcffa806a49d5f9dff97454211",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor1_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36660,
+      "sha256": "723f65d89d27f4cda56aec42a00dbd0648fc560a2e06dae7adc425835cc75ef6",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 38984,
+      "sha256": "7fb35a6e3fa36cf202c5c674a39b2d1eb41dd02e52a463bf011e03ac2d845798",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39050,
+      "sha256": "c9ba8395441f8f8861182b55f8481fb822932a7ca347e5a1d9999c170b8132a6",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39068,
+      "sha256": "aa63fdc3aebc8129889373df65dae2a8509f26a8455e00e1dac6972b5d3bbb6d",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39066,
+      "sha256": "918b09a5483ede8766352e0e8b2baa63676ec2d3eee528bbcd29767f6fe82437",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39036,
+      "sha256": "9ab4d4a93964a541ea1132d6404da88bf75dcf1f6dc116fae1c67a347086dd5e",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39084,
+      "sha256": "611d36e68e6e4cb280a59010cbb7d5b60037de56cbdf0db255baa2dd8ee9f1e1",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39152,
+      "sha256": "cf34e2436501fa1ebd3ea706b171a7213b172254c4bc921ed981076bf12474c2",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39075,
+      "sha256": "071efaa0ce9e121ba8f58337ff7d31c7d94ab2f5a361f7c3f2d98d4a3a1fd012",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_gala_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39075,
+      "sha256": "82f5da34c1ea65fd0f8dadeefcdf8f61c1845d0e663a95dcfaac417a1802e97b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37679,
+      "sha256": "c3814957ea51c3629e8c4bbe57ff9ae40b0d729f13547e6406f11ae37670d6d8",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37720,
+      "sha256": "49ba2fbfa82ebc8320736303381b162b4d7087faed3d8f1d9a19458db3b5dab1",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37719,
+      "sha256": "884d7c494889a83eca193864fcfeb01a6eb70b90656dfc1905b769563b693b6b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37743,
+      "sha256": "b1df0db785f45e0128a3705d818b3f2b1ced74766005eaddf08abcf6d2e540a1",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37704,
+      "sha256": "ff1611af532ae140fa7f1517772dfe8f0b7cc7ac8f3a2f09a27037a3ac960fb8",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37729,
+      "sha256": "23b730217556c1aef03400583950257cf8d41260b78301071d99c7a548b5a090",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37782,
+      "sha256": "4a44e313f0758144a9aca25984fc5759986c6edfeb1023bc319eca4775cb06c4",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37732,
+      "sha256": "4a7a045faf953c338dc821ee0d9e9bf177b08c8273903aa406662c5a8164f56b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_love_intimate_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37681,
+      "sha256": "298b156809f6f5cc2f12ba4f1efd0b75fe96cb554b754fdf34e22ff387eb3ba9",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39003,
+      "sha256": "1ee3805c03cbe77859bce090e219121967d0dcefa076dd8601596a4054350e76",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39031,
+      "sha256": "ce38c0d20c8a6481db67915c4d3fd8141ccda887f79a14f9b84ea9504081b671",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39035,
+      "sha256": "f828654623d0ccfd1e0c049ed012d48fe8d8a7c9b41c0152e114b03d29fcfc73",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39030,
+      "sha256": "e987197a0fe25e7d3dd493568fef985c9d2222423dd006b8438ea68be345e6fb",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39022,
+      "sha256": "bb934261318dc7f8f74891f39bb3085fc31fd9cd40ed0f2f70fcd9ba23b838a1",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 41110,
+      "sha256": "b79558ab4cff80c0724434fbe8fcae80d68e392f7f593a863b8c27fecd33670c",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39158,
+      "sha256": "6097d737de5a0b0f460dcd5b73479de2106489c30a44a53e36dea874bfb816d2",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 41155,
+      "sha256": "c37ad85d4123c1058e0d8bf6ac0d8cd6c11fe487cd734d35f336cf4de2bdc876",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39055,
+      "sha256": "6c14b2ab9590c84e8e10de5d39987ae21f531b66cdc22908a85c6eefebdee002",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_tsun.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_maid_tsun",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39025,
+      "sha256": "afc8cd0654e190b6ecafb1e9a9fd12e0b91b69829158775544eef08e1a3ba423",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34739,
+      "sha256": "a0566b3378333d02597fe72a49a862ece2bd22bc10d3b29c4f36d1c7c7a61f92",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34689,
+      "sha256": "e3ff70beee4362b05d7ca64b52cfe28e580aa2859ba789767daf0c63a4afb79a",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34767,
+      "sha256": "d2f69e03798e42f2f2c5bbdd592cd3ca2e54bef50665b3def32aca153dbcf3bf",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34728,
+      "sha256": "5772790e77aff4bd18d7e94c479bc6bf5476883fb2089b7b9fd492b0d705ca49",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34673,
+      "sha256": "13ac69c1025f1184f2f1e45a09504b9019c3017bfda9e094d640d7f32f9d3d23",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34700,
+      "sha256": "2bde5070d02631cd5dd23a0f686b490af64baf351d8bc0c0ff5efc18ae3d52b9",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34769,
+      "sha256": "4ae59aae5df023ee565a20a808d3d6932a1d7148c26a1a46ab4833780bc4e96e",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34703,
+      "sha256": "c72079fdabf0b69e96021ffce3119d317a7652e95de9648cc61c09670fc8105b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_rev_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 34702,
+      "sha256": "cce2a080dee5fe8f60478cc8e0c944733244843e981370c7c3397a047f172f32",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36542,
+      "sha256": "7de23e8b2c00a1e29ddbcacf92df654fdd54f6f619bf1ed63bd7d5109430bddd",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36572,
+      "sha256": "4f0af16032ddc2336181f360f390da22404540d4a8f7c0de1be641fa6e79c069",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36619,
+      "sha256": "912b66cbe7cb5e82dc96688429b245a8a7a3bf868f276e8c05925cf2ea68033a",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36599,
+      "sha256": "5a02a1e8d12835f547acb2c20d45a1c1311b16fd7368745d5470c9c03335d324",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36574,
+      "sha256": "ebe6edd50cb8d7d8c91ed1cbe54734402f4ae50a39c4639e8a00ebc34ecb9251",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36627,
+      "sha256": "e07efdddfed02b5a8bf757148e7d150fab7654586fea3c03e832f869def31582",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36661,
+      "sha256": "db25185176a69445880c049685c9981b779d26f1fdc40fc578b33fbe08d51bd7",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36605,
+      "sha256": "d65bd8489d7aadcc79d844fb014d1a82a9343390e515a93b5253900ed08f7844",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_revolution_undersuit_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36626,
+      "sha256": "b6c45e7148150bfd5b5f677855214c0f1540727feb1d0b4e9deb1cc1d7018698",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36341,
+      "sha256": "145a221428c36bc8cbd1416201358ce081664f7274d0c12a3e6b117ee2d4073e",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36378,
+      "sha256": "46da974b83daa6302686fa4beebc2b86c466b05b9057dc88b8bfdc3ec180f7ff",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36390,
+      "sha256": "79a497e36530853fa499ec1c0c36d23ffcc5bb746e890b2fd5d5375d4c9ddfe9",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37816,
+      "sha256": "5bef7228dc02450f27441ba80658138698012e83e7566a676fa918cc9651ac32",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36343,
+      "sha256": "d7f976116cb77282827f60361f155b0453f0bc8d2d051fe95861fcd5b931928f",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37893,
+      "sha256": "6e973989f9eef2a5f7fc6d724e3d92cf87ebbc0541687e8707981f3e4c3f9a8d",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36437,
+      "sha256": "7be032f1ba6e30b78960e4cf4ec8bd9501799a241009a8137b9f6e86b12ccfc0",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36357,
+      "sha256": "2eb472d283ca957be0182f5ff93d27472b78b5f6d3dd9c234b57b49b1d9a0bc8",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_eleanor_scav_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37802,
+      "sha256": "c3acc9eb8ebdd7b9a294db0cd5b4d0e57a7d09cc280e380d715898e3cedf0063",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35412,
+      "sha256": "28a0d5b7d1b423048e7a106266fd793b94fae1e1c7df03c9cb1b4f31984d25c2",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35421,
+      "sha256": "131b6ccb53e6ba9e1e8e183b2b85f03ba535407ba6ebe7b4d114f0be3971e64c",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_flustered.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_flustered",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35444,
+      "sha256": "b4c0beafb334c2bb493c756c2faf4b122e14eca3eebd6e44a026708dd7d05f10",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36120,
+      "sha256": "3dd088674a623c5576d2424314f89159166c8e839fd40b578dd151a78b01161e",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35454,
+      "sha256": "5dff8c753a4e18e06a7c5bb1429923bc7c7caef2e25c241aecddec36afdc76e7",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36135,
+      "sha256": "00223ccb07aa96bd72c97dde3b21b7d654f793b1b51522ebff6249a35b512e49",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35444,
+      "sha256": "b4c0beafb334c2bb493c756c2faf4b122e14eca3eebd6e44a026708dd7d05f10",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36257,
+      "sha256": "735a8bbd49eb247fa57612f71503354f5592fb56b04de8df51367cf4e0fe284b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35442,
+      "sha256": "3f8c826492ab0fd9987c41fd11bb6bb3e62ef8e6a8e7c410b6c720a9140faf68",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_tease.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_tease",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36190,
+      "sha256": "8656be24f93df2a9d4da7ec4051473f8f292c59ba045b1f04daeaae81a60f151",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_daily_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35438,
+      "sha256": "9f8e3057dbabf88ba2a8cb55e9f09f550bbc4fbea67abeea802409b07b54f7cd",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35714,
+      "sha256": "f400349a8a2480501896680af4a9b842a7c83defa8b66be9b83e67ec4fd5c4b0",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35760,
+      "sha256": "5af12f82946d493144df5c96ca88dc25cbf436b7b25ee36c61e7c2beadafdfa3",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_flustered.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_flustered",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36527,
+      "sha256": "fb86cdd12c1e83a5b21409b7f7e030841941208fa719455346d6a15cd7e4f73d",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36439,
+      "sha256": "c7ba69e7355a8f93fee4ad98a7005c3d987a329868e7b7232cadba9cf02d5bdf",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35738,
+      "sha256": "920d9250c1cc4fa558097ed9c401656fbcd6dd993937b406c55a3ed96b40b9c8",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36439,
+      "sha256": "b38dbc27b414e75796e85f3420d42c89452db6af6acc9e26e922208dfe390cc7",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35763,
+      "sha256": "7d1e9636354735d01f367b8e04b21b2853c2142cca9121bfdafb3c747ea15812",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36594,
+      "sha256": "80f8857b989bdbf1185e8dc7a4669d3fdb2d6d5fd0a8d500ed12a0984eeb8614",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35750,
+      "sha256": "20cac2ed98a8b62847cb72d1c29305340b0b4a3191ab9394ec47a11fd9e70d2b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_tease.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_tease",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36503,
+      "sha256": "d9d2fae3608ae808ccd00607cf21a098473660e3f72b68ae4fad189047139c37",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_lydia_date_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 35739,
+      "sha256": "01d20d0a52976d25cd1dcca36eb129f66a0b75f6d6559bb1009dd15357850a76",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28896,
+      "sha256": "6bf22f1d73bd0f05f9cd3cd6722df1251ab7cbd4d32f464ee6fc91e63d87b909",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28929,
+      "sha256": "d101aa3798640e921888475e4a710d6b65f95b0f652746073122e37dc7d211c1",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_angry.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_angry",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26675,
+      "sha256": "da3ea168bd5b5919c0f47130d2d4754acc5d694a2c5896267712cf88c6cd4721",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_determined.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_determined",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26734,
+      "sha256": "60ca0840f894aea5247e8d5a8f02320825cc30b94b2dfe92499ca6be0d48f722",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26796,
+      "sha256": "08f31c4ee8fab7a82dff9e1af07c385082762e381822037b6a66409307502df0",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26689,
+      "sha256": "b46e690dd850fbe16cdaa5d02e6cf828341699d1713cfaa7c098e1f0f2ff83c6",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26656,
+      "sha256": "590a65787799df15871569b9d8a423205f9a7c8669bc97daca7250a5e3ff64cf",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26687,
+      "sha256": "3a6c079af0a21ae4c884cb18815d9bda75485d8dfcf313799279b4c1da980e35",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26817,
+      "sha256": "39386dbe4276eef9278a05c8fa1daef30a0a2ce494d635c656a75891d84b36b0",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26689,
+      "sha256": "a5554a75c055a195e91314c81b0e34d9604125d9c8c72237a4482ffce60ceb02",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_home_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26645,
+      "sha256": "6bac16a3007c9a67f609a3506016d1e3293a0e12a0d849f7f5dc9eb1cf3a768b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_hurt.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_hurt",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28979,
+      "sha256": "0b289bc46606b754eb33c369ed8d832ed4f0402a726020418891de8083f354d1",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_sad.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_sad",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28882,
+      "sha256": "a4a1ca26417b6caf26c3f2384322262811d3a7692d8601742f103fc9d94b0799",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_serious.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_serious",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28882,
+      "sha256": "1995da7b0b28de2b4d19b4c742d2d71f3f09d29bcf473d78b33021c84828c1c8",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_shy.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_shy",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28890,
+      "sha256": "5129ced30ddfada80564108b5065456992792c0bcbc47b6889bcfea5d5a42796",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_smile.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_smile",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 29004,
+      "sha256": "be453d58648625e99ffd4f5d1be8a1288faf6060190fa5cecf2fe03bb651b846",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_soft.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_soft",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28866,
+      "sha256": "c4c401da3aa2c7e54b30074e594e67bdb1fe0ad2f20211a51bbd8f3b6f5c2e6e",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_tired.png",
+      "role": "expression",
+      "runtimeKey": "er_expr_sophia_tired",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28874,
+      "sha256": "6948566ad5bb9d7bc3fa2fafb8491c8ff978870519de04cd19832c427e70d283",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_lydia_recommendation_plaque.png",
+      "role": "item_or_ui",
+      "runtimeKey": "er_lydia_recommendation_plaque",
+      "dimensions": [
+        64,
+        64
+      ],
+      "bytes": 1218,
+      "sha256": "387a22df796ed7b6318fc437e60bfa4abf3f0a2b94d3fed21a55450fdfb4d913",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "er_portrait_eleanor_gala_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 40731,
+      "sha256": "0d68790bf9e45f41dc9f058a4c7cf7cb774d684f7dfb094d615c64196af0370b",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "er_portrait_eleanor_love_intimate_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 38887,
+      "sha256": "abd0ed1a19156ead1784ed7b83e60c1b860cb67023bd75916ebf838e72eb5955",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "er_portrait_eleanor_maid_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 40560,
+      "sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_maid_female_vanilla.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "er_portrait_eleanor_maid_female_vanilla",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 11335,
+      "sha256": "4a1c8e92438543712f3ad07c0ccc8c037cc1b9fb77f6a7ced1f6c5296aaa80ed",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_revolution_undersuit_female_beauty.png",
+      "role": "eleanor_portrait",
+      "runtimeKey": "er_portrait_eleanor_revolution_undersuit_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 37792,
+      "sha256": "726e8e1f1c7ca220813750415259d7ab6a43ca16b351d5411584fa3e366a7897",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+      "role": "lydia_portrait",
+      "runtimeKey": "er_portrait_lydia_date_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36503,
+      "sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_date_female_vanilla.png",
+      "role": "lydia_portrait",
+      "runtimeKey": "er_portrait_lydia_date_female_vanilla",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 39286,
+      "sha256": "e104f1f61588ed3c485d9f6c9e2a0998ba274cd003590c53b0c495512d3fa66a",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_female_beauty.png",
+      "role": "lydia_portrait",
+      "runtimeKey": "er_portrait_lydia_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 36175,
+      "sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_female_vanilla.png",
+      "role": "lydia_portrait",
+      "runtimeKey": "er_portrait_lydia_female_vanilla",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 38896,
+      "sha256": "9a2d7a43469d7a9e41e06bd6e6a4578aa81f1f4567803ed37c2b4a59bcbda358",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_female_beauty.png",
+      "role": "sophia_portrait",
+      "runtimeKey": "er_portrait_mother_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 28843,
+      "sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_female_vanilla.png",
+      "role": "sophia_portrait",
+      "runtimeKey": "er_portrait_mother_female_vanilla",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 12143,
+      "sha256": "0e77deb98b97c3e5c053386da8cd277336bb494282a12e88d1c70febcea4e4a5",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_home_female_beauty.png",
+      "role": "sophia_portrait",
+      "runtimeKey": "er_portrait_mother_home_female_beauty",
+      "dimensions": [
+        288,
+        212
+      ],
+      "bytes": 26661,
+      "sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "packageIncluded": true,
+      "runtimeStatus": "not-tested-in-game",
+      "sourceNote": "Textures/Items package asset; source master/candidate remains under Art/ where available."
+    }
+  ]
+}

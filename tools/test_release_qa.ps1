@@ -407,6 +407,7 @@ foreach($gift in @(1,3)){
     [EleanorRomance.RomanceState]::UncleReported=$true
     [EleanorRomance.RomanceState]::ReturnGiftChoice=$gift
     $text=@(Graph-Text ([EleanorRomance.EleanorStory]::CreateClient(20)).mainDialogue)
-    Assert (($text -contains 'er_v06_c19_b102_13') -eq ($gift -eq 1)) 'Confession referred to a refused gift'
+    Assert ($text -contains 'er_v06_c19_b102_13' -and
+        ($text -notcontains 'er_v06_c19_b102_15')) 'Confession closing was truncated or retained removed component callback'
 }
-'PASS: common protection/confession preserve arrest, release and refused-gift history.'
+'PASS: common protection/confession preserve arrest, release and gift history without component callback.'

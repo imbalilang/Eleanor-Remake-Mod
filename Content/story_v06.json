@@ -3892,7 +3892,7 @@
             },
             {
               "speaker": "mother",
-              "text": "我想买点日用品。我们住的地方还缺不少东西。",
+              "text": "我想买点日用品，还有吃的。我们住的地方还缺不少东西。",
               "expr": "neutral"
             },
             {
@@ -4357,8 +4357,8 @@
             },
             {
               "speaker": "player",
-              "text": "她买了日用品，还有营养果。",
-              "en": "She bought daily supplies. And nutrient fruit."
+              "text": "她买了日用品，还有吃的。",
+              "en": "She bought household goods, and something to eat."
             },
             {
               "speaker": "eleanor",
@@ -4400,26 +4400,6 @@
               "speaker": "eleanor",
               "text": "跟我算的差不多。少一点，我也认。",
               "en": "About what I figured. A little less and I'd still take it."
-            },
-            {
-              "speaker": "narrator",
-              "text": "她收钱时目光扫到后架。那块电子元件摆在最里面，底下没贴价签。",
-              "en": "As she takes the money, her eyes sweep the back shelf. The electronic component sits at the very back, no tag under it."
-            },
-            {
-              "speaker": "eleanor",
-              "text": "那个。怎么还没标价。",
-              "en": "That one. Why's it still not priced."
-            },
-            {
-              "speaker": "player",
-              "text": "不卖。",
-              "en": "Not for sale."
-            },
-            {
-              "speaker": "eleanor",
-              "text": "哼。一块破元件，放着也不嫌占地方。",
-              "en": "Hmph. A junk component. Taking up space and you don't even mind."
             },
             {
               "speaker": "narrator",
@@ -4742,11 +4722,6 @@
               "speaker": "player",
               "text": "好。",
               "en": "Okay."
-            },
-            {
-              "speaker": "eleanor",
-              "text": "还有，要是那块元件还在，别标价。",
-              "en": "And that component — keep it unpriced."
             },
             {
               "speaker": "narrator",

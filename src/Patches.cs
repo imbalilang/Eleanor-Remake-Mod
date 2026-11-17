@@ -7,9 +7,11 @@ namespace EleanorRomance
     [HarmonyPatch(typeof(StoreClientManager), nameof(StoreClientManager.CheckStoryLineEleanor))]
     internal static class Patch_CheckStoryLineEleanor
     {
-        private static bool Prefix()
+        private static bool Prefix(StoreClientManager __instance)
         {
-            return !StoryDirector.ShouldSuppressOriginal || VanillaEleanorBridge.AllowOriginalSchedule;
+            if (!StoryDirector.ShouldSuppressOriginal) return true;
+            VanillaEleanorBridge.ScheduleRescue(__instance);
+            return false;
         }
     }
 

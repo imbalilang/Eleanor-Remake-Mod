@@ -1637,7 +1637,7 @@ namespace EleanorRomance
             StoreClient client = NewNpcClient("mother", L.Get("er_name_mother"), MotherSpriteKey(), FactionKind.Upper);
             client.clientIntent = StoreClient.ClientIntent.BUY;
             client.clientBuyingTagList.Add("HOUSEHOLD_GOOD");
-            client.clientBuyingIdList.Add("nutrifruit");
+            client.clientBuyingTagList.Add("FOOD");
             client.SetBudget(220);
             client.SetVariety();
             bool protection = RomanceState.Route == 2 && RomanceState.ProtectionReady;
@@ -1652,8 +1652,9 @@ namespace EleanorRomance
                 if (item == null || price <= 0) return;
                 tracker.Record(item, price, eleanorIsSeller: false);
                 if (tracker.Discount || tracker.Overcharge) RomanceState.MotherUsedNegotiatedPrice = true;
-                if (item.identifier == "nutrifruit") RomanceState.MotherBoughtFruit = true;
-                else RomanceState.MotherBoughtGoods = true;
+                // Legacy flag name: "Fruit" now means the FOOD category.
+                if (item.IsTag("FOOD")) RomanceState.MotherBoughtFruit = true;
+                if (item.IsTag("HOUSEHOLD_GOOD")) RomanceState.MotherBoughtGoods = true;
             };
             FinishWhenLeaving(client, 18, 19, () =>
             {
@@ -1726,9 +1727,7 @@ namespace EleanorRomance
                 {
                     bool giftShown = RomanceState.ReturnGiftChoice == 1 || RomanceState.ReturnGiftChoice == 2;
                     return StoryEngine.BuildSelected(StoryV06Content.B_C18_B101,
-                        index => index >= 24 && (tracker.Any
-                            ? index < 26 || index > 29 || giftShown
-                            : index >= 27 && index <= 29 && giftShown));
+                        index => tracker.Any && index >= 24);
                 }) : newCommon ? (Func<Dialogue>)(() => null) : fallback),
                 () =>
                 {
@@ -1762,8 +1761,7 @@ namespace EleanorRomance
                 if (root == null) root = StoryEngine.Build(confessionBlock);
                 else StoryEngine.Append(root, confessionBlock);
 
-                Dialogue accept = StoryEngine.BuildSelected(StoryV06Content.B_C19_B102,
-                    index => index != 12 || RomanceState.ReturnGiftChoice == 1 || RomanceState.ReturnGiftChoice == 2);
+                Dialogue accept = StoryEngine.Build(StoryV06Content.B_C19_B102);
                 StoryEngine.Tail(accept).SetEndAction(() =>
                 {
                     StoryCoreFacts.Confess(1);

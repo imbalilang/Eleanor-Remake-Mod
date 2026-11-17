@@ -34,3 +34,12 @@ Steam Web API 复核：
 发布证据位于 `dist/workshop-1.12/`：`release-files.json`、`publish-result.json`、`publish.log`、`remote-after.json`、`final-verification.json`。更新说明为 `docs/WORKSHOP_CHANGELOG_1.12.txt`。
 
 未执行本地 `Mods/` 部署；本地安装目录与存档未被修改。
+
+## 2026-11-17 追加修复（同一 1.12 条目）
+
+- 母亲的日用品来访改为同时接受 `HOUSEHOLD_GOOD` 和 `FOOD`，移除隐藏的单一 Nutrifruit 特例；普通分支台词同步改为“日用品，还有吃的”，c18 回应同步。
+- 被捕保释/释放调度只复用原生救援客户资格与工厂，不再顺带触发无关的固定日访谈。
+- 发布包 139 个文件、13,244,497 bytes；ZIP SHA-256：`D5BF28C67B91A7D64A158C9241FF30FF7FE0EE34E9DBA2C2B482A977C895341F`。
+- 2026-11-17 01:24（UTC）以 **content-only** 模式再次更新原条目，Steam 返回 `k_EResultOK`，耗时 5.52 秒；标题、简介和内容描述符未改动。
+- Steam Web API 复核：标题 `Eleanor Story Expand`，文件大小 13,244,497 bytes，与本地包一致，公开、未封禁。
+- 证据：`dist/workshop-1.12/publish-result-followup.json`、`remote-after-followup.json`；更新说明 `docs/WORKSHOP_CHANGELOG_1.12_followup.txt`。

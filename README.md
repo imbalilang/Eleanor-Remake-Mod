@@ -7,6 +7,13 @@
 - MOD版本：1.12
 - 语言：简体中文 / English（剧情与 UI 均已翻译）
 
+## 1.12 稳定批次验证
+
+- 内容、双语键、路线图和 Release 编译通过（0 警告、0 错误）。
+- 离线回归通过 50 个场景、114 条选项路径、456 次重放。
+- 本地发布包为 139 个文件、13,244,467 bytes；原生扫描无拒绝、错误或能力告警。运行资源登记见 `docs/美术资源登记_2026-11-16.json`。
+- 停水、后宫关店跨日、立绘模式、结局页面和窄窗口文字的实机矩阵仍待 Computer Use 通道恢复后验收；本批次未上传平台。
+
 ## 当前结局划分
 
 四条主路线各有一个结局：恋爱E1、侍从E3、后宫E4、革命军E9，另有朋友结局E2。营养果是否开源只影响经营和少量背景台词，不另拆结局，也不据此区分完美／非完美。历史重复编号E5/E6/E7/E8分别并入E1/E2/E3/E4；旧存档的经营状态保留。当前攻略见[路线图](docs/route_map.html)，下方版本记录保留发布时的历史表述。
@@ -487,8 +494,8 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 ## 本地化状态
 
-- 简体中文：原线与侍从线全部剧情、界面和系统键已生成（2,019 条）。
-- English：全部2,019条，与中文键一一对应；903条新剧情与72条新界面文本有独立来源。
+- 简体中文：当前生成 6,014 个键，覆盖剧情、界面和系统文本。
+- English：当前生成 6,259 个键，包含全部内容键并与中文内容键对齐；英文来源和人工意译记录仍按各分段文件维护。
 - 其他语言回退英文。
 - 英文为人工意译，优先保持人物语气和可读性，不逐字直译；后续可按母语审校意见微调。
 
@@ -500,7 +507,7 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 - **埃莉诺服装：** 女仆 `er_portrait_eleanor_maid_female_beauty`；礼服 `er_portrait_eleanor_gala_female_beauty`；基础常服走内置 `cp_portrait_eleanor*`。
 - **革命线：** 公开/队伍场合绿色正装 `eleanor_rev`（少女当铺设计，内置 `cp_portrait_eleanor_rev`）；R06 第一次杀人后的私下/亲密场合用黑色战术背心 `er_portrait_eleanor_revolution_undersuit_female_beauty`（用户设计，v3 已导入）。资源缺失时回退绿色正装；现在与革命结局 CG/宣传图一致。
 - **恋爱线：** 亲密私服与婚礼结局CG已接入；统一为E1，营养果开源只切换背景台词，不新增另一套结局。
-- **表情差分：** 17 张 Eleanor 表情已随资源内置（`er_expr_*`），与中性底图在眼/眉/嘴区域约 900 像素差异，alpha 不变；Lydia 表情沿用现有资源。
+- **表情差分：** 当前运行目录包含 104 张 `er_expr_*` 表情资源（Eleanor、Lydia、Sophia 及服装差分）；与中性底图的定位和 alpha 校验已完成。实际游戏切换仍记录为未实机抽检。
 - **旧档迁移：** `cp_portrait_*`、莉迪亚/母亲 `_vanilla`、`femaleUpper10`/`femaleUpper3` 等历史键在载入时解析到内置美化；未内置的通用 `cp_portrait_*` 回退原版常服；私服键保持私服选择。
 - 资源缺失时保留防崩溃回退：莉迪亚→`femaleUpper10`，母亲→`femaleUpper3`，女仆/礼服→当前常服，战术背心→`eleanor_rev`。
 - 实现位于 `src/PortraitCompat.cs`：从本 MOD 的 `LoadedMod.Sprites` 读取内置 `cp_portrait_*` / `er_portrait_*`，桥接到游戏 SpriteDict；不再查找 CutePortraits 的 LoadedMod。
@@ -511,16 +518,16 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 ## 兼容与限制
 
-- 目标版本 0.46D（1.0.0.13 / Steam build 26525552；public 与 open_beta 当前同构建）。版本不匹配时剧情补丁停用，但不会删除 MOD 存档数据。
+- 目标版本 1.0.0.14（同时保留 1.0.0.13 / 0.46D 兼容）。版本不匹配时剧情补丁停用，但不会删除 MOD 存档数据。
 - Modding API 安全规则（空能力清单、禁止 threads/反射/文件/网络用法、正式版优先的编译基线）见 [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md)。
 - 选择性复用原版 Eleanor 保释调度，桥接层隔离其他原版访客并接回重制章节；谢礼放置拦截只在本 MOD 同步调用原版奖励动作时生效。保留立绘和结束界面的补丁；拾荒协助使用原版地点事件接口。
 - 与其他修改 Eleanor 调度的 MOD 可能冲突；启动日志会记录状态。
-- 本版尚未完成完整实机周目验收。新档、旧档、跨日、存读档、各结局分支仍需逐项测试。
-- 路线丙/丁、母亲来访、第 21 章合作买家等场景的运行时顺序与中断恢复需要实机验证。
+- 1.12 离线回归和原生扫描已完成；完整实机周目验收按用户决定暂跳过，R-01 至 R-08 记录在 `dist/qa-2026-11-16/runtime-matrix.md`。
+- 路线丙/丁、母亲来访、第 21 章合作买家等场景的运行时顺序与中断恢复保留为后续实机批次。
 
 ## 项目文件索引
 
-最后整理：2026-11-11。当前版本 **0.90**。
+最后整理：2026-11-16。当前版本 **1.12**。
 
 ### 运行与构建
 
@@ -546,7 +553,7 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 
 | 路径 | 用途 |
 |---|---|
-| [`docs/RELEASE_0.90.md`](docs/RELEASE_0.90.md) | 当前版本发布记录、验证与已知限制 |
+| [`docs/项目现状与发展建议_2026-11-16.md`](docs/项目现状与发展建议_2026-11-16.md) | 当前 1.12 现状、验证证据、阻塞项与发展建议 |
 | [`docs/全局剧本.md`](docs/全局剧本.md) | 唯一剧本参照：共同/普通、侍从、双恋/后宫、革命军、互动、日常与结局页 |
 | [`docs/文风与玩家台词基准_2026-11-10.md`](docs/文风与玩家台词基准_2026-11-10.md) | 唯一文本标准：原作文风、玩家默认沉默、整章改写、非台词表现、体量预算、留白与纯过渡章删章规则 |
 | [`docs/原作Eleanor章节_对照稿_2026-11-10.md`](docs/原作Eleanor章节_对照稿_2026-11-10.md) | 游戏本体 Eleanor 全场景原文对照稿（官方中文本地化，不含 MOD 文本） |
@@ -594,7 +601,7 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 - [`docs/archive/audits/`](docs/archive/audits/)：0.71–0.77 期间的审计、交接、验收、旧功能说明。
 - [`docs/archive/workshop/`](docs/archive/workshop/)：0.67–0.81 的旧工坊说明与更新日志。
 
-归档文件只用于追溯，不作为当前实现依据。当前版本发布记录见 `docs/RELEASE_0.90.md`；历史发布记录保留在 `docs/RELEASE_0.67.md`–`docs/RELEASE_0.89.md`。
+归档文件只用于追溯，不作为当前实现依据。当前 1.12 本地发布证据见 `dist/qa-2026-11-16/`；历史发布记录保留在 `docs/RELEASE_0.67.md`–`docs/RELEASE_0.89.md`。
 
 ### 工具
 
