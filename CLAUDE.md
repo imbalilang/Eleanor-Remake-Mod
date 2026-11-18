@@ -52,6 +52,7 @@ If the route map is not updated, the story change is incomplete. After editing, 
 
 ## Content generation
 
+- **Author update, 2026-11-17:** The author has lifted the default ban on Agent-authored prose revisions. Agents may directly edit dialogue and narration to reduce AI-like writing, while preserving canon, character appeal and runtime behavior. This supersedes older documents that require every substantive wording change to originate from NovelWorkFlow or Super QA. The current comparison task produces reviewable revisions alongside the published text and historical pipeline candidates; it does not authorize publication or deployment. Writer template and system prompt rules below remain in force.
 - Shipped localization is generated from the Content JSON via `tools/build_content.py`; the JSON is the real source.
 - **Do not run `tools/legacy/parse_v06.py`** — it overwrites `Content/story_v06.json` from the stale text script. Kept only as an archived legacy parser.
 - Run `python tools/build_content.py` and `python tools/check_project.py` after content changes.
@@ -72,6 +73,13 @@ These rules apply to every call of the novel/writer pipeline under `tools/NovelW
 Operational notes:
 - The engine selects the world book with `ELEANOR_WORLD_BOOK` (default `world_book.json`), for example `ELEANOR_WORLD_BOOK=world_book_D.json python Novel_Engine_V7.py`.
 - Existing custom-prompt experiment scripts in `tools/NovelWorkFlow_Eleanor/` are not valid pipeline entry points under these rules. Do not use them for production generation.
+
+## Release versioning (user requirement)
+
+- Every Steam Workshop or Nexus content update must increase `<ModVersion>` in `manifest.xml`. Publishing new files under the same version is forbidden: the game/loader uses the mod version to detect updates, so an unbumped item does not reach subscribers.
+- In the same change, sync `README.md` (MOD version), `docs/route_map.html` (`DATA.version`), `docs/ROUTE_MAP_MAINTENANCE.md`, and `site/index.html` via `tools/sync_site.ps1`, then run `python tools/check_route_map.py`.
+- `-KeepDescription` / content-only only means the Workshop title and description stay untouched; it never waives the version bump.
+- Do not rely on file hashes or Steam's item update time as the player-facing update signal.
 
 ## Publishing
 

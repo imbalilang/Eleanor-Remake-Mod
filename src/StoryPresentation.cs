@@ -100,6 +100,10 @@ namespace EleanorRomance
                 host = PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
                 backupName = backup1Sprite == "eleanor1" ? L.Eleanor
                     : usedFirst ? backup1Name : backup2Name;
+                // Prime the native SEC name label as soon as the presentation
+                // is staged, so the first SEC line cannot flash the default
+                // "security officer" name before its per-line override runs.
+                if (!string.IsNullOrEmpty(backupName)) SetBackupName(backupName);
                 savedId1 = usedFirst ? first.id : null;
                 savedId2 = usedSecond ? second.id : null;
                 savedSprite1 = usedFirst ? first.image.sprite : null;

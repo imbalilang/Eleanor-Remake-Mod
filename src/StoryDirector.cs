@@ -27,12 +27,6 @@ namespace EleanorRomance
             PortraitCompat.Refresh();
             PortraitCompat.SanitizeLoadedClients();
 
-            if (!VersionGate.IsSupported)
-            {
-                Notify(L.Get("er_notice_version"));
-                return;
-            }
-
             if (RomanceState.IncompatibleSave)
             {
                 ModEntry.Log("Eleanor story paused: save schema " + RomanceState.SchemaVersion
@@ -68,7 +62,6 @@ namespace EleanorRomance
             EndingPageUI.HideRoutePage();
             StoryPresentation.Clear();
             VersionGate.Refresh();
-            if (!VersionGate.IsSupported) return;
 
             if (!RomanceState.Initialized)
             {

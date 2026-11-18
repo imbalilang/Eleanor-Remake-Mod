@@ -2,30 +2,32 @@ using UnityEngine;
 
 namespace EleanorRomance
 {
+    /// <summary>
+    /// Game version compatibility is deliberately not an allow list.  The game
+    /// changes Application.version on every patch, and a list of accepted
+    /// strings turned each patch into a story shutdown for players who were
+    /// already mid-save.  The version is recorded for diagnostics only; the
+    /// mod compiles against the installed game assembly and its Harmony patch
+    /// report is the compatibility check.  Save-schema compatibility is handled
+    /// separately by RomanceState.IncompatibleSave.
+    /// </summary>
     public static class VersionGate
     {
         public static string GameVersion { get; private set; } = "";
-        public static bool IsSupported { get; private set; } = true;
+
+        // Kept for feature code that predates this policy.  It must never turn
+        // a game update into a refusal to load the story.
+        public static bool IsSupported => true;
 
         public static void Refresh()
         {
             try
             {
                 GameVersion = Application.version ?? "";
-                // Verified against the installed 0.46D and 1.0.0.14 builds.
-                // Empty is allowed only during the very early load before
-                // Application.version is available; a later Refresh() will gate
-                // the actual story.
-                IsSupported = string.IsNullOrEmpty(GameVersion)
-                    || GameVersion == "0.46D"
-                    || GameVersion == "0.46"
-                    || GameVersion == "1.0.0.13"
-                    || GameVersion == "1.0.0.14";
             }
             catch
             {
                 GameVersion = "";
-                IsSupported = true;
             }
         }
     }

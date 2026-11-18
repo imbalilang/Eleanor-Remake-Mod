@@ -1,0 +1,15 @@
+1.13 兼容更新
+
+- 游戏更新到 1.0.0.15 后，本 MOD 不再因为版本号未列入白名单而停用剧情、物品和开局特性；已有存档会继续原章节。
+- 版本号只写入日志，兼容性由编译基线和补丁加载结果确认。
+- manifest 的版本元数据已清空，避免模组菜单因版本不匹配显示红色提示。
+- 保留 1.13 母亲日用品交易与保释调度修复、1.12 手镯修复、1.11 立绘选择及更早修复。
+- 未改正文、路线、结局或排期；另行审核中的正文批次不包含在本更新中。
+
+1.13 compatibility update
+
+- After the game updates to 1.0.0.15, the mod no longer pauses its story, items or starting perk because the version string is not on a whitelist. Existing saves continue from their current chapter.
+- The version string is logged only; compatibility is confirmed by the compile baseline and patch load result.
+- The manifest version metadata is now empty, so the mod menu no longer shows a red warning for a version mismatch.
+- The 1.13 mother household-goods and bail scheduling fixes, 1.12 bracelet fix, 1.11 portrait selector and earlier fixes remain.
+- No dialogue, route, ending or schedule changes; the separate text-review batch is not part of this update.

@@ -95,6 +95,7 @@
   ```
   字面游戏类型 + 字面成员名在新扫描规则下按直接调用计算，不产生 `reflection-external`；找不到时降级并记录日志。
 - **不要用 `<GameVersions>` 区分分支。** public 与 open_beta 的内部版本都是 `0.46D`，该元素只是版本闸门；分支差异只能靠运行时探测或分开构建。
+- **不要用 `Application.version` 做硬版本白名单。** 游戏补丁会改变版本字符串；精确白名单会让玩家在每次更新后剧情、物品和开局特性整体停用。版本号只记录日志；兼容性以编译基线和运行时探测（字面游戏类型 + 字面成员名）为准，存档结构由 `IncompatibleSave` 单独保护。
 - 新 API 的采用顺序：优先正式版已有 API；beta 独有内容作为可选增强，不作为主流程必需条件。
 - 如果未来两分支长期分叉，再评估双构建或把 beta 功能做成可选模块；当前不引入额外构建复杂度。
 
@@ -115,7 +116,7 @@
 3. 检查发布文件夹：只包含 `manifest.xml`、`README.md`、`preview.png`、`EleanorRomance.dll`、`EleanorRomance.deps.json`、`Localization/*.csv`、`Textures/Items/*.png`；没有未列出的 DLL、脚本、可执行文件、压缩包或高熵资源。
    - 本地部署同样适用：旧DLL备份必须放在整个模组目录之外，不能在根目录或子目录保留改名为 `.bak` 的程序文件。扫描器按文件内容识别，改扩展名仍会报 `payload-file -> executable content`。
    - 文件哈希和程序集测试通过后，还须对实际安装目录运行 `pwsh -File tools/scan_package.ps1 -Managed '<游戏Managed目录>' -Package '<实际安装模组目录>'`。只扫描打包暂存目录不能发现安装残留。
-4. 递增 `<ModVersion>` 并更新发布说明；任何新增能力都会导致所有已订阅玩家重新授权，发布前先确认是否真的需要。
+4. 递增 `<ModVersion>` 并同步 README、`docs/route_map.html` 的 `DATA.version`、`site/index.html`（运行 `tools/sync_site.ps1`）和 `docs/ROUTE_MAP_MAINTENANCE.md`，然后运行 `python tools/check_route_map.py`。**不递增版本号的内容更新不会触发玩家端自动更新，禁止发布**；content-only 只表示不改工坊标题和简介，不豁免版本递增。任何新增能力都会导致所有已订阅玩家重新授权，发布前先确认是否真的需要。
 5. 本机安装用于开发时不受创意工坊验证限制；创意工坊发布包必须通过完整扫描。
 
 ## 变更记录

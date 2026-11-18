@@ -1,0 +1,13 @@
+1.15 双人演出名字与后宫约会日修复
+
+- 双人场景第二个说话人的首句名字在原生 SEC 名字气泡显示前写入，不再短暂显示“治安官警长”、下一句才恢复正常。
+- 后宫线约定约会后的第二天，开门时直接进入约会事件并接管白天营业；约会 CG 结束后关闭当天营业，回到当天晚上/关店后自由活动，不再自动跳到次日。
+- 保留 1.14 游戏版本策略、1.13 母亲交易与保释修复、1.12 手镯修复、1.11 立绘选择及更早修复。
+- 未改正文、路线、结局或排期；另行审核中的正文批次不包含在本更新中。
+
+1.15 two-person speaker and harem date fixes
+
+- The first line of the second speaker in a two-person scene now sets the companion name before the native SEC name bubble appears, so it no longer flashes the default security-officer label for one line.
+- On the morning after the agreed harem-route date, the date scene now starts when the shutter opens and takes over the daytime business. After the date CG closes, the player returns to the same day's evening/after-hours state instead of being forced into the next morning.
+- The 1.14 game-version policy, 1.13 mother trade and bail fixes, 1.12 bracelet fix, 1.11 portrait selector and earlier fixes remain.
+- No dialogue, route, ending or schedule changes; the separate text-review batch is not part of this update.

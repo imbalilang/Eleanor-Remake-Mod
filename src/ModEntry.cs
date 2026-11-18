@@ -15,7 +15,8 @@ namespace EleanorRomance
             log = new ModLog(manifest);
             log.Log("Eleanor Romance initializing.");
             VersionGate.Refresh();
-            log.Log("Game version: " + VersionGate.GameVersion + ", supported: " + VersionGate.IsSupported);
+            log.Log("Game version: " + VersionGate.GameVersion
+                + " (recorded for diagnostics; version strings do not gate the story).");
         }
 
         public void OnEnable()

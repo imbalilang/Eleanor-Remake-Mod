@@ -1,4 +1,4 @@
-Eleanor Story Expand 1.11 — Nexus package
+Eleanor Story Expand 1.14 — Nexus package
 ==========================================
 
 中文
@@ -41,6 +41,7 @@ Eleanor Story Expand 1.11 — Nexus package
 请不要同时启用《少女当铺 / CutePortraits》或其他替换同一立绘的 MOD，避免重复贴图或互相覆盖。
 如果其他 MOD 覆盖了当前可见立绘，本 MOD 会让位，并暂停表情切换，避免闪烁。
 1.11 起，MOD 设置新增「立绘 / Portraits → Eleanor portrait mode」，可选 Auto / Force / Other 三种立绘模式。
+1.14 起，游戏版本号不再作为停用剧情的前置条件；游戏补丁更新后继续加载已有存档。
 
 为什么值得一玩
 如果你在玩原版时对 Eleanor 有过兴趣，却觉得她的个人线太短、太晚，这个 MOD 会给她一条更完整的个人线。
@@ -57,7 +58,7 @@ Eleanor Story Expand 1.11 — Nexus package
 另有朋友结局：不发展恋爱关系，但保留彼此的信任与来往。
 
 实用信息
-版本 1.11；兼容游戏 1.0.0.14 / 1.0.0.13 / 0.46D（build 26525552 或更新）。
+版本 1.14；兼容游戏 1.0.0.15 / 1.0.0.14 / 1.0.0.13 / 0.46D（build 26525552 或更新）。游戏版本号不再作为停用剧情的前置条件。
 解压 EleanorRomance 文件夹到 Probably Stolen/Mods/EleanorRomance，在模组菜单启用并重启游戏。
 不需要其他 MOD。手动版与 Steam 工坊版只保留一个，不要同时使用；也不要同时安装两个 Nexus 副本。
 
@@ -105,6 +106,7 @@ This Nexus package already bundles the authorized CutePortraits / Maiden's Pawns
 Do not enable CutePortraits / Maiden's Pawnshop or another mod that replaces the same portraits alongside this package; use one portrait source to avoid duplicate or overriding textures.
 If another mod overrides the visible portrait, this mod yields and pauses expression switching instead of forcing its own art back.
 Since 1.11, the mod settings include “Portraits → Eleanor portrait mode” with Auto, Force and Other options.
+Since 1.14, game version strings no longer gate the story; game patch updates keep loading existing saves.
 
 Why it is worth playing
 If you were interested in Eleanor in the base game but found her personal line too short or too late, this mod gives her the full story she deserved.
@@ -121,7 +123,7 @@ Revolution route: join the revolution with Eleanor as comrades-in-arms and face 
 There is also a friends ending: no romance, but the trust and visits remain.
 
 Practical notes
-Version 1.11; compatible with Probably Stolen 1.0.0.14 / 1.0.0.13 / 0.46D (build 26525552 or later).
+Version 1.14; compatible with Probably Stolen 1.0.0.15 / 1.0.0.14 / 1.0.0.13 / 0.46D (build 26525552 or later). Game version strings no longer gate the story.
 Extract the EleanorRomance folder into Mods\EleanorRomance, enable it in the Mods menu and restart.
 No other mods are required. Use either the manual copy or the Steam Workshop copy — not both. Do not install two Nexus copies at the same time.
 
