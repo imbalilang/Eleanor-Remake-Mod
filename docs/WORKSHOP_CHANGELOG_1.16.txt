@@ -1,0 +1,13 @@
+1.16 修复 maid v2 晚会立绘回退
+
+- 修复 maid v2 路线第 21/22/25/26/27 场（晚会/驻场剧情）请求晚会立绘时未注册该立绘键、游戏回退成随机拾荒者 NPC 立绘的问题。
+- 读档与次日刷新不再把这些场景的晚会立绘降回默认常服；晚会图缺失时会回退到埃莉诺默认立绘，而不是随机 NPC。
+- 保留 1.15 双人演出名字与后宫约会日修复、1.14 游戏版本策略、1.13 母亲交易与保释修复、1.12 手镯修复、1.11 立绘选择及更早修复。
+- 不改正文、路线、选项、排期或结局；本更新包含 1.15 的全部修复，并取代上一次内容更新。
+
+1.16: Fix maid v2 gala portrait fallback
+
+- Fixed maid v2 scenes 21/22/25/26/27 (gala/residency arc) requesting Eleanor's gala portrait without registering it, which made the game fall back to a random scavenger NPC portrait.
+- Save reload and daily sanitisation no longer downgrade the gala look in those scenes to the default outfit; if the gala art is missing, it falls back to Eleanor's default portrait instead of a random NPC.
+- The 1.15 two-person speaker and harem date fixes, 1.14 game-version policy, 1.13 mother trade/bail fixes, 1.12 bracelet fix, 1.11 portrait selector and earlier fixes remain.
+- No dialogue, route, choice, schedule or ending changes; this update includes all 1.15 fixes and supersedes the previous content update.

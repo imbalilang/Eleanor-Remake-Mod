@@ -265,7 +265,8 @@ namespace EleanorRomance
             {
                 if (id.Equals("eleanorUncle", StringComparison.OrdinalIgnoreCase)
                     || id.Equals("eleanorThreat", StringComparison.OrdinalIgnoreCase)
-                    || id.Equals("eleanorBailOfficer", StringComparison.OrdinalIgnoreCase)) return false;
+                    || id.Equals("eleanorBailOfficer", StringComparison.OrdinalIgnoreCase)
+                    || id.Equals(VanillaEleanorBridge.BailOfficerId, StringComparison.OrdinalIgnoreCase)) return false;
                 if (id.IndexOf("eleanor", StringComparison.OrdinalIgnoreCase) >= 0) return true;
             }
             // Saved/queued copies may not have a resolved display name yet.
@@ -285,6 +286,34 @@ namespace EleanorRomance
         {
             return client != null && !string.IsNullOrEmpty(client.sourceModId)
                 && client.sourceModId != ModConstants.ModId;
+        }
+
+        /// <summary>
+        /// True when the Eleanor client being displayed or about to be displayed
+        /// belongs to another mod.  In that case native-key replacement must
+        /// stand down, otherwise another mod's authored outfit is flattened to
+        /// this mod's default look (Agri Expansion uses native keys directly).
+        /// </summary>
+        private static bool IsExternalEleanorContext()
+        {
+            try
+            {
+                PlayerStore store = PlayerStore.Instance;
+                if (store == null) return false;
+                StoreClient current = store.currentClientInstance?.GetClientBlueprint();
+                if (current != null && IsEleanorClient(current) && IsExternalModClient(current)) return true;
+                var stack = store.storeClientManager?.clientStack;
+                if (stack != null && stack.Count > 0)
+                {
+                    StoreClient next = stack[0];
+                    if (next != null && IsEleanorClient(next) && IsExternalModClient(next)) return true;
+                }
+            }
+            catch
+            {
+                // A failed ownership check must not disturb native portrait calls.
+            }
+            return false;
         }
 
         /// <summary>
@@ -428,6 +457,7 @@ namespace EleanorRomance
         {
             sprite = null;
             if (Mode == PortraitMode.Other || !IsNativeEleanorKey(key)) return false;
+            if (IsExternalEleanorContext()) return false;
             if (Mode != PortraitMode.Force && current != null
                 && (IsOurSprite(current) || IsForeignModSprite(current))) return false;
             sprite = DefaultEleanorSprite();
@@ -622,8 +652,12 @@ namespace EleanorRomance
             }
             if (key == GalaKey)
             {
-                if (!IsGalaScene("er_story_gala")) return;
-                EnsureLocalPortrait(GalaKey);
+                // The gala look is also used by maid v2 stage scenes, so it
+                // cannot be gated on the standalone gala story.  Register it
+                // whenever requested; if the file is missing, show our default
+                // Eleanor rather than the game's random-scav fallback.
+                if (!EnsureLocalPortrait(GalaKey))
+                    AliasLocalPortrait(Resolve("eleanor1"), GalaKey);
                 return;
             }
             if (key == ModConstants.LydiaPortraitVanilla || key == LydiaDateVanillaKey)
@@ -768,7 +802,15 @@ namespace EleanorRomance
 
             if (client.spriteName == GalaKey)
             {
-                client.spriteName = IsGalaScene(client.identifier) ? ResolveGala(client.identifier) : Resolve("eleanor1");
+                // Maid v2 stage scenes reuse the gala look and carry an
+                // er_story_v2_* identifier; do not degrade them to the default
+                // portrait on load like a stale standalone-gala key.
+                bool keepGala = IsGalaScene(client.identifier)
+                    || (IsOurEleanorClient(client)
+                        && !string.IsNullOrEmpty(client.identifier)
+                        && client.identifier.StartsWith("er_story_v2_", StringComparison.Ordinal));
+                client.spriteName = keepGala && EnsureLocalPortrait(GalaKey)
+                    ? GalaKey : Resolve("eleanor1");
             }
             else if (client.spriteName == MaidKey || client.spriteName == VanillaMaidKey)
             {

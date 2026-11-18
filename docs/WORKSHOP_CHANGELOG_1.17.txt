@@ -1,0 +1,17 @@
+1.17 跨 MOD 兼容（牧场物语等）
+
+- 保释官与释放来访改用本 MOD 私有编号 `er_story_bail_officer` / `er_story_freed`；其他 MOD 屏蔽或清理原版 `eleanor*` 客户时，不会误关我们的救援事件。
+- 救援改由本 MOD 的每日生成钩子排队，不再依赖原版 `CheckStoryLineEleanor` 的补丁执行顺序。
+- 其他 MOD 使用原版键（如 `eleanor_scav` / `eleanor1`）的埃莉诺客户保留其原生立绘；本 MOD 剧情立绘不变。
+- 前章手镯固定价在其他价格补丁之后重申，避免其他 MOD 的价格倍率破坏剧情精确价判定。
+- 共享世界状态（营养果开源、原版保释字段、经济价格）允许两边共同修改；保留 1.16 晚会立绘、1.15 双人名字/约会日、1.14 游戏版本策略及更早修复。
+- 不改正文、路线、选项、排期或结局。
+
+1.17: Cross-mod compatibility (Farm Story and similar)
+
+- The bail officer and freed visit now use private `er_story_bail_officer` / `er_story_freed` identifiers, so another mod that blocks or purges vanilla `eleanor*` clients cannot remove our rescue event.
+- The rescue is queued from our own daily hook instead of depending on the patch order of the vanilla `CheckStoryLineEleanor` scheduler.
+- Other mods' Eleanor clients that use native keys (`eleanor_scav` / `eleanor1`) keep their native portraits; our own story portraits are unchanged.
+- Our fixed prelude bracelet price is re-asserted after other price patches, so other mods' price multipliers cannot break the story's exact-price check.
+- Shared world state (Nutrifruit seeding, native bail fields, economy prices) may still be modified by both mods. The 1.16 gala portrait fix, 1.15 speaker/date fixes, 1.14 game-version policy and earlier fixes remain.
+- No dialogue, route, choice, schedule or ending changes.

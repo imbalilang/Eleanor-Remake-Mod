@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.15</ModVersion>
-  <Description>1.15 fixes two harem-route presentation bugs: the first line of the second speaker in a two-person scene now uses the companion's name instead of briefly showing the native security-officer label, and Lydia's agreed date now starts as the first scene when the shutter opens, closes the daytime business, then returns the player to the normal evening/after-hours state instead of forcing the next morning. The 1.14 game-version policy, 1.13 mother trade and bail fixes, 1.12 bracelet fix, 1.11 portrait selector and earlier fixes remain. Simplified Chinese / English. 1.15 修复后宫线两处演出问题：双人场景中第二个说话人的第一句不再短暂显示原版“治安官警长”，而是直接使用同伴名字；莉迪亚约定好的约会日现在会在开门时作为首个事件出现，关闭当天营业后把玩家交还给正常的晚上/关店后自由活动，不再强制跳到第二天。保留 1.14 游戏版本策略、1.13 母亲交易与保释修复、1.12 手镯修复、1.11 立绘选择及更早修复。简体中文 / English。</Description>
+  <ModVersion>1.17</ModVersion>
+  <Description>1.17 adds conservative cross-mod compatibility: the bail officer and freed visit use private er_story_* identifiers, so another Eleanor mod that blocks or purges vanilla eleanor* clients cannot remove our rescue event, and the rescue is queued from our own daily hook instead of the vanilla scheduler. It also preserves another mod's native-key Eleanor portraits and re-asserts our fixed prelude bracelet price after other price patches. The 1.16 gala portrait fix, 1.15 two-person speaker/harem date fixes, 1.14 game-version policy, 1.13 mother trade/bail fixes, 1.12 bracelet fix and earlier fixes remain. Simplified Chinese / English. 1.17 增加保守的跨 MOD 兼容：保释官与释放来访改用本 MOD 私有的 er_story_* 编号，其他埃莉诺 MOD 即使屏蔽或清理原版 eleanor* 客户也关不掉我们的救援事件；救援改由本 MOD 每日钩子排队，不依赖原版调度。同时保留其他 MOD 使用原版键的埃莉诺立绘，并在其他价格补丁之后重申前章手镯固定价。保留 1.16 晚会立绘修复、1.15 双人演出名字与后宫约会日修复、1.14 游戏版本策略、1.13 母亲交易与保释修复、1.12 手镯修复及更早修复。简体中文 / English。</Description>
   <!-- Empty on purpose: the mod does not gate on the game version string,
        and a listed version that does not cover the running build is shown as
        a red warning in the mod menu. -->

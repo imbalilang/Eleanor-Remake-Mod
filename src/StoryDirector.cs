@@ -118,6 +118,10 @@ namespace EleanorRomance
                 MaidRouteMigration.OnLoaded();
                 MaidRouteMigration.MigrateDeferred();
                 MaidRouteMigration.NotifyDeferred();
+                // Queue the rescue from our own daily hook.  Vanilla's
+                // CheckStoryLineEleanor may be suppressed by both this mod and
+                // another mod, so the rescue cannot depend on that patch order.
+                VanillaEleanorBridge.ScheduleRescue(manager);
                 if (VanillaEleanorBridge.RescuePending) return;
 
                 int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;

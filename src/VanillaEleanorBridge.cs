@@ -15,6 +15,13 @@ namespace EleanorRomance
         private static bool capturingReward;
         private static GameItem capturedReward;
 
+        // Our rescue visits deliberately use private IDs.  Other mods (notably
+        // Agri Expansion) treat every identifier starting with "eleanor" as a
+        // legacy vanilla client and may block or purge it; private IDs keep our
+        // event independent while the native factories still supply the body.
+        internal const string BailOfficerId = "er_story_bail_officer";
+        internal const string FreedVisitId = "er_story_freed";
+
         public static bool RescuePending => RomanceState.StoryActive && !RomanceState.RomanceLocked
             && RomanceState.Arrested && !RomanceState.Rescued;
 
@@ -25,12 +32,23 @@ namespace EleanorRomance
         // unrelated visits cannot accompany the officer or the freed visitor.
         public static void ScheduleRescue(StoreClientManager manager)
         {
-            if (!RescuePending || manager == null) return;
+            if (!RescuePending || manager == null || manager.clientStack == null) return;
+            StoreClient current = PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
+            if (IsRescueClient(current) || manager.clientStack.Any(IsRescueClient)) return;
+
             int day = StoreStation.Instance.dayCounter;
             if (StoreClientData.CanEleanorBailOfficerVisit(day))
-                manager.AddClient(StoreClientUniqueList.CreateEleanorBailOfficer());
+            {
+                StoreClient officer = StoreClientUniqueList.CreateEleanorBailOfficer();
+                DecorateRescueClient(officer); // renames before AddClient
+                manager.AddClient(officer);
+            }
             if (StoreClientData.CanEleanorFreedVisit(day))
-                manager.AddClient(StoreClientUniqueList.EleanorFreed());
+            {
+                StoreClient freed = StoreClientUniqueList.EleanorFreed();
+                DecorateRescueClient(freed); // renames before AddClient
+                manager.AddClient(freed);
+            }
         }
 
         public static bool IsOurClient(StoreClient client) => client != null
@@ -91,8 +109,13 @@ namespace EleanorRomance
             if (data.eleanorBailChoice == 3) StoryDirector.AbandonStory();
         }
 
-        private static bool IsRescueClient(StoreClient client) => client != null
-            && (client.identifier == "eleanorBailOfficer" || client.identifier == "eleanorFreed");
+        private static bool IsRescueClient(StoreClient client)
+        {
+            if (client == null) return false;
+            string id = client.identifier ?? "";
+            return id == "eleanorBailOfficer" || id == "eleanorFreed"
+                || id == BailOfficerId || id == FreedVisitId;
+        }
 
         /// <summary>
         /// Exact native Eleanor identifiers used only for reset/tracker cleanup,
@@ -118,6 +141,8 @@ namespace EleanorRomance
                 case "eleanorWarned":
                 case "eleanorBailOfficer":
                 case "eleanorFreed":
+                case BailOfficerId:
+                case FreedVisitId:
                     return true;
                 default:
                     return false;
@@ -151,14 +176,20 @@ namespace EleanorRomance
         {
             if (decorated.TryGetValue(client, out _)) return;
             decorated.Add(client, new object());
+            string originalId = client.identifier ?? "";
+            bool bailOfficer = originalId == "eleanorBailOfficer" || originalId == BailOfficerId;
+            bool freedVisit = originalId == "eleanorFreed" || originalId == FreedVisitId;
+            if (!bailOfficer && !freedVisit) return;
+
             ModHelper.SetClientSource(client, ModConstants.ModId);
             client.spriteName = PortraitCompat.Resolve(client.spriteName);
             // Shooting remains a separately designed story change; keep the remake's protection.
             client.nonShootable = true;
             client.forceShootable = false;
 
-            if (client.identifier == "eleanorBailOfficer")
+            if (bailOfficer)
             {
+                client.identifier = BailOfficerId;
                 Dialogue choices = FindChoices(client.mainDialogue);
                 Dialogue rescueLater = StoryEngine.PlayerReply(L.Get("er_choice_rescue_later"));
                 rescueLater.SetEndAction(StoryEngine.Dismiss);
@@ -167,6 +198,8 @@ namespace EleanorRomance
                 client.OnDismiss += SynchronizeRescue;
                 return;
             }
+
+            client.identifier = FreedVisitId;
 
             // Native marks the freed visit at its start. Commit that same action
             // with the remake's continuation at the end, so an interrupted visit

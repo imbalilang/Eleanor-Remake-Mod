@@ -46,6 +46,18 @@ namespace EleanorRomance
             __result = price;
             return false;
         }
+
+        [HarmonyPriority(Priority.Last)]
+        private static void Postfix(GameItem __instance, ref long __result)
+        {
+            // Other mods (e.g. Agri Expansion's uniform trade bonus) may scale
+            // prices in a postfix. Re-assert the story's fixed offer last so the
+            // prelude's exact-price state check cannot be broken.
+            if (__instance == null || __instance.identifier != ModConstants.BraceletItemId) return;
+            var client = PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
+            int price = EleanorStory.PreludeFixedPrice(client, __instance);
+            if (price > 0) __result = price;
+        }
     }
 
     [HarmonyPatch(typeof(StoreUIManager), nameof(StoreUIManager.StartArrestSequence))]
