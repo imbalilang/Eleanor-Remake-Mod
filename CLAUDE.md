@@ -22,6 +22,8 @@ Before changing story, content, prompts, design, artwork direction, or release c
 
 For artwork generation, edits, expression variants or export, read `Art/ART_REQUIREMENTS.md` and the relevant templates in `Art/PROMPT_TEMPLATES.md`. Use the verified author B/detail pipeline for new portrait work; old BOX and fixed-palette notes are historical. Preserve any user-deferred artwork scope and distinguish candidates from runtime replacements.
 
+For any CG generation, placement or review, read `docs/CG_LOCATION_AND_PLACEMENT_PLAN.md`. Its location, staging and placement constraints are mandatory. Do not invent back rooms, beds, sofas or bathrooms in the kiosk; do not place private clothing, lying poses or kisses in ordinary daily shop visits. CG style is two-track: **P (pixel/original)** for endings, news, documents and world cards; **A (anime)** for portraits, relationship, daily/private and outing CGs. Label every brief P or A and do not mix them in one image.
+
 ## Route map maintenance (required)
 
 Any change to story chapters, scene order, target days, story-impacting choices, routes, relationships, or endings must update these files in the same change:
