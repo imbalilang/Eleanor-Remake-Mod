@@ -1,0 +1,26 @@
+{
+  "status": "workspace art candidate",
+  "sourceSize": [
+    1672,
+    941
+  ],
+  "master": "Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_rented_room_master_v3.png",
+  "masterSha256": "945b46ae8bc0a7fab9ee8a48b9a4a61847edc2c37942a16c1a9f83fde71538c8",
+  "prompt": "prompt_v3.txt",
+  "references": "references_v3.json",
+  "gameCandidate": "Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_rented_room_game_v3.png",
+  "gameSize": [
+    1664,
+    936
+  ],
+  "gameSha256": "4348c2412add268639edd2aa38f322f02c1fc54d597b9590d5adde8ff66b23f9",
+  "exportCrop": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "exportMethod": "uniform exact area sampling",
+  "activeRuntimeKey": null,
+  "review": "Reviewed the blush and sideways glance, two hands holding the book, white dress, small table, modest light and cabin doorframe. Comic accent removed. Placement candidate for Eleanor's room."
+}

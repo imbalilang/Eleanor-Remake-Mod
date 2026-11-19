@@ -1,0 +1,68 @@
+{
+  "references": [
+    {
+      "role": "Game style, younger character and lower bound for bust comparison",
+      "source": {
+        "file": "Textures/Items/cp_portrait_eleanor1.png",
+        "size": [
+          288,
+          212
+        ],
+        "bytes": 38219,
+        "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0"
+      },
+      "upload": {
+        "file": "Art/lydia-three-directions-2026-11-14/references_local/world_eleanor.png",
+        "size": [
+          616,
+          640
+        ],
+        "bytes": 367133,
+        "sha256": "a38b485e7e37187dfebf0ae8474d690835e67af88ae2a76432b5ca2a4797113f"
+      }
+    },
+    {
+      "role": "Game style, upper district design and upper bound for bust comparison",
+      "source": {
+        "file": "Art/sophia-three-directions-2026-11-13/masters/sophia_ruan-mei_master.png",
+        "size": [
+          1036,
+          1518
+        ],
+        "bytes": 2117845,
+        "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5"
+      },
+      "upload": {
+        "file": "Art/lydia-three-directions-2026-11-14/references_local/world_sophia.png",
+        "size": [
+          561,
+          950
+        ],
+        "bytes": 769192,
+        "sha256": "28bbdff563f1a1808345b4b0a201a38fc27a34860b4701806b16ad224a219479"
+      }
+    },
+    {
+      "role": "Upper Level wardrobe reference",
+      "source": {
+        "file": "Art/mother-redesign-2026-11-11/references/upper_v3/upper_women_costume_reference.jpg",
+        "size": [
+          960,
+          500
+        ],
+        "bytes": 132843,
+        "sha256": "e2f23b3d2257a2d64bfb4e619c387e23bb057dafb84cc8a683d3b20ae4bff7c3"
+      },
+      "upload": {
+        "file": "Art/lydia-three-directions-2026-11-14/references_local/world_upper.png",
+        "size": [
+          950,
+          495
+        ],
+        "bytes": 440689,
+        "sha256": "741a00ac8cea4834df45f9cb3c1b2d6affca4af16a886e46b5c0101682406702"
+      }
+    }
+  ],
+  "estimated_request_bytes": 2168228
+}

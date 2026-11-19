@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image editing",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_closeup_master_v3.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "6882371da3e247f6709b9042327fafe53c1b48ffd1cad9e5e419ad5f11c7ee26",
+  "prompt": "prompt_v3.txt",
+  "references": "references_v3.json",
+  "review": "Closer diagonal view than v2. Inspected Sophia likeness, jade hairpin, ivory ribbed dress, one supporting forearm and hand, and bent legs with the hips raised."
+}

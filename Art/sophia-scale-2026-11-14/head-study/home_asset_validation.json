@@ -1,0 +1,114 @@
+{
+  "status": "portrait candidate",
+  "tool": "built-in image generation",
+  "master": {
+    "file": "Art/sophia-scale-2026-11-14/head-study/masters/sophia_home_head_study.png",
+    "size": [
+      963,
+      1633
+    ],
+    "mode": "RGBA",
+    "sha256": "f29769575666b550780e4c6b1248b6dace7f41248e955987c8264c98d247ea55"
+  },
+  "portrait": {
+    "file": "Art/sophia-scale-2026-11-14/head-study/portraits/er_portrait_mother_home_head_study.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda"
+  },
+  "references": "home-references.json",
+  "prompt": "Art/sophia-scale-2026-11-14/head-study/prompts/home-head-study.txt",
+  "prompt_sha256": "a28d8f6bb9732e02ff5e50a700da0d67c427e1765b97ffc53cf2204104caaf9a",
+  "landmarks": {
+    "method": "visual estimate",
+    "source_eye_midpoint": [
+      464,
+      369
+    ],
+    "source_chin_y": 592,
+    "native_eye_midpoint": [
+      145,
+      115
+    ],
+    "native_chin_y": 142.52146341463413
+  },
+  "scale_method": "same isotropic scale as daily head study, registered by eye midpoint",
+  "pipeline": {
+    "source_size": [
+      963,
+      1633
+    ],
+    "clean_bbox": [
+      5,
+      4,
+      958,
+      1633
+    ],
+    "parameters": {
+      "visible_height": 201.0424390243902,
+      "centre_x": 147.15975609756097,
+      "bottom_exclusive": 269.9960975609756,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.12341463414634143,
+      "tx": 87.73560975609757,
+      "ty": 68.46000000000006
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 4056,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      95,
+      70,
+      201,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 4859
+  },
+  "comparison_inputs": [
+    {
+      "file": "Art/sophia-scale-2026-11-14/head-study/portraits/er_portrait_mother_head_study.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585"
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_home_female_beauty.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "ba9025261654a1a242ae42e62ac3d1e468abe7b53bd355fbf32b0af49d988e4a"
+    }
+  ]
+}

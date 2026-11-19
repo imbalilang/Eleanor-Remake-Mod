@@ -4,8 +4,14 @@
 《深空当铺：可能是偷的 / Probably Stolen》Eleanor 个人剧情线重制 MOD。
 
 - 游戏版本：1.0.0.15（当前 public/open_beta 构建）；版本号只写入日志，不再按游戏更新停用剧情。0.46D / 1.0.0.13 / 1.0.0.14 继续兼容。
-- MOD版本：1.17
+- MOD版本：1.18
 - 语言：简体中文 / English（剧情与 UI 均已翻译）
+
+## 1.18：高清 CG 过滤与侍从线后日谈排期
+
+- 五张现有剧情/结局 CG 替换为 1664×936 高清导出：`er_ending_love_wedding`、`er_event_harem_lydia_date_cg`、`er_event_love_water_cut_cg`、`er_event_maid_gala_cg`、`er_event_revolution_embrace_cg`；`EndingPageUI` 对这五张图启用双线性过滤。侍从、后宫和革命军的像素风结局 CG 仍使用原来的最近邻过滤。
+- 侍从线 v2 后日谈 25–28 场改为按上一次来访日期相对排期：主线结束后第 25 场次日出现，之后每场间隔 2 天；不再因为绝对目标日而在“明天照常来上工”之后长时间没有剧情。
+- 未改主线正文、路线、选项、主线目标日或结局；另行审核中的正文批次不包含在本版本中。
 
 ## 1.17：跨 MOD 兼容（牧场物语等）
 

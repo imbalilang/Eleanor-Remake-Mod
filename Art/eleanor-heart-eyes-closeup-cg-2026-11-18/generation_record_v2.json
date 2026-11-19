@@ -1,0 +1,15 @@
+{
+  "status": "candidate; not installed",
+  "method": "built-in image generation",
+  "master": "B:\\Eleanor Story Expand\\Art\\eleanor-heart-eyes-closeup-cg-2026-11-18\\eleanor_heart_eyes_closeup_master_v2.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "6aa7016ce8ba73470d4f727b6da7e878a12b22a5ee7f035ec729c84b8d25e124",
+  "prompt": "prompt_v2.txt",
+  "references": "references_v2.json",
+  "review": "Viewed 1100px preview for familiar adult Eleanor face, pink heart pupils in green irises, slightly parted lips, small tongue tip and close framing.",
+  "prior_master_retained": true
+}

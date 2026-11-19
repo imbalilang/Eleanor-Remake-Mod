@@ -1,0 +1,602 @@
+{
+  "review": "output/pdf/portrait-expression-review-2026-11-15.pdf",
+  "retired_expressions": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "shared_runtime_art": [
+    [
+      "095",
+      "102"
+    ],
+    [
+      "107",
+      "114"
+    ]
+  ],
+  "requested": [
+    {
+      "number": "003",
+      "family": "eleanor1",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_eleanor1_soft.png",
+      "current_sha256": "089b068b368ed25792e6cfe3edd03f57278e06f4724e348c1dda0ac8b85bce58",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "004",
+      "family": "eleanor1",
+      "expression": "shy",
+      "asset": "Textures/Items/er_expr_eleanor1_shy.png",
+      "current_sha256": "6e2011b1439317a4f2b7c669452da515e792e1c189beb1174bfc1aaa874ae8d1",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_shy.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "005",
+      "family": "eleanor1",
+      "expression": "serious",
+      "asset": "Textures/Items/er_expr_eleanor1_serious.png",
+      "current_sha256": "be945e57631a60e47c99e13ff07b214912dc004795063becbdfd9343e74c47a3",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_serious.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "008",
+      "family": "eleanor1",
+      "expression": "hurt",
+      "asset": "Textures/Items/er_expr_eleanor1_hurt.png",
+      "current_sha256": "dc10b56d3c7f97c0324d29ad155bf8007e580d4cfd6d57043718b6f1b5f09a1a",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_hurt.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "009",
+      "family": "eleanor1",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_eleanor1_determined.png",
+      "current_sha256": "aa0710f902a691012d86f8c8b89159c1c2822cd3ae774d5ef6970265853b8021",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_determined.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "010",
+      "family": "eleanor1",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_eleanor1_tired.png",
+      "current_sha256": "dc0f0a941f4870543a1a83c3b999af8105c8529d23556eaf90afe2e835795fc3",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "032",
+      "family": "eleanor_scav",
+      "expression": "smile",
+      "asset": "Textures/Items/er_expr_eleanor_scav_smile.png",
+      "current_sha256": "e6f29e073099bb3ddc99354389222dbcc102c408d38bdc158df52e526ec4eb0b",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor_scav_smile.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "033",
+      "family": "eleanor_scav",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_eleanor_scav_soft.png",
+      "current_sha256": "b7170e9c5ac4de38fef177c7dfa739a1e14843842261b60d3a895cfb1d4eda28",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_soft.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "036",
+      "family": "eleanor_scav",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_eleanor_scav_angry.png",
+      "current_sha256": "bd595d72f4a49fce3fdc4ed306baf4935b3e3b34c431330839b3faec14469fb4",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_angry.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "039",
+      "family": "eleanor_scav",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_eleanor_scav_determined.png",
+      "current_sha256": "b3bb86f664d9c91b954a5ae1048fdafc96072a8adfb4067a61e466daf60c076e",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_scav_determined.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "042",
+      "family": "eleanor_rev",
+      "expression": "smile",
+      "asset": "Textures/Items/er_expr_eleanor_rev_smile.png",
+      "current_sha256": "2312a880d12bf44ca1c383364f6187a701b5a9ed3b56865a9a45c169adbdc493",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_smile.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "043",
+      "family": "eleanor_rev",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_eleanor_rev_soft.png",
+      "current_sha256": "f5ffd090978a4319cc98f3b3fb2e3e4d592197768f185eec7e4eed4716693a60",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_soft.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "044",
+      "family": "eleanor_rev",
+      "expression": "shy",
+      "asset": "Textures/Items/er_expr_eleanor_rev_shy.png",
+      "current_sha256": "eb5cf2b55c30a9b763b90b355a5105bd6a2ca31854e214a4f4d265a3b65d6502",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_shy.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "045",
+      "family": "eleanor_rev",
+      "expression": "serious",
+      "asset": "Textures/Items/er_expr_eleanor_rev_serious.png",
+      "current_sha256": "2a3c4bcac413ce24b6b4c8527c4aba9d6c4fa990a8c8d84927800430960ead36",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_serious.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "047",
+      "family": "eleanor_rev",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_eleanor_rev_sad.png",
+      "current_sha256": "227455e91f3afe855fa2d15ccea3a85aaf09361f48b4d8e392b15250b905a81c",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_sad.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "050",
+      "family": "eleanor_rev",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_eleanor_rev_tired.png",
+      "current_sha256": "c6e8e280d2864eac7b71925fa1fd2ebfe8d26727542f1b69d52afb0373dce8b0",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "052",
+      "family": "eleanor_maid",
+      "expression": "smile",
+      "asset": "Textures/Items/er_expr_eleanor_maid_smile.png",
+      "current_sha256": "0253e7e942a4127dd9a244e1946708851f39c9ec7b2623f8a2f527958c3d383d",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_smile.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "055",
+      "family": "eleanor_maid",
+      "expression": "serious",
+      "asset": "Textures/Items/er_expr_eleanor_maid_serious.png",
+      "current_sha256": "95671c4e4c02fb66c598ab33fd94f574489b3b1f35fe8c503b279394db0601ab",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_serious.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "056",
+      "family": "eleanor_maid",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_eleanor_maid_angry.png",
+      "current_sha256": "7e4d5174e3bb83368cb4a33a94d4584534ccb323d23e0d0c2d807164e1403687",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_angry.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "057",
+      "family": "eleanor_maid",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_eleanor_maid_sad.png",
+      "current_sha256": "94aab91a8fc312300d67cf990cb041b9355b10daf7a4e4afce2b4d76f3be4867",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_sad.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "058",
+      "family": "eleanor_maid",
+      "expression": "hurt",
+      "asset": "Textures/Items/er_expr_eleanor_maid_hurt.png",
+      "current_sha256": "654a0f8d9859eab33d65004d46f0e6f62747106e6c4ccbec9338be8353cf563b",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_hurt.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "059",
+      "family": "eleanor_maid",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_eleanor_maid_determined.png",
+      "current_sha256": "9483cce2f1ba677b17ced95b6ae4f76674f2e22ec3cc0f255f1416a143206c92",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_determined.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "060",
+      "family": "eleanor_maid",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_eleanor_maid_tired.png",
+      "current_sha256": "8c696b9a01ebcd571b4b5106599dc0a957a926d83a87fd4077829d07105da119",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "061",
+      "family": "eleanor_maid",
+      "expression": "tsun",
+      "asset": "Textures/Items/er_expr_eleanor_maid_tsun.png",
+      "current_sha256": "6976fcea7637b5b5ebd0d5952ae73af4fba72fab16e79bed296760b449ad1a8f",
+      "recorded_source": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor_maid_tsun.png",
+      "prior_method": "original_iris_fit"
+    },
+    {
+      "number": "063",
+      "family": "eleanor_gala",
+      "expression": "smile",
+      "asset": "Textures/Items/er_expr_eleanor_gala_smile.png",
+      "current_sha256": "3c9179a632a7191f505428ac6bd81d50d7aba06f47f4f8b0ca56db1d1fe30b62",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_smile.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "064",
+      "family": "eleanor_gala",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_eleanor_gala_soft.png",
+      "current_sha256": "093d3664ad8dbd7b48165d6628a569e32c5fb76e5864a6c3bdcbcd2026847ad2",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_soft.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "065",
+      "family": "eleanor_gala",
+      "expression": "shy",
+      "asset": "Textures/Items/er_expr_eleanor_gala_shy.png",
+      "current_sha256": "66885707445743c2c0dce5c945affeb08804f08bd32ab69177e630197ddb1283",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_shy.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "066",
+      "family": "eleanor_gala",
+      "expression": "serious",
+      "asset": "Textures/Items/er_expr_eleanor_gala_serious.png",
+      "current_sha256": "7722256298180b0ec1d8faae8bc52abb9fa15864fa3d099aac099726652afed0",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_serious.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "067",
+      "family": "eleanor_gala",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_eleanor_gala_angry.png",
+      "current_sha256": "7a41b732109364b5cc24960c1a17f78c1e6adf37517bf775f0e0bd76cfb3161f",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_angry.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "068",
+      "family": "eleanor_gala",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_eleanor_gala_sad.png",
+      "current_sha256": "07fab2429929276846f19c8e38009ecab0d62d92ccf4c31165c93466cbcce616",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_sad.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "069",
+      "family": "eleanor_gala",
+      "expression": "hurt",
+      "asset": "Textures/Items/er_expr_eleanor_gala_hurt.png",
+      "current_sha256": "47426cc7a071fedbcd038b77ff5d7710109a05acb012957833264cc06df62a02",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_hurt.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "070",
+      "family": "eleanor_gala",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_eleanor_gala_determined.png",
+      "current_sha256": "4446b7d43063a657f652f82c5247e83852f1d33f05cb4a43685d6f7dc6587592",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_determined.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "071",
+      "family": "eleanor_gala",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_eleanor_gala_tired.png",
+      "current_sha256": "1861d701e2face3079ca126905a327c8fb66081bd3f6c6044c517a5b5027b1b9",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "073",
+      "family": "eleanor_love_intimate",
+      "expression": "smile",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_smile.png",
+      "current_sha256": "c9f042392cf170978b40aba6b627f2cc8a0c77fb5fab5c7763cfb36427e535eb",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_smile.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "074",
+      "family": "eleanor_love_intimate",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_soft.png",
+      "current_sha256": "44b6fdeeb6477e39b02aedd1b886897de8869621445b1a7fb6ae2f4cbfd61b1a",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_soft.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "075",
+      "family": "eleanor_love_intimate",
+      "expression": "shy",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_shy.png",
+      "current_sha256": "0019aa4ed32afae258a10ded5b8a19c9413d9262b3e5bb30c28e94d7da284163",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_shy.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "076",
+      "family": "eleanor_love_intimate",
+      "expression": "serious",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_serious.png",
+      "current_sha256": "7b68916b36cb9ca120bc19dd419868a876df72065082a9f7feb51c28ac36d611",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_serious.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "077",
+      "family": "eleanor_love_intimate",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_angry.png",
+      "current_sha256": "d158e87c8dd10464d9e4585031458afb43b0d52d4266a13032de2c1b1b0df5bc",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_angry.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "078",
+      "family": "eleanor_love_intimate",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_sad.png",
+      "current_sha256": "d8455b28b1f61ad259577a087cf450e56d9738d1278c6737db2e53fdea0fb36a",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_sad.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "079",
+      "family": "eleanor_love_intimate",
+      "expression": "hurt",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_hurt.png",
+      "current_sha256": "8c52cbbf608f82542c1382b193224c39548e96dcc6be9f752328e469c3c41a03",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_hurt.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "080",
+      "family": "eleanor_love_intimate",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_determined.png",
+      "current_sha256": "cb6d4022990baa10d79da432f954332fc80648341d11debedef759b9d29534a3",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_determined.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "081",
+      "family": "eleanor_love_intimate",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_eleanor_love_intimate_tired.png",
+      "current_sha256": "7e748c211cd927096b69778734615d4ca26d511cf9f26c17f150840526e46ccd",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "083",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "smile",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_smile.png",
+      "current_sha256": "8791c3af8d0b1220cfeaa5422859ceda601cc6a1b3a6160514a92055dd68a5fe",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_smile.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "084",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_soft.png",
+      "current_sha256": "84e0e4d4b01982ed302ca837f5f38076d692b166001ad5455a3223f97cc709ad",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_soft.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "085",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "shy",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_shy.png",
+      "current_sha256": "4f5826040dea53e994f00de72cd9cd925b44701b71db0b73529b37724d4a7c17",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_shy.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "086",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "serious",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_serious.png",
+      "current_sha256": "9c84c2152a8ce0aaa48f6468b25e0a7736390c089aa42d271d9001fa88044f78",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_serious.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "087",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_angry.png",
+      "current_sha256": "3d9fc1ea19efd972f743381864271b183c2b90fde98ff7b66731e21b04159a25",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_angry.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "088",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_sad.png",
+      "current_sha256": "486ccad162ec32cc0478dae7b7b4e6d381065864aea3df1da2233b718df63525",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_sad.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "089",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "hurt",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_hurt.png",
+      "current_sha256": "e76825a9f37ce4d166debc37ca0f795b82bc93c0129731f951d66a09719e5076",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_hurt.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "090",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_determined.png",
+      "current_sha256": "35fb8f467db51b1d1a5ab1f9d11e41a3660e7ff5eebd1ebee1ae6d29bd9f4ab7",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_determined.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "091",
+      "family": "eleanor_revolution_undersuit",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_tired.png",
+      "current_sha256": "376e7f6ec621cf4bbb326cf92ac1d806b0c76a5a7668629926edf29bb1a01082",
+      "recorded_source": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+      "prior_method": "eleanor2_shared_master"
+    },
+    {
+      "number": "094",
+      "family": "lydia_daily",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_lydia_daily_soft.png",
+      "current_sha256": "b50e240f3dca7d68f2bc448210986b9998b492f7bad6e3239b1ceec9083236ce",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_soft.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "095",
+      "family": "lydia_daily",
+      "expression": "shy",
+      "asset": "Textures/Items/er_expr_lydia_daily_shy.png",
+      "current_sha256": "967115aba52998d2c9adac63caf3ae55a43829d88bcfd422736844ecd16c2b63",
+      "recorded_source": "Textures/Items/er_expr_lydia_daily_flustered.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "097",
+      "family": "lydia_daily",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_lydia_daily_angry.png",
+      "current_sha256": "c31ac66efc6c6f79c50c3ec30805749e09f8649ed332f87ec3cb98eb3c51da7b",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_angry.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "098",
+      "family": "lydia_daily",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_lydia_daily_sad.png",
+      "current_sha256": "c16f8ac839d8c638dc34e3ab0fb867676894afb8d88626a45d1c207f61e929da",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_sad.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "100",
+      "family": "lydia_daily",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_lydia_daily_determined.png",
+      "current_sha256": "9465250d7d27e9956a9dbcc32f1212075c4d09cd912fb562bc193bcf708100e7",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_determined.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "101",
+      "family": "lydia_daily",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_lydia_daily_tired.png",
+      "current_sha256": "b11abf16b8e00270b6fd64e683997821a43cbc6e7e019eed33f246466a14b2a2",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_tired.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "102",
+      "family": "lydia_daily",
+      "expression": "flustered",
+      "asset": "Textures/Items/er_expr_lydia_daily_flustered.png",
+      "current_sha256": "a7121ea195115bbd88ed44c6483f6fb62e8e0ff4416133b7d33cb8f160eb29f0",
+      "recorded_source": null,
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "106",
+      "family": "lydia_date",
+      "expression": "soft",
+      "asset": "Textures/Items/er_expr_lydia_date_soft.png",
+      "current_sha256": "96392adb3766957f2a4218317c61c7b95ee39fb0278cc1ca48c86aa4a0451f97",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_soft.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "109",
+      "family": "lydia_date",
+      "expression": "angry",
+      "asset": "Textures/Items/er_expr_lydia_date_angry.png",
+      "current_sha256": "6c36a428b48b2d49fb719e8805176462c68e9c2ac76278a82d5ca0f5dd8fba87",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_angry.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "110",
+      "family": "lydia_date",
+      "expression": "sad",
+      "asset": "Textures/Items/er_expr_lydia_date_sad.png",
+      "current_sha256": "d9109ca98b7a53774e0c08d8fec9c355845a5fa4e515db68b64e10fc60a1767e",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_sad.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "112",
+      "family": "lydia_date",
+      "expression": "determined",
+      "asset": "Textures/Items/er_expr_lydia_date_determined.png",
+      "current_sha256": "94074d4bc8ed8585c9dbabe64d500621890fd3e2dd5372945be03d224a1829e3",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_determined.png",
+      "prior_method": "other_or_legacy"
+    },
+    {
+      "number": "113",
+      "family": "lydia_date",
+      "expression": "tired",
+      "asset": "Textures/Items/er_expr_lydia_date_tired.png",
+      "current_sha256": "a37f6897f5477d2fd5e31edf7e8857a5f54b50618e4fc086b4027ac2d5d32a4f",
+      "recorded_source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_tired.png",
+      "prior_method": "other_or_legacy"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "references": [
+    {
+      "role": "eleanor-white-casual-identity",
+      "source": "B:\\Eleanor Story Expand\\Art\\love-intimate-outfit-2026-11-13\\masters\\eleanor_love_intimate_master_v1.png",
+      "source_sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Bridal-Carry-CG-20261118\\eleanor-white-casual-identity.jpg",
+      "dimensions": [
+        850,
+        923
+      ],
+      "bytes": 265288,
+      "sha256": "0f8ffa2f2c558804a6a9060c283dfc6862db1cf1a81da14ab507bd105f7a7a0c"
+    },
+    {
+      "role": "first-person-bridal-carry-composition",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-fe454fe4-297a-44c3-a3fe-b9d0d6d4a45b.jpg",
+      "source_sha256": "049a363096426ce544cec4689fef83c78002b708d0d43ad0cbd710751f114df6",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Bridal-Carry-CG-20261118\\first-person-bridal-carry-composition.jpg",
+      "dimensions": [
+        1250,
+        703
+      ],
+      "bytes": 220283,
+      "sha256": "a41d5e2dd868e36a12c3d27d82525ac61d9f870261643ea60884526f7399af6c"
+    },
+    {
+      "role": "lower-district-street-reference",
+      "source": "B:\\Eleanor Story Expand\\Textures\\Items\\er_event_revolution_embrace_cg.png",
+      "source_sha256": "195521fd28dc7d3f8406dd51aa7d8ce9015ccb8e113326dd23336c7784753545",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Bridal-Carry-CG-20261118\\lower-district-street-reference.jpg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 292803,
+      "sha256": "3eebeab1fd5c9bc02f04371b540c8e781323488445b9895e30cb7a339f07f1d8"
+    },
+    {
+      "role": "original-station-material-reference",
+      "source": "B:\\Eleanor Story Expand\\Art\\revolution-ending-2026-11-11\\references_local\\wall_36.png",
+      "source_sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Bridal-Carry-CG-20261118\\original-station-material-reference.jpg",
+      "dimensions": [
+        640,
+        360
+      ],
+      "bytes": 130301,
+      "sha256": "ed5305ced8d5856629f727514e60e205a2b063498b767ca0f5ad39e957134248"
+    }
+  ],
+  "estimated_request_bytes": 1261572
+}

@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image editing",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_side_lean_master_v6.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "68f8ad905ed4f9531b5db6a5924b559daddedd2de2b6a0be1160f9433b1695ce",
+  "prompt": "prompt_v6.txt",
+  "references": "references_v6.json",
+  "review": "Verified raised torso and diagonal view, unobstructed sweater front, near hand on the upper thigh, far palm on the bed, and separate white tights below the rib-knit hem."
+}

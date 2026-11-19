@@ -1,0 +1,14 @@
+{
+  "status": "initial composition candidate; not installed",
+  "method": "built-in image generation",
+  "master": "B:\\Eleanor Story Expand\\Art\\eleanor-lydia-kiss-closeup-cg-2026-11-18\\eleanor_lydia_kiss_closeup_master_v1.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "514a0c8dacfef403a4f26ebc7ffaf84586c3f12a35d1b57f716a5cbace46d4b8",
+  "prompt": "prompt_v1.txt",
+  "review": "Viewed 1100px preview. In v2 checked separate lip contours, slight nose offset, gap between chins, character identities, earrings and hair.",
+  "depiction": "gentle closed-lip kiss, facial close-up"
+}

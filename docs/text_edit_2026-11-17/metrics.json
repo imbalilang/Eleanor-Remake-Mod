@@ -1,0 +1,476 @@
+{
+  "definition": "一个源 text 行计一个显示气泡；表情标签、选择元数据不计；字符统计含标点，不含空白与 HTML 标签；NPC 连续数在玩家发言、选择或原生交易边界归零，提供忽略旁白/遇旁白归零两种口径。",
+  "coverage": "c10 六条埃莉诺路径、两条掮客路径、四条莉迪亚路径；不计原生交易 UI、运行时 wait/nosale/missing 提示及重载续接。c19 四条主要告白路径；不计条件性 b001 和解前缀与不告白 b006，二者未改。",
+  "path_counts": {
+    "c10": {
+      "埃莉诺/直说/持有镯子": {
+        "original": {
+          "displayed_rows": 43,
+          "dialogue_bubbles": 39,
+          "narration_bubbles": 4,
+          "player_bubbles": 7,
+          "visible_characters_including_punctuation": 447,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        },
+        "agent": {
+          "displayed_rows": 43,
+          "dialogue_bubbles": 39,
+          "narration_bubbles": 4,
+          "player_bubbles": 7,
+          "visible_characters_including_punctuation": 412,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        }
+      },
+      "埃莉诺/直说/已无镯子": {
+        "original": {
+          "displayed_rows": 38,
+          "dialogue_bubbles": 34,
+          "narration_bubbles": 4,
+          "player_bubbles": 6,
+          "visible_characters_including_punctuation": 406,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 4
+        },
+        "agent": {
+          "displayed_rows": 38,
+          "dialogue_bubbles": 34,
+          "narration_bubbles": 4,
+          "player_bubbles": 6,
+          "visible_characters_including_punctuation": 376,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 4
+        }
+      },
+      "埃莉诺/只说来过/持有镯子": {
+        "original": {
+          "displayed_rows": 36,
+          "dialogue_bubbles": 33,
+          "narration_bubbles": 3,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 353,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        },
+        "agent": {
+          "displayed_rows": 36,
+          "dialogue_bubbles": 33,
+          "narration_bubbles": 3,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 337,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        }
+      },
+      "埃莉诺/只说来过/已无镯子": {
+        "original": {
+          "displayed_rows": 31,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 3,
+          "player_bubbles": 4,
+          "visible_characters_including_punctuation": 312,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        },
+        "agent": {
+          "displayed_rows": 31,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 3,
+          "player_bubbles": 4,
+          "visible_characters_including_punctuation": 301,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        }
+      },
+      "埃莉诺/反问认识/持有镯子": {
+        "original": {
+          "displayed_rows": 37,
+          "dialogue_bubbles": 33,
+          "narration_bubbles": 4,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 368,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        },
+        "agent": {
+          "displayed_rows": 37,
+          "dialogue_bubbles": 33,
+          "narration_bubbles": 4,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 352,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 5
+        }
+      },
+      "埃莉诺/反问认识/已无镯子": {
+        "original": {
+          "displayed_rows": 32,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 4,
+          "player_bubbles": 4,
+          "visible_characters_including_punctuation": 327,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 4
+        },
+        "agent": {
+          "displayed_rows": 32,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 4,
+          "player_bubbles": 4,
+          "visible_characters_including_punctuation": 316,
+          "longest_npc_run_ignoring_narration": 7,
+          "longest_npc_run_reset_by_narration": 4
+        }
+      },
+      "掮客/不成交": {
+        "original": {
+          "displayed_rows": 17,
+          "dialogue_bubbles": 14,
+          "narration_bubbles": 3,
+          "player_bubbles": 2,
+          "visible_characters_including_punctuation": 205,
+          "longest_npc_run_ignoring_narration": 6,
+          "longest_npc_run_reset_by_narration": 4
+        },
+        "agent": {
+          "displayed_rows": 17,
+          "dialogue_bubbles": 14,
+          "narration_bubbles": 3,
+          "player_bubbles": 2,
+          "visible_characters_including_punctuation": 195,
+          "longest_npc_run_ignoring_narration": 6,
+          "longest_npc_run_reset_by_narration": 4
+        }
+      },
+      "掮客/成交": {
+        "original": {
+          "displayed_rows": 17,
+          "dialogue_bubbles": 13,
+          "narration_bubbles": 4,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 202,
+          "longest_npc_run_ignoring_narration": 6,
+          "longest_npc_run_reset_by_narration": 4
+        },
+        "agent": {
+          "displayed_rows": 17,
+          "dialogue_bubbles": 13,
+          "narration_bubbles": 4,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 194,
+          "longest_npc_run_ignoring_narration": 6,
+          "longest_npc_run_reset_by_narration": 4
+        }
+      },
+      "莉迪亚/原价回收": {
+        "original": {
+          "displayed_rows": 33,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 5,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 453,
+          "longest_npc_run_ignoring_narration": 20,
+          "longest_npc_run_reset_by_narration": 10
+        },
+        "agent": {
+          "displayed_rows": 33,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 5,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 455,
+          "longest_npc_run_ignoring_narration": 20,
+          "longest_npc_run_reset_by_narration": 10
+        }
+      },
+      "莉迪亚/直接赠送": {
+        "original": {
+          "displayed_rows": 35,
+          "dialogue_bubbles": 30,
+          "narration_bubbles": 5,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 430,
+          "longest_npc_run_ignoring_narration": 22,
+          "longest_npc_run_reset_by_narration": 10
+        },
+        "agent": {
+          "displayed_rows": 35,
+          "dialogue_bubbles": 30,
+          "narration_bubbles": 5,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 448,
+          "longest_npc_run_ignoring_narration": 22,
+          "longest_npc_run_reset_by_narration": 10
+        }
+      },
+      "莉迪亚/自报五百后成交": {
+        "original": {
+          "displayed_rows": 33,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 5,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 448,
+          "longest_npc_run_ignoring_narration": 17,
+          "longest_npc_run_reset_by_narration": 10
+        },
+        "agent": {
+          "displayed_rows": 33,
+          "dialogue_bubbles": 28,
+          "narration_bubbles": 5,
+          "player_bubbles": 1,
+          "visible_characters_including_punctuation": 466,
+          "longest_npc_run_ignoring_narration": 17,
+          "longest_npc_run_reset_by_narration": 10
+        }
+      },
+      "莉迪亚/自报五百后未成交": {
+        "original": {
+          "displayed_rows": 7,
+          "dialogue_bubbles": 6,
+          "narration_bubbles": 1,
+          "player_bubbles": 0,
+          "visible_characters_including_punctuation": 94,
+          "longest_npc_run_ignoring_narration": 3,
+          "longest_npc_run_reset_by_narration": 3
+        },
+        "agent": {
+          "displayed_rows": 7,
+          "dialogue_bubbles": 6,
+          "narration_bubbles": 1,
+          "player_bubbles": 0,
+          "visible_characters_including_punctuation": 94,
+          "longest_npc_run_ignoring_narration": 3,
+          "longest_npc_run_reset_by_narration": 3
+        }
+      }
+    },
+    "c19": {
+      "归还研究/接受": {
+        "original": {
+          "displayed_rows": 28,
+          "dialogue_bubbles": 23,
+          "narration_bubbles": 5,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 436,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        },
+        "agent": {
+          "displayed_rows": 28,
+          "dialogue_bubbles": 23,
+          "narration_bubbles": 5,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 418,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        }
+      },
+      "归还研究/朋友": {
+        "original": {
+          "displayed_rows": 18,
+          "dialogue_bubbles": 15,
+          "narration_bubbles": 3,
+          "player_bubbles": 2,
+          "visible_characters_including_punctuation": 303,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        },
+        "agent": {
+          "displayed_rows": 18,
+          "dialogue_bubbles": 15,
+          "narration_bubbles": 3,
+          "player_bubbles": 2,
+          "visible_characters_including_punctuation": 285,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        }
+      },
+      "保护/接受": {
+        "original": {
+          "displayed_rows": 28,
+          "dialogue_bubbles": 23,
+          "narration_bubbles": 5,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 443,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        },
+        "agent": {
+          "displayed_rows": 28,
+          "dialogue_bubbles": 23,
+          "narration_bubbles": 5,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 425,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        }
+      },
+      "保护/朋友": {
+        "original": {
+          "displayed_rows": 18,
+          "dialogue_bubbles": 15,
+          "narration_bubbles": 3,
+          "player_bubbles": 2,
+          "visible_characters_including_punctuation": 310,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        },
+        "agent": {
+          "displayed_rows": 18,
+          "dialogue_bubbles": 15,
+          "narration_bubbles": 3,
+          "player_bubbles": 2,
+          "visible_characters_including_punctuation": 292,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 8
+        }
+      }
+    }
+  },
+  "pipeline": {
+    "c10_production_opus": {
+      "scene": "c10",
+      "snapshot": "c10_production_opus.txt",
+      "primary_path_metrics": null,
+      "section_metrics": {
+        "她来问人": {
+          "displayed_rows": 11,
+          "dialogue_bubbles": 11,
+          "narration_bubbles": 0,
+          "player_bubbles": 3,
+          "visible_characters_including_punctuation": 166,
+          "longest_npc_run_ignoring_narration": 3,
+          "longest_npc_run_reset_by_narration": 3
+        },
+        "一千的报价": {
+          "displayed_rows": 10,
+          "dialogue_bubbles": 10,
+          "narration_bubbles": 0,
+          "player_bubbles": 3,
+          "visible_characters_including_punctuation": 151,
+          "longest_npc_run_ignoring_narration": 2,
+          "longest_npc_run_reset_by_narration": 2
+        },
+        "镯子回家": {
+          "displayed_rows": 12,
+          "dialogue_bubbles": 12,
+          "narration_bubbles": 0,
+          "player_bubbles": 3,
+          "visible_characters_including_punctuation": 205,
+          "longest_npc_run_ignoring_narration": 3,
+          "longest_npc_run_reset_by_narration": 3
+        }
+      }
+    },
+    "c19_production_opus": {
+      "scene": "c19",
+      "snapshot": "c19_production_opus.txt",
+      "primary_path_metrics": {
+        "displayed_rows": 20,
+        "dialogue_bubbles": 18,
+        "narration_bubbles": 2,
+        "player_bubbles": 5,
+        "visible_characters_including_punctuation": 313,
+        "longest_npc_run_ignoring_narration": 3,
+        "longest_npc_run_reset_by_narration": 3
+      },
+      "section_metrics": {
+        "打烊以后": {
+          "displayed_rows": 20,
+          "dialogue_bubbles": 18,
+          "narration_bubbles": 2,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 313,
+          "longest_npc_run_ignoring_narration": 3,
+          "longest_npc_run_reset_by_narration": 3
+        }
+      }
+    },
+    "c19_pilot_opus": {
+      "scene": "c19",
+      "snapshot": "c19_pilot_opus.txt",
+      "primary_path_metrics": {
+        "displayed_rows": 31,
+        "dialogue_bubbles": 29,
+        "narration_bubbles": 2,
+        "player_bubbles": 6,
+        "visible_characters_including_punctuation": 526,
+        "longest_npc_run_ignoring_narration": 11,
+        "longest_npc_run_reset_by_narration": 11
+      },
+      "section_metrics": {
+        "打烊之后": {
+          "displayed_rows": 31,
+          "dialogue_bubbles": 29,
+          "narration_bubbles": 2,
+          "player_bubbles": 6,
+          "visible_characters_including_punctuation": 526,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 11
+        }
+      }
+    },
+    "c19_pilot_gemini": {
+      "scene": "c19",
+      "snapshot": "c19_pilot_gemini.txt",
+      "primary_path_metrics": {
+        "displayed_rows": 25,
+        "dialogue_bubbles": 23,
+        "narration_bubbles": 2,
+        "player_bubbles": 5,
+        "visible_characters_including_punctuation": 495,
+        "longest_npc_run_ignoring_narration": 11,
+        "longest_npc_run_reset_by_narration": 11
+      },
+      "section_metrics": {
+        "打烊之后": {
+          "displayed_rows": 25,
+          "dialogue_bubbles": 23,
+          "narration_bubbles": 2,
+          "player_bubbles": 5,
+          "visible_characters_including_punctuation": 495,
+          "longest_npc_run_ignoring_narration": 11,
+          "longest_npc_run_reset_by_narration": 11
+        }
+      }
+    }
+  },
+  "point_qa": {
+    "归还研究/接受": {
+      "displayed_rows": 28,
+      "dialogue_bubbles": 23,
+      "narration_bubbles": 5,
+      "player_bubbles": 5,
+      "visible_characters_including_punctuation": 455,
+      "longest_npc_run_ignoring_narration": 11,
+      "longest_npc_run_reset_by_narration": 8
+    },
+    "归还研究/朋友": {
+      "displayed_rows": 18,
+      "dialogue_bubbles": 15,
+      "narration_bubbles": 3,
+      "player_bubbles": 2,
+      "visible_characters_including_punctuation": 304,
+      "longest_npc_run_ignoring_narration": 11,
+      "longest_npc_run_reset_by_narration": 8
+    },
+    "保护/接受": {
+      "displayed_rows": 28,
+      "dialogue_bubbles": 23,
+      "narration_bubbles": 5,
+      "player_bubbles": 5,
+      "visible_characters_including_punctuation": 455,
+      "longest_npc_run_ignoring_narration": 11,
+      "longest_npc_run_reset_by_narration": 8
+    },
+    "保护/朋友": {
+      "displayed_rows": 18,
+      "dialogue_bubbles": 15,
+      "narration_bubbles": 3,
+      "player_bubbles": 2,
+      "visible_characters_including_punctuation": 304,
+      "longest_npc_run_ignoring_narration": 11,
+      "longest_npc_run_reset_by_narration": 8
+    }
+  }
+}

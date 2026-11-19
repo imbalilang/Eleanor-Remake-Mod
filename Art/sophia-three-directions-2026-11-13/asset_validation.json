@@ -1,0 +1,276 @@
+{
+  "status": "three portrait candidates",
+  "tool": "built-in image generation",
+  "reference": "reference.json",
+  "native_landmarks": {
+    "eye_midpoint": [
+      145,
+      115
+    ],
+    "chin_y": 137
+  },
+  "landmark_method": "visual estimates of eye line and chin used for each isotropic export",
+  "assets": [
+    {
+      "direction": "irisviel",
+      "master": {
+        "file": "masters/sophia_irisviel_master.png",
+        "size": [
+          1036,
+          1518
+        ],
+        "mode": "RGBA",
+        "sha256": "c590edbe2fae0c5197c3cc7fc7e48764997893b3b60cf05c0c0ddef4cf38a789"
+      },
+      "portrait": {
+        "file": "portraits/er_portrait_sophia_irisviel.png",
+        "size": [
+          288,
+          212
+        ],
+        "mode": "RGBA",
+        "sha256": "ae39b2995b63e6ac0a5aa11c29503926e6cefec0f56e870dca4b2b9d28952426"
+      },
+      "prompt": "prompts/irisviel.txt",
+      "prompt_sha256": "4649004702b7b25729292cb36cf943a16fbba74773d0a3fdcb87b65a668b7724",
+      "request_bound_bytes": 1148657,
+      "estimated_master_landmarks": {
+        "eye_midpoint": [
+          524,
+          332
+        ],
+        "chin_y": 546
+      },
+      "source_top_edge_opaque_pixels": 0,
+      "pipeline": {
+        "source_size": [
+          1036,
+          1518
+        ],
+        "clean_bbox": [
+          2,
+          3,
+          1032,
+          1518
+        ],
+        "parameters": {
+          "visible_height": 155.74766355140187,
+          "centre_x": 144.2803738317757,
+          "bottom_exclusive": 235.9252336448598,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.102803738317757,
+          "tx": 91.13084112149534,
+          "ty": 79.86915887850466
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 5193,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          91,
+          81,
+          197,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 6598
+      }
+    },
+    {
+      "direction": "ruan-mei",
+      "master": {
+        "file": "masters/sophia_ruan-mei_master.png",
+        "size": [
+          1036,
+          1518
+        ],
+        "mode": "RGBA",
+        "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5"
+      },
+      "portrait": {
+        "file": "portraits/er_portrait_sophia_ruan-mei.png",
+        "size": [
+          288,
+          212
+        ],
+        "mode": "RGBA",
+        "sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20"
+      },
+      "prompt": "prompts/ruan-mei.txt",
+      "prompt_sha256": "e3f35aba5dcbe641d2ca7699680f541afc523bf494052d888d22e5de0c341278",
+      "request_bound_bytes": 1148650,
+      "estimated_master_landmarks": {
+        "eye_midpoint": [
+          519,
+          343
+        ],
+        "chin_y": 548
+      },
+      "source_top_edge_opaque_pixels": 4,
+      "pipeline": {
+        "source_size": [
+          1036,
+          1518
+        ],
+        "clean_bbox": [
+          66,
+          0,
+          962,
+          1518
+        ],
+        "parameters": {
+          "visible_height": 162.90731707317073,
+          "centre_x": 144.46341463414635,
+          "bottom_exclusive": 240.09756097560975,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.1073170731707317,
+          "tx": 89.30243902439025,
+          "ty": 77.19024390243902
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 3629,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          99,
+          78,
+          190,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 5147
+      }
+    },
+    {
+      "direction": "yor",
+      "master": {
+        "file": "masters/sophia_yor_master.png",
+        "size": [
+          1036,
+          1518
+        ],
+        "mode": "RGBA",
+        "sha256": "2432d361eaa2e77d91da85ec3b435b740f1783a6ba7b43009ea53532cd903c54"
+      },
+      "portrait": {
+        "file": "portraits/er_portrait_sophia_yor.png",
+        "size": [
+          288,
+          212
+        ],
+        "mode": "RGBA",
+        "sha256": "834f0d933a6ec93ce39422fb3b61153b7aa6a07902987f183454b4e303121bfb"
+      },
+      "prompt": "prompts/yor.txt",
+      "prompt_sha256": "05ec8c86b6aad176f7e1a03a27fa1331ffc836487e1274d7c0ee4f16894c54a8",
+      "request_bound_bytes": 1148665,
+      "estimated_master_landmarks": {
+        "eye_midpoint": [
+          525,
+          359
+        ],
+        "chin_y": 571
+      },
+      "source_top_edge_opaque_pixels": 0,
+      "pipeline": {
+        "source_size": [
+          1036,
+          1518
+        ],
+        "clean_bbox": [
+          16,
+          3,
+          1018,
+          1518
+        ],
+        "parameters": {
+          "visible_height": 157.2169811320755,
+          "centre_x": 144.16981132075472,
+          "bottom_exclusive": 234.27358490566039,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.10377358490566038,
+          "tx": 90.51886792452831,
+          "ty": 76.74528301886792
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 3221,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          92,
+          78,
+          196,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 4181
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "references": [
+    {
+      "role": "costume-identity",
+      "source": "Art/revolution-route-2026-11-10/masters/eleanor_revolution_undersuit_beauty_v3.png",
+      "source_sha256": "0eb50e2c5c9216835412ef19951dae82d1f676847b67be8ede75178a93773368",
+      "source_box": [
+        315,
+        19,
+        1142,
+        1077
+      ],
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Reconstruction-vht3j4jm/dawn-costume-identity.jpg",
+      "upload_dimensions": [
+        782,
+        1000
+      ],
+      "upload_bytes": 256080,
+      "upload_sha256": "7da227d4938ab519b7b935e8031e587764250ba273e3a4031abf7e8db7b0f9e3"
+    },
+    {
+      "role": "current-scene",
+      "source": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_v5_master.png",
+      "source_sha256": "c87dd1cc3e6683da0121674591f38a1d7b49bacb4108e765fee0a5fa4950d615",
+      "source_box": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Reconstruction-vht3j4jm/dawn-current-scene.jpg",
+      "upload_dimensions": [
+        1080,
+        608
+      ],
+      "upload_bytes": 357490,
+      "upload_sha256": "e7d47d20fabbe27f6b34df40155bad7624e053093fe097c5113d26afaeac67a7"
+    },
+    {
+      "role": "face-and-rendering",
+      "source": "Art/love-intimate-outfit-2026-11-13/masters/eleanor_love_intimate_master_v1.png",
+      "source_sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+      "source_box": [
+        28,
+        0,
+        1204,
+        1277
+      ],
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Reconstruction-vht3j4jm/dawn-face-and-rendering.jpg",
+      "upload_dimensions": [
+        760,
+        825
+      ],
+      "upload_bytes": 223283,
+      "upload_sha256": "90d81661ed702771213a24f43416a2dbb1d8fb88ed989ebc417ff2d8b22aa8a7"
+    }
+  ],
+  "estimated_request_bytes": 1165808
+}

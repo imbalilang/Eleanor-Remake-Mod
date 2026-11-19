@@ -1,0 +1,80 @@
+{
+  "source_sha256": "909a9686be8ef2d3c3711823ee32f1c9a86a56f02de49a13e580813fe72f24db",
+  "v1_sha256": "01fbde9d1917086d719641362c9a8f55d30d6f62c9e13a8df3251cc32eae0df1",
+  "candidate_sha256": "5a395175e2e62aa09c77c03be110d25a665a6549eac2d4db016ef3273296fbed",
+  "release_csv_sha256": "41b705ae33e93e85812ec27bc8bcd9378314b46ebf3c587ac9384822c3b7b171",
+  "release_matched_rows": 162,
+  "release_version": "1.13",
+  "release_upload_completed_utc": "2026-11-17T01:36:25.0961179Z",
+  "deleted_rows": 26,
+  "deleted_by_scene": {
+    "c10": 22,
+    "c19": 4
+  },
+  "remaining_target_rows": 136,
+  "surviving_rows_all_fields_unchanged_from_v1": true,
+  "reinserting_deleted_rows_reconstructs_v1_exactly": true,
+  "player_rows_preserved_all_16_paths": true,
+  "route_specific_mother_and_locked_confession_preserved": true,
+  "expression_losses": [
+    {
+      "block": "c10.n210",
+      "old_index": 1,
+      "new_index": null,
+      "old_key": "er_v06_c10_n210_02",
+      "new_key": null,
+      "deleted": true,
+      "text": "你这人。",
+      "removed_expr": "shy"
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 8,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_09",
+      "new_key": null,
+      "deleted": true,
+      "text": "好了。",
+      "removed_expr": "smile"
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 6,
+      "new_index": null,
+      "old_key": "er_v06_c19_b101_07",
+      "new_key": null,
+      "deleted": true,
+      "text": "喂。我说件事，你别打岔。",
+      "removed_expr": "serious"
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 6,
+      "new_index": null,
+      "old_key": "er_v06_c19_b101_return_07",
+      "new_key": null,
+      "deleted": true,
+      "text": "喂。我说件事，你别打岔。",
+      "removed_expr": "serious"
+    }
+  ],
+  "n205_conditional_requires_remap": {
+    "old_skip": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "new_skip": [
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "production_applied": false,
+  "english_revised": false,
+  "new_external_model_calls": 0,
+  "semantic_review": "同一编辑自审；自动核对只验证删行、来源、索引及统计，不能证明文学质量或实机兼容。"
+}

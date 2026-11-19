@@ -1,0 +1,98 @@
+{
+  "soft": {
+    "archive_master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_soft.png",
+    "file_sha256": "4745f84812b3bd346fe18100db3b58b81ace1070de5cdfadffd1620f4dfc2a4e",
+    "crop": [
+      371,
+      303,
+      1124,
+      1076
+    ],
+    "ref_size": [
+      753,
+      773
+    ],
+    "ref_sha256": "a55481a4cd2cdfd1c6285a31b6def42be4204ecacf32c455b0866c23ac7056b4",
+    "ref_bytes": 732904
+  },
+  "shy": {
+    "archive_master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_shy.png",
+    "file_sha256": "e56d292aa24eed65b1111c36d2aad34dbf60b033c1c6e0038fc588b56ff6a1ed",
+    "crop": [
+      360,
+      291,
+      1114,
+      1076
+    ],
+    "ref_size": [
+      754,
+      785
+    ],
+    "ref_sha256": "d11ea206e843b90b7c66e67def4e49d690e8d75f557391e378188c2d7ae16b08",
+    "ref_bytes": 747327
+  },
+  "serious": {
+    "archive_master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_serious.png",
+    "file_sha256": "6007df9131be7ddee8a574684eaee2e82bdd36d91b60987d16c5a5cd51f200b6",
+    "crop": [
+      371,
+      305,
+      1130,
+      1076
+    ],
+    "ref_size": [
+      759,
+      771
+    ],
+    "ref_sha256": "bac1775c1d087300025378d95eda6f277c19388b6fc2c2583b33508360cabca7",
+    "ref_bytes": 723076
+  },
+  "hurt": {
+    "archive_master": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_hurt.png",
+    "file_sha256": "8397b364117b0211f955aa69772719b61abf66d0507953d3efeb763e42930566",
+    "crop": [
+      0,
+      43,
+      1138,
+      1382
+    ],
+    "ref_size": [
+      1138,
+      1339
+    ],
+    "ref_sha256": "dc641bf46a1d04ab5fc7cae2b88da46cf735fdd83f9ddb699c4f4687d3fec660",
+    "ref_bytes": 1689105
+  },
+  "determined": {
+    "archive_master": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_determined.png",
+    "file_sha256": "f4f35e33f2e3c2b47467749bc206ce060d3b66e69c0211c643d063115e9059cf",
+    "crop": [
+      0,
+      34,
+      1138,
+      1382
+    ],
+    "ref_size": [
+      1138,
+      1348
+    ],
+    "ref_sha256": "db7c491f5daa8807e3b59a54c11891bf856ea13bf45e47effb246b826295154b",
+    "ref_bytes": 1680104
+  },
+  "tired": {
+    "archive_master": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_tired.png",
+    "file_sha256": "ae270faee409def07193b441b33ced6203e56190e0eb801eb964b29b7f7febc3",
+    "crop": [
+      0,
+      47,
+      1138,
+      1382
+    ],
+    "ref_size": [
+      1138,
+      1335
+    ],
+    "ref_sha256": "ae0301065e2134efbb7258b67c67e38e1a95c880b72174298b09d7281dc8aa08",
+    "ref_bytes": 1687892
+  }
+}

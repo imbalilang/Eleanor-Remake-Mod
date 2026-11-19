@@ -1,0 +1,14 @@
+{
+  "status": "art candidate",
+  "method": "built-in image generation",
+  "master": "eleanor_stockings_embrace_master_v2.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "90602b0bf078ed1abc6917ce7626c7f73a02c79475d270fef0004f9a4771fe3a",
+  "prompt": "prompt_v2.txt",
+  "references": "references_v2.json",
+  "review": "Verified Eleanor reclining on a pillow in a bed, hugging the player seen from behind, with two white-stocking-clad calves crossed on his back and both white pumps visible."
+}

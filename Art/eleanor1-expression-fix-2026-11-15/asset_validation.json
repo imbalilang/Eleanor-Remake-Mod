@@ -1,0 +1,56 @@
+{
+  "size": [
+    288,
+    212
+  ],
+  "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+  "jaw_and_alpha_match_base": true,
+  "output": [
+    {
+      "sprite": "er_expr_eleanor1_smile.png",
+      "original_master": "Art/expression-expansion-2026-11-13/masters/er_expr_eleanor2_smile.png",
+      "original_master_size": [
+        1138,
+        1382
+      ],
+      "original_master_sha256": "f8361c777d496cb64e175b2f1881bfd80ac388f491f1f76e5c3067a8eaebb6c3",
+      "source_crop_native_hd_pixels": [
+        101,
+        28,
+        930,
+        857
+      ],
+      "edit_reference_sha256": "27653662028d3e5e3bc91a0dfb3c257b999e33bd16121758713159e1c62d44f0",
+      "edit_sha256": "deeb0bf8bdd5ccd3d1d2db2567359c5e4d55fed17f87e0d73f28265d75a117f1",
+      "full_master_sha256": "0eee137558e736270d2b8137f555e5ef9c81c3516ee4bb8458e8f35c8f78b81e",
+      "runtime_source": "Art/eleanor1-expression-fix-2026-11-15/masters/eleanor1-smile-half-body.png",
+      "runtime_source_sha256": "0eee137558e736270d2b8137f555e5ef9c81c3516ee4bb8458e8f35c8f78b81e",
+      "old_sprite_sha256": "403f6cc8bccaae139ef5483e052db1f836731362e74417a3c361717a292b259b",
+      "new_sprite_sha256": "6568578783c7b2645825f99a199926669c29c3b89d86b1bbe5d19cfaec9f5845",
+      "changed_pixels_against_neutral": 164
+    },
+    {
+      "sprite": "er_expr_eleanor1_angry.png",
+      "original_master": "Art/expressions-and-endings-2026-11-10/masters/er_expr_eleanor1_angry.png",
+      "original_master_size": [
+        1462,
+        1076
+      ],
+      "original_master_sha256": "b006da2d40acbdd52450e021f38f572080c7bc71657d62d50ffa13083a6c483d",
+      "source_crop_native_hd_pixels": [
+        463,
+        278,
+        954,
+        769
+      ],
+      "edit_reference_sha256": "1d0eb1153c1e4771437b80af01aa4fbf1df2cc6a7bcf4b6e6e232c8f3d28c727",
+      "edit_sha256": "4138c9ab74911ff32e8c3fac554b2267c3cc2671facba53717968ccb4e7bf026",
+      "full_master_sha256": "969668b9ae9162348391e6e9793e6e0edeaf37a626a88c4868970f0833301af8",
+      "runtime_source": "Art/eleanor1-expression-fix-2026-11-15/masters/angry.png",
+      "runtime_source_sha256": "0a15902766e696e48991b11bf28ae421f8362ff50e0d016ec2e476a1c0366483",
+      "old_sprite_sha256": "799d28618b2adbce99423be7dacabca4c4c83606badc84d611c34d0b45eb98d0",
+      "new_sprite_sha256": "3fae48935df7d3ec8e468f773a701d300bb8974737cb522dc136d08cedc0023f",
+      "changed_pixels_against_neutral": 785
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "references": [
+    {
+      "role": "edit target: existing E1 v6 wedding scene",
+      "source": {
+        "file": "Art/love-ending-2026-11-13/masters/ending_love_wedding_master_v6.png",
+        "size": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "bytes": 2595343,
+        "sha256": "1c4a31b96170328b288c85f0dcb7949a9ebfc06518bdcfdabcee29d8b917ffc8"
+      },
+      "upload": {
+        "file": "Art/love-ending-2026-11-13/references_local/wedding-v6-edit-upload.jpg",
+        "size": [
+          1450,
+          816
+        ],
+        "mode": "RGB",
+        "bytes": 578709,
+        "sha256": "fea165217664d93f08f4a0504f7eb9a81b279d31cbe827ca44787bb2c9f116c0"
+      }
+    },
+    {
+      "role": "Sophia approved face, low bun, jade hairpin and white knit outfit",
+      "source": {
+        "file": "Art/sophia-ruan-mei-home-2026-11-13/masters/sophia_white_knit_relaxed_v2_master.png",
+        "size": [
+          963,
+          1633
+        ],
+        "mode": "RGBA",
+        "bytes": 2139710,
+        "sha256": "2663c70b8b71faa81517559b6c998e9c9e1fad877df10f910b1dc012343f507b"
+      },
+      "upload": {
+        "file": "Art/love-ending-2026-11-13/references_local/sophia-white-knit-v2-upload.png",
+        "size": [
+          546,
+          950
+        ],
+        "mode": "RGBA",
+        "bytes": 677159,
+        "sha256": "ce08bd8a5e2f3837fe340cfcbd497736660bcff865ac40343e15235a39079478"
+      }
+    }
+  ],
+  "estimated_request_bytes": 1740028
+}

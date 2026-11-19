@@ -1,0 +1,29 @@
+{
+  "references": [
+    {
+      "role": "eleanor-adult-face-identity",
+      "source": "B:\\Eleanor Story Expand\\Art\\love-intimate-outfit-2026-11-13\\masters\\eleanor_love_intimate_master_v1.png",
+      "source_sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Heart-Eyes-Closeup-CG-20261118\\eleanor-adult-face-identity.jpg",
+      "dimensions": [
+        850,
+        923
+      ],
+      "bytes": 265288,
+      "sha256": "0f8ffa2f2c558804a6a9060c283dfc6862db1cf1a81da14ab507bd105f7a7a0c"
+    },
+    {
+      "role": "expression-and-closeup-composition",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-ba833fdd-4634-4fa1-9872-2f41e9c04c3a.png",
+      "source_sha256": "6846380ef2f80b0c5b6faed0c5bd3f9aeb5d07a0e0a3a4f8c4a9b24153591efa",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Heart-Eyes-Closeup-CG-20261118\\expression-and-closeup-composition.jpg",
+      "dimensions": [
+        1100,
+        672
+      ],
+      "bytes": 110248,
+      "sha256": "c87108a4997fd8ed088c04f53b2206a676e34b43affd6375258ed4942de48dd2"
+    }
+  ],
+  "estimated_request_bytes": 550720
+}

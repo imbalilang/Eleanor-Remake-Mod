@@ -1,0 +1,41 @@
+{
+  "references": [
+    {
+      "role": "approved-two-character-identity",
+      "source": "B:\\Eleanor Story Expand\\Art\\eleanor-lydia-kiss-cg-2026-11-17\\eleanor_lydia_embrace_kiss_lydia_adjusted_master.png",
+      "source_sha256": "429deb0ad426a5d7ea3b5c99a9dccfbc7d3f74b9594a16ac4a81cf2a2281ba77",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lydia-Diagonal-Kiss-Closeup-20261118\\approved-two-character-identity.jpg",
+      "dimensions": [
+        1200,
+        675
+      ],
+      "bytes": 404799,
+      "sha256": "6c5a142f241c8da67f8e652427e84dc539559b530f3848cf83683aebfa46fb9f"
+    },
+    {
+      "role": "diagonal-kiss-composition",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-5d007ed8-7abb-4a1c-8742-c73365c6a459.png",
+      "source_sha256": "afe531256d7c7f46e70fff5bce500230d5036038666588b4ec581e487811001d",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lydia-Diagonal-Kiss-Closeup-20261118\\diagonal-kiss-composition.jpg",
+      "dimensions": [
+        1100,
+        614
+      ],
+      "bytes": 145807,
+      "sha256": "dcf61e865ab1136ae9c1d86e39383dd9133c98e12c422ee91263a22942d57753"
+    },
+    {
+      "role": "lydia-approved-face",
+      "source": "B:\\Eleanor Story Expand\\Art\\lydia-style-fusion-2026-11-10\\approved\\lydia_daily_beauty_master.png",
+      "source_sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lydia-Diagonal-Kiss-Closeup-20261118\\lydia-approved-face.jpg",
+      "dimensions": [
+        745,
+        900
+      ],
+      "bytes": 216324,
+      "sha256": "312904c01c380cd41fa530d06db4fe1657bb0d8a8e4b094b13d8871278d4071b"
+    }
+  ],
+  "estimated_request_bytes": 1072576
+}

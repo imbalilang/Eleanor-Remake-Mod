@@ -1,0 +1,10 @@
+{
+  "status": "blocked; no image produced",
+  "method": "built-in image generation",
+  "request_id": "c530dc6e-cb4c-49b0-8a6b-bd8313626c30",
+  "error": "moderation_blocked",
+  "moderation_stage": "output",
+  "successful_images": 0,
+  "requested_pose": "Eleanor sitting on a bed with open arms toward the camera in the supplied white floral lace sleepwear",
+  "runtime_modified": false
+}

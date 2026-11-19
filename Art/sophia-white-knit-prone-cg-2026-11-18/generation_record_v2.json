@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image generation",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_kneeling_master_v2.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "31a54ddb98cdcf3c78565dde49d58435a167bb1e8944fe6060ef5241afd95db9",
+  "prompt": "prompt_v2.txt",
+  "references": "references_v2.json",
+  "review": "Viewed the 1100px preview for a single supporting palm, knees bearing weight on the mattress, lifted hips, upper-body framing, fabric drape, and established character likeness."
+}

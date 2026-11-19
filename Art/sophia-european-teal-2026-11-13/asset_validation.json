@@ -1,0 +1,147 @@
+{
+  "status": "portrait candidate",
+  "tool": "built-in image generation",
+  "reference": "reference.json",
+  "master": {
+    "file": "Art/sophia-european-teal-2026-11-13/masters/sophia_european_teal_master.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "sha256": "19b0c49aa00c00dbb403ef6fa741afff21afdf8450f1fa7a509be77afd01efbd"
+  },
+  "portrait": {
+    "file": "Art/sophia-european-teal-2026-11-13/portraits/er_portrait_mother_female_beauty.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "76b8a60e34b5fcf540b75451af1024858e99d166d00b67575ecd09062d03b265"
+  },
+  "prompt": "prompts/european-teal.txt",
+  "prompt_sha256": "21040f5a1ada8c3b9140327f7dfc2ee2615d514c99e123843234d3db11f3bddb",
+  "estimated_master_landmarks": {
+    "eye_midpoint": [
+      525,
+      343
+    ],
+    "chin_y": 551
+  },
+  "target_landmarks": {
+    "eye_midpoint": [
+      145,
+      115
+    ],
+    "chin_y": 137
+  },
+  "pipeline": {
+    "source_size": [
+      1024,
+      1536
+    ],
+    "clean_bbox": [
+      60,
+      10,
+      960,
+      1536
+    ],
+    "parameters": {
+      "visible_height": 161.40384615384616,
+      "centre_x": 143.41346153846155,
+      "bottom_exclusive": 240.1826923076923,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.10576923076923077,
+      "tx": 89.47115384615385,
+      "ty": 77.72115384615384
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 3028,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      100,
+      80,
+      187,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 4097
+  },
+  "checks": {
+    "blank_top_row": true,
+    "deterministic_pixels": true
+  },
+  "comparison_inputs": [
+    {
+      "file": "Textures/Items/er_portrait_mother_female_beauty.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364"
+    },
+    {
+      "file": "Art/sophia-three-directions-2026-11-13/portraits/er_portrait_sophia_ruan-mei.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20"
+    },
+    {
+      "file": "Art/sophia-european-teal-2026-11-13/portraits/er_portrait_mother_female_beauty.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "76b8a60e34b5fcf540b75451af1024858e99d166d00b67575ecd09062d03b265"
+    }
+  ],
+  "previews": [
+    {
+      "file": "Art/sophia-european-teal-2026-11-13/previews/comparison-native.png",
+      "size": [
+        864,
+        241
+      ],
+      "mode": "RGB",
+      "sha256": "5e0fd71ecbe7f45bedf5ac55503151bb7be438c3e09e6be609cee0c10c8a4bac"
+    },
+    {
+      "file": "Art/sophia-european-teal-2026-11-13/previews/comparison-2x.png",
+      "size": [
+        1728,
+        482
+      ],
+      "mode": "RGB",
+      "sha256": "1ac94a42130532d9fc7714915327f167cf19be6436490bb07fedc51b7d949bb1"
+    }
+  ]
+}

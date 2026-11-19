@@ -1,0 +1,31 @@
+{
+  "references": [
+    {
+      "role": "eleanor-bunny-identity",
+      "source": "B:/Eleanor Story Expand/Art/eleanor-bunny-portrait-2026-11-18/eleanor_bunny_portrait_master_v1.png",
+      "source_sha256": "61879cd4e2c22f6ffc8848fd1890faf8ec81e0f5670fc33d13f491ad288f8130",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Bunny-Milk-CG-yrhof_l1/eleanor-bunny-identity.jpg",
+      "upload_dimensions": [
+        702,
+        1050
+      ],
+      "upload_bytes": 251885,
+      "upload_sha256": "5f32258cd26ac2078aa172168b6647d0a104201d1fe386667bf78f61130c9444",
+      "used_for_final_generation": true
+    },
+    {
+      "role": "crouching-closeup-composition",
+      "source": "C:/Users/ADMINI~1/AppData/Local/Temp/codex-clipboard-8e2ab157-242e-46a1-b09e-1b5da4de860b.png",
+      "source_sha256": "871b5a27ee103d6fc10939e564015a688772aac15f5f818a9b33cdfa76d533b4",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Bunny-Milk-CG-yrhof_l1/crouching-closeup-composition.jpg",
+      "upload_dimensions": [
+        1200,
+        682
+      ],
+      "upload_bytes": 144847,
+      "upload_sha256": "3b7e64db1e5542f3374eae86d794b61f85abcee3cdd95992891ae882f6829767",
+      "used_for_final_generation": false
+    }
+  ],
+  "estimated_request_bytes": 578980
+}

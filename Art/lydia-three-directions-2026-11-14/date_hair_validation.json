@@ -1,0 +1,220 @@
+{
+  "status": "candidates",
+  "reference": "date_hair_references.json",
+  "baseline": {
+    "file": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+    "sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5"
+  },
+  "portraits": {
+    "champagne-silver": {
+      "master": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_date_hair_champagne-silver.png",
+        "sha256": "bb310522a76428a650fb176517fe55d3867d8bd118d2c9b229111a5f5efc3902"
+      },
+      "prompt": {
+        "file": "Art/lydia-three-directions-2026-11-14/prompts/date-hair-champagne-silver.txt",
+        "sha256": "05f1717d11e177d205ff27faca34b12465f1a03d293dd6088241b970dec61d66"
+      },
+      "texture": {
+        "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_date_hair_champagne-silver.png",
+        "sha256": "8561d02584a973be53febd4e66de03f487509481ffb7c7a75460d063642b6f40"
+      },
+      "repeat_identical": true,
+      "pipeline": {
+        "source_size": [
+          1180,
+          1333
+        ],
+        "clean_bbox": [
+          26,
+          22,
+          1152,
+          1333
+        ],
+        "parameters": {
+          "visible_height": 153.387,
+          "centre_x": 145.013,
+          "bottom_exclusive": 215.161,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.117,
+          "tx": 76.1,
+          "ty": 59.19999999999999
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 6319,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          79,
+          63,
+          211,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 7184
+      }
+    },
+    "plum-ponytail": {
+      "master": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_date_hair_plum-ponytail.png",
+        "sha256": "bf37e926fb1ffd6bebe87ba3e7a0b382c9ec55911a5ca467483b946a8b032da0"
+      },
+      "prompt": {
+        "file": "Art/lydia-three-directions-2026-11-14/prompts/date-hair-plum-ponytail.txt",
+        "sha256": "45372cadb919bbe9799f7de70cfb2851e2d70d41c06111babcf7ecc5c1cf7936"
+      },
+      "texture": {
+        "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_date_hair_plum-ponytail.png",
+        "sha256": "3df848093480b57db150595f3db3021c5c9c74d791de175d2dacf43f0a8424a4"
+      },
+      "repeat_identical": true,
+      "pipeline": {
+        "source_size": [
+          1180,
+          1333
+        ],
+        "clean_bbox": [
+          92,
+          35,
+          1091,
+          1333
+        ],
+        "parameters": {
+          "visible_height": 151.866,
+          "centre_x": 145.3055,
+          "bottom_exclusive": 215.161,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.117,
+          "tx": 76.1,
+          "ty": 59.19999999999999
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 5345,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          87,
+          64,
+          204,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 6870
+      }
+    },
+    "ink-blue-lob": {
+      "master": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_date_hair_ink-blue-lob.png",
+        "sha256": "4c9a501df7f5da1070ccc10e5cc98fa6d424436d86c122dd0afae033ed792173"
+      },
+      "prompt": {
+        "file": "Art/lydia-three-directions-2026-11-14/prompts/date-hair-ink-blue-lob.txt",
+        "sha256": "60e46b04e52ce6ae2b827c5ca833bdadc100587a32bb3c1acc0a57ae7925037d"
+      },
+      "texture": {
+        "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_date_hair_ink-blue-lob.png",
+        "sha256": "08b6ce75e00641764632f543ce8ca540febab456e37fe37a705f15efba6bb046"
+      },
+      "repeat_identical": true,
+      "pipeline": {
+        "source_size": [
+          1180,
+          1333
+        ],
+        "clean_bbox": [
+          96,
+          25,
+          1087,
+          1333
+        ],
+        "parameters": {
+          "visible_height": 153.036,
+          "centre_x": 145.3055,
+          "bottom_exclusive": 215.161,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.117,
+          "tx": 76.1,
+          "ty": 59.19999999999999
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 5555,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          87,
+          63,
+          203,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 6699
+      }
+    }
+  }
+}

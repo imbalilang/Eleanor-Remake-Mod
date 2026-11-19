@@ -1,0 +1,8 @@
+{
+  "status": "blocked_no_image_generated",
+  "method": "built-in image generation",
+  "error": "moderation_blocked at output stage; sexual category",
+  "request_id": "2270d912-9d91-47f9-a390-a0639374a9d1",
+  "references_record": "C:/Users/Administrator/AppData/Local/Temp/Eleanor-Bed-Open-Arms-CG-20261118/references.json",
+  "runtime_changes": false
+}

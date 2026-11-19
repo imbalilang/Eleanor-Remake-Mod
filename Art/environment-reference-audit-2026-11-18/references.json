@@ -1,0 +1,74 @@
+[
+  {
+    "number": 1,
+    "label": "01 原作贴图：工业街区",
+    "source_type": "original game texture",
+    "source": "B:\\Eleanor Story Expand\\Art\\revolution-ending-2026-11-11\\references_local\\wall_36.png",
+    "dimensions": [
+      640,
+      360
+    ],
+    "bytes": 58877,
+    "sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1"
+  },
+  {
+    "number": 2,
+    "label": "02 原作图层：当铺参考拼合",
+    "source_type": "manual composite of original game layers, not gameplay screenshot",
+    "source": "B:\\Eleanor Story Expand\\Art\\revolution-ending-2026-11-11\\references_local\\native_pawnshop_composite_no_ui.png",
+    "dimensions": [
+      960,
+      540
+    ],
+    "bytes": 45234,
+    "sha256": "d8efdc0e225c2e32b5e716c05fd67c7bbd62076817b5bf5f078b7c0c36b25491"
+  },
+  {
+    "number": 3,
+    "label": "03 项目CG：《停水》室内",
+    "source_type": "current workspace runtime asset",
+    "source": "B:\\Eleanor Story Expand\\Textures\\Items\\er_event_love_water_cut_cg.png",
+    "dimensions": [
+      960,
+      540
+    ],
+    "bytes": 687573,
+    "sha256": "5a4d923dce3027165a08724245ec7585e758fffea89ee40f1079dac89bd2f980"
+  },
+  {
+    "number": 4,
+    "label": "04 项目CG：上层区约会",
+    "source_type": "current workspace runtime asset",
+    "source": "B:\\Eleanor Story Expand\\Textures\\Items\\er_event_harem_lydia_date_cg.png",
+    "dimensions": [
+      960,
+      540
+    ],
+    "bytes": 936290,
+    "sha256": "c0d649e3ce34b174a28be35f3de06000daa0874b7663f55d579290ec9944f609"
+  },
+  {
+    "number": 5,
+    "label": "05 项目CG：上层区晚会",
+    "source_type": "current workspace runtime asset",
+    "source": "B:\\Eleanor Story Expand\\Textures\\Items\\er_event_maid_gala_cg.png",
+    "dimensions": [
+      960,
+      540
+    ],
+    "bytes": 741824,
+    "sha256": "1f85d86bd42732af29c978ebc5c74fd1acbbd4445687be0995f0579486f38979"
+  },
+  {
+    "number": 6,
+    "label": "06 项目CG：革命军街区",
+    "source_type": "current workspace runtime asset",
+    "source": "B:\\Eleanor Story Expand\\Textures\\Items\\er_event_revolution_embrace_cg.png",
+    "dimensions": [
+      960,
+      540
+    ],
+    "bytes": 808575,
+    "sha256": "195521fd28dc7d3f8406dd51aa7d8ce9015ccb8e113326dd23336c7784753545"
+  }
+]

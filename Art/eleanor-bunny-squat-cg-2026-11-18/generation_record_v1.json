@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image generation",
+  "master": "B:/Eleanor Story Expand/Art/eleanor-bunny-squat-cg-2026-11-18/eleanor_bunny_squat_master_v1.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "4f7ade50eab3f832945b5e038eb4468ecbd8914031db1754ba1ff50bc0072dc4",
+  "prompt": "prompt_v1.txt",
+  "references": "references_v1.json",
+  "review": "Viewed the 1060px preview for the overhead crop, centered supporting hand, head and opposite hand out of frame, outward knees, black stockings, collar and paneled floor."
+}

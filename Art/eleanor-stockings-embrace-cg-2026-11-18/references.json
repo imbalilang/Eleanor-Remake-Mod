@@ -1,0 +1,37 @@
+{
+  "estimated_request_bytes": 704196,
+  "references": [
+    {
+      "role": "user pose reference, used for the leg overlap and framing description",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-17095210-4c3d-4829-ae9c-bd69055a92b1.png",
+      "source_sha256": "998420d0d83eec7204ef56859fec615d2f169c05993aa44bdb1c10e9f55974e1",
+      "sent_to_generator": false
+    },
+    {
+      "role": "eleanor-identity-and-dress",
+      "source": "B:\\Eleanor Story Expand\\Art\\love-intimate-outfit-2026-11-13\\masters\\eleanor_love_intimate_master_v1.png",
+      "source_sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Stockings-Embrace-CG-20261118\\eleanor-identity-and-dress.jpg",
+      "size": [
+        850,
+        923
+      ],
+      "bytes": 242141,
+      "upload_sha256": "9e1c00388b257195054e9f3d36e8f68c0fa4e99b5d72a7d4fe51f64bb504ad6c",
+      "sent_to_generator": true
+    },
+    {
+      "role": "station-interior-materials",
+      "source": "B:\\Eleanor Story Expand\\Art\\eleanor-shy-romance-book-cg-2026-11-18\\eleanor_shy_romance_book_station_home_master_v2.png",
+      "source_sha256": "f5e8ea6da6865d71e526818a23700c6d980ee6399e37d084bf53e4f003387f73",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Stockings-Embrace-CG-20261118\\station-interior-materials.jpg",
+      "size": [
+        1000,
+        563
+      ],
+      "bytes": 248503,
+      "upload_sha256": "7a16340607f448f68b8a64930e6eaba7486246ccca42b4826c227fd64de2554a",
+      "sent_to_generator": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "candidate; not installed",
+  "method": "built-in image generation",
+  "master": "B:\\Eleanor Story Expand\\Art\\eleanor-lydia-diagonal-kiss-closeup-cg-2026-11-18\\eleanor_lydia_diagonal_kiss_closeup_master_v1.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "82282827c3e19d9974f45046636e5f6775908ef558e0f19f1314e357b225949c",
+  "prompt": "prompt_v1.txt",
+  "review": "Viewed 1100px preview for Eleanor lower-left and Lydia upper-right face arrangement, coherent noses and jaws, gently parted lips, subtle tongue detail, character hair and accessories, and upper-level station lighting."
+}

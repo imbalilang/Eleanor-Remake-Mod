@@ -1,0 +1,66 @@
+{
+  "status": "art candidate",
+  "revision": "v7",
+  "tool": "built-in image generation",
+  "master": {
+    "file": "masters/ending_love_wedding_master_v7.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "bytes": 2621910,
+    "sha256": "23bd19020e520164e7a18eecfb3e9a3f5501c694642c53e93956baa848d32cc1"
+  },
+  "prompt": "prompts/ending_love_wedding_v7.txt",
+  "prompt_sha256": "af3bfcc6cef971c6c355c7e000cc42a808df85e81dd0a1afba69f24b9c69e011",
+  "references": "references_v7.json",
+  "sampler": "Art/revolution-ending-2026-11-11/export_cg_v2.py",
+  "crop_source_px": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "outputs": [
+    {
+      "file": "endings/er_ending_love_wedding_v7.png",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "bytes": 896240,
+      "sha256": "15e8c736b76ad8b7c336c0a2c7031913c2dcf542417fb35d5e4152450cb07d88"
+    },
+    {
+      "file": "endings/er_ending_love_wedding_v7_native640.png",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "bytes": 433625,
+      "sha256": "6b4389415d5fcdd4e1c682323cf6547e99b312d2113dc6de12f1a4ce88091af3"
+    }
+  ],
+  "ring_detail": {
+    "file": "previews/ring-detail-v7.png",
+    "size": [
+      282,
+      144
+    ],
+    "mode": "RGB",
+    "bytes": 69694,
+    "sha256": "f65bd1246e7f81d3c8f7cb561cad7a570a5fa8164661a24802682381478cfae5"
+  },
+  "runtime_replaced": false,
+  "visual_review": {
+    "sophia": "approved copper low bun, jade pin and asymmetric white knit; hand resting on Eleanor shoulder",
+    "eleanor": "thin ring seated on ring finger; four non-thumb fingers visible; some lace and hand contours redrawn",
+    "game_size_reviewed": [
+      960,
+      540
+    ]
+  }
+}

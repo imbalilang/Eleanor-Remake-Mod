@@ -1,0 +1,15 @@
+{
+  "status": "CG candidate",
+  "master": "B:/Eleanor Story Expand/Art/eleanor-bunny-milk-cg-2026-11-18/eleanor_bunny_milk_overhead_master_v2.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "6047b36ec40fafe43ece04f5e1a13529504ebd79d825591ee6d2d8898ee3f597",
+  "method": "built-in image editing",
+  "prompt": "prompt_v2.txt",
+  "references": "references_v2.json",
+  "changes": "Recomposed with a high downward camera. Milk spill on cuff and outer side of costume.",
+  "review": "Viewed 1040px preview for high angle, crouch, black tights, visible drinking glass and exterior spill."
+}

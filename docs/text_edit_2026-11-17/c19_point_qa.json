@@ -1,0 +1,365 @@
+{
+  "lines": [
+    {
+      "block": "c19.b101",
+      "index": 0,
+      "speaker": "narrator",
+      "text": "天色暗下来，街上的灯一盏一盏亮了。她坐在窗口外那只箱子上，脚尖点着地面。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 1,
+      "speaker": "player",
+      "text": "打烊了。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 2,
+      "speaker": "eleanor",
+      "text": "我知道。我又不买东西。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 3,
+      "speaker": "eleanor",
+      "text": "母亲在家，看守刚点完名。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 4,
+      "speaker": "eleanor",
+      "text": "我跟她说晚点回。别催我走。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 5,
+      "speaker": "narrator",
+      "text": "她从领口拽出吊坠，在手心里攥了一下，又塞了回去。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 6,
+      "speaker": "eleanor",
+      "text": "喂。我说件事，你别打岔。",
+      "expr": "serious"
+    },
+    {
+      "block": "c19.b101",
+      "index": 7,
+      "speaker": "eleanor",
+      "text": "一开始我当你是开店的。下层区开当铺的，都差不多。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 8,
+      "speaker": "eleanor",
+      "text": "后来那家压价、扣成色。少算了几个信用点的那回，我也没来找你补。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 9,
+      "speaker": "eleanor",
+      "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 10,
+      "speaker": "eleanor",
+      "text": "母亲的事，我欠你的那份，我没忘。这件跟那份没关系。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 11,
+      "speaker": "eleanor",
+      "text": "我不是在还账。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101",
+      "index": 12,
+      "speaker": "eleanor",
+      "text": "我喜欢你。",
+      "expr": "shy"
+    },
+    {
+      "block": "c19.b101",
+      "index": 13,
+      "speaker": "eleanor",
+      "text": "就这些。你看着办。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 0,
+      "speaker": "narrator",
+      "text": "店主隔着窗口伸出手。她抬起搭在膝上的那只手，让他握住了。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 1,
+      "speaker": "player",
+      "text": "我也是。",
+      "expr": "soft"
+    },
+    {
+      "block": "c19.b102",
+      "index": 2,
+      "speaker": "eleanor",
+      "text": "你答得真快。我在路上想了三天。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 3,
+      "speaker": "player",
+      "text": "我想得比你久。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 4,
+      "speaker": "eleanor",
+      "text": "呵。那你怎么不先说。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 5,
+      "speaker": "player",
+      "text": "你说过，别替你拿主意。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 6,
+      "speaker": "eleanor",
+      "text": "这句你也记得。",
+      "expr": "soft"
+    },
+    {
+      "block": "c19.b102",
+      "index": 7,
+      "speaker": "narrator",
+      "text": "她没把手抽回去，反过来捏住他的手指，捏得有点重。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 8,
+      "speaker": "eleanor",
+      "text": "手还没松，我先把话说前头：我还拾荒，还卖货。你报错价，我照样说你。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 9,
+      "speaker": "eleanor",
+      "text": "明天我还来。不买东西也来。卷帘别急着放下来。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 10,
+      "speaker": "eleanor",
+      "text": "母亲那边，我自己跟她讲。你别去。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 11,
+      "speaker": "player",
+      "text": "好。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 12,
+      "speaker": "narrator",
+      "text": "她站起来，松开手，往后让了让，给窗口的卷帘腾出地方。",
+      "expr": null
+    },
+    {
+      "block": "c19.b102",
+      "index": 13,
+      "speaker": "eleanor",
+      "text": "收店吧。我在外头等你。",
+      "expr": null
+    },
+    {
+      "block": "c19.b103",
+      "index": 0,
+      "speaker": "player",
+      "text": "我当你是朋友。往后也是。",
+      "expr": null
+    },
+    {
+      "block": "c19.b103",
+      "index": 1,
+      "speaker": "eleanor",
+      "text": "我知道了。你说得清楚，省得我猜。",
+      "expr": "sad"
+    },
+    {
+      "block": "c19.b103",
+      "index": 2,
+      "speaker": "eleanor",
+      "text": "明天我还来卖货。按价签，一个信用点都别让。",
+      "expr": null
+    },
+    {
+      "block": "c19.b103",
+      "index": 3,
+      "speaker": "narrator",
+      "text": "她起身把箱子推回窗边，转身走了。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 0,
+      "speaker": "narrator",
+      "text": "天色暗下来，街上的灯一盏一盏亮了。她坐在窗口外那只箱子上，脚尖点着地面。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 1,
+      "speaker": "player",
+      "text": "打烊了。",
+      "expr": "neutral"
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 2,
+      "speaker": "eleanor",
+      "text": "我知道。我又不买东西。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 3,
+      "speaker": "eleanor",
+      "text": "母亲在家，看守刚点完名。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 4,
+      "speaker": "eleanor",
+      "text": "我跟她说晚点回。别催我走。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 5,
+      "speaker": "narrator",
+      "text": "她从领口拽出吊坠，在手心里攥了一下，又塞了回去。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 6,
+      "speaker": "eleanor",
+      "text": "喂。我说件事，你别打岔。",
+      "expr": "serious"
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 7,
+      "speaker": "eleanor",
+      "text": "一开始我当你是开店的。下层区开当铺的，都差不多。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 8,
+      "speaker": "eleanor",
+      "text": "后来那家压价、扣成色。少算了几个信用点的那回，我也没来找你补。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 9,
+      "speaker": "eleanor",
+      "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 10,
+      "speaker": "eleanor",
+      "text": "母亲的事，我欠你的那份，我没忘。这件跟那份没关系。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 11,
+      "speaker": "eleanor",
+      "text": "我不是在还账。",
+      "expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 12,
+      "speaker": "eleanor",
+      "text": "我喜欢你。",
+      "expr": "shy"
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 13,
+      "speaker": "eleanor",
+      "text": "就这些。你看着办。",
+      "expr": null
+    }
+  ],
+  "changes": [
+    {
+      "block": "c19.b101",
+      "index": 3,
+      "before": "母亲在家。看守刚点完名，她会自己煮营养果。",
+      "after": "母亲在家，看守刚点完名。"
+    },
+    {
+      "block": "c19.b101",
+      "index": 4,
+      "before": "我跟她说，晚点回去。",
+      "after": "我跟她说晚点回。别催我走。"
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 3,
+      "before": "母亲在家。她会自己煮营养果。",
+      "after": "母亲在家，看守刚点完名。"
+    },
+    {
+      "block": "c19.b101_return",
+      "index": 4,
+      "before": "我跟她说，晚点回去。",
+      "after": "我跟她说晚点回。别催我走。"
+    },
+    {
+      "block": "c19.b102",
+      "index": 8,
+      "before": "先说好。我还拾荒，还卖货。你报错价，我照样说你。",
+      "after": "手还没松，我先把话说前头：我还拾荒，还卖货。你报错价，我照样说你。"
+    },
+    {
+      "block": "c19.b102",
+      "index": 9,
+      "before": "明天我还来。不买东西也来。",
+      "after": "明天我还来。不买东西也来。卷帘别急着放下来。"
+    }
+  ],
+  "issues": []
+}

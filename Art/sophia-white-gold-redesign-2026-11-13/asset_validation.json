@@ -1,0 +1,85 @@
+{
+  "status": "design candidate",
+  "tool": "built-in image generation",
+  "prompt": "prompts/sophia_white_gold_v1.txt",
+  "prompt_sha256": "6adca0cd340a6ed1b4309058a75976163aef33020cbcbb283ff3e11f9c52515e",
+  "request_size_bound_bytes": 1194421,
+  "master": {
+    "file": "masters/sophia_white_gold_master_v1.png",
+    "size": [
+      1136,
+      1385
+    ],
+    "sha256": "4353f44e08c50434d2747e4153c8eac8d4a4e7130bd3584c430d44c22378ebc2"
+  },
+  "portrait": {
+    "file": "portraits/er_portrait_sophia_white_gold_v1.png",
+    "size": [
+      288,
+      212
+    ],
+    "sha256": "16aa784481131c24845ff1ffc6470958a004f09a3cc5ab6d8cdfa7299d93017a"
+  },
+  "runtime_comparison": {
+    "file": "Textures/Items/er_portrait_mother_female_beauty.png",
+    "sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364"
+  },
+  "pipeline": {
+    "source_size": [
+      1136,
+      1385
+    ],
+    "clean_bbox": [
+      121,
+      4,
+      1045,
+      1385
+    ],
+    "parameters": {
+      "visible_height": 208.531,
+      "centre_x": 156.53300000000002,
+      "bottom_exclusive": 271.835,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.151,
+      "tx": 68.50000000000001,
+      "ty": 62.69999999999999
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 6494,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      93,
+      64,
+      225,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 7927
+  },
+  "source_top_edge_covered_pixels": 0,
+  "runtime_installed": false,
+  "body_proportions": "design target based on approved portrait; not measured from image"
+}

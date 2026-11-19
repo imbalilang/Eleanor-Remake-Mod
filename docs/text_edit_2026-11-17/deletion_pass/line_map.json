@@ -1,0 +1,1631 @@
+{
+  "index_base": 0,
+  "rows": [
+    {
+      "block": "c10.n201",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n201_01",
+      "new_key": "er_v06_c10_n201_01",
+      "deleted": false,
+      "text": "埃莉诺走到窗口前，没先开口。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n201",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n201_02",
+      "new_key": "er_v06_c10_n201_02",
+      "deleted": false,
+      "text": "昨天下午，有个女人从这条巷子出去。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n201",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n201_03",
+      "new_key": "er_v06_c10_n201_03",
+      "deleted": false,
+      "text": "卷发，包是新的，走路不看地。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n201",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n201_04",
+      "new_key": "er_v06_c10_n201_04",
+      "deleted": false,
+      "text": "她来干什么。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n201",
+      "old_index": 4,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n201_05",
+      "new_key": "er_v06_c10_n201_05",
+      "deleted": false,
+      "text": "卖东西。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n201",
+      "old_index": 5,
+      "new_index": 5,
+      "old_key": "er_v06_c10_n201_06",
+      "new_key": "er_v06_c10_n201_06",
+      "deleted": false,
+      "text": "卖什么。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n202_01",
+      "new_key": "er_v06_c10_n202_01",
+      "deleted": false,
+      "text": "一只手镯。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n202_02",
+      "new_key": "er_v06_c10_n202_02",
+      "deleted": false,
+      "text": "她连那个都拿出来了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n202_03",
+      "new_key": "er_v06_c10_n202_03",
+      "deleted": false,
+      "text": "那是她家的旧物。她母亲戴过。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 3,
+      "new_index": null,
+      "old_key": "er_v06_c10_n202_04",
+      "new_key": null,
+      "deleted": true,
+      "text": "她居然拿到下面来当。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 4,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n202_05",
+      "new_key": "er_v06_c10_n202_04",
+      "deleted": false,
+      "text": "她是不是还问了你一堆？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 5,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n202_06",
+      "new_key": "er_v06_c10_n202_05",
+      "deleted": false,
+      "text": "问了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 6,
+      "new_index": null,
+      "old_key": "er_v06_c10_n202_07",
+      "new_key": null,
+      "deleted": true,
+      "text": "她就是那样。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 7,
+      "new_index": 5,
+      "old_key": "er_v06_c10_n202_08",
+      "new_key": "er_v06_c10_n202_06",
+      "deleted": false,
+      "text": "来一趟，回去就能说她看过我了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 8,
+      "new_index": 6,
+      "old_key": "er_v06_c10_n202_09",
+      "new_key": "er_v06_c10_n202_07",
+      "deleted": false,
+      "text": "也罢。她不是坏人。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 9,
+      "new_index": null,
+      "old_key": "er_v06_c10_n202_10",
+      "new_key": null,
+      "deleted": true,
+      "text": "她只是不知道下面是什么样子。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n202",
+      "old_index": 10,
+      "new_index": 7,
+      "old_key": "er_v06_c10_n202_11",
+      "new_key": "er_v06_c10_n202_08",
+      "deleted": false,
+      "text": "她把手放在柜沿上，指尖蹭掉一处旧漆。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n203",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n203_01",
+      "new_key": "er_v06_c10_n203_01",
+      "deleted": false,
+      "text": "她来过。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n203",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n203_02",
+      "new_key": "er_v06_c10_n203_02",
+      "deleted": false,
+      "text": "就这样？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n203",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n203_03",
+      "new_key": "er_v06_c10_n203_03",
+      "deleted": false,
+      "text": "也是。你跟她没什么好说的。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n203",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n203_04",
+      "new_key": "er_v06_c10_n203_04",
+      "deleted": false,
+      "text": "她那种人，来时先夸你的货，走了就忘了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n204",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n204_01",
+      "new_key": "er_v06_c10_n204_01",
+      "deleted": false,
+      "text": "我认不认识？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n204",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n204_02",
+      "new_key": "er_v06_c10_n204_02",
+      "deleted": false,
+      "text": "你问得倒直接。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n204",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n204_03",
+      "new_key": "er_v06_c10_n204_03",
+      "deleted": false,
+      "text": "卷发，新包。这条街上一天能过去十个。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n204",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n204_04",
+      "new_key": "er_v06_c10_n204_04",
+      "deleted": false,
+      "text": "她的视线落在柜台上，没移开。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n204",
+      "old_index": 4,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n204_05",
+      "new_key": "er_v06_c10_n204_05",
+      "deleted": false,
+      "text": "我认识。她叫莉迪亚。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n205_01",
+      "new_key": "er_v06_c10_n205_01",
+      "deleted": false,
+      "text": "她有没有提我。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n205_02",
+      "new_key": "er_v06_c10_n205_02",
+      "deleted": false,
+      "text": "提了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n205_03",
+      "new_key": "er_v06_c10_n205_03",
+      "deleted": false,
+      "text": "她说什么。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n205_04",
+      "new_key": "er_v06_c10_n205_04",
+      "deleted": false,
+      "text": "说你没吃饭。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 4,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n205_05",
+      "new_key": "er_v06_c10_n205_05",
+      "deleted": false,
+      "text": "她怎么知道我吃没吃饭。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 5,
+      "new_index": 5,
+      "old_key": "er_v06_c10_n205_06",
+      "new_key": "er_v06_c10_n205_06",
+      "deleted": false,
+      "text": "隔着二十层楼，她还能算出我一天吃几顿？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 6,
+      "new_index": null,
+      "old_key": "er_v06_c10_n205_07",
+      "new_key": null,
+      "deleted": true,
+      "text": "她那个人，说话不过脑子。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 7,
+      "new_index": 6,
+      "old_key": "er_v06_c10_n205_08",
+      "new_key": "er_v06_c10_n205_07",
+      "deleted": false,
+      "text": "她低下头，去看柜台上那道缺口。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 8,
+      "new_index": 7,
+      "old_key": "er_v06_c10_n205_09",
+      "new_key": "er_v06_c10_n205_08",
+      "deleted": false,
+      "text": "她还好吧。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 9,
+      "new_index": 8,
+      "old_key": "er_v06_c10_n205_10",
+      "new_key": "er_v06_c10_n205_09",
+      "deleted": false,
+      "text": "当我没问。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 10,
+      "new_index": 9,
+      "old_key": "er_v06_c10_n205_11",
+      "new_key": "er_v06_c10_n205_10",
+      "deleted": false,
+      "text": "镯子呢。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 11,
+      "new_index": 10,
+      "old_key": "er_v06_c10_n205_12",
+      "new_key": "er_v06_c10_n205_11",
+      "deleted": false,
+      "text": "在柜台里。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 12,
+      "new_index": null,
+      "old_key": "er_v06_c10_n205_13",
+      "new_key": null,
+      "deleted": true,
+      "text": "先别卖。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 13,
+      "new_index": 11,
+      "old_key": "er_v06_c10_n205_14",
+      "new_key": "er_v06_c10_n205_12",
+      "deleted": false,
+      "text": "留给她。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 14,
+      "new_index": 12,
+      "old_key": "er_v06_c10_n205_15",
+      "new_key": "er_v06_c10_n205_13",
+      "deleted": false,
+      "text": "她会回来拿的。她丢一次东西能念叨半年。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 15,
+      "new_index": null,
+      "old_key": "er_v06_c10_n205_16",
+      "new_key": null,
+      "deleted": true,
+      "text": "还有。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 16,
+      "new_index": 13,
+      "old_key": "er_v06_c10_n205_17",
+      "new_key": "er_v06_c10_n205_14",
+      "deleted": false,
+      "text": "别跟她说我住哪儿。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 17,
+      "new_index": 14,
+      "old_key": "er_v06_c10_n205_18",
+      "new_key": "er_v06_c10_n205_15",
+      "deleted": false,
+      "text": "她没问。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 18,
+      "new_index": 15,
+      "old_key": "er_v06_c10_n205_19",
+      "new_key": "er_v06_c10_n205_16",
+      "deleted": false,
+      "text": "她会问的。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 19,
+      "new_index": null,
+      "old_key": "er_v06_c10_n205_20",
+      "new_key": null,
+      "deleted": true,
+      "text": "我那间房，别让她看见。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 20,
+      "new_index": 16,
+      "old_key": "er_v06_c10_n205_21",
+      "new_key": "er_v06_c10_n205_17",
+      "deleted": false,
+      "text": "配给站对面，四楼，楼梯没有灯。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 21,
+      "new_index": 17,
+      "old_key": "er_v06_c10_n205_22",
+      "new_key": "er_v06_c10_n205_18",
+      "deleted": false,
+      "text": "她真站到门口，我连让她进来都开不了口。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 22,
+      "new_index": 18,
+      "old_key": "er_v06_c10_n205_23",
+      "new_key": "er_v06_c10_n205_19",
+      "deleted": false,
+      "text": "她把背上的袋子放到柜台上，袋口松开，露出几块壳子和线头。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 23,
+      "new_index": 19,
+      "old_key": "er_v06_c10_n205_24",
+      "new_key": "er_v06_c10_n205_20",
+      "deleted": false,
+      "text": "这些你收不收。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 24,
+      "new_index": null,
+      "old_key": "er_v06_c10_n205_25",
+      "new_key": null,
+      "deleted": true,
+      "text": "你开个价吧。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n205",
+      "old_index": 25,
+      "new_index": 20,
+      "old_key": "er_v06_c10_n205_26",
+      "new_key": "er_v06_c10_n205_21",
+      "deleted": false,
+      "text": "今天懒得还价。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n206_01",
+      "new_key": "er_v06_c10_n206_01",
+      "deleted": false,
+      "text": "来人在窗口前站定，先把店里看了一圈。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n206_02",
+      "new_key": "er_v06_c10_n206_02",
+      "deleted": false,
+      "text": "听说你前几天收了一只老镯子。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 2,
+      "new_index": null,
+      "old_key": "er_v06_c10_n206_03",
+      "new_key": null,
+      "deleted": true,
+      "text": "我不看别的，就看那个。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 3,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n206_04",
+      "new_key": "er_v06_c10_n206_03",
+      "deleted": false,
+      "text": "木盒放上柜面，盖子打开。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 4,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n206_05",
+      "new_key": "er_v06_c10_n206_04",
+      "deleted": false,
+      "text": "内圈有字。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 5,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n206_06",
+      "new_key": "er_v06_c10_n206_05",
+      "deleted": false,
+      "text": "这种刻字的老货，上层流出来的，一年见不着两只。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 6,
+      "new_index": 5,
+      "old_key": "er_v06_c10_n206_07",
+      "new_key": "er_v06_c10_n206_06",
+      "deleted": false,
+      "text": "现在都是机压的。这种手刻的，我认得。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 7,
+      "new_index": 6,
+      "old_key": "er_v06_c10_n206_08",
+      "new_key": "er_v06_c10_n206_07",
+      "deleted": false,
+      "text": "卖家是谁？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 8,
+      "new_index": 7,
+      "old_key": "er_v06_c10_n206_09",
+      "new_key": "er_v06_c10_n206_08",
+      "deleted": false,
+      "text": "不关你的事。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 9,
+      "new_index": null,
+      "old_key": "er_v06_c10_n206_10",
+      "new_key": null,
+      "deleted": true,
+      "text": "行。我不问。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 10,
+      "new_index": 8,
+      "old_key": "er_v06_c10_n206_11",
+      "new_key": "er_v06_c10_n206_09",
+      "deleted": false,
+      "text": "一千。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 11,
+      "new_index": 9,
+      "old_key": "er_v06_c10_n206_12",
+      "new_key": "er_v06_c10_n206_10",
+      "deleted": false,
+      "text": "现金，现在结，钱就在这儿。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n206",
+      "old_index": 12,
+      "new_index": 10,
+      "old_key": "er_v06_c10_n206_13",
+      "new_key": "er_v06_c10_n206_11",
+      "deleted": false,
+      "text": "一千，不能再多了。不卖我就走。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n207",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n207_01",
+      "new_key": "er_v06_c10_n207_01",
+      "deleted": false,
+      "text": "不卖。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n207",
+      "old_index": 1,
+      "new_index": null,
+      "old_key": "er_v06_c10_n207_02",
+      "new_key": null,
+      "deleted": true,
+      "text": "东西在你手里，主意你拿。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n207",
+      "old_index": 2,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n207_03",
+      "new_key": "er_v06_c10_n207_02",
+      "deleted": false,
+      "text": "今天不卖，改天可就没这个价了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n207",
+      "old_index": 3,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n207_04",
+      "new_key": "er_v06_c10_n207_03",
+      "deleted": false,
+      "text": "他把盒子推回半寸，转身离开窗口。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n208",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n208_01",
+      "new_key": "er_v06_c10_n208_01",
+      "deleted": false,
+      "text": "盒子被推过去，掮客数钱的动作很慢。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n208",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n208_02",
+      "new_key": "er_v06_c10_n208_02",
+      "deleted": false,
+      "text": "痛快。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n208",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n208_03",
+      "new_key": "er_v06_c10_n208_03",
+      "deleted": false,
+      "text": "以后有这种货，先找我。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n208",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n208_04",
+      "new_key": "er_v06_c10_n208_04",
+      "deleted": false,
+      "text": "他把镯子裹进布，走时没回头。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n209",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n209_01",
+      "new_key": "er_v06_c10_n209_01",
+      "deleted": false,
+      "text": "她走到窗口前，手里捏着一沓钱，没坐下。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n209",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n209_02",
+      "new_key": "er_v06_c10_n209_02",
+      "deleted": false,
+      "text": "我来赎那只镯子。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n209",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n209_03",
+      "new_key": "er_v06_c10_n209_03",
+      "deleted": false,
+      "text": "五百。我自己的钱，不是家里的。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n209",
+      "old_index": 3,
+      "new_index": null,
+      "old_key": "er_v06_c10_n209_04",
+      "new_key": null,
+      "deleted": true,
+      "text": "这个数我拿得出来，你别嫌少。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n210",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n210_01",
+      "new_key": "er_v06_c10_n210_01",
+      "deleted": false,
+      "text": "镯子被推过去，钱只收了当初那一笔。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n210",
+      "old_index": 1,
+      "new_index": null,
+      "old_key": "er_v06_c10_n210_02",
+      "new_key": null,
+      "deleted": true,
+      "text": "你这人。",
+      "removed_expr": "shy"
+    },
+    {
+      "block": "c10.n210",
+      "old_index": 2,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n210_03",
+      "new_key": "er_v06_c10_n210_02",
+      "deleted": false,
+      "text": "我连五百都数好了。你这……",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n210",
+      "old_index": 3,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n210_04",
+      "new_key": "er_v06_c10_n210_03",
+      "deleted": false,
+      "text": "那多的我可真收回去了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n211",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n211_01",
+      "new_key": "er_v06_c10_n211_01",
+      "deleted": false,
+      "text": "送？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n211",
+      "old_index": 1,
+      "new_index": null,
+      "old_key": "er_v06_c10_n211_02",
+      "new_key": null,
+      "deleted": true,
+      "text": "你白给我？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n211",
+      "old_index": 2,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n211_03",
+      "new_key": "er_v06_c10_n211_02",
+      "deleted": false,
+      "text": "你别看着我。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n211",
+      "old_index": 3,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n211_04",
+      "new_key": "er_v06_c10_n211_03",
+      "deleted": false,
+      "text": "行。我收下。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n211",
+      "old_index": 4,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n211_05",
+      "new_key": "er_v06_c10_n211_04",
+      "deleted": false,
+      "text": "但我记下了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n211",
+      "old_index": 5,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n211_06",
+      "new_key": "er_v06_c10_n211_05",
+      "deleted": false,
+      "text": "她把镯子接过去，没再多说。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n212",
+      "old_index": 0,
+      "new_index": null,
+      "old_key": "er_v06_c10_n212_01",
+      "new_key": null,
+      "deleted": true,
+      "text": "我出价？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n212",
+      "old_index": 1,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n212_02",
+      "new_key": "er_v06_c10_n212_01",
+      "deleted": false,
+      "text": "我要是报低了，你会不会觉得我在占你便宜。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n212",
+      "old_index": 2,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n212_03",
+      "new_key": "er_v06_c10_n212_02",
+      "deleted": false,
+      "text": "五百。就这个数，别让我再加。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n214",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n214_01",
+      "new_key": "er_v06_c10_n214_01",
+      "deleted": false,
+      "text": "她把钱推过去，等了一会儿才拿到镯子。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c10_n213_01",
+      "new_key": "er_v06_c10_n213_01",
+      "deleted": false,
+      "text": "这镯子是我外婆的。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c10_n213_02",
+      "new_key": "er_v06_c10_n213_02",
+      "deleted": false,
+      "text": "家里上个月报了失窃。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c10_n213_03",
+      "new_key": "er_v06_c10_n213_03",
+      "deleted": false,
+      "text": "是我从柜子里拿的。那天出门急，顺手就带走了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 3,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_04",
+      "new_key": null,
+      "deleted": true,
+      "text": "我以为少这一件，没人会留意。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 4,
+      "new_index": 3,
+      "old_key": "er_v06_c10_n213_05",
+      "new_key": "er_v06_c10_n213_04",
+      "deleted": false,
+      "text": "谁知道我妈偏要挨个清点，点完就报了失窃。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 5,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_06",
+      "new_key": null,
+      "deleted": true,
+      "text": "现在让我说是我拿的，她还不追着问镯子去了哪儿？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 6,
+      "new_index": 4,
+      "old_key": "er_v06_c10_n213_07",
+      "new_key": "er_v06_c10_n213_05",
+      "deleted": false,
+      "text": "我怎么跟她讲当铺的事。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 7,
+      "new_index": 5,
+      "old_key": "er_v06_c10_n213_08",
+      "new_key": "er_v06_c10_n213_06",
+      "deleted": false,
+      "text": "镯子套上手腕，她转了两下，把扣合上。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 8,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_09",
+      "new_key": null,
+      "deleted": true,
+      "text": "好了。",
+      "removed_expr": "smile"
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 9,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_10",
+      "new_key": null,
+      "deleted": true,
+      "text": "我还想问问你。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 10,
+      "new_index": 6,
+      "old_key": "er_v06_c10_n213_11",
+      "new_key": "er_v06_c10_n213_07",
+      "deleted": false,
+      "text": "埃莉诺最近怎么样？",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 11,
+      "new_index": 7,
+      "old_key": "er_v06_c10_n213_12",
+      "new_key": "er_v06_c10_n213_08",
+      "deleted": false,
+      "text": "我去找了她两回，连话都没说上。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 12,
+      "new_index": 8,
+      "old_key": "er_v06_c10_n213_13",
+      "new_key": "er_v06_c10_n213_09",
+      "deleted": false,
+      "text": "第一回我在楼下等了两个钟头。第二回她当着我的面把门关了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 13,
+      "new_index": 9,
+      "old_key": "er_v06_c10_n213_14",
+      "new_key": "er_v06_c10_n213_10",
+      "deleted": false,
+      "text": "我站在楼梯口，黑得看不见台阶，只能摸着墙下楼。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 14,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_15",
+      "new_key": null,
+      "deleted": true,
+      "text": "我下个楼都这样，她还得天天走。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 15,
+      "new_index": 10,
+      "old_key": "er_v06_c10_n213_16",
+      "new_key": "er_v06_c10_n213_11",
+      "deleted": false,
+      "text": "她提着东西，可怎么上楼啊。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 16,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_17",
+      "new_key": null,
+      "deleted": true,
+      "text": "她肯来你这儿，跟你总能说上话吧。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 17,
+      "new_index": 11,
+      "old_key": "er_v06_c10_n213_18",
+      "new_key": "er_v06_c10_n213_12",
+      "deleted": false,
+      "text": "上面的事，我还能找人打听。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 18,
+      "new_index": 12,
+      "old_key": "er_v06_c10_n213_19",
+      "new_key": "er_v06_c10_n213_13",
+      "deleted": false,
+      "text": "你想怎么帮。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 19,
+      "new_index": 13,
+      "old_key": "er_v06_c10_n213_20",
+      "new_key": "er_v06_c10_n213_14",
+      "deleted": false,
+      "text": "我再去请她，下回一块儿来。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 20,
+      "new_index": 14,
+      "old_key": "er_v06_c10_n213_21",
+      "new_key": "er_v06_c10_n213_15",
+      "deleted": false,
+      "text": "她肯来才算。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 21,
+      "new_index": 15,
+      "old_key": "er_v06_c10_n213_22",
+      "new_key": "er_v06_c10_n213_16",
+      "deleted": false,
+      "text": "到时候，你帮我跟她说说。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 22,
+      "new_index": 16,
+      "old_key": "er_v06_c10_n213_23",
+      "new_key": "er_v06_c10_n213_17",
+      "deleted": false,
+      "text": "她把包带往肩上一提，从窗口前退了两步，又回过头。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 23,
+      "new_index": 17,
+      "old_key": "er_v06_c10_n213_24",
+      "new_key": "er_v06_c10_n213_18",
+      "deleted": false,
+      "text": "那我去找她。",
+      "removed_expr": null
+    },
+    {
+      "block": "c10.n213",
+      "old_index": 24,
+      "new_index": null,
+      "old_key": "er_v06_c10_n213_25",
+      "new_key": null,
+      "deleted": true,
+      "text": "她走远了，包上的金属扣轻轻碰了两下。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c19_b101_01",
+      "new_key": "er_v06_c19_b101_01",
+      "deleted": false,
+      "text": "天色暗下来，街上的灯一盏一盏亮了。她坐在窗口外那只箱子上，脚尖点着地面。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c19_b101_02",
+      "new_key": "er_v06_c19_b101_02",
+      "deleted": false,
+      "text": "打烊了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c19_b101_03",
+      "new_key": "er_v06_c19_b101_03",
+      "deleted": false,
+      "text": "我知道。我又不买东西。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c19_b101_04",
+      "new_key": "er_v06_c19_b101_04",
+      "deleted": false,
+      "text": "母亲在家。看守刚点完名，她会自己煮营养果。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 4,
+      "new_index": null,
+      "old_key": "er_v06_c19_b101_05",
+      "new_key": null,
+      "deleted": true,
+      "text": "我跟她说，晚点回去。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 5,
+      "new_index": 4,
+      "old_key": "er_v06_c19_b101_06",
+      "new_key": "er_v06_c19_b101_05",
+      "deleted": false,
+      "text": "她从领口拽出吊坠，在手心里攥了一下，又塞了回去。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 6,
+      "new_index": null,
+      "old_key": "er_v06_c19_b101_07",
+      "new_key": null,
+      "deleted": true,
+      "text": "喂。我说件事，你别打岔。",
+      "removed_expr": "serious"
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 7,
+      "new_index": 5,
+      "old_key": "er_v06_c19_b101_08",
+      "new_key": "er_v06_c19_b101_06",
+      "deleted": false,
+      "text": "刚来那会儿，我觉得下层区的当铺都一个样。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 8,
+      "new_index": 6,
+      "old_key": "er_v06_c19_b101_09",
+      "new_key": "er_v06_c19_b101_07",
+      "deleted": false,
+      "text": "后来那家又压价，又扣成色。少算的那几个信用点，我也没来找你补。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 9,
+      "new_index": 7,
+      "old_key": "er_v06_c19_b101_10",
+      "new_key": "er_v06_c19_b101_08",
+      "deleted": false,
+      "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 10,
+      "new_index": 8,
+      "old_key": "er_v06_c19_b101_11",
+      "new_key": "er_v06_c19_b101_09",
+      "deleted": false,
+      "text": "你帮母亲的事，我没忘。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 11,
+      "new_index": 9,
+      "old_key": "er_v06_c19_b101_12",
+      "new_key": "er_v06_c19_b101_10",
+      "deleted": false,
+      "text": "我不是在还账。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 12,
+      "new_index": 10,
+      "old_key": "er_v06_c19_b101_13",
+      "new_key": "er_v06_c19_b101_11",
+      "deleted": false,
+      "text": "我喜欢你。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101",
+      "old_index": 13,
+      "new_index": 11,
+      "old_key": "er_v06_c19_b101_14",
+      "new_key": "er_v06_c19_b101_12",
+      "deleted": false,
+      "text": "就这些。你看着办。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c19_b102_01",
+      "new_key": "er_v06_c19_b102_01",
+      "deleted": false,
+      "text": "店主隔着窗口伸出手。她抬起搭在膝上的那只手，让他握住了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c19_b102_02",
+      "new_key": "er_v06_c19_b102_02",
+      "deleted": false,
+      "text": "我也是。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c19_b102_03",
+      "new_key": "er_v06_c19_b102_03",
+      "deleted": false,
+      "text": "你答得真快。这几句话，我想了三天。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c19_b102_04",
+      "new_key": "er_v06_c19_b102_04",
+      "deleted": false,
+      "text": "我想得比你久。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 4,
+      "new_index": 4,
+      "old_key": "er_v06_c19_b102_05",
+      "new_key": "er_v06_c19_b102_05",
+      "deleted": false,
+      "text": "呵。那你怎么不先说。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 5,
+      "new_index": 5,
+      "old_key": "er_v06_c19_b102_06",
+      "new_key": "er_v06_c19_b102_06",
+      "deleted": false,
+      "text": "你说过，别替你拿主意。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 6,
+      "new_index": 6,
+      "old_key": "er_v06_c19_b102_07",
+      "new_key": "er_v06_c19_b102_07",
+      "deleted": false,
+      "text": "这句你也记得。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 7,
+      "new_index": 7,
+      "old_key": "er_v06_c19_b102_08",
+      "new_key": "er_v06_c19_b102_08",
+      "deleted": false,
+      "text": "她没把手抽回去，反过来捏住他的手指，捏得有点重。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 8,
+      "new_index": 8,
+      "old_key": "er_v06_c19_b102_09",
+      "new_key": "er_v06_c19_b102_09",
+      "deleted": false,
+      "text": "货我还自己去捡。拿来卖的时候，你可别乱报价。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 9,
+      "new_index": 9,
+      "old_key": "er_v06_c19_b102_10",
+      "new_key": "er_v06_c19_b102_10",
+      "deleted": false,
+      "text": "明天我还来。不买东西也来。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 10,
+      "new_index": 10,
+      "old_key": "er_v06_c19_b102_11",
+      "new_key": "er_v06_c19_b102_11",
+      "deleted": false,
+      "text": "母亲那边，我自己跟她讲。你别去。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 11,
+      "new_index": 11,
+      "old_key": "er_v06_c19_b102_12",
+      "new_key": "er_v06_c19_b102_12",
+      "deleted": false,
+      "text": "好。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 12,
+      "new_index": 12,
+      "old_key": "er_v06_c19_b102_13",
+      "new_key": "er_v06_c19_b102_13",
+      "deleted": false,
+      "text": "她站起来，松开手，往后让了让，给窗口的卷帘腾出地方。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b102",
+      "old_index": 13,
+      "new_index": 13,
+      "old_key": "er_v06_c19_b102_14",
+      "new_key": "er_v06_c19_b102_14",
+      "deleted": false,
+      "text": "收店吧。我在外头等你。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b103",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c19_b103_01",
+      "new_key": "er_v06_c19_b103_01",
+      "deleted": false,
+      "text": "我当你是朋友。往后也是。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b103",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c19_b103_02",
+      "new_key": "er_v06_c19_b103_02",
+      "deleted": false,
+      "text": "我知道了。你说得清楚，省得我猜。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b103",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c19_b103_03",
+      "new_key": "er_v06_c19_b103_03",
+      "deleted": false,
+      "text": "明天我还来卖货。按价签，一个信用点都别让。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b103",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c19_b103_04",
+      "new_key": "er_v06_c19_b103_04",
+      "deleted": false,
+      "text": "她起身把箱子推回窗边，转身走了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 0,
+      "new_index": 0,
+      "old_key": "er_v06_c19_b101_return_01",
+      "new_key": "er_v06_c19_b101_return_01",
+      "deleted": false,
+      "text": "天色暗下来，街上的灯一盏一盏亮了。她坐在窗口外那只箱子上，脚尖点着地面。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 1,
+      "new_index": 1,
+      "old_key": "er_v06_c19_b101_return_02",
+      "new_key": "er_v06_c19_b101_return_02",
+      "deleted": false,
+      "text": "打烊了。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 2,
+      "new_index": 2,
+      "old_key": "er_v06_c19_b101_return_03",
+      "new_key": "er_v06_c19_b101_return_03",
+      "deleted": false,
+      "text": "我知道。我又不买东西。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 3,
+      "new_index": 3,
+      "old_key": "er_v06_c19_b101_return_04",
+      "new_key": "er_v06_c19_b101_return_04",
+      "deleted": false,
+      "text": "母亲在家。她会自己煮营养果。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 4,
+      "new_index": null,
+      "old_key": "er_v06_c19_b101_return_05",
+      "new_key": null,
+      "deleted": true,
+      "text": "我跟她说，晚点回去。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 5,
+      "new_index": 4,
+      "old_key": "er_v06_c19_b101_return_06",
+      "new_key": "er_v06_c19_b101_return_05",
+      "deleted": false,
+      "text": "她从领口拽出吊坠，在手心里攥了一下，又塞了回去。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 6,
+      "new_index": null,
+      "old_key": "er_v06_c19_b101_return_07",
+      "new_key": null,
+      "deleted": true,
+      "text": "喂。我说件事，你别打岔。",
+      "removed_expr": "serious"
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 7,
+      "new_index": 5,
+      "old_key": "er_v06_c19_b101_return_08",
+      "new_key": "er_v06_c19_b101_return_06",
+      "deleted": false,
+      "text": "刚来那会儿，我觉得下层区的当铺都一个样。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 8,
+      "new_index": 6,
+      "old_key": "er_v06_c19_b101_return_09",
+      "new_key": "er_v06_c19_b101_return_07",
+      "deleted": false,
+      "text": "后来那家又压价，又扣成色。少算的那几个信用点，我也没来找你补。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 9,
+      "new_index": 7,
+      "old_key": "er_v06_c19_b101_return_10",
+      "new_key": "er_v06_c19_b101_return_08",
+      "deleted": false,
+      "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 10,
+      "new_index": 8,
+      "old_key": "er_v06_c19_b101_return_11",
+      "new_key": "er_v06_c19_b101_return_09",
+      "deleted": false,
+      "text": "你帮母亲的事，我没忘。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 11,
+      "new_index": 9,
+      "old_key": "er_v06_c19_b101_return_12",
+      "new_key": "er_v06_c19_b101_return_10",
+      "deleted": false,
+      "text": "我不是在还账。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 12,
+      "new_index": 10,
+      "old_key": "er_v06_c19_b101_return_13",
+      "new_key": "er_v06_c19_b101_return_11",
+      "deleted": false,
+      "text": "我喜欢你。",
+      "removed_expr": null
+    },
+    {
+      "block": "c19.b101_return",
+      "old_index": 13,
+      "new_index": 11,
+      "old_key": "er_v06_c19_b101_return_14",
+      "new_key": "er_v06_c19_b101_return_12",
+      "deleted": false,
+      "text": "就这些。你看着办。",
+      "removed_expr": null
+    }
+  ],
+  "n205_no_bracelet_skip_new_indices": [
+    9,
+    10,
+    11,
+    12
+  ]
+}

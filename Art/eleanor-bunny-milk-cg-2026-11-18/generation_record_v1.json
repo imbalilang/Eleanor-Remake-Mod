@@ -1,0 +1,19 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image generation",
+  "master": "B:/Eleanor Story Expand/Art/eleanor-bunny-milk-cg-2026-11-18/eleanor_bunny_milk_cuff_spill_master_v1.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "8444ad4ae788f64ce07bba6d620634d526a7f389da642c6f9debb7db5f231669",
+  "prompt": "prompt_v1.txt",
+  "references": "references_v1.json",
+  "initial_request": {
+    "status": "input moderation blocked",
+    "request_id": "c057e53f-ae2a-48e0-8612-a62afc714e21"
+  },
+  "delivered_adaptation": "Medium close composition with spilled milk on the wrist cuff and exterior of the bodice.",
+  "review": "Reviewed identity, bunny outfit with black stockings, bent-knee pose, glass at lips and visible spill on outer fabric."
+}

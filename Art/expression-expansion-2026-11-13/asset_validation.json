@@ -1,0 +1,201 @@
+{
+  "size": [
+    288,
+    212
+  ],
+  "mode": "RGBA",
+  "alpha_matches_base": true,
+  "unchanged_outside_local_feature_masks": true,
+  "jaw_and_neck_protected": true,
+  "expression_art": [
+    {
+      "key": "er_expr_eleanor2_serious",
+      "family": "eleanor2",
+      "expression": "serious",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "ec9d850591cd0b52e7513c2a876fab06961bf367e85d82f08e33a353112423e1",
+      "output_sha256": "4a7b6a7efdbfc688e84cc224cdc9393b1e73da8399b07fc435d7ea3876e6379d",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_smile",
+      "family": "eleanor2",
+      "expression": "smile",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "f8361c777d496cb64e175b2f1881bfd80ac388f491f1f76e5c3067a8eaebb6c3",
+      "output_sha256": "39031b1a0365826da7607868641916983d0ebc4c35ef038ef990fbe5185a5ec9",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_soft",
+      "family": "eleanor2",
+      "expression": "soft",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "d51239210a0f5632adb8d802066d25cc00e0ada664412bffae2c5959942b481c",
+      "output_sha256": "d5086b8477f93c751de9464aff7e00c429011cf4f5d72b0008faf111bec4e8a0",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_sad",
+      "family": "eleanor2",
+      "expression": "sad",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "15fba0fe9964308fad109afbbea2427b877d0bb3828725db5c736624067c61d1",
+      "output_sha256": "5ea879a970cca7715bf7988562fe83db5191d77830e4bf24e15e0025dc021be7",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_hurt",
+      "family": "eleanor2",
+      "expression": "hurt",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "8397b364117b0211f955aa69772719b61abf66d0507953d3efeb763e42930566",
+      "output_sha256": "6a5c79a44a66bb6aeb3d34b1895b8ea8340688aaa6c2cc4bc4be1be962575b9f",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_angry",
+      "family": "eleanor2",
+      "expression": "angry",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "4f97f952c18f753f1c5a3d72705262f4a710031a594309cfcefa3a06bafbd40f",
+      "output_sha256": "0b6e90c6eef695c2ea7b03c4ecaf001e8ab14395fa11d6e6dd60e4020505780e",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_shy",
+      "family": "eleanor2",
+      "expression": "shy",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "da6ebbd4d8f5a24319578e47e469494cc358e4b75470dab8b9164851e91f3d2f",
+      "output_sha256": "fe18745de6dc33cb848ba4197d2d1ef1f90fcd153728788b15d2a6034380bb66",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_determined",
+      "family": "eleanor2",
+      "expression": "determined",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "f4f35e33f2e3c2b47467749bc206ce060d3b66e69c0211c643d063115e9059cf",
+      "output_sha256": "837c42c7ac84eb453bb5787ba622a74ff3b63d6bfb65d34209829c442cc6ae3b",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor2_tired",
+      "family": "eleanor2",
+      "expression": "tired",
+      "base_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "master_sha256": "ae270faee409def07193b441b33ced6203e56190e0eb801eb964b29b7f7febc3",
+      "output_sha256": "d438e2472c519b4ccf02a303b4fb813f0adf2cc12016ac535f43182adeba970b",
+      "changed_pixels": 1032
+    },
+    {
+      "key": "er_expr_eleanor3_serious",
+      "family": "eleanor3",
+      "expression": "serious",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "8abdda9db6b9850eac9f3f5db41233f6de83a9addb615cabb7d33fdfb85a6747",
+      "output_sha256": "2312420fe2d50aef98a31748f855aaee39d1f2b5ee9ce6138b8cd87fba7ceaa4",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor3_smile",
+      "family": "eleanor3",
+      "expression": "smile",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "7d8e08a47846145b2f0f22a8bd4e41d937396e50771b05b5ae319714f6800394",
+      "output_sha256": "426952e1ecdf79acf4c9cc102630c57c18c9680eb423f23dcbc2edf5e448c699",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor3_soft",
+      "family": "eleanor3",
+      "expression": "soft",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "6d049f3ffefdd2c0c2d27b8d30965a40eb63e5bcd9814f4730656b985b15915c",
+      "output_sha256": "3e7383c94c0efd29fd24fe6b86fb09e21416254920331557f3ccfbc0dc847483",
+      "changed_pixels": 1049
+    },
+    {
+      "key": "er_expr_eleanor3_sad",
+      "family": "eleanor3",
+      "expression": "sad",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "920c292b33b2e15a5e343267a46afe568a7d50fd3884462ed036990e16f645f5",
+      "output_sha256": "1bd661f4ec6f5d410e02ec30e8ebb61aa67f9aa1437228cd8537e9d6b43b545b",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor3_hurt",
+      "family": "eleanor3",
+      "expression": "hurt",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "404b3b6bfa98dcb3bb60b94663a3aac62dc890a4a3dca9f677d9823a098327e7",
+      "output_sha256": "5f0e5a233fe92df76b36a5bc69dfc04b14d5867a968e4879f4192685a21d35b7",
+      "changed_pixels": 1049
+    },
+    {
+      "key": "er_expr_eleanor3_angry",
+      "family": "eleanor3",
+      "expression": "angry",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "ec53fc38744660963a2e70b45d3c97431e9f202c20ede69432b6af161bde4a6e",
+      "output_sha256": "f4ac80e0719a7554d3b639f967ceb868db0f8183fd78436103d19d168f7dee19",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor3_shy",
+      "family": "eleanor3",
+      "expression": "shy",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "3e50e7e65160d42cc9ca35f8c6a9edb5028fdeed8a86a3f87a319866d2272491",
+      "output_sha256": "cac8f75e9da4fc6becae21266cc3acf70c4346663dc93d25284f2bc57aea692a",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor3_determined",
+      "family": "eleanor3",
+      "expression": "determined",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "d15f501b46e7ebdad68ce410e94802a825f4a562f9a69e4c099c426b4730b699",
+      "output_sha256": "eca6995d064c509f82a2d05f501677eb52b0c6a121d0f2f1768c598c9e16308e",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor3_tired",
+      "family": "eleanor3",
+      "expression": "tired",
+      "base_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "master_sha256": "8aa3b20118161ff67bc72c66bba6af054aefa26de331a157bb5759e70ad6775c",
+      "output_sha256": "1a5b37389d60c04b26fa80a5c51a9f8fc57a06eb96778c3ade35f9e63936dd78",
+      "changed_pixels": 1050
+    },
+    {
+      "key": "er_expr_eleanor_scav_serious",
+      "family": "eleanor_scav",
+      "expression": "serious",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "master_sha256": "a4d6e47844429c01d6b0720af497043666cc351a6a9e4bf1da086b7f02088c1c",
+      "output_sha256": "d7f976116cb77282827f60361f155b0453f0bc8d2d051fe95861fcd5b931928f",
+      "changed_pixels": 1061
+    },
+    {
+      "key": "er_expr_eleanor_scav_smile",
+      "family": "eleanor_scav",
+      "expression": "smile",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "master_sha256": "2631f1c937d83894611dc3261f1aebca39b2bbf56c4a8b1e14cfd4c5a951a951",
+      "output_sha256": "e6f29e073099bb3ddc99354389222dbcc102c408d38bdc158df52e526ec4eb0b",
+      "changed_pixels": 1061
+    },
+    {
+      "key": "er_expr_eleanor_scav_hurt",
+      "family": "eleanor_scav",
+      "expression": "hurt",
+      "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "master_sha256": "43ba89e26a5dd766c6ad65ea37c5e3cd91d0ba4618094811ffc888a50f70aa45",
+      "output_sha256": "79a497e36530853fa499ec1c0c36d23ffcc5bb746e890b2fd5d5375d4c9ddfe9",
+      "changed_pixels": 1061
+    }
+  ]
+}

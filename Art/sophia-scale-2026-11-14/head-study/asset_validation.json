@@ -1,0 +1,112 @@
+{
+  "status": "portrait candidate",
+  "master": {
+    "file": "Art/sophia-scale-2026-11-14/head-study/masters/sophia_head_study.png",
+    "size": [
+      977,
+      1610
+    ],
+    "mode": "RGBA",
+    "sha256": "505f22ef9181f67ab8f41f7e0c79e08f1a41a4e3da0882e114f34ef899188390"
+  },
+  "portrait": {
+    "file": "Art/sophia-scale-2026-11-14/head-study/portraits/er_portrait_mother_head_study.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585"
+  },
+  "references": "references.json",
+  "prompt": "prompts/head-study.txt",
+  "prompt_sha256": "8c651301813a50725e4763f0ca565b1f4475d7803fa6cc02d4bb0028e2238dac",
+  "landmarks": {
+    "method": "visual estimates",
+    "source_eye_midpoint": [
+      502,
+      382
+    ],
+    "source_chin_y": 614,
+    "native_eye_midpoint": [
+      145,
+      115
+    ]
+  },
+  "scale_method": "same isotropic scale as installed daily portrait, registered by eye midpoint",
+  "pipeline": {
+    "source_size": [
+      977,
+      1610
+    ],
+    "clean_bbox": [
+      11,
+      3,
+      973,
+      1610
+    ],
+    "parameters": {
+      "visible_height": 198.32731707317072,
+      "centre_x": 143.7658536585366,
+      "bottom_exclusive": 265.55317073170727,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.12341463414634145,
+      "tx": 83.0458536585366,
+      "ty": 66.85560975609755
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 5006,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      88,
+      68,
+      199,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 6197
+  },
+  "comparison_inputs": [
+    {
+      "file": "Textures/Items/cp_portrait_eleanor1.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0"
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_female_beauty.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "3a27a5a72cf7f64f1ee24c8c5c2567548ed689ac3d581129ae34d9b49c02194c"
+    }
+  ]
+}

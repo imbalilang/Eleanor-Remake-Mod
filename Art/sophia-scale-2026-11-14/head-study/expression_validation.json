@@ -1,0 +1,145 @@
+{
+  "size": [
+    288,
+    212
+  ],
+  "mode": "RGBA",
+  "files": {
+    "Textures/Items/er_portrait_mother_female_beauty.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_portrait_mother_head_study.png",
+      "sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "previous_sha256": "3a27a5a72cf7f64f1ee24c8c5c2567548ed689ac3d581129ae34d9b49c02194c"
+    },
+    "Textures/Items/er_expr_sophia_serious.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_serious.png",
+      "sha256": "e7492f5b8032e2c92f6bd22911c47bdfef62c30ac2b8c98ac30a386bfb98f2d9",
+      "previous_sha256": "8d3c0f1e26d4da982ae8521046e399eeae731a750eeb24acf85951fceb4f2c0b",
+      "master_sha256": "8e0eb38dc9b85a942535a9b91344fa98e0634a45115bce4c6da9f02e4c0fe915",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_smile.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_smile.png",
+      "sha256": "5855533568c644ff690a11e196268c01399dad78295293e1bb45067fb1546e61",
+      "previous_sha256": "6303d95ecbd094a70ba7de5c3ae75cf8f6250f3e85e16e1c6e39e488e9c0da34",
+      "master_sha256": "c73bef035f466e98fc0d44b59cad6de1132cf621186fb5f133114c19d9d2d7ac",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_soft.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_soft.png",
+      "sha256": "e925e230b78e8c3c4ac1f6480381648520d7df67bf7e97e151be2f0f43b788df",
+      "previous_sha256": "9beff92d2271d6b300694ae63f439316c33e82d06b9629e7112a49b875abb290",
+      "master_sha256": "a6be826eae753108ee20df8bb61f0baa0e0dd9a8d647f1bb059596bc32bced15",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_sad.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_sad.png",
+      "sha256": "4210d317457d26df7e78fe3b5ceb9deb9b3f56cf9bb5291eb4b7827c059f965c",
+      "previous_sha256": "fff054b7af25b2e1fcf14a00deb0aaef68c027ee91295c9b82495949e75820e0",
+      "master_sha256": "fc9bf834fa427cd9a0131ab069931014af44b46bc5b602606ff494c91c5459b9",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_hurt.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_hurt.png",
+      "sha256": "40983f6785771121358e99e4f37e43ec74fecbb1ec2ca3913c3dcba0c218635e",
+      "previous_sha256": "a0b8fe498bb537a2b699697610d3172a0774d9e2be6d0e062cb1e111b68741f2",
+      "master_sha256": "b4bd025a9bbca86a72725712a6da74fd866d3ee936aba8a6d2ed804be5fdc0b1",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_angry.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_angry.png",
+      "sha256": "3a74f44b143bcc8f4ac97b0863792931b47fe4fe48d5c443f638af57fc157929",
+      "previous_sha256": "f866777cef182915c603624137ea5f6dc5a1c53191a3c837543e851f95cce881",
+      "master_sha256": "66e2b697a2ba0fecc4f866bdbea2fb498e1f648c2d50df32b0c7d7b8c2d063d3",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_shy.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_shy.png",
+      "sha256": "74cf1f55e70742a098d9943ff6f7623daaed06de207532772fd6bfa010e508ad",
+      "previous_sha256": "f5bcc48ba92a2133cd0f2e881d08a2cf156d714a866b3397170111cde2aef0cf",
+      "master_sha256": "c8c7ccf8bd278e1cbd44d5eac7cab46fc524c810735f8fc4f770e6bdd0980b89",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_determined.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_determined.png",
+      "sha256": "5b30f447e2ab6d1e65c5ce0d0a4d63d3c4d01e474b027a9b5d2472ef3419c392",
+      "previous_sha256": "b8a2ba7dbd25d4f9e7ed4faf3a1b2e1de5d6f83d4057e28b8e76824b3b048d84",
+      "master_sha256": "efc66c3ff2f2c05b345fc59fb0276a6a73eddf0f9a04ba4ba095eaa088098cb8",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_tired.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_tired.png",
+      "sha256": "e9b2a724e141145b11319790be66322ecf1b2e8cf0a3a2c22e233e837b1e424d",
+      "previous_sha256": "78604fecbbab8b715844c840f2c34755327e3df3456f2b8919d98bfadcc2fa17",
+      "master_sha256": "22f4c3529becdd121ad9b6ef9b2a3f7e2a170076cfd8588a7d781b6126b0a9b2",
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_portrait_mother_home_female_beauty.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_portrait_mother_home_head_study.png",
+      "sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "previous_sha256": "ba9025261654a1a242ae42e62ac3d1e468abe7b53bd355fbf32b0af49d988e4a"
+    },
+    "Textures/Items/er_expr_sophia_home_serious.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_serious.png",
+      "sha256": "2e84247dbdc77d09d8f3a81a97197c8c3d6a03b8b8e208e7192cd3b4f2ec1d76",
+      "previous_sha256": "70cc12c8f7a9626c799184ee8f3d751241a38b69c956e628c93f00a26b071d90",
+      "master_sha256": "8e0eb38dc9b85a942535a9b91344fa98e0634a45115bce4c6da9f02e4c0fe915",
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_smile.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_smile.png",
+      "sha256": "e609aad78bfedc79fd77bbb9535b2b000e37cd158afde8bb3bf0eda8018328bf",
+      "previous_sha256": "12420817095f335c20b1d68d80398120be5ba76fb9b5e179582c0c55fb7d3a95",
+      "master_sha256": "c73bef035f466e98fc0d44b59cad6de1132cf621186fb5f133114c19d9d2d7ac",
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_soft.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_soft.png",
+      "sha256": "14e3ce91339a3204d2cff469e015e9820326d0fbbffe5241c18256a75643bc66",
+      "previous_sha256": "57a36585333ec131469896ccd23e41a4e48bbfdbc22ce422281c62ac8c1deb0d",
+      "master_sha256": "a6be826eae753108ee20df8bb61f0baa0e0dd9a8d647f1bb059596bc32bced15",
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_sad.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_sad.png",
+      "sha256": "a760b3739af36aec34973dcf5d2a521e35a230335bbd2d5d7fc22be4df524c38",
+      "previous_sha256": "35604539964c1b53d40cb99ad1a0cb389a897b8a7149a735c182fd392919a183",
+      "master_sha256": "fc9bf834fa427cd9a0131ab069931014af44b46bc5b602606ff494c91c5459b9",
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_hurt.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_hurt.png",
+      "sha256": "b658557c95b9c1f97033f9cf586b15a72cab3028bc6c83767b950c704543bba6",
+      "previous_sha256": "5248003aeb7d90b7103f42f233191c798cc0b9d981f0600bb7de1f01548f4ba0",
+      "master_sha256": "b4bd025a9bbca86a72725712a6da74fd866d3ee936aba8a6d2ed804be5fdc0b1",
+      "changed_facial_pixels": 706
+    },
+    "Textures/Items/er_expr_sophia_home_angry.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_angry.png",
+      "sha256": "e3145a36e7f940adaa89b535bd64811bef1580e27551dd5c0e400fc44a6ab3b6",
+      "previous_sha256": "0af45793a24dcf7477297f64bd25fa20aca043d96cbacd543320180b8766dae5",
+      "master_sha256": "66e2b697a2ba0fecc4f866bdbea2fb498e1f648c2d50df32b0c7d7b8c2d063d3",
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_shy.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_shy.png",
+      "sha256": "9e2a2ad8980e133507965f92a927b3f8335b8defa718fb289b76cd3591a3bb5d",
+      "previous_sha256": "7e6a6439aefc1d2bfd5eb599de9cb1193eeeefdadf33b9fd2db88095cfd08dee",
+      "master_sha256": "c8c7ccf8bd278e1cbd44d5eac7cab46fc524c810735f8fc4f770e6bdd0980b89",
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_determined.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_determined.png",
+      "sha256": "1bcc85144d2ef79d478a0cf61623087bf2ecc83e03bc4e6f31eae96f9ed7dffa",
+      "previous_sha256": "f240c0e89a042ade81c6ef0711ca8ce99ded66c83cee0fe06680c5a92ea22979",
+      "master_sha256": "efc66c3ff2f2c05b345fc59fb0276a6a73eddf0f9a04ba4ba095eaa088098cb8",
+      "changed_facial_pixels": 704
+    },
+    "Textures/Items/er_expr_sophia_home_tired.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/portraits/er_expr_sophia_home_tired.png",
+      "sha256": "418f8f92580a13c633bb778961f32dd182a78520e8502b186d65af871664c627",
+      "previous_sha256": "07dcbc7f0954c1086361d48f04a487e0c4de689c60f5f45f6d782f21ff2f7f7c",
+      "master_sha256": "22f4c3529becdd121ad9b6ef9b2a3f7e2a170076cfd8588a7d781b6126b0a9b2",
+      "changed_facial_pixels": 711
+    }
+  }
+}

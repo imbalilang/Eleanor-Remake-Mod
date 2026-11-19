@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image editing",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_tights_master_v5.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "7d142dffbbbb89eed7d2d09611ef9079dbff632e42c707548eef0eb7fd174983",
+  "prompt": "prompt_v5.txt",
+  "references": "references_v5.json",
+  "review": "Verified a steep bracing arm, palm touching bed, raised upper torso, visible bent knee and raised hip, distinct rib-knit hem, and smooth continuous white tights. Inspected a 1080px preview."
+}

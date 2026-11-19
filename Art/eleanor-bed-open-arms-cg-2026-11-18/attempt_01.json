@@ -1,0 +1,8 @@
+{
+  "status": "generation blocked; no image output",
+  "method": "built-in image generation",
+  "request_id": "1ef32df4-564e-4215-9d46-6d71627489b4",
+  "reason": "moderation_blocked at input stage; sexual category",
+  "requested_scene": "Eleanor in supplied white floral-lace sleepwear, seated on bed with arms open toward camera",
+  "image_count": 0
+}

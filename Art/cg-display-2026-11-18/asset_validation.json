@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-18",
+  "status": "workspace runtime asset update",
+  "exportMethod": "Exact area averaging, using export_cg_v2.area_sample on the centered 16:9 source box",
+  "assets": [
+    {
+      "runtimeKey": "er_event_harem_lydia_date_cg",
+      "master": "Art/harem-lydia-date-cg-2026-11-15/lydia_upper_level_date_v3_master.png",
+      "masterSize": [
+        1672,
+        941
+      ],
+      "masterSha256": "f3814d49635d111591fb7e3d807eb4e3f3cd79b4a5a1bd19f526e4f199b86ccf",
+      "cropBox": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "previousRuntimeSize": [
+        960,
+        540
+      ],
+      "previousRuntimeSha256": "c0d649e3ce34b174a28be35f3de06000daa0874b7663f55d579290ec9944f609",
+      "oldExportMatchMeanAbsoluteChannelError": 0.0,
+      "file": "Textures/Items/er_event_harem_lydia_date_cg.png",
+      "dimensions": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "bytes": 2375016,
+      "sha256": "04d3b8e9b8ac0eb84aaa80ab7e56de89175c0ce9a4f30d529b7ac46caf49bfff",
+      "filter": "Bilinear"
+    },
+    {
+      "runtimeKey": "er_event_love_water_cut_cg",
+      "master": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_half_glass_v2_master.png",
+      "masterSize": [
+        1672,
+        941
+      ],
+      "masterSha256": "43b4fdd0b24a78239b72c9d80a96db32115c371f13486f9150c34ee07ecebca8",
+      "cropBox": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "previousRuntimeSize": [
+        960,
+        540
+      ],
+      "previousRuntimeSha256": "5a4d923dce3027165a08724245ec7585e758fffea89ee40f1079dac89bd2f980",
+      "oldExportMatchMeanAbsoluteChannelError": 0.98647,
+      "file": "Textures/Items/er_event_love_water_cut_cg.png",
+      "dimensions": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "bytes": 1703446,
+      "sha256": "91d4e33817b5f3c408a281a67891288a1a8f65c2ab60e13f0b3ac88acaaab230",
+      "filter": "Bilinear"
+    },
+    {
+      "runtimeKey": "er_event_maid_gala_cg",
+      "master": "Art/maid-v2-gala-cg-2026-11-15/maid_gala_cg_v2_master.png",
+      "masterSize": [
+        1672,
+        941
+      ],
+      "masterSha256": "f36959521ad14c9ceb2242c32d42c82f031a1baf1a36e0e9b10bd8a78e0fb6ed",
+      "cropBox": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "previousRuntimeSize": [
+        960,
+        540
+      ],
+      "previousRuntimeSha256": "1f85d86bd42732af29c978ebc5c74fd1acbbd4445687be0995f0579486f38979",
+      "oldExportMatchMeanAbsoluteChannelError": 0.0,
+      "file": "Textures/Items/er_event_maid_gala_cg.png",
+      "dimensions": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "bytes": 1843196,
+      "sha256": "6056ea8f4027a512c6a077a6758c58317b31a51ef837660dbf6b0d4db935d5cd",
+      "filter": "Bilinear"
+    },
+    {
+      "runtimeKey": "er_event_revolution_embrace_cg",
+      "master": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_v5_master.png",
+      "masterSize": [
+        1672,
+        941
+      ],
+      "masterSha256": "c87dd1cc3e6683da0121674591f38a1d7b49bacb4108e765fee0a5fa4950d615",
+      "cropBox": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "previousRuntimeSize": [
+        960,
+        540
+      ],
+      "previousRuntimeSha256": "195521fd28dc7d3f8406dd51aa7d8ce9015ccb8e113326dd23336c7784753545",
+      "oldExportMatchMeanAbsoluteChannelError": 1.40934,
+      "file": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "dimensions": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "bytes": 2021505,
+      "sha256": "1238e7c3c6b9e002309759aefa4f16c7a05eb7ab47f5d46ca1418023afd177f9",
+      "filter": "Bilinear"
+    },
+    {
+      "runtimeKey": "er_ending_love_wedding",
+      "master": "Art/love-ending-2026-11-13/masters/ending_love_wedding_master_v6.png",
+      "masterSize": [
+        1672,
+        941
+      ],
+      "masterSha256": "1c4a31b96170328b288c85f0dcb7949a9ebfc06518bdcfdabcee29d8b917ffc8",
+      "cropBox": [
+        0.0,
+        0.25,
+        1672.0,
+        940.75
+      ],
+      "previousRuntimeSize": [
+        960,
+        540
+      ],
+      "previousRuntimeSha256": "1e4afe5f501bf69069ea1effa585df01d22fbe544b0d2b8e006040d7282bc9e2",
+      "oldExportMatchMeanAbsoluteChannelError": 0.0,
+      "file": "Textures/Items/er_ending_love_wedding.png",
+      "dimensions": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "bytes": 2308484,
+      "sha256": "255a4ed10049daa5afdfef6b257a605e38aff4c6749625a4dcb9d5319be7f54a",
+      "filter": "Bilinear"
+    }
+  ],
+  "preservedPixelArt": [
+    {
+      "runtimeKey": "er_ending_maid_cg",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "a23dee95a7576a26532af4b0c12342b0d18c62642dd85c49149a6cb856c8cbd8",
+      "filter": "Point"
+    },
+    {
+      "runtimeKey": "er_ending_harem_cg",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "d088018f1ab7a15911031d7a8601daf11058df18f5416ebcbd5fe2e23f57b641",
+      "filter": "Point"
+    },
+    {
+      "runtimeKey": "er_ending_revolution_cg",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41",
+      "filter": "Point"
+    }
+  ]
+}

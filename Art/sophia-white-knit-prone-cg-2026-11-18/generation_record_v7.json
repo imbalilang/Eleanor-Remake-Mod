@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image editing",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_downward_gaze_master_v7.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "86302cfc85231bcaec4f63591f8868b337d851bce7949f7eff4ad48a6aca7cfc",
+  "prompt": "prompt_v7.txt",
+  "references": "references_v7.json",
+  "review": "Inspected a 1080px preview for the raised diagonal torso, lowered eyes and head, near hand resting on the thigh, occluded far arm, and separate white sweater and tights."
+}

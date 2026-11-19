@@ -81,6 +81,23 @@ Output: complete opaque full-colour scene, no UI, subtitles, logo or watermark. 
 
 CG 按整个目标画幅导出，不套画像的人物高度、透明轮廓和补顶行；实机文字区域必须复核。侍从结局实际示例见 `expressions-and-endings-2026-11-10/prompts/ending_maid.txt`。后宫 CG 的双人构图与不同期待表情编辑示例见 `harem-ending-2026-11-10/prompts/ending_harem_v1.txt`～`ending_harem_v3.txt`；使用高于脸部的镜头、人物弯腰后抬眼的明确关系，避免误画成相机从下往上仰拍。双人CG须分别指定眼睑、眉形、嘴形和情绪，避免机械复用同一浅笑。
 
+## D.1 非结局 CG
+
+先按[非结局 CG 美术规范](SCENE_CG_STYLE.md)和[地点投放](../docs/CG_LOCATION_AND_PLACEMENT_PLAN.md)填写 brief。地点、家具、服装理由、营业状态、前后过渡和程序挂点记录在 brief。绘画提示只保留能转成画面的条件。
+
+```text
+Asset: one 16:9 full-frame scene CG in the project's illustrated story style.
+Identity and costume reference: {{approved_character_master_for_each_character}}. Preserve {{eyes_face_hair_head_to_body_proportions_and_costume}}.
+Rendering reference: {{approved_style_reference}}. Match its drawn contours, grouped hair shapes, clean skin tones, layered cel shading and fabric construction.
+Setting reference: {{matching_station_location_reference}}. Show {{recognizable_architecture_and_established_furniture}}. Light the figure with {{source_and_direction_from_the_actual_scene}}.
+Moment: {{one_action_from_the_scene}}, expressing {{what_the_character_wants_or_feels_at_this_point}}. Give the scene one clear focal point: {{face_gesture_clothing_or_touch}}.
+Camera: {{distance_height_angle_and_crop}}. Place {{each_person_on_the_correct_side_of_window_or_in_the_approved_space}}. Show {{player_visible_parts_if_the_action_requires_them}}.
+Anatomy and contact: {{weight_bearing_limb_eye_line_hand_positions_and_contact_with_props}}. Arrange fabric and hair according to the pose. Use only the established clothing and props for this moment.
+Output: opaque full-colour CG, clean legible foreground, coherent station background, no text or UI. High-resolution master with the full intended composition.
+```
+
+同一场景的后续修改以已选的上一版为编辑底图，附上正确的角色母图。只改进入验收的问题，同时复核动作、脸、机位与光向。外部示意图只说明动作或构图。
+
 ## E. 物品图标
 
 ```text

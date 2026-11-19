@@ -1,0 +1,105 @@
+{
+  "status": "candidate",
+  "edit_reference": {
+    "source": "Art/v0.5/masters/eleanor_maid_master.png",
+    "source_sha256": "435d45e50d539d0c274230d2fe8290ffb90604dcf4e7c60973cb5b40677cc16e",
+    "source_crop": [
+      350,
+      228,
+      1104,
+      1077
+    ],
+    "upload_sha256": "cd210225687dcf4c2035a3b2af1447863504dbc8d0d4cb3c394153b95d3dfebe",
+    "upload_size": [
+      754,
+      849
+    ],
+    "upload_bytes": 643275,
+    "estimated_request_bytes": 912700,
+    "runtime_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+    "matches_author_strict": false
+  },
+  "master": {
+    "file": "Art/maid-open-neck-2026-11-14/masters/eleanor_maid_open_neck_master.png",
+    "sha256": "db879d10fe94e37a5aef984290f5c81651d24b5dc3d2e110d062170ee0c3e4e8"
+  },
+  "prompt": {
+    "file": "Art/maid-open-neck-2026-11-14/prompts/maid-open-neck.txt",
+    "sha256": "9b40523c71d1c1552b90df3eac48aefe3b2b9542f56ab4bcb673f738ff7092a5"
+  },
+  "portrait": {
+    "file": "Art/maid-open-neck-2026-11-14/portraits/er_portrait_eleanor_maid_open_neck.png",
+    "sha256": "5d4c1262fe02018859e4824c07a0418d5b7b4a8c1e1765c7b47b57100658b5ae"
+  },
+  "baseline": {
+    "file": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+    "sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3"
+  },
+  "repeat_identical": true,
+  "landmarks": {
+    "method": "visual estimate",
+    "master_eye_midpoint": [
+      574,
+      485
+    ],
+    "native_eye_midpoint": [
+      138,
+      115
+    ]
+  },
+  "pipeline": {
+    "source_size": [
+      1182,
+      1330
+    ],
+    "clean_bbox": [
+      46,
+      44,
+      1132,
+      1330
+    ],
+    "parameters": {
+      "visible_height": 191.614,
+      "centre_x": 140.235,
+      "bottom_exclusive": 239.90499999999997,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": true,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.149,
+      "tx": 52.47400000000002,
+      "ty": 41.734999999999985
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 1,
+    "detail_pixels": 9032,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      59,
+      49,
+      221,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 9620
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "estimated_request_bytes": 2982600,
+  "references": [
+    {
+      "role": "primary edit target: relaxed pose, face, smile and dress",
+      "source": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_date_relaxed_master.png",
+        "size": [
+          1157,
+          1360
+        ],
+        "bytes": 1821826,
+        "sha256": "752aa1160fb2716d460c90e268d45467a83829c363d9dcee476a55faed395f60"
+      },
+      "upload": {
+        "file": "Art/lydia-three-directions-2026-11-14/references_local/date_relaxed_pose_edit.png",
+        "size": [
+          737,
+          1050
+        ],
+        "bytes": 1051959,
+        "sha256": "32c2e9c7ffafe321f0190bde30674d523a73a61658d36bbb37df8bce11ac8322"
+      }
+    },
+    {
+      "role": "original date outfit and torso proportions only",
+      "source": {
+        "file": "Art/lydia-style-fusion-2026-11-10/lydia_date_master_v1.png",
+        "size": [
+          1461,
+          1076
+        ],
+        "bytes": 1274769,
+        "sha256": "e018e082bb7d5f8dab49d65690c3f041b91587944509b2beb29ec41ff2333087"
+      },
+      "upload": {
+        "file": "Art/lydia-three-directions-2026-11-14/references_local/lydia_date_edit.png",
+        "size": [
+          893,
+          1050
+        ],
+        "bytes": 1135838,
+        "sha256": "bbd10d09e17fa8cae545e780071eeb28ec2a2bc6f0eed88d53de91c5a6c467bf"
+      }
+    }
+  ]
+}

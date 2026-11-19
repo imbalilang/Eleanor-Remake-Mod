@@ -1,0 +1,17 @@
+{
+  "references": [
+    {
+      "role": "Existing clothed scene for character design, story action, details of the small spill on the cuff and exterior fabric, and setting",
+      "source": "B:/Eleanor Story Expand/Art/eleanor-bunny-milk-cg-2026-11-18/eleanor_bunny_milk_cuff_spill_master_v1.png",
+      "source_sha256": "8444ad4ae788f64ce07bba6d620634d526a7f389da642c6f9debb7db5f231669",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Bunny-Milk-Overhead-rvu68r8l/scene-basis.jpg",
+      "upload_dimensions": [
+        1280,
+        720
+      ],
+      "upload_bytes": 428060,
+      "upload_sha256": "ead55a64eda93d36d75e5e49805aefc6830884f46034c1eef0a38e20d33166e8",
+      "estimated_request_bytes": 620748
+    }
+  ]
+}

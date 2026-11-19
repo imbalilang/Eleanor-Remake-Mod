@@ -1,0 +1,14 @@
+{
+  "status": "candidate, not installed",
+  "method": "built-in image generation",
+  "master": "B:\\Eleanor Story Expand\\Art\\eleanor-white-lace-reclining-cg-2026-11-18\\eleanor_white_lace_reclining_highcollar_master_v1.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "bytes": 2427751,
+  "sha256": "218fcef056037dc288dae633ee8c4833e272c759dcf9d8ca6ce7d32bc3605b1c",
+  "review": "Viewed 1000px preview; high floral collar and body embroidery follow user reference; inspected head, neck and shoulder continuity in side-lying pose.",
+  "prior_candidate_preserved": true
+}

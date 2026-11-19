@@ -1,0 +1,9 @@
+{
+  "status": "blocked; no image generated",
+  "method": "built-in image generation",
+  "request_id": "f7dcc5cf-b29e-44c6-b9dc-ee9dceb3c02a",
+  "code": "moderation_blocked",
+  "stage": "output",
+  "category": "sexual",
+  "existing_master_unchanged": true
+}

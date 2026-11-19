@@ -1,0 +1,83 @@
+{
+  "status": "front-view portrait candidate",
+  "tool": "built-in image generation",
+  "prompt": "prompts/sophia_white_gold_front_v2.txt",
+  "prompt_sha256": "8eaabc35a17535b7e05a9088f3628bf8d3a916e017187551c57bb9ed1314a386",
+  "references": "references_front_v2.json",
+  "request_size_bound_bytes": 1446697,
+  "master": {
+    "file": "masters/sophia_white_gold_front_master_v2.png",
+    "size": [
+      1136,
+      1385
+    ],
+    "mode": "RGBA",
+    "sha256": "65d7fd0157294b6781bba310576e13aaddbc5db72fbb8ae648ad29d2f458fb79"
+  },
+  "portrait": {
+    "file": "portraits/er_portrait_sophia_white_gold_front_v2.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "f31680d08cbf04019530ef7a2ac9926c259c8e5bf9140cffe50a37a4a4e07d51"
+  },
+  "pipeline": {
+    "source_size": [
+      1136,
+      1385
+    ],
+    "clean_bbox": [
+      63,
+      19,
+      1061,
+      1385
+    ],
+    "parameters": {
+      "visible_height": 206.266,
+      "centre_x": 142.792,
+      "bottom_exclusive": 278.137,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.151,
+      "tx": 57.93000000000001,
+      "ty": 69.00200000000001
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 5230,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      75,
+      73,
+      212,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 6712
+  },
+  "framing_landmarks": "Visual estimates from the source portrait, centred eyes around y=115 in game pixels",
+  "runtime_installed": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "candidate; not installed",
+  "method": "built-in image editing",
+  "master": "B:\\Eleanor Story Expand\\Art\\eleanor-shy-romance-book-cg-2026-11-18\\eleanor_shy_romance_book_station_home_master_v2.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "f5e8ea6da6865d71e526818a23700c6d980ee6399e37d084bf53e4f003387f73",
+  "edit": "Modern library replaced with a compact station-home reading corner based on existing water-cut CG and original game material reference.",
+  "review": "Viewed 1100px preview for character, hand grips, book, dress, wall panels, worn bookcase, lamp and framed station window.",
+  "prior_master_retained": true
+}

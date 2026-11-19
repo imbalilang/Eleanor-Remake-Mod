@@ -1,0 +1,13 @@
+{
+  "source": {
+    "file": "Art/sophia-three-directions-2026-11-13/masters/sophia_ruan-mei_master.png",
+    "bytes": 2117845,
+    "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5"
+  },
+  "local_reference": {
+    "file": "Art/sophia-european-teal-2026-11-13/references_local/sophia_ruan-mei_reference.png",
+    "bytes": 1043770,
+    "sha256": "934f7ed65fe7b142c4315923222fe7cecbe1eae987f473e98f5affa8d5592c69"
+  },
+  "estimated_request_bytes": 1457232
+}

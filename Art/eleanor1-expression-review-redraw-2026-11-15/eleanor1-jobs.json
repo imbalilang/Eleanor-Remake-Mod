@@ -1,0 +1,1110 @@
+{
+  "family": "eleanor1",
+  "neutral": "Textures/Items/cp_portrait_eleanor1.png",
+  "neutral_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+  "protected": [
+    [
+      [
+        0,
+        135
+      ],
+      [
+        287,
+        135
+      ],
+      [
+        287,
+        211
+      ],
+      [
+        0,
+        211
+      ]
+    ],
+    [
+      [
+        135,
+        116
+      ],
+      [
+        144,
+        116
+      ],
+      [
+        144,
+        122
+      ],
+      [
+        135,
+        122
+      ]
+    ]
+  ],
+  "expressions": [
+    {
+      "number": "003",
+      "expression": "soft",
+      "master": "Art/eleanor1-expression-review-redraw-2026-11-15/masters/soft.png",
+      "master_sha256": "3e3015a6ff6fb5d38d3a1b00fc454c8c6a7669da310eea625619ed3c3b4823d6",
+      "edit_reference": "Art/eleanor1-expression-review-redraw-2026-11-15/references/soft.png",
+      "edit_reference_sha256": "a55481a4cd2cdfd1c6285a31b6def42be4204ecacf32c455b0866c23ac7056b4",
+      "features": [
+        {
+          "feature": "mouth",
+          "source_points": [
+            [
+              585,
+              544
+            ],
+            [
+              594.4,
+              544
+            ]
+          ],
+          "target_points": [
+            [
+              142,
+              128.3
+            ],
+            [
+              143,
+              128.3
+            ]
+          ],
+          "polygon": [
+            [
+              134,
+              126
+            ],
+            [
+              140,
+              124
+            ],
+            [
+              148,
+              124
+            ],
+            [
+              151,
+              126
+            ],
+            [
+              149,
+              130
+            ],
+            [
+              144,
+              132
+            ],
+            [
+              135,
+              132
+            ],
+            [
+              133,
+              129
+            ]
+          ]
+        }
+      ],
+      "protected": [
+        [
+          [
+            116,
+            112
+          ],
+          [
+            134,
+            112
+          ],
+          [
+            134,
+            119
+          ],
+          [
+            116,
+            119
+          ]
+        ],
+        [
+          [
+            144,
+            105
+          ],
+          [
+            160,
+            105
+          ],
+          [
+            160,
+            114
+          ],
+          [
+            144,
+            114
+          ]
+        ]
+      ]
+    },
+    {
+      "number": "004",
+      "expression": "shy",
+      "master": "Art/eleanor1-expression-review-redraw-2026-11-15/masters/shy.png",
+      "master_sha256": "cbbc07b8e98ad86aec5ab2a5e6db8389b5dd6b0ac75a20a6e9b2188a90f7a000",
+      "edit_reference": "Art/eleanor1-expression-review-redraw-2026-11-15/references/shy.png",
+      "edit_reference_sha256": "d11ea206e843b90b7c66e67def4e49d690e8d75f557391e378188c2d7ae16b08",
+      "features": [
+        {
+          "feature": "mouth",
+          "source_points": [
+            [
+              600,
+              562
+            ],
+            [
+              609.7,
+              562
+            ]
+          ],
+          "target_points": [
+            [
+              142,
+              128.3
+            ],
+            [
+              143,
+              128.3
+            ]
+          ],
+          "polygon": [
+            [
+              134,
+              126
+            ],
+            [
+              140,
+              124
+            ],
+            [
+              148,
+              124
+            ],
+            [
+              151,
+              126
+            ],
+            [
+              149,
+              130
+            ],
+            [
+              144,
+              132
+            ],
+            [
+              135,
+              132
+            ],
+            [
+              133,
+              129
+            ]
+          ]
+        },
+        {
+          "feature": "near blush",
+          "source_points": [
+            [
+              478,
+              496
+            ],
+            [
+              489,
+              496
+            ]
+          ],
+          "target_points": [
+            [
+              127,
+              122.3
+            ],
+            [
+              128,
+              122.3
+            ]
+          ],
+          "polygon": [
+            [
+              119,
+              121
+            ],
+            [
+              126,
+              121
+            ],
+            [
+              131,
+              119
+            ],
+            [
+              134,
+              121
+            ],
+            [
+              132,
+              124
+            ],
+            [
+              128,
+              125
+            ],
+            [
+              122,
+              124
+            ]
+          ]
+        },
+        {
+          "feature": "far blush",
+          "source_points": [
+            [
+              670,
+              464
+            ],
+            [
+              681,
+              464
+            ]
+          ],
+          "target_points": [
+            [
+              152.9,
+              117.3
+            ],
+            [
+              153.9,
+              117.3
+            ]
+          ],
+          "polygon": [
+            [
+              148,
+              115
+            ],
+            [
+              155,
+              114
+            ],
+            [
+              159,
+              112
+            ],
+            [
+              159,
+              117
+            ],
+            [
+              156,
+              121
+            ],
+            [
+              150,
+              120
+            ],
+            [
+              147,
+              118
+            ]
+          ]
+        }
+      ],
+      "protected": [
+        [
+          [
+            116,
+            112
+          ],
+          [
+            134,
+            112
+          ],
+          [
+            134,
+            119
+          ],
+          [
+            116,
+            119
+          ]
+        ],
+        [
+          [
+            144,
+            105
+          ],
+          [
+            160,
+            105
+          ],
+          [
+            160,
+            114
+          ],
+          [
+            144,
+            114
+          ]
+        ]
+      ]
+    },
+    {
+      "number": "005",
+      "expression": "serious",
+      "master": "Art/eleanor1-expression-review-redraw-2026-11-15/masters/serious.png",
+      "master_sha256": "bf6a787ae5a10b353a7442bef8aaec4e0b8b78be7a2848273ce457c88ba7b443",
+      "edit_reference": "Art/eleanor1-expression-review-redraw-2026-11-15/references/serious.png",
+      "edit_reference_sha256": "bac1775c1d087300025378d95eda6f277c19388b6fc2c2583b33508360cabca7",
+      "features": [
+        {
+          "feature": "mouth",
+          "source_points": [
+            [
+              582,
+              567
+            ],
+            [
+              591.0,
+              567
+            ]
+          ],
+          "target_points": [
+            [
+              142,
+              128.3
+            ],
+            [
+              143,
+              128.3
+            ]
+          ],
+          "polygon": [
+            [
+              134,
+              126
+            ],
+            [
+              140,
+              124
+            ],
+            [
+              148,
+              124
+            ],
+            [
+              151,
+              126
+            ],
+            [
+              149,
+              130
+            ],
+            [
+              144,
+              132
+            ],
+            [
+              135,
+              132
+            ],
+            [
+              133,
+              129
+            ]
+          ]
+        }
+      ],
+      "protected": [
+        [
+          [
+            116,
+            112
+          ],
+          [
+            134,
+            112
+          ],
+          [
+            134,
+            119
+          ],
+          [
+            116,
+            119
+          ]
+        ],
+        [
+          [
+            144,
+            105
+          ],
+          [
+            160,
+            105
+          ],
+          [
+            160,
+            114
+          ],
+          [
+            144,
+            114
+          ]
+        ]
+      ]
+    },
+    {
+      "number": "008",
+      "expression": "hurt",
+      "master": "Art/eleanor1-expression-review-redraw-2026-11-15/masters/hurt.png",
+      "master_sha256": "d6b0bcca4737e2ec8432916e40c713cae8b9db0c1fd6b0d718a47d75caaa98c6",
+      "edit_reference": "Art/eleanor1-expression-review-redraw-2026-11-15/references/soft.png",
+      "edit_reference_sha256": "a55481a4cd2cdfd1c6285a31b6def42be4204ecacf32c455b0866c23ac7056b4",
+      "features": [
+        {
+          "feature": "mouth",
+          "source_points": [
+            [
+              586,
+              551
+            ],
+            [
+              594.7,
+              551
+            ]
+          ],
+          "target_points": [
+            [
+              142,
+              128.3
+            ],
+            [
+              143,
+              128.3
+            ]
+          ],
+          "polygon": [
+            [
+              134,
+              126
+            ],
+            [
+              140,
+              124
+            ],
+            [
+              148,
+              124
+            ],
+            [
+              151,
+              126
+            ],
+            [
+              149,
+              130
+            ],
+            [
+              144,
+              132
+            ],
+            [
+              135,
+              132
+            ],
+            [
+              133,
+              129
+            ]
+          ]
+        },
+        {
+          "feature": "near eyebrow",
+          "source_points": [
+            [
+              427,
+              369
+            ],
+            [
+              437.4,
+              369
+            ]
+          ],
+          "target_points": [
+            [
+              125,
+              105.4
+            ],
+            [
+              126,
+              105.4
+            ]
+          ],
+          "polygon": [
+            [
+              118,
+              107
+            ],
+            [
+              122,
+              102
+            ],
+            [
+              129,
+              102
+            ],
+            [
+              131,
+              104
+            ],
+            [
+              133,
+              110
+            ],
+            [
+              129,
+              111
+            ],
+            [
+              121,
+              110
+            ],
+            [
+              118,
+              109
+            ]
+          ],
+          "normal_scale": 0.62
+        },
+        {
+          "feature": "far eyebrow",
+          "source_points": [
+            [
+              627,
+              338
+            ],
+            [
+              637.4,
+              338
+            ]
+          ],
+          "target_points": [
+            [
+              150,
+              102.5
+            ],
+            [
+              151,
+              102.5
+            ]
+          ],
+          "polygon": [
+            [
+              142,
+              102
+            ],
+            [
+              147,
+              99
+            ],
+            [
+              153,
+              99
+            ],
+            [
+              157,
+              100
+            ],
+            [
+              158,
+              103
+            ],
+            [
+              153,
+              105
+            ],
+            [
+              146,
+              107
+            ],
+            [
+              144,
+              107
+            ],
+            [
+              142,
+              105
+            ]
+          ],
+          "normal_scale": 0.62
+        }
+      ],
+      "protected": [
+        [
+          [
+            116,
+            112
+          ],
+          [
+            134,
+            112
+          ],
+          [
+            134,
+            119
+          ],
+          [
+            116,
+            119
+          ]
+        ],
+        [
+          [
+            144,
+            105
+          ],
+          [
+            160,
+            105
+          ],
+          [
+            160,
+            114
+          ],
+          [
+            144,
+            114
+          ]
+        ]
+      ]
+    },
+    {
+      "number": "009",
+      "expression": "determined",
+      "master": "Art/eleanor1-expression-review-redraw-2026-11-15/masters/determined.png",
+      "master_sha256": "d79c929e1267095105454b25d722d8bd2c2f3afe258e6b31bcc0177da10ca9e2",
+      "edit_reference": "Art/eleanor1-expression-review-redraw-2026-11-15/references/soft.png",
+      "edit_reference_sha256": "a55481a4cd2cdfd1c6285a31b6def42be4204ecacf32c455b0866c23ac7056b4",
+      "features": [
+        {
+          "feature": "mouth",
+          "source_points": [
+            [
+              584,
+              553
+            ],
+            [
+              593.3,
+              553
+            ]
+          ],
+          "target_points": [
+            [
+              142,
+              128.3
+            ],
+            [
+              143,
+              128.3
+            ]
+          ],
+          "polygon": [
+            [
+              134,
+              126
+            ],
+            [
+              140,
+              124
+            ],
+            [
+              148,
+              124
+            ],
+            [
+              151,
+              126
+            ],
+            [
+              149,
+              130
+            ],
+            [
+              144,
+              132
+            ],
+            [
+              135,
+              132
+            ],
+            [
+              133,
+              129
+            ]
+          ]
+        },
+        {
+          "feature": "near eyebrow",
+          "source_points": [
+            [
+              440,
+              388
+            ],
+            [
+              450.4,
+              388
+            ]
+          ],
+          "target_points": [
+            [
+              125,
+              106.7
+            ],
+            [
+              126,
+              106.7
+            ]
+          ],
+          "polygon": [
+            [
+              118,
+              107
+            ],
+            [
+              122,
+              103
+            ],
+            [
+              128,
+              102
+            ],
+            [
+              131,
+              103
+            ],
+            [
+              132,
+              107
+            ],
+            [
+              132,
+              109
+            ],
+            [
+              128,
+              110
+            ],
+            [
+              122,
+              110
+            ],
+            [
+              118,
+              109
+            ]
+          ],
+          "normal_scale": 0.43
+        },
+        {
+          "feature": "far eyebrow",
+          "source_points": [
+            [
+              644,
+              365
+            ],
+            [
+              654.4,
+              365
+            ]
+          ],
+          "target_points": [
+            [
+              150,
+              103.5
+            ],
+            [
+              151,
+              103.5
+            ]
+          ],
+          "polygon": [
+            [
+              142,
+              102
+            ],
+            [
+              147,
+              99
+            ],
+            [
+              153,
+              99
+            ],
+            [
+              157,
+              100
+            ],
+            [
+              158,
+              103
+            ],
+            [
+              153,
+              105
+            ],
+            [
+              146,
+              107
+            ],
+            [
+              144,
+              107
+            ],
+            [
+              142,
+              105
+            ]
+          ],
+          "normal_scale": 0.43
+        }
+      ],
+      "protected": [
+        [
+          [
+            116,
+            112
+          ],
+          [
+            134,
+            112
+          ],
+          [
+            134,
+            119
+          ],
+          [
+            116,
+            119
+          ]
+        ],
+        [
+          [
+            144,
+            105
+          ],
+          [
+            160,
+            105
+          ],
+          [
+            160,
+            114
+          ],
+          [
+            144,
+            114
+          ]
+        ]
+      ]
+    },
+    {
+      "number": "010",
+      "expression": "tired",
+      "master": "Art/eleanor1-expression-review-redraw-2026-11-15/masters/tired.png",
+      "master_sha256": "2907dd75a79861c9a66b2e7c5aee32b6f7c32773b4fe6b56eff105aa6ab97087",
+      "edit_reference": "Art/eleanor1-expression-review-redraw-2026-11-15/references/soft.png",
+      "edit_reference_sha256": "a55481a4cd2cdfd1c6285a31b6def42be4204ecacf32c455b0866c23ac7056b4",
+      "features": [
+        {
+          "feature": "mouth",
+          "source_points": [
+            [
+              585,
+              556
+            ],
+            [
+              593.7,
+              556
+            ]
+          ],
+          "target_points": [
+            [
+              142,
+              128.3
+            ],
+            [
+              143,
+              128.3
+            ]
+          ],
+          "polygon": [
+            [
+              134,
+              126
+            ],
+            [
+              140,
+              124
+            ],
+            [
+              148,
+              124
+            ],
+            [
+              151,
+              126
+            ],
+            [
+              149,
+              130
+            ],
+            [
+              144,
+              132
+            ],
+            [
+              135,
+              132
+            ],
+            [
+              133,
+              129
+            ]
+          ]
+        },
+        {
+          "feature": "near lids",
+          "source_points": [
+            [
+              398,
+              449
+            ],
+            [
+              506,
+              432
+            ]
+          ],
+          "target_points": [
+            [
+              118,
+              117.2
+            ],
+            [
+              132.6,
+              116
+            ]
+          ],
+          "polygon": [
+            [
+              115,
+              115
+            ],
+            [
+              119,
+              112
+            ],
+            [
+              128,
+              111
+            ],
+            [
+              132,
+              112
+            ],
+            [
+              135,
+              115
+            ],
+            [
+              134,
+              119
+            ],
+            [
+              128,
+              121
+            ],
+            [
+              121,
+              122
+            ],
+            [
+              116,
+              119
+            ]
+          ]
+        },
+        {
+          "feature": "far lids",
+          "source_points": [
+            [
+              608,
+              411
+            ],
+            [
+              698,
+              398
+            ]
+          ],
+          "target_points": [
+            [
+              146,
+              113
+            ],
+            [
+              158.8,
+              109.9
+            ]
+          ],
+          "polygon": [
+            [
+              142,
+              110
+            ],
+            [
+              146,
+              106
+            ],
+            [
+              153,
+              104
+            ],
+            [
+              158,
+              104
+            ],
+            [
+              162,
+              107
+            ],
+            [
+              161,
+              112
+            ],
+            [
+              156,
+              115
+            ],
+            [
+              149,
+              117
+            ],
+            [
+              145,
+              115
+            ]
+          ]
+        }
+      ],
+      "protected": []
+    }
+  ]
+}

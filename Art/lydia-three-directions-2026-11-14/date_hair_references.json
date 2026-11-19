@@ -1,0 +1,18 @@
+{
+  "master": "Art/lydia-style-fusion-2026-11-10/lydia_date_master_v1.png",
+  "master_sha256": "e018e082bb7d5f8dab49d65690c3f041b91587944509b2beb29ec41ff2333087",
+  "upload": "Art/lydia-three-directions-2026-11-14/references_local/date-hair-edit.png",
+  "upload_sha256": "d227149c239cb2bc46ba445175e65f39c48df902a3387d63c048c484692c473a",
+  "upload_size": [
+    950,
+    1073
+  ],
+  "upload_bytes": 1175032,
+  "source_crop": [
+    257,
+    0,
+    1210,
+    1076
+  ],
+  "estimated_request_bytes": 1633000
+}

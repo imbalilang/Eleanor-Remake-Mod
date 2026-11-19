@@ -1,0 +1,17 @@
+{
+  "status": "candidate; not installed",
+  "method": "built-in image editing",
+  "master": "B:\\Eleanor Story Expand\\Art\\eleanor-white-casual-bridal-carry-cg-2026-11-18\\eleanor_white_casual_bridal_carry_master_v2.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "14530611a4f33dcfc5d9700a225cb4d2b2ba3593b1eb4b209beb4b3ed69ecd35",
+  "changes": [
+    "Removed all visible player hands and clothing.",
+    "Lifted and opened Eleanor upper torso, keeping bent-knee bridal-carry pose and white casual dress."
+  ],
+  "review": "Viewed 1100px preview, including both bottom corners for remaining carrier clothing and torso posture.",
+  "prior_master_retained": true
+}

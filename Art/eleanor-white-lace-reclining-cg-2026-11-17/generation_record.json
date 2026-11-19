@@ -1,0 +1,14 @@
+{
+  "status": "design candidate; not installed in game",
+  "method": "built-in image generation",
+  "output": "B:\\Eleanor Story Expand\\Art\\eleanor-white-lace-reclining-cg-2026-11-17\\eleanor_white_lace_reclining_lined_master_v1.png",
+  "sha256": "6d2d6a7251cbaa31c52c0762fe89fc33c6eab653ec176fa40d27030f5184e6d9",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "costume_change": "Original sheer floral bodysuit attempt blocked; delivered opaque lined white lace version.",
+  "review": "Viewed 1000px-wide preview for face, side-lying neck/shoulders, garment and composition.",
+  "failed_request_id": "712399f4-98f7-4c27-8021-fd53281704b6"
+}

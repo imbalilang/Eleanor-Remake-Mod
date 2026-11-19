@@ -73,7 +73,11 @@ namespace EleanorRomance
             int progress = MaidState.Progress;
             if (progress < 24 || progress >= 28) return 0;
             int next = progress == 24 ? 25 : progress + 1;
-            int due = StoryDirector.TargetDay(next) - StoryDirector.StoryOffset();
+            // v2_a3c3 ends with "I'll be at work tomorrow".  The post-story
+            // visits follow the previous visit's day; absolute target days can
+            // leave a week of silence after the main story and look like a
+            // permanent pause.
+            int due = MaidState.ProgressDay + (progress == 24 ? 1 : 2);
             if (due <= 0) due = MaidState.ProgressDay + 2;
             return day >= due ? next : 0;
         }

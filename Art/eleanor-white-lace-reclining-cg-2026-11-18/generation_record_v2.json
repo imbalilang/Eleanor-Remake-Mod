@@ -1,0 +1,20 @@
+{
+  "status": "art candidate; not installed",
+  "method": "built-in image generation; arm redraw followed by removal of duplicated arm",
+  "output": "B:\\Eleanor Story Expand\\Art\\eleanor-white-lace-reclining-cg-2026-11-18\\eleanor_white_lace_reclining_highcollar_master_v2.png",
+  "sha256": "306e555bb77c958a5af28ae15bf1804a391643e959742ee4627fe7dd0fa16d26",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "original_master": "eleanor_white_lace_reclining_highcollar_master_v1.png",
+  "corrected_intermediate": "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-eeaf0bd0-bafe-4e78-9294-0b59216766e5.png",
+  "correction_reference": {
+    "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\eleanor-lace-reclining-hand-fix-review.jpg",
+    "bytes": 239029,
+    "sha256": "33b3fbc99f4aa169852a75d407e16d8adefc192cb5c43d0e9874034bf240d0b2",
+    "estimated_request_bytes": 368708
+  },
+  "review": "Viewed 1100px preview; corrected visible arm runs from shoulder to bent elbow, foreground forearm, wrist and relaxed hand; duplicated horizontal arm removed. Checked facial identity, collar and composition visually."
+}

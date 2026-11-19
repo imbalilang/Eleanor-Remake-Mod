@@ -1,0 +1,101 @@
+{
+  "status": "portrait candidate",
+  "master": {
+    "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_date_relaxed_master.png",
+    "size": [
+      1157,
+      1360
+    ],
+    "mode": "RGBA",
+    "sha256": "752aa1160fb2716d460c90e268d45467a83829c363d9dcee476a55faed395f60"
+  },
+  "portrait": {
+    "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_date_relaxed.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "58befe64ad1f393b89bf9551ee13234324a2219315e31036579c286a376e7469"
+  },
+  "prompt": "Art/lydia-three-directions-2026-11-14/prompts/date-relaxed.txt",
+  "prompt_sha256": "7404c738a44eb3ee45ce3cefad1fb794c3e4f60d96f7fef85da53e354d0e809b",
+  "reference": "references.json/date",
+  "landmarks": {
+    "method": "visual estimate",
+    "master_eye_midpoint": [
+      552,
+      411
+    ],
+    "master_chin_y": 602,
+    "target_eye_midpoint": [
+      143,
+      115
+    ],
+    "target_chin_y": 137
+  },
+  "pipeline": {
+    "source_size": [
+      1157,
+      1360
+    ],
+    "clean_bbox": [
+      112,
+      12,
+      1045,
+      1360
+    ],
+    "parameters": {
+      "visible_height": 155.2670157068063,
+      "centre_x": 146.0523560209424,
+      "bottom_exclusive": 223.30890052356023,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.11518324607329844,
+      "tx": 79.41884816753925,
+      "ty": 66.65968586387436
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 5670,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      92,
+      69,
+      200,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 7537
+  },
+  "compared_to": {
+    "file": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5"
+  }
+}

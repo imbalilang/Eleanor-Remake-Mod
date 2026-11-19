@@ -1,0 +1,71 @@
+{
+  "references": [
+    {
+      "role": "edit-target",
+      "source": "Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_station_home_master_v2.png",
+      "source_sha256": "f5e8ea6da6865d71e526818a23700c6d980ee6399e37d084bf53e4f003387f73",
+      "source_box": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Reconstruction-vht3j4jm/book-edit-target.jpg",
+      "upload_dimensions": [
+        1400,
+        788
+      ],
+      "upload_bytes": 465887,
+      "upload_sha256": "5f5464f382f2d63c519485dbe6538cd5ac75315d2dec7158d6a5b11871c7383b"
+    },
+    {
+      "role": "white-dress-identity",
+      "source": "Art/love-intimate-outfit-2026-11-13/masters/eleanor_love_intimate_master_v1.png",
+      "source_sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+      "source_box": [
+        28,
+        0,
+        1204,
+        1277
+      ],
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Reconstruction-vht3j4jm/book-white-dress-identity.jpg",
+      "upload_dimensions": [
+        820,
+        890
+      ],
+      "upload_bytes": 251036,
+      "upload_sha256": "40be9684560237c832687a1d6bcc37b034891fb7c202e89121cf15f4aeee261a"
+    },
+    {
+      "role": "household-scale-and-materials",
+      "source": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_half_glass_v2_master.png",
+      "source_sha256": "43b4fdd0b24a78239b72c9d80a96db32115c371f13486f9150c34ee07ecebca8",
+      "source_box": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Reconstruction-vht3j4jm/book-household-scale-and-materials.jpg",
+      "upload_dimensions": [
+        980,
+        552
+      ],
+      "upload_bytes": 218606,
+      "upload_sha256": "18d8b74a31f09b519844f91256fc80cc94ead8e5bd0e2ccbfcc4f5d81ee25737"
+    }
+  ],
+  "estimated_request_bytes": 1297376,
+  "cleanup_reference": {
+    "role": "book reconstruction edit target",
+    "source": "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-17d8672c-d746-44c5-a54a-c075f0371a25.png",
+    "source_sha256": "4af46566d5cfd05c778a4ac922cf7c6da5c4a31e1f8cf7861f637626e1aa6538",
+    "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-CG-Book-Cleanup-ezs7gf0f/book-edit-target.jpg",
+    "upload_dimensions": [
+      1450,
+      816
+    ],
+    "upload_bytes": 442352,
+    "upload_sha256": "1b0119f55700e43667fc0948b8ef11e51962e8f377264cd702806fae270d5cbb"
+  }
+}

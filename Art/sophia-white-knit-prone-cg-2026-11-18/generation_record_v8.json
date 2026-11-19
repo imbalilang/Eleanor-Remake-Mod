@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image editing",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_downward_pose_master_v8.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "86302cfc85231bcaec4f63591f8868b337d851bce7949f7eff4ad48a6aca7cfc",
+  "prompt": "prompt_v8.txt",
+  "references": "references_v8.json",
+  "review": "Checked raised diagonal torso, near arm reaching back to the thigh, only one visible hand, downward head and gaze, and continuous white tights separate from the knitted hem."
+}

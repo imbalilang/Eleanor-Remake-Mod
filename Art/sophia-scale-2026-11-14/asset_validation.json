@@ -1,0 +1,221 @@
+{
+  "factor": 1.15,
+  "native_eye_anchor": [
+    145.0,
+    115.0
+  ],
+  "transforms": {
+    "sophia": {
+      "source_size": [
+        1036,
+        1518
+      ],
+      "clean_bbox": [
+        66,
+        0,
+        962,
+        1518
+      ],
+      "parameters": {
+        "visible_height": 187.3434146341463,
+        "centre_x": 144.3829268292683,
+        "bottom_exclusive": 259.0121951219512,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": false,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.12341463414634145,
+        "tx": 80.9478048780488,
+        "ty": 71.6687804878049
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 0,
+      "detail_pixels": 4307,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        93,
+        73,
+        196,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 5864
+    },
+    "sophia_home": {
+      "source_size": [
+        963,
+        1633
+      ],
+      "clean_bbox": [
+        11,
+        7,
+        946,
+        1633
+      ],
+      "parameters": {
+        "visible_height": 188.70550458715596,
+        "centre_x": 148.1915137614679,
+        "bottom_exclusive": 261.38990825688074,
+        "sampling_canvas": [
+          288,
+          211
+        ],
+        "add_top_row": true,
+        "coverage_threshold": 0.35,
+        "magenta_key": false,
+        "fringe": false,
+        "detail": true,
+        "bleed": true
+      },
+      "transform": {
+        "s": 0.11605504587155963,
+        "tx": 92.6591743119266,
+        "ty": 71.87201834862387
+      },
+      "keying_counts": {
+        "strong": 0,
+        "weak_near_strong": 0,
+        "residual_edge": 0
+      },
+      "source_fringe_pixels": 0,
+      "detail_pixels": 3261,
+      "target_fringe_pixels": 0,
+      "output_size": [
+        288,
+        212
+      ],
+      "output_bbox": [
+        100,
+        74,
+        198,
+        212
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_colours": 4447
+    }
+  },
+  "files": {
+    "Textures/Items/er_portrait_mother_female_beauty.png": {
+      "previous_sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20",
+      "output_sha256": "3a27a5a72cf7f64f1ee24c8c5c2567548ed689ac3d581129ae34d9b49c02194c"
+    },
+    "Textures/Items/er_expr_sophia_serious.png": {
+      "previous_sha256": "a24756c52fd03e23cf10b3eba2373da1105c2d0b67c7e8e6cc86729d3a6c06f3",
+      "output_sha256": "8d3c0f1e26d4da982ae8521046e399eeae731a750eeb24acf85951fceb4f2c0b",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_smile.png": {
+      "previous_sha256": "67e2209c757d9b7b1d2346f10c3b499b6ec914bff256cefb889c3356a7d56834",
+      "output_sha256": "6303d95ecbd094a70ba7de5c3ae75cf8f6250f3e85e16e1c6e39e488e9c0da34",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_soft.png": {
+      "previous_sha256": "ca34cba2777330eabe86939c3bb82b43bd67186de0761c9ad6a7691be29e5edc",
+      "output_sha256": "9beff92d2271d6b300694ae63f439316c33e82d06b9629e7112a49b875abb290",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_sad.png": {
+      "previous_sha256": "d2392635099936777e933e0861a0ef3f078577965d1b11865c77d132a1374e95",
+      "output_sha256": "fff054b7af25b2e1fcf14a00deb0aaef68c027ee91295c9b82495949e75820e0",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_hurt.png": {
+      "previous_sha256": "57455783a0155a908f9dbc405f4d88b3279855838c1b14b1dd074cc58a268f37",
+      "output_sha256": "a0b8fe498bb537a2b699697610d3172a0774d9e2be6d0e062cb1e111b68741f2",
+      "changed_facial_pixels": 697
+    },
+    "Textures/Items/er_expr_sophia_angry.png": {
+      "previous_sha256": "9166b1b30b03bb4dbdaf952d2efad8c4dec0928bde2f5424f5af68a6956baeec",
+      "output_sha256": "f866777cef182915c603624137ea5f6dc5a1c53191a3c837543e851f95cce881",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_shy.png": {
+      "previous_sha256": "3418de264a67d15b67ccef49238596d40bdd7de84a610f80a11bc7ef16f879e1",
+      "output_sha256": "f5bcc48ba92a2133cd0f2e881d08a2cf156d714a866b3397170111cde2aef0cf",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_determined.png": {
+      "previous_sha256": "0776e1c75ab1d7054873bfbd55c9cb422ca221272f852b3611fb6743355af906",
+      "output_sha256": "b8a2ba7dbd25d4f9e7ed4faf3a1b2e1de5d6f83d4057e28b8e76824b3b048d84",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_expr_sophia_tired.png": {
+      "previous_sha256": "dda1f8465c258e9d1b86029c05f115ac5ec2154a74f3e26cdcbffa3887efbe63",
+      "output_sha256": "78604fecbbab8b715844c840f2c34755327e3df3456f2b8919d98bfadcc2fa17",
+      "changed_facial_pixels": 698
+    },
+    "Textures/Items/er_portrait_mother_home_female_beauty.png": {
+      "previous_sha256": "a97cc26ea6a28690351c8257dc9d9f7ebb3d4bf83c536100aed3798aefb290b8",
+      "output_sha256": "ba9025261654a1a242ae42e62ac3d1e468abe7b53bd355fbf32b0af49d988e4a"
+    },
+    "Textures/Items/er_expr_sophia_home_serious.png": {
+      "previous_sha256": "4099aa9d92aab0ec235fb9c4d907784ae9ff2cbb241820d71105c5a38e15814f",
+      "output_sha256": "70cc12c8f7a9626c799184ee8f3d751241a38b69c956e628c93f00a26b071d90",
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_smile.png": {
+      "previous_sha256": "dd48c8a475b5d21686c3ba67db90c4623ad9a27c0c7148a3bf1348f8fab95f37",
+      "output_sha256": "12420817095f335c20b1d68d80398120be5ba76fb9b5e179582c0c55fb7d3a95",
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_soft.png": {
+      "previous_sha256": "48657fae5b2497526a027680304679d56fb15ced7d54e4698fed7df686f10602",
+      "output_sha256": "57a36585333ec131469896ccd23e41a4e48bbfdbc22ce422281c62ac8c1deb0d",
+      "changed_facial_pixels": 707
+    },
+    "Textures/Items/er_expr_sophia_home_sad.png": {
+      "previous_sha256": "5f2b31e5a438ce907d826bd0ecf7bddc3ad9290f3731601e641e8809335c4b72",
+      "output_sha256": "35604539964c1b53d40cb99ad1a0cb389a897b8a7149a735c182fd392919a183",
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_hurt.png": {
+      "previous_sha256": "db6398555c2556ce1b0ca9c3da4cbe2e6d508a439b66510d2a1ae9679786588a",
+      "output_sha256": "5248003aeb7d90b7103f42f233191c798cc0b9d981f0600bb7de1f01548f4ba0",
+      "changed_facial_pixels": 709
+    },
+    "Textures/Items/er_expr_sophia_home_angry.png": {
+      "previous_sha256": "20faedfc0daab71d9490b97f61881f9ac40ec963b460bead3ce8063ed7c29ea1",
+      "output_sha256": "0af45793a24dcf7477297f64bd25fa20aca043d96cbacd543320180b8766dae5",
+      "changed_facial_pixels": 709
+    },
+    "Textures/Items/er_expr_sophia_home_shy.png": {
+      "previous_sha256": "edaa5a5fe5b2326eb418c4e47aef9e310e411ba701946053ec6acc502a838efa",
+      "output_sha256": "7e6a6439aefc1d2bfd5eb599de9cb1193eeeefdadf33b9fd2db88095cfd08dee",
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_determined.png": {
+      "previous_sha256": "967e92d8fb62e581a19b908cea72278df45b34e5b7c3be6b3b15445ac9dd1e12",
+      "output_sha256": "f240c0e89a042ade81c6ef0711ca8ce99ded66c83cee0fe06680c5a92ea22979",
+      "changed_facial_pixels": 707
+    },
+    "Textures/Items/er_expr_sophia_home_tired.png": {
+      "previous_sha256": "9fa47a37f5df142a127f6e4df9e4fe249eac443e5e24f3cb092756961dbf4493",
+      "output_sha256": "07dcbc7f0954c1086361d48f04a487e0c4de689c60f5f45f6d782f21ff2f7f7c",
+      "changed_facial_pixels": 710
+    }
+  },
+  "workspace_installed": true,
+  "in_game_verified": false
+}

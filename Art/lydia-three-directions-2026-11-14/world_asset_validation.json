@@ -1,0 +1,281 @@
+{
+  "status": "art candidates",
+  "references": "world_references.json",
+  "target_eye_midpoint": [
+    143,
+    115
+  ],
+  "target_chin_y": 137,
+  "anchor_method": "visual estimate",
+  "comparison_bases": [
+    {
+      "file": "Textures/Items/cp_portrait_eleanor1.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0"
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_female_beauty.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20"
+    }
+  ],
+  "candidates": {
+    "navia": {
+      "master": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_navia_upper_level.png",
+        "size": [
+          1230,
+          1279
+        ],
+        "mode": "RGBA",
+        "sha256": "3f5880096772b59859d5b236e5dc8847fa03ff146d3a75b6067054fa467ca8d5"
+      },
+      "portrait": {
+        "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_navia_upper_level.png",
+        "size": [
+          288,
+          212
+        ],
+        "mode": "RGBA",
+        "sha256": "bc0eee02f665e92f9fc50db959709b96e9c50cc9cc80e1a0fe2265a09dbab2c5"
+      },
+      "prompt": "Art/lydia-three-directions-2026-11-14/prompts/navia-upper-level.txt",
+      "prompt_sha256": "27de0662d89a7a7dbc236ffcd777ffaf95abf73384d5edc43c9a3d58047df62b",
+      "eye_midpoint": [
+        630,
+        396
+      ],
+      "chin_y": 598,
+      "sampling_bottom_edge_extension_source_px": 8,
+      "pipeline": {
+        "source_size": [
+          1230,
+          1287
+        ],
+        "clean_bbox": [
+          122,
+          0,
+          1092,
+          1287
+        ],
+        "parameters": {
+          "visible_height": 140.16831683168317,
+          "centre_x": 140.4950495049505,
+          "bottom_exclusive": 211.03960396039605,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.10891089108910891,
+          "tx": 74.38613861386138,
+          "ty": 70.87128712871288
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 4588,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          88,
+          72,
+          193,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 6171
+      }
+    },
+    "isabella": {
+      "master": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_isabella_upper_level.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "sha256": "d0f5574fc6d69a3425c7514d76a45e4f0705b3f00a19e62adab986e343830d5b"
+      },
+      "portrait": {
+        "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_isabella_upper_level.png",
+        "size": [
+          288,
+          212
+        ],
+        "mode": "RGBA",
+        "sha256": "71ce86f8a0538448e5a592ee28fb41d4a62ea69fa4147a6e1bd44c21df8c802f"
+      },
+      "prompt": "Art/lydia-three-directions-2026-11-14/prompts/isabella-upper-level.txt",
+      "prompt_sha256": "01e5ff0386c9fb36338f00638ef907094e13adff09577adec1913a5597cbf315",
+      "eye_midpoint": [
+        545,
+        335
+      ],
+      "chin_y": 556,
+      "sampling_bottom_edge_extension_source_px": 0,
+      "pipeline": {
+        "source_size": [
+          1086,
+          1448
+        ],
+        "clean_bbox": [
+          111,
+          3,
+          976,
+          1448
+        ],
+        "parameters": {
+          "visible_height": 143.84615384615384,
+          "centre_x": 142.85067873303166,
+          "bottom_exclusive": 224.79638009049773,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.09954751131221719,
+          "tx": 88.74660633484162,
+          "ty": 80.65158371040724
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 2414,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          103,
+          82,
+          184,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 3264
+      }
+    },
+    "cattleya": {
+      "master": {
+        "file": "Art/lydia-three-directions-2026-11-14/masters/lydia_cattleya_upper_level.png",
+        "size": [
+          1230,
+          1279
+        ],
+        "mode": "RGBA",
+        "sha256": "ec92bd00054796fcaddc566dfabd38774fc4e4dffedbfe7eadc6dd25c0eef37c"
+      },
+      "portrait": {
+        "file": "Art/lydia-three-directions-2026-11-14/portraits/er_portrait_lydia_cattleya_upper_level.png",
+        "size": [
+          288,
+          212
+        ],
+        "mode": "RGBA",
+        "sha256": "21b033a10725cb4fc1e05674f3b4d7baac3d616d0742131ab0b0d60f83c177c4"
+      },
+      "prompt": "Art/lydia-three-directions-2026-11-14/prompts/cattleya-upper-level.txt",
+      "prompt_sha256": "b36c3aec6caa823579b01c0702de853bb19231733284f42bf17fdaf5ad21463d",
+      "eye_midpoint": [
+        555,
+        339
+      ],
+      "chin_y": 555,
+      "sampling_bottom_edge_extension_source_px": 13,
+      "pipeline": {
+        "source_size": [
+          1230,
+          1292
+        ],
+        "clean_bbox": [
+          120,
+          4,
+          1047,
+          1292
+        ],
+        "parameters": {
+          "visible_height": 131.1851851851852,
+          "centre_x": 145.90277777777777,
+          "bottom_exclusive": 211.0648148148148,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": true,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.10185185185185186,
+          "tx": 86.47222222222221,
+          "ty": 79.4722222222222
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 3727,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          99,
+          81,
+          193,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 5166
+      }
+    }
+  }
+}

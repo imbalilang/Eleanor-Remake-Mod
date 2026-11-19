@@ -1,0 +1,35 @@
+{
+  "references": [
+    {
+      "role": "current CG for face, lighting, costume color and room",
+      "source": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_closeup_master_v3.png",
+      "sha256": "6882371da3e247f6709b9042327fafe53c1b48ffd1cad9e5e419ad5f11c7ee26",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Sophia-Knit-Raised-Revision-9c51p3uo/reference-1.jpg",
+      "size": [
+        1330,
+        749
+      ],
+      "bytes": 448528,
+      "upload_sha256": "038d4a12a9dd410ddcb7760726dcb86549d5fff41f8fb158c43bcfbd642a4bcd"
+    },
+    {
+      "role": "single-palm stance and bend of the upper body",
+      "source": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_kneeling_master_v2.png",
+      "sha256": "31a54ddb98cdcf3c78565dde49d58435a167bb1e8944fe6060ef5241afd95db9",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Sophia-Knit-Raised-Revision-9c51p3uo/reference-2.jpg",
+      "size": [
+        1330,
+        749
+      ],
+      "bytes": 392507,
+      "upload_sha256": "4c50e036eacf625dd3eb5cf21213564c2215e52eb8921756f74ea3458d1f06aa"
+    }
+  ],
+  "user_reference": {
+    "role": "user attachment for framing and separate white fitted pants",
+    "source": "C:/Users/ADMINI~1/AppData/Local/Temp/codex-clipboard-c258ec05-7bf5-42e3-ab2e-8b4db5a7094f.png",
+    "sha256": "54e148542b726c86b7fdfd452d2760b46b9c950025e9853851c603a387bf2b3b",
+    "use": "consulted for the composition and wardrobe directions"
+  },
+  "estimated_request_bytes": 1171384
+}

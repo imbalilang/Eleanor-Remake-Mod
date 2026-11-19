@@ -1,0 +1,41 @@
+{
+  "references": [
+    {
+      "role": "sophia-formal-identity",
+      "source": "B:\\Eleanor Story Expand\\Art\\sophia-scale-2026-11-14\\head-study\\masters\\sophia_head_study.png",
+      "source_sha256": "505f22ef9181f67ab8f41f7e0c79e08f1a41a4e3da0882e114f34ef899188390",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Sophia-Formal-Bridal-Carry-CG-20261118\\sophia-formal-identity.jpg",
+      "dimensions": [
+        688,
+        1150
+      ],
+      "bytes": 240973,
+      "sha256": "5be371b90343f4dad5f7189a7f0e667fa45290c83ad1261076f1f2d760015840"
+    },
+    {
+      "role": "bridal-carry-first-person-composition",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-fe454fe4-297a-44c3-a3fe-b9d0d6d4a45b.jpg",
+      "source_sha256": "049a363096426ce544cec4689fef83c78002b708d0d43ad0cbd710751f114df6",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Sophia-Formal-Bridal-Carry-CG-20261118\\bridal-carry-first-person-composition.jpg",
+      "dimensions": [
+        1300,
+        731
+      ],
+      "bytes": 233650,
+      "sha256": "0ca00b70da17a2da8bc46b842f2b1177e5e581b018a0390f6739bba1a52cc7cf"
+    },
+    {
+      "role": "lower-level-street-environment",
+      "source": "B:\\Eleanor Story Expand\\Textures\\Items\\er_event_revolution_embrace_cg.png",
+      "source_sha256": "195521fd28dc7d3f8406dd51aa7d8ce9015ccb8e113326dd23336c7784753545",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Sophia-Formal-Bridal-Carry-CG-20261118\\lower-level-street-environment.jpg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 292803,
+      "sha256": "3eebeab1fd5c9bc02f04371b540c8e781323488445b9895e30cb7a339f07f1d8"
+    }
+  ],
+  "estimated_request_bytes": 1073240
+}

@@ -1,0 +1,32 @@
+{
+  "content_generation": "passed",
+  "chinese_english_row_mapping": "passed",
+  "project_content_check": "passed",
+  "route_map_and_site_check": "passed",
+  "compile": {
+    "command": "dist/dotnet-sdk/dotnet.exe build EleanorRomance.csproj -c Release --no-restore",
+    "result": "passed",
+    "warnings": 0,
+    "errors": 0
+  },
+  "runtime_check": {
+    "command": "tools/test_runtime_flows.ps1 -Managed <installed game Managed directory> -Rewrite",
+    "result": "partial; interrupted by null reference",
+    "passed_before_failure": [
+      "native trade completion paths",
+      "bracelet factory and inventory migration",
+      "overpayment classification",
+      "common trade chapters, bargaining, affection and progression",
+      "native 50-credit aid and cash-specific dialogue",
+      "chapter 6 ask-only refusal completes without aid",
+      "native warning gifts and inventory retry"
+    ],
+    "failure_location": "tools/test_runtime_flows.ps1:761",
+    "failure_call": "CheckStoryLineEleanor",
+    "same_failure_reproduced_with_unmodified_1_13_release_dll": true,
+    "later_runtime_checks_executed": false
+  },
+  "in_game_playthrough": false,
+  "new_external_model_calls": 0,
+  "deployed_or_published_by_this_task": false
+}

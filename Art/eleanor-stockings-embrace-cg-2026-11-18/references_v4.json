@@ -1,0 +1,46 @@
+{
+  "final_edit_reference": {
+    "role": "edit target",
+    "source": "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-64a658c5-e0bc-4f03-b8d4-6496fca99e4a.png",
+    "source_sha256": "d656e138d55c59bfa3d5b98589fc4ff02913aef0743830d46335440d00b83695",
+    "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Stockings-Embrace-V3-ax8qm18s/v3-edit-target.jpg",
+    "size": [
+      1260,
+      709
+    ],
+    "bytes": 402752,
+    "upload_sha256": "cc08baa5a9ce84127f7e0ba7b892286f7757e48582e9f7a67791f7f2a9f2be0b"
+  },
+  "estimated_final_edit_request_bytes": 587004,
+  "preceding_composition": {
+    "directory": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Stockings-Embrace-V3-ax8qm18s",
+    "references": [
+      {
+        "role": "pose-and-scene-edit-target",
+        "source": "B:/Eleanor Story Expand/Art/eleanor-stockings-embrace-cg-2026-11-18/eleanor_stockings_embrace_master_v2.png",
+        "source_sha256": "90602b0bf078ed1abc6917ce7626c7f73a02c79475d270fef0004f9a4771fe3a",
+        "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Stockings-Embrace-V3-ax8qm18s/pose-and-scene-edit-target.jpg",
+        "size": [
+          1260,
+          709
+        ],
+        "bytes": 375030,
+        "upload_sha256": "88caa69a1d6c1d62aa534de19d5512d432eba1459f4ee237c35d8de1cbdd6971"
+      },
+      {
+        "role": "identity-and-outfit",
+        "source": "B:/Eleanor Story Expand/Art/love-intimate-outfit-2026-11-13/masters/eleanor_love_intimate_master_v1.png",
+        "source_sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4",
+        "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Stockings-Embrace-V3-ax8qm18s/identity-and-outfit.jpg",
+        "size": [
+          780,
+          847
+        ],
+        "bytes": 231800,
+        "upload_sha256": "1ed123fe68004efa0911c1cfccf085b98eafa9e2c20d8dc3588aaa7df5decda5"
+      }
+    ],
+    "estimated_request_bytes": 859108
+  },
+  "preceding_composition_prompt": "Recompose reference image 1 into a new 16:9 narrative illustration of a quiet, affectionate reunion hug on a bed. Reference 1 provides the established embrace, overlapping-leg pose and room; reference 2 anchors the adult OC Eleanor's face and white ruffled dress. Draw a new angle, not a zoom on the same camera.\n\nPrimary requirement: the player should take up visibly less space than in image 1. Move the camera around to Eleanor's side of the bed, diagonally above and beside her pillow, looking along her body. Eleanor lies diagonally on her back on the bed with her head against a cream pillow at upper left; her face in relaxed three-quarter view and spreading copper-orange curls remain prominent. She turns toward the adult partner who is leaning diagonally across her in a close embrace. Her arms circle the partner's shoulders. Eye and mouth expression: her soft green eyes and a small relieved closed-mouth smile; a touch of warm blush. Gold drop earrings, adult facial proportions and the white opaque off-shoulder ruffled dress from reference 2.\n\nShow the partner only as an oblique and foreshortened section of shoulder and upper-to-middle back in a simple charcoal shirt, just enough to read the embrace and leg contact. The partner's head is outside the top edge, the forebody/arms are hidden by the embrace and camera angle, and the hips and legs are entirely beyond the lower-right edge. Do not show a large rectangular back or a dark foreground body descending across the bed. Eleanor's curls, face, arms, white skirt and leg shapes carry the picture. The uncovered visible charcoal torso should be around one fifth of the frame or less.\n\nMaintain the relationship of the lower legs from image 1 and from the art direction: both knees naturally bent on opposite sides of the partner; both calves, in matte white stockings, overlap in an X over the visible back, one naturally resting over the other. Their crossing belongs against the shirt, and each leg must have its own continuous knee–calf–ankle–foot shape. Both complete white closed-toe high-heeled pumps are visible with separation from the frame edges. Set the overlap and shoes at right and lower right, with enough room for clean silhouettes. Keep the white dress skirt arranged naturally and draped over her lap. The gesture and her face tell the story together. Depict a fully clothed, tender embrace.\n\nThe compact space-station bedroom uses warm bedside light, matte violet-gray metal wall panels, an ordinary headboard and soft rumpled bedding. One composition, detailed illustrated game-CG rendering consistent with reference 2, accurate shoulders, elbows and hands, coherent camera perspective, no captions, UI, lettering, or watermark."
+}

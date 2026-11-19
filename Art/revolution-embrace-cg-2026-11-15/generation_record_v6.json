@@ -1,0 +1,26 @@
+{
+  "status": "workspace art candidate",
+  "sourceSize": [
+    1672,
+    941
+  ],
+  "master": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_kiosk_shoulder_master_v6.png",
+  "masterSha256": "813687a5033f6047bb0adf0fa23673b91da0ac09d05bdadcfa719e95c750c1c5",
+  "prompt": "prompt_v6.txt",
+  "references": "references_v6.json",
+  "gameCandidate": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_kiosk_shoulder_game_v6.png",
+  "gameSize": [
+    1664,
+    936
+  ],
+  "gameSha256": "01238b7cef089ddb62495b78555d57b7edc46e7c1932c5234a72b19fb5d6dfec",
+  "exportCrop": [
+    0.0,
+    0.25,
+    1672.0,
+    940.75
+  ],
+  "exportMethod": "uniform exact area sampling",
+  "activeRuntimeKey": "er_event_revolution_embrace_cg",
+  "review": "Eleanor visibly rests her forehead against the player's cropped shoulder. Closed sales hatch, tracks and outside counter locate the moment at the pawn kiosk. Reviewed vest, face rendering and dawn lighting."
+}

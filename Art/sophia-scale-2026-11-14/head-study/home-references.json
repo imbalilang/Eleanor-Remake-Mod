@@ -1,0 +1,47 @@
+{
+  "references": [
+    {
+      "role": "Primary edit target, approved Sophia knit outfit and tilted pose",
+      "source": {
+        "file": "Art/sophia-ruan-mei-home-2026-11-13/masters/sophia_white_knit_relaxed_v2_master.png",
+        "size": [
+          963,
+          1633
+        ],
+        "bytes": 2139710,
+        "sha256": "2663c70b8b71faa81517559b6c998e9c9e1fad877df10f910b1dc012343f507b"
+      },
+      "upload": {
+        "file": "Art/sophia-scale-2026-11-14/head-study/references_local/home-edit.png",
+        "size": [
+          649,
+          1100
+        ],
+        "bytes": 902732,
+        "sha256": "5c4bd99f6889862a135b4af67c8fc703e8fbd1dc9eb13d3907aad4f72a530ff9"
+      }
+    },
+    {
+      "role": "New Sophia daily portrait: proportions, features and shading",
+      "source": {
+        "file": "Art/sophia-scale-2026-11-14/head-study/masters/sophia_head_study.png",
+        "size": [
+          977,
+          1610
+        ],
+        "bytes": 2081398,
+        "sha256": "505f22ef9181f67ab8f41f7e0c79e08f1a41a4e3da0882e114f34ef899188390"
+      },
+      "upload": {
+        "file": "Art/sophia-scale-2026-11-14/head-study/references_local/head-style.png",
+        "size": [
+          700,
+          760
+        ],
+        "bytes": 659144,
+        "sha256": "91d71afc618a5807403b57479d38d08fbcc4f62287129fa6c28dfd75410c68ea"
+      }
+    }
+  ],
+  "estimated_request_bytes": 2148040
+}

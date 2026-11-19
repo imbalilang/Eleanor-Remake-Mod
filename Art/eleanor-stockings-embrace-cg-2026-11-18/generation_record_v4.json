@@ -1,0 +1,14 @@
+{
+  "status": "art candidate",
+  "method": "built-in image generation and editing",
+  "master": "eleanor_stockings_embrace_master_v4.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "ae47c9052a255344111dbdb3bbf84aded1b4426ab9a303f7d2a4210fa810e5e5",
+  "prompt": "prompt_v4.txt",
+  "references": "references_v4.json",
+  "review": "Verified the side view, Eleanor reclining and embracing the player, crossed white-stocking calves over the back, and both white pumps in frame. Visible player area reduced relative to v2, with just enough collar and nape to identify a person."
+}

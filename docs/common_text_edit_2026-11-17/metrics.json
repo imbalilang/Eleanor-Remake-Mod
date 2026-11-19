@@ -1,0 +1,235 @@
+{
+  "definition": "整章内容行及字符含互斥、兼容块；不是一次来访长度，字符含标点和行内标签。",
+  "chapters": [
+    {
+      "chapter": "c01",
+      "rows_before": 34,
+      "rows_after": 32,
+      "characters_before": 677,
+      "characters_after": 628,
+      "deleted": 2,
+      "rewritten": 2,
+      "decision": "局部优化"
+    },
+    {
+      "chapter": "c02",
+      "rows_before": 29,
+      "rows_after": 29,
+      "characters_before": 539,
+      "characters_after": 521,
+      "deleted": 0,
+      "rewritten": 2,
+      "decision": "局部优化"
+    },
+    {
+      "chapter": "c03",
+      "rows_before": 34,
+      "rows_after": 34,
+      "characters_before": 581,
+      "characters_after": 577,
+      "deleted": 0,
+      "rewritten": 1,
+      "decision": "轻修"
+    },
+    {
+      "chapter": "c04",
+      "rows_before": 64,
+      "rows_after": 63,
+      "characters_before": 1103,
+      "characters_after": 1056,
+      "deleted": 1,
+      "rewritten": 3,
+      "decision": "局部优化"
+    },
+    {
+      "chapter": "c05",
+      "rows_before": 45,
+      "rows_after": 42,
+      "characters_before": 694,
+      "characters_after": 642,
+      "deleted": 3,
+      "rewritten": 2,
+      "decision": "局部优化"
+    },
+    {
+      "chapter": "c06",
+      "rows_before": 15,
+      "rows_after": 15,
+      "characters_before": 210,
+      "characters_after": 210,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "跳过：原作主干"
+    },
+    {
+      "chapter": "c07",
+      "rows_before": 15,
+      "rows_after": 15,
+      "characters_before": 243,
+      "characters_after": 243,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "跳过：原作主干"
+    },
+    {
+      "chapter": "c08",
+      "rows_before": 24,
+      "rows_after": 21,
+      "characters_before": 323,
+      "characters_after": 266,
+      "deleted": 3,
+      "rewritten": 5,
+      "decision": "重点优化"
+    },
+    {
+      "chapter": "c09",
+      "rows_before": 64,
+      "rows_after": 60,
+      "characters_before": 781,
+      "characters_after": 719,
+      "deleted": 4,
+      "rewritten": 2,
+      "decision": "重点优化"
+    },
+    {
+      "chapter": "c10",
+      "rows_before": 99,
+      "rows_after": 99,
+      "characters_before": 1130,
+      "characters_after": 1130,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "保留：已认可稿"
+    },
+    {
+      "chapter": "c11",
+      "rows_before": 25,
+      "rows_after": 25,
+      "characters_before": 394,
+      "characters_after": 386,
+      "deleted": 0,
+      "rewritten": 1,
+      "decision": "轻修"
+    },
+    {
+      "chapter": "c12",
+      "rows_before": 38,
+      "rows_after": 37,
+      "characters_before": 609,
+      "characters_after": 583,
+      "deleted": 1,
+      "rewritten": 3,
+      "decision": "重点优化"
+    },
+    {
+      "chapter": "c13",
+      "rows_before": 34,
+      "rows_after": 33,
+      "characters_before": 489,
+      "characters_after": 452,
+      "deleted": 1,
+      "rewritten": 0,
+      "decision": "轻度删减"
+    },
+    {
+      "chapter": "c14",
+      "rows_before": 74,
+      "rows_after": 72,
+      "characters_before": 1258,
+      "characters_after": 1214,
+      "deleted": 2,
+      "rewritten": 4,
+      "decision": "重点优化"
+    },
+    {
+      "chapter": "c15",
+      "rows_before": 22,
+      "rows_after": 22,
+      "characters_before": 435,
+      "characters_after": 435,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "跳过：兼容保留"
+    },
+    {
+      "chapter": "c16",
+      "rows_before": 21,
+      "rows_after": 21,
+      "characters_before": 549,
+      "characters_after": 549,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "跳过：兼容保留"
+    },
+    {
+      "chapter": "c17",
+      "rows_before": 43,
+      "rows_after": 43,
+      "characters_before": 861,
+      "characters_after": 849,
+      "deleted": 0,
+      "rewritten": 1,
+      "decision": "轻修"
+    },
+    {
+      "chapter": "c18",
+      "rows_before": 44,
+      "rows_after": 44,
+      "characters_before": 789,
+      "characters_after": 780,
+      "deleted": 0,
+      "rewritten": 1,
+      "decision": "轻修"
+    },
+    {
+      "chapter": "c19",
+      "rows_before": 71,
+      "rows_after": 71,
+      "characters_before": 1187,
+      "characters_after": 1166,
+      "deleted": 0,
+      "rewritten": 2,
+      "decision": "仅修未告白朋友段"
+    },
+    {
+      "chapter": "c20",
+      "rows_before": 12,
+      "rows_after": 12,
+      "characters_before": 208,
+      "characters_after": 208,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "跳过：文本有效"
+    },
+    {
+      "chapter": "c21",
+      "rows_before": 19,
+      "rows_after": 18,
+      "characters_before": 411,
+      "characters_after": 386,
+      "deleted": 1,
+      "rewritten": 2,
+      "decision": "局部优化"
+    },
+    {
+      "chapter": "c22",
+      "rows_before": 22,
+      "rows_after": 22,
+      "characters_before": 484,
+      "characters_after": 484,
+      "deleted": 0,
+      "rewritten": 0,
+      "decision": "跳过：文本有效"
+    },
+    {
+      "chapter": "c23",
+      "rows_before": 15,
+      "rows_after": 14,
+      "characters_before": 237,
+      "characters_after": 220,
+      "deleted": 1,
+      "rewritten": 1,
+      "decision": "局部优化"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "installed_path": "D:/Program Files (x86)/Steam/steamapps/workshop/content/4348910/3834588749",
+  "backup": "dist/sophia-head-art-local-20261114-040633-744288",
+  "files": {
+    "Textures/Items/er_portrait_mother_female_beauty.png": {
+      "sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "workspace_before_sha256": "3a27a5a72cf7f64f1ee24c8c5c2567548ed689ac3d581129ae34d9b49c02194c",
+      "installed_before_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364"
+    },
+    "Textures/Items/er_expr_sophia_serious.png": {
+      "sha256": "e7492f5b8032e2c92f6bd22911c47bdfef62c30ac2b8c98ac30a386bfb98f2d9",
+      "workspace_before_sha256": "8d3c0f1e26d4da982ae8521046e399eeae731a750eeb24acf85951fceb4f2c0b",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_smile.png": {
+      "sha256": "5855533568c644ff690a11e196268c01399dad78295293e1bb45067fb1546e61",
+      "workspace_before_sha256": "6303d95ecbd094a70ba7de5c3ae75cf8f6250f3e85e16e1c6e39e488e9c0da34",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_soft.png": {
+      "sha256": "e925e230b78e8c3c4ac1f6480381648520d7df67bf7e97e151be2f0f43b788df",
+      "workspace_before_sha256": "9beff92d2271d6b300694ae63f439316c33e82d06b9629e7112a49b875abb290",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_sad.png": {
+      "sha256": "4210d317457d26df7e78fe3b5ceb9deb9b3f56cf9bb5291eb4b7827c059f965c",
+      "workspace_before_sha256": "fff054b7af25b2e1fcf14a00deb0aaef68c027ee91295c9b82495949e75820e0",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_hurt.png": {
+      "sha256": "40983f6785771121358e99e4f37e43ec74fecbb1ec2ca3913c3dcba0c218635e",
+      "workspace_before_sha256": "a0b8fe498bb537a2b699697610d3172a0774d9e2be6d0e062cb1e111b68741f2",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_angry.png": {
+      "sha256": "3a74f44b143bcc8f4ac97b0863792931b47fe4fe48d5c443f638af57fc157929",
+      "workspace_before_sha256": "f866777cef182915c603624137ea5f6dc5a1c53191a3c837543e851f95cce881",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_shy.png": {
+      "sha256": "74cf1f55e70742a098d9943ff6f7623daaed06de207532772fd6bfa010e508ad",
+      "workspace_before_sha256": "f5bcc48ba92a2133cd0f2e881d08a2cf156d714a866b3397170111cde2aef0cf",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_determined.png": {
+      "sha256": "5b30f447e2ab6d1e65c5ce0d0a4d63d3c4d01e474b027a9b5d2472ef3419c392",
+      "workspace_before_sha256": "b8a2ba7dbd25d4f9e7ed4faf3a1b2e1de5d6f83d4057e28b8e76824b3b048d84",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_tired.png": {
+      "sha256": "e9b2a724e141145b11319790be66322ecf1b2e8cf0a3a2c22e233e837b1e424d",
+      "workspace_before_sha256": "78604fecbbab8b715844c840f2c34755327e3df3456f2b8919d98bfadcc2fa17",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_portrait_mother_home_female_beauty.png": {
+      "sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "workspace_before_sha256": "ba9025261654a1a242ae42e62ac3d1e468abe7b53bd355fbf32b0af49d988e4a",
+      "installed_before_sha256": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44"
+    },
+    "Textures/Items/er_expr_sophia_home_serious.png": {
+      "sha256": "2e84247dbdc77d09d8f3a81a97197c8c3d6a03b8b8e208e7192cd3b4f2ec1d76",
+      "workspace_before_sha256": "70cc12c8f7a9626c799184ee8f3d751241a38b69c956e628c93f00a26b071d90",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_smile.png": {
+      "sha256": "e609aad78bfedc79fd77bbb9535b2b000e37cd158afde8bb3bf0eda8018328bf",
+      "workspace_before_sha256": "12420817095f335c20b1d68d80398120be5ba76fb9b5e179582c0c55fb7d3a95",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_soft.png": {
+      "sha256": "14e3ce91339a3204d2cff469e015e9820326d0fbbffe5241c18256a75643bc66",
+      "workspace_before_sha256": "57a36585333ec131469896ccd23e41a4e48bbfdbc22ce422281c62ac8c1deb0d",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_sad.png": {
+      "sha256": "a760b3739af36aec34973dcf5d2a521e35a230335bbd2d5d7fc22be4df524c38",
+      "workspace_before_sha256": "35604539964c1b53d40cb99ad1a0cb389a897b8a7149a735c182fd392919a183",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_hurt.png": {
+      "sha256": "b658557c95b9c1f97033f9cf586b15a72cab3028bc6c83767b950c704543bba6",
+      "workspace_before_sha256": "5248003aeb7d90b7103f42f233191c798cc0b9d981f0600bb7de1f01548f4ba0",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_angry.png": {
+      "sha256": "e3145a36e7f940adaa89b535bd64811bef1580e27551dd5c0e400fc44a6ab3b6",
+      "workspace_before_sha256": "0af45793a24dcf7477297f64bd25fa20aca043d96cbacd543320180b8766dae5",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_shy.png": {
+      "sha256": "9e2a2ad8980e133507965f92a927b3f8335b8defa718fb289b76cd3591a3bb5d",
+      "workspace_before_sha256": "7e6a6439aefc1d2bfd5eb599de9cb1193eeeefdadf33b9fd2db88095cfd08dee",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_determined.png": {
+      "sha256": "1bcc85144d2ef79d478a0cf61623087bf2ecc83e03bc4e6f31eae96f9ed7dffa",
+      "workspace_before_sha256": "f240c0e89a042ade81c6ef0711ca8ce99ded66c83cee0fe06680c5a92ea22979",
+      "installed_before_sha256": null
+    },
+    "Textures/Items/er_expr_sophia_home_tired.png": {
+      "sha256": "418f8f92580a13c633bb778961f32dd182a78520e8502b186d65af871664c627",
+      "workspace_before_sha256": "07dcbc7f0954c1086361d48f04a487e0c4de689c60f5f45f6d782f21ff2f7f7c",
+      "installed_before_sha256": null
+    }
+  },
+  "in_game_verified": false
+}

@@ -1,0 +1,138 @@
+{
+  "status": "homewear candidate",
+  "tool": "built-in image generation",
+  "reference": "reference.json",
+  "master": {
+    "file": "Art/sophia-ruan-mei-home-2026-11-13/masters/sophia_white_knit_master.png",
+    "size": [
+      963,
+      1633
+    ],
+    "mode": "RGBA",
+    "sha256": "40be1d0d22e20b6bd6b132cb46103bc6ba55cb19197ce5c2786a986ff101cef4"
+  },
+  "portrait": {
+    "file": "Art/sophia-ruan-mei-home-2026-11-13/portraits/er_portrait_mother_home_female_beauty.png",
+    "size": [
+      288,
+      212
+    ],
+    "mode": "RGBA",
+    "sha256": "1b6da9787b538b7be81e85aea16fad3d67ce07f1bf18420f1ba7ab21052a4d7e"
+  },
+  "prompt": "prompts/white-knit.txt",
+  "prompt_sha256": "489d0b1dd3c6395d177296485d7ba66377f959a905c425f1c75cc2e281794c1f",
+  "landmarks": {
+    "method": "visual estimate",
+    "master_eye_midpoint": [
+      489,
+      365
+    ],
+    "master_chin_y": 591,
+    "target_eye_midpoint": [
+      145,
+      115
+    ],
+    "target_chin_y": 137
+  },
+  "source_top_edge_pixels_at_alpha_128": 26,
+  "pipeline": {
+    "source_size": [
+      963,
+      1633
+    ],
+    "clean_bbox": [
+      15,
+      0,
+      938,
+      1633
+    ],
+    "parameters": {
+      "visible_height": 158.9646017699115,
+      "centre_x": 143.78318584070797,
+      "bottom_exclusive": 237.43362831858406,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.09734513274336283,
+      "tx": 97.39823008849558,
+      "ty": 78.46902654867256
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 3071,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      102,
+      79,
+      186,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 3825
+  },
+  "checks": {
+    "blank_top_row": true,
+    "deterministic_pixels": true
+  },
+  "comparison_inputs": [
+    {
+      "file": "Art/sophia-three-directions-2026-11-13/portraits/er_portrait_sophia_ruan-mei.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20"
+    },
+    {
+      "file": "Art/sophia-ruan-mei-home-2026-11-13/portraits/er_portrait_mother_home_female_beauty.png",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "sha256": "1b6da9787b538b7be81e85aea16fad3d67ce07f1bf18420f1ba7ab21052a4d7e"
+    }
+  ],
+  "previews": [
+    {
+      "file": "Art/sophia-ruan-mei-home-2026-11-13/previews/comparison-native.png",
+      "size": [
+        576,
+        238
+      ],
+      "mode": "RGB",
+      "sha256": "aa069ad0a3cef737f0f7603e41cd0e4784812300e9a1b325ac13f82408071e7b"
+    },
+    {
+      "file": "Art/sophia-ruan-mei-home-2026-11-13/previews/comparison-2x.png",
+      "size": [
+        1152,
+        476
+      ],
+      "mode": "RGB",
+      "sha256": "477297a37545451332576963088a8a12aa160b5cca6d78d0ae4bbce2d7b02078"
+    }
+  ]
+}

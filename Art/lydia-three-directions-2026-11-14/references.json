@@ -1,0 +1,46 @@
+{
+  "daily": {
+    "role": "approved daily Lydia, identity, outfit and primary edit target",
+    "source": {
+      "file": "Art/lydia-style-fusion-2026-11-10/approved/lydia_daily_beauty_master.png",
+      "size": [
+        1461,
+        1076
+      ],
+      "bytes": 1224588,
+      "sha256": "fbe5868537ca1d109b193484351c35fa580926d7c75b71428a7b30e8c7032cf5"
+    },
+    "upload": {
+      "file": "Art/lydia-three-directions-2026-11-14/references_local/lydia_daily_edit.png",
+      "size": [
+        882,
+        1050
+      ],
+      "bytes": 1099580,
+      "sha256": "29855ef3586c3304c17ff520406a2f27ba71bead14d5ea9c648f698a56ad8498"
+    },
+    "estimated_request_bytes": 1531644
+  },
+  "date": {
+    "role": "approved date Lydia, identity, outfit and primary edit target",
+    "source": {
+      "file": "Art/lydia-style-fusion-2026-11-10/lydia_date_master_v1.png",
+      "size": [
+        1461,
+        1076
+      ],
+      "bytes": 1274769,
+      "sha256": "e018e082bb7d5f8dab49d65690c3f041b91587944509b2beb29ec41ff2333087"
+    },
+    "upload": {
+      "file": "Art/lydia-three-directions-2026-11-14/references_local/lydia_date_edit.png",
+      "size": [
+        893,
+        1050
+      ],
+      "bytes": 1135838,
+      "sha256": "bbd10d09e17fa8cae545e780071eeb28ec2a2bc6f0eed88d53de91c5a6c467bf"
+    },
+    "estimated_request_bytes": 1579988
+  }
+}

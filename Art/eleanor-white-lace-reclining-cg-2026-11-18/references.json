@@ -1,0 +1,29 @@
+{
+  "references": [
+    {
+      "role": "eleanor-exact-sleepwear",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-9a46de87-70d2-428e-8dd9-830b4017277d.png",
+      "source_sha256": "58bdd468e06026ab179dc61672cbe76c50579b4f8b9be495b1743dcbd1e10cdc",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lace-Reclining-Redo-20261118\\eleanor-exact-sleepwear.jpg",
+      "dimensions": [
+        832,
+        1100
+      ],
+      "bytes": 339227,
+      "sha256": "b66e59ea825594691478187d2496d0b8bf0c5f78507ea99bfa41b7a4c753db6d"
+    },
+    {
+      "role": "side-lying-composition",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-27dfb2b6-35e2-458b-a7d1-7c4437e2fdeb.jpg",
+      "source_sha256": "3ef037a0dadc18731756832584f5da442e4006b929510373adeb73792e70d63e",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lace-Reclining-Redo-20261118\\side-lying-composition.jpg",
+      "dimensions": [
+        1250,
+        701
+      ],
+      "bytes": 172059,
+      "sha256": "a8756f09a42f47f23bee02f93858d82dbc4fef8af4fc82d12ce95938f862eb8a"
+    }
+  ],
+  "estimated_request_bytes": 731716
+}

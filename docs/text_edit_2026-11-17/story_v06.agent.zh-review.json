@@ -1,0 +1,5629 @@
+{
+  "chapters": [
+    {
+      "id": "c01",
+      "number": 1,
+      "title": "不是给上层区开的店",
+      "day": "第23天 · 食品交易",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c01.n001",
+          "chapter": "c01",
+          "scene": "到店与母亲的案子",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "埃莉诺站在交易窗口外，先隔着窗口扫了一遍货架，才走近柜台。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "呵，你们下层区管这种地方叫“商店”？",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "绝了。对没见过世面的井底之蛙来说，大概还算凑合吧。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "喂，那边那个。在回上层区之前，我需要买点吃的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有吃的没？挑点新鲜的，种类多样一点。别全拿营养果糊弄我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "钱不是问题。至少现在还不是。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把一只布袋放在柜台上，袋口折了两折，边角磨得发亮。"
+            },
+            {
+              "speaker": "player",
+              "text": "货架上的，价签都挂着。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "价签……行。字我认得。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她指了一包货。店主拿到柜台上，她的指尖停在封口上，没有撕开。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这包是什么时候进的？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我不是挑剔。他们以挪用公款的罪名监禁了我的母亲。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她可是经营着全空间站最大的水培农场的人。她连换一盏坏灯都要核三遍账。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "荒谬至极。这个空间站有一半的人能吃上饭，都得归功于她！"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在他们连上层区都不让我回。用不了多久，他们就会意识到自己犯了多么愚蠢的错误。"
+            }
+          ]
+        },
+        {
+          "id": "c01.n002",
+          "chapter": "c01",
+          "scene": "选项：问一句她母亲",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她没有接这个话头，视线落回货架上。"
+            }
+          ]
+        },
+        {
+          "id": "c01.n003",
+          "chapter": "c01",
+          "scene": "交易前：她要的货",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "要哪几样，指给我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……哼。也好。省得我说多了，回头还得自己收回去。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这包，还有这个。再来一样能放久的。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "三样东西排成一排。她指尖在最后一样上按了按，换成了更便宜的那包。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b003",
+          "chapter": "c01",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "按正常价格成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "就这个价？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "哼。看来下层区也不全是骗子。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b004",
+          "chapter": "c01",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "明显让利或赠予可食用物品",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你算错了，少收了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我还没落魄到要一个开当铺的来可怜我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "钱我收下。就这一次。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b005",
+          "chapter": "c01",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "明显高价且实际成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "就这么点东西？在上层区都够买两份了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "看得出来。东西是下层区的，价钱倒是上层区的。"
+            }
+          ]
+        },
+        {
+          "id": "c01.b006",
+          "chapter": "c01",
+          "scene": "玩家处理：实际完成食品交易",
+          "label": "没有适合的库存，未成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "什么？连吃的都没有？这也叫商店？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不可理喻……算了，我去别处看看。"
+            }
+          ]
+        },
+        {
+          "id": "c01.n004",
+          "chapter": "c01",
+          "scene": "成交后：钱、名字、还会来",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她数出硬币，一枚一枚扣在柜面上，数目分毫不差。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我叫埃莉诺。我母亲的名字，你迟早会在新闻上看见。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "记不记得住随你。反正我还会来。"
+            }
+          ]
+        },
+        {
+          "id": "c01.n005",
+          "chapter": "c01",
+          "scene": "未成交后：名字、还会来",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我叫埃莉诺。我母亲的名字，你迟早会在新闻上看见。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "记不记得住随你。反正我还会来。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "number": 2,
+      "title": "缺口不在喝水那边",
+      "day": "参考第25天 · 日用品交易",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c02.n001",
+          "chapter": "c02",
+          "scene": "到店与生活用品",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她来到交易窗口前，肩上搭着一条旧布。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我真不敢相信我会被困在这种地方。为什么这种事会发生在我身上？",
+              "expr": "sad"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲那边一点消息都没有，他们也不让我回上面去。我讨厌这下面，这太不公平了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>叹气</i>，你有生活用品吗？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "看来我得在这儿待上一阵子了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "一只水杯、打扫用的东西，再来盏亮堂点的灯。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我在配给站对面找了间还算体面的房间。小是小，好歹没什么异味。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "店主把有缺口的那只杯子放到柜台上。她拿起来，转了半圈。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这只杯子有缺口。完整的在那边，我又不是买不起。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "还是拿便宜的。缺口又不在喝水那边。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "室友说，先修门锁，再考虑窗帘。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她还说，我带的香水够付半个月房租。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "上层区定制款，盖子松，还剩半瓶。下层区一年见不着两回。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "哼。"
+            },
+            {
+              "speaker": "player",
+              "text": "这些，加上灯。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b003",
+          "chapter": "c02",
+          "scene": "玩家处理",
+          "label": "公平成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "跟你刚才说的价钱一样。行，就这些。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b004",
+          "chapter": "c02",
+          "scene": "玩家处理",
+          "label": "实际让利",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "又便宜了？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你对每个客人都这样？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "东西我收下了。"
+            }
+          ]
+        },
+        {
+          "id": "c02.b005",
+          "chapter": "c02",
+          "scene": "玩家处理",
+          "label": "明显宰客",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "同样的东西，你这儿怎么比别处还贵？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我是第一次在下层区过日子，不是不会算数！"
+            }
+          ]
+        },
+        {
+          "id": "c02.b006",
+          "chapter": "c02",
+          "scene": "玩家处理",
+          "label": "未成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "算了，我去别处转转。下层区总不至于只有你一家店。"
+            }
+          ]
+        },
+        {
+          "id": "c02.n002",
+          "chapter": "c02",
+          "scene": "成交后：旧布、邻居、灯",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "旧布摊在柜台上。杯子、肥皂、毛巾一件件码进去，码得齐整。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "隔壁每天晚上都吵架，吵得跟就在我床边一样。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这动静，省得买收音机了。……这笑话真烂。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我真不敢相信，有人一辈子都住在这种地方。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "灯别拿最便宜那种。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不是我怕黑。是我怕黑着看不清账。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她抱起旧布，走前又回头看了一眼柜台上那盏灯。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "number": 3,
+      "title": "你按东西开价",
+      "day": "参考第27天 · 出售家当",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c03.n001",
+          "chapter": "c03",
+          "scene": "她来卖自己的东西",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她来得比开张还早。窗口的卷帘刚升起来，她已经站在外头。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "嘿，我又来了。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我的资金快见底了。他们当初没让我带多少东西出来。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "要是能回到上面，我就能把事情解释清楚。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那样一切都能恢复正常，我也用不着顿顿吃营养果了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "总之，我带了些自己的东西来卖。瓶装水、洗漱用品，还有香水。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "拿的时候轻点，那瓶香水的盖子有些松。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "在这下面过日子，也用不着闻起来像要去赴晚宴。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把瓶子一只只立在柜面上，标签朝外，自己退开半步。"
+            },
+            {
+              "speaker": "player",
+              "text": "这瓶开过。按货算。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这种瓶子，下层区一年见不着两回。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那你接着算。真要一样一样算？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "最近按我的姓算的人，一个信用点都不肯出。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我没有别的家人。只有母亲。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把最末一只瓶子的盖子拧紧，指尖在瓶身上抹了一道。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b003",
+          "chapter": "c03",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "公平收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "比我想的少。不过价是公道价。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好，就这个价。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b004",
+          "chapter": "c03",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "明显溢价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "这个价比我预想的高。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "最好是真有用。别让我下次来还看见它们，像在等人可怜。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b005",
+          "chapter": "c03",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "明显压价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你知道它值多少，也知道我现在缺钱。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "行。今天算你会挑时候。"
+            }
+          ]
+        },
+        {
+          "id": "c03.b006",
+          "chapter": "c03",
+          "scene": "玩家处理：正常收购她带来的家当",
+          "label": "不收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "好，我带走。你不收，有的是别家收。"
+            }
+          ]
+        },
+        {
+          "id": "c03.n002",
+          "chapter": "c03",
+          "scene": "交易后：吊坠",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "还有这个。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把吊坠从领口拉出来，链子还带着温度，坠面朝上。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "是母亲以前送我的。先问个价。我还没想好。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……今天不卖这个。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "吊坠塞回领口。她把衣领抚平，抚了两下才理正。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这是我的东西。我想好了再拿出来。"
+            }
+          ]
+        },
+        {
+          "id": "c03.n003",
+          "chapter": "c03",
+          "scene": "选项：把秤收起来",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "店主把秤盘翻过来扣在柜台上，没有再动。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你连价都不还？"
+            }
+          ]
+        },
+        {
+          "id": "c03.n004",
+          "chapter": "c03",
+          "scene": "选项：报个价给她听",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "他报了个价。她听完，把吊坠收回领口。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……价倒是实在。可这东西不卖。"
+            }
+          ]
+        },
+        {
+          "id": "c03.n005",
+          "chapter": "c03",
+          "scene": "吊坠段共同结尾",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "算了。……下次我要是真拿来，你可别装大方。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我走了。钱我会算着花。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "number": 4,
+      "title": "自称叔叔的人",
+      "day": "参考第28天 · 箱子、举报与警告",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c04.n001",
+          "chapter": "c04",
+          "scene": "假叔叔与礼盒",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "午后没有客人。一个男人抱着礼盒来到窗口前，盒面系着缎带，落了一层细灰。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "你好啊。你认识埃莉诺，对吧？我是她的……叔叔。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "uncle",
+              "text": "我们给她准备了一份小小的心意。全是上层区最好的东西。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "可我怎么也找不到她。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "年轻人受了委屈，总爱躲起来。听说她常来你这儿。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "下次她来的时候，你能把这个交给她吗？"
+            },
+            {
+              "speaker": "uncle",
+              "text": "一定要交到她手上。不是你，是她。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "要是有人问起，你从没见过我。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "哦，还有，别让治安部插手。这是家务事。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "他把盒子往柜台里推了推，缎带的一角垂到台沿外面。"
+            }
+          ]
+        },
+        {
+          "id": "c04.n003",
+          "chapter": "c04",
+          "scene": "选项：收下，等她自己来拿",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "盒子在柜台下放了一夜。第二天清点，盒底的编号露了出来。"
+            },
+            {
+              "speaker": "security_notice",
+              "text": "上层区农场物资失窃，编号已录入。发现者请上报。"
+            }
+          ]
+        },
+        {
+          "id": "c04.n002",
+          "chapter": "c04",
+          "scene": "选项：先登记",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "uncle",
+              "text": "登记？给她带个礼，还要立字据。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "家务事，别多问。"
+            },
+            {
+              "speaker": "player",
+              "text": "不登记，就不收。"
+            },
+            {
+              "speaker": "uncle",
+              "text": "那我放这儿。她来了，你自然会给她。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "男人走远了。盒底压着一张农场物资的编号签，边角有撕过的痕迹。"
+            },
+            {
+              "speaker": "security_notice",
+              "text": "上层区农场物资失窃，编号已录入。发现者请上报。"
+            }
+          ]
+        },
+        {
+          "id": "c04.n004",
+          "chapter": "c04",
+          "scene": "选项：把盒子推回去",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "uncle",
+              "text": "那就算了。盒子我带回去。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "他把礼盒抱回怀里，缎带垂在肘弯，转身走了。"
+            }
+          ]
+        },
+        {
+          "id": "c04.b003",
+          "chapter": "c04",
+          "scene": "分支：举报成功",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "officer",
+              "text": "你好，店主。你举报了一件赃物？"
+            },
+            {
+              "speaker": "uncle",
+              "text": "这不是我偷的！收据在这儿。"
+            },
+            {
+              "speaker": "officer",
+              "text": "那你为什么报案说这东西被偷了？"
+            },
+            {
+              "speaker": "officer",
+              "text": "谎报盗窃可是犯罪。老老实实跟我们走一趟！"
+            },
+            {
+              "speaker": "uncle",
+              "text": "老板，开店的，管好自己的柜台就够了。"
+            },
+            {
+              "speaker": "player",
+              "text": "有人在我柜台上做手脚，就是我柜台上的事。"
+            }
+          ]
+        },
+        {
+          "id": "c04.b004",
+          "chapter": "c04",
+          "scene": "后续：埃莉诺下一次来访，玩家可以明确告诉她",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "*告诉她那个自称是她叔叔的男人的事*"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我叔叔？我根本没有叔叔。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟你说过，除了母亲，我没有家人。"
+            }
+          ]
+        },
+        {
+          "id": "c04.b006",
+          "chapter": "c04",
+          "scene": "后续：埃莉诺下一次来访，玩家可以明确告诉她",
+          "label": "如果发现可疑但没有举报",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "箱子被报失窃，还在我仓库里。别碰。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "被报了失窃的“礼物”……他们想让我被抓。就像我母亲一样。"
+            }
+          ]
+        },
+        {
+          "id": "c04.b007",
+          "chapter": "c04",
+          "scene": "后续：埃莉诺下一次来访，玩家可以明确告诉她",
+          "label": "如果没有接箱子，也没有可确认的赃物信息",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "我没收。他说不清东西哪来的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "谢谢你告诉我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "以后再有人自称是我家里人，你直接把他赶走。"
+            }
+          ]
+        },
+        {
+          "id": "c04.b008",
+          "chapter": "c04",
+          "scene": "已确认箱子被报失窃后的对白；只知道有可疑访客时，不播放这一段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我母亲已经被关起来了，他们还嫌不够？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我……得想一想。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "以前有人送这种箱子，我连标签都不看就拆。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "下层区没有白送的东西。上面也没有。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你提醒了我。收下这个吧。我从家里带出来的最后一点东西。"
+            }
+          ]
+        },
+        {
+          "id": "c04.b009",
+          "chapter": "c04",
+          "scene": "沿用原作谢礼：埃莉诺的谢礼，任选一份",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "等我理清头绪了再来。"
+            }
+          ]
+        },
+        {
+          "id": "c04.n005",
+          "chapter": "c04",
+          "scene": "举报成功后：警官带走礼盒",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "巡街的警官来得很快，帽檐上还挂着雾水。"
+            },
+            {
+              "speaker": "officer",
+              "text": "你举报了一件赃物？"
+            },
+            {
+              "speaker": "player",
+              "text": "盒底有农场编号。通告上写着失窃。"
+            },
+            {
+              "speaker": "officer",
+              "text": "东西我先带回去，编号我记下了。"
+            },
+            {
+              "speaker": "officer",
+              "text": "她碰过这盒子没有？碰过，明天叫她来一趟。"
+            },
+            {
+              "speaker": "player",
+              "text": "没碰过。"
+            },
+            {
+              "speaker": "officer",
+              "text": "按程序也要问。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "礼盒被夹在腋下带走。缎带垂着，一路扫过他的裤腿。"
+            }
+          ]
+        },
+        {
+          "id": "c04.n006",
+          "chapter": "c04",
+          "scene": "警告：已举报的告诉分支",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "第二天她来得比平时晚，鞋边沾着半干的泥。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "治安部今早敲了我的门。",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有人给我留了个箱子。还是被报了失窃的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我叔叔？我根本没有叔叔。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟你说过，除了母亲，我没有家人。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他们想让我被抓。就像我母亲一样。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她已经关在里面了，他们还嫌不够？"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她的手扶住柜台边，指尖扣进木缝里，背挺得很直。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你报的警？"
+            },
+            {
+              "speaker": "player",
+              "text": "盒底有编号。通告上写着失窃。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……你报警没错。不过下次别自作主张。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "至少先跟我说一声。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "以前有人送这种箱子，我连标签都不看就拆。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "下层区没有白送的东西。",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c04.n007",
+          "chapter": "c04",
+          "scene": "谢礼句",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你提醒了我。收下这个吧。我从家里带出来的最后一点东西。"
+            }
+          ]
+        },
+        {
+          "id": "c04.n008",
+          "chapter": "c04",
+          "scene": "警告：已举报分支离店",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她走出几步停下，回头看了一眼柜台，才继续往前走。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "number": 5,
+      "title": "她最不愿意开口的事",
+      "day": "参考第29天 · 食物援助／逮捕救援",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c05.n001",
+          "chapter": "c05",
+          "scene": "三天后：她来开口",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "三天后。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她在窗口外站了很久，才走近柜台。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我实在受不了了。",
+              "expr": "sad"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "昨晚遭了贼，把我仅剩的那点东西全拿走了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "钱花光了。剩下的那点，交完房租就见底。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "判决下来了。他们认定我母亲有罪。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我将永远被困在这里，而母亲只能牢底坐穿。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就剩这个吊坠，一直戴着。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我简直不敢相信我会沦落到提出这种要求。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "但你能分我一点吃的吗？只要能吃的就行，求求你。"
+            }
+          ]
+        },
+        {
+          "id": "c05.n002",
+          "chapter": "c05",
+          "scene": "接受食物后的共同段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "柜台上的袋子被解开，干粮和两枚营养果推到她面前。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我不是来讨饭的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……行吧。我拿。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "干粮被她按在怀里压了压，眼睛落到那两枚营养果上。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "账记着。我会还。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我室友昨天把自己那份分了我一半。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她也没问我姓什么。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别以为我这么说，就是喜欢这下面。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "营养果进了内袋，扣子扣好，扣了两回才扣上。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天的事，不许说出去。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "尤其是后半段。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她退开一步，手在柜沿上停了一停，才转身离开。"
+            }
+          ]
+        },
+        {
+          "id": "c05.n003",
+          "chapter": "c05",
+          "scene": "选项：先让她说清楚",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "他没有动柜台上的袋子。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "还要我说多清楚？东西被偷了，钱花光了，判决也下来了。吊坠不能动。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她说完，手还按在柜台上。"
+            }
+          ]
+        },
+        {
+          "id": "c05.n004",
+          "chapter": "c05",
+          "scene": "选项：只问，不给",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "他问了几句。她把还撑得住的话又说了一遍。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "问完了？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我明白了。你开的是店，不是救济站。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把空布袋折好，收回怀里。"
+            },
+            {
+              "speaker": "eleanor",
+              "expr": "shy",
+              "text": "今天的事，不许说出去。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我来过这儿，这件事，也不许说。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她转身走了。"
+            }
+          ]
+        },
+        {
+          "id": "c05.n005",
+          "chapter": "c05",
+          "scene": "援助节点",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "（把能吃的拿出来，或者先听她说完。）"
+            }
+          ]
+        },
+        {
+          "id": "c05.b004",
+          "chapter": "c05",
+          "scene": "玩家处理：真正提供可食用物品",
+          "label": "有货但明确拒绝援助",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我懂了。你开的是店，不是救济站。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "等我有钱了，我会按价来买的。"
+            }
+          ]
+        },
+        {
+          "id": "c05.b006",
+          "chapter": "c05",
+          "scene": "5A离店前：未取得食物时，替换上段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "别跟别人说我今天来求过你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "谢谢。现在我能自己做主的事不多了，就这一件，让我留着吧。"
+            }
+          ]
+        },
+        {
+          "id": "c05.b007",
+          "chapter": "c05",
+          "scene": "分支5B：栽赃成功，替换5A",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "officer",
+              "text": "不许动！这个箱子被报了失窃。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "什么？这不是我的！我从没见过它！"
+            },
+            {
+              "speaker": "officer",
+              "text": "有其母必有其女。跟我们走一趟。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "求你们了，是有人陷害我！店主，你快跟他们说啊！"
+            }
+          ]
+        },
+        {
+          "id": "c05.b009",
+          "chapter": "c05",
+          "scene": "救援完成后，她来访",
+          "label": "如果玩家先前并不知道箱子有问题",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你也被他骗了。……可下次，先问问我，好吗？"
+            }
+          ]
+        },
+        {
+          "id": "c05.b010",
+          "chapter": "c05",
+          "scene": "救援完成后，她来访",
+          "label": "如果玩家已经知道箱子被报失窃，却仍未提醒",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你早就知道它被报了失窃？"
+            },
+            {
+              "speaker": "player",
+              "text": "知道。是我搞砸了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那就别拿把我救出来这件事，当作什么都没发生过。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "number": 6,
+      "title": "她自己带来的货",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c06.b101",
+          "chapter": "c06",
+          "scene": "去拾荒",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嘿！我又回来了！",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我们上次交谈之后，"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我意识到日子还得继续过下去，"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "况且，我差不多也习惯这股恶臭了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我母亲多半是被上层区的某个人栽赃了，"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我必须重新振作起来，想办法还她清白，"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "当务之急，是先解决生计。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "所以，我盘算着去垃圾场拾荒，"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我的室友给我上了一堂拾荒速成课，"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不得不承认，这里有着真正的社区精神。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "总之，来看看我的收获吧！"
+            }
+          ]
+        },
+        {
+          "id": "c06.b003",
+          "chapter": "c06",
+          "scene": "玩家处理：实际收购",
+          "label": "公平收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "真是这个数？我还以为要吵一架。",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c06.b004",
+          "chapter": "c06",
+          "scene": "玩家处理：实际收购",
+          "label": "溢价收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "多了。你今天多给，我下次就不好意思挑坏的带。",
+              "expr": "determined"
+            }
+          ]
+        },
+        {
+          "id": "c06.b005",
+          "chapter": "c06",
+          "scene": "玩家处理：实际收购",
+          "label": "明显压价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "压这么狠。我捡了一上午。",
+              "expr": "angry"
+            }
+          ]
+        },
+        {
+          "id": "c06.b006",
+          "chapter": "c06",
+          "scene": "玩家处理：实际收购",
+          "label": "没有买下",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "一件都不收。",
+              "expr": "tired"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "number": 7,
+      "title": "第二次，她记住了",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c07.b101",
+          "chapter": "c07",
+          "scene": "筹款与侦探",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嘿，我一直在想接下来该怎么办。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我敢肯定，是上层区有人陷害了我母亲。",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我没法上去打听，但私家侦探可以。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "找个靠谱的要800信用点。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "所以我会继续去垃圾场拾荒，把找到的东西卖给你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "给个公道价，好吗？每一个信用点都能让我离目标更近一步。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这次我自己分了成色，价也先估过。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "数字写在纸背上。你先报，报完我再对。"
+            }
+          ]
+        },
+        {
+          "id": "c07.b006",
+          "chapter": "c07",
+          "scene": "玩家处理：实际收购",
+          "label": "公平收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "跟我纸上写的差不多。那就是我估对了。",
+              "expr": "determined"
+            }
+          ]
+        },
+        {
+          "id": "c07.b004",
+          "chapter": "c07",
+          "scene": "玩家处理：实际收购",
+          "label": "溢价收购",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你比我纸上写的高。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c07.b007",
+          "chapter": "c07",
+          "scene": "玩家处理：实际收购",
+          "label": "明显压价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "好的那堆你也压了。我分了一早上。",
+              "expr": "angry"
+            }
+          ]
+        },
+        {
+          "id": "c07.b005",
+          "chapter": "c07",
+          "scene": "玩家处理：实际收购",
+          "label": "没有买下",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嫌我分得不对？那你教我一次。",
+              "expr": "tired"
+            }
+          ]
+        },
+        {
+          "id": "c07.b106",
+          "chapter": "c07",
+          "scene": "共同后续：码头收货",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "下层区还有谁收货？"
+            },
+            {
+              "speaker": "player",
+              "text": "码头那边有人收。压价狠，秤也不准。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那我去看看。货先不急着给他。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "number": 8,
+      "title": "不是拿来卖的",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c08.b101",
+          "chapter": "c08",
+          "scene": "她带来一块回礼材料",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她来到窗口前，手里只捏着一小块东西，用布角包着。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天没货。",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就这一块。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "布角摊开，里面是一枚电子元件，边角干净，没沾灰。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "从废料堆里捡的。接口没锈。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我留了一块。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这块材料别跟其他的算在一起。给你的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "拿着就走。别问。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把元件推到柜台正中，手停了一下才收回。"
+            }
+          ]
+        },
+        {
+          "id": "c08.b102",
+          "chapter": "c08",
+          "scene": "选项：收下",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你不算钱？",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那我以后每回都得给你带点。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我记着。就这一句。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把元件往柜台里侧推了推，才收手。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她离开窗口，布角在兜里露出一尖。"
+            }
+          ]
+        },
+        {
+          "id": "c08.b103",
+          "chapter": "c08",
+          "scene": "选项：付二十",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我说过，它是给你的。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你还按货单结。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……随你。轮不到我求你白拿。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "硬币她没数，直接落进内袋。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "下回你少算我，我可要问清楚。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她折好布角揣进兜里，轻轻收回搭在柜沿上的手，走了。"
+            }
+          ]
+        },
+        {
+          "id": "c08.b104",
+          "chapter": "c08",
+          "scene": "选项：不用了",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "不收就不收。",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "下次我挑一件让你找不到理由拒绝的。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "布角重新包好，她往兜里塞，塞了一下才塞进去。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她从窗口前退开，没回头。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c09",
+      "number": 9,
+      "title": "旧手镯",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c09.n101",
+          "chapter": "c09",
+          "scene": "莉迪亚到店",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "一个姑娘来到窗口前，手腕上的镯子轻轻磕了一下柜沿。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "哎呀，这巷子比我想的还窄。",
+              "expr": "smile"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我一路走过来，鞋底沾了三种东西，有一种我到现在都不想确认是什么。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "问了三个人才找到这儿，都说这条街上只有你一家当铺不坑人。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你就说——这算不算夸你？"
+            },
+            {
+              "speaker": "player",
+              "text": "算。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你这人话真少。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你在这儿开几年了？"
+            },
+            {
+              "speaker": "player",
+              "text": "几年。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "几年。就守着这一屋子旧东西。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "……我不是那个意思。我嘴快，你别往心里去。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把包放在柜台上，从里面摸出一只镯子，指头还压在上面。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "旧东西。家里翻出来的。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "能当多少？"
+            },
+            {
+              "speaker": "player",
+              "text": "按成色来。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "成色我不懂。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你看着给，我不还价。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "真的，你报多少我都点头。"
+            }
+          ]
+        },
+        {
+          "id": "c09.n102",
+          "chapter": "c09",
+          "scene": "按公道价收下",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "镯子被翻过来，内圈刻着一行极细的字。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "哎，那个别管。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "lydia",
+              "text": "……好吧。你眼睛挺尖。"
+            },
+            {
+              "speaker": "player",
+              "text": "你要卖，我就收。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你不问来路？"
+            },
+            {
+              "speaker": "player",
+              "text": "问了你也不说。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "哈。行。",
+              "expr": "smile"
+            },
+            {
+              "speaker": "narrator",
+              "text": "镯子进了柜台下的木盒，盖子扣上。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你报的价，倒没让我吃亏。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我本来准备了一整套说辞，全废了。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我还想着，你要是压得太狠，我就知道该怎么看你。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "结果你没有。"
+            }
+          ]
+        },
+        {
+          "id": "c09.n105",
+          "chapter": "c09",
+          "scene": "压价收下",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "镯子被翻过来，内圈刻着一行极细的字。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "哎，那个别管。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "lydia",
+              "text": "……好吧。你眼睛挺尖。"
+            },
+            {
+              "speaker": "player",
+              "text": "你要卖，我就收。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你不问来路？"
+            },
+            {
+              "speaker": "player",
+              "text": "问了你也不说。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "哈。行。",
+              "expr": "smile"
+            },
+            {
+              "speaker": "narrator",
+              "text": "镯子进了柜台下的木盒，盖子扣上。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你压得挺顺手。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我本来想，你至少会装一下。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "算了，东西是你的了。"
+            }
+          ]
+        },
+        {
+          "id": "c09.n106",
+          "chapter": "c09",
+          "scene": "她问起埃莉诺",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "……那我只好问正事了。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你这儿最近有没有一个女孩来卖东西？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "上层的口音，说话冲，个子这么高，脸拉得比货架还长。"
+            },
+            {
+              "speaker": "player",
+              "text": "有。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她真的来。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我跟她从小一块长大。她母亲出事以后，我家那扇门就对我说“别提”。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我给她打过电话，说你来我家住。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她回我两个字，“不用”。然后挂了。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我气得半夜没睡，第二天照样给她发消息。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她一条都没回。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我不是来打听闲话的。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我就是想知道，她到底吃没吃饭。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "这镯子先在你这里。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我过几天来赎。"
+            }
+          ]
+        },
+        {
+          "id": "c09.n103",
+          "chapter": "c09",
+          "scene": "问她来找谁",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "我来找谁？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "……你这人真不绕弯。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "找一个朋友。她母亲出了事，她被赶下来，不肯见人。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我说到这儿，你该知道是谁了。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把镯子收回包里，扣好。"
+            }
+          ]
+        },
+        {
+          "id": "c09.n104",
+          "chapter": "c09",
+          "scene": "不收",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "不收？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你连成色都不看就说不要。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "行，那我换一家。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把镯子收回包里，扣子扣了两次才扣上。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c10",
+      "number": 10,
+      "title": "她看见的",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c10.n201",
+          "chapter": "c10",
+          "scene": "她看见的",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "埃莉诺走到窗口前，没先开口。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "昨天下午，有个女人从这条巷子出去。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "卷发，包是新的，走路不看地。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她来干什么。"
+            },
+            {
+              "speaker": "player",
+              "text": "卖东西。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "卖什么。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n202",
+          "chapter": "c10",
+          "scene": "直说",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "一只手镯。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她连那个都拿出来了。",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那是她家的旧物。她母亲戴过。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她居然拿到下面来当。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她是不是还问了你一堆？"
+            },
+            {
+              "speaker": "player",
+              "text": "问了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她就是那样。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "来一趟，回去就能说她看过我了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "也罢。她不是坏人。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她只是不知道下面是什么样子。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把手放在柜沿上，指尖蹭掉一处旧漆。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n203",
+          "chapter": "c10",
+          "scene": "只说她来过",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "她来过。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就这样？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "也是。你跟她没什么好说的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她那种人，来时先夸你的货，走了就忘了。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n204",
+          "chapter": "c10",
+          "scene": "反问她认识吗",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我认不认识？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你问得倒直接。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "卷发，新包。这条街上一天能过去十个。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她的视线落在柜台上，没移开。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我认识。她叫莉迪亚。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n205",
+          "chapter": "c10",
+          "scene": "她有没有提我",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "她有没有提我。"
+            },
+            {
+              "speaker": "player",
+              "text": "提了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她说什么。"
+            },
+            {
+              "speaker": "player",
+              "text": "说你没吃饭。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她怎么知道我吃没吃饭。",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "隔着二十层楼，她还能算出我一天吃几顿？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她那个人，说话不过脑子。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她低下头，去看柜台上那道缺口。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她还好吧。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "当我没问。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "镯子呢。"
+            },
+            {
+              "speaker": "player",
+              "text": "在柜台里。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "先别卖。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "留给她。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她会回来拿的。她丢一次东西能念叨半年。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "还有。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别跟她说我住哪儿。"
+            },
+            {
+              "speaker": "player",
+              "text": "她没问。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她会问的。",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我那间房，别让她看见。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "配给站对面，四楼，楼梯没有灯。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她真站到门口，我连让她进来都开不了口。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把背上的袋子放到柜台上，袋口松开，露出几块壳子和线头。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这些你收不收。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你开个价吧。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天懒得还价。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n206",
+          "chapter": "c10",
+          "scene": "一千",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "来人在窗口前站定，先把店里看了一圈。"
+            },
+            {
+              "speaker": "broker",
+              "text": "听说你前几天收了一只老镯子。"
+            },
+            {
+              "speaker": "broker",
+              "text": "我不看别的，就看那个。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "木盒放上柜面，盖子打开。"
+            },
+            {
+              "speaker": "broker",
+              "text": "内圈有字。"
+            },
+            {
+              "speaker": "broker",
+              "text": "这种刻字的老货，上层流出来的，一年见不着两只。"
+            },
+            {
+              "speaker": "broker",
+              "text": "现在都是机压的。这种手刻的，我认得。"
+            },
+            {
+              "speaker": "broker",
+              "text": "卖家是谁？"
+            },
+            {
+              "speaker": "player",
+              "text": "不关你的事。"
+            },
+            {
+              "speaker": "broker",
+              "text": "行。我不问。"
+            },
+            {
+              "speaker": "broker",
+              "text": "一千。"
+            },
+            {
+              "speaker": "broker",
+              "text": "现金，现在结，钱就在这儿。"
+            },
+            {
+              "speaker": "broker",
+              "text": "一千，不能再多了。不卖我就走。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n207",
+          "chapter": "c10",
+          "scene": "不卖",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "不卖。"
+            },
+            {
+              "speaker": "broker",
+              "text": "东西在你手里，主意你拿。"
+            },
+            {
+              "speaker": "broker",
+              "text": "今天不卖，改天可就没这个价了。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "他把盒子推回半寸，转身离开窗口。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n208",
+          "chapter": "c10",
+          "scene": "卖给掮客",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "盒子被推过去，掮客数钱的动作很慢。"
+            },
+            {
+              "speaker": "broker",
+              "text": "痛快。"
+            },
+            {
+              "speaker": "broker",
+              "text": "以后有这种货，先找我。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "他把镯子裹进布，走时没回头。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n209",
+          "chapter": "c10",
+          "scene": "原价",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她走到窗口前，手里捏着一沓钱，没坐下。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我来赎那只镯子。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "lydia",
+              "text": "五百。我自己的钱，不是家里的。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "这个数我拿得出来，你别嫌少。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n210",
+          "chapter": "c10",
+          "scene": "按原价还",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "镯子被推过去，钱只收了当初那一笔。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你这人。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我连五百都数好了。你这……"
+            },
+            {
+              "speaker": "lydia",
+              "text": "那多的我可真收回去了。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n211",
+          "chapter": "c10",
+          "scene": "直接送她",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "送？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你白给我？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "你别看着我。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "lydia",
+              "text": "行。我收下。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "但我记下了。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把镯子接过去，没再多说。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n212",
+          "chapter": "c10",
+          "scene": "让她自己出价",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "我出价？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我要是报低了，你会不会觉得我在占你便宜。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "五百。就这个数，别让我再加。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n214",
+          "chapter": "c10",
+          "scene": "她拿到镯子",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她把钱推过去，等了一会儿才拿到镯子。"
+            }
+          ]
+        },
+        {
+          "id": "c10.n213",
+          "chapter": "c10",
+          "scene": "镯子的事",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "这镯子是我外婆的。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "家里上个月报了失窃。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "是我从柜子里拿的。那天出门急，顺手就带走了。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我以为少这一件，没人会留意。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "谁知道我妈偏要挨个清点，点完就报了失窃。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "现在让我说是我拿的，她还不追着问镯子去了哪儿？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我怎么跟她讲当铺的事。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "镯子套上手腕，她转了两下，把扣合上。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "好了。",
+              "expr": "smile"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我还想问问你。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "埃莉诺最近怎么样？"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我去找了她两回，连话都没说上。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "第一回我在楼下等了两个钟头。第二回她当着我的面把门关了。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我站在楼梯口，黑得看不见台阶，只能摸着墙下楼。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我下个楼都这样，她还得天天走。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她提着东西，可怎么上楼啊。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她肯来你这儿，跟你总能说上话吧。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "上面的事，我还能找人打听。"
+            },
+            {
+              "speaker": "player",
+              "text": "你想怎么帮。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我再去请她，下回一块儿来。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她肯来才算。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "到时候，你帮我跟她说说。",
+              "en": "Let you two have a proper talk."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把包带往肩上一提，从窗口前退了两步，又回过头。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "那我去找她。"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她走远了，包上的金属扣轻轻碰了两下。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c11",
+      "title": "最后一截",
+      "blocks": [
+        {
+          "id": "c11.b001",
+          "scene": "最后一截",
+          "label": "最后一截",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她把麻袋拖到窗口下，在地上蹭出一道灰印。",
+              "en": "The sack drags over the threshold, leaving a gray streak on the floor."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "码头那家我去过了。秤是歪的。",
+              "en": "I've been to the one at the docks. The scale's crooked.",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他按斤称线材，称完还抽走两根，说是损耗。",
+              "en": "He weighs wire by the pound, then pulls two strands off the top and calls it loss."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我当场装回袋子，走了。",
+              "en": "I put it back in the bag right there and walked out."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把麻袋口朝下抖开，壳子和接口散在柜面上，按成色排成三排。",
+              "en": "She turns the sack upside down and shakes it out. Shells and connectors scatter on the counter, lined up in three rows by condition."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "左边能直接用，中间要修，右边只剩壳。",
+              "en": "Left side works as is. Middle needs repair. Right side is shells only."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你报价。错了我会说。",
+              "en": "You quote a price. If it's wrong, I'll say so."
+            },
+            {
+              "speaker": "player",
+              "text": "中间那排，有两个是好的。",
+              "en": "Two in the middle row are good."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "哪两个？",
+              "en": "Which two?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "店主把两枚接口拨到左排。她弯腰凑近，鼻尖差点碰到柜面。",
+              "en": "The shopkeeper slides two connectors into the left row. She bends close, nose almost touching the counter."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……锈的是外圈。里头亮的。",
+              "en": "...The rust's on the outer ring. The inside's bright."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "行吧，这回算你对。",
+              "en": "Fine. You're right this time."
+            },
+            {
+              "speaker": "narrator",
+              "text": "硬币推过去，她解开腰间的零钱袋，把柜台上的和袋里的倒在一起。",
+              "en": "The coins slide across. She unties the change pouch at her waist and pours the coins from the counter and the pouch together."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别出声，我在数。",
+              "en": "Quiet. I'm counting."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "七百六……七百八十……",
+              "en": "Seven hundred sixty... seven hundred eighty..."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把袋子翻过来拍了两下，掉出最后几枚，沾着垃圾场的灰。",
+              "en": "She flips the pouch over and pats it twice. The last few coins drop out, gray with scrapyard dust."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "八百。整的。",
+              "en": "Eight hundred. Exactly.",
+              "expr": "determined"
+            },
+            {
+              "speaker": "player",
+              "text": "吊坠呢。",
+              "en": "The pendant?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "还在脖子上。差两枚的时候我拿出来看过。",
+              "en": "Still around my neck. I took it out to look when I was two coins short."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "又塞回去了。",
+              "en": "Then I put it back."
+            },
+            {
+              "speaker": "narrator",
+              "text": "店主从柜台下抽出一块干净的布，放在她手边。",
+              "en": "The shopkeeper pulls a clean cloth from under the counter and sets it by her hand."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "擦手的？我手上那点灰，又不碍你的事。",
+              "en": "For wiping my hands? The dirt on my hands is none of your concern."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她还是拿起布，一根一根把手指擦过去，指缝也擦到了。",
+              "en": "She picks up the cloth anyway and wipes each finger, one by one, even between them."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "侦探明天见我。钱我自己送去。",
+              "en": "The detective sees me tomorrow. I'll bring the money myself."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你别跟着。他看见有人陪着，开价会变。",
+              "en": "Don't follow me. If he sees someone with me, his price changes."
+            }
+          ]
+        }
+      ],
+      "chapter": "c11"
+    },
+    {
+      "id": "c12",
+      "title": "生日",
+      "blocks": [
+        {
+          "id": "c12.b001",
+          "scene": "生日",
+          "label": "生日",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她来到窗口前，先往巷子两头看了看，一只手揣在外套里，一直没拿出来。",
+              "en": "She shut the door behind her. One hand stayed in her coat pocket the whole time."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "侦探把东西拿出来了。",
+              "en": "The detective got it out.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>她抽出手，掌心压着一张薄盘</i>实验室的数据盘。",
+              "en": "<i>She pulls her hand out, pressing a thin disc flat in her palm</i> Lab data disc."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "抽屉锁着，柜子贴着封条，这个塞在灯架底下。",
+              "en": "Drawers locked, cabinets sealed. This was shoved under the lamp mount."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲的习惯。她总说抽屉是留给别人翻的。",
+              "en": "Mother's habit. She always said drawers are for other people to search."
+            },
+            {
+              "speaker": "player",
+              "text": "打得开？",
+              "en": "Can you open it?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "要密码。我试了一整晚。",
+              "en": "It needs a code. I tried all night."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她的工号，农场编号，我父亲的……能想到的全试了。",
+              "en": "Her work number, the farm number, my father's... everything I could think of."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "快天亮的时候，我输了自己的生日。",
+              "en": "Just before dawn, I typed in my own birthday.",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "开了。",
+              "en": "It opened."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "绝了。她把这种东西的钥匙设成我。",
+              "en": "Unbelievable. She made me the key to something like this."
+            },
+            {
+              "speaker": "player",
+              "text": "里面是什么。",
+              "en": "What's on it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "一大堆记录。班次、灯照、材料、账，我看不懂一半。",
+              "en": "A pile of records. Shifts, light cycles, materials, accounts. I don't understand half of it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有一份我看懂了。营养果。",
+              "en": "One I did understand. Nutrient fruit."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "配给站发的那种，没籽。你知道吧？",
+              "en": "The kind the ration station hands out. No seeds. You know the ones?"
+            },
+            {
+              "speaker": "player",
+              "text": "知道。种子得等上面拨。",
+              "en": "I know. Seeds come when the top says so."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她让它重新结籽了。复查三轮，籽能种出来。",
+              "en": "She made it seed again. Three rounds of retests. The seeds grow.",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "下层区自己就能种，用不着每个月伸手等上面。",
+              "en": "The lower districts could grow their own. No more holding out a hand every month."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "后面还夹着信，帕斯泰尔公司的。",
+              "en": "There were letters in there too. From Pastel Company."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "一封比一封客气。意思就一个，叫她把研究停了。",
+              "en": "Each one politer than the last. All saying the same thing. Stop the research."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "最后一封她回了。两行字，说不停。",
+              "en": "She answered the last one. Two lines. Said she wouldn't stop."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "又过两个礼拜，账上就冒出了那笔挪用公款。",
+              "en": "Two weeks later, that embezzlement shows up in the books.",
+              "expr": "angry"
+            },
+            {
+              "speaker": "player",
+              "text": "这盘还有谁知道。",
+              "en": "Who else knows about this disc."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "侦探，我，现在加上你。",
+              "en": "The detective. Me. Now you."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "侦探拿了钱就走，说这东西烫手，他不想再沾。",
+              "en": "The detective took the money and left. Said it was too hot to touch."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我那间房门锁是坏的。来找室友的人进进出出。",
+              "en": "The lock on my door is broken. People come to check out the room, in and out.",
+              "expr": "sad"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "带在身上，我在垃圾场一弯腰，它就不知道掉进哪堆废料里。",
+              "en": "Carry it on me, and the second I bend over at the junkyard, it drops into some pile of scrap and it's gone."
+            }
+          ]
+        },
+        {
+          "id": "c12.b002",
+          "scene": "生日",
+          "label": "先问她盘里还有什么",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "盘里还有别的吗。",
+              "en": "Anything else on the drive."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有。她记的班次，工人的名字，几笔没走完的账。",
+              "en": "Yes. Shifts she wrote down, workers' names, a few accounts left unfinished.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我看不懂的比看懂的多。",
+              "en": "There's more I can't read than I can."
+            }
+          ]
+        },
+        {
+          "id": "c12.b003",
+          "scene": "生日",
+          "label": "替她收着",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "放我这儿。柜台下面有锁。",
+              "en": "Leave it with me. There's a lock under the counter."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……我又没开口求你。",
+              "en": "...I didn't ask you for anything.",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>她的手在盘上多压了一下，才推过去</i>就放几天。",
+              "en": "<i>She presses her hand on the drive one more time before pushing it over</i>Just for a few days."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "等我想清楚怎么用，就来拿。",
+              "en": "When I figure out what to do with it, I'll come get it."
+            },
+            {
+              "speaker": "player",
+              "text": "不看，不碰。",
+              "en": "I won't look. Won't touch it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你最好真不看。里面全是她的工作记录。",
+              "en": "You'd better really not look. It's all her work records."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这笔我记着。",
+              "en": "I'll remember this.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她退开几步，回头看了一眼柜台下那把锁。",
+              "en": "She walks to the door, then glances back at the lock under the counter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c13",
+      "title": "跑腿钱",
+      "blocks": [
+        {
+          "id": "c13.b001",
+          "scene": "跑腿钱",
+          "label": "跑腿钱",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "一个人往窗口前一站，把那块地方堵住了。",
+              "en": "The door is pushed open. The man who comes in plants himself in the doorway and blocks it."
+            },
+            {
+              "speaker": "thug",
+              "text": "你这儿常来一个上层的丫头。",
+              "en": "You get an Upper Tier girl in here a lot."
+            },
+            {
+              "speaker": "player",
+              "text": "来买东西的人多。",
+              "en": "Lots of people come in to buy."
+            },
+            {
+              "speaker": "thug",
+              "text": "别绕。卖垃圾的那个，她妈在牢里。",
+              "en": "Don't play dumb. The one selling scrap. Her mother's in a cell."
+            },
+            {
+              "speaker": "thug",
+              "text": "她手上有个盘，从实验室出来的。",
+              "en": "She's got a drive. Came out of the lab."
+            },
+            {
+              "speaker": "player",
+              "text": "你从哪儿听来的。",
+              "en": "Where'd you hear that."
+            },
+            {
+              "speaker": "thug",
+              "text": "档案房的门开过，就有人看见。",
+              "en": "The archive room door was opened. People saw."
+            },
+            {
+              "speaker": "thug",
+              "text": "我不找她，我找你。",
+              "en": "I'm not looking for her. I'm looking for you."
+            },
+            {
+              "speaker": "player",
+              "text": "为什么找我。",
+              "en": "Why me."
+            },
+            {
+              "speaker": "thug",
+              "text": "她不跟生人说话，偏偏天天往你这儿跑。",
+              "en": "She won't talk to strangers, but she runs to your place every day."
+            },
+            {
+              "speaker": "thug",
+              "text": "你给她带句话。盘交出来，她妈就出来。",
+              "en": "You give her a message. Hand over the drive, her mother walks."
+            },
+            {
+              "speaker": "thug",
+              "text": "案子撤了，人放了，就这么简单。",
+              "en": "Case dropped, she's released. Simple as that."
+            },
+            {
+              "speaker": "player",
+              "text": "你说放就放？",
+              "en": "You say let her go, and that's that?"
+            },
+            {
+              "speaker": "thug",
+              "text": "不是我说，是有人说。我只管跑这一趟。",
+              "en": "Not me saying it. Someone else is. I just make the run."
+            },
+            {
+              "speaker": "thug",
+              "text": "<i>他从怀里摸出一叠钱，拍在柜台上</i>三百，跑腿钱。",
+              "en": "<i>He digs a stack of money out of his coat and slaps it on the counter</i>Three hundred. Errand money."
+            },
+            {
+              "speaker": "thug",
+              "text": "你走两步路，张一回嘴，这钱就归你。",
+              "en": "You walk a few steps, open your mouth once, the money's yours."
+            },
+            {
+              "speaker": "thug",
+              "text": "她要是不交……",
+              "en": "If she won't hand it over..."
+            },
+            {
+              "speaker": "thug",
+              "text": "牢里冷。人病倒了，谁也不会觉得奇怪。",
+              "en": "It's cold in a cell. People get sick. Nobody finds it strange."
+            },
+            {
+              "speaker": "player",
+              "text": "你拿一个在押的人来压价。",
+              "en": "You're using someone locked up to push the price."
+            },
+            {
+              "speaker": "thug",
+              "text": "我这是报价。你们开当铺的最懂这个。",
+              "en": "I'm quoting a price. You pawnshop people know all about that."
+            }
+          ]
+        },
+        {
+          "id": "c13.b002",
+          "scene": "跑腿钱",
+          "label": "叫他出去",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "走开。",
+              "en": "Get out."
+            },
+            {
+              "speaker": "thug",
+              "text": "<i>他把钱揣回去</i>话我撂这儿了。你不带，我自己去她楼下说。",
+              "en": "<i>He pockets the money</i>I've said my piece. You won't take it to her, I'll go say it under her window myself."
+            },
+            {
+              "speaker": "thug",
+              "text": "三天。",
+              "en": "Three days."
+            }
+          ]
+        },
+        {
+          "id": "c13.b003",
+          "scene": "跑腿钱",
+          "label": "不收，话带到",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "钱拿走。话我带到。",
+              "en": "Take the money. I'll pass it on."
+            },
+            {
+              "speaker": "thug",
+              "text": "嫌少？",
+              "en": "Not enough?"
+            },
+            {
+              "speaker": "player",
+              "text": "不收你的钱。",
+              "en": "I'm not taking your money."
+            },
+            {
+              "speaker": "thug",
+              "text": "<i>他把钱揣回去</i>随你。少挣三百的又不是我。",
+              "en": "<i>He pockets the money</i>Your call. I'm not the one out three hundred."
+            },
+            {
+              "speaker": "thug",
+              "text": "三天后我来听回话。",
+              "en": "I'll come back in three days for an answer."
+            },
+            {
+              "speaker": "thug",
+              "text": "盘送到你这儿，我来取。她妈那边，当天就有消息。",
+              "en": "The drive comes to you, I pick it up. Her mother gets word the same day."
+            },
+            {
+              "speaker": "thug",
+              "text": "别惦记报治安部。那边比你想的热闹。",
+              "en": "Don't get any ideas about the Security Bureau. It's busier over there than you think."
+            },
+            {
+              "speaker": "player",
+              "text": "说完了？",
+              "en": "You done?"
+            },
+            {
+              "speaker": "thug",
+              "text": "说完了。那丫头脾气冲，你劝的时候嘴软一点。",
+              "en": "Done. That girl's got a temper. Soften your tone when you talk her round."
+            },
+            {
+              "speaker": "thug",
+              "text": "劝不动，倒霉的又不是你。",
+              "en": "If she won't listen, you're not the one who pays."
+            },
+            {
+              "speaker": "thug",
+              "text": "<i>他退开一步，停了一下</i>那个盘，可别弄丢了。丢了，谁都换不回来。",
+              "en": "<i>He pulls the door open, pauses</i>That drive. Don't lose it. Lose it, and there's no getting her back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c14",
+      "title": "三条路",
+      "blocks": [
+        {
+          "id": "c14.b001",
+          "scene": "三条路",
+          "label": "三条路",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "她空着手来到窗口前，先朝柜台后头那把锁看过去。",
+              "en": "No bag this time. First thing through the door, she looks at the lock behind the counter."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你带话叫我来，什么要紧事非得今天说。",
+              "en": "You sent word for me. What's so important it has to be today?",
+              "expr": "serious"
+            },
+            {
+              "speaker": "player",
+              "text": "来过一个人，要那张盘。",
+              "en": "Someone came by. They want that drive."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "谁。",
+              "en": "…Who."
+            },
+            {
+              "speaker": "player",
+              "text": "黑市跑腿的。说只要交了盘，你母亲就能出来。",
+              "en": "A runner from the black market. Says if you hand over the disc, your mother gets out."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "放？他们说放就能放？",
+              "en": "Out? They say out and she's out?"
+            },
+            {
+              "speaker": "player",
+              "text": "他说了不算，上头的才算。",
+              "en": "He says it's not his call. It's his boss's."
+            },
+            {
+              "speaker": "player",
+              "text": "还塞了三百跑腿费，我没拿。",
+              "en": "He gave me three hundred for the errand. I didn't take it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "三百。我妈落在他们那里，就值你跑这一趟。",
+              "en": "Three hundred. That's what my mother's worth to them—one errand.",
+              "expr": "angry"
+            },
+            {
+              "speaker": "player",
+              "text": "他还说，牢里冷，人病倒在里面没人会奇怪。",
+              "en": "He also said the cells are cold. If someone gets sick, nobody would think twice."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>她一把抓住柜沿</i>……他敢。",
+              "en": "<i>She grabs the edge of the counter</i>…He wouldn't dare.",
+              "expr": "sad"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他们敢。账都能凭白编出来，还有什么不敢。",
+              "en": "They would. If they can fabricate a ledger out of thin air, what won't they do?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "给了几天？",
+              "en": "How many days did they give you?"
+            },
+            {
+              "speaker": "player",
+              "text": "三天。今天第二天。",
+              "en": "Three days. Today's the second."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我昨晚整宿没合眼，翻来覆去想的都是盘里那些东西。",
+              "en": "I didn't sleep a wink last night. All I could think about was what's on that disc."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "交出去，母亲也许能出来。研究就回到帕斯泰尔手里，烂在哪个抽屉里。",
+              "en": "If I hand it over, my mother might get out. The research goes back to Pastel, rotting in some drawer."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那是她最在意的东西。她宁可坐牢都没停。",
+              "en": "It's what she cares about most. She didn't stop even when it meant prison."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不交，直接贴出去，让整个下层区都知道营养果能结籽。",
+              "en": "Don't hand it over—post it straight out, let the whole Lower District know the nutrient fruit can produce seeds…"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那她被关在里面，就成了他们最后一张能捏的牌。",
+              "en": "Then while she's locked in there, she's the last card they can squeeze."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我选哪条，都有人替我付账。",
+              "en": "Whichever way I choose, someone else pays.",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "喂，你说。不是让你替我定，我就想听听你会怎么走。",
+              "en": "Hey, you. Tell me. I'm not asking you to decide for me—I just want to hear what move you'd make."
+            }
+          ]
+        },
+        {
+          "id": "c14.b002",
+          "scene": "三条路",
+          "label": "交盘换人",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "交。人先出来，别的以后再说。",
+              "en": "…Hand it over. Get her out first. The rest can wait.",
+              "expr": "sad"
+            },
+            {
+              "speaker": "security_notice",
+              "text": "索菲娅案撤销，本人获释，禁止返回上层区。",
+              "en": "Sophia's case dismissed. Subject released. Return to the Upper District prohibited."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她出来了，研究回了他们手里。这笔账，我以后自己跟她算。",
+              "en": "She's out. The research is back in their hands. I'll settle that score with her myself later."
+            }
+          ]
+        },
+        {
+          "id": "c14.b003",
+          "scene": "三条路",
+          "label": "先保人再公开",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "先去治安部申请保释，把人挪到明处。",
+              "en": "First go to the Security Department and apply for protective custody. Move her out in the open."
+            },
+            {
+              "speaker": "player",
+              "text": "人保住了，再把研究交出去，公开。",
+              "en": "Once she's protected, hand over the research—publicly."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "治安部？关她的就是他们。",
+              "en": "The Security Department? They're the ones who locked her up."
+            },
+            {
+              "speaker": "player",
+              "text": "关她的是那笔账。申请保释走另一张单子。",
+              "en": "It was that ledger that locked her up. Protective custody is a different form."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不过最后确实放我回来了。",
+              "en": "...But they did let me go in the end.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "保释单上写了名字，她出一点事，就得有人签字认。",
+              "en": "Her name's on the care form. If anything happens to her, someone has to sign and answer for it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他们最怕的就是签字。",
+              "en": "A signature is what they're most afraid of."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "侦探的字据还在。他能证明盘是从灯架底下拿的，没人动过。",
+              "en": "The detective's written statement is still there. He can testify the disc was taken from under the lamp stand and no one touched it.",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我先抄一份副本。原盘交上去之前，把内容送进公开档。",
+              "en": "I'll make a copy myself first. Before the original goes in, I'll get the contents into the public archive."
+            },
+            {
+              "speaker": "player",
+              "text": "盘在这儿。现在拿？",
+              "en": "The disc's here. You want it now?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在拿。<i>她接过去，攥进掌心</i>",
+              "en": "Now. <i>She takes it and clutches it in her palm.</i>"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那个跑腿的再来，你就说我不交。别的不用多说。",
+              "en": "If that errand runner comes back, tell them I'm not handing it over. Don't say anything else."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "还有，你没收那三百。",
+              "en": "And... you didn't take the three hundred.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我听见了。",
+              "en": "Don't think I didn't hear."
+            }
+          ]
+        },
+        {
+          "id": "c14.b004",
+          "scene": "三条路",
+          "label": "立即公开",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "贴。今天就贴。让他们捂都捂不住。",
+              "en": "Post it. Today. Make it so they can't cover it up.",
+              "expr": "determined"
+            },
+            {
+              "speaker": "security_notice",
+              "text": "在押人员索菲娅于羁押中死亡，原因待查。",
+              "en": "Detainee Sofia died in custody. Cause under investigation."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "东西都贴出去了。人没了。别跟我说话，我站一会儿就走。",
+              "en": "...It's all posted. She's gone. Don't talk to me. I'll stand here a bit, then leave.",
+              "expr": "hurt"
+            }
+          ]
+        },
+        {
+          "id": "c14.b005",
+          "scene": "三条路",
+          "label": "看护单",
+          "lines": [
+            {
+              "speaker": "security_notice",
+              "text": "在押人员索菲娅的保释申请已受理，案件待审，见面另行通知。",
+              "en": "Detainee Sofia has been transferred to care. Case under review. Visitation by notice."
+            },
+            {
+              "speaker": "news",
+              "text": "下层区公告板：水培农场营养果结籽研究资料已存入公开档。",
+              "en": "Lower District bulletin: hydroponic farm nutrient-fruit seed research has been placed in the public archive."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "单子贴出来了，你看见没有？",
+              "en": "The notice is up. Did you see it?",
+              "expr": "tired"
+            },
+            {
+              "speaker": "player",
+              "text": "看见了。",
+              "en": "Saw it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "保释受理，案件待审。就为这几个字，我在治安部门口坐了一整天。",
+              "en": "Transferred to care, under review. I sat outside the Security office all day for those few words."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "签字那个警官看了盘里的信，脸色一下就变了。",
+              "en": "The officer who signed it looked at the letter on the disc, and his face changed."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他说审判要时间，没说要多久。",
+              "en": "He said the review takes time. Didn't say how long."
+            },
+            {
+              "speaker": "player",
+              "text": "人呢。",
+              "en": "Where is she?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "安全了。至少单子上是这么写的。",
+              "en": "She's safe. At least, that's what the form says.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "还不让见，说等通知。",
+              "en": "Still no visits. They said wait for notice."
+            }
+          ]
+        },
+        {
+          "id": "c14.b006",
+          "scene": "三条路",
+          "label": "问她买什么",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "买什么。",
+              "en": "What are you buying?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "直接。行，我也不跟你绕。",
+              "en": "Direct. Fine. I won't beat around the bush either."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>她没坐，手搭在柜台上</i>就是累，站着说也一样。",
+              "en": "<i>She doesn't sit, hand on the counter</i>Just tired. Same if I stand."
+            }
+          ]
+        },
+        {
+          "id": "c14.b007",
+          "scene": "三条路",
+          "label": "让她坐",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "坐。",
+              "en": "Sit."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就坐一会儿。<i>她拉过窗口外的凳子，坐得很低</i>",
+              "en": "…Just for a bit.<i>She pulls over the stool by the counter and sits low</i>"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "研究贴出去以后，配给站排队的人都在议论。",
+              "en": "After the research went up, everyone in line at the ration station was talking."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有个大婶问我，是不是真能自己种。我说能。",
+              "en": "An older woman asked me if you can really grow your own. I said yes."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她又问，那以后是不是不用天天吃营养果了。",
+              "en": "Then she asked if that meant no more nutrient fruit every day."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我说不是，以后营养果只会更多。她脸当场就垮了。",
+              "en": "I said no. There'd only be more nutrient fruit. Her face fell right there.",
+              "expr": "smile"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "跟我一个样。",
+              "en": "Same as me."
+            },
+            {
+              "speaker": "player",
+              "text": "你母亲知道了，会说什么。",
+              "en": "What would your mother say if she knew?"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她会挑我抄的副本，说字写歪了。",
+              "en": "She'd pick apart the copy I made and say my handwriting's crooked."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "也罢。等能见面，我当面问她为什么。",
+              "en": "…Never mind. When we can meet, I'll ask her why to her face.",
+              "expr": "sad"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天我不想吃营养果。你这儿有别的吃的吗？便宜点的。",
+              "en": "I don't want nutrient fruit today. You got anything else to eat? Cheaper.",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "甜的也行。就今天。",
+              "en": "Sweet is fine too. Just for today."
+            }
+          ]
+        },
+        {
+          "id": "c14.b008",
+          "scene": "三条路",
+          "label": "公道",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "甜的。半个月了，总算吃到一口不是那层皮的。",
+              "en": "Sweet. Half a month, and I finally get a bite that isn't that skin.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "明天我回垃圾场。今天就到这儿。",
+              "en": "I'm going back to the junkyard tomorrow. That's it for today."
+            }
+          ]
+        },
+        {
+          "id": "c14.b009",
+          "scene": "三条路",
+          "label": "让利",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你少收了。我看得出来。",
+              "en": "You undercharged. Don't think I can't tell.",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就今天这一回，记着，下回我带货来抵。",
+              "en": "…Just this once. Remember—next time I'll bring goods to make up for it."
+            }
+          ]
+        },
+        {
+          "id": "c14.b010",
+          "scene": "三条路",
+          "label": "高价",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "这么点甜的要这个价？你今天是专挑我下手。",
+              "en": "That much for this little sweet? You're singling me out today.",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "付了。下回我先去别处看价签。",
+              "en": "Paid. Next time I'll check the price tags somewhere else first."
+            }
+          ]
+        },
+        {
+          "id": "c14.b011",
+          "scene": "三条路",
+          "label": "未成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "没有就没有。回去照样吃营养果。",
+              "en": "If you don't have any, forget it. I'll go back to nutrient fruit like always.",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "<i>她起身，退了一步又停住</i>审判有消息，我会来。",
+              "en": "<i>She gets up and pauses at the door</i>If there's any news on the review, I'll come."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c15",
+      "number": 15,
+      "title": "把承诺办成事情",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c15.b002",
+          "chapter": "c15",
+          "scene": "玩家完成申请、支付或材料提交后，她来确认",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "申请递上去了，还在等回复。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你没跟我说“已经没事了”。",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这样反而好。以前有人每次都说“放心”，就再也见不到人了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今晚还去打短工。等消息也得吃饭。",
+              "expr": "tired"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟室友说好了，要是有人来打听我母亲住哪，一个字都别说。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "室友说，我现在才学会这个，已经算晚的了。"
+            }
+          ]
+        },
+        {
+          "id": "c15.b003",
+          "chapter": "c15",
+          "scene": "关系较好时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "申请上也写了你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你的店铺地址，我检查了两遍。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "怕写错了，真出事的时候找不到你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你就在这儿。所以我才敢把事情说到这一步。"
+            }
+          ]
+        },
+        {
+          "id": "c15.b004",
+          "chapter": "c15",
+          "scene": "研究保留：收到实际回应",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "security_notice",
+              "text": "相关人员的安全复查已受理。批准转入临时看护，家属可在核验后探视。此措施不代表原案撤销。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我……可以见她了？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好。我这就去。先核验，见到人再说。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "要是真的，我回来告诉你。我亲口告诉你。"
+            }
+          ]
+        },
+        {
+          "id": "c15.b005",
+          "chapter": "c15",
+          "scene": "研究归还：替换以上准备段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "先核验人和手续。别只听传话的说办好了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我要母亲亲口跟我确认。不能让别人替她念一句话就算数。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "副本不留。我既然拿它换她，就不能一边拿她的命作担保，一边赌他们查不出来。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我想清楚了。以后还有没有别的办法，那是以后的事。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天，我只想见到她。"
+            }
+          ]
+        },
+        {
+          "id": "c15.b006",
+          "chapter": "c15",
+          "scene": "研究保留：准备未成功时的退路",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "还是没有能把她接出来的确认，对吗？"
+            },
+            {
+              "speaker": "player",
+              "text": "没有。接着申请，或者改成归还换人。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "“正在处理”又不等于她安全了。先把她换出来。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c16",
+      "number": 16,
+      "title": "她说了“妈妈”",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c16.b001",
+          "chapter": "c16",
+          "scene": "研究归还：母亲按交换条件获释",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嘿！我妈妈自由了！",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "见到本人了！她第一句话就问我，是不是又没好好吃饭。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她被流放到了下层区，回不了原来的农场。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "但我们又在一起了。今晚，我知道她睡在哪儿。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c16.b002",
+          "chapter": "c16",
+          "scene": "研究保留：保护转移完成",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我见到母亲了！人已经转出来，有人看护，探视也登记了。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她知道接下来会怎样。研究、威胁，还有公开的事，我全都跟她说了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她说，先让看护的人把安排确认好，再把东西送出去。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她说我已经够莽撞了，家里总得有个人多问两句。"
+            }
+          ]
+        },
+        {
+          "id": "c16.b003",
+          "chapter": "c16",
+          "scene": "甲乙共同对白",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我准备了好多话：她在里面吃得怎么样，为什么不早点告诉我，有没有人欺负她。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "一句都没问出来。就叫了一声“妈妈”。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她说，听见了，不用那么大声。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在能慢慢问了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我以前总觉得，只要能回到上面，一切就能恢复原样。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "可今天见到她，我连上面的房子都没想起来。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "接下来先在下层区找住的地方。室友会帮忙看看，我也还能继续打工。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "缺什么我会来买，按价买。你帮了我们太多，不能以后每样东西都让你出。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天，我想好好跟你说一次谢谢。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那时候我只会说想救她，你帮我把她接回来了。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c16.b004",
+          "chapter": "c16",
+          "scene": "研究保留后续：研究交付与新闻，必须在安全确认后",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "news",
+              "text": "营养果恢复结籽的研究资料已交由独立研究人员核验。帕斯泰尔公司驻空间站代表涉嫌施压及干预案件，现已接受调查。"
+            },
+            {
+              "speaker": "news",
+              "text": "相关当事人目前处于登记保护之下。原挪用公款案尚待复核，调查结果不代表最终裁决。"
+            }
+          ]
+        },
+        {
+          "id": "c16.b005",
+          "chapter": "c16",
+          "scene": "研究保留第48天母亲来访前的必要通知",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "security_notice",
+              "text": "登记看护安排已确认。准许家属在下层区登记住址共同生活，并可正常进行日常活动。联系人与地址已留档；原案复核期间需保持联络。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c17",
+      "number": 17,
+      "title": "母亲来买东西",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c17.b001",
+          "chapter": "c17",
+          "scene": "",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "mother",
+              "text": "你好。埃莉诺说，在这儿买东西，老板会先把毛病告诉你。"
+            },
+            {
+              "speaker": "mother",
+              "text": "她还说，老板有时候不太会说话，人倒不坏。",
+              "expr": "smile"
+            },
+            {
+              "speaker": "mother",
+              "text": "我想买点日用品，还有吃的。我们住的地方还缺不少东西。",
+              "expr": "neutral"
+            },
+            {
+              "speaker": "mother",
+              "text": "她打工去了。出门前还叮嘱我，别看见便宜的就全往回拿。"
+            }
+          ]
+        },
+        {
+          "id": "c17.b002",
+          "chapter": "c17",
+          "scene": "查看商品",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "mother",
+              "text": "以前我这么叮嘱她，她都假装没听见。"
+            },
+            {
+              "speaker": "mother",
+              "text": "你替她做的事，她都跟我说了。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "mother",
+              "text": "可她讲到自己的时候，话比讲到你的时候少多了。"
+            },
+            {
+              "speaker": "mother",
+              "text": "也可能是在等我问。"
+            }
+          ]
+        },
+        {
+          "id": "c17.b003",
+          "chapter": "c17",
+          "scene": "研究归还追加",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "mother",
+              "text": "研究交回去了，我心里不好受。"
+            },
+            {
+              "speaker": "mother",
+              "text": "但别让她觉得，把我接回来是一件需要跟我认错的事。"
+            }
+          ]
+        },
+        {
+          "id": "c17.b004",
+          "chapter": "c17",
+          "scene": "研究保留追加",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "mother",
+              "text": "资料已经送出去了，复查我会继续配合。剩下的工作，还得一点一点做。"
+            },
+            {
+              "speaker": "mother",
+              "text": "你们先把我转出来再公开，是对的。不能总让最没法自保的人去承担代价。"
+            }
+          ]
+        },
+        {
+          "id": "c17.b005",
+          "chapter": "c17",
+          "scene": "实际交易结束后",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "mother",
+              "text": "就这些。别因为是我，就不肯收钱。"
+            },
+            {
+              "speaker": "mother",
+              "text": "她不肯白拿东西这点，确实像我。"
+            },
+            {
+              "speaker": "mother",
+              "text": "她最近说起这里，已经不光是说买到了什么。"
+            },
+            {
+              "speaker": "mother",
+              "text": "还说什么，你自己去问她。我可不替她把话说完。"
+            }
+          ]
+        },
+        {
+          "id": "c17.b101",
+          "scene": "按价签来",
+          "label": "按价签来",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "一个女人来到窗口前，穿着灰外套，胸前别着一块看护处的登记牌。",
+              "en": "The doorbell rings. The woman who walks in wears a gray coat, a care office registration badge pinned to her chest."
+            },
+            {
+              "speaker": "mother",
+              "text": "你好。配给站往东，第三个窗口。是这儿吧。",
+              "en": "Hello. Ration station is east, third door. This is the place, right."
+            },
+            {
+              "speaker": "mother",
+              "text": "埃莉诺给我画了张图，画得比我们农场的排班表还细。",
+              "en": "Eleanor drew me a map. More detail than the shift rota back at our farm."
+            },
+            {
+              "speaker": "player",
+              "text": "是这儿。",
+              "en": "This is it."
+            },
+            {
+              "speaker": "mother",
+              "text": "她说你卖东西，先报毛病。",
+              "en": "She says you sell things, and you tell the faults first."
+            },
+            {
+              "speaker": "mother",
+              "text": "我来买点日用品，顺便验一验。",
+              "en": "I came for some daily goods. And to check that for myself."
+            },
+            {
+              "speaker": "player",
+              "text": "左架。最上面两瓶，盖子拧不紧。",
+              "en": "Left shelf. Top two bottles. Lids don't screw on tight."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她走到左架前，把那两瓶挨个拧了一圈，放回原处，拿走了后排的。",
+              "en": "She goes to the left shelf, twists each of the two bottles in turn, puts them back, and takes the ones from the back row."
+            },
+            {
+              "speaker": "mother",
+              "text": "确实拧不紧。你没骗她。",
+              "en": "They really don't. You didn't lie to her."
+            },
+            {
+              "speaker": "mother",
+              "text": "营养果也来几个。屋里那张图上，她还画了个果子。",
+              "en": "Some nutrient fruit too. She drew a fruit on that map in the room."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她拿起一个营养果，拇指按了按皮，凑到灯下转了半圈。",
+              "en": "She picks up a nutrient fruit, presses the skin with her thumb, and turns it half around under the lamp."
+            },
+            {
+              "speaker": "mother",
+              "text": "配给站的批次，皮色发暗，里头是空的。",
+              "en": "Ration station batches. Skin's dark. Hollow inside."
+            },
+            {
+              "speaker": "mother",
+              "text": "资料现在谁都能翻了。能种出来的那种，还没人发苗。",
+              "en": "Anyone can look up the data now. The kind you can actually grow — nobody's handed out seedlings yet."
+            },
+            {
+              "speaker": "player",
+              "text": "你不去管？",
+              "en": "You're not going to do anything about it?"
+            },
+            {
+              "speaker": "mother",
+              "text": "复核没结，我得待在登记的地址上。看守每天来点两次名。",
+              "en": "The review isn't closed. I have to stay at the registered address. The guard calls my name twice a day."
+            },
+            {
+              "speaker": "mother",
+              "text": "今早有个工人托看守带话，问下一轮班次还排不排。",
+              "en": "This morning a worker had the guard pass on a message. Asking if the next shift rotation is still on."
+            },
+            {
+              "speaker": "mother",
+              "text": "我回不了话。研究是大家的了，我手里反倒空了。",
+              "en": "I can't answer. The research belongs to everyone now. My hands are empty."
+            },
+            {
+              "speaker": "mother",
+              "text": "这话别跟她讲。她会觉得是她害我没了活干。",
+              "en": "Don't tell her that. She'll think it's her fault I lost my work."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把东西码在柜台上，从外套口袋里摸出几枚信用点，一枚一枚摆开。",
+              "en": "She sets the things on the counter, digs a few credits out of her coat pocket, and lays them out one by one."
+            },
+            {
+              "speaker": "mother",
+              "text": "她跟你讲过那八百信用点是怎么攒的吗？",
+              "en": "Has she ever run a tab with you."
+            },
+            {
+              "speaker": "player",
+              "text": "卖拾荒货，一笔一笔攒的。",
+              "en": "Once. She came and crossed it off herself."
+            },
+            {
+              "speaker": "mother",
+              "text": "她从前连价签都懒得看。这事，她倒没跟我细说。",
+              "en": "She has to pay back even one meal. That part she gets from me."
+            },
+            {
+              "speaker": "player",
+              "text": "一共这些。",
+              "en": "That's the total."
+            },
+            {
+              "speaker": "mother",
+              "text": "你没少报。好。我最怕别人看我穿这件外套，就把价往下压。",
+              "en": "You didn't under-report. Good. What I hate most is people seeing this coat and knocking the price down."
+            },
+            {
+              "speaker": "mother",
+              "text": "她这几天睡得沉了。昨晚说梦话，在跟人还价。",
+              "en": "She's been sleeping deep these days. Last night she talked in her sleep. Haggling with someone."
+            },
+            {
+              "speaker": "mother",
+              "text": "她要来，会自己来。我只是来买东西的。",
+              "en": "If she wants to come, she'll come herself. I'm just here to buy things."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把营养果揣进外套口袋，冲店主点了下头，转身走了。",
+              "en": "She tucks the nutrient fruit into her coat pocket, nods at the shopkeeper, and pushes the door open."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c18",
+      "number": 18,
+      "title": "事情结束以后，她还是来了",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c18.b001",
+          "chapter": "c18",
+          "scene": "",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我妈是不是来过了？"
+            },
+            {
+              "speaker": "player",
+              "text": "来过。买了东西，付了钱。她让我来问你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我就知道。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那今天先别问！",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c18.b002",
+          "chapter": "c18",
+          "scene": "普通交易或交易结束后的短聊",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我带了点货来。这回真是来卖的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我妈现在比我起得还早。前两天我一醒，就看见她坐在那儿修一个旧托盘。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她说，手上不做点事，就总会想起里面的事。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我把工具递给她，然后在旁边坐了一会儿。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "也没什么特别的，就是坐了一会儿。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c18.b003",
+          "chapter": "c18",
+          "scene": "关系稳定时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我一直以为，等她出来了，我就知道下一步该干什么了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "活要接着干，房间要收拾，饭也得吃。这些都知道。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我不用再为了求你帮忙，找个理由来这儿了。",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c18.b003a",
+          "chapter": "c18",
+          "scene": "关系稳定分支：不找理由也能来",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "这可是你说的。"
+            }
+          ]
+        },
+        {
+          "id": "c18.b003b",
+          "chapter": "c18",
+          "scene": "关系稳定分支：想来就来",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "……你最近说话倒是越来越直接。行，我记住了。"
+            }
+          ]
+        },
+        {
+          "id": "c18.b003c",
+          "chapter": "c18",
+          "scene": "关系稳定分支：先把日子过顺",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你倒会替我省心。好，我先把日子过顺。"
+            }
+          ]
+        },
+        {
+          "id": "c18.b004",
+          "chapter": "c18",
+          "scene": "若只是一般朋友，替换最后一段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "以后我还是会来卖货的。你不用每次都问我出了什么事。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我是常客。普通客人可不知道你收什么。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c18.b101",
+          "scene": "一只镯子的交情",
+          "label": "一只镯子的交情",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "隔天下午，两个人一前一后来到窗口前。走在前面的那个提着半袋旧货。",
+              "en": "Next afternoon, two people come in one after the other. The one in front carries half a bag of old goods."
+            },
+            {
+              "speaker": "lydia",
+              "text": "说好了是我带她来的！结果她天天自己往这儿跑，我这算什么？",
+              "en": "We agreed I'd be the one to bring her! Then she starts running over here by herself every day — what does that make me?",
+              "expr": "smile"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你算带路的。路我早就认得。",
+              "en": "It makes you the guide. I knew the way already."
+            },
+            {
+              "speaker": "lydia",
+              "text": "哎呀，你听听这嘴。",
+              "en": "Oh, listen to that mouth."
+            },
+            {
+              "speaker": "lydia",
+              "text": "你就说——她最近是不是气色好多了？脸都圆了一点。",
+              "en": "Just tell me—hasn't she been looking better lately? Face is a little rounder."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "谁的脸圆了。少来。",
+              "en": "Whose face is round. Cut it out.",
+              "expr": "angry"
+            },
+            {
+              "speaker": "narrator",
+              "text": "莉迪亚抬起手腕晃了晃，那只旧手镯在灯底下闪了一下。",
+              "en": "Lydia lifts her wrist and gives it a shake. The old bracelet glints under the light."
+            },
+            {
+              "speaker": "lydia",
+              "text": "镯子我天天戴着。家里问起来，我就说是自己找回来的。",
+              "en": "I wear the bracelet every day. When my family asks, I say I found it myself."
+            },
+            {
+              "speaker": "lydia",
+              "text": "……不对，等等，我本来是来看她的，怎么又说起我自己了。",
+              "en": "...No, wait. I came here to see her. Why am I talking about myself again."
+            },
+            {
+              "speaker": "lydia",
+              "text": "家里最近在查我的账，我得赶在晚饭前回去。人我送到了。",
+              "en": "My family's been going through my accounts lately. I have to be back before dinner. I got her here.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "lydia",
+              "text": "下回我自己来。我也有东西要买。那可说好了。",
+              "en": "Next time I'll come on my own. I've got things to buy too. That's settled, then."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你们俩倒是熟。",
+              "en": "You two sure are close."
+            },
+            {
+              "speaker": "lydia",
+              "text": "一只镯子的交情嘛。走了！",
+              "en": "One bracelet's worth of friendship. I'm off!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "埃莉诺把麻袋放到柜台上，袋里的金属件碰了几声。她没急着解开。",
+              "en": "The doorbell rings a while before it stops. Eleanor sets the sack on the counter, in no hurry to open it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她话多。你别都当真。",
+              "en": "She talks a lot. Don't take it all seriously."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "屋子登记下来了。室友搬去了别处，母亲睡里头那张床。",
+              "en": "The room's registered now. The roommate moved somewhere else. My mother sleeps in the bed in there."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她昨天来过你这儿。回去以后一个字都没跟我说。",
+              "en": "She came here yesterday. After she got back, she didn't say a word to me."
+            },
+            {
+              "speaker": "player",
+              "text": "她买了日用品，还有吃的。",
+              "en": "She bought household goods, and something to eat."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就这些？",
+              "en": "That's all?"
+            },
+            {
+              "speaker": "player",
+              "text": "就这些。按价签付的。",
+              "en": "That's all. Paid the marked price."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "……行吧。她是会这样。",
+              "en": "...Fine. That's her, all right.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她解开麻袋，倒出一只旧盒子，盖子裂了道缝。还有一卷缠好的线材。",
+              "en": "She opens the sack and tips out an old box, its lid split along a seam. And a roll of coiled wire."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "盒子裂的是盖，底是好的。线我自己量过，没断。",
+              "en": "The crack's in the lid. The bottom's fine. I measured the wire myself. Nothing broken."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你报价。",
+              "en": "Name your price."
+            },
+            {
+              "speaker": "player",
+              "text": "盒子按旧货收。线算整卷。",
+              "en": "Box goes as secondhand. Wire counts as a full roll."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "跟我算的差不多。少一点，我也认。",
+              "en": "About what I figured. A little less and I'd still take it."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她把硬币装进零钱袋，系了两道，没离开窗口。",
+              "en": "She puts the coins in her change purse and ties it twice. She doesn't head for the door."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c19",
+      "number": 19,
+      "title": "她没有把这件事算进账里",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c19.b001",
+          "chapter": "c19",
+          "scene": "追加：需要和解时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "有件事得先说清楚。那个冒充叔叔的人送来的箱子，我没忘。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你确实把事情补上了，有什么事也都先告诉我。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我愿意再信你一次。可那次的事，做错了就是做错了。"
+            },
+            {
+              "speaker": "player",
+              "text": "以后有危险，我第一时间告诉你。"
+            }
+          ]
+        },
+        {
+          "id": "c19.b002",
+          "chapter": "c19",
+          "scene": "恋爱条件成立时",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "今天没带货。有件事想跟你说。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你每次都先问卖什么。今天先别问。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我最近来得，比有货卖的时候还勤。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我会想你今天有没有收到好东西，是不是又把午饭放凉了，碰上难缠的客人有没有又跟人顶起来。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲的事有了着落，我还是天天想见你。"
+            },
+            {
+              "speaker": "player",
+              "text": "埃莉诺，我也——"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "等一下，让我说完。我喜欢你。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好了，该你回答了。别让我等太久。",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c19.b003",
+          "chapter": "c19",
+          "scene": "明确选择：接受她的心意",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "我也喜欢你。跟你以前住在哪儿没关系。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "跟住在哪儿没关系？你现在说得倒轻巧。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "那以后我挑你的刺，你也不许躲。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好。那以后我来，就不用再找理由了。"
+            }
+          ]
+        },
+        {
+          "id": "c19.b004",
+          "chapter": "c19",
+          "scene": "明确选择：希望慢一点",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "我想多了解你一些。但能不能慢一点？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "可以。我又没让你今天就签一辈子的合同。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别明明听见了，还装作没这回事。"
+            }
+          ]
+        },
+        {
+          "id": "c19.b005",
+          "chapter": "c19",
+          "scene": "明确选择：只做朋友",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "我很在乎你。但不是那种感情。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "知道了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你直接告诉我，总比让我一直猜好。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "以前的事，不用拿这个来还。感情也不是还债。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "过两天我还来卖货。到时候，你就跟平常一样。"
+            }
+          ]
+        },
+        {
+          "id": "c19.b006",
+          "chapter": "c19",
+          "scene": "若恋爱条件尚不成立，使用朋友段，不强行告白",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "以前我说过几次很难听的话，今天想补一句。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "谢谢你一直把我当成一个能自己做事的人。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我现在信自己了。以后你要是有用得上我的地方，也可以来找我。"
+            }
+          ]
+        },
+        {
+          "id": "c19.b101",
+          "scene": "她先说",
+          "label": "她先说",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "天色暗下来，街上的灯一盏一盏亮了。她坐在窗口外那只箱子上，脚尖点着地面。",
+              "en": "The sky darkens. Street lamps come on one by one. She sits on the crate by the counter, toe tapping the floor."
+            },
+            {
+              "speaker": "player",
+              "text": "打烊了。",
+              "en": "We're closed."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我知道。我又不买东西。",
+              "en": "I know. I'm not buying anything."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲在家。看守刚点完名，她会自己煮营养果。",
+              "en": "Mother's home. The guards just finished roll call. She'll cook her own nutrient fruit."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟她说，晚点回去。",
+              "en": "I told her I'd be back late."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她从领口拽出吊坠，在手心里攥了一下，又塞了回去。",
+              "en": "She pulled the pendant out by its cord, gripped it in her palm, then tucked it back."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "喂。我说件事，你别打岔。",
+              "en": "Hey. I'm telling you something. Don't cut in.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "刚来那会儿，我觉得下层区的当铺都一个样。",
+              "en": "At first I figured you were just a shopkeeper. Pawnshops in the lower district... they're all the same."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "后来那家又压价，又扣成色。少算的那几个信用点，我也没来找你补。",
+              "en": "Then there was the one with the rigged scale. I walked. The day you were one coin short, I didn't come asking for it either."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。",
+              "en": "But I keep coming here. Not because it's cheap. It isn't cheap."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你帮母亲的事，我没忘。",
+              "en": "The thing with my mother — I remember what I owe you for that. This has nothing to do with it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我不是在还账。",
+              "en": "Don't think I'm paying off a debt."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我喜欢你。",
+              "en": "...I like you.",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就这些。你看着办。",
+              "en": "That's it. Do what you want."
+            }
+          ]
+        },
+        {
+          "id": "c19.b102",
+          "scene": "我也喜欢你",
+          "label": "我也喜欢你",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "店主隔着窗口伸出手。她抬起搭在膝上的那只手，让他握住了。",
+              "en": "The shopkeeper came around the counter, stopped in front of her, and took the hand resting on her knee."
+            },
+            {
+              "speaker": "player",
+              "text": "我也是。",
+              "en": "Me too.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你答得真快。这几句话，我想了三天。",
+              "en": "...You answered fast. I thought about it for three days on the way here."
+            },
+            {
+              "speaker": "player",
+              "text": "我想得比你久。",
+              "en": "I've thought about it longer than you."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "呵。那你怎么不先说。",
+              "en": "Hah. Then why didn't you say it first?"
+            },
+            {
+              "speaker": "player",
+              "text": "你说过，别替你拿主意。",
+              "en": "You said not to make decisions for you."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这句你也记得。",
+              "en": "...You remembered that too.",
+              "expr": "soft"
+            },
+            {
+              "speaker": "narrator",
+              "text": "她没把手抽回去，反过来捏住他的手指，捏得有点重。",
+              "en": "She didn't pull her hand back. She gripped his fingers instead, a little too hard."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "货我还自己去捡。拿来卖的时候，你可别乱报价。",
+              "en": "Let's get this straight. I still scavenge. I still sell. You misprice, I'll still call you out."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "明天我还来。不买东西也来。",
+              "en": "I'm coming tomorrow. Even if I don't buy anything."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲那边，我自己跟她讲。你别去。",
+              "en": "My mother — I'll tell her myself. Don't you go."
+            },
+            {
+              "speaker": "player",
+              "text": "好。",
+              "en": "Okay."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她站起来，松开手，往后让了让，给窗口的卷帘腾出地方。",
+              "en": "She stood, let go of his hand, walked to the door, and pulled the shutter cord down."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "收店吧。我在外头等你。",
+              "en": "Closing up. I'll help you pull."
+            }
+          ]
+        },
+        {
+          "id": "c19.b103",
+          "scene": "我们做朋友",
+          "label": "我们做朋友",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "我当你是朋友。往后也是。",
+              "en": "I think of you as a friend. And I will going forward."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我知道了。你说得清楚，省得我猜。",
+              "en": "...Got it. You said it clear. Saves me guessing.",
+              "expr": "sad"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "明天我还来卖货。按价签，一个信用点都别让。",
+              "en": "I'll come tomorrow to sell. By the price tag — don't give up a single coin."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她起身把箱子推回窗边，转身走了。",
+              "en": "She gets up, pushes the crate back into place, and heads out the door. The bell rings once."
+            }
+          ]
+        },
+        {
+          "id": "c19.b101_return",
+          "scene": "她先说",
+          "label": "她先说",
+          "lines": [
+            {
+              "speaker": "narrator",
+              "text": "天色暗下来，街上的灯一盏一盏亮了。她坐在窗口外那只箱子上，脚尖点着地面。",
+              "en": "The sky darkens. Street lamps come on one by one. She sits on the crate by the counter, toe tapping the floor."
+            },
+            {
+              "speaker": "player",
+              "text": "打烊了。",
+              "en": "We're closed.",
+              "expr": "neutral"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我知道。我又不买东西。",
+              "en": "I know. I'm not buying anything."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "母亲在家。她会自己煮营养果。",
+              "en": "Mother's home. The guards just finished roll call. She'll cook her own nutrient fruit."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟她说，晚点回去。",
+              "en": "I told her I'd be back late."
+            },
+            {
+              "speaker": "narrator",
+              "text": "她从领口拽出吊坠，在手心里攥了一下，又塞了回去。",
+              "en": "She pulled the pendant out by its cord, gripped it in her palm, then tucked it back."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "喂。我说件事，你别打岔。",
+              "en": "Hey. I'm telling you something. Don't cut in.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "刚来那会儿，我觉得下层区的当铺都一个样。",
+              "en": "At first I figured you were just a shopkeeper. Pawnshops in the lower district... they're all the same."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "后来那家又压价，又扣成色。少算的那几个信用点，我也没来找你补。",
+              "en": "Then there was the one with the rigged scale. I walked. The day you were one coin short, I didn't come asking for it either."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。",
+              "en": "But I keep coming here. Not because it's cheap. It isn't cheap."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你帮母亲的事，我没忘。",
+              "en": "The thing with my mother — I remember what I owe you for that. This has nothing to do with it."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我不是在还账。",
+              "en": "Don't think I'm paying off a debt."
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我喜欢你。",
+              "en": "...I like you.",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "就这些。你看着办。",
+              "en": "That's it. Do what you want."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c20",
+      "number": 20,
+      "title": "这回轮到她帮忙",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c20.b001",
+          "chapter": "c20",
+          "scene": "",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我看到一批你可能想收的货。我没替你答应。",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "来源我问过了，哪里坏了也问了。等人来了，你自己看。"
+            }
+          ]
+        },
+        {
+          "id": "c20.b002",
+          "chapter": "c20",
+          "scene": "实际经营",
+          "label": "成交后",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "怎么样？我挑得不错吧？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我可没把瑕疵藏着。夸眼光，别夸人品。",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c20.b003",
+          "chapter": "c20",
+          "scene": "实际经营",
+          "label": "未成交",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "不合适？那就不收。我带来的东西，你照样可以不收。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我得先弄明白，这次是哪儿看走了眼。"
+            }
+          ]
+        },
+        {
+          "id": "c20.b004",
+          "chapter": "c20",
+          "scene": "交易后",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我妈说，我最近讲价的口气越来越像你了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她说，至少这回我知道自己在说什么。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我说老师一般，主要是学生聪明。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c20.b005",
+          "chapter": "c20",
+          "scene": "恋人追加",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "有这么聪明的女朋友，还不够？",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这次没跟我抬杠，算你有进步。"
+            }
+          ]
+        },
+        {
+          "id": "c20.b006",
+          "chapter": "c20",
+          "scene": "朋友替换",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "教新人先分清锈接口和好接口。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c21",
+      "number": 21,
+      "title": "莉迪亚又来了一次",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c21.b001",
+          "chapter": "c21",
+          "scene": "莉迪亚单独来访",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "今天真是来买东西的。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "上次顺便说了很多不该替埃莉诺做主的话。",
+              "expr": "hurt"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我跟她道过歉了。她说别光跟老板道歉，搞得好像她自己没长嘴一样。",
+              "expr": "serious"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我见到她母亲了。比以前瘦，说话还是那样，不许别人乱夸。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "埃莉诺也跟我讲了最近的事。这回，我从头听到了尾。"
+            }
+          ]
+        },
+        {
+          "id": "c21.b002",
+          "chapter": "c21",
+          "scene": "若第9章按实际价值收购了镯子，追加",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "那只镯子，我回去问过懂行的人。你当时出的价确实公道。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "说给上面的人听，他们都不信下层区有这种老板。"
+            }
+          ]
+        },
+        {
+          "id": "c21.b003",
+          "chapter": "c21",
+          "scene": "正常交易中",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "以前我们挑礼物，只怕挑得不够贵。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "这回她让我带能真正用得上的东西，别把探望搞成一场展览。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "话说得对。就是那语气，让人很难马上承认。",
+              "expr": "smile"
+            }
+          ]
+        },
+        {
+          "id": "c21.b004",
+          "chapter": "c21",
+          "scene": "若已经是恋人",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "她告诉我，你们在一起了。我没有条件要提。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她说这话的时候，压根没打算问我的意见。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "上面现在都在传，埃莉诺看上了下层区一个开当铺的。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "我替她挡了几句。我挡的是她那边的麻烦，你别往自己身上算。",
+              "expr": "serious"
+            }
+          ]
+        },
+        {
+          "id": "c21.b005",
+          "chapter": "c21",
+          "scene": "若是朋友",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "她说你是个值得来往的朋友。她很少用“值得”这两个字。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "她说得对，她也是。我以前没看懂。",
+              "expr": "smile"
+            }
+          ]
+        },
+        {
+          "id": "c21.b006",
+          "chapter": "c21",
+          "scene": "离店前",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "lydia",
+              "text": "以后要是有合适的生意，我会让人自己来跟你谈。你不用欠我人情。"
+            },
+            {
+              "speaker": "player",
+              "text": "货合适，价钱合适，就谈。"
+            },
+            {
+              "speaker": "lydia",
+              "text": "难怪她现在开口闭口都是这句。",
+              "expr": "tease"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c22",
+      "number": 22,
+      "title": "她可以去别处",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c22.b001",
+          "chapter": "c22",
+          "scene": "研究归还：母亲在下层区开始新生活",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我妈找到一个肯让她帮忙整理设备的地方。不是原来的农场，不过她想去。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我先去帮几天忙。自己也找了份稳定点的活，不用光靠捡东西了。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b002",
+          "chapter": "c22",
+          "scene": "研究保留：原案继续复核，研究获得回应",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "研究那边来人了，问我们愿不愿意帮忙整理母亲留下的记录。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "有些活在上面，需要单独的工作通行证。不是回到原来的生活，案子也还没结。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我妈想继续做研究。我也想把那些我看不懂的部分弄明白。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b003",
+          "chapter": "c22",
+          "scene": "共同对白",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我会去。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "是来跟你商量时间怎么排。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b004",
+          "chapter": "c22",
+          "scene": "已经是恋人",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我想接着干活，也想接着见你。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我没打算推掉工作，也没打算推掉你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在我自己挑了。你可别又来替我决定“什么才是对我好”。",
+              "expr": "determined"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "忙的时候说一声。别老说店里离不开人，连顿饭都不肯好好吃。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b005",
+          "chapter": "c22",
+          "scene": "如果第19章选择慢一点，此处可由玩家主动确认",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "player",
+              "text": "我希望你以后来这儿，不只是当个常客。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好。那我把时间留出来，你也得留。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b006",
+          "chapter": "c22",
+          "scene": "如果仍保持朋友",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "以后我可能没那么常来了。生意上的事，还是可以互相照应。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你有什么需要，也别忘了来问我。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b007",
+          "chapter": "c22",
+          "scene": "可选的实际回赠：吊坠",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "那次问了价，最后没卖。这个，你还记得吗？",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟我妈说，我想把它送给你。她说，那是我的东西，我自己决定。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不是拿来卖的。你最好已经学会分辨了。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c22.b008",
+          "chapter": "c22",
+          "scene": "可选的实际回赠：吊坠",
+          "label": "接受",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "拿去吧。别跟柜台上的货摆在一起。我可没那么大方。",
+              "expr": "shy"
+            }
+          ]
+        },
+        {
+          "id": "c22.b009",
+          "chapter": "c22",
+          "scene": "可选的实际回赠：吊坠",
+          "label": "婉拒，认为她留着更合适",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "好吧，那我自己戴着。反正你以后也看得到。"
+            }
+          ]
+        },
+        {
+          "id": "c22.b010",
+          "chapter": "c22",
+          "scene": "若她此前为筹款卖掉了吊坠",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我原本想把那个吊坠送你的。还是卖掉凑钱了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "不用找别的东西替它。我想让你知道，我这么想过。",
+              "expr": "soft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c23",
+      "number": 23,
+      "title": "今天不为别的事",
+      "day": "",
+      "kind": "chapter",
+      "blocks": [
+        {
+          "id": "c23.b001",
+          "chapter": "c23",
+          "scene": "到店",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "嘿。今天有空吗？今天不为别的事。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我妈好好的，工作也没丢。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你得习惯。我来，不一定出了事。",
+              "expr": "soft"
+            }
+          ]
+        },
+        {
+          "id": "c23.b002",
+          "chapter": "c23",
+          "scene": "普通经营结束后的短聊",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我妈最近总让我多带一份吃的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "这份是给你的。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "房间小，钱得算着花。我妈还会做噩梦。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "她醒过来时，我就在旁边。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "现在有的，也不少。"
+            }
+          ]
+        },
+        {
+          "id": "c23.b003",
+          "chapter": "c23",
+          "scene": "恋人收束",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我第一次来的时候，说过你这家店不怎么样。现在也还是有不少该修的地方。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别以为我喜欢你，就连坏灯一起喜欢。我的脾气不会因为恋爱就没了。",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "今天让我待一会儿。有客人，你做你的生意。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "没客人，就跟我说话。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "别从“你还差多少钱”开始就行。"
+            }
+          ]
+        },
+        {
+          "id": "c23.b004",
+          "chapter": "c23",
+          "scene": "朋友收束，替换上段",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "有事来找我，没事也可以。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "朋友不只在缺钱时才算数。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rd",
+      "number": 0,
+      "title": "失败分支  生意做到这里",
+      "day": "",
+      "kind": "route",
+      "blocks": [
+        {
+          "id": "rd.b001",
+          "chapter": "rd",
+          "scene": "丁1：擅自交出数据盘并收私人好处",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "母亲那张研究数据盘呢？"
+            },
+            {
+              "speaker": "player",
+              "text": "交了。他们答应放人，没确认。我拿三百。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我让你收着，不是让你替我决定我母亲值多少钱。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你不用再说事情还能办成。我会自己查。从今天起，我的事你别再管了。"
+            }
+          ]
+        },
+        {
+          "id": "rd.b002",
+          "chapter": "rd",
+          "scene": "之后的结果通知",
+          "label": "母亲确实获释时，她最后一次来说明",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "她出来了。我来告诉你一声，别再拿“说不定会放人”当这次交易的借口。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我会过自己的日子。你继续做生意吧。"
+            }
+          ]
+        },
+        {
+          "id": "rd.b003",
+          "chapter": "rd",
+          "scene": "丁2：卖给不承担放人责任的第三方",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你把母亲那张研究数据盘卖给别人了？"
+            },
+            {
+              "speaker": "player",
+              "text": "他们出的价更高。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "所以你从头到尾，在等一件值钱的货。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我明白了。是我看错你了。"
+            }
+          ]
+        },
+        {
+          "id": "rd.b004",
+          "chapter": "rd",
+          "scene": "丁3：瞒着她公开研究",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "报纸上的东西，是你送过去的吧。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "可那个人不该是你！你凭什么背着我，替我母亲决定她要拿什么去换？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "你可以说总得有人做决定。可别再说，这是我们一起选的路。"
+            }
+          ]
+        },
+        {
+          "id": "rd.b005",
+          "chapter": "rd",
+          "scene": "丁4：没有背叛，只是不再参与",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我想过了。后面的事，我自己来办。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "先想办法把我妈接回来。他们开的条件，我会一条一条问清楚。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "以前你帮过我，谢谢你。就算没走到最后，那些我也不会忘。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep",
+      "number": 0,
+      "title": "第60天以后  她仍然有自己的日子",
+      "day": "",
+      "kind": "route",
+      "blocks": [
+        {
+          "id": "ep.b001",
+          "chapter": "ep",
+          "scene": "恋人日常一：挑剔没有消失",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "你还没把那盏灯修好？",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我那只缺口杯子也还能喝水。可你当时就看着我拿了个缺口的！"
+            }
+          ]
+        },
+        {
+          "id": "ep.b002",
+          "chapter": "ep",
+          "scene": "恋人日常二：她带来的食物",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "我妈做多了，让我给你带过来。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "拿着。别问怎么每次都正好多一份。",
+              "expr": "shy"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "问多了，做饭的人不好回答。快吃。"
+            }
+          ]
+        },
+        {
+          "id": "ep.b003",
+          "chapter": "ep",
+          "scene": "恋人日常三：普通上层区客人之后",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "刚才那个客人我认识。以前老劝我别跟下面的人来往。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我跟他说了，想买东西，就守这里的规矩。想教我怎么挑男朋友，就请回吧。",
+              "expr": "angry"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "他最后还是买了东西。看来也不是每次都那么不识趣。"
+            }
+          ]
+        },
+        {
+          "id": "ep.b004",
+          "chapter": "ep",
+          "scene": "恋人日常四：别替她付账",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "今天这单别给我免了，我发工钱了。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我就是想让你知道，我也会照顾人。",
+              "expr": "soft"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "算完了，再陪我聊一会儿。"
+            }
+          ]
+        },
+        {
+          "id": "ep.b005",
+          "chapter": "ep",
+          "scene": "朋友日常",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "这回的货我分好了。不好的放在一起，别说我没提醒你。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "我现在也算老手了。第一次拾荒那种事，你可别再提。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "行了，先谈今天的价。"
+            }
+          ]
+        },
+        {
+          "id": "ep.b006",
+          "chapter": "ep",
+          "scene": "革命路线偶遇，不固定日期",
+          "label": "",
+          "lines": [
+            {
+              "speaker": "eleanor",
+              "text": "今天不谈那些事。你这儿最近有什么新货？"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "要货，不要消息。最好是能让我挑几处不对的那种。"
+            },
+            {
+              "speaker": "eleanor",
+              "text": "好啊。听起来就像普通逛一次店。",
+              "expr": "soft"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -598,7 +598,7 @@ namespace EleanorRomance
                 else if (RomanceState.HardshipAidGiven)
                 {
                     dialogue = StoryEngine.BuildSelected(StoryV06Content.B_C05_N002,
-                        index => index != 0 && index != 3 && index != 9);
+                        index => index != 0 && index != 3 && index != 8);
                 }
                 else
                 {
@@ -1181,7 +1181,7 @@ namespace EleanorRomance
             Dialogue askKnown = StoryEngine.Build(StoryV06Content.B_C10_N204);
             bool held = HasPreludeBracelet();
             Dialogue trade = StoryEngine.BuildSelected(StoryV06Content.B_C10_N205,
-                index => held || index < 10 || index > 14);
+                index => held || index < 9 || index > 13);
 
             StoryEngine.Tail(trade).SetEndAction(() =>
             {

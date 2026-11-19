@@ -1,0 +1,425 @@
+[
+  {
+    "file": "er_expr_eleanor_scav_angry.png",
+    "base": "Textures/Items/cp_portrait_eleanor_scav.png",
+    "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor_scav_angry_aligned.png",
+    "source_sha256": "674de9c64a6d96c3813bf931e0197a71d21236a5ec9248aa73e392ec9cb04976",
+    "before_sha256": "dd16fe6a98285de3517d05c168bffda23b0c21da1591bc09a11c3bb45fdab1ca",
+    "after_sha256": "bd595d72f4a49fce3fdc4ed306baf4935b3e3b34c431330839b3faec14469fb4",
+    "changed_pixels": 113,
+    "bounds": [
+      111,
+      102,
+      126,
+      113
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_eleanor_scav_determined.png",
+    "base": "Textures/Items/cp_portrait_eleanor_scav.png",
+    "base_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor_scav_determined_aligned.png",
+    "source_sha256": "80305396440c618909b6202723b5ac4a123c4c7ec383dbf67bfe3e2809e27404",
+    "before_sha256": "fbd05f487b253ceecfd20e31bcb63e545b52e594fc18ac55f1cbe938581d46fb",
+    "after_sha256": "b3bb86f664d9c91b954a5ae1048fdafc96072a8adfb4067a61e466daf60c076e",
+    "changed_pixels": 113,
+    "bounds": [
+      111,
+      102,
+      126,
+      113
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        121.3,
+        118.5
+      ],
+      [
+        144.64285714285714,
+        113.78571428571429
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_eleanor1_angry.png",
+    "base": "Textures/Items/cp_portrait_eleanor1.png",
+    "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor1_angry_aligned.png",
+    "source_sha256": "7a710692180ea071cf42b111e15ce593808b6e27fef20aec25423b5a2a3785a0",
+    "before_sha256": "ca4fdfcae6808d369f8f9e0d27caa86a4b021b9a09904cf0a516d11a7829c477",
+    "after_sha256": "799d28618b2adbce99423be7dacabca4c4c83606badc84d611c34d0b45eb98d0",
+    "changed_pixels": 90,
+    "bounds": [
+      119,
+      103,
+      133,
+      114
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_eleanor1_serious.png",
+    "base": "Textures/Items/cp_portrait_eleanor1.png",
+    "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor1_serious_aligned.png",
+    "source_sha256": "ce2d15f7d2ee2094574de6a9584239d35853b1be7aa0e07b9d219d58f3fbe720",
+    "before_sha256": "ce3630b7e30433f454d70bf83165cd1f03087a3980ab74afc3aff4e955ecdc68",
+    "after_sha256": "be945e57631a60e47c99e13ff07b214912dc004795063becbdfd9343e74c47a3",
+    "changed_pixels": 96,
+    "bounds": [
+      119,
+      103,
+      133,
+      114
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        128.78571428571428,
+        117.92857142857143
+      ],
+      [
+        152.125,
+        113.0
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_eleanor_maid_angry.png",
+    "base": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+    "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor_maid_angry_aligned.png",
+    "source_sha256": "a727dc525a0043d81cf22cc507425febffce6387e88b3151edbac956bbf6e371",
+    "before_sha256": "8e03356320d0aa5e3bd37b3678ae4d81f854c8d9056a48b7c8dd39061dbe0cce",
+    "after_sha256": "7e4d5174e3bb83368cb4a33a94d4584534ccb323d23e0d0c2d807164e1403687",
+    "changed_pixels": 102,
+    "bounds": [
+      117,
+      103,
+      136,
+      113
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_eleanor_maid_serious.png",
+    "base": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+    "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor_maid_serious_aligned.png",
+    "source_sha256": "fe00d11f0245e71886b5942943ca77ac3e2b741206b5ced48011e0f4093e49ec",
+    "before_sha256": "364dca2f42930ac11275cb95ed3a522cd6f52f05b873856c9bedfbb0b4c7308d",
+    "after_sha256": "95671c4e4c02fb66c598ab33fd94f574489b3b1f35fe8c503b279394db0601ab",
+    "changed_pixels": 109,
+    "bounds": [
+      117,
+      103,
+      136,
+      113
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_eleanor_maid_tsun.png",
+    "base": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+    "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+    "source": "Art/expressions-and-endings-2026-11-10/portraits/er_expr_eleanor_maid_tsun_aligned.png",
+    "source_sha256": "5258414ea4c5fd2152199d45071939a675043451916789b394c22c099cf216a7",
+    "before_sha256": "106a11f8083433550966ce9e6121517857b0752c13909a7d2e4c6ca32345ef47",
+    "after_sha256": "6976fcea7637b5b5ebd0d5952ae73af4fba72fab16e79bed296760b449ad1a8f",
+    "changed_pixels": 113,
+    "bounds": [
+      117,
+      103,
+      136,
+      113
+    ],
+    "registration": "previous B/detail iris registration",
+    "eyes": [
+      [
+        127.94444444444444,
+        118.61111111111111
+      ],
+      [
+        153.61111111111111,
+        113.61111111111111
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_lydia_daily_angry.png",
+    "base": "Textures/Items/er_portrait_lydia_female_beauty.png",
+    "base_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_angry.png",
+    "source_sha256": "aa23046dd2c8a1c867465e0ae3e196b379529fb178821214511e320ef8a569ad",
+    "before_sha256": "8f541418adf9828f476c6db0f7ac3c00769ad9c5bbb6570fea2d2f5fe98b0348",
+    "after_sha256": "c31ac66efc6c6f79c50c3ec30805749e09f8649ed332f87ec3cb98eb3c51da7b",
+    "changed_pixels": 27,
+    "bounds": [
+      122,
+      103,
+      131,
+      110
+    ],
+    "registration": "previous B/detail eye-corner registration",
+    "eyes": [
+      [
+        [
+          121.5,
+          116.2
+        ],
+        [
+          135.0,
+          115.0
+        ]
+      ],
+      [
+        [
+          146.7,
+          112.8
+        ],
+        [
+          160.7,
+          111.1
+        ]
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_lydia_daily_determined.png",
+    "base": "Textures/Items/er_portrait_lydia_female_beauty.png",
+    "base_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_determined.png",
+    "source_sha256": "76008ce6a574861ca8c78021f5830db5a071b8f138edb346721cf3a36492db4f",
+    "before_sha256": "8c2939499857693965867caf86acf1868f4322926d56c18768bcc59c86406a18",
+    "after_sha256": "9465250d7d27e9956a9dbcc32f1212075c4d09cd912fb562bc193bcf708100e7",
+    "changed_pixels": 27,
+    "bounds": [
+      123,
+      103,
+      131,
+      108
+    ],
+    "registration": "previous B/detail eye-corner registration",
+    "eyes": [
+      [
+        [
+          121.5,
+          116.2
+        ],
+        [
+          135.0,
+          115.0
+        ]
+      ],
+      [
+        [
+          146.7,
+          112.8
+        ],
+        [
+          160.7,
+          111.1
+        ]
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_lydia_daily_sad.png",
+    "base": "Textures/Items/er_portrait_lydia_female_beauty.png",
+    "base_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_sad.png",
+    "source_sha256": "df5f8a8e2a002071cdeb6a3a70bb9ff4d2691593511d421682e23defb460d73a",
+    "before_sha256": "50bd0cf720bfae68cc44f4bd8c6e11ec85bc02fe94fcc4b83b603641dd0935de",
+    "after_sha256": "c16f8ac839d8c638dc34e3ab0fb867676894afb8d88626a45d1c207f61e929da",
+    "changed_pixels": 28,
+    "bounds": [
+      122,
+      103,
+      131,
+      110
+    ],
+    "registration": "previous B/detail eye-corner registration",
+    "eyes": [
+      [
+        [
+          121.5,
+          116.2
+        ],
+        [
+          135.0,
+          115.0
+        ]
+      ],
+      [
+        [
+          146.7,
+          112.8
+        ],
+        [
+          160.7,
+          111.1
+        ]
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_lydia_date_angry.png",
+    "base": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+    "base_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+    "source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_angry.png",
+    "source_sha256": "aa23046dd2c8a1c867465e0ae3e196b379529fb178821214511e320ef8a569ad",
+    "before_sha256": "b34b1268ee0839a25f54cb4a3404ef73c354d343fd58b831cee56d6a1552bfca",
+    "after_sha256": "6c36a428b48b2d49fb719e8805176462c68e9c2ac76278a82d5ca0f5dd8fba87",
+    "changed_pixels": 26,
+    "bounds": [
+      124,
+      103,
+      132,
+      110
+    ],
+    "registration": "previous B/detail eye-corner registration",
+    "eyes": [
+      [
+        [
+          122.0,
+          116.3
+        ],
+        [
+          135.7,
+          115.0
+        ]
+      ],
+      [
+        [
+          148.2,
+          112.9
+        ],
+        [
+          161.5,
+          111.2
+        ]
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_lydia_date_determined.png",
+    "base": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+    "base_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+    "source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_determined.png",
+    "source_sha256": "76008ce6a574861ca8c78021f5830db5a071b8f138edb346721cf3a36492db4f",
+    "before_sha256": "edfc0dd92548b91ab0b54240863d746e1cca6a023e99be96463767d252df4ae1",
+    "after_sha256": "94074d4bc8ed8585c9dbabe64d500621890fd3e2dd5372945be03d224a1829e3",
+    "changed_pixels": 27,
+    "bounds": [
+      124,
+      103,
+      132,
+      110
+    ],
+    "registration": "previous B/detail eye-corner registration",
+    "eyes": [
+      [
+        [
+          122.0,
+          116.3
+        ],
+        [
+          135.7,
+          115.0
+        ]
+      ],
+      [
+        [
+          148.2,
+          112.9
+        ],
+        [
+          161.5,
+          111.2
+        ]
+      ]
+    ]
+  },
+  {
+    "file": "er_expr_lydia_date_sad.png",
+    "base": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+    "base_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+    "source": "Art/expression-expansion-2026-11-14/masters/er_expr_lydia_daily_sad.png",
+    "source_sha256": "df5f8a8e2a002071cdeb6a3a70bb9ff4d2691593511d421682e23defb460d73a",
+    "before_sha256": "4cf2d629d3a9e58d6e3b248c2538b6cfa7e8644347d9b7a9b2f8f806774d8797",
+    "after_sha256": "d9109ca98b7a53774e0c08d8fec9c355845a5fa4e515db68b64e10fc60a1767e",
+    "changed_pixels": 29,
+    "bounds": [
+      123,
+      103,
+      132,
+      110
+    ],
+    "registration": "previous B/detail eye-corner registration",
+    "eyes": [
+      [
+        [
+          122.0,
+          116.3
+        ],
+        [
+          135.7,
+          115.0
+        ]
+      ],
+      [
+        [
+          148.2,
+          112.9
+        ],
+        [
+          161.5,
+          111.2
+        ]
+      ]
+    ]
+  }
+]

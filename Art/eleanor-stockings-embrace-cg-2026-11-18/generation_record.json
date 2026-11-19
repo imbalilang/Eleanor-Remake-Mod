@@ -1,0 +1,13 @@
+{
+  "status": "art candidate",
+  "method": "built-in image generation",
+  "master": "eleanor_stockings_embrace_master_v1.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "8c4fe3b9521887bd95800873ee5be53234f2ea37006d9eb9f00a31d1d93e93fa",
+  "prompt": "prompt_v1.txt",
+  "review": "Eleanor embraces the carrier from the front. The two white-stocked calves cross on the back of the carrier, drawn from the rear. Her face and the complete crossing are visible."
+}

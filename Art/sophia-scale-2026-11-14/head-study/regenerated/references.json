@@ -1,0 +1,38 @@
+{
+  "sophia": {
+    "master": "Art/sophia-scale-2026-11-14/head-study/masters/sophia_head_study.png",
+    "master_sha256": "505f22ef9181f67ab8f41f7e0c79e08f1a41a4e3da0882e114f34ef899188390",
+    "upload": "Art/sophia-scale-2026-11-14/head-study/references_local/regenerate-sophia.png",
+    "upload_sha256": "b994a899c11ca530332c55eefff9ab1bd2eee1d3de340bc52f81d97487652999",
+    "upload_size": [
+      762,
+      762
+    ],
+    "bytes": 664736,
+    "crop": [
+      115,
+      0,
+      877,
+      762
+    ],
+    "estimated_request_bytes": 951852
+  },
+  "sophia_home": {
+    "master": "Art/sophia-scale-2026-11-14/head-study/masters/sophia_home_head_study.png",
+    "master_sha256": "f29769575666b550780e4c6b1248b6dace7f41248e955987c8264c98d247ea55",
+    "upload": "Art/sophia-scale-2026-11-14/head-study/references_local/regenerate-sophia_home.png",
+    "upload_sha256": "c194418a05ca136d3c9fc2d5bea57ec6c4242bcd367f50510cd18b4d38479b8f",
+    "upload_size": [
+      762,
+      762
+    ],
+    "bytes": 655564,
+    "crop": [
+      95,
+      0,
+      857,
+      762
+    ],
+    "estimated_request_bytes": 939624
+  }
+}

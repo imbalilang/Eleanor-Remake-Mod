@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image editing",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_raised_torso_master_v4.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "2913e43740606971ed4e1615e5515f44663754ea0e573e471a8ffd587bb1ae9e",
+  "prompt": "prompt_v4.txt",
+  "references": "references_v4.json",
+  "review": "Inspected the closer diagonal crop, palm and raised elbow, torso visibly above the mattress, and separate rib-knit sweater hem and white fitted trousers."
+}

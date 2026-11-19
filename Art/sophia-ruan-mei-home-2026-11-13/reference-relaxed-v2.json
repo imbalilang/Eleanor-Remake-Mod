@@ -1,0 +1,68 @@
+{
+  "references": [
+    {
+      "role": "Sophia identity and primary edit target",
+      "source": {
+        "file": "Art/sophia-three-directions-2026-11-13/masters/sophia_ruan-mei_master.png",
+        "size": [
+          1036,
+          1518
+        ],
+        "bytes": 2117845,
+        "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5"
+      },
+      "upload": {
+        "file": "Art/sophia-ruan-mei-home-2026-11-13/references_local/sophia_ruan-mei_relaxed_v2_reference.png",
+        "size": [
+          561,
+          950
+        ],
+        "bytes": 769192,
+        "sha256": "28bbdff563f1a1808345b4b0a201a38fc27a34860b4701806b16ad224a219479"
+      }
+    },
+    {
+      "role": "D: neckline, posture and head angle",
+      "source": {
+        "file": "Art/mother-redesign-2026-11-11/approved/sophia_home_beauty_master.png",
+        "size": [
+          1145,
+          1374
+        ],
+        "bytes": 1883929,
+        "sha256": "18942091249da4ae2590c3037163d2aeca5f97b8579ad859b252b4fda69c034f"
+      },
+      "upload": {
+        "file": "Art/sophia-ruan-mei-home-2026-11-13/references_local/sophia_online_home_pose.png",
+        "size": [
+          616,
+          950
+        ],
+        "bytes": 876297,
+        "sha256": "0c18951558a93eff18d941ddb40112dc239929de99da4c5dd3fc4ad4e76f04b5"
+      }
+    },
+    {
+      "role": "A: fitted knit fabric and garment fit",
+      "source": {
+        "file": "Art/sophia-ruan-mei-home-2026-11-13/masters/sophia_white_knit_master.png",
+        "size": [
+          963,
+          1633
+        ],
+        "bytes": 2345483,
+        "sha256": "40be1d0d22e20b6bd6b132cb46103bc6ba55cb19197ce5c2786a986ff101cef4"
+      },
+      "upload": {
+        "file": "Art/sophia-ruan-mei-home-2026-11-13/references_local/sophia_white_knit_fit.png",
+        "size": [
+          537,
+          950
+        ],
+        "bytes": 728705,
+        "sha256": "a89e4eece22b7cf129725723d8c9d27c0c51c40431871858ce36a25550047dd1"
+      }
+    }
+  ],
+  "estimated_request_bytes": 3231132
+}

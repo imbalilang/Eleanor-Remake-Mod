@@ -1,0 +1,44 @@
+{
+  "eleanor2": {
+    "neutral": "Textures/Items/cp_portrait_eleanor2.png",
+    "neutral_sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+    "upload": "Art/expression-expansion-2026-11-13/references_local/eleanor2.png",
+    "upload_size_bytes": 590127,
+    "upload_sha256": "d33e8764b48437716ce013fe281afec81d63379260ca4a7eb7a60cd84cc2d036",
+    "source_crop": [
+      85,
+      55,
+      211,
+      208
+    ],
+    "estimated_request_bytes": 852372
+  },
+  "eleanor3": {
+    "neutral": "Textures/Items/cp_portrait_eleanor3.png",
+    "neutral_sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+    "upload": "Art/expression-expansion-2026-11-13/references_local/eleanor3.png",
+    "upload_size_bytes": 568455,
+    "upload_sha256": "481a90b603012918f7e949e14c397cbdc4738af9c6807f999972b11e1384add4",
+    "source_crop": [
+      85,
+      55,
+      211,
+      208
+    ],
+    "estimated_request_bytes": 823476
+  },
+  "eleanor_scav": {
+    "neutral": "Textures/Items/cp_portrait_eleanor_scav.png",
+    "neutral_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+    "upload": "Art/expression-expansion-2026-11-13/references_local/eleanor_scav.png",
+    "upload_size_bytes": 582774,
+    "upload_sha256": "9937ed8048f6b5be869c4f7d5c16d9dde067aa0e05d3e787e0bd507721744c55",
+    "source_crop": [
+      85,
+      55,
+      211,
+      208
+    ],
+    "estimated_request_bytes": 842568
+  }
+}

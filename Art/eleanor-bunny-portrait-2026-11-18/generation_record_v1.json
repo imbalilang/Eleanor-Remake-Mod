@@ -1,0 +1,14 @@
+{
+  "status": "art candidate",
+  "method": "built-in image generation",
+  "master": "B:/Eleanor Story Expand/Art/eleanor-bunny-portrait-2026-11-18/eleanor_bunny_portrait_master_v1.png",
+  "dimensions": [
+    1064,
+    1479
+  ],
+  "mode": "RGBA",
+  "sha256": "61879cd4e2c22f6ffc8848fd1890faf8ec81e0f5670fc33d13f491ad288f8130",
+  "prompt": "prompt_v1.txt",
+  "references": "references_v1.json",
+  "review": "Reviewed both full ears, identity, bow tie, cuffs, dress silhouette and transparent cutout on a neutral matte."
+}

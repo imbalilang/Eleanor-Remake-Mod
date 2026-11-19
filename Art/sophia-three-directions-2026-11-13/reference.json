@@ -1,0 +1,21 @@
+{
+  "source": "Art/mother-redesign-2026-11-11/approved/sophia_upper_beauty_master.png",
+  "source_sha256": "b3d26ec3793f86faff5de59ede15da4ee7affc77f4f40dafc6a4d464f31f93a4",
+  "crop_box": [
+    104,
+    1,
+    1042,
+    1374
+  ],
+  "file": "references_local/sophia-current-upload.png",
+  "size": [
+    615,
+    900
+  ],
+  "bytes": 810421,
+  "sha256": "ad10bd53c6dcc26f00ad229440a6e8a871dd541f43576475be60789a3bd5bb35",
+  "role": "Current approved Sophia identity, hair/eye colour, body proportions and source drawing style",
+  "native_comparison": "Textures/Items/er_portrait_mother_female_beauty.png",
+  "native_comparison_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364",
+  "base64_plus_overhead_bytes": 1146100
+}

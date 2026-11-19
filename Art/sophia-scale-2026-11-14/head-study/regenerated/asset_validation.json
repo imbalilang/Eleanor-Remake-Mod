@@ -1,0 +1,405 @@
+{
+  "size": [
+    288,
+    212
+  ],
+  "mode": "RGBA",
+  "files": {
+    "Textures/Items/er_expr_sophia_serious.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_serious.png",
+      "sha256": "1995da7b0b28de2b4d19b4c742d2d71f3f09d29bcf473d78b33021c84828c1c8",
+      "master_sha256": "a899320f4ff93bb6f50d15d3e2c99b0e7c7559e122b3a27782434c91bbba12f7",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334474495035948,
+          -0.0
+        ],
+        [
+          0.0,
+          13.334474495035948
+        ]
+      ],
+      "native_to_master_offset": [
+        -1296.6247860321812,
+        -904.8188976377952
+      ],
+      "fit_error": 3.4389,
+      "changed_facial_pixels": 678
+    },
+    "Textures/Items/er_expr_sophia_smile.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_smile.png",
+      "sha256": "be453d58648625e99ffd4f5d1be8a1288faf6060190fa5cecf2fe03bb651b846",
+      "master_sha256": "25284d8900c0e50ef8adfbde7aa27ad2e56d10035710b9f8c202be32930d34bc",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334409385350188,
+          0.04167016497437593
+        ],
+        [
+          -0.04167016497437593,
+          13.334409385350188
+        ]
+      ],
+      "native_to_master_offset": [
+        -1301.4023196045623,
+        -898.800100387127
+      ],
+      "fit_error": 3.3804,
+      "changed_facial_pixels": 678
+    },
+    "Textures/Items/er_expr_sophia_soft.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_soft.png",
+      "sha256": "c4c401da3aa2c7e54b30074e594e67bdb1fe0ad2f20211a51bbd8f3b6f5c2e6e",
+      "master_sha256": "7d99aeddb2bfc7c057081fd10e7482f7f94558f87df3ac4e9a15a886acdf976e",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334474495035948,
+          -0.0
+        ],
+        [
+          0.0,
+          13.334474495035948
+        ]
+      ],
+      "native_to_master_offset": [
+        -1296.6247860321812,
+        -904.8188976377952
+      ],
+      "fit_error": 3.5546,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_sad.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_sad.png",
+      "sha256": "a4a1ca26417b6caf26c3f2384322262811d3a7692d8601742f103fc9d94b0799",
+      "master_sha256": "dd36a1ae58bcae9cdf5e88a27ea585f1e94f4a102e4cb0b07ad7e30953c3f354",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334474495035948,
+          -0.0
+        ],
+        [
+          0.0,
+          13.334474495035948
+        ]
+      ],
+      "native_to_master_offset": [
+        -1296.6247860321812,
+        -904.8188976377952
+      ],
+      "fit_error": 3.5399,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_hurt.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_hurt.png",
+      "sha256": "0b289bc46606b754eb33c369ed8d832ed4f0402a726020418891de8083f354d1",
+      "master_sha256": "cc643e612d568139a1bf79cbee10dd0f2c2b42652e6743b8d952d12dbdb6ff9b",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334474495035948,
+          -0.0
+        ],
+        [
+          0.0,
+          13.334474495035948
+        ]
+      ],
+      "native_to_master_offset": [
+        -1296.6247860321812,
+        -904.8188976377952
+      ],
+      "fit_error": 2.7245,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_angry.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_angry.png",
+      "sha256": "6bf22f1d73bd0f05f9cd3cd6722df1251ab7cbd4d32f464ee6fc91e63d87b909",
+      "master_sha256": "a071e49172008bb29c78d48d78de8f3f159aa17b3f40bd521b087c90b32c5bad",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334474495035948,
+          -0.0
+        ],
+        [
+          0.0,
+          13.334474495035948
+        ]
+      ],
+      "native_to_master_offset": [
+        -1296.6247860321812,
+        -904.8188976377952
+      ],
+      "fit_error": 4.046,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_shy.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_shy.png",
+      "sha256": "5129ced30ddfada80564108b5065456992792c0bcbc47b6889bcfea5d5a42796",
+      "master_sha256": "4a4f3ecc6027c8efa5434e3daa585c9aca25a95d1665f277b42d2b0d64b15bc6",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334409385350188,
+          -0.04167016497437593
+        ],
+        [
+          0.04167016497437593,
+          13.334409385350188
+        ]
+      ],
+      "native_to_master_offset": [
+        -1291.8284670767862,
+        -910.8227357317146
+      ],
+      "fit_error": 4.7156,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_determined.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_determined.png",
+      "sha256": "d101aa3798640e921888475e4a710d6b65f95b0f652746073122e37dc7d211c1",
+      "master_sha256": "fa69a2a812ce5cd3a4e3577c7a0f28152ccb0c8798c46f2f4c75402ca806971d",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334474495035948,
+          -0.0
+        ],
+        [
+          0.0,
+          13.334474495035948
+        ]
+      ],
+      "native_to_master_offset": [
+        -1296.6247860321812,
+        -904.8188976377952
+      ],
+      "fit_error": 3.3278,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_tired.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_tired.png",
+      "sha256": "6948566ad5bb9d7bc3fa2fafb8491c8ff978870519de04cd19832c427e70d283",
+      "master_sha256": "2a7eb54d85f3c152abb0c329644732370c56d3722b32864f62aec15ab4d608dc",
+      "base_sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "native_to_master_matrix": [
+        [
+          13.334409385350188,
+          -0.04167016497437593
+        ],
+        [
+          0.04167016497437593,
+          13.334409385350188
+        ]
+      ],
+      "native_to_master_offset": [
+        -1291.8284670767862,
+        -910.8227357317146
+      ],
+      "fit_error": 3.9799,
+      "changed_facial_pixels": 679
+    },
+    "Textures/Items/er_expr_sophia_home_serious.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_serious.png",
+      "sha256": "590a65787799df15871569b9d8a423205f9a7c8669bc97daca7250a5e3ff64cf",
+      "master_sha256": "394bcf6ec0791ebd74ffa0a3845905fac8df41f878819be69bd252e82dec615e",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 3.6043,
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_smile.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_smile.png",
+      "sha256": "39386dbe4276eef9278a05c8fa1daef30a0a2ce494d635c656a75891d84b36b0",
+      "master_sha256": "a0a5fb99a19c782364b7938e279af4bb8c902888bfbc57d7f4a4860cded02005",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33440938535019,
+          0.04167016497437593
+        ],
+        [
+          -0.04167016497437593,
+          13.33440938535019
+        ]
+      ],
+      "native_to_master_offset": [
+        -1331.0910774160186,
+        -920.1011279662127
+      ],
+      "fit_error": 3.5401,
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_soft.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_soft.png",
+      "sha256": "a5554a75c055a195e91314c81b0e34d9604125d9c8c72237a4482ffce60ceb02",
+      "master_sha256": "bbbb405b6c00cdd80b53d1fc060b372ec9cb6942b34e5f69e059679cdccdaeb7",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 4.3322,
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_sad.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_sad.png",
+      "sha256": "b46e690dd850fbe16cdaa5d02e6cf828341699d1713cfaa7c098e1f0f2ff83c6",
+      "master_sha256": "b3b3ab3c1379e0f55aed3f820dd37abc48df26e8e6f41728f0ad763e010345f2",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 2.998,
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_hurt.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_hurt.png",
+      "sha256": "08f31c4ee8fab7a82dff9e1af07c385082762e381822037b6a66409307502df0",
+      "master_sha256": "450ff5f89257bdd3f4f47950123fe3c3eb5d2802a321da271a65bb9c5c847f0c",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 4.1846,
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_angry.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_angry.png",
+      "sha256": "da3ea168bd5b5919c0f47130d2d4754acc5d694a2c5896267712cf88c6cd4721",
+      "master_sha256": "8e4ba78509f9452108fd65d2cc1a51b06c262512c156cdb8f4d1c66a71ac1c25",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 3.9093,
+      "changed_facial_pixels": 710
+    },
+    "Textures/Items/er_expr_sophia_home_shy.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_shy.png",
+      "sha256": "3a6c079af0a21ae4c884cb18815d9bda75485d8dfcf313799279b4c1da980e35",
+      "master_sha256": "cbe212ba9d9f832386534efc71eeedc03d968bd3196bd5a6ad5f33add14ab8a9",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 3.5309,
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_determined.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_determined.png",
+      "sha256": "60ca0840f894aea5247e8d5a8f02320825cc30b94b2dfe92499ca6be0d48f722",
+      "master_sha256": "427d750c6081e687769af07406494546eecf52eab9084606ba4cf5e1f19b98a8",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33447449503595,
+          -0.0
+        ],
+        [
+          0.0,
+          13.33447449503595
+        ]
+      ],
+      "native_to_master_offset": [
+        -1326.2468332762755,
+        -926.2125984251978
+      ],
+      "fit_error": 3.4174,
+      "changed_facial_pixels": 711
+    },
+    "Textures/Items/er_expr_sophia_home_tired.png": {
+      "source": "Art/sophia-scale-2026-11-14/head-study/regenerated/portraits/er_expr_sophia_home_tired.png",
+      "sha256": "6bac16a3007c9a67f609a3506016d1e3293a0e12a0d849f7f5dc9eb1cf3a768b",
+      "master_sha256": "641e581f26a0ce904b73ce5520a63737dca1ef23714bc243d91b00f775b2fa3b",
+      "base_sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "native_to_master_matrix": [
+        [
+          13.33440938535019,
+          0.04167016497437593
+        ],
+        [
+          -0.04167016497437593,
+          13.33440938535019
+        ]
+      ],
+      "native_to_master_offset": [
+        -1331.0910774160186,
+        -920.1011279662127
+      ],
+      "fit_error": 4.0926,
+      "changed_facial_pixels": 711
+    }
+  }
+}

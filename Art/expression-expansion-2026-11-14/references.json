@@ -1,0 +1,144 @@
+{
+  "eleanor1": {
+    "base": "Textures/Items/cp_portrait_eleanor1.png",
+    "base_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/eleanor1.png",
+    "reference_sha256": "ea1f557af2fda942f333d7478eb9c38e39832453a8f9b2d9deb66a21dc232f0d",
+    "reference_bytes": 532356,
+    "reference_estimated_request_bytes": 775344,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "eleanor_maid": {
+    "base": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+    "base_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/eleanor_maid.png",
+    "reference_sha256": "820e7b63270f7813aa90856a31e261c1f522808d458c23cebe916f16db80e502",
+    "reference_bytes": 559686,
+    "reference_estimated_request_bytes": 811784,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "lydia_daily": {
+    "base": "Textures/Items/er_portrait_lydia_female_beauty.png",
+    "base_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/lydia_daily.png",
+    "reference_sha256": "e8f0654d8c0ea31030d3447e58f3605c3065166d0a71b78ae63ede29d41c4b2d",
+    "reference_bytes": 505690,
+    "reference_estimated_request_bytes": 739792,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "lydia_date": {
+    "base": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+    "base_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/lydia_date.png",
+    "reference_sha256": "6e1707a1bb5d57ae7eb432d89f42a70f99ebd0dabc97d8f2c75315721958ed4c",
+    "reference_bytes": 522852,
+    "reference_estimated_request_bytes": 762672,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "eleanor_rev": {
+    "base": "Textures/Items/cp_portrait_eleanor_rev.png",
+    "base_sha256": "397e062f5b7949a0237b1c55e1683d8d5836bdd56f4d23d24f465a1fc57a8c56",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/eleanor_rev.png",
+    "reference_sha256": "6ba615cb13b582f5fe6685ca8e2c6cff0454886cc3797783f72825e4c84f88da",
+    "reference_bytes": 529190,
+    "reference_estimated_request_bytes": 771124,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "eleanor_gala": {
+    "base": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+    "base_sha256": "0d68790bf9e45f41dc9f058a4c7cf7cb774d684f7dfb094d615c64196af0370b",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/eleanor_gala.png",
+    "reference_sha256": "661808264a80a733bb243d094a8dee388aa5a5938853cc4e4b7280554f6f1978",
+    "reference_bytes": 493263,
+    "reference_estimated_request_bytes": 723220,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "sophia": {
+    "base": "Textures/Items/er_portrait_mother_female_beauty.png",
+    "original_base": "Art/sophia-three-directions-2026-11-13/portraits/er_portrait_sophia_ruan-mei.png",
+    "base_sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/sophia.png",
+    "reference_sha256": "adb3c7e9ba9fc4ad8d1e9ae2cf7fec6c5f75a3b97e913617505cc1c8edcb3210",
+    "reference_bytes": 378391,
+    "reference_estimated_request_bytes": 570060,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "sophia_home": {
+    "base": "Textures/Items/er_portrait_mother_home_female_beauty.png",
+    "original_base": "Art/sophia-ruan-mei-home-2026-11-13/portraits/er_portrait_mother_home_female_beauty_v2.png",
+    "base_sha256": "a97cc26ea6a28690351c8257dc9d9f7ebb3d4bf83c536100aed3798aefb290b8",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/sophia_home.png",
+    "reference_sha256": "d89ec90f05cac07f448dfc4ad4ae090d38909abcfbd4fb0a239e2c8bc671284e",
+    "reference_bytes": 353693,
+    "reference_estimated_request_bytes": 537128,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "eleanor_love_intimate": {
+    "base": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+    "base_sha256": "abd0ed1a19156ead1784ed7b83e60c1b860cb67023bd75916ebf838e72eb5955",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/eleanor_love_intimate.png",
+    "reference_sha256": "355ce1fb70b200a3463f5fd1b1eab9853240dab9d9f3bd7e389fdaa58b48fd69",
+    "reference_bytes": 534582,
+    "reference_estimated_request_bytes": 778312,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  },
+  "eleanor_revolution_undersuit": {
+    "base": "Textures/Items/er_portrait_eleanor_revolution_undersuit_female_beauty.png",
+    "base_sha256": "726e8e1f1c7ca220813750415259d7ab6a43ca16b351d5411584fa3e366a7897",
+    "reference": "Art/expression-expansion-2026-11-14/references_local/eleanor_revolution_undersuit.png",
+    "reference_sha256": "982a7c828f22f79f181e87bb9a01062c105bedbd584aaf0e43998030ceb8f441",
+    "reference_bytes": 512874,
+    "reference_estimated_request_bytes": 749368,
+    "crop": [
+      97,
+      56,
+      186,
+      160
+    ]
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "revised": [
+    {
+      "number": "032",
+      "sprite": "er_expr_eleanor_scav_smile.png",
+      "sha256": "7be032f1ba6e30b78960e4cf4ec8bd9501799a241009a8137b9f6e86b12ccfc0",
+      "changed_pixels": 115
+    },
+    {
+      "number": "033",
+      "sprite": "er_expr_eleanor_scav_soft.png",
+      "sha256": "2eb472d283ca957be0182f5ff93d27472b78b5f6d3dd9c234b57b49b1d9a0bc8",
+      "changed_pixels": 118
+    },
+    {
+      "number": "036",
+      "sprite": "er_expr_eleanor_scav_angry.png",
+      "sha256": "145a221428c36bc8cbd1416201358ce081664f7274d0c12a3e6b117ee2d4073e",
+      "changed_pixels": 290
+    },
+    {
+      "number": "039",
+      "sprite": "er_expr_eleanor_scav_determined.png",
+      "sha256": "46da974b83daa6302686fa4beebc2b86c466b05b9057dc88b8bfdc3ec180f7ff",
+      "changed_pixels": 290
+    },
+    {
+      "number": "042",
+      "sprite": "er_expr_eleanor_rev_smile.png",
+      "sha256": "4ae59aae5df023ee565a20a808d3d6932a1d7148c26a1a46ab4833780bc4e96e",
+      "changed_pixels": 120
+    },
+    {
+      "number": "043",
+      "sprite": "er_expr_eleanor_rev_soft.png",
+      "sha256": "c72079fdabf0b69e96021ffce3119d317a7652e95de9648cc61c09670fc8105b",
+      "changed_pixels": 109
+    },
+    {
+      "number": "044",
+      "sprite": "er_expr_eleanor_rev_shy.png",
+      "sha256": "2bde5070d02631cd5dd23a0f686b490af64baf351d8bc0c0ff5efc18ae3d52b9",
+      "changed_pixels": 198
+    },
+    {
+      "number": "045",
+      "sprite": "er_expr_eleanor_rev_serious.png",
+      "sha256": "13ac69c1025f1184f2f1e45a09504b9019c3017bfda9e094d640d7f32f9d3d23",
+      "changed_pixels": 115
+    },
+    {
+      "number": "047",
+      "sprite": "er_expr_eleanor_rev_sad.png",
+      "sha256": "5772790e77aff4bd18d7e94c479bc6bf5476883fb2089b7b9fd492b0d705ca49",
+      "changed_pixels": 289
+    },
+    {
+      "number": "050",
+      "sprite": "er_expr_eleanor_rev_tired.png",
+      "sha256": "cce2a080dee5fe8f60478cc8e0c944733244843e981370c7c3397a047f172f32",
+      "changed_pixels": 354
+    },
+    {
+      "number": "052",
+      "sprite": "er_expr_eleanor_maid_smile.png",
+      "sha256": "6097d737de5a0b0f460dcd5b73479de2106489c30a44a53e36dea874bfb816d2",
+      "changed_pixels": 122
+    },
+    {
+      "number": "055",
+      "sprite": "er_expr_eleanor_maid_serious.png",
+      "sha256": "bb934261318dc7f8f74891f39bb3085fc31fd9cd40ed0f2f70fcd9ba23b838a1",
+      "changed_pixels": 121
+    },
+    {
+      "number": "056",
+      "sprite": "er_expr_eleanor_maid_angry.png",
+      "sha256": "1ee3805c03cbe77859bce090e219121967d0dcefa076dd8601596a4054350e76",
+      "changed_pixels": 297
+    },
+    {
+      "number": "057",
+      "sprite": "er_expr_eleanor_maid_sad.png",
+      "sha256": "e987197a0fe25e7d3dd493568fef985c9d2222423dd006b8438ea68be345e6fb",
+      "changed_pixels": 298
+    },
+    {
+      "number": "058",
+      "sprite": "er_expr_eleanor_maid_hurt.png",
+      "sha256": "f828654623d0ccfd1e0c049ed012d48fe8d8a7c9b41c0152e114b03d29fcfc73",
+      "changed_pixels": 292
+    },
+    {
+      "number": "059",
+      "sprite": "er_expr_eleanor_maid_determined.png",
+      "sha256": "ce38c0d20c8a6481db67915c4d3fd8141ccda887f79a14f9b84ea9504081b671",
+      "changed_pixels": 296
+    },
+    {
+      "number": "060",
+      "sprite": "er_expr_eleanor_maid_tired.png",
+      "sha256": "6c14b2ab9590c84e8e10de5d39987ae21f531b66cdc22908a85c6eefebdee002",
+      "changed_pixels": 364
+    },
+    {
+      "number": "061",
+      "sprite": "er_expr_eleanor_maid_tsun.png",
+      "sha256": "afc8cd0654e190b6ecafb1e9a9fd12e0b91b69829158775544eef08e1a3ba423",
+      "changed_pixels": 396
+    },
+    {
+      "number": "063",
+      "sprite": "er_expr_eleanor_gala_smile.png",
+      "sha256": "cf34e2436501fa1ebd3ea706b171a7213b172254c4bc921ed981076bf12474c2",
+      "changed_pixels": 122
+    },
+    {
+      "number": "064",
+      "sprite": "er_expr_eleanor_gala_soft.png",
+      "sha256": "071efaa0ce9e121ba8f58337ff7d31c7d94ab2f5a361f7c3f2d98d4a3a1fd012",
+      "changed_pixels": 119
+    },
+    {
+      "number": "065",
+      "sprite": "er_expr_eleanor_gala_shy.png",
+      "sha256": "611d36e68e6e4cb280a59010cbb7d5b60037de56cbdf0db255baa2dd8ee9f1e1",
+      "changed_pixels": 203
+    },
+    {
+      "number": "066",
+      "sprite": "er_expr_eleanor_gala_serious.png",
+      "sha256": "9ab4d4a93964a541ea1132d6404da88bf75dcf1f6dc116fae1c67a347086dd5e",
+      "changed_pixels": 120
+    },
+    {
+      "number": "067",
+      "sprite": "er_expr_eleanor_gala_angry.png",
+      "sha256": "7fb35a6e3fa36cf202c5c674a39b2d1eb41dd02e52a463bf011e03ac2d845798",
+      "changed_pixels": 299
+    },
+    {
+      "number": "068",
+      "sprite": "er_expr_eleanor_gala_sad.png",
+      "sha256": "918b09a5483ede8766352e0e8b2baa63676ec2d3eee528bbcd29767f6fe82437",
+      "changed_pixels": 302
+    },
+    {
+      "number": "069",
+      "sprite": "er_expr_eleanor_gala_hurt.png",
+      "sha256": "aa63fdc3aebc8129889373df65dae2a8509f26a8455e00e1dac6972b5d3bbb6d",
+      "changed_pixels": 296
+    },
+    {
+      "number": "070",
+      "sprite": "er_expr_eleanor_gala_determined.png",
+      "sha256": "c9ba8395441f8f8861182b55f8481fb822932a7ca347e5a1d9999c170b8132a6",
+      "changed_pixels": 298
+    },
+    {
+      "number": "071",
+      "sprite": "er_expr_eleanor_gala_tired.png",
+      "sha256": "82f5da34c1ea65fd0f8dadeefcdf8f61c1845d0e663a95dcfaac417a1802e97b",
+      "changed_pixels": 369
+    },
+    {
+      "number": "073",
+      "sprite": "er_expr_eleanor_love_intimate_smile.png",
+      "sha256": "4a44e313f0758144a9aca25984fc5759986c6edfeb1023bc319eca4775cb06c4",
+      "changed_pixels": 119
+    },
+    {
+      "number": "074",
+      "sprite": "er_expr_eleanor_love_intimate_soft.png",
+      "sha256": "4a7a045faf953c338dc821ee0d9e9bf177b08c8273903aa406662c5a8164f56b",
+      "changed_pixels": 121
+    },
+    {
+      "number": "075",
+      "sprite": "er_expr_eleanor_love_intimate_shy.png",
+      "sha256": "23b730217556c1aef03400583950257cf8d41260b78301071d99c7a548b5a090",
+      "changed_pixels": 192
+    },
+    {
+      "number": "076",
+      "sprite": "er_expr_eleanor_love_intimate_serious.png",
+      "sha256": "ff1611af532ae140fa7f1517772dfe8f0b7cc7ac8f3a2f09a27037a3ac960fb8",
+      "changed_pixels": 121
+    },
+    {
+      "number": "077",
+      "sprite": "er_expr_eleanor_love_intimate_angry.png",
+      "sha256": "c3814957ea51c3629e8c4bbe57ff9ae40b0d729f13547e6406f11ae37670d6d8",
+      "changed_pixels": 291
+    },
+    {
+      "number": "078",
+      "sprite": "er_expr_eleanor_love_intimate_sad.png",
+      "sha256": "b1df0db785f45e0128a3705d818b3f2b1ced74766005eaddf08abcf6d2e540a1",
+      "changed_pixels": 289
+    },
+    {
+      "number": "079",
+      "sprite": "er_expr_eleanor_love_intimate_hurt.png",
+      "sha256": "884d7c494889a83eca193864fcfeb01a6eb70b90656dfc1905b769563b693b6b",
+      "changed_pixels": 286
+    },
+    {
+      "number": "080",
+      "sprite": "er_expr_eleanor_love_intimate_determined.png",
+      "sha256": "49ba2fbfa82ebc8320736303381b162b4d7087faed3d8f1d9a19458db3b5dab1",
+      "changed_pixels": 289
+    },
+    {
+      "number": "081",
+      "sprite": "er_expr_eleanor_love_intimate_tired.png",
+      "sha256": "a4fa323017abd633b23c9e8b13f677534a999411d24c9900c6f3a90b9c7cd36d",
+      "changed_pixels": 356
+    },
+    {
+      "number": "083",
+      "sprite": "er_expr_eleanor_revolution_undersuit_smile.png",
+      "sha256": "db25185176a69445880c049685c9981b779d26f1fdc40fc578b33fbe08d51bd7",
+      "changed_pixels": 110
+    },
+    {
+      "number": "084",
+      "sprite": "er_expr_eleanor_revolution_undersuit_soft.png",
+      "sha256": "d65bd8489d7aadcc79d844fb014d1a82a9343390e515a93b5253900ed08f7844",
+      "changed_pixels": 120
+    },
+    {
+      "number": "085",
+      "sprite": "er_expr_eleanor_revolution_undersuit_shy.png",
+      "sha256": "e07efdddfed02b5a8bf757148e7d150fab7654586fea3c03e832f869def31582",
+      "changed_pixels": 200
+    },
+    {
+      "number": "086",
+      "sprite": "er_expr_eleanor_revolution_undersuit_serious.png",
+      "sha256": "ebe6edd50cb8d7d8c91ed1cbe54734402f4ae50a39c4639e8a00ebc34ecb9251",
+      "changed_pixels": 110
+    },
+    {
+      "number": "087",
+      "sprite": "er_expr_eleanor_revolution_undersuit_angry.png",
+      "sha256": "7de23e8b2c00a1e29ddbcacf92df654fdd54f6f619bf1ed63bd7d5109430bddd",
+      "changed_pixels": 295
+    },
+    {
+      "number": "088",
+      "sprite": "er_expr_eleanor_revolution_undersuit_sad.png",
+      "sha256": "5a02a1e8d12835f547acb2c20d45a1c1311b16fd7368745d5470c9c03335d324",
+      "changed_pixels": 294
+    },
+    {
+      "number": "089",
+      "sprite": "er_expr_eleanor_revolution_undersuit_hurt.png",
+      "sha256": "912b66cbe7cb5e82dc96688429b245a8a7a3bf868f276e8c05925cf2ea68033a",
+      "changed_pixels": 292
+    },
+    {
+      "number": "090",
+      "sprite": "er_expr_eleanor_revolution_undersuit_determined.png",
+      "sha256": "4f0af16032ddc2336181f360f390da22404540d4a8f7c0de1be641fa6e79c069",
+      "changed_pixels": 295
+    },
+    {
+      "number": "091",
+      "sprite": "er_expr_eleanor_revolution_undersuit_tired.png",
+      "sha256": "b6c45e7148150bfd5b5f677855214c0f1540727feb1d0b4e9deb1cc1d7018698",
+      "changed_pixels": 368
+    },
+    {
+      "number": "094",
+      "sprite": "er_expr_lydia_daily_soft.png",
+      "sha256": "3f8c826492ab0fd9987c41fd11bb6bb3e62ef8e6a8e7c410b6c720a9140faf68",
+      "changed_pixels": 98
+    },
+    {
+      "number": "095",
+      "sprite": "er_expr_lydia_daily_shy.png",
+      "sha256": "b4c0beafb334c2bb493c756c2faf4b122e14eca3eebd6e44a026708dd7d05f10",
+      "changed_pixels": 192
+    },
+    {
+      "number": "097",
+      "sprite": "er_expr_lydia_daily_angry.png",
+      "sha256": "28a0d5b7d1b423048e7a106266fd793b94fae1e1c7df03c9cb1b4f31984d25c2",
+      "changed_pixels": 263
+    },
+    {
+      "number": "098",
+      "sprite": "er_expr_lydia_daily_sad.png",
+      "sha256": "5dff8c753a4e18e06a7c5bb1429923bc7c7caef2e25c241aecddec36afdc76e7",
+      "changed_pixels": 254
+    },
+    {
+      "number": "100",
+      "sprite": "er_expr_lydia_daily_determined.png",
+      "sha256": "131b6ccb53e6ba9e1e8e183b2b85f03ba535407ba6ebe7b4d114f0be3971e64c",
+      "changed_pixels": 260
+    },
+    {
+      "number": "101",
+      "sprite": "er_expr_lydia_daily_tired.png",
+      "sha256": "9f8e3057dbabf88ba2a8cb55e9f09f550bbc4fbea67abeea802409b07b54f7cd",
+      "changed_pixels": 315
+    },
+    {
+      "number": "106",
+      "sprite": "er_expr_lydia_date_soft.png",
+      "sha256": "20cac2ed98a8b62847cb72d1c29305340b0b4a3191ab9394ec47a11fd9e70d2b",
+      "changed_pixels": 100
+    },
+    {
+      "number": "109",
+      "sprite": "er_expr_lydia_date_angry.png",
+      "sha256": "f400349a8a2480501896680af4a9b842a7c83defa8b66be9b83e67ec4fd5c4b0",
+      "changed_pixels": 251
+    },
+    {
+      "number": "110",
+      "sprite": "er_expr_lydia_date_sad.png",
+      "sha256": "920d9250c1cc4fa558097ed9c401656fbcd6dd993937b406c55a3ed96b40b9c8",
+      "changed_pixels": 251
+    },
+    {
+      "number": "112",
+      "sprite": "er_expr_lydia_date_determined.png",
+      "sha256": "c3eb80b230d904df8db14e5863b984df5f53dedac89b0876a6eba50c2fb85b08",
+      "changed_pixels": 254
+    },
+    {
+      "number": "113",
+      "sprite": "er_expr_lydia_date_tired.png",
+      "sha256": "01d20d0a52976d25cd1dcca36eb129f66a0b75f6d6559bb1009dd15357850a76",
+      "changed_pixels": 283
+    },
+    {
+      "number": "102",
+      "sprite": "er_expr_lydia_daily_flustered.png",
+      "sha256": "b4c0beafb334c2bb493c756c2faf4b122e14eca3eebd6e44a026708dd7d05f10",
+      "same_image_as": "095"
+    },
+    {
+      "number": "003",
+      "sprite": "er_expr_eleanor1_soft.png",
+      "sha256": "8c6c5a087a8ab2918ece03c017f8a5ddcdffe3ce23029d001fce3c455b942189",
+      "changed_pixels": 131
+    },
+    {
+      "number": "004",
+      "sprite": "er_expr_eleanor1_shy.png",
+      "sha256": "7b9b1412958f4c258ccff8e4ac06cc3e107c837ec40a8abbf938d67abbf48819",
+      "changed_pixels": 257
+    },
+    {
+      "number": "005",
+      "sprite": "er_expr_eleanor1_serious.png",
+      "sha256": "95fd99e846c3e6e34c06dbef7f6e5915ff1ff704b1cf6df0ea62b168a8ed325f",
+      "changed_pixels": 131
+    },
+    {
+      "number": "008",
+      "sprite": "er_expr_eleanor1_hurt.png",
+      "sha256": "809e8b6bbce6b92a184b4cfa4ce3e186ade35b45143f93fa9bdc5ee13eef252b",
+      "changed_pixels": 332
+    },
+    {
+      "number": "009",
+      "sprite": "er_expr_eleanor1_determined.png",
+      "sha256": "592bc1bec678231a8fe75f9c6987aa4e83ee352d48611195d9e6d4ecf5df7a99",
+      "changed_pixels": 316
+    },
+    {
+      "number": "010",
+      "sprite": "er_expr_eleanor1_tired.png",
+      "sha256": "ba4821df33631300b8340ab3b15b485694acbe8851daa60b8555a8f512c5b371",
+      "changed_pixels": 501
+    }
+  ],
+  "retired": 18,
+  "runtime_expression_count": 104,
+  "first_page_preview": "previews/eleanor1-six-before-after.png",
+  "detail_revision": {
+    "updated": [
+      {
+        "number": "002",
+        "sprite": "er_expr_eleanor1_smile.png",
+        "previous_sha256": "6568578783c7b2645825f99a199926669c29c3b89d86b1bbe5d19cfaec9f5845",
+        "sha256": "bc2697e52d8a201da6ef87aed4a1482faf83f398c344134d3175b52b33d88b3b",
+        "changed_pixels": 164
+      },
+      {
+        "number": "003",
+        "sprite": "er_expr_eleanor1_soft.png",
+        "previous_sha256": "8c6c5a087a8ab2918ece03c017f8a5ddcdffe3ce23029d001fce3c455b942189",
+        "sha256": "922d5097959090a48bbebbff08d77cdf485584fcffa806a49d5f9dff97454211",
+        "changed_pixels": 131
+      },
+      {
+        "number": "004",
+        "sprite": "er_expr_eleanor1_shy.png",
+        "previous_sha256": "7b9b1412958f4c258ccff8e4ac06cc3e107c837ec40a8abbf938d67abbf48819",
+        "sha256": "e5988ffe1ba75c85a52348450d7fda4c29f2909693b95130d9705ef19ee32f4e",
+        "changed_pixels": 136
+      },
+      {
+        "number": "005",
+        "sprite": "er_expr_eleanor1_serious.png",
+        "previous_sha256": "95fd99e846c3e6e34c06dbef7f6e5915ff1ff704b1cf6df0ea62b168a8ed325f",
+        "sha256": "d1b31c440ebd4e8c5cc81554858e09f891077e7a9d52273d057bf8bb64f74143",
+        "changed_pixels": 131
+      },
+      {
+        "number": "006",
+        "sprite": "er_expr_eleanor1_angry.png",
+        "previous_sha256": "3fae48935df7d3ec8e468f773a701d300bb8974737cb522dc136d08cedc0023f",
+        "sha256": "660e1e9e2223f8f22756645023072d759fc651cdf443c297f13eb96fde0d491f",
+        "changed_pixels": 133
+      },
+      {
+        "number": "007",
+        "sprite": "er_expr_eleanor1_sad.png",
+        "previous_sha256": "e39bece4a09f19f75e1393599bea3773486256e6c09b7b4a70e1a5cfae4fce8d",
+        "sha256": "f56f6bbf2b09d35b28d6191c2b8a49057dbeb9a1e31404f2905dcd66760635b9",
+        "changed_pixels": 225
+      },
+      {
+        "number": "008",
+        "sprite": "er_expr_eleanor1_hurt.png",
+        "previous_sha256": "809e8b6bbce6b92a184b4cfa4ce3e186ade35b45143f93fa9bdc5ee13eef252b",
+        "sha256": "3054f7564274430f6f95b838b148509c30da24798a686fcfc103b57bd1a1322a",
+        "changed_pixels": 131
+      },
+      {
+        "number": "009",
+        "sprite": "er_expr_eleanor1_determined.png",
+        "previous_sha256": "592bc1bec678231a8fe75f9c6987aa4e83ee352d48611195d9e6d4ecf5df7a99",
+        "sha256": "85c7accbde65d9740796d8ab4339db264b5b1a5446e568d98e97f2c748affb89",
+        "changed_pixels": 131
+      },
+      {
+        "number": "010",
+        "sprite": "er_expr_eleanor1_tired.png",
+        "previous_sha256": "ba4821df33631300b8340ab3b15b485694acbe8851daa60b8555a8f512c5b371",
+        "sha256": "723f65d89d27f4cda56aec42a00dbd0648fc560a2e06dae7adc425835cc75ef6",
+        "changed_pixels": 501
+      },
+      {
+        "number": "081",
+        "sprite": "er_expr_eleanor_love_intimate_tired.png",
+        "previous_sha256": "a4fa323017abd633b23c9e8b13f677534a999411d24c9900c6f3a90b9c7cd36d",
+        "sha256": "298b156809f6f5cc2f12ba4f1efd0b75fe96cb554b754fdf34e22ff387eb3ba9",
+        "changed_pixels": 441
+      },
+      {
+        "number": "112",
+        "sprite": "er_expr_lydia_date_determined.png",
+        "previous_sha256": "c3eb80b230d904df8db14e5863b984df5f53dedac89b0876a6eba50c2fb85b08",
+        "sha256": "5af12f82946d493144df5c96ca88dc25cbf436b7b25ee36c61e7c2beadafdfa3",
+        "changed_pixels": 79
+      }
+    ],
+    "preview": "previews/detail-review.png",
+    "number_010_latest_preview": "previews/010-eye-followup.png"
+  }
+}

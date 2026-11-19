@@ -1,0 +1,29 @@
+{
+  "references": [
+    {
+      "role": "eleanor-costume-identity",
+      "source": "B:\\Eleanor Story Expand\\Art\\eleanor-white-floral-bodysuit-2026-11-17\\eleanor_white_floral_bodysuit_master_v1.png",
+      "source_sha256": "433afaa923a38a628c746d309ef26da4dd0bc3c7e09ebf67ec4546ede6589c14",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lace-Reclining-CG-20261117\\eleanor-costume-identity.jpg",
+      "dimensions": [
+        946,
+        1250
+      ],
+      "bytes": 414730,
+      "sha256": "fa5aa21c8b874571eec68617fff4b8294ce313d0d1dadd3e0c529ec7f7962b5a"
+    },
+    {
+      "role": "side-lying-composition",
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-27dfb2b6-35e2-458b-a7d1-7c4437e2fdeb.jpg",
+      "source_sha256": "3ef037a0dadc18731756832584f5da442e4006b929510373adeb73792e70d63e",
+      "upload": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\Eleanor-Lace-Reclining-CG-20261117\\side-lying-composition.jpg",
+      "dimensions": [
+        1350,
+        757
+      ],
+      "bytes": 191664,
+      "sha256": "dc23d7ecd245cb759d68985bec046446225e5e13f8023503499129602e11bcaf"
+    }
+  ],
+  "estimated_post_bytes": 858528
+}

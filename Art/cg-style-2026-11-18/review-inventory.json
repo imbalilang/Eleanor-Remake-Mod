@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-18",
+  "scope": "Non-ending CGs, current workspace art and alternative masters. Older revisions stay grouped by scene; some entries are approved sources for current runtime images.",
+  "runtime": [
+    {
+      "asset": "Textures/Items/er_event_harem_lydia_date_cg.png",
+      "role": "glass, metal structure, stone and plants"
+    },
+    {
+      "asset": "Textures/Items/er_event_maid_gala_cg.png",
+      "role": "stage, audience eye line and gown"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_water_cut_cg.png",
+      "role": "Sophia, household scale and cold/warm separation"
+    },
+    {
+      "asset": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "role": "street materials, not blocking or proximity"
+    }
+  ],
+  "reviewedMasters": {
+    "E01": "Art/eleanor-white-lace-reclining-cg-2026-11-17/eleanor_white_lace_reclining_lined_master_v1.png",
+    "E02": "Art/eleanor-white-lace-reclining-cg-2026-11-18/eleanor_white_lace_reclining_highcollar_master_v1.png",
+    "E03": "Art/eleanor-white-lace-reclining-cg-2026-11-18/eleanor_white_lace_reclining_highcollar_master_v2.png",
+    "E04": "Art/eleanor-stockings-embrace-cg-2026-11-18/eleanor_stockings_embrace_master_v1.png",
+    "E05": "Art/eleanor-stockings-embrace-cg-2026-11-18/eleanor_stockings_embrace_master_v2.png",
+    "E06": "Art/eleanor-stockings-embrace-cg-2026-11-18/eleanor_stockings_embrace_master_v4.png",
+    "E07": "Art/eleanor-white-casual-kabedon-cg-2026-11-18/eleanor_white_casual_kabedon_master_v1.png",
+    "E08": "Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_master_v1.png",
+    "E09": "Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_station_home_master_v2.png",
+    "E10": "Art/eleanor-white-casual-bridal-carry-cg-2026-11-18/eleanor_white_casual_bridal_carry_master_v1.png",
+    "E11": "Art/eleanor-white-casual-bridal-carry-cg-2026-11-18/eleanor_white_casual_bridal_carry_master_v2.png",
+    "E12": "Art/eleanor-white-casual-bridal-carry-cg-2026-11-18/eleanor_white_casual_bridal_carry_no_player_master_v2.png",
+    "E13": "Art/eleanor-heart-eyes-closeup-cg-2026-11-18/eleanor_heart_eyes_closeup_master_v1.png",
+    "E14": "Art/eleanor-heart-eyes-closeup-cg-2026-11-18/eleanor_heart_eyes_closeup_master_v2.png",
+    "E15": "Art/eleanor-lydia-kiss-cg-2026-11-17/eleanor_lydia_embrace_kiss_lydia_adjusted_master.png",
+    "E16": "Art/eleanor-lydia-kiss-cg-2026-11-17/eleanor_lydia_embrace_kiss_master.png",
+    "E17": "Art/eleanor-lydia-kiss-cg-2026-11-17/eleanor_lydia_embrace_kiss_v2_master.png",
+    "E18": "Art/eleanor-lydia-kiss-closeup-cg-2026-11-18/eleanor_lydia_kiss_closeup_master_v1.png",
+    "E19": "Art/eleanor-lydia-kiss-closeup-cg-2026-11-18/eleanor_lydia_kiss_closeup_master_v2.png",
+    "E20": "Art/eleanor-lydia-diagonal-kiss-closeup-cg-2026-11-18/eleanor_lydia_diagonal_kiss_closeup_master_v1.png",
+    "E21": "Art/eleanor-bunny-milk-cg-2026-11-18/eleanor_bunny_milk_cuff_spill_master_v1.png",
+    "E22": "Art/eleanor-bunny-milk-cg-2026-11-18/eleanor_bunny_milk_overhead_master_v2.png",
+    "E23": "Art/eleanor-bunny-squat-cg-2026-11-18/eleanor_bunny_squat_master_v1.png",
+    "S01": "Art/sophia-formal-bridal-carry-cg-2026-11-18/sophia_formal_bridal_carry_lower_district_master_v1.png",
+    "S02": "Art/sophia-formal-bridal-carry-cg-2026-11-18/sophia_formal_bridal_carry_lower_level_master_v1.png",
+    "S03": "Art/sophia-formal-bridal-carry-cg-2026-11-18/sophia_formal_bridal_carry_master_v1.png",
+    "S04": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_closeup_master_v3.png",
+    "S05": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_downward_gaze_master_v7.png",
+    "S06": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_downward_pose_master_v8.png",
+    "S07": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_kneeling_master_v2.png",
+    "S08": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_prone_master_v1.png",
+    "S09": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_raised_torso_master_v4.png",
+    "S10": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_side_lean_master_v6.png",
+    "S11": "Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_tights_master_v5.png",
+    "P01": "Art/harem-lydia-date-cg-2026-11-15/lydia_stone_steps_date_master.png",
+    "P02": "Art/harem-lydia-date-cg-2026-11-15/lydia_upper_level_date_v2_master.png",
+    "P03": "Art/harem-lydia-date-cg-2026-11-15/lydia_upper_level_date_v3_master.png",
+    "P04": "Art/maid-v2-gala-cg-2026-11-15/maid_gala_cg_v1_master.png",
+    "P05": "Art/maid-v2-gala-cg-2026-11-15/maid_gala_cg_v2_master.png",
+    "P06": "Art/love-water-cut-cg-2026-11-16/alternatives/sophia_water_cut_bandage_master.png",
+    "P07": "Art/love-water-cut-cg-2026-11-16/alternatives/sophia_water_cut_half_glass_master.png",
+    "P08": "Art/love-water-cut-cg-2026-11-16/alternatives/sophia_water_cut_hold_door_master.png",
+    "P09": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_closeup_master.png",
+    "P10": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_high_angle_master.png",
+    "P11": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_piggyback_master.png",
+    "P12": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_piggyback_v2_master.png",
+    "P13": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_pose_redraw_master.png",
+    "P14": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_right_crop_master.png",
+    "P15": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_right_crop_v2_master.png",
+    "P16": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_formal_shoulder_contour_master.png",
+    "P17": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_half_glass_v2_master.png",
+    "P18": "Art/love-water-cut-cg-2026-11-16/sophia_water_cut_night_walk_master.png",
+    "P19": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_master.png",
+    "P20": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_v2_master.png",
+    "P21": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_v3_master.png",
+    "P22": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_v4_master.png",
+    "P23": "Art/revolution-embrace-cg-2026-11-15/revolution_embrace_pov_v5_master.png"
+  },
+  "reviewedMasterCount": 57,
+  "styleBoard": [
+    {
+      "label": "01  Eleanor",
+      "asset": "Art/love-intimate-outfit-2026-11-13/masters/eleanor_love_intimate_master_v1.png",
+      "role": "face, hair and figure",
+      "sha256": "a860559d7794366ac80b2edd237d32a3e66480b267c370dedf6f950553b849c4"
+    },
+    {
+      "label": "02  Romance book v2",
+      "asset": "Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_station_home_master_v2.png",
+      "role": "linework, fabric and shy gaze",
+      "sha256": "f5e8ea6da6865d71e526818a23700c6d980ee6399e37d084bf53e4f003387f73"
+    },
+    {
+      "label": "03  Night Road",
+      "asset": "Textures/Items/er_event_love_water_cut_cg.png",
+      "role": "Sophia, household scale and cold/warm separation",
+      "sha256": "91d4e33817b5f3c408a281a67891288a1a8f65c2ab60e13f0b3ac88acaaab230"
+    },
+    {
+      "label": "04  A Little Longer",
+      "asset": "Textures/Items/er_event_harem_lydia_date_cg.png",
+      "role": "glass, metal structure, stone and plants",
+      "sha256": "04d3b8e9b8ac0eb84aaa80ab7e56de89175c0ce9a4f30d529b7ac46caf49bfff"
+    },
+    {
+      "label": "05  The Second Song",
+      "asset": "Textures/Items/er_event_maid_gala_cg.png",
+      "role": "stage, audience eye line and gown",
+      "sha256": "6056ea8f4027a512c6a077a6758c58317b31a51ef837660dbf6b0d4db935d5cd"
+    },
+    {
+      "label": "06  Before Dawn",
+      "asset": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "role": "street materials, not blocking or proximity",
+      "sha256": "1238e7c3c6b9e002309759aefa4f16c7a05eb7ab47f5d46ca1418023afd177f9"
+    }
+  ]
+}

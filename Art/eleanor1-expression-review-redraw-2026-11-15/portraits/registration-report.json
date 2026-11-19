@@ -1,0 +1,38 @@
+[
+  {
+    "number": "003",
+    "sprite": "er_expr_eleanor1_soft.png",
+    "sha256": "8c6c5a087a8ab2918ece03c017f8a5ddcdffe3ce23029d001fce3c455b942189",
+    "changed_pixels": 131
+  },
+  {
+    "number": "004",
+    "sprite": "er_expr_eleanor1_shy.png",
+    "sha256": "7b9b1412958f4c258ccff8e4ac06cc3e107c837ec40a8abbf938d67abbf48819",
+    "changed_pixels": 257
+  },
+  {
+    "number": "005",
+    "sprite": "er_expr_eleanor1_serious.png",
+    "sha256": "95fd99e846c3e6e34c06dbef7f6e5915ff1ff704b1cf6df0ea62b168a8ed325f",
+    "changed_pixels": 131
+  },
+  {
+    "number": "008",
+    "sprite": "er_expr_eleanor1_hurt.png",
+    "sha256": "809e8b6bbce6b92a184b4cfa4ce3e186ade35b45143f93fa9bdc5ee13eef252b",
+    "changed_pixels": 332
+  },
+  {
+    "number": "009",
+    "sprite": "er_expr_eleanor1_determined.png",
+    "sha256": "592bc1bec678231a8fe75f9c6987aa4e83ee352d48611195d9e6d4ecf5df7a99",
+    "changed_pixels": 316
+  },
+  {
+    "number": "010",
+    "sprite": "er_expr_eleanor1_tired.png",
+    "sha256": "ba4821df33631300b8340ab3b15b485694acbe8851daa60b8555a8f512c5b371",
+    "changed_pixels": 501
+  }
+]

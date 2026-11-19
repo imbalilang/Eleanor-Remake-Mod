@@ -1,0 +1,47 @@
+{
+  "references": [
+    {
+      "role": "Primary edit target, approved Sophia",
+      "source": {
+        "file": "Art/sophia-three-directions-2026-11-13/masters/sophia_ruan-mei_master.png",
+        "size": [
+          1036,
+          1518
+        ],
+        "bytes": 2117845,
+        "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5"
+      },
+      "upload": {
+        "file": "Art/sophia-scale-2026-11-14/head-study/references_local/sophia-edit.png",
+        "size": [
+          667,
+          1100
+        ],
+        "bytes": 1035724,
+        "sha256": "9a95a289004df9de7d207ea6f13ba3f9098c78a857354b88c5824b5f9c782597"
+      }
+    },
+    {
+      "role": "Head proportions, compact shape language and shading only",
+      "source": {
+        "file": "Textures/Items/cp_portrait_eleanor1.png",
+        "size": [
+          288,
+          212
+        ],
+        "bytes": 38219,
+        "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0"
+      },
+      "upload": {
+        "file": "Art/sophia-scale-2026-11-14/head-study/references_local/eleanor-style.png",
+        "size": [
+          835,
+          810
+        ],
+        "bytes": 52906,
+        "sha256": "bc3f1914c3c1d5c81885f6f74cb9f2c5a8205b310ddcf8c39d43c16d62248b64"
+      }
+    }
+  ],
+  "estimated_request_bytes": 1517048
+}

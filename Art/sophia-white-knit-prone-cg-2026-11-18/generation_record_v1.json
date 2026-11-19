@@ -1,0 +1,14 @@
+{
+  "status": "CG candidate",
+  "method": "built-in image generation",
+  "master": "B:/Eleanor Story Expand/Art/sophia-white-knit-prone-cg-2026-11-18/sophia_white_knit_prone_master_v1.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "d01ee054853183314d9842e8bf5ff09016e7e9d8619b2227b74e4994812d2283",
+  "prompt": "prompt_v1.txt",
+  "references": "references_v1.json",
+  "review": "Reviewed the landscape diagonal, prone forearm support, character identity, jade hairpin and asymmetric white rib-knit home dress."
+}

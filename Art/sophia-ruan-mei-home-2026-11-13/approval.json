@@ -1,0 +1,132 @@
+{
+  "status": "user approved and installed in workspace",
+  "daily": {
+    "master": {
+      "file": "Art/sophia-three-directions-2026-11-13/masters/sophia_ruan-mei_master.png",
+      "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5",
+      "size": [
+        1036,
+        1518
+      ],
+      "mode": "RGBA"
+    },
+    "portrait": {
+      "file": "Art/sophia-three-directions-2026-11-13/portraits/er_portrait_sophia_ruan-mei.png",
+      "sha256": "f9d1d8ce6c0c2c0cf7cc157a838f1855098a786ebd9761ec28c9f4318d428b20",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA"
+    },
+    "runtime_path": "Textures/Items/er_portrait_mother_female_beauty.png",
+    "previous_runtime_sha256": "ad72ae43dddd3306586606f5a7b2738179f1591fe6c03b6f9ec4dda6e3b00364"
+  },
+  "home": {
+    "master": {
+      "file": "Art/sophia-ruan-mei-home-2026-11-13/masters/sophia_white_knit_relaxed_v2_master.png",
+      "sha256": "2663c70b8b71faa81517559b6c998e9c9e1fad877df10f910b1dc012343f507b",
+      "size": [
+        963,
+        1633
+      ],
+      "mode": "RGBA"
+    },
+    "portrait": {
+      "file": "Art/sophia-ruan-mei-home-2026-11-13/portraits/er_portrait_mother_home_female_beauty_v2.png",
+      "sha256": "a97cc26ea6a28690351c8257dc9d9f7ebb3d4bf83c536100aed3798aefb290b8",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA"
+    },
+    "runtime_path": "Textures/Items/er_portrait_mother_home_female_beauty.png",
+    "previous_runtime_sha256": "69b1ddab3c9c3694fc39525f2a1c6084676a1289e74c753a0ae60b5532c95d44"
+  },
+  "home_prompt": "prompts/white-knit-relaxed-v2.txt",
+  "home_prompt_sha256": "bb57a0f45ed695dcff41af97a3e9a2e0874f59ac805105de645d90235fcb35f3",
+  "home_reference": "reference-relaxed-v2.json",
+  "home_master_landmarks": {
+    "method": "visual estimate",
+    "eye_midpoint": [
+      451,
+      363
+    ],
+    "chin_y": 581
+  },
+  "game_canvas_landmarks": {
+    "eye_midpoint": [
+      145,
+      115
+    ],
+    "chin_y": 137
+  },
+  "home_source_top_edge_pixels": 0,
+  "home_pipeline": {
+    "source_size": [
+      963,
+      1633
+    ],
+    "clean_bbox": [
+      11,
+      7,
+      946,
+      1633
+    ],
+    "parameters": {
+      "visible_height": 164.09174311926606,
+      "centre_x": 147.77522935779817,
+      "bottom_exclusive": 242.1651376146789,
+      "sampling_canvas": [
+        288,
+        211
+      ],
+      "add_top_row": true,
+      "coverage_threshold": 0.35,
+      "magenta_key": false,
+      "fringe": false,
+      "detail": true,
+      "bleed": true
+    },
+    "transform": {
+      "s": 0.10091743119266056,
+      "tx": 99.4862385321101,
+      "ty": 77.36697247706422
+    },
+    "keying_counts": {
+      "strong": 0,
+      "weak_near_strong": 0,
+      "residual_edge": 0
+    },
+    "source_fringe_pixels": 0,
+    "detail_pixels": 2652,
+    "target_fringe_pixels": 0,
+    "output_size": [
+      288,
+      212
+    ],
+    "output_bbox": [
+      106,
+      79,
+      191,
+      212
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colours": 3752
+  },
+  "preview": {
+    "file": "Art/sophia-ruan-mei-home-2026-11-13/previews/approved-outfits-2x.png",
+    "sha256": "53a204c2430f09f59b5ec720ec6d5ca7c90e80e3afc444d69333f7e27016e5c8",
+    "size": [
+      600,
+      330
+    ],
+    "mode": "RGB"
+  },
+  "home_has_scene_caller": false,
+  "in_game_verified": false
+}

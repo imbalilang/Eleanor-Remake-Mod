@@ -1,0 +1,37 @@
+{
+  "references": [
+    {
+      "source": "Art\\sophia-white-gold-redesign-2026-11-13\\masters\\sophia_white_gold_master_v1.png",
+      "source_size": [
+        1136,
+        1385
+      ],
+      "source_sha256": "4353f44e08c50434d2747e4153c8eac8d4a4e7130bd3584c430d44c22378ebc2",
+      "file": "references_local/v1-front-edit-target.png",
+      "size": [
+        804,
+        980
+      ],
+      "bytes": 876125,
+      "sha256": "8dfec14f2dee3b2192e0c397a443cec2d7f8aa97ec3695599f0aab72295d5bb9",
+      "role": "Edit target, Sophia identity and costume"
+    },
+    {
+      "source": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-5bf70d35-e09f-4568-9827-8f4f60ffcbb6.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "source_sha256": "7e93ab6b6fbe9f94f6f8f6ca05cc1a29e84be31fe98f30fb02708e1d1632a1bb",
+      "file": "references_local/front-gaze-reference.jpg",
+      "size": [
+        758,
+        625
+      ],
+      "bytes": 158280,
+      "sha256": "3f0d4b6fa825dc086ab7ca77ab58066ad30b05e73ee59d66fd53bed679f65819",
+      "role": "Head and shoulder orientation, direct gaze only"
+    }
+  ],
+  "base64_plus_overhead_bytes": 1444744
+}

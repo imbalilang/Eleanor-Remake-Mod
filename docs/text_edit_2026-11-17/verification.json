@@ -1,0 +1,45 @@
+{
+  "structural_checks_passed": true,
+  "published_version": "1.13",
+  "publication_utc": "2026-11-17T01:36:25.0961179Z",
+  "publication_receipt": "dist/workshop-1.13/publish-result.json",
+  "publication_receipt_sha256": "92188deff0b979e7361f970a159bc80d8fd343017f79dc39571d333829d56119",
+  "release_csv_sha256": "41b705ae33e93e85812ec27bc8bcd9378314b46ebf3c587ac9384822c3b7b171",
+  "source_sha256": "909a9686be8ef2d3c3711823ee32f1c9a86a56f02de49a13e580813fe72f24db",
+  "candidate_sha256": "01fbde9d1917086d719641362c9a8f55d30d6f62c9e13a8df3251cc32eae0df1",
+  "release_text_rows_matched": 162,
+  "changed_rows": 36,
+  "changed_by_scene": {
+    "c10": 28,
+    "c19": 8
+  },
+  "all_non_text_fields_unchanged": true,
+  "locked_confession_and_route_specific_mother_lines_unchanged": true,
+  "published_text_basis": "上传成功回执对应的本地 1.13 发布包；本次没有重新下载 Steam 内容或重新请求线上详情。",
+  "semantic_review": "由同一编辑逐项自审，见 REPORT.md；结构校验不能证明语义正确或文笔更好。",
+  "production_applied": false,
+  "english_revised": false,
+  "new_external_model_calls": 0,
+  "historical_sources": [
+    {
+      "source": "tools/NovelWorkFlow_Eleanor_Test/Test_Output/PRODUCTION_AI_REDUCTION_2026-11-17/c10/B_opus/candidate_script.txt",
+      "sha256": "c47333664959546933dad90138109098787c0fda320b54754d96bcfd3ed0423a"
+    },
+    {
+      "source": "tools/NovelWorkFlow_Eleanor_Test/Test_Output/PRODUCTION_AI_REDUCTION_2026-11-17/c19/B_opus/candidate_script.txt",
+      "sha256": "fceceebec4bb9c47ff23f0a6cfedac7c903666572339997ed7403b88369cc17e"
+    },
+    {
+      "source": "tools/NovelWorkFlow_Eleanor_Test/Test_Output/PILOT_2026-11-16/c19/B_opus/candidate_script.txt",
+      "sha256": "48968adc9f11264c7538daa0afaa49bac6d32292483359cc4d53cf2960408edd"
+    },
+    {
+      "source": "tools/NovelWorkFlow_Eleanor_Test/Test_Output/PILOT_2026-11-16/c19/B_gemini/candidate_script.txt",
+      "sha256": "c15a9a9a2fe3aedcce9fcf32391d33cb0435eb80d50176f3cbf3b2aa12d41383"
+    },
+    {
+      "source": "tools/NovelWorkFlow_Eleanor_Test/Test_Output/POINT_EDIT_2026-11-17/c19/C_superqa/candidate_raw.json",
+      "sha256": "4066ba3c85ad1df30f5509a366196a6a1fa1b17ab32f4c9a71f58bdc82e0f198"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "role": "approved Ruan Mei direction, identity and edit target",
+  "source": {
+    "file": "Art/sophia-three-directions-2026-11-13/masters/sophia_ruan-mei_master.png",
+    "size": [
+      1036,
+      1518
+    ],
+    "bytes": 2117845,
+    "sha256": "667478445ba8122325613253e2c236269071813f4f35f30a61f591c14698dcc5"
+  },
+  "local_reference": {
+    "file": "Art/sophia-ruan-mei-home-2026-11-13/references_local/sophia_ruan-mei_reference.png",
+    "size": [
+      649,
+      1100
+    ],
+    "bytes": 1033248,
+    "sha256": "90afe155aa1330c4eede4460bc5b62eda07d03441c31172b8908736daa6df25a"
+  },
+  "estimated_request_bytes": 1480824,
+  "costume": {
+    "role": "garment reference only",
+    "source": {
+      "file": "codex-clipboard-96138f15-a68a-4649-b65c-5cc0b4990ada.png",
+      "size": [
+        1080,
+        608
+      ],
+      "bytes": 834578,
+      "sha256": "212bd7c08b65eb943d7dd4494fd6b76495cf8ef2bb8c99b4c1735658a258d974"
+    },
+    "local_reference": {
+      "file": "white-knit-costume.jpg",
+      "size": [
+        376,
+        384
+      ],
+      "bytes": 28218,
+      "sha256": "91833b49ccdcef4424b566ed4af9132b5e018eade9f46adeec39e53b9e43b1f2"
+    },
+    "crop": [
+      367,
+      224,
+      743,
+      608
+    ]
+  }
+}

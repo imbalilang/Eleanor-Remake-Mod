@@ -1,0 +1,37 @@
+{
+  "references": [
+    {
+      "role": "User reference, observed for pose and camera crop",
+      "source": "C:/Users/ADMINI~1/AppData/Local/Temp/codex-clipboard-8e2ab157-242e-46a1-b09e-1b5da4de860b.png",
+      "source_sha256": "871b5a27ee103d6fc10939e564015a688772aac15f5f818a9b33cdfa76d533b4",
+      "included_as_visual_input": false
+    },
+    {
+      "role": "wardrobe",
+      "source": "B:/Eleanor Story Expand/Art/eleanor-bunny-portrait-2026-11-18/eleanor_bunny_portrait_master_v1.png",
+      "source_sha256": "61879cd4e2c22f6ffc8848fd1890faf8ec81e0f5670fc33d13f491ad288f8130",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Bunny-Squat-CG-86t_o4o_/wardrobe.jpg",
+      "dimensions": [
+        755,
+        1050
+      ],
+      "bytes": 252225,
+      "upload_sha256": "f7a62661c8625af9428ebdbe1cf6b0e10a3845bedbed3b8e68ddd74bb450732c",
+      "included_as_visual_input": true
+    },
+    {
+      "role": "interior-materials",
+      "source": "B:/Eleanor Story Expand/Art/eleanor-shy-romance-book-cg-2026-11-18/eleanor_shy_romance_book_station_home_master_v2.png",
+      "source_sha256": "f5e8ea6da6865d71e526818a23700c6d980ee6399e37d084bf53e4f003387f73",
+      "upload": "C:/Users/ADMINI~1/AppData/Local/Temp/Eleanor-Bunny-Squat-CG-86t_o4o_/interior-materials.jpg",
+      "dimensions": [
+        950,
+        535
+      ],
+      "bytes": 250198,
+      "upload_sha256": "227602d5aa98041c19f3203343b8f65869c618fa09de064673dd852b417e146e",
+      "included_as_visual_input": true
+    }
+  ],
+  "estimated_request_bytes": 719900
+}

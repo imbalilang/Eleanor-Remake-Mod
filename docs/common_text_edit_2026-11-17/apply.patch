@@ -1,0 +1,919 @@
+*** Begin Patch
+*** Update File: B:/Eleanor Story Expand/Content/story_v06.json
+@@
+               "text": "有吃的没？挑点新鲜的，种类多样一点。别全拿营养果糊弄我。"
+             },
+             {
+-              "speaker": "eleanor",
+-              "text": "钱不是问题。至少现在还不是。"
+-            },
+-            {
+-              "speaker": "narrator",
+-              "text": "她把一只布袋放在柜台上，袋口折了两折，边角磨得发亮。"
+-            },
+-            {
+               "speaker": "player",
+               "text": "货架上的，价签都挂着。"
+             },
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "我不是挑剔。他们以挪用公款的罪名监禁了我的母亲。"
+-            },
+-            {
+-              "speaker": "eleanor",
+-              "text": "她可是经营着全空间站最大的水培农场的人。她连换一盏坏灯都要核三遍账。"
++              "text": "以前哪用得着我操心这些。母亲被他们关起来了，说她挪用公款。"
++            },
++            {
++              "speaker": "eleanor",
++              "text": "她可是经营着全空间站最大的水培农场的人。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "上层区定制款，盖子松，还剩半瓶。下层区一年见不着两回。"
++              "text": "上层区定制的香水，她给我按房租算。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "这动静，省得买收音机了。……这笑话真烂。"
++              "text": "这动静，省得买收音机了。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+             },
+             {
+               "speaker": "narrator",
+-              "text": "她把吊坠从领口拉出来，链子还带着温度，坠面朝上。"
++              "text": "她从领口拉出吊坠，托在掌心里，坠面朝上。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+           "lines": [
+             {
+               "speaker": "narrator",
+-              "text": "午后没有客人。一个男人抱着礼盒来到窗口前，盒面系着缎带，落了一层细灰。"
++              "text": "一个男人抱着系缎带的礼盒来到窗口前。"
+             },
+             {
+               "speaker": "uncle",
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "下层区没有白送的东西。上面也没有。"
++              "text": "以后这种盒子，我得先看标签。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+             {
+               "speaker": "officer",
+               "text": "按程序也要问。"
+-            },
+-            {
+-              "speaker": "narrator",
+-              "text": "礼盒被夹在腋下带走。缎带垂着，一路扫过他的裤腿。"
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "下层区没有白送的东西。",
++              "text": "下回我先看标签。",
+               "expr": "shy"
+             }
+           ]
+@@
+           "lines": [
+             {
+               "speaker": "narrator",
+-              "text": "三天后。"
+-            },
+-            {
+-              "speaker": "narrator",
+               "text": "她在窗口外站了很久，才走近柜台。"
+             },
+             {
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "钱花光了。剩下的那点，交完房租就见底。"
++              "text": "最后那点钱，也交了房租。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+             {
+               "speaker": "eleanor",
+               "text": "还要我说多清楚？东西被偷了，钱花光了，判决也下来了。吊坠不能动。"
+-            },
+-            {
+-              "speaker": "narrator",
+-              "text": "她说完，手还按在柜台上。"
+             }
+           ]
+         },
+@@
+           "lines": [
+             {
+               "speaker": "narrator",
+-              "text": "他问了几句。她把还撑得住的话又说了一遍。"
++              "text": "店主问了几句，她又说了一遍丢东西的事。"
+             },
+             {
+               "speaker": "eleanor",
+@@
+             {
+               "speaker": "eleanor",
+               "text": "别跟别人说我今天来求过你。"
+-            },
+-            {
+-              "speaker": "eleanor",
+-              "text": "谢谢。现在我能自己做主的事不多了，就这一件，让我留着吧。"
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "我留了一块。"
+-            },
+-            {
+-              "speaker": "eleanor",
+               "text": "这块材料别跟其他的算在一起。给你的。"
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "拿着就走。别问。",
++              "text": "拿着。别问。",
+               "expr": "shy"
+             },
+             {
+@@
+           "lines": [
+             {
+               "speaker": "eleanor",
+-              "text": "你不算钱？",
++              "text": "你倒收得痛快。",
+               "expr": "shy"
+             },
+             {
+@@
+               "text": "那我以后每回都得给你带点。"
+             },
+             {
+-              "speaker": "eleanor",
+-              "text": "我记着。就这一句。"
+-            },
+-            {
+-              "speaker": "narrator",
+-              "text": "她把元件往柜台里侧推了推，才收手。"
+-            },
+-            {
+-              "speaker": "narrator",
+-              "text": "她离开窗口，布角在兜里露出一尖。"
++              "speaker": "narrator",
++              "text": "她把布角揣进兜里，离开窗口。"
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "narrator",
+-              "text": "她折好布角揣进兜里，轻轻收回搭在柜沿上的手，走了。"
++              "text": "她收好布角，转身走了。"
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "narrator",
+-              "text": "布角重新包好，她往兜里塞，塞了一下才塞进去。"
++              "text": "她重新包好元件，塞进兜里。"
+             },
+             {
+               "speaker": "narrator",
+@@
+             {
+               "speaker": "lydia",
+               "text": "你看着给，我不还价。"
+-            },
+-            {
+-              "speaker": "lydia",
+-              "text": "真的，你报多少我都点头。"
+             }
+           ]
+         },
+@@
+             {
+               "speaker": "lydia",
+               "text": "我本来准备了一整套说辞，全废了。"
+-            },
+-            {
+-              "speaker": "lydia",
+-              "text": "我还想着，你要是压得太狠，我就知道该怎么看你。"
+-            },
+-            {
+-              "speaker": "lydia",
+-              "text": "结果你没有。"
+             }
+           ]
+         },
+@@
+           "lines": [
+             {
+               "speaker": "lydia",
+-              "text": "……那我只好问正事了。"
+-            },
+-            {
+-              "speaker": "lydia",
+               "text": "你这儿最近有没有一个女孩来卖东西？"
+             },
+             {
+@@
+             },
+             {
+               "speaker": "lydia",
+-              "text": "我跟她从小一块长大。她母亲出事以后，我家那扇门就对我说“别提”。"
++              "text": "我跟她从小一块长大。她母亲一出事，家里连她的名字都不让我提。"
+             },
+             {
+               "speaker": "lydia",
+@@
+             },
+             {
+               "speaker": "narrator",
+-              "text": "她把镯子收回包里，扣子扣了两次才扣上。"
++              "text": "她收起镯子，把包扣上。"
+             }
+           ]
+         }
+@@
+             },
+             {
+               "speaker": "narrator",
+-              "text": "她还是拿起布，一根一根把手指擦过去，指缝也擦到了。",
++              "text": "她拿起布，把指缝里的灰也擦干净了。",
+               "en": "She picks up the cloth anyway and wipes each finger, one by one, even between them."
+             },
+             {
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "绝了。她把这种东西的钥匙设成我。",
++              "text": "这么要紧的东西，她就拿我的生日当密码。",
+               "en": "Unbelievable. She made me the key to something like this."
+             },
+             {
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "带在身上，我在垃圾场一弯腰，它就不知道掉进哪堆废料里。",
++              "text": "带去垃圾场，丢了连找都没处找。",
+               "en": "Carry it on me, and the second I bend over at the junkyard, it drops into some pile of scrap and it's gone."
+             }
+           ]
+@@
+               "text": "有。她记的班次，工人的名字，几笔没走完的账。",
+               "en": "Yes. Shifts she wrote down, workers' names, a few accounts left unfinished.",
+               "expr": "serious"
+-            },
+-            {
+-              "speaker": "eleanor",
+-              "text": "我看不懂的比看懂的多。",
+-              "en": "There's more I can't read than I can."
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "你最好真不看。里面全是她的工作记录。",
++              "text": "你说的。别趁我不在翻它。",
+               "en": "You'd better really not look. It's all her work records."
+             },
+             {
+@@
+               "speaker": "thug",
+               "text": "劝不动，倒霉的又不是你。",
+               "en": "If she won't listen, you're not the one who pays."
+-            },
+-            {
+-              "speaker": "thug",
+-              "text": "<i>他退开一步，停了一下</i>那个盘，可别弄丢了。丢了，谁都换不回来。",
+-              "en": "<i>He pulls the door open, pauses</i>That drive. Don't lose it. Lose it, and there's no getting her back."
+             }
+           ]
+         }
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "他们敢。账都能凭白编出来，还有什么不敢。",
++              "text": "他们敢。账都能凭空编出来，还有什么不敢。",
+               "en": "They would. If they can fabricate a ledger out of thin air, what won't they do?"
+             },
+             {
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "我昨晚整宿没合眼，翻来覆去想的都是盘里那些东西。",
++              "text": "我昨晚整宿没合眼。",
+               "en": "I didn't sleep a wink last night. All I could think about was what's on that disc."
+             },
+             {
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "我选哪条，都有人替我付账。",
+-              "en": "Whichever way I choose, someone else pays.",
++              "text": "喂，你说。不是让你替我定，我就想听听你会怎么走。",
++              "en": "Hey, you. Tell me. I'm not asking you to decide for me—I just want to hear what move you'd make.",
+               "expr": "tired"
+-            },
+-            {
+-              "speaker": "eleanor",
+-              "text": "喂，你说。不是让你替我定，我就想听听你会怎么走。",
+-              "en": "Hey, you. Tell me. I'm not asking you to decide for me—I just want to hear what move you'd make."
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "她出来了，研究回了他们手里。这笔账，我以后自己跟她算。",
++              "text": "研究交回去了。她要问，我自己跟她说。",
+               "en": "She's out. The research is back in their hands. I'll settle that score with her myself later."
+             }
+           ]
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "他们最怕的就是签字。",
+-              "en": "A signature is what they're most afraid of."
+-            },
+-            {
+-              "speaker": "eleanor",
+               "text": "侦探的字据还在。他能证明盘是从灯架底下拿的，没人动过。",
+               "en": "The detective's written statement is still there. He can testify the disc was taken from under the lamp stand and no one touched it.",
+               "expr": "determined"
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "也罢。等能见面，我当面问她为什么。",
++              "text": "等见了面，我得问问她，怎么什么都瞒着我。",
+               "en": "…Never mind. When we can meet, I'll ask her why to her face.",
+               "expr": "sad"
+             },
+@@
+         {
+           "id": "c16.b003",
+           "chapter": "c16",
+-          "scene": "甲乙共同对白",
++          "scene": "两种救母方案共同对白",
+           "label": "",
+           "lines": [
+             {
+@@
+             },
+             {
+               "speaker": "mother",
+-              "text": "你没少报。好。我最怕别人看我穿这件外套，就把价往下压。",
++              "text": "别因为我穿这件外套，就少收钱。",
+               "en": "You didn't under-report. Good. What I hate most is people seeing this coat and knocking the price down."
+             },
+             {
+@@
+             },
+             {
+               "speaker": "lydia",
+-              "text": "……不对，等等，我本来是来看她的，怎么又说起我自己了。",
++              "text": "哎呀，先不说镯子了。今天是来看她的。",
+               "en": "...No, wait. I came here to see her. Why am I talking about myself again."
+             },
+             {
+@@
+             },
+             {
+               "speaker": "eleanor",
+-              "text": "谢谢你一直把我当成一个能自己做事的人。"
+-            },
+-            {
+-              "speaker": "eleanor",
+-              "text": "我现在信自己了。以后你要是有用得上我的地方，也可以来找我。"
++              "text": "这阵子麻烦你不少。谢谢。"
++            },
++            {
++              "speaker": "eleanor",
++              "text": "以后有用得上我的地方，来找我。"
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "lydia",
+-              "text": "上次顺便说了很多不该替埃莉诺做主的话。",
++              "text": "上回替埃莉诺做主，把她气着了。",
+               "expr": "hurt"
+             },
+             {
+@@
+             {
+               "speaker": "lydia",
+               "text": "我见到她母亲了。比以前瘦，说话还是那样，不许别人乱夸。"
+-            },
+-            {
+-              "speaker": "lydia",
+-              "text": "埃莉诺也跟我讲了最近的事。这回，我从头听到了尾。"
+             }
+           ]
+         },
+@@
+             },
+             {
+               "speaker": "lydia",
+-              "text": "她说得对，她也是。我以前没看懂。",
++              "text": "她也是个值得来往的朋友。就是嘴不饶人。",
+               "expr": "smile"
+             }
+           ]
+@@
+           "lines": [
+             {
+               "speaker": "eleanor",
+-              "text": "嘿。今天有空吗？今天不为别的事。",
++              "text": "嘿。今天有空吗？",
+               "expr": "soft"
+             },
+             {
+@@
+             {
+               "speaker": "eleanor",
+               "text": "她醒过来时，我就在旁边。"
+-            },
+-            {
+-              "speaker": "eleanor",
+-              "text": "现在有的，也不少。"
+             }
+           ]
+         },
+@@
+         {
+           "id": "rd.b001",
+           "chapter": "rd",
+-          "scene": "丁1：擅自交出数据盘并收私人好处",
++          "scene": "擅自交出数据盘并收私人好处",
+           "label": "",
+           "lines": [
+             {
+@@
+         {
+           "id": "rd.b003",
+           "chapter": "rd",
+-          "scene": "丁2：卖给不承担放人责任的第三方",
++          "scene": "卖给不承担放人责任的第三方",
+           "label": "",
+           "lines": [
+             {
+@@
+         {
+           "id": "rd.b004",
+           "chapter": "rd",
+-          "scene": "丁3：瞒着她公开研究",
++          "scene": "瞒着她公开研究",
+           "label": "",
+           "lines": [
+             {
+@@
+         {
+           "id": "rd.b005",
+           "chapter": "rd",
+-          "scene": "丁4：没有背叛，只是不再参与",
++          "scene": "没有背叛，只是不再参与",
+           "label": "",
+           "lines": [
+             {
+*** Update File: B:/Eleanor Story Expand/src/EleanorStory.cs
+@@
+                 else if (RomanceState.HardshipAidGiven)
+                 {
+                     dialogue = StoryEngine.BuildSelected(StoryV06Content.B_C05_N002,
+-                        index => index != 0 && index != 3 && index != 9);
++                        index => index != 0 && index != 3 && index != 8);
+                 }
+                 else
+                 {
+*** Update File: B:/Eleanor Story Expand/tools/en_v06_part1.json
+@@
+   "er_v06_c05_b005_02": "Me begging you for food. And me apologising.",
+   "er_v06_c05_b005_03": "Especially the second part!",
+   "er_v06_c05_b006_01": "Don't tell anyone I came here to beg today.",
+-  "er_v06_c05_b006_02": "Thank you. There aren't many things I can still decide for myself. Let me keep this one.",
+   "er_v06_c05_b007_01": "Don't move! That crate was reported stolen.",
+   "er_v06_c05_b007_02": "What? It's not mine! I've never seen it before!",
+   "er_v06_c05_b007_03": "Like mother, like daughter. Come with us.",
+@@
+   "er_v06_c19_b005_04": "You don't owe me for the past. And this isn't repayment.",
+   "er_v06_c19_b005_05": "I'll still come sell goods in a couple of days. Act normal then.",
+   "er_v06_c19_b006_01": "I said some harsh things before. I want to add one thing today.",
+-  "er_v06_c19_b006_02": "Thank you for always treating me like someone who can do things for herself.",
+-  "er_v06_c19_b006_03": "I believe in myself now. If you ever need me for something, you can come find me too.",
++  "er_v06_c19_b006_02": "I've been a lot of trouble lately. Thank you.",
++  "er_v06_c19_b006_03": "If there's something I can help with, come and find me.",
+   "er_v06_c20_b002_01": "Well? I picked well, didn't I?",
+   "er_v06_c20_b002_02": "I didn't hide the flaws. Praise my eye, not my character.",
+   "er_v06_c20_b004_01": "My mother says my tone when bargaining sounds more and more like yours.",
+@@
+   "er_v06_c20_b005_01": "Isn't a clever girlfriend like me enough?",
+   "er_v06_c20_b005_02": "You didn't argue with me this time. That counts as progress.",
+   "er_v06_c21_b001_01": "Today I'm really here to buy something.",
+-  "er_v06_c21_b001_02": "Last time I also said a lot of things that weren't mine to decide for Eleanor.",
++  "er_v06_c21_b001_02": "She was angry with me for speaking for her last time.",
+   "er_v06_c21_b001_03": "I apologized to her. She said don't just apologize to the owner. It makes it sound like she doesn't have a mouth of her own.",
+   "er_v06_c21_b001_04": "I saw her mother. Thinner than before. Still talks the same way, won't let anyone praise her too much.",
+-  "er_v06_c21_b001_05": "Eleanor told me about recent events too. This time, I heard the whole story from beginning to end.",
+   "er_v06_c21_b002_01": "I asked someone who knows about that bracelet. The price you offered was fair.",
+   "er_v06_c21_b002_02": "Tell that to people upstairs and they won't believe there's a shopkeeper like that down here.",
+   "er_v06_c21_b003_01": "Before, when we picked gifts, we only worried they weren't expensive enough.",
+@@
+   "er_v06_c21_b004_03": "Word going around up there is that Eleanor has taken a liking to a pawnshop owner in the lower levels.",
+   "er_v06_c21_b004_04": "I deflected a few things for her. That was her trouble, not yours. Don't take it personally.",
+   "er_v06_c21_b005_01": "She says you're a friend worth keeping. She rarely uses the word 'worth.'",
+-  "er_v06_c21_b005_02": "She's right. So is she. I didn't see it before.",
++  "er_v06_c21_b005_02": "She's a friend worth having too. Sharp tongue and all.",
+   "er_v06_c21_b006_01": "If suitable business comes up in the future, I'll have people come talk to you directly. You won't owe me a favour.",
+   "er_v06_c21_b006_02": "If the goods are right and the price is right, we'll talk.",
+   "er_v06_c21_b006_03": "No wonder she says that all the time now.",
+@@
+   "er_v06_c22_b007_03": "It's not for sale. You'd better have learned the difference by now.",
+   "er_v06_c22_b008_01": "Take it. Don't put it out with the stock. I'm not that generous.",
+   "er_v06_c22_b009_01": "Fine, I'll wear it myself. You'll see it anyway.",
+-  "er_v06_c23_b001_01": "Hey. Are you free today? Not for any other reason today.",
++  "er_v06_c23_b001_01": "Hey. Got a moment today?",
+   "er_v06_c23_b001_02": "My mother's fine, and I still have my job.",
+   "er_v06_c23_b001_03": "You'll have to get used to it. I don't only show up when something's wrong.",
+   "er_v06_c23_b002_01": "My mother keeps telling me to bring an extra portion of food.",
+   "er_v06_c23_b002_02": "This one's for you.",
+   "er_v06_c23_b002_03": "The room's small, so we count every credit. Mother still has nightmares.",
+   "er_v06_c23_b002_04": "When she wakes up, I'm right there.",
+-  "er_v06_c23_b002_05": "What we have now isn't nothing.",
+   "er_v06_c23_b003_01": "The first time I came here, I said this shop wasn't much. It still has plenty that needs fixing.",
+   "er_v06_c23_b003_02": "Don't think that because I like you, I like the broken lights too. My temper doesn't disappear just because I'm in love.",
+   "er_v06_c23_b003_03": "Let me stay a while today. If a customer comes, do your business.",
+@@
+   "er_v06_c04_b008_01": "My mother is already locked up. Isn't that enough for them?",
+   "er_v06_c04_b008_02": "I... I need to think.",
+   "er_v06_c04_b008_03": "Before, if someone sent me a crate like that, I wouldn't even check the label. I'd just open it.",
+-  "er_v06_c04_b008_04": "Now I know. Nothing in the lower levels comes free. Not upstairs either.",
++  "er_v06_c04_b008_04": "Next time someone brings a box like that, I'll check the label first.",
+   "er_v06_c04_b008_05": "You warned me. Take this. It's the last thing I brought from home.",
+   "er_v06_c17_b003_01": "The research was returned. Of course that doesn't sit well with me.",
+   "er_v06_c17_b003_02": "But don't let her think bringing me back is something she has to apologize to me for.",
+@@
+   "er_v06_c01_n001_03": "Unbelievable. To frogs who've never left their well, I suppose this passes for acceptable.",
+   "er_v06_c01_n001_04": "Hey, you over there. Before I go back upstairs, I need something to eat.",
+   "er_v06_c01_n001_05": "Got anything to eat? Something fresh, and some variety. Don't fob me off with nutrifruit.",
+-  "er_v06_c01_n001_06": "Money isn't the problem. At least not yet.",
+-  "er_v06_c01_n001_07": "She sets a cloth bag on the counter, its mouth folded twice, the corners worn shiny.",
+-  "er_v06_c01_n001_08": "Everything on the shelves has a tag.",
+-  "er_v06_c01_n001_09": "Tags... fine. I can read.",
+-  "er_v06_c01_n001_10": "She points to a packet. The shopkeeper sets it on the counter; her fingertip rests on the seal without breaking it.",
+-  "er_v06_c01_n001_11": "When did this one come in?",
+-  "er_v06_c01_n001_12": "I'm not being fussy. They imprisoned my mother on an embezzlement charge.",
+-  "er_v06_c01_n001_13": "She ran the biggest hydroponics farm on the station. She audited the books three times just to replace a broken lamp.",
+-  "er_v06_c01_n001_14": "Absurd. Half the station eats because of her!",
+-  "er_v06_c01_n001_15": "Now they won't even let me back upstairs. It won't take long before they realize what a stupid mistake they've made.",
++  "er_v06_c01_n001_06": "Everything on the shelves has a tag.",
++  "er_v06_c01_n001_07": "Tags... fine. I can read.",
++  "er_v06_c01_n001_08": "She points to a packet. The shopkeeper sets it on the counter; her fingertip rests on the seal without breaking it.",
++  "er_v06_c01_n001_09": "When did this one come in?",
++  "er_v06_c01_n001_10": "I never used to have to worry about any of this. They've locked my mother up, claiming she embezzled funds.",
++  "er_v06_c01_n001_11": "She runs the largest hydroponic farm on the entire station.",
++  "er_v06_c01_n001_12": "Absurd. Half the station eats because of her!",
++  "er_v06_c01_n001_13": "Now they won't even let me back upstairs. It won't take long before they realize what a stupid mistake they've made.",
+   "er_v06_c01_n002_01": "She doesn't take the bait. Her eyes return to the shelves.",
+   "er_v06_c01_n003_01": "Point out what you want.",
+   "er_v06_c01_n003_02": "...Hmph. Fine. Saves me saying too much and taking it back later.",
+@@
+   "er_v06_c02_n001_10": "...I'll take the cheap one. The chip isn't on the side I drink from.",
+   "er_v06_c02_n001_11": "My roommate says fix the lock first, worry about curtains later.",
+   "er_v06_c02_n001_12": "She also says the perfume I brought would cover half a month's rent.",
+-  "er_v06_c02_n001_13": "Upper-district custom. The cap's loose. Half a bottle left. You won't see one down here twice a year.",
++  "er_v06_c02_n001_13": "It's custom-made perfume from the Upper Level, and she's pricing it in rent.",
+   "er_v06_c02_n001_14": "...Hmph.",
+   "er_v06_c02_n001_15": "These, plus the lamp.",
+   "er_v06_c02_n002_01": "The old cloth is spread on the counter. Cup, soap, towel—she packs them in one by one, neat.",
+   "er_v06_c02_n002_02": "The neighbours argue every night. It sounds like they're right next to my bed.",
+-  "er_v06_c02_n002_03": "With that racket, I don't need a radio. ...That joke was terrible.",
++  "er_v06_c02_n002_03": "With that racket, I won't need to buy a radio.",
+   "er_v06_c02_n002_04": "I can't believe people spend their whole lives in a place like this.",
+   "er_v06_c02_n002_05": "Don't get the cheapest lamp.",
+   "er_v06_c02_n002_06": "It's not that I'm afraid of the dark. I just can't read the books in it.",
+@@
+   "er_v06_c03_n001_14": "...I don't have any other family. Just my mother.",
+   "er_v06_c03_n001_15": "She tightens the cap on the last bottle and wipes a finger down its side.",
+   "er_v06_c03_n002_01": "And this.",
+-  "er_v06_c03_n002_02": "She draws the pendant from her collar, the chain still warm, the face turned up.",
++  "er_v06_c03_n002_02": "She draws the pendant from her neckline and holds it face up in her palm.",
+   "er_v06_c03_n002_03": "My mother gave it to me. Just tell me what it's worth. I haven't decided.",
+   "er_v06_c03_n002_04": "...I'm not selling this today.",
+   "er_v06_c03_n002_05": "The pendant goes back under her collar. She smooths the collar, twice, before it sits right.",
+@@
+   "er_v06_c03_n004_02": "...The price is fair. But it's not for sale.",
+   "er_v06_c03_n005_01": "Never mind. ...If I really bring it next time, don't play the big spender.",
+   "er_v06_c03_n005_02": "I'm going. I'll watch what I spend.",
+-  "er_v06_c04_n001_01": "There are no customers that afternoon. A man comes to the window carrying a gift box tied with ribbon and coated in fine dust.",
++  "er_v06_c04_n001_01": "A man approaches the sales window carrying a gift box tied with ribbon.",
+   "er_v06_c04_n001_02": "Hello there. You know Eleanor, don't you? I'm her... uncle.",
+   "er_v06_c04_n001_03": "We prepared a little gift for her. Only the best from the upper district.",
+   "er_v06_c04_n001_04": "But I can't find her anywhere.",
+@@
+   "er_v06_c04_n005_05": "Has she touched the box? If she has, tell her to come in tomorrow.",
+   "er_v06_c04_n005_06": "She hasn't.",
+   "er_v06_c04_n005_07": "Procedure still requires a word with her.",
+-  "er_v06_c04_n005_08": "He carries the gift box away under his arm, its ribbon brushing his trouser leg.",
+   "er_v06_c04_n006_01": "The next day she comes later than usual, half-dried mud on her shoes.",
+   "er_v06_c04_n006_02": "Security knocked on my door this morning.",
+   "er_v06_c04_n006_03": "Someone left me a box. One that's been reported stolen.",
+@@
+   "er_v06_c04_n006_11": "...You were right to report it. But next time, don't decide for me.",
+   "er_v06_c04_n006_12": "At least tell me first.",
+   "er_v06_c04_n006_13": "Before, if someone sent me a crate like that, I wouldn't even check the label. I'd just open it.",
+-  "er_v06_c04_n006_14": "Nothing down here is free.",
++  "er_v06_c04_n006_14": "Next time I'll check the label first.",
+   "er_v06_c04_n007_01": "You warned me. Take this. It's the last thing I brought from home.",
+   "er_v06_c04_n008_01": "She stops after a few steps, looks back at the counter, then keeps walking.",
+-  "er_v06_c05_n001_01": "Three days later.",
+-  "er_v06_c05_n001_02": "She waits outside the window for a long time before stepping up to the counter.",
+-  "er_v06_c05_n001_03": "I can't take it anymore.",
+-  "er_v06_c05_n001_04": "Last night I was robbed. What little I had left is gone.",
+-  "er_v06_c05_n001_05": "The money's gone. What's left empties out after rent.",
+-  "er_v06_c05_n001_06": "The verdict came down. They found my mother guilty.",
+-  "er_v06_c05_n001_07": "I'll be trapped down here forever, and my mother will rot in prison.",
+-  "er_v06_c05_n001_08": "Only this pendant left, and I've kept it on.",
+-  "er_v06_c05_n001_09": "I can't believe I've sunk to asking this.",
+-  "er_v06_c05_n001_10": "But could you spare me some food? Anything edible, please.",
++  "er_v06_c05_n001_01": "She waits outside the window for a long time before stepping up to the counter.",
++  "er_v06_c05_n001_02": "I can't take it anymore.",
++  "er_v06_c05_n001_03": "Last night I was robbed. What little I had left is gone.",
++  "er_v06_c05_n001_04": "The last of my money went on rent.",
++  "er_v06_c05_n001_05": "The verdict came down. They found my mother guilty.",
++  "er_v06_c05_n001_06": "I'll be trapped down here forever, and my mother will rot in prison.",
++  "er_v06_c05_n001_07": "Only this pendant left, and I've kept it on.",
++  "er_v06_c05_n001_08": "I can't believe I've sunk to asking this.",
++  "er_v06_c05_n001_09": "But could you spare me some food? Anything edible, please.",
+   "er_v06_c05_n002_01": "The bag on the counter is opened. Dried food and two nutrifruits are pushed toward her.",
+   "er_v06_c05_n002_02": "I'm not here to beg.",
+   "er_v06_c05_n002_03": "...Fine. I'll take it.",
+@@
+   "er_v06_c05_n002_12": "She steps back, lets her hand rest on the counter edge for a moment, then turns to leave.",
+   "er_v06_c05_n003_01": "He doesn't touch the bag on the counter.",
+   "er_v06_c05_n003_02": "How much clearer do I need to be? I was robbed, the money's gone, and the verdict is in. The pendant stays.",
+-  "er_v06_c05_n003_03": "She finishes and keeps her hand on the counter.",
+-  "er_v06_c05_n004_01": "He asks a few questions. She repeats what she can still stand to say.",
++  "er_v06_c05_n004_01": "The shopkeeper asks a few questions. She repeats what happened to her belongings.",
+   "er_v06_c05_n004_02": "Are you done?",
+   "er_v06_c05_n004_03": "I understand. You run a shop, not a relief station.",
+   "er_v06_c05_n004_04": "She folds the empty cloth bag and tucks it back into her jacket.",
+*** Update File: B:/Eleanor Story Expand/tools/en_v06_part2.json
+@@
+   "er_v06_c08_b101_03": "Just this one.",
+   "er_v06_c08_b101_04": "The cloth unfolded. Inside was an electronic component, clean at the edges, no dust on it.",
+   "er_v06_c08_b101_05": "Found it in the scrap pile. The connector isn't rusty.",
+-  "er_v06_c08_b101_06": "I kept one piece.",
+-  "er_v06_c08_b101_07": "Don't price this with the rest. It's for you.",
+-  "er_v06_c08_b101_08": "Take it and go. Don't ask.",
+-  "er_v06_c08_b101_09": "She pushed the component to the center of the counter and only pulled her hand back after a pause.",
+-  "er_v06_c08_b102_01": "You're not charging me?",
++  "er_v06_c08_b101_06": "Don't price this with the rest. It's for you.",
++  "er_v06_c08_b101_07": "Take it. Don't ask.",
++  "er_v06_c08_b101_08": "She pushed the component to the center of the counter and only pulled her hand back after a pause.",
++  "er_v06_c08_b102_01": "You were quick enough to take it.",
+   "er_v06_c08_b102_02": "Then I'll have to bring you something every time.",
+-  "er_v06_c08_b102_03": "I'll remember. That's all I'm saying.",
+-  "er_v06_c08_b102_04": "She nudged the component toward the inside of the counter before pulling her hand back.",
+-  "er_v06_c08_b102_05": "She leaves the window, a tip of the cloth showing from her pocket.",
++  "er_v06_c08_b102_03": "She tucks the cloth into her pocket and leaves the window.",
+   "er_v06_c08_b103_01": "I told you, it's for you.",
+   "er_v06_c08_b103_02": "And you still paid me by the stock sheet.",
+   "er_v06_c08_b103_03": "…Whatever. I'm not going to beg you to take it for free.",
+   "er_v06_c08_b103_04": "She didn't count the coins, just dropped them into her inner pocket.",
+   "er_v06_c08_b103_05": "If you undercharge me next time, I'll ask about it.",
+-  "er_v06_c08_b103_06": "She folds the cloth into her pocket, gently lifts her hand from the counter edge, and leaves.",
++  "er_v06_c08_b103_06": "She puts the cloth away, turns, and leaves.",
+   "er_v06_c08_b104_01": "If you won't take it, fine.",
+   "er_v06_c08_b104_02": "Next time I'll pick something you can't find a reason to refuse.",
+-  "er_v06_c08_b104_03": "She rewrapped it in the cloth and stuffed it into her pocket. It took a shove to get it in.",
++  "er_v06_c08_b104_03": "She wraps the component up again and slips it into her pocket.",
+   "er_v06_c08_b104_04": "She steps away from the window without looking back.",
+   "er_v06_c09_b101_01": "First a sweet scent came through the door. Then the person.",
+   "er_v06_c09_b101_02": "Oh my, so this is the shop.",
+*** Update File: B:/Eleanor Story Expand/tools/en_v06_part3.json
+@@
+   "er_v06_c11_b001_20": "Then I put it back.",
+   "er_v06_c11_b001_21": "The shopkeeper pulls a clean cloth from under the counter and sets it by her hand.",
+   "er_v06_c11_b001_22": "For wiping my hands? The dirt on my hands is none of your concern.",
+-  "er_v06_c11_b001_23": "She picks up the cloth anyway and wipes each finger, one by one, even between them.",
++  "er_v06_c11_b001_23": "She picks up the cloth and wipes the dirt from between her fingers too.",
+   "er_v06_c11_b001_24": "The detective sees me tomorrow. I'll bring the money myself.",
+   "er_v06_c11_b001_25": "Don't follow me. If he sees someone with me, his price changes."
+ }
+*** Update File: B:/Eleanor Story Expand/tools/en_v06_part7.json
+@@
+   "er_v06_c17_b101_21": "Selling salvage. One deal at a time.",
+   "er_v06_c17_b101_22": "She used to barely look at price tags. She didn't tell me much about this.",
+   "er_v06_c17_b101_23": "That's the total.",
+-  "er_v06_c17_b101_24": "You didn't under-report. Good. What I hate most is people seeing this coat and knocking the price down.",
++  "er_v06_c17_b101_24": "Don't charge me less just because I'm wearing this coat.",
+   "er_v06_c17_b101_25": "She's been sleeping deep these days. Last night she talked in her sleep. Haggling with someone.",
+   "er_v06_c17_b101_26": "If she wants to come, she'll come herself. I'm just here to buy things.",
+   "er_v06_c17_b101_27": "She slips the nutrient fruits into her coat pocket, nods to the shopkeeper, and leaves.",
+@@
+   "er_v06_c18_b101_06": "Whose face is round. Cut it out.",
+   "er_v06_c18_b101_07": "Lydia lifts her wrist and gives it a shake. The old bracelet glints under the light.",
+   "er_v06_c18_b101_08": "I wear the bracelet every day. When my family asks, I say I found it myself.",
+-  "er_v06_c18_b101_09": "...No, wait. I came here to see her. Why am I talking about myself again.",
++  "er_v06_c18_b101_09": "Oh, enough about the bracelet. I'm here to see her today.",
+   "er_v06_c18_b101_10": "My family's been going through my accounts lately. I have to be back before dinner. I got her here.",
+   "er_v06_c18_b101_11": "Next time I'll come on my own. I've got things to buy too. That's settled, then.",
+   "er_v06_c18_b101_12": "You two sure are close.",
+*** Update File: B:/Eleanor Story Expand/tools/en_v06_part8.json
+@@
+   "er_v06_c12_b001_08": "Her work number, the farm number, my father's... everything I could think of.",
+   "er_v06_c12_b001_09": "Just before dawn, I typed in my own birthday.",
+   "er_v06_c12_b001_10": "It opened.",
+-  "er_v06_c12_b001_11": "Unbelievable. She made me the key to something like this.",
++  "er_v06_c12_b001_11": "Something this important, and she used my birthday as the password.",
+   "er_v06_c12_b001_12": "What's on it.",
+   "er_v06_c12_b001_13": "A pile of records. Shifts, light cycles, materials, accounts. I don't understand half of it.",
+   "er_v06_c12_b001_14": "One I did understand. Nutrient fruit.",
+@@
+   "er_v06_c12_b001_24": "The detective. Me. Now you.",
+   "er_v06_c12_b001_25": "The detective took the money and left. Said it was too hot to touch.",
+   "er_v06_c12_b001_26": "The lock on my door is broken. People come to check out the room, in and out.",
+-  "er_v06_c12_b001_27": "Carry it on me, and the second I bend over at the junkyard, it drops into some pile of scrap and it's gone.",
++  "er_v06_c12_b001_27": "If I lose it at the dump, I'll never find it.",
+   "er_v06_c12_b002_01": "Anything else on the drive.",
+   "er_v06_c12_b002_02": "Yes. Shifts she wrote down, workers' names, a few accounts left unfinished.",
+-  "er_v06_c12_b002_03": "There's more I can't read than I can.",
+   "er_v06_c12_b003_01": "Leave it with me. There's a lock under the counter.",
+   "er_v06_c12_b003_02": "...I didn't ask you for anything.",
+   "er_v06_c12_b003_03": "<i>She presses her hand on the drive one more time before pushing it over</i>Just for a few days.",
+   "er_v06_c12_b003_04": "When I figure out what to do with it, I'll come get it.",
+   "er_v06_c12_b003_05": "I won't look. Won't touch it.",
+-  "er_v06_c12_b003_06": "You'd better really not look. It's all her work records.",
++  "er_v06_c12_b003_06": "You said it. Don't go through it while I'm away.",
+   "er_v06_c12_b003_07": "I'll remember this.",
+   "er_v06_c12_b003_08": "She steps back and glances at the lock beneath the counter.",
+   "er_v06_c13_b001_01": "A man plants himself in front of the window, blocking it.",
+@@
+   "er_v06_c13_b003_08": "You done?",
+   "er_v06_c13_b003_09": "Done. That girl's got a temper. Soften your tone when you talk her round.",
+   "er_v06_c13_b003_10": "If she won't listen, you're not the one who pays.",
+-  "er_v06_c13_b003_11": "<i>He steps back and pauses</i>Don't lose that drive. If it's gone, nobody can trade for anybody.",
+   "er_v06_c14_b001_01": "She comes to the window without a bag this time and first looks at the lock behind the counter.",
+   "er_v06_c14_b001_02": "You sent word for me. What's so important it has to be today?",
+   "er_v06_c14_b001_03": "Someone came by. They want that drive.",
+@@
+   "er_v06_c14_b001_09": "Three hundred. That's what my mother's worth to them—one errand.",
+   "er_v06_c14_b001_10": "He also said the cells are cold. If someone gets sick, nobody would think twice.",
+   "er_v06_c14_b001_11": "<i>She grabs the edge of the counter</i>…He wouldn't dare.",
+-  "er_v06_c14_b001_12": "They would. If they can fabricate a ledger out of thin air, what won't they do?",
++  "er_v06_c14_b001_12": "They would. They made up the accounts. What wouldn't they do?",
+   "er_v06_c14_b001_13": "How many days did they give you?",
+   "er_v06_c14_b001_14": "Three days. Today's the second.",
+-  "er_v06_c14_b001_15": "I didn't sleep a wink last night. All I could think about was what's on that disc.",
++  "er_v06_c14_b001_15": "I didn't sleep at all last night.",
+   "er_v06_c14_b001_16": "If I hand it over, my mother might get out. The research goes back to Pastel, rotting in some drawer.",
+   "er_v06_c14_b001_17": "It's what she cares about most. She didn't stop even when it meant prison.",
+   "er_v06_c14_b001_18": "Don't hand it over—post it straight out, let the whole Lower District know the nutrient fruit can produce seeds…",
+   "er_v06_c14_b001_19": "Then while she's locked in there, she's the last card they can squeeze.",
+-  "er_v06_c14_b001_20": "Whichever way I choose, someone else pays.",
+-  "er_v06_c14_b001_21": "Hey, you. Tell me. I'm not asking you to decide for me—I just want to hear what move you'd make.",
++  "er_v06_c14_b001_20": "Hey, you. Tell me. I'm not asking you to decide for me—I just want to hear what move you'd make.",
+   "er_v06_c14_b002_01": "…Hand it over. Get her out first. The rest can wait.",
+   "er_v06_c14_b002_02": "Sophia's case dismissed. Subject released. Return to the Upper District prohibited.",
+-  "er_v06_c14_b002_03": "She's out. The research is back in their hands. I'll settle that score with her myself later.",
++  "er_v06_c14_b002_03": "The research is back in their hands. If she asks, I'll tell her myself.",
+   "er_v06_c14_b003_01": "First go to the Security Department and apply for protective custody. Move her out in the open.",
+   "er_v06_c14_b003_02": "Once she's protected, hand over the research—publicly.",
+   "er_v06_c14_b003_03": "The Security Department? They're the ones who locked her up.",
+   "er_v06_c14_b003_04": "It was that ledger that locked her up. Protective custody is a different form.",
+   "er_v06_c14_b003_05": "...But they did let me go in the end.",
+   "er_v06_c14_b003_06": "Her name's on the care form. If anything happens to her, someone has to sign and answer for it.",
+-  "er_v06_c14_b003_07": "A signature is what they're most afraid of.",
+-  "er_v06_c14_b003_08": "The detective's written statement is still there. He can testify the disc was taken from under the lamp stand and no one touched it.",
+-  "er_v06_c14_b003_09": "I'll make a copy myself first. Before the original goes in, I'll get the contents into the public archive.",
+-  "er_v06_c14_b003_10": "The disc's here. You want it now?",
+-  "er_v06_c14_b003_11": "Now. <i>She takes it and clutches it in her palm.</i>",
+-  "er_v06_c14_b003_12": "If that errand runner comes back, tell them I'm not handing it over. Don't say anything else.",
+-  "er_v06_c14_b003_13": "And... you didn't take the three hundred.",
+-  "er_v06_c14_b003_14": "Don't think I didn't hear.",
++  "er_v06_c14_b003_07": "The detective's written statement is still there. He can testify the disc was taken from under the lamp stand and no one touched it.",
++  "er_v06_c14_b003_08": "I'll make a copy myself first. Before the original goes in, I'll get the contents into the public archive.",
++  "er_v06_c14_b003_09": "The disc's here. You want it now?",
++  "er_v06_c14_b003_10": "Now. <i>She takes it and clutches it in her palm.</i>",
++  "er_v06_c14_b003_11": "If that errand runner comes back, tell them I'm not handing it over. Don't say anything else.",
++  "er_v06_c14_b003_12": "And... you didn't take the three hundred.",
++  "er_v06_c14_b003_13": "Don't think I didn't hear.",
+   "er_v06_c14_b004_01": "Post it. Today. Make it so they can't cover it up.",
+   "er_v06_c14_b004_02": "Detainee Sofia died in custody. Cause under investigation.",
+   "er_v06_c14_b004_03": "...It's all posted. She's gone. Don't talk to me. I'll stand here a bit, then leave.",
+@@
+   "er_v06_c14_b007_07": "Same as me.",
+   "er_v06_c14_b007_08": "What would your mother say if she knew?",
+   "er_v06_c14_b007_09": "She'd pick apart the copy I made and say my handwriting's crooked.",
+-  "er_v06_c14_b007_10": "…Never mind. When we can meet, I'll ask her why to her face.",
++  "er_v06_c14_b007_10": "When I see her, I'll ask why she kept all of this from me.",
+   "er_v06_c14_b007_11": "I don't want nutrient fruit today. You got anything else to eat? Cheaper.",
+   "er_v06_c14_b007_12": "Sweet is fine too. Just for today.",
+   "er_v06_c14_b008_01": "Sweet. Half a month, and I finally get a bite that isn't that skin.",
+*** Update File: B:/Eleanor Story Expand/tools/en_v06_part_d0.json
+@@
+   "er_v06_c09_n101_15": "Depends on the quality.",
+   "er_v06_c09_n101_16": "I don't know quality.",
+   "er_v06_c09_n101_17": "You decide. I won't haggle.",
+-  "er_v06_c09_n101_18": "Really. Whatever you quote, I'll nod.",
+   "er_v06_c09_n102_01": "The bracelet is turned over. A thin line of engraving runs inside the band.",
+   "er_v06_c09_n102_02": "Hey, don't worry about that.",
+   "er_v06_c09_n102_03": "...Fine. Sharp eyes.",
+@@
+   "er_v06_c09_n102_08": "The bracelet goes into a wooden box under the counter. The lid snaps shut.",
+   "er_v06_c09_n102_09": "You didn't try to cheat me on the price.",
+   "er_v06_c09_n102_10": "I had a whole speech ready. Wasted.",
+-  "er_v06_c09_n102_11": "I figured if you pushed too hard, I'd know what to make of you.",
+-  "er_v06_c09_n102_12": "You didn't.",
+   "er_v06_c09_n102_13": "...So I guess I'll ask the real question.",
+   "er_v06_c09_n102_14": "Has a girl come by lately? Selling something?",
+   "er_v06_c09_n102_15": "Upper-level accent, sharp tongue, about this tall, face longer than the shelves.",
+@@
+   "er_v06_c09_n104_01": "You won't take it?",
+   "er_v06_c09_n104_02": "You didn't even check the quality before saying no.",
+   "er_v06_c09_n104_03": "Fine. I'll try somewhere else.",
+-  "er_v06_c09_n104_04": "She puts the bracelet back in her bag. It takes her two tries to fasten the clasp.",
++  "er_v06_c09_n104_04": "She puts the bracelet away and fastens her bag.",
+   "er_v06_c10_n201_01": "Eleanor comes to the window without speaking first.",
+   "er_v06_c10_n201_02": "Yesterday afternoon, a woman left through this alley.",
+   "er_v06_c10_n201_03": "Curly hair, new bag, doesn't watch where she walks.",
+@@
+   "er_v06_c10_n213_17": "When she does, help me talk to her.",
+   "er_v06_c10_n213_18": "She pulls her bag strap onto her shoulder, steps away from the window, then looks back.",
+   "er_v06_c10_n213_19": "Then I'll go find her.",
+-  "er_v06_c09_n106_01": "...So I guess I'll ask the real question.",
+-  "er_v06_c09_n106_02": "Has a girl come by lately? Selling something?",
+-  "er_v06_c09_n106_03": "Upper-level accent, sharp tongue, about this tall, face longer than the shelves.",
+-  "er_v06_c09_n106_04": "Yes.",
+-  "er_v06_c09_n106_05": "She actually came.",
+-  "er_v06_c09_n106_06": "We grew up together. After what happened to her mother, my family's door might as well have said don't mention it.",
+-  "er_v06_c09_n106_07": "I called her. Told her to come stay at my place.",
+-  "er_v06_c09_n106_08": "She answered with two words: no need. Then hung up.",
+-  "er_v06_c09_n106_09": "I was so mad I didn't sleep half the night. Next day I still texted her.",
+-  "er_v06_c09_n106_10": "She didn't answer a single one.",
+-  "er_v06_c09_n106_11": "I'm not here to gossip.",
+-  "er_v06_c09_n106_12": "I just want to know if she's been eating.",
+-  "er_v06_c09_n106_13": "Leave the bracelet with you for now.",
+-  "er_v06_c09_n106_14": "I'll come redeem it in a few days.",
++  "er_v06_c09_n106_01": "Has a girl come by lately? Selling something?",
++  "er_v06_c09_n106_02": "Upper-level accent, sharp tongue, about this tall, face longer than the shelves.",
++  "er_v06_c09_n106_03": "Yes.",
++  "er_v06_c09_n106_04": "She actually came.",
++  "er_v06_c09_n106_05": "We grew up together. As soon as her mother got into trouble, my family wouldn't even let me mention her name.",
++  "er_v06_c09_n106_06": "I called her. Told her to come stay at my place.",
++  "er_v06_c09_n106_07": "She answered with two words: no need. Then hung up.",
++  "er_v06_c09_n106_08": "I was so mad I didn't sleep half the night. Next day I still texted her.",
++  "er_v06_c09_n106_09": "She didn't answer a single one.",
++  "er_v06_c09_n106_10": "I'm not here to gossip.",
++  "er_v06_c09_n106_11": "I just want to know if she's been eating.",
++  "er_v06_c09_n106_12": "Leave the bracelet with you for now.",
++  "er_v06_c09_n106_13": "I'll come redeem it in a few days.",
+   "er_v06_c09_n105_01": "The bracelet is turned over. A thin line of engraving runs inside the band.",
+   "er_v06_c09_n105_02": "Hey, don't worry about that.",
+   "er_v06_c09_n105_03": "...Fine. Sharp eyes.",
+*** End Patch
