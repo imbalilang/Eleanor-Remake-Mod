@@ -1859,7 +1859,9 @@ namespace EleanorRomance
                 buyer.acceptDealDialogue = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_coop_buyer"));
                 buyer.allDoneDialogue = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_coop_buyer"));
                 StoryEngine.Tail(buyer.allDoneDialogue).SetEndAction(StoryEngine.Dismiss);
-                StoryEngine.InterceptDismiss(buyer, () => StoryEngine.Text(L.Get("er_name_upper_buyer"),L.Get("er_line_coop_buyer")), StoryCoreFacts.CloseCooperation);
+                StoryEngine.InterceptDismiss(buyer,
+                    () => StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_coop_buyer_close")),
+                    StoryCoreFacts.CloseCooperation);
                 buyer.CompleteClientCreation();
                 ModHelper.SetClientSource(buyer, ModConstants.ModId);
                 return buyer;

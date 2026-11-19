@@ -1948,6 +1948,7 @@ er_line_comp_accept,"(You put the three hundred credits into the till. Eleanor g
 er_line_comp_family,"...I'll tell her you passed it on."
 er_line_comp_refuse,"Are you sure? ...All right. I'll remember it."
 er_line_coop_buyer,"(The goods Eleanor picked sell cleanly. She stands outside the window and gives you a small, satisfied nod.)"
+er_line_coop_buyer_close,"(The upper-district customer leaves the window.)"
 er_line_coop_buyer_intro,"(A little later, the customer Eleanor mentioned comes to the window.)"
 er_line_core_end,"The pawnshop stays open. She has work, her mother, and a pile of ordinary worries. She also has a reason to visit that no longer needs explaining."
 er_line_ellipsis,"..."

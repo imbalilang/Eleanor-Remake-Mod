@@ -1948,6 +1948,7 @@ er_line_comp_accept,"（你把三百信用点收进柜台。埃莉诺看了一�
 er_line_comp_family,"……我会告诉她，这是你转交的。"
 er_line_comp_refuse,"你确定？……好。那我记着。"
 er_line_coop_buyer,"（埃莉诺挑的货顺利出手了。她站在窗口外，冲你抬了抬下巴。）"
+er_line_coop_buyer_close,"（上层区的客人离开了窗口。）"
 er_line_coop_buyer_intro,"（过了一会儿，埃莉诺说的那位客人来到了窗口前。）"
 er_line_core_end,"当铺照常营业。她有了自己的工作、母亲，和一堆要操心的日常，也开始有了不需要理由的来访。"
 er_line_ellipsis,"……"

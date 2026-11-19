@@ -6,11 +6,10 @@ Before changing story, content, prompts, design, artwork direction, or release c
 
 ## Content-rating labels and scene scale (user requirement)
 
-- Never add voluntary content-rating information or labels on your own — including Mature, all-ages, R18, adult, age-gating, age ratings, 成熟向, 全年龄, 年龄分级 or 年龄提示 — in README, manifest, Workshop/Nexus copy, site, docs, release notes, change logs, UI or configuration. The project does not market itself as R18/adult; its self-positioning is **non-R18**. If a platform requires a rating field, follow the platform rules and the author's decision.
+- Never add voluntary content-rating information or labels on your own — including Mature, all-ages, R18, adult, age-gating, age ratings, 成熟向, 全年龄, 年龄分级 or 年龄提示 — in README, manifest, Workshop/Nexus copy, site, docs, release notes, change logs, UI or configuration. If a platform requires a rating field, follow the platform rules and the author's decision.
 - Remove such labels when touching existing files.
-- Do not impose a content-scale limit on your own. Necessary sexual attraction, tension, innuendo, love talk and non-explicit body description are core to the romance; do not soften, desexualize or flatten scenes merely because of an assumed rating.
-- The current intended ceiling is suggestive/restricted-adjacent romance: sexual tension, innuendo, sexy CG/portraits and love talk are expected; no on-screen intercourse and no direct genital nudity. Do not escalate past this ceiling or water it down below it without explicit author direction.
-- The author controls the actual scale per scene. Follow the scene, ActCard and author direction; when the intended level is unclear, ask the author rather than self-censoring or escalating on your own.
+- Do not impose a content-scale limit on your own. Necessary sexual attraction, tension, innuendo, love talk and body description are core to the romance; do not soften, desexualize or flatten scenes merely because of an assumed rating.
+- The author controls the final scale standard for every scene. Follow the scene, ActCard and author direction; when the intended level is unclear, ask the author rather than self-censoring or escalating on your own. Do not write additional scale ceilings or minimums into project docs or prompts.
 
 ## Request size limit (user requirement)
 
@@ -22,7 +21,7 @@ Before changing story, content, prompts, design, artwork direction, or release c
 
 For artwork generation, edits, expression variants or export, read `Art/ART_REQUIREMENTS.md` and the relevant templates in `Art/PROMPT_TEMPLATES.md`. Use the verified author B/detail pipeline for new portrait work; old BOX and fixed-palette notes are historical. Preserve any user-deferred artwork scope and distinguish candidates from runtime replacements.
 
-For any CG generation, placement or review, read `docs/CG_LOCATION_AND_PLACEMENT_PLAN.md`. Its location, staging and placement constraints are mandatory. Do not invent back rooms, beds, sofas or bathrooms in the kiosk; do not place private clothing, lying poses or kisses in ordinary daily shop visits. CG style is two-track: **P (pixel/original)** for endings, news, documents and world cards; **A (anime)** for portraits, relationship, daily/private and outing CGs. Label every brief P or A and do not mix them in one image.
+For any CG generation, placement or review, read `docs/CG_LOCATION_AND_PLACEMENT_PLAN.md`. Its location, staging and placement constraints are mandatory. Do not invent back rooms, beds, sofas or bathrooms in the kiosk; do not place private clothing, lying poses or kisses in ordinary daily shop visits. The currently adopted CG slate is `docs/CG_CURRENT_PLAN.md` (4 routes × 8 slots, endings included); the 36-slot route document is a candidate/expansion pool, not the current schedule. CG style is two-track: **P (pixel/original)** for endings, news, documents and world cards; **A (anime)** for portraits, relationship, daily/private and outing CGs. Label every brief P or A and do not mix them in one image.
 
 ## Route map maintenance (required)
 

@@ -161,7 +161,7 @@ Lydia 中性像略收眼睑，表现见过世面的从容。smile、flustered �
 
 ## 7. CG 与物品分别交付
 
-非结局 CG 统一使用[非结局 CG 美术规范](SCENE_CG_STYLE.md)。按角色与服装、画法、场地三类参考制作，重点表现埃莉诺在对应关系阶段的性吸引力。投放地点、窗口站位和时序按[CG 地点与投放规划](../docs/CG_LOCATION_AND_PLACEMENT_PLAN.md)执行。
+非结局 CG 统一使用[非结局 CG 美术规范](SCENE_CG_STYLE.md)。按角色与服装、画法、场地三类参考制作，重点表现埃莉诺在对应关系阶段的性吸引力。投放地点、窗口站位和时序按[CG 地点与投放规划](../docs/CG_LOCATION_AND_PLACEMENT_PLAN.md)执行。按供应商分流的提示词写法、中转接入、参数差异与生成后预检见[CG 提示词分流](../skills/cg-prompt-routing/SKILL.md)，安装说明见同目录的 `README.md`。
 
 CG 必须从当前结局文本取场景，不擅自增加婚礼、宫殿、人物或路线事件；玩家外观未设定时可采用玩家视角。完整画幅绘制人物与环境，预留实际 UI 的文字区域；没有明确要求不生成文字、标志、UI。
 

@@ -1,0 +1,11 @@
+1.20 日语与韩语本地化
+
+- 新增完整日语与韩语游戏内本地化：剧情、路线、选项、UI、道具、新闻、短访与结局。
+- 可在游戏语言中选择日本語 / 한국어；缺少译文的键会回退英文。
+- 不改正文、路线、选项、目标日、排期或结局；1.19 合作买家旁白修复、1.18 高清 CG/侍从线排期、1.17 跨 MOD 兼容与更早修复保留。
+
+1.20: Japanese and Korean localization
+
+- Added full in-game Japanese and Korean localization across story routes, choices, UI, items, news, short visits and endings.
+- Select 日本語 or 한국어 in the game's language settings; missing keys fall back to English.
+- No dialogue, route, choice, target-day, schedule or ending changes; the 1.19 cooperation-buyer narration fix, 1.18 HD CGs/maid schedule, 1.17 cross-mod compatibility and earlier fixes remain.

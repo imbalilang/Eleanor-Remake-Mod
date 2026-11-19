@@ -25,6 +25,7 @@
   "er_line_threat_drive_taken": "(You push the drive across. He picks it up and smiles politely. Three hundred credits arrive soon after.)",
   "er_line_threat_drive_sold": "(You sell the drive to someone else. They care only about the data, and never ask her mother's name.)",
   "er_line_coop_buyer": "(The goods Eleanor picked sell cleanly. She stands outside the window and gives you a small, satisfied nod.)",
+  "er_line_coop_buyer_close": "(The upper-district customer leaves the window.)",
   "er_notice_early_start": "Old Echo selected. Eleanor's story will begin on day 12.",
   "er_notice_gift_received": "Eleanor's gift has been received. Check the front counter, inventory, or after-hours bag.",
   "er_notice_gift_pending": "There is no room for the gift. Make space and collect it when Eleanor visits again.",
