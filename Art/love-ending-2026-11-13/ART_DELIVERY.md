@@ -19,6 +19,6 @@ v6 画的是戒指已经戴好的时刻。首版前景中的玩家双手与袖�
 - [首版母图](masters/ending_love_wedding_master_v1.png)
 - [实际编辑提示词](prompts/ending_love_wedding_v6.txt)和[导出校验](asset_validation_v6.json)
 
-参考[埃莉诺角色设定](../../docs/埃利诺-角色设定.txt)、[索菲娅角色设定](../../docs/索菲娅-角色设定.txt)和[常规恋爱线剧本](../../docs/常规恋爱线_具体剧本_v0.1_2026-11-11.md)的 `nl08`。首版参考及压缩副本的哈希见 [references.json](references.json)。v6 使用内置生图编辑首版母图的压缩副本，导出复用革命军 CG 的等比面积采样。
+参考[埃莉诺角色设定](../../docs/埃利诺-角色设定.txt)、[索菲娅角色设定](../../docs/索菲娅-角色设定.txt)和[常规恋爱线剧本](../../docs/archive/design/常规恋爱线_具体剧本_v0.1_2026-11-11.md)的 `nl08`。首版参考及压缩副本的哈希见 [references.json](references.json)。v6 使用内置生图编辑首版母图的压缩副本，导出复用革命军 CG 的等比面积采样。
 
 本机 1.03 尚无 `nl08` 结局页调用。安装目录扫描通过，文件哈希见[本机安装记录](local_art_install_1.03.json)。

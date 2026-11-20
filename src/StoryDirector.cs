@@ -95,7 +95,9 @@ namespace EleanorRomance
                 // Daily refresh runs before every early return: a story that is
                 // not active must still hide stale project rows, and a new shop
                 // may finish building its dictionary after the load-time pass.
-                MaidProjects.RefreshStates();
+                // notifyNew also catches saves where a project became visible
+                // before this build (for example the chapter-20 P2 gate).
+                MaidProjects.RefreshStates(true);
                 MaidProjects.NotifyRepairNotice();
                 MaidDividends.Accrue();
                 MaidInteractions.OnLoaded();

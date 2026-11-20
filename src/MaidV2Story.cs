@@ -449,12 +449,17 @@ namespace EleanorRomance
             }
             CompleteOptionalProjects();
             CollectDividends();
+            // Mainline v2 scenes used to update the Wilde rows silently, so the
+            // project that unblocks the next chapter was easy to miss.  The tip
+            // itself is sent by the next daily refresh, when no dialogue is up.
+            MaidProjects.RefreshStates();
         }
 
         /// <summary>
-        /// P1/P3/P4 stay optional.  Their old scene-specific result visits are
-        /// retired in v2, so acknowledge each purchased project once with the
-        /// generic Wilde feedback and let the existing dividend system start.
+        /// P3/P4 stay optional for the story (P1 is now required before P2).
+        /// Their old scene-specific result visits are retired in v2, so
+        /// acknowledge each purchased project once with the generic Wilde
+        /// feedback and let the existing dividend system start.
         /// </summary>
         private static void CompleteOptionalProjects()
         {

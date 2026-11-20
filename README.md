@@ -1,11 +1,23 @@
-﻿# Eleanor Story Expand
+# Eleanor Story Expand
 # 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展
 
 《深空当铺：可能是偷的 / Probably Stolen》Eleanor 个人剧情线重制 MOD。
 
 - 游戏版本：1.0.0.15（当前 public/open_beta 构建）；版本号只写入日志，不再按游戏更新停用剧情。0.46D / 1.0.0.13 / 1.0.0.14 继续兼容。
-- MOD版本：1.21
+- MOD版本：1.23
 - 语言：简体中文 / English / 日本語 / 한국어（剧情与 UI 均已翻译）
+
+## 1.23：王尔德筹备提示补发
+
+- 新的王尔德筹备可见时，游戏提示“王尔德现在可以为埃莉诺提供更多的帮助”；侍从 v2 主线章节结束会立即刷新王尔德列表，提示在下一次开店时发出，避免被对白收尾挡住。
+- 修复停在侍从 v2 第20章、因未购买 P2「通行与正装」而没有任何游戏内提示的问题；旧存档在下一次开店时也会补发提示。P1→P2 门槛、剧情顺序和存档不受影响。
+- 保留 1.22 及更早修复；不改正文、路线、选项、目标日、排期或结局。
+
+## 1.22：王尔德逐级购买与假货检查反应修复
+
+- 王尔德筹备的可见性与可购买性分开：P1/P2 在第二幕后按剧情出现，P3/P4 在后续剧情节点出现；购买必须按 P1安顿 → P2通行与正装 → P3第一单 → P4自己的事业逐级进行，前一项未买时后一项可见但不可购买。P2 仍是第三幕门槛；旧侍从线同步补上 P2/P3 前置。
+- 检查出假货/缺陷并成功指出后，卖家会自行降价；这种成交不再被 `DealTracker` 误判为玩家压价，埃莉诺不会再播“压这么狠，我捡了一上午”的反应。
+- 保留 1.21 韩语语域/译名修正、1.20 日韩本地化及更早修复；不改正文、路线、选项、目标日、排期或结局。
 
 ## 1.21：韩语语域与埃莉诺译名修正
 
@@ -68,7 +80,7 @@
 
 - 内容、双语键、路线图和 Release 编译通过（0 警告、0 错误）。
 - 离线回归通过 50 个场景、114 条选项路径、456 次重放。
-- 本地发布包为 139 个文件、13,244,467 bytes；原生扫描无拒绝、错误或能力告警。运行资源登记见 `docs/美术资源登记_2026-11-16.json`。
+- 本地发布包为 139 个文件、13,244,467 bytes；原生扫描无拒绝、错误或能力告警。运行资源登记见 `docs/archive/art/美术资源登记_2026-11-16.json`。
 - 停水、后宫关店跨日、立绘模式、结局页面和窄窗口文字的实机矩阵仍待 Computer Use 通道恢复后验收；本批次未上传平台。
 
 ## 当前结局划分
@@ -133,14 +145,14 @@
 - 修复旧侍从线中上层顾客姓名显示为内部键的问题。
 - 补齐收购工具、材料、日用品时的平板类别标签；订单仅显示工具和材料，保留重要物品、赃物、已付款物品及订单份额过滤。
 - 核验旧侍从线换装提问：三条供货路径与三种回答均等待玩家选择，选择后才离场。此项修复已包含在1.04。
-- 工坊沿用作者指定的原简介。验证记录见 `docs/RELEASE_1.05.md`。
+- 工坊沿用作者指定的原简介。验证记录见 `docs/archive/releases/RELEASE_1.05.md`。
 
 ## 1.04：共同剧情与四条路线重制
 
 - 重制共同剧情及恋爱线、后宫线、侍从线、革命军线；接入作者修订的对白与后宫第12、13场终章。
 - 按售卖亭窗口修正空间事实：玩家在亭内、来客在窗外，交易、护人、换药与亲密动作均通过窗口发生；移除绑门绳及顾客进入店内的写法。
 - 修复路线交接、同日续访、存档续读、陪同姓名、真实货物交割及部分条件对白；求婚不再依赖留存物品。
-- 保留E1–E14编号及旧档兼容入口。中英文本同步；详细验证与已知限制见 `docs/RELEASE_1.04.md`。
+- 保留E1–E14编号及旧档兼容入口。中英文本同步；详细验证与已知限制见 `docs/archive/releases/RELEASE_1.04.md`。
 
 ## 1.03：修复第6章求食援助分支
 
@@ -245,8 +257,8 @@
 - R06 与 R14 使用清晨优先队列；R12 完成后间隔 3 天触发 R13；R14 最后一句后立即显示 E9《我想见你》独立结局页，GameOver 不重复。
 - 旧八次丙线存档按最近阶段续接，已完成旧短版只标记 legacy，不追溯授予新 R14/最高档/结局页。
 - 旧存档兼容：从未订阅过本 MOD 的存档，在首次开店时会触发“旧档案”事件；无论原埃莉诺进度如何，可选择重置埃莉诺的故事，并从本 MOD 剧情的第 1 章重开。
-- 剧本唯一参照改为 `docs/全局剧本.md`；旧剧本、路线规划和阅读稿已归档到 `docs/archive/script_docs/`。E1—E14 编号与完美集合 E1/E4/E3/E9 不变。
-- 已知限制：实机验收、0 价免费交付入口、私人背心正式美术与门槛经济复核仍未完成；详见 `docs/RELEASE_0.90.md`。
+- 剧本唯一参照改为 `docs/archive/script_docs/全局剧本_旧汇编_2026-11-16.md`；旧剧本、路线规划和阅读稿已归档到 `docs/archive/script_docs/`。E1—E14 编号与完美集合 E1/E4/E3/E9 不变。
+- 已知限制：实机验收、0 价免费交付入口、私人背心正式美术与门槛经济复核仍未完成；详见 `docs/archive/releases/RELEASE_0.90.md`。
 
 ## 0.89：像素风结局 CG
 
@@ -289,13 +301,13 @@
 - 替换基础装5张、拾荒装6张、女仆装6张，共17张表情占位；使用对应美化底图和原作者 B/detail 采样，固定身体、发型外轮廓及透明度，减少切换时的风格与位置跳变。
 - 侍从结局 CG 替换为关店后熟悉当铺中的完整场景，960×540；Lydia 差分及后宫 CG 按用户要求等待角色重设。
 - 美术交付及检查见[本轮美术记录](Art/expressions-and-endings-2026-11-10/ART_DELIVERY.md)；后续制作遵循[美术需求规范](Art/ART_REQUIREMENTS.md)和[提示词模板](Art/PROMPT_TEMPLATES.md)。
-- 0.84 的游戏兼容保留。发布信息见[0.85发布记录](docs/RELEASE_0.85.md)。
+- 0.84 的游戏兼容保留。发布信息见[0.85发布记录](docs/archive/releases/RELEASE_0.85.md)。
 
 ## 0.84：游戏 1.0.0.14 兼容
 
 - 游戏更新到 1.0.0.14 后，原版本门禁只接受 0.46 / 0.46D，导致模组能加载但剧情、物品和【旧日回想】开局特性被提前停用。
 - `VersionGate` 与 `manifest.xml` 现在接受 1.0.0.14，并保留 1.0.0.13 / 0.46D / 0.46；0.83 的文本、表情立绘、E3/E4 结局页和 0.82 晚会修复不变。
-- 发布记录见[0.84发布记录](docs/RELEASE_0.84.md)。
+- 发布记录见[0.84发布记录](docs/archive/releases/RELEASE_0.84.md)。
 
 ## 0.83：无旁白文本修订、表情立绘与 E3/E4 结局页
 
@@ -303,14 +315,14 @@
 - 新增埃莉诺美化表情立绘（基础/女仆/拾荒/莉迪亚日常），运行时按对白逐句切换，缺图回退基础立绘。
 - 新增 E3/E4 结局页与占位 CG，退役其他结局附页。
 - 保留 0.82 晚会兼容修复、原生走入演出与全部路线、数值。
-- 发布记录见[0.83发布记录](docs/RELEASE_0.83.md)。
+- 发布记录见[0.83发布记录](docs/archive/releases/RELEASE_0.83.md)。
 
 ## 0.82：兼容警告修复与晚会入场演出
 
 - 晚会关门流程的两处延迟协程改由官方加载器托管，随模组停止而取消，消除“下一次游戏更新将拒绝的能力”警告。
 - 空店关门后的Eleanor邀请改用正常顾客从左侧走到柜台的动画，抵达后由原生流程开始对白。
 - 发布扫描补全待生效项与弃用能力检查，避免只看普通权限和发现数量而漏报。
-- 包含0.81的全部剧情与最新画像。修复与验证结果见[0.82发布记录](docs/RELEASE_0.82.md)。
+- 包含0.81的全部剧情与最新画像。修复与验证结果见[0.82发布记录](docs/archive/releases/RELEASE_0.82.md)。
 
 ## 0.81：后宫路线、剧情修订与画像更新
 
@@ -321,17 +333,17 @@
 - 取消两笔新任务、补做、关系确认自动75%引荐与新感情暂缓；旧已预约单只履约一次。入口先核原恋爱资格，普通旧恋人不自动转后宫，真正已接受/已确认的双恋保留。
 - 复用原19售货、吊坠、香水与乙线回执；合作介绍和实际买家分别提交，原事实不重播。满仓与遗失提供正常来访补领，未知存储扫描不补发。
 - 晚会作为侍从线最后一章：归来28完成至少3天后，空店点击关门才出现邀请，不加入营业队列。答应后门口收束、收店黑屏，跳过夜间并正常结算进入次日；不叙述晚会现场，由次日报纸侧写。拒绝照常收店。旧延期、第二邀约、已预约和已答应状态按新流程兼容，已跨日不重复跳天。dr17实际三方确认后停止生成未来拾荒协助，既有事件自然结束。
-- 晚会终章改动见[关门邀请与次日留白](docs/archive/script_docs/晚会终章_关门邀请与次日留白_2026-11-10.md)，当前正文以[全局剧本](docs/全局剧本.md)为准。
+- 晚会终章改动见[关门邀请与次日留白](docs/archive/script_docs/晚会终章_关门邀请与次日留白_2026-11-10.md)，当时的全局剧本汇编（已归档）。
 - 修复早期回礼的余额检查、满仓退款和中断后重复领取；清理旧分流提示、未兑现的共同告知选项、旧版回忆和写死的次日衔接，乙线尾声按真实案件状态显示。
 - 埃莉诺美化女仆装、礼服及莉迪亚四张画像从原母版采用面积缩小和完整RGB重新导出；莉迪亚按对应埃莉诺画像调整脸部、胸部和腰部裁切，保留原版／美化两套画风。
-- 中英文本、阅读稿与[路线图](docs/route_map.html)同步。完整发布内容与验证记录见[0.81发布记录](docs/RELEASE_0.81.md)，完整实机周目的体验仍由玩家反馈核对。
+- 中英文本、阅读稿与[路线图](docs/route_map.html)同步。完整发布内容与验证记录见[0.81发布记录](docs/archive/releases/RELEASE_0.81.md)，完整实机周目的体验仍由玩家反馈核对。
 
 ## 0.80：全文文风修订
 
 - 重写 765 条中文对白与界面文本，覆盖公共主线、侍从线、归来篇、经营互动和结局；Eleanor、Lydia、母亲等角色更接近原作语气，减少说明腔、程式化措辞和生硬的总结句。
 - 同步调整 40 条英文文本，保持中英文语气一致。
 - 剧情分支、数值、路线与存档结构不变；选项含义不变，被回显的玩家台词与选项标签保持逐字一致。
-- 中英各 2294 键。对照表见 `docs/archive/design/文风修订对照_2026-11-09.txt`，发布记录见 `docs/RELEASE_0.80.md`。
+- 中英各 2294 键。对照表见 `docs/archive/design/文风修订对照_2026-11-09.txt`，发布记录见 `docs/archive/releases/RELEASE_0.80.md`。
 
 ## 0.79：工具物品修正
 
@@ -343,30 +355,30 @@
 
 - 修复工具补给与第25章样品来访把未注册的 `wrench_old` 当作真实物品生成的问题；游戏会为未注册 id 创建占位物品，悬停显示原始 id。现使用原版扳手 `wrench_orange`；旧存档中已生成的占位扳手在读取后补正名称、图标、价值与工具类型。
 - 官方 Modding API 文档 100-Rev13（2026-11-08）把 `reflection-external`、`native`、`dynamic-code`、`threads` 设为退出能力，2026-12-10 起拒绝加载。假叔叔箱子的延迟回调已从游戏 MonoBehaviour 上的 `StartCoroutine` 改为 `ModHelper.Delay`，不再触发 `threads`；模组保持空能力清单，不使用 files/network/反射/原生/动态代码，不需要开发者验证。
-- 本次更新不新增能力，已订阅玩家无需重新授权。游戏 1.0.0.13 / build 26525552，public 与 open_beta 为同一构建；中英各 2294 键。双分支兼容策略与发布检查清单见 [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md)，发布记录见 [`docs/RELEASE_0.78.md`](docs/RELEASE_0.78.md)。
+- 本次更新不新增能力，已订阅玩家无需重新授权。游戏 1.0.0.13 / build 26525552，public 与 open_beta 为同一构建；中英各 2294 键。双分支兼容策略与发布检查清单见 [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md)，发布记录见 [`docs/archive/releases/RELEASE_0.78.md`](docs/archive/releases/RELEASE_0.78.md)。
 
 ## 0.77：对白与记录的发言归属
 
 - 修正假叔叔被举报后治安员台词进入假叔叔气泡和记录的问题；共享的埃莉诺箱子陷害拘捕对白同步修正。使用原版治安员发言通道，玩家回应仍用玩家通道，举报、拘捕与章节推进规则保留。
 - 统一处理旁白、晚会来宾／采购行管事、治安部通知和新闻的姓名与记录，保留原有对话框；不替换真正的来访者，不新增场景。已验证其他MOD／原版对白隔离、启停、旧图恢复及异常清理。
-- 66组离线回归通过；149种访客与分支组合重查，原先69条归属不符的文本记录均正确。中英各2294键不变，原生扫描无额外权限申请。详见`docs/DIALOGUE_SPEAKERS_0.77.md`与`docs/RELEASE_0.77.md`。
+- 66组离线回归通过；149种访客与分支组合重查，原先69条归属不符的文本记录均正确。中英各2294键不变，原生扫描无额外权限申请。详见`docs/archive/audits/DIALOGUE_SPEAKERS_0.77.md`与`docs/archive/releases/RELEASE_0.77.md`。
 
 ## 0.76：减少重复选线与退线焦虑
 
 - 第20章三种告白回应均延续已选的侍从恋爱；第28章明确旧约已履行、她自愿留下，三个回答均继续关系。旧伤改为两种修复方式，不再通过一道拒绝坦诚题退出。
 - 第14章提出能力不足先进入救人办法的讨论；彻底退出改为子菜单中的明确决定。出卖数据盘、擅自公开及冒险公开配专用风险说明与确认，可返回商量。普通线暂缓后的朋友选项也明确写出关系方向。
-- 中英各2294键，60组离线回归通过。已转为普通恋人或朋友的存档保留原结果；实现与验证见`docs/RELATIONSHIP_CHOICE_FIX.md`，发布凭证见`docs/RELEASE_0.76.md`。
+- 中英各2294键，60组离线回归通过。已转为普通恋人或朋友的存档保留原结果；实现与验证见`docs/archive/audits/RELATIONSHIP_CHOICE_FIX.md`，发布凭证见`docs/archive/releases/RELEASE_0.76.md`。
 
 ## 0.75：互动补强、晚会、拾荒事件与王尔德现金方案
 
 - 第19章直接从工作记录接续新衣与称呼对白，已移除螺丝刀估价与第25章的教学回忆。救母报喜尝试复用原版开门等待入口，原版事件优先，普通同章来访兜底。
 - 第一单结果至少两天后，在已有来访中分享一次回头客消息。0.75原版在第28章完成至少三天后通过普通来访邀请，用对白与旁白讲述晚会；此历史流程已由2026-11-10的[关门邀请与次日留白](docs/archive/script_docs/晚会终章_关门邀请与次日留白_2026-11-10.md)替代。
-- 晚会未启用《少女当铺》时直接复用原版上层区埃莉诺；启用时使用新的酒红晚礼服，缺图或停用时回退。中英各2248键，54组离线回归通过；实现范围及实机清单见`docs/archive/script_docs/INTERACTION_AND_BALL_IMPLEMENTATION.md`，发布凭证见`docs/RELEASE_0.75.md`。
+- 晚会未启用《少女当铺》时直接复用原版上层区埃莉诺；启用时使用新的酒红晚礼服，缺图或停用时回退。中英各2248键，54组离线回归通过；实现范围及实机清单见`docs/archive/script_docs/INTERACTION_AND_BALL_IMPLEMENTATION.md`，发布凭证见`docs/archive/releases/RELEASE_0.75.md`。
 
 - 拾荒协助改为垃圾填埋场的「埃莉诺的协助」随机事件：原版每日随机阶段70%概率，持续当天，明确显示拾荒次数+2、拾荒时不会受伤。取消静默永久加成，保留旧档解锁；固定日事件按原版优先处理。
 - 王尔德筹备收敛为四个项目、四张卡片，每项只有现金方案。安顿基准1000不变；通行与正装基准3000、下城区声望≥30时1500；第一单基准5000、上层区声望≥40时2500；自己的事业基准8000、两区声望均≥50时4000。达标自动半价，不消耗声望；未达标可以原价办理。
 - 说明列出声望条件、原价与优惠价，并显示当前是否享受优惠。难度、原版派系／开局价格折扣和王尔德恩惠抵付继续适用，实际报价以界面为准。旧人脉付款保留成果、结果对白和真实支出记录，仅合并显示为一个已结清项目。
-- 交付与测试说明见`docs/SCAV_ASSISTANCE.md`、`docs/WILDE_CASH_DISCOUNTS.md`。版本号仍为已发布的0.74，本地修改尚未上传。
+- 交付与测试说明见`docs/archive/audits/SCAV_ASSISTANCE.md`、`docs/archive/audits/WILDE_CASH_DISCOUNTS.md`。版本号仍为已发布的0.74，本地修改尚未上传。
 
 ## 0.74：合作分红与侍从线关系递进
 
@@ -375,7 +387,7 @@
 - 入线先谈工作与协作；展开第14～16章核验交涉，表现玩家的判断如何帮助她救母；救母后再经数次来访形成依赖。首次私下称呼、完整女仆装与行礼后移到第19～20章。
 - 早年的陷阱旧伤在第12章先披露、协商，信任在救母结果后兑现；旧版本已建立称呼的存档保留历史，不重演第一次。英语同步，交易、筹备费用及救母结果保持原规则。
 - 原版风女仆装眼部微调，保留像素画风、轮廓和48色色板。中英各2109键；41组离线回归通过，实机体验由用户验证。
-- 阅读稿见`docs/MAID_MOTIVATION_READING.zh.txt`、`docs/MAID_MOTIVATION_READING.en.txt`；分红及发布记录见`docs/DIVIDENDS_0.74.md`与`docs/RELEASE_0.74.md`。
+- 阅读稿见`docs/archive/script_docs/MAID_MOTIVATION_READING.zh.txt`、`docs/archive/script_docs/MAID_MOTIVATION_READING.en.txt`；分红及发布记录见`docs/archive/audits/DIVIDENDS_0.74.md`与`docs/archive/releases/RELEASE_0.74.md`。
 
 ## 0.73：经营互动、筹备期日常与吊坠占位
 
@@ -383,7 +395,7 @@
 - 第24章可看工具／材料小批现货或跳过；第25章以真实螺丝刀承接样品验货，P3已付样品免费领取，额外商品正常议价，未领可再取；第27章为真实补货采购，预算900。告白与最终约定保留情感空间，四个王尔德项目费用不变。
 - 缺少当前筹备资金时，两种低频经营日常轮换：小批卖货、代邻居采购。间隔至少4天，主线、结果来访与紧急事件优先；有足够现金／恩惠或已付款则不再以缺钱为由来访。收入来自实际交易。螺丝刀估价事件已移除，侍从19直接接续新衣与称呼对白；旧档未完成的估价来访转为普通采购，保留到期日。
 - 母亲吊坠改为完整2×2，占用4格，图像同步缩小。旧4×4异形吊坠在原范围内寻找有效位置，保留旋转、所有权和剧情保护；位置不足时保留原状，腾挪后再试。
-- 新增34条中英经营文本，中英各2107键。编译、34组离线回归及原生扫描结果见`docs/RELEASE_0.73.md`；实机验证由用户进行。
+- 新增34条中英经营文本，中英各2107键。编译、34组离线回归及原生扫描结果见`docs/archive/releases/RELEASE_0.73.md`；实机验证由用户进行。
 
 ## 0.72：精简筹备说明与剧情引导
 
@@ -411,7 +423,7 @@
 
 ## 0.67：侍从恋爱与上层区归来
 
-- 按 `docs/主从恋爱路线_v0.5_完整执行计划.md` 及配套阅读稿实施。原有平等恋爱、朋友线和救母事件保留。
+- 按 `docs/archive/design/主从恋爱路线_v0.5_完整执行计划.md` 及配套阅读稿实施。原有平等恋爱、朋友线和救母事件保留。
 - 调查800仍由她自行筹集。新提议只有最后确认才另外支付800预付工钱；探索或撤回不收费、不锁线。符合已核对字段的旧800停线档由专属序章续接，免入线付款，不重置物品或世界事实。
 - 新增侍从关系对白、四个原生王尔德项目（七种购买定义）、五个归来来访24～28。付款、wildFavor抵付、声望与结果分开记录；项目可等待，不影响已有恋爱。
 - 乙线第23章的复核回执服务所有关系版本；完成后七日排原生撤案新闻。母亲出席和尾声读取实际发布状态，不由项目付款代替。
@@ -582,9 +594,12 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 - 1.12 离线回归和原生扫描已完成；完整实机周目验收按用户决定暂跳过，R-01 至 R-08 记录在 `dist/qa-2026-11-16/runtime-matrix.md`。
 - 路线丙/丁、母亲来访、第 21 章合作买家等场景的运行时顺序与中断恢复保留为后续实机批次。
 
+
 ## 项目文件索引
 
-最后整理：2026-11-16。当前版本 **1.12**。
+- 文档导航、权威性说明与当前待定事项：[docs/INDEX.md](docs/INDEX.md)
+- 制作过程、版本脉络与生产方式：[docs/PROJECT_HISTORY.md](docs/PROJECT_HISTORY.md)
+- 历史文档（发布证据、旧设计、旧审查、工坊记录）：[docs/archive/](docs/archive/README.md)
 
 ### 运行与构建
 
@@ -592,109 +607,17 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 |---|---|
 | `manifest.xml` | MOD 清单、版本、游戏版本范围 |
 | `src/` | C# 源码与生成的内容类 |
-| `Content/story_v06.json` | 共同/普通/侍从/丙丁主线文本源 |
-| `Content/dual_romance_v04.json` | 双恋线文本源 |
-| `Content/dual_ui.json` | 双恋线 UI 文本 |
-| `Content/maid_v05.json`、`maid_ui.json` | 侍从线文本与 UI |
-| `Content/interaction_v1.json`、`interaction_ui.json` | 经营互动文本 |
-| `Content/relationship_choices_v1.json`、`relationship_choice_ui.json` | 关系选项文本 |
-| `Content/business_ui.json` | 经营界面文本 |
-| `Localization/zh.csv`、`en.csv` | 生成后的中英发布文本（不要手改） |
-| `Textures/Items/` | 实际随包发布的画像与物品图标 |
+| `Content/*.json` | 正文与 UI 文本真源（九个内容源） |
+| `Localization/{zh,en,ja,ko}.csv` | 生成的发布文本（不要手改；ko 直接维护） |
+| `Textures/Items/` | 随包发布的立绘、表情、CG 与物品图标 |
 | `Books/` | 旧版纸质笔记，当前流程不强制使用 |
 | `preview.png` | 工坊/模组预览图 |
-| `build.sh` | 编译 Release 并部署到 `Mods/EleanorRomance` |
-| `EleanorRomance.csproj` | 编译配置 |
-
-### 当前文档：版本、规则与路线
-
-| 路径 | 用途 |
-|---|---|
-| [`docs/项目现状与发展建议_2026-11-16.md`](docs/项目现状与发展建议_2026-11-16.md) | 当前 1.12 现状、验证证据、阻塞项与发展建议 |
-| [`docs/全局剧本.md`](docs/全局剧本.md) | 唯一剧本参照：共同/普通、侍从、双恋/后宫、革命军、互动、日常与结局页 |
-| [`docs/文风与玩家台词基准_2026-11-10.md`](docs/文风与玩家台词基准_2026-11-10.md) | 唯一文本标准：原作文风、玩家默认沉默、整章改写、非台词表现、体量预算、留白与纯过渡章删章规则 |
-| [`docs/原作Eleanor章节_对照稿_2026-11-10.md`](docs/原作Eleanor章节_对照稿_2026-11-10.md) | 游戏本体 Eleanor 全场景原文对照稿（官方中文本地化，不含 MOD 文本） |
-| [`docs/route_map.html`](docs/route_map.html) | 可视化路线与结局预览（浏览器直接打开） |
-| [`docs/ROUTE_MAP_MAINTENANCE.md`](docs/ROUTE_MAP_MAINTENANCE.md) | 路线图编号、结局合并与更新规则 |
-| [`docs/MODDING_SECURITY_COMPATIBILITY.md`](docs/MODDING_SECURITY_COMPATIBILITY.md) | Modding API 安全边界与兼容说明 |
-| [`docs/TESTING_CONSOLE.md`](docs/TESTING_CONSOLE.md) | F8/F9 调试控制台与测试流程 |
-| [`docs/原作非台词表现与MOD应用审计_2026-11-10.md`](docs/原作非台词表现与MOD应用审计_2026-11-10.md) | 原作肖像 idle/TextAnimator/斜体等非台词表现与 MOD 使用情况（数据依据） |
-| `docs/archive/script_docs/` | 已归档的旧剧本、路线规划、阅读稿与审核记录；仅历史参考，不是当前剧本 |
-
-### 当前文档：剧情与系统设计
-
-| 路径 | 用途 |
-|---|---|
-| [`docs/全局剧本.md`](docs/全局剧本.md) | 全路线正文、选项、日常与结局页；唯一剧本参照 |
-| [`docs/原作经营机制盘点与Eleanor路线组合研究_2026-11-09.md`](docs/原作经营机制盘点与Eleanor路线组合研究_2026-11-09.md) | 原版经营机制与 Eleanor 路线组合研究 |
-| [`docs/NATIVE_STORY_MECHANISMS_ASSESSMENT.md`](docs/NATIVE_STORY_MECHANISMS_ASSESSMENT.md) | 原版剧情机制评估 |
-| [`docs/后宫线_v0.5_声望检查点与问题修复_执行参数.json`](docs/后宫线_v0.5_声望检查点与问题修复_执行参数.json) | 后宫声望检查点运行参数（路线图检查依赖） |
-| `docs/archive/script_docs/` | 旧四路线规划、阅读稿、文风批次稿与审核记录 |
-
-### 当前文档：路线专项
-
-| 路线 | 文档 |
-|---|---|
-| 全部路线 | [`全局剧本.md`](docs/全局剧本.md) |
-| 革命军线 | [`全局剧本.md`](docs/全局剧本.md) 第二部分与文末 v2 阅读版；新档运行章节 280—290，旧档 R01—R14（101—113）保留；[`革命军线_v2_全剧情阅读版.md`](docs/革命军线_v2_全剧情阅读版.md) |
-| 侍从线 / 双恋后宫线 / 互动与晚会 | [`全局剧本.md`](docs/全局剧本.md) 对应部分；新档侍从线 v2 阅读版见 [`侍从线_v2_全剧情阅读版.md`](docs/侍从线_v2_全剧情阅读版.md)；旧专项稿在 `docs/archive/script_docs/` |
-
-### 当前文档：画像与美术记录
-
-[`Eleanor画像_像素风返工建议_2026-11-10.md`](docs/Eleanor画像_像素风返工建议_2026-11-10.md)、
-[`埃莉诺画像_以少女当铺为基准重裁_2026-11-10.md`](docs/埃莉诺画像_以少女当铺为基准重裁_2026-11-10.md)、
-[`埃莉诺礼服画像_资源核对与修复_2026-11-10.md`](docs/埃莉诺礼服画像_资源核对与修复_2026-11-10.md)、
-[`少女当铺画像_实际资源对比_2026-11-10.md`](docs/少女当铺画像_实际资源对比_2026-11-10.md)、
-[`现有画像原图_技术修复可行性_2026-11-10.md`](docs/现有画像原图_技术修复可行性_2026-11-10.md)、
-[`画像导出管线_按作者样图校准_2026-11-10.md`](docs/画像导出管线_按作者样图校准_2026-11-10.md)、
-[`莉迪亚画像_脸部与躯干构图对齐_2026-11-10.md`](docs/莉迪亚画像_脸部与躯干构图对齐_2026-11-10.md)、
-[`莉迪亚画像_面积缩小导出_2026-11-10.md`](docs/莉迪亚画像_面积缩小导出_2026-11-10.md)
-
-### 历史归档
-
-历史资料已从主文档区移出，按类别保存：
-
-- [`docs/archive/design/`](docs/archive/design/)：旧版全流程攻略、v0.1–v0.7 设计稿、旧剧情台本、旧文风对照、0.81 初稿归档。
-- [`docs/archive/audits/`](docs/archive/audits/)：0.71–0.77 期间的审计、交接、验收、旧功能说明。
-- [`docs/archive/workshop/`](docs/archive/workshop/)：0.67–0.81 的旧工坊说明与更新日志。
-
-归档文件只用于追溯，不作为当前实现依据。当前 1.12 本地发布证据见 `dist/qa-2026-11-16/`；历史发布记录保留在 `docs/RELEASE_0.67.md`–`docs/RELEASE_0.89.md`。
-
-### 工具
-
-| 类别 | 文件 |
-|---|---|
-| 内容生成 | `tools/build_content.py`（总入口）、`tools/build_dual_content.py`、`tools/build_maid_content.py` |
-| 内容校验 | `tools/check_project.py`、`tools/check_route_map.py`、`tools/audit_dialogue_speakers.ps1` |
-| 阅读稿生成 | `tools/render_all_story_reading.py`、`tools/render_dual_reading.py`、`tools/render_motivation_reading.py` |
-| 打包发布 | `tools/package_release.ps1`、`tools/publish_workshop.ps1`、`tools/scan_package.ps1` |
-| 回归测试 | `tools/test_*.ps1`（交易、侍从、双恋、后宫、晚会、互动、发言者、阅读修正）；夹具在 `tools/fixtures/` |
-| 美术管线 | `tools/export_eleanor_beauty.py`、`export_lydia_portraits.py`、`export_gala_asset.py`、`audit_gala_asset.py`、`compare_portrait_resampling.py`、`portrait_resampling.py`、`validate_maid_asset.py` |
-| 本地化数据 | `tools/en_v06_part*.json`、`tools/ui_text_zh.json`、`tools/ui_text_en.json` |
-| 游戏交互辅助 | `tools/capture_game.ps1`、`click.ps1`、`foreground.ps1`、`screenshot.ps1`、`windowinfo.ps1` |
-| 旧版工具（不要运行） | `tools/legacy/`：`parse_v06.py`、`package_candidate.ps1`、`gen_localization.py`、`gen_script_doc.py`、`add_v04_localization.py`、`import_maid_v05.py` |
-
-### 美术资产
-
-| 路径 | 内容 |
-|---|---|
-| `Art/v0.5/` | 埃莉诺女仆装母版、旧导出脚本与校验记录 |
-| `Art/v0.6/` | 埃莉诺、莉迪亚、母亲、吊坠、手镯、工坊封面母版与交付说明 |
-| `Art/gala/` | 埃莉诺礼服母版 |
-| `Art/dual-romance-v0.3/` | 双恋线莉迪亚日常/约会画像、铭牌、导出与校验 |
-| `Art/pixel-redraw-2026-11-10/` | 2026-11-10 画像返工候选与提示词 |
-| `Art/reference-pipeline-2026-11-10/` | 画像导出参照与对比记录 |
-| `Art/revolution-route-2026-11-10/` | 革命军线服装母版 |
-| `Art/nexus/` | Nexus 发布封面 |
-| `Art/archive/` | 旧莉迪亚概念图与候选图（历史参考，不进入发布包） |
-
-`Art/v0.6/references_local/`、`Art/v0.6/backups/` 为本地参考/备份，已被 `.gitignore` 排除。`Textures/Items/` 才是随包发布的实际贴图。
+| `build.sh` / `EleanorRomance.csproj` | 编译 Release 并部署到 `Mods/EleanorRomance` |
 
 ### 生成物与忽略目录
 
 - `bin/`、`obj/`：编译产物，已忽略。
 - `dist/`：本地打包、发布证据、回滚备份与临时分析，已忽略；不提交。
-- `dist/style_work/`：从游戏本体提取的对白/反编译分析，仅本地保留；`dist/` 已被 `.gitignore` 排除。
 - `Localization/*.csv`、`src/*Content.g.cs`：由 `tools/build_content.py` 生成，不手改。
 
 ### 维护规则
@@ -702,4 +625,8 @@ pwsh -File tools/test_runtime_flows.ps1 -Managed '<游戏根目录>\Probably Sto
 - 文本源是 `Content/*.json`；修改后运行 `python tools/build_content.py` 与 `python tools/check_project.py`。
 - 改剧情、选项、日期、路线或结局时，必须同步更新 `docs/route_map.html` 与 `docs/ROUTE_MAP_MAINTENANCE.md`，并运行 `python tools/check_route_map.py`。
 - 不运行 `tools/legacy/parse_v06.py`；它会用旧台本覆盖当前内容源。
+- 文档新增、移动或归档时同步 `docs/INDEX.md`；历史材料放入 `docs/archive/`，不要留在根目录。
+- 线上工坊/Nexus 文案以作者在平台手写的版本为准；仓库内 `WORKSHOP_*`、`NEXUS_*` 只是 AI 记录或打包输入。
+- 实机验收不由 Agent 负责（历次尝试未成功）；Agent 只做离线检查、编译、原生扫描与打包证据。
+- Git 提交与平台推送必须由作者明确指令，Agent 不自动提交。
 - 未经明确要求，不推送 GitHub、Steam 工坊或 Nexus。

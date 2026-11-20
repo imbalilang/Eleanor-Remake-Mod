@@ -50,27 +50,53 @@ namespace EleanorRomance
         public static bool ResultPending(int p) => Paid(p) && !ResultShown(p);
         public static void ShowResult(int p) { if (Paid(p)) MaidState.Flag(Key(p,"shown"),true); }
 
-        public static bool Available(int p)
+        /// <summary>
+        /// Story visibility: which Wilde cards exist on screen.  This is
+        /// independent of purchasing; a visible later project stays visible
+        /// (but disabled) until its predecessors are bought.
+        /// </summary>
+        private static bool StoryVisible(int project)
         {
-            if (!RomanceState.StoryActive || !MaidState.Active || !MaidState.SafeMother || Paid(p)) return false;
             if (MaidState.V2)
             {
-                // P2 is the first Wilde option and the Act 3 gate.  P1/P3/P4
-                // remain available as optional background after it.
-                if (p == 2) return MaidV2State.Act2Done;
-                if (p == 1) return Paid(2);
-                if (p == 3) return Paid(2);
-                if (p == 4) return Paid(3);
+                // The preparation arc opens P1/P2 together; P3/P4 appear at
+                // their later story beats.
+                if (project == 1 || project == 2) return MaidV2State.Act2Done;
+                if (project == 3) return MaidState.Progress >= 24;
+                if (project == 4) return MaidState.Progress >= 26;
                 return false;
             }
             // Reveal after completed story beats, never by calendar day:
             // reunion (16), base conclusion + housing feedback (23),
             // legal return (24), and the procurement visit (26).
+            if (project == 1) return true;
+            if (!MaidState.BasicComplete || !MaidState.Lovers) return false;
+            if (project == 2) return true;
+            if (project == 3) return MaidState.Progress >= 24;
+            if (project == 4) return MaidState.Progress >= 26;
+            return false;
+        }
+
+        public static bool Available(int p)
+        {
+            if (!RomanceState.StoryActive || !MaidState.Active || !MaidState.SafeMother || Paid(p)) return false;
+            if (!StoryVisible(p)) return false;
+            if (MaidState.V2)
+            {
+                // Purchasability is separate from visibility and strictly
+                // sequential: P1 -> P2 -> P3 -> P4.  P3/P4 stay optional for
+                // the story, but they cannot be bought out of order.
+                if (p == 1) return true;
+                if (p == 2) return Paid(1);
+                if (p == 3) return Paid(1) && Paid(2);
+                if (p == 4) return Paid(1) && Paid(2) && Paid(3);
+                return false;
+            }
             if (p == 1) return true;
             if (!MaidState.BasicComplete || !MaidState.Lovers) return false;
             if (p == 2) return ResultShown(1);
-            if (p == 3) return MaidState.Progress >= 24;
-            if (p == 4) return MaidState.Progress >= 26;
+            if (p == 3) return Paid(1) && Paid(2);
+            if (p == 4) return Paid(1) && Paid(2) && Paid(3);
             return false;
         }
 
@@ -112,9 +138,9 @@ namespace EleanorRomance
         }
 
         /// <summary>
-        /// Only the current step and completed steps are listed.  A paid project
-        /// remains as a settled record even after the agreement ends; unpaid
-        /// projects follow the story gate.
+        /// Story-visible cards plus settled records.  A paid project remains
+        /// visible after the agreement ends.  Unpaid cards can be visible but
+        /// not yet purchasable; Available() owns that separate rule.
         /// </summary>
         public static bool Visible(Plan plan)
         {
@@ -127,7 +153,10 @@ namespace EleanorRomance
             {
                 return true; // One settled row, including old connections payments.
             }
-            return Available(plan.Project);
+            // Visibility follows story reveal only.  Purchasability is handled
+            // separately by Available(), so later cards remain visible but
+            // disabled until their predecessors are bought.
+            return StoryVisible(plan.Project);
         }
         private static bool ProjectVisible(int project)
         {
@@ -155,16 +184,24 @@ namespace EleanorRomance
                     if (definition != null) definition.hidden = !visible;
                 }
                 if (notifyNew)
-                    for (int project = 1; project <= 4; project++) NotifyProjectOpen(project);
+                {
+                    // One tip per visibility wave.  The per-project notice used
+                    // to fire several toasts when P1/P2 opened together, and the
+                    // v2 mainline never called the notify path at all, so a
+                    // player waiting at the chapter-20 P2 gate had no pointer.
+                    bool opened = false;
+                    for (int project = 1; project <= 4; project++) opened |= MarkProjectOpen(project);
+                    if (opened) StoryDirector.Notify(L.Get("er_maid_notice_wilde_help"));
+                }
             }
             finally { refreshing = false; }
         }
-        private static void NotifyProjectOpen(int project)
+        private static bool MarkProjectOpen(int project)
         {
             string flag = "notified.p" + project;
-            if (MaidState.Flag(flag) || !ProjectVisible(project)) return;
+            if (MaidState.Flag(flag) || !ProjectVisible(project)) return false;
             MaidState.Flag(flag, true);
-            StoryDirector.Notify(L.Get("er_maid_notice_project_open", L.Get("er_maid_project_" + project)));
+            return true;
         }
 
         public sealed class Quote

@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.21</ModVersion>
-  <Description>1.21 refines the Korean localization: Eleanor and Lydia now use natural plain speech instead of blanket honorific endings, while honorifics for Eleanor's mother, Sophia, officers and quoted speech are preserved. Eleanor's Korean name is unified as 엘리너. The 1.20 Japanese/Korean localization, 1.19 cooperation-buyer narration fix, 1.18 HD CGs/maid schedule, 1.17 cross-mod compatibility and earlier fixes remain. 1.21 修正韩语本地化：埃莉诺与莉迪亚改回自然的半语，不再通篇敬语结尾；对母亲、索菲娅、军警和引语的敬语保留。埃莉诺韩语名统一为 엘리너。保留 1.20 日英韩本地化、1.19 合作买家旁白修复、1.18 高清 CG 与侍从线排期、1.17 跨 MOD 兼容及更早修复。简体中文 / English / 日本語 / 한국어。</Description>
+  <ModVersion>1.23</ModVersion>
+  <Description>1.23 adds an in-game Wilde preparation tip: when a new Wilde project becomes visible, the game now reminds the player that Wilde can offer Eleanor more help. In 1.22 the v2 attendant mainline updated the Wilde list silently, so players waiting at the chapter-20 P2 gate had no pointer to buy "A pass and formal clothes"; existing saves also receive the tip on the next shop opening. Story order, gates, saves and the 1.22 visibility/purchasability rules are unchanged. The 1.22 counterfeit-inspection reaction fix, 1.21 Korean register/name fixes, 1.20 Japanese/Korean localization, 1.19 cooperation-buyer narration fix, 1.18 HD CGs/maid schedule, 1.17 cross-mod compatibility and earlier fixes remain. 1.23 新增游戏内王尔德筹备提示：新的王尔德项目可见时，提示“王尔德现在可以为埃莉诺提供更多的帮助”。1.22 的侍从 v2 主线场景只更新王尔德列表、不弹提示，停在第二章末第20章 P2 门槛的玩家不知道要去购买“通行与正装”；旧存档也会在下一次开店时补发该提示。剧情顺序、门槛、存档与 1.22 的可见性/购买规则不变。保留 1.22 假货检查反应修复、1.21 韩语语域/译名修正、1.20 日韩本地化、1.19 合作买家旁白修复、1.18 高清 CG 与侍从线排期、1.17 跨 MOD 兼容及更早修复。简体中文 / English / 日本語 / 한국어。</Description>
   <!-- Empty on purpose: the mod does not gate on the game version string,
        and a listed version that does not cover the running build is shown as
        a red warning in the mod menu. -->

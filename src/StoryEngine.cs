@@ -75,8 +75,15 @@ namespace EleanorRomance
                     bool buyingDiscount = HasActiveFeature(item, "bargainBuyingDiscount")
                         || HasActiveFeature(item, "blackmailDiscount")
                         || HasActiveFeature(item, "threatenDiscount");
+                    // A successful inspection/confrontation makes the seller
+                    // lower the price themselves.  That is not the player
+                    // squeezing her, so do not fall through to the lowball
+                    // ratio check.  Native removes this TemporaryBuying
+                    // feature only after OnItemSold returns.
+                    bool inspectionDiscount = HasActiveFeature(item, "confrontSucessDiscount");
                     if (buyingDiscount) Lowball = true;
                     else if (buyingMarkup) Discount = true;
+                    else if (inspectionDiscount) Fair = true;
                     else if (paid > marketValue) Discount = true; // includes native +10% / +20% buying markup
                     else if (marketRatio < 0.85f) Lowball = true;  // at least 15% below the displayed price
                     else Fair = true;

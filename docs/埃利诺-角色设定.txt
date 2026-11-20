@@ -117,4 +117,4 @@ CG：侍从/后宫/革命有独立结局 CG；常规线婚礼 CG 计划中，未
 7. 维护
 本文件校对后只读；修改必须由用户明确要求，并同步 Content、prompts_v2 角色卡、Art/ART_REQUIREMENTS.md、route_map。
 事实冲突时以用户决定和当前 Content 为准；候选内容标 [候选]，不写成已发生事实。
-主要依据：docs/全局剧本.md、当前 Content、旧双人基准、prompts_v2/character_cards、route_map、Art 文档。
+主要依据：docs/archive/script_docs/全局剧本_旧汇编_2026-11-16.md、当前 Content、旧双人基准、prompts_v2/character_cards、route_map、Art 文档。

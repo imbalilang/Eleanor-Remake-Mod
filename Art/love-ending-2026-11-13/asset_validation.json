@@ -1,7 +1,7 @@
 {
   "status": "CG candidate for E1 回家",
   "tool": "built-in image generation",
-  "source_story": "docs/常规恋爱线_具体剧本_v0.1_2026-11-11.md §nl08",
+  "source_story": "docs/archive/design/常规恋爱线_具体剧本_v0.1_2026-11-11.md §nl08",
   "masters": [
     {
       "file": "masters/ending_love_wedding_master_v1.png",

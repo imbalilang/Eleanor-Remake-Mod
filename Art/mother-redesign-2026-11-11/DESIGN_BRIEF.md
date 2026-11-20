@@ -54,8 +54,8 @@ v3 换装候选保留 v2 的脸、发型、身材和姿势，参考实际 `cp_po
 
 - `CLAUDE.md`、`README.md`
 - `Art/ART_REQUIREMENTS.md`、`Art/PROMPT_TEMPLATES.md`
-- `docs/母亲角色与神话原型_2026-11-11.md`
-- `docs/常规恋爱线_扩写设计_2026-11-11.md` §2、§6
+- `docs/archive/design/母亲角色与神话原型_2026-11-11.md`
+- `docs/archive/design/常规恋爱线_扩写设计_2026-11-11.md` §2、§6
 - `docs/埃莉诺与莉迪亚_全局人设基准_2026-11-11.md`
 - `Art/lydia-style-fusion-2026-11-10/README.md`
 

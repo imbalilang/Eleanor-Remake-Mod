@@ -1,0 +1,11 @@
+1.23 王尔德筹备提示补发
+
+- 新的王尔德筹备可见时，游戏会提示“王尔德现在可以为埃莉诺提供更多的帮助”，提醒你到王尔德查看新项目。
+- 修复侍从 v2 第二幕后王尔德项目已经出现、游戏内却没有任何提示的问题；已经停在主线等待的旧存档，也会在下一次开店时收到提示。
+- 不改正文、路线、选项、目标日、排期或结局；1.22 及更早修复保留。
+
+1.23 Wilde preparation tip
+
+- When a new Wilde preparation becomes visible, the game now shows a tip that Wilde can offer Eleanor more help, pointing you to the new project.
+- Fixed the v2 attendant route showing the post-Act-2 Wilde projects with no in-game notice. Existing saves waiting on the main story also receive the tip on the next shop opening.
+- No main-story dialogue, route, choice, target-day, schedule or ending changes; 1.22 and earlier fixes remain.

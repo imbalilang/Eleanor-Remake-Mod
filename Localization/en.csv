@@ -3232,6 +3232,7 @@ er_maid_notice_honesty,"Agreement ended: you explicitly refused future honesty. 
 er_maid_notice_migrated,"Attendant romance confirmed."
 er_maid_notice_project_open,"There's a new preparation at Wilde's: {0}."
 er_maid_notice_repair,"Eleanor's preparation was unlocked ahead of the story. It has been revoked and {0} credits refunded. Story progress is unaffected."
+er_maid_notice_wilde_help,"Wilde can now offer Eleanor more help."
 er_maid_one_step,"Keep it safe. One step at a time."
 er_maid_outfit_a,"This one is for the people upstairs. That one is for me."
 er_maid_outfit_b,"Both look good. You have to come back either way."

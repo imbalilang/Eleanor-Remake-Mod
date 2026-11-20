@@ -367,6 +367,10 @@
     "王尔德那里多了一项筹备：{0}。",
     "There's a new preparation at Wilde's: {0}."
   ],
+  "er_maid_notice_wilde_help": [
+    "王尔德现在可以为埃莉诺提供更多的帮助。",
+    "Wilde can now offer Eleanor more help."
+  ],
   "er_maid_notice_repair": [
     "埃莉诺的筹备项目此前被提前解锁，已撤销并退回 {0} 信用点。剧情进度不受影响。",
     "Eleanor's preparation was unlocked ahead of the story. It has been revoked and {0} credits refunded. Story progress is unaffected."

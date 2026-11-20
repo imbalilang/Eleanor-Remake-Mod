@@ -1,0 +1,11 @@
+1.22 王尔德逐级购买与假货检查反应修复
+
+- 王尔德筹备项目的卡片按剧情节点出现；购买严格按 P1 安顿 → P2 通行与正装 → P3 第一单 → P4 自己的事业逐级进行。前一项尚未购买时，后一项仍然可见，但暂时不能购买。
+- 修复检查出假货或缺陷并成功指出后的成交反应：卖家自行降价不再被误判为玩家压价，埃莉诺不会再播“压这么狠，我捡了一上午”的台词。
+- 不改变正文、路线、选项、目标日、排期或结局；1.21 韩语语域/译名修正、1.20 日韩本地化及更早修复保留。
+
+1.22 Wilde project purchase order and inspection reaction fix
+
+- Wilde preparation project cards now appear at their story beats. Purchases must proceed in order: P1 settling in → P2 pass and formal clothes → P3 first order → P4 her own business. A later card stays visible but cannot be bought until its predecessors are purchased.
+- Fixed the trade reaction after the player inspects an item, exposes a counterfeit or defect, and the seller lowers the price herself. The discount is no longer treated as the player lowballing her, so Eleanor no longer plays the "that's a harsh price, I scavenged all morning" line.
+- No main-story dialogue, route, choice, target-day, schedule or ending changes; the 1.21 Korean speech-level/name fixes, 1.20 Japanese/Korean localization and earlier fixes remain.
