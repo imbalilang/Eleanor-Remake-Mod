@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-20",
+  "status": "confirmed_youthful_2026-11-20",
+  "cup_standard": "34 band / underbust about 86 cm; bust-underbust D=10 cm, E=12.5 cm, F=15 cm",
+  "characters": {
+    "Eleanor": {
+      "height_cm": 158,
+      "weight_kg": 47,
+      "bust_cm": 94,
+      "underbust_cm": 81,
+      "waist_cm": 58,
+      "hip_cm": 89,
+      "cup": "E",
+      "band": "32",
+      "cup_difference_cm": 13,
+      "bmi": 18.83,
+      "whr": 0.652,
+      "whtr": 0.367,
+      "status": "confirmed_32E"
+    },
+    "Lydia": {
+      "height_cm": 160,
+      "weight_kg": 50,
+      "bust_cm": 97,
+      "underbust_cm": 82,
+      "waist_cm": 59,
+      "hip_cm": 91,
+      "cup": "F",
+      "band": "32",
+      "cup_difference_cm": 15,
+      "bmi": 19.53,
+      "whr": 0.648,
+      "whtr": 0.369,
+      "status": "confirmed_approved_youthful"
+    },
+    "Sophia": {
+      "height_cm": 169,
+      "weight_kg": 56,
+      "bust_cm": 109,
+      "underbust_cm": 91.5,
+      "waist_cm": 64,
+      "hip_cm": 97,
+      "cup": "G",
+      "band": "36",
+      "cup_difference_cm": 17.5,
+      "bmi": 19.61,
+      "whr": 0.66,
+      "whtr": 0.379,
+      "status": "confirmed_anchor"
+    }
+  },
+  "notes": [
+    "If D/E/F is intended as 75-band sizing, the given bust measurements would not correspond to D/E/F.",
+    "Waist-to-hip ratios around 0.65 are stylized, not a typical realistic proportion.",
+    "Use height/weight/BWH as the primary 3D anchors; use underbust and cup difference rather than the cup letter alone."
+  ],
+  "proposed_changes": [],
+  "confirmed_anchors": {
+    "Eleanor": "32E / 94-81-58-89 / 158cm / 47kg / 7.0 heads / 50% crotch",
+    "Lydia": "32F / 97-82-59-91 / 160cm / 50kg / 7.0 heads / 52% crotch",
+    "Sophia": "36G / 109-91.5-64-97 / 169cm / 56kg (unchanged)"
+  },
+  "proportion_anchors": {
+    "Eleanor": {
+      "head_ratio": 7.0,
+      "head_height_cm": 22.6,
+      "shoulder_width_cm": 34.0,
+      "bust_width_cm": 37.0,
+      "waist_width_cm": 20.0,
+      "hip_width_cm": 36.0,
+      "crotch_height_cm": 79.0,
+      "crotch_height_ratio": 0.5,
+      "arm_length_cm": 46.0,
+      "hand_length_cm": 16.0,
+      "shoe_size_eu": 36,
+      "heel_height_cm": 6.0
+    },
+    "Lydia": {
+      "head_ratio": 7.0,
+      "head_height_cm": 22.9,
+      "shoulder_width_cm": 35.0,
+      "bust_width_cm": 38.0,
+      "waist_width_cm": 20.5,
+      "hip_width_cm": 37.0,
+      "crotch_height_cm": 80.0,
+      "crotch_height_ratio": 0.5,
+      "arm_length_cm": 47.0,
+      "hand_length_cm": 16.0,
+      "shoe_size_eu": 36,
+      "heel_height_cm": 6.0
+    },
+    "Sophia": {
+      "head_ratio": 7.4,
+      "head_height_cm": 22.8,
+      "shoulder_width_cm": 38.0,
+      "bust_width_cm": 43.0,
+      "waist_width_cm": 22.0,
+      "hip_width_cm": 40.0,
+      "crotch_height_cm": 93.0,
+      "crotch_height_ratio": 0.55,
+      "arm_length_cm": 51.0,
+      "hand_length_cm": 17.5,
+      "shoe_size_eu": 38,
+      "heel_height_cm": 6.0
+    }
+  },
+  "proportion_notes": [
+    "Measured from the approved full-body sleepwear sheets: the intended style is long-legged, crotch about 55% of height.",
+    "The earlier 48.8% crotch anchor was too naturalistic and would make the 3D bodies shorter-legged than the approved art.",
+    "The rejected cp1/maid candidates likely exceeded this stylization and read as 58-60% crotch; target 55%, not 49% and not 60%.",
+    "Barefoot height anchors; 6 cm heels add visual height but not the barefoot body data.",
+    "Audit 2026-11-20: the generated L1 base and the OpenAI tactical swap read about 56-57% crotch height, too high. New target is 50%; do not use the current L1 base as a body reference until corrected."
+  ],
+  "proportion_status": "target_50pct_after_base_L1_high_crotch_audit",
+  "youthful_trial": {
+    "status": "approved_2026-11-20",
+    "Eleanor": {
+      "height_cm": 158,
+      "weight_kg": 47,
+      "bust_cm": 90,
+      "underbust_cm": 81,
+      "waist_cm": 58,
+      "hip_cm": 89,
+      "cup": "32D",
+      "head_ratio": 7.0,
+      "crotch_ratio": 0.52,
+      "approved_file": "Art/character-assets-2026-11-20/design_sheets/eleanor_harem_sleepwear/approved/eleanor_harem_sleepwear_design_approved_youthful_158.png"
+    },
+    "Lydia": {
+      "height_cm": 160,
+      "weight_kg": 50,
+      "bust_cm": 97,
+      "underbust_cm": 82,
+      "waist_cm": 59,
+      "hip_cm": 91,
+      "cup": "32F",
+      "head_ratio": 7.0,
+      "crotch_ratio": 0.52,
+      "approved_file": "Art/character-assets-2026-11-20/design_sheets/lydia_harem_sleepwear/approved/lydia_harem_sleepwear_design_approved_youthful_160.png"
+    }
+  },
+  "crotch_lock": {
+    "source": "Art/character-assets-2026-11-20/design_sheets/fullbody_outfits/eleanor/sleepwear_and_bunny/eleanor_servant_line_bunny_bodysuit_stockings_fresh_v3.png",
+    "heel_height_cm": 6.0,
+    "heeled_crotch_ratio": 0.514,
+    "barefoot_crotch_ratio": 0.496,
+    "heeled_crotch_height_cm": 84.3,
+    "barefoot_crotch_height_cm": 78.3,
+    "rule": "The locked 51.4% crotch ratio includes 6 cm heels. For flat/low-heel outfits the crotch height must be reduced toward 49.6-50%; it must never be raised above the heeled lock."
+  }
+}

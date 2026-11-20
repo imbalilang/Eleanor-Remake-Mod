@@ -1,0 +1,3501 @@
+{
+  "date": "2026-11-10",
+  "scope": "Offline inventory; no artwork or runtime changes",
+  "total_png": 132,
+  "counts": {
+    "portrait": 12,
+    "expression": 104,
+    "ending_cg": 4,
+    "item": 12
+  },
+  "flagged": 54,
+  "assets": [
+    {
+      "file": "Textures/Items/cp_portrait_eleanor1.png",
+      "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "family": "item",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor2.png",
+      "sha256": "21b68b9319a914c87ea321b3aa9321263dd50ce4a3c17638f167c0946ce0cd86",
+      "family": "item",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 14046,
+      "opaque_fraction": 0.2300511006289308,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor3.png",
+      "sha256": "d5d00ad1a94459e70f1d1e9b61a6377d5a3e3490598dfe9e84cbea44568e06e9",
+      "family": "item",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        75,
+        62,
+        214,
+        212
+      ],
+      "opaque_pixels": 13678,
+      "opaque_fraction": 0.22402384696016772,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor_rev.png",
+      "sha256": "397e062f5b7949a0237b1c55e1683d8d5836bdd56f4d23d24f465a1fc57a8c56",
+      "family": "item",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/cp_portrait_eleanor_scav.png",
+      "sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+      "family": "item",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/eleanor_bracelet.png",
+      "sha256": "40610a6776f0a198aef8ca2b3fc7f691cfc99cccf7e6b2e5e5b1396ab7c65c3c",
+      "family": "item",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        6,
+        18,
+        58,
+        45
+      ],
+      "opaque_pixels": 702,
+      "opaque_fraction": 0.17138671875,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/eleanor_locket.png",
+      "sha256": "f985fa3420f781248644399fa3ec3120ffd52bf17089e208e3490aa7cd774291",
+      "family": "item",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        14,
+        5,
+        49,
+        59
+      ],
+      "opaque_pixels": 794,
+      "opaque_fraction": 0.19384765625,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_ending_harem_cg.png",
+      "sha256": "d088018f1ab7a15911031d7a8601daf11058df18f5416ebcbd5fe2e23f57b641",
+      "family": "ending_cg",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "opaque_pixels": 518400,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_ending_love_wedding.png",
+      "sha256": "255a4ed10049daa5afdfef6b257a605e38aff4c6749625a4dcb9d5319be7f54a",
+      "family": "ending_cg",
+      "size": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1664,
+        936
+      ],
+      "opaque_pixels": 1557504,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_ending_maid_cg.png",
+      "sha256": "a23dee95a7576a26532af4b0c12342b0d18c62642dd85c49149a6cb856c8cbd8",
+      "family": "ending_cg",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "opaque_pixels": 518400,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_ending_revolution_cg.png",
+      "sha256": "cecede11d02d644b27415f8c86ea328c4dd86520b1a06d0f8a9476e46be7df41",
+      "family": "ending_cg",
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "opaque_pixels": 518400,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_event_harem_lydia_date_cg.png",
+      "sha256": "04d3b8e9b8ac0eb84aaa80ab7e56de89175c0ce9a4f30d529b7ac46caf49bfff",
+      "family": "item",
+      "size": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1664,
+        936
+      ],
+      "opaque_pixels": 1557504,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_event_love_water_cut_cg.png",
+      "sha256": "91d4e33817b5f3c408a281a67891288a1a8f65c2ab60e13f0b3ac88acaaab230",
+      "family": "item",
+      "size": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1664,
+        936
+      ],
+      "opaque_pixels": 1557504,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_event_maid_gala_cg.png",
+      "sha256": "6056ea8f4027a512c6a077a6758c58317b31a51ef837660dbf6b0d4db935d5cd",
+      "family": "item",
+      "size": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1664,
+        936
+      ],
+      "opaque_pixels": 1557504,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "sha256": "1238e7c3c6b9e002309759aefa4f16c7a05eb7ab47f5d46ca1418023afd177f9",
+      "family": "item",
+      "size": [
+        1664,
+        936
+      ],
+      "mode": "RGB",
+      "alpha_values": [
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1664,
+        936
+      ],
+      "opaque_pixels": 1557504,
+      "opaque_fraction": 1.0,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_angry.png",
+      "sha256": "660e1e9e2223f8f22756645023072d759fc651cdf443c297f13eb96fde0d491f",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_determined.png",
+      "sha256": "85c7accbde65d9740796d8ab4339db264b5b1a5446e568d98e97f2c748affb89",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_hurt.png",
+      "sha256": "3054f7564274430f6f95b838b148509c30da24798a686fcfc103b57bd1a1322a",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_sad.png",
+      "sha256": "f56f6bbf2b09d35b28d6191c2b8a49057dbeb9a1e31404f2905dcd66760635b9",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_serious.png",
+      "sha256": "d1b31c440ebd4e8c5cc81554858e09f891077e7a9d52273d057bf8bb64f74143",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_shy.png",
+      "sha256": "e5988ffe1ba75c85a52348450d7fda4c29f2909693b95130d9705ef19ee32f4e",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_smile.png",
+      "sha256": "bc2697e52d8a201da6ef87aed4a1482faf83f398c344134d3175b52b33d88b3b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_soft.png",
+      "sha256": "922d5097959090a48bbebbff08d77cdf485584fcffa806a49d5f9dff97454211",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor1_tired.png",
+      "sha256": "723f65d89d27f4cda56aec42a00dbd0648fc560a2e06dae7adc425835cc75ef6",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        216,
+        212
+      ],
+      "opaque_pixels": 13783,
+      "opaque_fraction": 0.22574357966457023,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor1.png",
+        "reference_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_angry.png",
+      "sha256": "7fb35a6e3fa36cf202c5c674a39b2d1eb41dd02e52a463bf011e03ac2d845798",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_determined.png",
+      "sha256": "c9ba8395441f8f8861182b55f8481fb822932a7ca347e5a1d9999c170b8132a6",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_hurt.png",
+      "sha256": "aa63fdc3aebc8129889373df65dae2a8509f26a8455e00e1dac6972b5d3bbb6d",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_sad.png",
+      "sha256": "918b09a5483ede8766352e0e8b2baa63676ec2d3eee528bbcd29767f6fe82437",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_serious.png",
+      "sha256": "9ab4d4a93964a541ea1132d6404da88bf75dcf1f6dc116fae1c67a347086dd5e",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_shy.png",
+      "sha256": "611d36e68e6e4cb280a59010cbb7d5b60037de56cbdf0db255baa2dd8ee9f1e1",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_smile.png",
+      "sha256": "cf34e2436501fa1ebd3ea706b171a7213b172254c4bc921ed981076bf12474c2",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_soft.png",
+      "sha256": "071efaa0ce9e121ba8f58337ff7d31c7d94ab2f5a361f7c3f2d98d4a3a1fd012",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_gala_tired.png",
+      "sha256": "82f5da34c1ea65fd0f8dadeefcdf8f61c1845d0e663a95dcfaac417a1802e97b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_angry.png",
+      "sha256": "c3814957ea51c3629e8c4bbe57ff9ae40b0d729f13547e6406f11ae37670d6d8",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_determined.png",
+      "sha256": "49ba2fbfa82ebc8320736303381b162b4d7087faed3d8f1d9a19458db3b5dab1",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_hurt.png",
+      "sha256": "884d7c494889a83eca193864fcfeb01a6eb70b90656dfc1905b769563b693b6b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_sad.png",
+      "sha256": "b1df0db785f45e0128a3705d818b3f2b1ced74766005eaddf08abcf6d2e540a1",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_serious.png",
+      "sha256": "ff1611af532ae140fa7f1517772dfe8f0b7cc7ac8f3a2f09a27037a3ac960fb8",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_shy.png",
+      "sha256": "23b730217556c1aef03400583950257cf8d41260b78301071d99c7a548b5a090",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_smile.png",
+      "sha256": "4a44e313f0758144a9aca25984fc5759986c6edfeb1023bc319eca4775cb06c4",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_soft.png",
+      "sha256": "4a7a045faf953c338dc821ee0d9e9bf177b08c8273903aa406662c5a8164f56b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_love_intimate_tired.png",
+      "sha256": "298b156809f6f5cc2f12ba4f1efd0b75fe96cb554b754fdf34e22ff387eb3ba9",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_angry.png",
+      "sha256": "1ee3805c03cbe77859bce090e219121967d0dcefa076dd8601596a4054350e76",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_determined.png",
+      "sha256": "ce38c0d20c8a6481db67915c4d3fd8141ccda887f79a14f9b84ea9504081b671",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_hurt.png",
+      "sha256": "f828654623d0ccfd1e0c049ed012d48fe8d8a7c9b41c0152e114b03d29fcfc73",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_sad.png",
+      "sha256": "e987197a0fe25e7d3dd493568fef985c9d2222423dd006b8438ea68be345e6fb",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_serious.png",
+      "sha256": "bb934261318dc7f8f74891f39bb3085fc31fd9cd40ed0f2f70fcd9ba23b838a1",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_shy.png",
+      "sha256": "b79558ab4cff80c0724434fbe8fcae80d68e392f7f593a863b8c27fecd33670c",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_smile.png",
+      "sha256": "6097d737de5a0b0f460dcd5b73479de2106489c30a44a53e36dea874bfb816d2",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_soft.png",
+      "sha256": "c37ad85d4123c1058e0d8bf6ac0d8cd6c11fe487cd734d35f336cf4de2bdc876",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_tired.png",
+      "sha256": "6c14b2ab9590c84e8e10de5d39987ae21f531b66cdc22908a85c6eefebdee002",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_maid_tsun.png",
+      "sha256": "afc8cd0654e190b6ecafb1e9a9fd12e0b91b69829158775544eef08e1a3ba423",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_eleanor_maid_female_beauty.png",
+        "reference_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_angry.png",
+      "sha256": "a0566b3378333d02597fe72a49a862ece2bd22bc10d3b29c4f36d1c7c7a61f92",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_determined.png",
+      "sha256": "e3ff70beee4362b05d7ca64b52cfe28e580aa2859ba789767daf0c63a4afb79a",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_hurt.png",
+      "sha256": "d2f69e03798e42f2f2c5bbdd592cd3ca2e54bef50665b3def32aca153dbcf3bf",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_sad.png",
+      "sha256": "5772790e77aff4bd18d7e94c479bc6bf5476883fb2089b7b9fd492b0d705ca49",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_serious.png",
+      "sha256": "13ac69c1025f1184f2f1e45a09504b9019c3017bfda9e094d640d7f32f9d3d23",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_shy.png",
+      "sha256": "2bde5070d02631cd5dd23a0f686b490af64baf351d8bc0c0ff5efc18ae3d52b9",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_smile.png",
+      "sha256": "4ae59aae5df023ee565a20a808d3d6932a1d7148c26a1a46ab4833780bc4e96e",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_soft.png",
+      "sha256": "c72079fdabf0b69e96021ffce3119d317a7652e95de9648cc61c09670fc8105b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_rev_tired.png",
+      "sha256": "cce2a080dee5fe8f60478cc8e0c944733244843e981370c7c3397a047f172f32",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        62,
+        213,
+        212
+      ],
+      "opaque_pixels": 13922,
+      "opaque_fraction": 0.228020178197065,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_angry.png",
+      "sha256": "7de23e8b2c00a1e29ddbcacf92df654fdd54f6f619bf1ed63bd7d5109430bddd",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_determined.png",
+      "sha256": "4f0af16032ddc2336181f360f390da22404540d4a8f7c0de1be641fa6e79c069",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_hurt.png",
+      "sha256": "912b66cbe7cb5e82dc96688429b245a8a7a3bf868f276e8c05925cf2ea68033a",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_sad.png",
+      "sha256": "5a02a1e8d12835f547acb2c20d45a1c1311b16fd7368745d5470c9c03335d324",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_serious.png",
+      "sha256": "ebe6edd50cb8d7d8c91ed1cbe54734402f4ae50a39c4639e8a00ebc34ecb9251",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_shy.png",
+      "sha256": "e07efdddfed02b5a8bf757148e7d150fab7654586fea3c03e832f869def31582",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_smile.png",
+      "sha256": "db25185176a69445880c049685c9981b779d26f1fdc40fc578b33fbe08d51bd7",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_soft.png",
+      "sha256": "d65bd8489d7aadcc79d844fb014d1a82a9343390e515a93b5253900ed08f7844",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_revolution_undersuit_tired.png",
+      "sha256": "b6c45e7148150bfd5b5f677855214c0f1540727feb1d0b4e9deb1cc1d7018698",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_angry.png",
+      "sha256": "145a221428c36bc8cbd1416201358ce081664f7274d0c12a3e6b117ee2d4073e",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_determined.png",
+      "sha256": "46da974b83daa6302686fa4beebc2b86c466b05b9057dc88b8bfdc3ec180f7ff",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_hurt.png",
+      "sha256": "79a497e36530853fa499ec1c0c36d23ffcc5bb746e890b2fd5d5375d4c9ddfe9",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_sad.png",
+      "sha256": "5bef7228dc02450f27441ba80658138698012e83e7566a676fa918cc9651ac32",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_serious.png",
+      "sha256": "d7f976116cb77282827f60361f155b0453f0bc8d2d051fe95861fcd5b931928f",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_shy.png",
+      "sha256": "6e973989f9eef2a5f7fc6d724e3d92cf87ebbc0541687e8707981f3e4c3f9a8d",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_smile.png",
+      "sha256": "7be032f1ba6e30b78960e4cf4ec8bd9501799a241009a8137b9f6e86b12ccfc0",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_soft.png",
+      "sha256": "2eb472d283ca957be0182f5ff93d27472b78b5f6d3dd9c234b57b49b1d9a0bc8",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_eleanor_scav_tired.png",
+      "sha256": "c3acc9eb8ebdd7b9a294db0cd5b4d0e57a7d09cc280e380d715898e3cedf0063",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        68,
+        62,
+        207,
+        212
+      ],
+      "opaque_pixels": 14021,
+      "opaque_fraction": 0.22964164046121593,
+      "flags": [],
+      "base_comparison": {
+        "reference": "D:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\4348910\\3829696854\\Textures\\Items\\cp_portrait_eleanor_scav.png",
+        "reference_sha256": "424212ae564088f40f6e6ca090fdc8b6e9a4c816e4eca0fb0d81bd8cca92f209",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_angry.png",
+      "sha256": "28a0d5b7d1b423048e7a106266fd793b94fae1e1c7df03c9cb1b4f31984d25c2",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_determined.png",
+      "sha256": "131b6ccb53e6ba9e1e8e183b2b85f03ba535407ba6ebe7b4d114f0be3971e64c",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_flustered.png",
+      "sha256": "b4c0beafb334c2bb493c756c2faf4b122e14eca3eebd6e44a026708dd7d05f10",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_hurt.png",
+      "sha256": "3dd088674a623c5576d2424314f89159166c8e839fd40b578dd151a78b01161e",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_sad.png",
+      "sha256": "5dff8c753a4e18e06a7c5bb1429923bc7c7caef2e25c241aecddec36afdc76e7",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_serious.png",
+      "sha256": "00223ccb07aa96bd72c97dde3b21b7d654f793b1b51522ebff6249a35b512e49",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_shy.png",
+      "sha256": "b4c0beafb334c2bb493c756c2faf4b122e14eca3eebd6e44a026708dd7d05f10",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_smile.png",
+      "sha256": "735a8bbd49eb247fa57612f71503354f5592fb56b04de8df51367cf4e0fe284b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_soft.png",
+      "sha256": "3f8c826492ab0fd9987c41fd11bb6bb3e62ef8e6a8e7c410b6c720a9140faf68",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_tease.png",
+      "sha256": "8656be24f93df2a9d4da7ec4051473f8f292c59ba045b1f04daeaae81a60f151",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_daily_tired.png",
+      "sha256": "9f8e3057dbabf88ba2a8cb55e9f09f550bbc4fbea67abeea802409b07b54f7cd",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_female_beauty.png",
+        "reference_sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_angry.png",
+      "sha256": "f400349a8a2480501896680af4a9b842a7c83defa8b66be9b83e67ec4fd5c4b0",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_determined.png",
+      "sha256": "5af12f82946d493144df5c96ca88dc25cbf436b7b25ee36c61e7c2beadafdfa3",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_flustered.png",
+      "sha256": "fb86cdd12c1e83a5b21409b7f7e030841941208fa719455346d6a15cd7e4f73d",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_hurt.png",
+      "sha256": "c7ba69e7355a8f93fee4ad98a7005c3d987a329868e7b7232cadba9cf02d5bdf",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_sad.png",
+      "sha256": "920d9250c1cc4fa558097ed9c401656fbcd6dd993937b406c55a3ed96b40b9c8",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_serious.png",
+      "sha256": "b38dbc27b414e75796e85f3420d42c89452db6af6acc9e26e922208dfe390cc7",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_shy.png",
+      "sha256": "7d1e9636354735d01f367b8e04b21b2853c2142cca9121bfdafb3c747ea15812",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_smile.png",
+      "sha256": "80f8857b989bdbf1185e8dc7a4669d3fdb2d6d5fd0a8d500ed12a0984eeb8614",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_soft.png",
+      "sha256": "20cac2ed98a8b62847cb72d1c29305340b0b4a3191ab9394ec47a11fd9e70d2b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_tease.png",
+      "sha256": "d9d2fae3608ae808ccd00607cf21a098473660e3f72b68ae4fad189047139c37",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_lydia_date_tired.png",
+      "sha256": "01d20d0a52976d25cd1dcca36eb129f66a0b75f6d6559bb1009dd15357850a76",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": [],
+      "base_comparison": {
+        "reference": "B:\\Eleanor Story Expand\\Textures\\Items\\er_portrait_lydia_date_female_beauty.png",
+        "reference_sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+        "padding_applied_in_memory_only": false,
+        "alpha_different_pixels": 0,
+        "silhouette_iou": 1.0
+      }
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_angry.png",
+      "sha256": "6bf22f1d73bd0f05f9cd3cd6722df1251ab7cbd4d32f464ee6fc91e63d87b909",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_determined.png",
+      "sha256": "d101aa3798640e921888475e4a710d6b65f95b0f652746073122e37dc7d211c1",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_angry.png",
+      "sha256": "da3ea168bd5b5919c0f47130d2d4754acc5d694a2c5896267712cf88c6cd4721",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_determined.png",
+      "sha256": "60ca0840f894aea5247e8d5a8f02320825cc30b94b2dfe92499ca6be0d48f722",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_hurt.png",
+      "sha256": "08f31c4ee8fab7a82dff9e1af07c385082762e381822037b6a66409307502df0",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_sad.png",
+      "sha256": "b46e690dd850fbe16cdaa5d02e6cf828341699d1713cfaa7c098e1f0f2ff83c6",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_serious.png",
+      "sha256": "590a65787799df15871569b9d8a423205f9a7c8669bc97daca7250a5e3ff64cf",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_shy.png",
+      "sha256": "3a6c079af0a21ae4c884cb18815d9bda75485d8dfcf313799279b4c1da980e35",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_smile.png",
+      "sha256": "39386dbe4276eef9278a05c8fa1daef30a0a2ce494d635c656a75891d84b36b0",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_soft.png",
+      "sha256": "a5554a75c055a195e91314c81b0e34d9604125d9c8c72237a4482ffce60ceb02",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_home_tired.png",
+      "sha256": "6bac16a3007c9a67f609a3506016d1e3293a0e12a0d849f7f5dc9eb1cf3a768b",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_hurt.png",
+      "sha256": "0b289bc46606b754eb33c369ed8d832ed4f0402a726020418891de8083f354d1",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_sad.png",
+      "sha256": "a4a1ca26417b6caf26c3f2384322262811d3a7692d8601742f103fc9d94b0799",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_serious.png",
+      "sha256": "1995da7b0b28de2b4d19b4c742d2d71f3f09d29bcf473d78b33021c84828c1c8",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_shy.png",
+      "sha256": "5129ced30ddfada80564108b5065456992792c0bcbc47b6889bcfea5d5a42796",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_smile.png",
+      "sha256": "be453d58648625e99ffd4f5d1be8a1288faf6060190fa5cecf2fe03bb651b846",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_soft.png",
+      "sha256": "c4c401da3aa2c7e54b30074e594e67bdb1fe0ad2f20211a51bbd8f3b6f5c2e6e",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_expr_sophia_tired.png",
+      "sha256": "6948566ad5bb9d7bc3fa2fafb8491c8ff978870519de04cd19832c427e70d283",
+      "family": "expression",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": [
+        "local_neutral_reference_unavailable"
+      ]
+    },
+    {
+      "file": "Textures/Items/er_lydia_recommendation_plaque.png",
+      "sha256": "387a22df796ed7b6318fc437e60bfa4abf3f0a2b94d3fed21a55450fdfb4d913",
+      "family": "item",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        6,
+        14,
+        58,
+        50
+      ],
+      "opaque_pixels": 1521,
+      "opaque_fraction": 0.371337890625,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_gala_female_beauty.png",
+      "sha256": "0d68790bf9e45f41dc9f058a4c7cf7cb774d684f7dfb094d615c64196af0370b",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        59,
+        58,
+        224,
+        212
+      ],
+      "opaque_pixels": 15693,
+      "opaque_fraction": 0.2570263364779874,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+      "sha256": "abd0ed1a19156ead1784ed7b83e60c1b860cb67023bd75916ebf838e72eb5955",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        70,
+        65,
+        223,
+        212
+      ],
+      "opaque_pixels": 14037,
+      "opaque_fraction": 0.22990369496855345,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+      "sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        66,
+        52,
+        220,
+        212
+      ],
+      "opaque_pixels": 15631,
+      "opaque_fraction": 0.2560108752620545,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_maid_female_vanilla.png",
+      "sha256": "4a1c8e92438543712f3ad07c0ccc8c037cc1b9fb77f6a7ced1f6c5296aaa80ed",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        89,
+        54,
+        199,
+        212
+      ],
+      "opaque_pixels": 11737,
+      "opaque_fraction": 0.19223335953878407,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_eleanor_revolution_undersuit_female_beauty.png",
+      "sha256": "726e8e1f1c7ca220813750415259d7ab6a43ca16b351d5411584fa3e366a7897",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        53,
+        62,
+        225,
+        212
+      ],
+      "opaque_pixels": 15185,
+      "opaque_fraction": 0.24870610587002095,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_date_female_beauty.png",
+      "sha256": "afde9634896a12b7f77867b97c8a8b080bf237252742ff7d04695f38bace74a5",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        63,
+        209,
+        212
+      ],
+      "opaque_pixels": 13174,
+      "opaque_fraction": 0.21576912997903563,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_date_female_vanilla.png",
+      "sha256": "e104f1f61588ed3c485d9f6c9e2a0998ba274cd003590c53b0c495512d3fa66a",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        83,
+        42,
+        204,
+        212
+      ],
+      "opaque_pixels": 14803,
+      "opaque_fraction": 0.24244955450733752,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_female_beauty.png",
+      "sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        82,
+        64,
+        208,
+        212
+      ],
+      "opaque_pixels": 12967,
+      "opaque_fraction": 0.2123787997903564,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_lydia_female_vanilla.png",
+      "sha256": "9a2d7a43469d7a9e41e06bd6e6a4578aa81f1f4567803ed37c2b4a59bcbda358",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        81,
+        42,
+        206,
+        212
+      ],
+      "opaque_pixels": 14641,
+      "opaque_fraction": 0.23979625262054508,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_female_beauty.png",
+      "sha256": "a60d5a31a8529849284cbb13e8078b9ca2e99e821fc87c98820528c113c3b585",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        88,
+        68,
+        199,
+        212
+      ],
+      "opaque_pixels": 10650,
+      "opaque_fraction": 0.17443003144654087,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_female_vanilla.png",
+      "sha256": "0e77deb98b97c3e5c053386da8cd277336bb494282a12e88d1c70febcea4e4a5",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        73,
+        54,
+        214,
+        212
+      ],
+      "opaque_pixels": 12858,
+      "opaque_fraction": 0.2105935534591195,
+      "flags": []
+    },
+    {
+      "file": "Textures/Items/er_portrait_mother_home_female_beauty.png",
+      "sha256": "204459ab63f0264bd7f112e5f223f43fff6aa642396faa9ed12203170323fbda",
+      "family": "portrait",
+      "size": [
+        288,
+        212
+      ],
+      "mode": "RGBA",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        95,
+        70,
+        201,
+        212
+      ],
+      "opaque_pixels": 10545,
+      "opaque_fraction": 0.17271029874213836,
+      "flags": []
+    }
+  ],
+  "all_runtime_png_unchanged": true
+}

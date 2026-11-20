@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'Art/author-pipeline-validation-2026-11-10'
-BEAUTY = Path('D:/Program Files (x86)/Steam/steamapps/workshop/content/4348910/3829696854/Textures/Items')
+RUNTIME = ROOT / 'Textures/Items'
 
 
 def sha(path):
@@ -22,11 +22,17 @@ def main(output_dir=OUT):
     before = {path: sha(path) for path in files}
     items, expression_comparisons = [], []
     groups = {
-        'eleanor1': BEAUTY / 'cp_portrait_eleanor1.png',
-        'eleanor_scav': BEAUTY / 'cp_portrait_eleanor_scav.png',
-        'eleanor_maid': ROOT / 'Textures/Items/er_portrait_eleanor_maid_female_beauty.png',
-        'lydia_daily': ROOT / 'Textures/Items/er_portrait_lydia_female_beauty.png',
-        'lydia_date': ROOT / 'Textures/Items/er_portrait_lydia_date_female_beauty.png',
+        'eleanor1': RUNTIME / 'cp_portrait_eleanor1.png',
+        'eleanor_scav': RUNTIME / 'cp_portrait_eleanor_scav.png',
+        'eleanor_maid': RUNTIME / 'er_portrait_eleanor_maid_female_beauty.png',
+        'lydia_daily': RUNTIME / 'er_portrait_lydia_female_beauty.png',
+        'lydia_date': RUNTIME / 'er_portrait_lydia_date_female_beauty.png',
+        'eleanor_gala': RUNTIME / 'er_portrait_eleanor_gala_female_beauty.png',
+        'eleanor_love_intimate': RUNTIME / 'er_portrait_eleanor_love_intimate_female_beauty.png',
+        'eleanor_rev': RUNTIME / 'cp_portrait_eleanor_rev.png',
+        'eleanor_revolution_undersuit': RUNTIME / 'er_portrait_eleanor_revolution_undersuit_female_beauty.png',
+        'sophia_home': RUNTIME / 'er_portrait_mother_home_female_beauty.png',
+        'sophia': RUNTIME / 'er_portrait_mother_female_beauty.png',
     }
     for path in files:
         image = Image.open(path)

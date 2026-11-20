@@ -6,6 +6,11 @@
 - GitHub Pages 发布源已移除：删除 `site/index.html`、`.github/workflows/pages.yml` 和 `tools/sync_site.ps1`。现有部署需在 GitHub 仓库 Settings → Pages 关闭；`site/assets/` 保留，仅用于本地打开 `docs/route_map.html` 时加载图片。
 - 后续只维护 `docs/route_map.html` 与本文档；不再要求站点同步，也不要重新创建 Pages 工作流或站点副本。
 
+## 2026-11-19 1.21 韩语语域与译名修正
+
+- 本次只修改 `Localization/ko.csv`：埃莉诺/莉迪亚改为自然半语，埃莉诺译名统一为 엘리너；不改路线、选项、结局编号、目标日、正文或排期。
+- 公开攻略以 Steam 指南 3842734960 为准；本次不修改 `docs/route_map.html` 的路线内容与版本。
+
 ## 2026-11-19 1.20 日语与韩语本地化
 
 - 新增 `Localization/ja.csv` 与 `Localization/ko.csv`，覆盖全部当前本地化键；剧情、路线、选项、UI、道具、新闻、短访与结局随游戏语言切换，缺失键回退英文。

@@ -76,3 +76,7 @@
 1. 本表是当前排期，不从 `CG规划.xlsx` 之外自动增减格位。
 2. 每格先确认地点/服装/动作，再确认状态；未设计格位不得直接进入生成。
 3. 如果要把 36 格候选池里的主线/外出补进当前表，另开一次排期调整，不静默替换。
+## 已通过 CG：`harem_two_bunny_bed` — Eleanor + Lydia 双人兔女郎床上 CG，960×540，approved 2026-11-20。
+## 已通过 CG：`love_white_sleepwear_wakeup` — Eleanor 恋爱线白色睡衣起床 CG，960×540，approved 2026-11-20。
+## 已通过 CG：`love_white_sleepwear_wakeup` — B 版，960×540，approved 2026-11-20。
+## 已通过 CG：`servant_bunny_service` — 采用 image-0488bb01，960×540，approved 2026-11-20。
