@@ -170,10 +170,6 @@ def main() -> int:
     for fact in ('至少3次', '风险承担', '同一只', '实际差额', 'P2', '3000', '1500', '30／60／90'):
         if fact not in guide_text:
             errors.append('missing key entry fact: ' + fact)
-    site = root / 'site/index.html'
-    if not site.exists() or site.read_text(encoding='utf-8') != html.replace('../site/assets/', 'assets/'):
-        errors.append('site/index.html differs from docs/route_map.html; run sync_site.ps1')
-
     # The repeated-exit choice must not come back without a deliberate map update.
     if "dr17_withdraw" in html or "dr15_withdraw" in html or "dr14_reject" in html:
         errors.append("removed repeat-exit choices are still present in the route map")
@@ -184,7 +180,7 @@ def main() -> int:
         for error in errors:
             print("ERROR:", error)
         return 1
-    print("OK: current routes, scene coverage, guide links, endings and site copy agree.")
+    print("OK: current routes, scene coverage, guide links and endings agree.")
     return 0
 
 

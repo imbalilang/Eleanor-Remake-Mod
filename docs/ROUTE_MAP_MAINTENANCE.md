@@ -1,5 +1,11 @@
 # 路线图与结局预览维护规范
 
+## 2026-11-20 公开攻略迁移到 Steam 指南
+
+- 公开玩家攻略改为 Steam 指南 3842734960：https://steamcommunity.com/sharedfiles/filedetails/?id=3842734960
+- GitHub Pages 发布源已移除：删除 `site/index.html`、`.github/workflows/pages.yml` 和 `tools/sync_site.ps1`。现有部署需在 GitHub 仓库 Settings → Pages 关闭；`site/assets/` 保留，仅用于本地打开 `docs/route_map.html` 时加载图片。
+- 后续只维护 `docs/route_map.html` 与本文档；不再要求站点同步，也不要重新创建 Pages 工作流或站点副本。
+
 ## 2026-11-19 1.20 日语与韩语本地化
 
 - 新增 `Localization/ja.csv` 与 `Localization/ko.csv`，覆盖全部当前本地化键；剧情、路线、选项、UI、道具、新闻、短访与结局随游戏语言切换，缺失键回退英文。
@@ -406,7 +412,7 @@
 
 查看页面：`docs/route_map.html`（浏览器直接打开，无需服务器）。
 
-公开网页：https://imbalilang.github.io/Eleanor-Remake-Mod/ 由 `site/index.html` 提供，GitHub Actions 工作流 `.github/workflows/pages.yml` 只发布 `site/` 目录。修改路线图后必须运行 `tools/sync_site.ps1`，把同一版本的 `docs/route_map.html` 同步到 `site/index.html` 一并提交，否则公开页与仓库源文件版本不一致。
+（该 GitHub Pages 入口已于 2026-11-20 停止维护；现有部署需在 GitHub 仓库 Settings → Pages 关闭。现行公开攻略见 Steam 指南 3842734960。）
 
 ## 2026-11-10 0.84游戏1.0.0.14兼容
 
@@ -543,7 +549,6 @@
 
 1. 先对照当前运行源码与Content；作者手稿、计划书和旧回归夹具不能覆盖现行实现。
 2. 同时改分幕攻略、图中操作节点与结局条件；保持现行结局编号。
-3. 运行`tools/sync_site.ps1`同步`docs/route_map.html`到`site/index.html`。
-4. 运行`python tools/check_route_map.py`，检查场景覆盖、20个分幕（含侍从序幕）、5个现行结局、历史别名、链接目标、日期及站点一致性。
-5. 用浏览器核验桌面/手机宽度、筛选、节点跳转、拖拽、键盘与深链接；静态检查不能代替渲染检查。
-6. 攻略分类调整无需改manifest版本或重发工坊包；本轮恋爱结局背景资源键更名需重建本地化并编译核验。部署与发布按用户授权执行，GitHub Pages需单独发布后线上才会变化。
+3. 运行`python tools/check_route_map.py`，检查场景覆盖、20个分幕（含侍从序幕）、5个现行结局、历史别名、链接目标与日期。
+4. 用浏览器核验桌面/手机宽度、筛选、节点跳转、拖拽、键盘与深链接；静态检查不能代替渲染检查。
+5. 攻略分类调整无需改manifest版本或重发工坊包；本轮恋爱结局背景资源键更名需重建本地化并编译核验。公开攻略以 Steam 指南 3842734960 为准，GitHub Pages 已停用。

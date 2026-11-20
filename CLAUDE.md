@@ -29,11 +29,12 @@ Any change to story chapters, scene order, target days, story-impacting choices,
 
 - `docs/route_map.html` — the visual route/ending preview.
 - `docs/ROUTE_MAP_MAINTENANCE.md` — the numbering and maintenance rules.
-- `site/index.html` — the public GitHub Pages copy; run `tools/sync_site.ps1` after editing the route map.
+
+The public player-facing guide is the Steam Guide **3842734960**. GitHub Pages is retired; do not recreate `site/index.html`, `.github/workflows/pages.yml` or `tools/sync_site.ps1`. Any existing Pages deployment is disabled in repository settings. `site/assets/` remains only as local artwork for opening `docs/route_map.html`.
 
 The current endings are **E1 romance, E2 friends, E3 attendant, E4 harem, E9 revolution**. The author states that opening the nutrifruit research is flavor/business content: it does not create a different relationship ending or a perfect/non-perfect rank. E5/E6/E7/E8 are historical duplicates merged into E1/E2/E3/E4 respectively; keep those old numbers reserved as aliases, not separate endings. E10–E14 remain archived for legacy saves. Append actual new endings as E15, E16, …; never renumber or reuse a reserved number. Death/arrest/leaving the station are ending suffixes, not new numbers. Preserve existing business flags and conditional background lines; do not collapse save Route values merely to merge ending labels.
 
-If the route map is not updated, the story change is incomplete. After editing, run `python tools/check_route_map.py`; it verifies the manifest version, five current endings and historical aliases, act and scene coverage, guide links, site synchronization, and that duplicate research endings and retired nodes have not come back.
+If the route map is not updated, the story change is incomplete. After editing, run `python tools/check_route_map.py`; it verifies the manifest version, five current endings and historical aliases, act and scene coverage, guide links, and that duplicate research endings and retired nodes have not come back.
 
 ## Route terminology (user requirement)
 
@@ -78,7 +79,7 @@ Operational notes:
 ## Release versioning (user requirement)
 
 - Every Steam Workshop or Nexus content update must increase `<ModVersion>` in `manifest.xml`. Publishing new files under the same version is forbidden: the game/loader uses the mod version to detect updates, so an unbumped item does not reach subscribers.
-- In the same change, sync `README.md` (MOD version), `docs/route_map.html` (`DATA.version`), `docs/ROUTE_MAP_MAINTENANCE.md`, and `site/index.html` via `tools/sync_site.ps1`, then run `python tools/check_route_map.py`.
+- In the same change, sync `README.md` (MOD version), `docs/route_map.html` (`DATA.version`) and `docs/ROUTE_MAP_MAINTENANCE.md`, then run `python tools/check_route_map.py`.
 - `-KeepDescription` / content-only only means the Workshop title and description stay untouched; it never waives the version bump.
 - Do not rely on file hashes or Steam's item update time as the player-facing update signal.
 
