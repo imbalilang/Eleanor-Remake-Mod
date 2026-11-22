@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.30</ModVersion>
-  <Description>1.30 completes endgame perfume coverage: the harem v2 finale now grants the self-refilling perfume as well, and completed saves receive it automatically. It also applies the reviewed Korean proofreading pass: spacing after italic actions and speech-level fixes for Eleanor and Lydia, with outdated, misaligned or incorrect translation-table entries excluded. The 1.29 Lydia closure-date fix, native warning-gift barter flow, endgame perfume delivery, text pass, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain. Story routes, outcomes, target days and endings are unchanged. 1.30 补齐终局香水覆盖：后宫 v2 结局也会直接发放自我补充香水，已完成旧存档会自动补发。同时应用评审后的韩语校对：斜体动作后的空格、埃莉诺与莉迪亚的语气修正；已排除过期、错位和错误的校对表条目。保留 1.29 莉迪亚闭店约会修复、原版警告礼 barter 流程、终局香水发放、文案修订、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。不改路线、选项结果、目标日或结局。简体中文 / English / 日本語 / 한국어。</Description>
+  <ModVersion>1.31</ModVersion>
+  <Description>1.31 applies the full reviewed Korean proofreading merge on top of 1.30: 279 keys updated, including italic-action spacing, speech-level and punctuation fixes, and unified 영양 열매 terminology. Outdated, misaligned and structurally incompatible entries remain excluded, and current keys are retained. The 1.30 harem v2 perfume coverage, 1.29 Lydia closure-date/reward/barter fixes, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain. Story routes, outcomes, target days and endings are unchanged. 1.31 在 1.30 基础上应用完整的韩语校对合并：更新 279 个 key，包括斜体动作后的空格、语气与标点修正，并统一使用“영양 열매”术语；过期、错位和结构不兼容的条目继续排除，当前 key 全部保留。保留 1.30 后宫 v2 香水覆盖、1.29 莉迪亚闭店约会/奖励/警告礼修复、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。不改路线、选项结果、目标日或结局。简体中文 / English / 日本語 / 한국어。</Description>
   <!-- Empty on purpose: the mod does not gate on the game version string,
        and a listed version that does not cover the running build is shown as
        a red warning in the mod menu. -->

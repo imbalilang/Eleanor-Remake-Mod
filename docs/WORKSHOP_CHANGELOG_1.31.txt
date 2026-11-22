@@ -1,0 +1,15 @@
+1.31 完整韩语校对合并
+
+- 在 1.30 基础上完成韩语校对合并：共更新 279 个 key，包括斜体动作后的空格、埃莉诺/莉迪亚语气与标点修正，以及统一的“영양 열매”术语。
+- 保留当前全部 key；校对表缺失的 34 个当前 key 继续使用现有译文，多出的 32 个废弃 key 不导入。
+- 继续排除会回退 1.24–1.30 新内容的 97 条旧译、30 条斜体结构冲突，以及玩家敬语、革命军结局 POV 等 8 条不适用条目。
+- 保留 1.30 后宫 v2 香水覆盖、1.29 闭店约会/奖励/警告礼修复、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。
+- 不改路线、选项结果、目标日或结局。
+
+1.31 Full Korean proofreading merge
+
+- Completes the Korean proofreading merge on top of 1.30: 279 keys updated, including spacing after italic actions, speech-level and punctuation fixes for Eleanor and Lydia, and unified 영양 열매 terminology.
+- All current keys are retained; the 34 current keys absent from the translation table keep their existing text, and the 32 obsolete extra keys are not imported.
+- Still excluded: 97 old translations that would revert 1.24–1.30 content, 30 italic-structure conflicts, and 8 inapplicable entries covering player honorifics and the revolution ending POV.
+- The 1.30 harem v2 perfume coverage, 1.29 closure-date/reward/warning-gift fixes, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain.
+- No route, choice-outcome, target-day or ending changes.
