@@ -1,0 +1,162 @@
+{
+  "contract_id": "cg_pixel_contract_v5",
+  "status": "active",
+  "scope": "cg_assets_only",
+  "logical_canvas": [
+    960,
+    540
+  ],
+  "runtime_export": {
+    "openai": {
+      "size": [
+        960,
+        540
+      ],
+      "scale": 0.625,
+      "filter": "lanczos",
+      "format": "png_lossless"
+    },
+    "grok": {
+      "size": [
+        960,
+        540
+      ],
+      "scale": 0.75,
+      "filter": "lanczos",
+      "format": "png_lossless"
+    },
+    "hunyuan": {
+      "size": [
+        960,
+        540
+      ],
+      "scale": 0.9375,
+      "filter": "lanczos",
+      "format": "png_lossless"
+    }
+  },
+  "upscale": "2x_nearest",
+  "style_sources": {
+    "scene": [
+      "Art/场景参考/场景参考1.png",
+      "Art/场景参考/场景参考2.png",
+      "Art/场景参考/场景参考3.png",
+      "Art/场景参考/场景参考4.png",
+      "Art/场景参考/CG参考1.png"
+    ],
+    "character": [
+      "Art/原图参考/QQ图片20261119194822.png",
+      "Art/原图参考/QQ图片20261119200041.png",
+      "Art/原图参考/QQ图片20261119200052.png",
+      "Art/原图参考/QQ图片20261119200057.png",
+      "Art/原图参考/其他角色1.png",
+      "Art/原图参考/其他角色2.png"
+    ]
+  },
+  "content_lock": [
+    "composition",
+    "camera",
+    "character_count",
+    "character_identity",
+    "pose",
+    "clothing_silhouette",
+    "key_props",
+    "scene_layout"
+  ],
+  "hard_gates": [
+    "no_antialiasing",
+    "no_smooth_gradient",
+    "no_photographic_texture",
+    "no_lens_blur",
+    "no_checkerboard_dithering",
+    "consistent_logical_pixel_grid",
+    "no_unobstructed_open_horizon",
+    "no_granular_noise",
+    "no_stippling"
+  ],
+  "qa": {
+    "states": [
+      "PASS",
+      "FAIL",
+      "UNCERTAIN"
+    ],
+    "content_first": true,
+    "uncertain_is_not_pass": true,
+    "numeric_metrics_role": "supporting_evidence_only"
+  },
+  "production_recipe": {
+    "style_mothers": "one_primary_per_scene_type_and_character",
+    "prompt_template": "docs/CG_PROMPT_TEMPLATE.md",
+    "fixed_parameters": true,
+    "repeatability_test": "3_content_variations"
+  },
+  "native_pixel_grid": "1x_provider_master",
+  "palette_guidance": "64-192_typical_not_hard_cap",
+  "line_width_native_px": [
+    1,
+    2
+  ],
+  "geometry_rationale": "OpenAI 16:9 defaults to 1536x864 when only aspect_ratio=16:9 is sent. Grok 1K 16:9 is 1280x720. Hunyuan 1K 16:9 via OpenRouter is 1024x576. All export to 960x540 by exact uniform factors: OpenAI 5/8, Grok 3/4, Hunyuan 15/16. 960x540 is export-only; 1664x936 legacy is frozen.",
+  "detail_level": "fine_1x_pixel_art_1-2px_lines",
+  "grain_policy": "no_granular_noise_no_stippling_sparse_dithering_only",
+  "master_canvas": {
+    "openai": [
+      1536,
+      864
+    ],
+    "grok": [
+      1280,
+      720
+    ],
+    "hunyuan": [
+      1024,
+      576
+    ]
+  },
+  "runtime_scale": 0.75,
+  "runtime_resample": "lanczos",
+  "runtime_format": "png_lossless",
+  "display_export": [
+    1920,
+    1080
+  ],
+  "geometry_rules": {
+    "master_generation": {
+      "openai": "1536x864",
+      "grok": "1280x720",
+      "hunyuan": "1024x576"
+    },
+    "runtime_export": "960x540",
+    "resample_factor": {
+      "openai": 0.625,
+      "grok": 0.75,
+      "hunyuan": 0.9375
+    },
+    "resample_filter": "lanczos",
+    "runtime_format": "png_lossless",
+    "display_reference": "1920x1080 (2x nearest display only)",
+    "legacy_frozen": "1664x936",
+    "openai_size_rule": "send aspect_ratio=16:9 only; do not send size",
+    "grok_size_rule": "1K 16:9 / size=1280x720",
+    "hunyuan_size_rule": "1K 16:9 returns 1024x576; 1280x720 falls back to 1024x576; 4K falls back to 2048x1152."
+  },
+  "master_canvas_by_provider": {
+    "openai_gpt_image_2_6_flare": [
+      1536,
+      864
+    ],
+    "grok_imagine_image_2_0": [
+      1280,
+      720
+    ],
+    "tencent_hy_image_v3_5_preview": [
+      1024,
+      576
+    ]
+  },
+  "runtime_scale_by_provider": {
+    "openai": 0.625,
+    "grok": 0.75,
+    "hunyuan": 0.9375
+  }
+}

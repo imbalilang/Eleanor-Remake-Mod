@@ -129,6 +129,10 @@ namespace EleanorRomance
                 VanillaEleanorBridge.ScheduleRescue(manager);
                 if (VanillaEleanorBridge.RescuePending) return;
 
+                // Lou-style special morning visit: put the paid closure date at
+                // the front of today's generated queue before ordinary visits.
+                if (DualClosingDay.TryQueueMorning(manager)) return;
+
                 int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;
                 if (EndgamePerfumeDue) StoryEngine.GiveSelfRefillingPerfume();
                 DualProgression.Check();

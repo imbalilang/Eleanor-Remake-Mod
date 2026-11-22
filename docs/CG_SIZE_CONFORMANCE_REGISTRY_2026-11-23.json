@@ -1,0 +1,41 @@
+{
+  "contract": "cg_pixel_contract_v5",
+  "entries": [
+    {
+      "id": "eleanor_motorcycle_style_master_size_conformance",
+      "contract": "cg_pixel_contract_v5",
+      "provider": "openai",
+      "source_master": "dsh-image-gen/image-8ebd4ec5.png",
+      "runtime_file": "Art/character-assets-2026-11-20/cg/size_conformance_2026-11-23/image-8ebd4ec5_960_lanczos_approved.png",
+      "master": {
+        "size": [
+          1536,
+          864
+        ],
+        "mode": "RGB",
+        "bytes": 2166848,
+        "sha256": "8ebd4ec5c728f076eaf6655c72720fc2542d0ee5aaedb72f43df7f14fed6f3ac"
+      },
+      "runtime": {
+        "size": [
+          960,
+          540
+        ],
+        "mode": "RGB",
+        "bytes": 962477,
+        "sha256": "d240d91ae3deb12058b392496bf9adca1f5a65fb3d4d303e22db26ae4cfe90a8"
+      },
+      "scale": 0.625,
+      "resample": "lanczos",
+      "format": "png_lossless",
+      "size_conformance": "PASS",
+      "art_status": "reference_style_mother_not_game_asset",
+      "install_status": "not_installed",
+      "notes": [
+        "Size-only conformance: 1536x864 -> 960x540 at exact 5/8 scale.",
+        "No game asset replaced.",
+        "Source image-8ebd4ec5.png is the approved pixel-style reference; art approval remains separate."
+      ]
+    }
+  ]
+}

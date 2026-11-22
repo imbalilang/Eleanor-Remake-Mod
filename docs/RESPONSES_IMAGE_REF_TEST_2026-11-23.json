@@ -1,0 +1,18 @@
+{
+  "test": "responses_with_2_refs_1280x720",
+  "endpoint": "https://openrouter.ai/api/v1/responses",
+  "main_model": "openai/gpt-5.2",
+  "image_tool": "openrouter:image_generation",
+  "image_model": "openai/gpt-image-2.6-flare",
+  "parameters": {
+    "size": "1280x720",
+    "aspect_ratio": "16:9",
+    "quality": "high",
+    "output_format": "png",
+    "input_references": ["image-6c610a32.png", "场景参考1.png"]
+  },
+  "http_status": 200,
+  "result": "no_image_generated",
+  "model_message": "I’m missing the two inputs you referenced... the image tool I have available in this chat is text-prompt only (no direct use-this-image-as-identity/style conditioning).",
+  "conclusion": "Responses image_generation parameters do not consume input_references in this route; Responses supports size but not reference-conditioned edits."
+}

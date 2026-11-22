@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.31</ModVersion>
-  <Description>1.31 applies the full reviewed Korean proofreading merge on top of 1.30: 279 keys updated, including italic-action spacing, speech-level and punctuation fixes, and unified 영양 열매 terminology. Outdated, misaligned and structurally incompatible entries remain excluded, and current keys are retained. The 1.30 harem v2 perfume coverage, 1.29 Lydia closure-date/reward/barter fixes, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain. Story routes, outcomes, target days and endings are unchanged. 1.31 在 1.30 基础上应用完整的韩语校对合并：更新 279 个 key，包括斜体动作后的空格、语气与标点修正，并统一使用“영양 열매”术语；过期、错位和结构不兼容的条目继续排除，当前 key 全部保留。保留 1.30 后宫 v2 香水覆盖、1.29 莉迪亚闭店约会/奖励/警告礼修复、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。不改路线、选项结果、目标日或结局。简体中文 / English / 日本語 / 한국어。</Description>
+  <ModVersion>1.32</ModVersion>
+  <Description>1.32 changes Lydia's paid closure date to the native Lou-style morning visit: the date is queued at the front while the game generates the morning customers, with no shutter-button patch or extra automatic-call workaround; presentation follows the normal opening flow. Stale closure state is cleared on load and re-queued the next morning. The 1.31 Korean proofreading merge, 1.30 harem v2 perfume coverage, 1.29 closure-date/reward/barter fixes, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain. Story routes, outcomes, target days and endings are unchanged. 1.32 将莉迪亚付费闭店约会改为原版卢式晨间特殊来访：在游戏生成早晨顾客时直接插到队首，不再使用卷帘按钮补丁或额外自动叫号，展示交给正常开门流程；过期闭店状态会在读档时清理并在次晨重新排队。保留 1.31 韩语校对、1.30 后宫 v2 香水覆盖、1.29 闭店约会/奖励/警告礼修复、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。不改路线、选项结果、目标日或结局。简体中文 / English / 日本語 / 한국어。</Description>
   <!-- Empty on purpose: the mod does not gate on the game version string,
        and a listed version that does not cover the running build is shown as
        a red warning in the mod menu. -->

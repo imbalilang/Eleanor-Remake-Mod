@@ -1,6 +1,8 @@
-param([string]$Version='0.81')
+param([string]$Version='0.81',[string]$TextureFolder='Textures/Items')
 $ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
+$textureSource=if([IO.Path]::IsPathRooted($TextureFolder)){$TextureFolder}else{Join-Path $root $TextureFolder}
+if(-not (Test-Path -LiteralPath $textureSource)){throw "Texture folder not found: $textureSource"}
 [xml]$manifest=Get-Content (Join-Path $root 'manifest.xml') -Raw
 if($manifest.Manifest.ModVersion -ne $Version){throw 'Release version differs from manifest.'}
 $parent=Join-Path $root ('dist/workshop-'+$Version)
@@ -16,7 +18,8 @@ foreach($file in @('manifest.xml','README.md','preview.png')){Copy-Item -Literal
 foreach($file in @('EleanorRomance.dll','EleanorRomance.deps.json')){Copy-Item -LiteralPath (Join-Path $root ('bin/Release/'+$file)) -Destination (Join-Path $stage $file) -Force}
 foreach($folder in @('Localization','Textures/Items')){
     $null=New-Item -ItemType Directory -Path (Join-Path $stage $folder) -Force
-    Get-ChildItem -LiteralPath (Join-Path $root $folder) -File | ForEach-Object {
+    $source=if($folder -eq 'Textures/Items'){$textureSource}else{Join-Path $root $folder}
+    Get-ChildItem -LiteralPath $source -File | ForEach-Object {
         Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $stage ($folder+'/'+$_.Name)) -Force
     }
 }

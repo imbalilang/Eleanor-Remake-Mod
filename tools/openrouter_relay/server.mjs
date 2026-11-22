@@ -135,12 +135,18 @@ const KNOWN_RATIOS = new Set([
 // The plugin sends OpenAI pixel sizes such as 1024x1536. OpenRouter prefers
 // aspect_ratio/resolution tiers and only some providers accept explicit pixels,
 // so translate a reducible size into aspect_ratio and keep tier strings as-is.
-function sizeFields(size) {
+// Exception: OpenAI gpt-image-2.5/2.6 accepts explicit custom WIDTHxHEIGHT and
+// rejects a simultaneous resolution/aspect_ratio, so pass it through unchanged.
+function sizeFields(size, model = "") {
   if (typeof size !== "string" || size.trim().length === 0) return {};
   const value = size.trim();
   if (/^(512|768|1K|1.5K|2K|4K)$/i.test(value)) {
     return { resolution: value.toUpperCase() };
   }
+  // TEMP DIAGNOSTIC: disable explicit OpenAI size passthrough; test old aspect_ratio-only behavior.
+  // if (/^openai\/gpt-image-2(?:[.-]|$)/i.test(model) && /^\d+x\d+$/i.test(value)) {
+  //   return { size: value };
+  // }
   const match = value.match(/^(\d+)x(\d+)$/i);
   if (match) {
     const width = Number(match[1]);
@@ -148,7 +154,10 @@ function sizeFields(size) {
     if (width > 0 && height > 0) {
       const divisor = gcd(width, height);
       const ratio = `${width / divisor}:${height / divisor}`;
-      if (KNOWN_RATIOS.has(ratio)) return { aspect_ratio: ratio };
+      if (KNOWN_RATIOS.has(ratio)) {
+        const resolution = width * height >= 1500000 ? "2K" : "1K";
+        return { aspect_ratio: ratio, resolution };
+      }
     }
     return { size: value };
   }
@@ -258,7 +267,7 @@ async function handleGenerations(req, res) {
     : [];
   const payload = pickPayload(body, refs);
   if (typeof payload.size === "string") {
-    const mapped = sizeFields(payload.size);
+    const mapped = sizeFields(payload.size, payload.model);
     delete payload.size;
     Object.assign(payload, mapped);
   }
@@ -341,7 +350,7 @@ async function handleEdits(req, res) {
     const parsed = await refsFromMultipart(req);
     source = parsed.fields;
     refs = parsed.refs;
-    const size = sizeFields(source.size);
+    const size = sizeFields(source.size, source.model);
     Object.assign(source, size);
     delete source.size;
   }

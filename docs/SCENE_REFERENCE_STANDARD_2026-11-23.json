@@ -1,0 +1,67 @@
+{
+  "standard": "scene_reference_audit_v1",
+  "native_canvas": "960x540",
+  "display_2x": "1920x1080",
+  "files": [
+    {
+      "file": "场景参考0.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "colors": 886,
+      "sha256": "1ac97fbbbbd4cbac266c1c947d951a83827b4ca72d905b237aaeb87610b2d380",
+      "2x2_uniform": 0.9876195987654321
+    },
+    {
+      "file": "场景参考1.png",
+      "size": [
+        960,
+        540
+      ],
+      "colors": 601,
+      "sha256": "654b77de86695a243704d30aac5014ecc9353e7d5788588557aec7943982fe6b",
+      "2x2_uniform": 0.6828472222222223
+    },
+    {
+      "file": "场景参考2.png",
+      "size": [
+        960,
+        540
+      ],
+      "colors": 601,
+      "sha256": "654b77de86695a243704d30aac5014ecc9353e7d5788588557aec7943982fe6b",
+      "2x2_uniform": 0.6828472222222223
+    },
+    {
+      "file": "场景参考3.png",
+      "size": [
+        960,
+        540
+      ],
+      "colors": 102,
+      "sha256": "bc7edf78e4ab039f8b1dea131a5bd84c77d4da695c263ff7909dc66449f652db",
+      "2x2_uniform": 0.7224305555555556
+    },
+    {
+      "file": "场景参考4.png",
+      "size": [
+        960,
+        540
+      ],
+      "colors": 74,
+      "sha256": "150df82000978461da79923caec7e099da348f8ba374f567444866bd64d08f37",
+      "2x2_uniform": 0.7640895061728395
+    },
+    {
+      "file": "CG参考1.png",
+      "size": [
+        640,
+        360
+      ],
+      "colors": 220,
+      "sha256": "d745487f477d7f2e9f93008b6f12c76805b9c836ce83fa2cd19ef7a108396fe1",
+      "2x2_uniform": 0.6979166666666666
+    }
+  ]
+}

@@ -69,8 +69,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把一张叠了好几折的纸拍在柜台正中间</i>队里的单子。",
-              "en": "<i>Presses a sheet, folded several times, onto the middle of the counter</i>The unit's list."
+              "text": "（把一张叠了好几折的纸拍在柜台正中间）队里的单子。",
+              "en": "(Presses a sheet, folded several times, onto the middle of the counter) The unit's list."
             },
             {
               "speaker": "Eleanor",
@@ -104,8 +104,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>拽了拽袖口</i>肩线多出来两指。谁裁的不知道，手艺够绝。",
-              "en": "<i>Tugs at her cuff</i>The shoulders are two fingers too wide. Whoever cut this is a real genius."
+              "text": "（拽了拽袖口）肩线多出来两指。谁裁的不知道，手艺够绝。",
+              "en": "(Tugs at her cuff) The shoulders are two fingers too wide. Whoever cut this is a real genius."
             },
             {
               "speaker": "Eleanor",
@@ -172,8 +172,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>朝窗口外那把椅子抬了抬下巴</i>坐。",
-              "en": "<i>Points to the chair outside the window</i>Sit."
+              "text": "（朝窗口外那把椅子抬了抬下巴）坐。",
+              "en": "(Points to the chair outside the window) Sit."
             },
             {
               "speaker": "Eleanor",
@@ -183,8 +183,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手指在椅背碰一下，缩回去</i>先看货。",
-              "en": "<i>Rests a hand on the chair back, then pulls it away</i>Goods first."
+              "text": "（手指在椅背碰一下，缩回去）先看货。",
+              "en": "(Rests a hand on the chair back, then pulls it away) Goods first."
             }
           ]
         },
@@ -192,13 +192,13 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>把那张纸展平，压在柜台边上</i>先看货。",
-              "en": "<i>Smooths out the list and pins it at the counter's edge</i>Let's see the goods."
+              "text": "（把那张纸展平，压在柜台边上）先看货。",
+              "en": "(Smooths out the list and pins it at the counter's edge) Let's see the goods."
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>扯开包口的绳结</i>都是旧货，成色有好的也有坏的。",
-              "en": "<i>Unties the canvas bag's cord</i>All old stuff. Condition varies.",
+              "text": "（扯开包口的绳结）都是旧货，成色有好的也有坏的。",
+              "en": "(Unties the canvas bag's cord) All old stuff. Condition varies.",
               "expr": "serious"
             },
             {
@@ -208,8 +208,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手探进包里，停住</i>",
-              "en": "<i>Reaches into the bag, then stops</i>"
+              "text": "（手探进包里，停住）",
+              "en": "(Reaches into the bag, then stops)"
             },
             {
               "speaker": "Eleanor",
@@ -280,8 +280,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>包里的东西一件件摆出来，码在柜台</i>",
-              "en": "<i>Takes items out of the bag one by one and lines them up on the counter</i>"
+              "text": "（包里的东西一件件摆出来，码在柜台）",
+              "en": "(Takes items out of the bag one by one and lines them up on the counter)"
             },
             {
               "speaker": "Eleanor",
@@ -315,8 +315,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把空包折起来，塞进背心口袋</i>过两天我拿单子来取。",
-              "en": "<i>Folds the empty bag and tucks it into her vest pocket</i>I'll be back in a couple days with the list."
+              "text": "（把空包折起来，塞进背心口袋）过两天我拿单子来取。",
+              "en": "(Folds the empty bag and tucks it into her vest pocket) I'll be back in a couple days with the list."
             }
           ]
         },
@@ -363,8 +363,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把柜上的东西一件件收回包里</i>我换家店。单子你记着，说不定还用得上。",
-              "en": "<i>Stuffs the items back into the bag one by one</i>I'll try another shop. Keep the list in mind. You might need it."
+              "text": "（把柜上的东西一件件收回包里）我换家店。单子你记着，说不定还用得上。",
+              "en": "(Stuffs the items back into the bag one by one) I'll try another shop. Keep the list in mind. You might need it."
             }
           ]
         }
@@ -458,8 +458,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>单子重摊开，折痕边起了毛</i>",
-              "en": "<i>Spreads the list out again, its creases worn fuzzy</i>Same list."
+              "text": "（单子重摊开，折痕边起了毛）",
+              "en": "(Spreads the list out again, its creases worn fuzzy) Same list."
             },
             {
               "speaker": "Eleanor",
@@ -523,8 +523,8 @@
             },
             {
               "speaker": "Player",
-              "text": "<i>把单子拽过来</i>下半截呢？",
-              "en": "<i>Turns the list around</i> And the bottom half?"
+              "text": "（把单子拽过来）下半截呢？",
+              "en": "(Turns the list around) And the bottom half?"
             },
             {
               "speaker": "Eleanor",
@@ -546,8 +546,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把单子下半截折起来，按在手掌下</i>",
-              "en": "<i>Folds the bottom half of the list and pins it under her palm</i>"
+              "text": "（把单子下半截折起来，按在手掌下）",
+              "en": "(Folds the bottom half of the list and pins it under her palm)"
             }
           ]
         },
@@ -555,8 +555,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>照单子把货一行行摆到柜台上</i>",
-              "en": "<i>Lays the goods on the counter, line by line, following the list</i>"
+              "text": "（照单子把货一行行摆到柜台上）",
+              "en": "(Lays the goods on the counter, line by line, following the list)"
             },
             {
               "speaker": "Eleanor",
@@ -598,8 +598,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>侧过身子让出台面</i>你自己挑。",
-              "en": "<i>Steps aside to leave the counter clear</i>Pick for yourself."
+              "text": "（侧过身子让出台面）你自己挑。",
+              "en": "(Steps aside to leave the counter clear) Pick for yourself."
             },
             {
               "speaker": "Eleanor",
@@ -615,8 +615,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>没等他招呼，自己弯下腰翻下层的货架，一样样拿起来看</i>",
-              "en": "<i>Leans toward the lower shelf, turning items over one by one</i>"
+              "text": "（没等他招呼，自己弯下腰翻下层的货架，一样样拿起来看）",
+              "en": "(Leans toward the lower shelf, turning items over one by one)"
             },
             {
               "speaker": "Eleanor",
@@ -690,8 +690,8 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "<i>没等他问，按说好的顺序把药往背包里塞</i>一样不差。",
-              "en": "<i>Packs the medicine into her bag in the order she gave</i> Nothing missing."
+              "text": "（没等他问，按说好的顺序把药往背包里塞）一样不差。",
+              "en": "(Packs the medicine into her bag in the order she gave) Nothing missing."
             },
             {
               "speaker": "Eleanor",
@@ -723,8 +723,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>背上包，从窗口退开，停了一下</i>走了。",
-              "en": "<i>Shoulders her bag and steps away from the window, then pauses</i>I'm off."
+              "text": "（背上包，从窗口退开，停了一下）走了。",
+              "en": "(Shoulders her bag and steps away from the window, then pauses) I'm off."
             }
           ]
         },
@@ -760,8 +760,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把单子折好，收回胸口袋</i>我去别家问问。都不成，再回你这里。",
-              "en": "<i>Folds the list and tucks it back into her chest pocket</i>I'll ask around. If nobody can, I'll come back."
+              "text": "（把单子折好，收回胸口袋）我去别家问问。都不成，再回你这里。",
+              "en": "(Folds the list and tucks it back into her chest pocket) I'll ask around. If nobody can, I'll come back."
             }
           ]
         }
@@ -819,8 +819,8 @@
             },
             {
               "speaker": "Player",
-              "text": "<i>把单子翻到背面</i>药没写？",
-              "en": "<i>Turns the list over to check the back</i>Medicine?"
+              "text": "（把单子翻到背面）药没写？",
+              "en": "(Turns the list over to check the back) Medicine?"
             },
             {
               "speaker": "Eleanor",
@@ -856,8 +856,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>指腹压住单子顶端划黑的那条</i>我涂黑的。",
-              "en": "<i>Presses a fingertip on the blacked-out bar at the top</i>I crossed this one out."
+              "text": "（指腹压住单子顶端划黑的那条）我涂黑的。",
+              "en": "(Presses a fingertip on the blacked-out bar at the top) I crossed this one out."
             },
             {
               "speaker": "Eleanor",
@@ -922,8 +922,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>从怀里掏出个布包，搁在单子边上</i>钱全在这。",
-              "en": "<i>Pulls a cloth bundle from an inner pocket and sets it beside the list</i>All the money's here."
+              "text": "（从怀里掏出个布包，搁在单子边上）钱全在这。",
+              "en": "(Pulls a cloth bundle from an inner pocket and sets it beside the list) All the money's here."
             },
             {
               "speaker": "Eleanor",
@@ -975,8 +975,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把那张纸推到台面正中</i>就这些，店主。",
-              "en": "<i>Pushes the list to the middle of the counter</i>Go on, shopkeeper."
+              "text": "（把那张纸推到台面正中）就这些，店主。",
+              "en": "(Pushes the list to the middle of the counter) Go on, shopkeeper."
             }
           ]
         },
@@ -989,8 +989,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把子弹盒一个个塞进布包</i>回去我再数。差一发，我回头寻你。",
-              "en": "<i>Stacks the ammo boxes into a cloth bag one by one</i>I'll count them back there. One short, and I'm coming for you."
+              "text": "（把子弹盒一个个塞进布包）回去我再数。差一发，我回头寻你。",
+              "en": "(Stacks the ammo boxes into a cloth bag one by one) I'll count them back there. One short, and I'm coming for you."
             },
             {
               "speaker": "Eleanor",
@@ -1051,8 +1051,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把单子叠好，收回怀里</i>成，我去别处找。",
-              "en": "<i>Folds the list and tucks it back into her inner pocket</i>Fine. I'll ask elsewhere."
+              "text": "（把单子叠好，收回怀里）成，我去别处找。",
+              "en": "(Folds the list and tucks it back into her inner pocket) Fine. I'll ask elsewhere."
             },
             {
               "speaker": "Eleanor",
@@ -1164,8 +1164,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>没等你开口，她把窗边那把椅子拖到窗下摆正</i>别问，先让我坐下。",
-              "en": "<i>Pulls the chair closer to the window herself</i>Don't ask. Let me sit."
+              "text": "（没等你开口，她把窗边那把椅子拖到窗下摆正）别问，先让我坐下。",
+              "en": "(Pulls the chair closer to the window herself) Don't ask. Let me sit."
             }
           ]
         },
@@ -1173,8 +1173,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>仍低头理着架子上的绷带</i>",
-              "en": "<i>Keeps sorting the bandages on the shelf, head down</i>"
+              "text": "（仍低头理着架子上的绷带）",
+              "en": "(Keeps sorting the bandages on the shelf, head down)"
             },
             {
               "speaker": "Eleanor",
@@ -1192,8 +1192,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>朝窗边那把椅子抬抬下巴</i>坐吧。",
-              "en": "<i>Points to the chair outside</i>Sit."
+              "text": "（朝窗边那把椅子抬抬下巴）坐吧。",
+              "en": "(Points to the chair outside) Sit."
             },
             {
               "speaker": "Eleanor",
@@ -1202,8 +1202,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把椅子抵住墙才坐下，双手搁在膝上</i>这椅子一腿长一腿短。",
-              "en": "<i>Braces the chair against the wall before sitting, hands in her lap</i>The legs are uneven."
+              "text": "（把椅子抵住墙才坐下，双手搁在膝上）这椅子一腿长一腿短。",
+              "en": "(Braces the chair against the wall before sitting, hands in her lap) The legs are uneven."
             },
             {
               "speaker": "Player",
@@ -1271,8 +1271,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>掌心对搓两下，朝指缝里哈了哈气</i>你这里比队里暖。",
-              "en": "<i>Rubs her hands together, breathes into them</i>It's warmer here than at our place."
+              "text": "（掌心对搓两下，朝指缝里哈了哈气）你这里比队里暖。",
+              "en": "(Rubs her hands together, breathes into them) It's warmer here than at our place."
             },
             {
               "speaker": "Eleanor",
@@ -1292,14 +1292,14 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>起身，把椅子推回窗边</i>得走了。",
-              "en": "<i>Stands and pushes the chair back beside the window</i> I've got to go.",
+              "text": "（起身，把椅子推回窗边）得走了。",
+              "en": "(Stands and pushes the chair back beside the window) I've got to go.",
               "expr": "determined"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>走出两步，又回头看一眼椅子</i>椅腿真该垫垫，你记着。",
-              "en": "<i>Takes two steps away, then looks back at the chair</i>You really should prop up that chair leg."
+              "text": "（走出两步，又回头看一眼椅子）椅腿真该垫垫，你记着。",
+              "en": "(Takes two steps away, then looks back at the chair) You really should prop up that chair leg."
             }
           ]
         }
@@ -1371,8 +1371,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>坐下，从背心口袋掏出张四折的纸</i>队里的花名册。发药分饭都照它。",
-              "en": "<i>Sits, pulls a paper folded in quarters from her vest pocket</i>The unit roster. Medicine, food, it all goes by this."
+              "text": "（坐下，从背心口袋掏出张四折的纸）队里的花名册。发药分饭都照它。",
+              "en": "(Sits, pulls a paper folded in quarters from her vest pocket) The unit roster. Medicine, food, it all goes by this."
             },
             {
               "speaker": "Eleanor",
@@ -1391,8 +1391,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>又从另一边贴袋摸出张糖纸，铺在膝盖上用手掌捋平</i>",
-              "en": "<i>Pulls out another crumpled candy wrapper and slowly smooths it flat on her knee</i>"
+              "text": "（又从另一边贴袋摸出张糖纸，铺在膝盖上用手掌捋平）",
+              "en": "(Pulls out another crumpled candy wrapper and slowly smooths it flat on her knee)"
             },
             {
               "speaker": "Eleanor",
@@ -1434,13 +1434,13 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>倒了半杯热水，搁她面前的柜面边沿</i>",
-              "en": "<i>Pours a cup of hot water and sets it on the counter by her hand</i>"
+              "text": "（倒了半杯热水，搁她面前的柜面边沿）",
+              "en": "(Pours a cup of hot water and sets it on the counter by her hand)"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手指没沾杯把，先把那杯热水往台面中间推了推</i>你倒是耐得住。",
-              "en": "<i>Runs a finger once around the rim, doesn't pick it up</i>You're a patient one."
+              "text": "（手指没沾杯把，先把那杯热水往台面中间推了推）你倒是耐得住。",
+              "en": "(Runs a finger once around the rim, doesn't pick it up) You're a patient one."
             },
             {
               "speaker": "Eleanor",
@@ -1565,8 +1565,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把糖纸折成小方块，往名单里一夹</i>就这么留。空着不补。",
-              "en": "<i>Folds the candy wrapper into a small square and tucks it into the list</i>It stays like that. Blank is fine."
+              "text": "（把糖纸折成小方块，往名单里一夹）就这么留。空着不补。",
+              "en": "(Folds the candy wrapper into a small square and tucks it into the list) It stays like that. Blank is fine."
             },
             {
               "speaker": "Eleanor",
@@ -1585,8 +1585,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>弓身扫了扫椅脚</i>呵，垫的啥？没用的标价纸？",
-              "en": "<i>Bends down to look at the chair leg</i>Heh. With what? Old price tags?",
+              "text": "（弓身扫了扫椅脚）呵，垫的啥？没用的标价纸？",
+              "en": "(Bends down to look at the chair leg) Heh. With what? Old price tags?",
               "expr": "smile"
             },
             {
@@ -1596,8 +1596,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>起身，名单塞回背心口袋，顺带把窗页推小了些</i>到点了，我回队。",
-              "en": "<i>Stands up and presses the list back into her tactical vest pocket</i>Shift change. I'm heading back.",
+              "text": "（起身，名单塞回背心口袋，顺带把窗页推小了些）到点了，我回队。",
+              "en": "(Stands up and presses the list back into her tactical vest pocket) Shift change. I'm heading back.",
               "expr": "determined"
             },
             {
@@ -1607,8 +1607,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>脚挪开一步，手还留在窗框上</i>……下回没单子，我照来。",
-              "en": "<i>Steps back, her hand still on the window frame</i>...Next time I'll come even without a list."
+              "text": "（脚挪开一步，手还留在窗框上）……下回没单子，我照来。",
+              "en": "(Steps back, her hand still on the window frame)...Next time I'll come even without a list."
             },
             {
               "speaker": "Eleanor",
@@ -1693,8 +1693,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>胳膊上搭着件外衣，没往你跟前递，也没撂到旁边</i>手里没单子，也没有要出的货。",
-              "en": "<i>A coat hangs over her arm. She doesn't hold it out, doesn't put it down</i>No list, no goods."
+              "text": "（胳膊上搭着件外衣，没往你跟前递，也没撂到旁边）手里没单子，也没有要出的货。",
+              "en": "(A coat hangs over her arm. She doesn't hold it out, doesn't put it down) No list, no goods."
             },
             {
               "speaker": "Eleanor",
@@ -1728,8 +1728,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>朝她身后、窗边那把椅子抬了抬下巴</i>先坐。",
-              "en": "<i>Points to the chair behind her, beside the window</i>Sit."
+              "text": "（朝她身后、窗边那把椅子抬了抬下巴）先坐。",
+              "en": "(Points to the chair behind her, beside the window) Sit."
             },
             {
               "speaker": "Eleanor",
@@ -1738,8 +1738,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>外衣甩上椅背，手扶住椅背顶，人还直挺挺站着</i>木头冰手。",
-              "en": "<i>Drapes the coat over the chair back, hand on it, but doesn't sit</i>The chair's cold."
+              "text": "（外衣甩上椅背，手扶住椅背顶，人还直挺挺站着）木头冰手。",
+              "en": "(Drapes the coat over the chair back, hand on it, but doesn't sit) The chair's cold."
             },
             {
               "speaker": "Eleanor",
@@ -1752,13 +1752,13 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>倒了杯开水，放在柜台边上</i>",
-              "en": "<i>Pours a cup of hot water and sets it at the edge of the counter</i>"
+              "text": "（倒了杯开水，放在柜台边上）",
+              "en": "(Pours a cup of hot water and sets it at the edge of the counter)"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>外衣撇到柜台另一头，再两手去捧杯子，热水晃出来打湿了指根</i>谁让你倒这么满。",
-              "en": "<i>Tosses the coat on the counter and lifts the cup with both hands; a little water sloshes out</i>Why fill it so full?"
+              "text": "（外衣撇到柜台另一头，再两手去捧杯子，热水晃出来打湿了指根）谁让你倒这么满。",
+              "en": "(Tosses the coat on the counter and lifts the cup with both hands; a little water sloshes out) Why fill it so full?"
             },
             {
               "speaker": "Eleanor",
@@ -1776,8 +1776,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "<i>伸手把她小臂上那件外衣拿过来</i>给我。",
-              "en": "<i>Reaches over and takes the coat off her arm</i>Give it here."
+              "text": "（伸手把她小臂上那件外衣拿过来）给我。",
+              "en": "(Reaches over and takes the coat off her arm) Give it here."
             },
             {
               "speaker": "Eleanor",
@@ -1786,7 +1786,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>两手把外衣对折一下，才松开劲</i>拿就拿吧，叠过一道，省得味儿扑你满脸。",
+              "text": "（两手把外衣对折一下，才松开劲）拿就拿吧，叠过一道，省得味儿扑你满脸。",
               "en": "Fine, take it. It smells."
             },
             {
@@ -1796,8 +1796,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>两只手空下来没处摆，末了攥住战术背心的下摆</i>你挂到远点的地方。",
-              "en": "<i>Her hands are empty now. She doesn't know where to put them, and finally grips the hem of her tactical vest</i>Hang it somewhere far.",
+              "text": "（两只手空下来没处摆，末了攥住战术背心的下摆）你挂到远点的地方。",
+              "en": "(Her hands are empty now. She doesn't know where to put them, and finally grips the hem of her tactical vest) Hang it somewhere far.",
               "expr": "tired"
             },
             {
@@ -1906,8 +1906,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>朝窗外那把椅子扫过去一眼</i> 你早就把它放好了？",
-              "en": "<i>Looks at the chair outside the window</i>You already put it there?"
+              "text": "（朝窗外那把椅子扫过去一眼） 你早就把它放好了？",
+              "en": "(Looks at the chair outside the window) You already put it there?"
             },
             {
               "speaker": "Player",
@@ -1921,13 +1921,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>坐下去，手指勾着拉链往下拽了半寸，又一点点推回去</i> 先讲清楚，今天照样没单子。",
-              "en": "<i>Sits, unzips her tactical vest partway, then zips it back up</i>Just so you know, no list today either."
+              "text": "（坐下去，手指勾着拉链往下拽了半寸，又一点点推回去） 先讲清楚，今天照样没单子。",
+              "en": "(Sits, unzips her tactical vest partway, then zips it back up) Just so you know, no list today either."
             },
             {
               "speaker": "Player",
-              "text": "<i>倒好热水推到她手边，又弯下腰从柜台下头摸出半块面包</i>",
-              "en": "<i>Pours a cup of hot water and slides it over, then takes half a loaf of bread from under the counter</i>"
+              "text": "（倒好热水推到她手边，又弯下腰从柜台下头摸出半块面包）",
+              "en": "(Pours a cup of hot water and slides it over, then takes half a loaf of bread from under the counter)"
             },
             {
               "speaker": "Eleanor",
@@ -1942,8 +1942,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>捏掉一小角塞进嘴里，腮帮子动得慢</i> 干。",
-              "en": "<i>Breaks off a small piece and chews slowly</i> A bit dry."
+              "text": "（捏掉一小角塞进嘴里，腮帮子动得慢） 干。",
+              "en": "(Breaks off a small piece and chews slowly) A bit dry."
             },
             {
               "speaker": "Eleanor",
@@ -1952,8 +1952,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>两只手包住杯子，水面在杯口下头一晃一晃</i> 还抖，比前天轻。",
-              "en": "<i>Holds the cup in both hands; the water keeps trembling</i> Still shaking. Better than two days ago.",
+              "text": "（两只手包住杯子，水面在杯口下头一晃一晃） 还抖，比前天轻。",
+              "en": "(Holds the cup in both hands; the water keeps trembling) Still shaking. Better than two days ago.",
               "expr": "tired"
             },
             {
@@ -2019,8 +2019,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把最后那点面包团进掌心，站起来</i> 留到路上吃。",
-              "en": "<i>Closes her hand around the last of the bread and stands</i> I'll eat this on the way.",
+              "text": "（把最后那点面包团进掌心，站起来） 留到路上吃。",
+              "en": "(Closes her hand around the last of the bread and stands) I'll eat this on the way.",
               "expr": "determined"
             },
             {
@@ -2030,8 +2030,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>她把杯子推回柜台里侧</i>",
-              "en": "<i>She slides the cup back to the shopkeeper's side of the counter.</i>"
+              "text": "（她把杯子推回柜台里侧）",
+              "en": "(She slides the cup back to the shopkeeper's side of the counter.)"
             },
             {
               "speaker": "Player",
@@ -2045,8 +2045,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>人朝窗子转过去，手指还搭在窗框上，没回头</i> 外面那地方，凉。",
-              "en": "<i>Turns to leave, her hand still on the window frame, without looking back</i>That ground out here is cold."
+              "text": "（人朝窗子转过去，手指还搭在窗框上，没回头） 外面那地方，凉。",
+              "en": "(Turns to leave, her hand still on the window frame, without looking back) That ground out here is cold."
             },
             {
               "speaker": "Eleanor",
@@ -2108,8 +2108,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>他把捆绳松开，把东西在地上铺开。</i>库里剩下的料，人少了，用不上，还占着地方。",
-              "en": "<i>Unties the rope and spreads the bundle on the floor</i>Materials piled up in storage. Most of our people left, so we can't use them. They just take up space.",
+              "text": "（他把捆绳松开，把东西在地上铺开。）库里剩下的料，人少了，用不上，还占着地方。",
+              "en": "(Unties the rope and spreads the bundle on the floor) Materials piled up in storage. Most of our people left, so we can't use them. They just take up space.",
               "expr": "tired"
             },
             {
@@ -2134,8 +2134,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>他抓了抓后脑。</i>我到现在还没弄懂，这句算夸你还是笑我。",
-              "en": "<i>Scratches the back of his head</i>I still can't tell if that was praise for you or a dig at me."
+              "text": "（他抓了抓后脑。）我到现在还没弄懂，这句算夸你还是笑我。",
+              "en": "(Scratches the back of his head) I still can't tell if that was praise for you or a dig at me."
             },
             {
               "speaker": "Player",
@@ -2184,8 +2184,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>他低头揪了揪自己的鞋带。</i>得系成死扣。她讲一跑散开，就别跟在她后面。",
-              "en": "<i>Looks down and tugs at his own laces</i>Double knots. She said if they come loose on the run, don't bother following her."
+              "text": "（他低头揪了揪自己的鞋带。）得系成死扣。她讲一跑散开，就别跟在她后面。",
+              "en": "(Looks down and tugs at his own laces) Double knots. She said if they come loose on the run, don't bother following her."
             },
             {
               "speaker": "Player",
@@ -2214,8 +2214,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>他提起一头抖了两下。</i>这捆受过潮，已经晾过，不碍事。成色你自个瞧。",
-              "en": "<i>Picks up a length and shakes it out</i>This bundle got damp, but it's dried out. No harm done. Judge the quality yourself."
+              "text": "（他提起一头抖了两下。）这捆受过潮，已经晾过，不碍事。成色你自个瞧。",
+              "en": "(Picks up a length and shakes it out) This bundle got damp, but it's dried out. No harm done. Judge the quality yourself."
             },
             {
               "speaker": "RevQuartermaster",
@@ -2224,8 +2224,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>他把材料往台边推了推。</i>都摆这了，你挑。",
-              "en": "<i>Pushes the materials toward the counter</i>That's all of it. Take your pick.",
+              "text": "（他把材料往台边推了推。）都摆这了，你挑。",
+              "en": "(Pushes the materials toward the counter) That's all of it. Take your pick.",
               "expr": "serious"
             },
             {
@@ -2244,8 +2244,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>把绳子一圈圈绕在手上。</i>夜里汤能多下两把料了。",
-              "en": "<i>Winds the rope around his hand and stows it</i>That's two more handfuls in the soup."
+              "text": "（把绳子一圈圈绕在手上。）夜里汤能多下两把料了。",
+              "en": "(Winds the rope around his hand and stows it) That's two more handfuls in the soup."
             }
           ]
         },
@@ -2288,8 +2288,8 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "<i>重新把材料扎牢，甩上肩。</i>等她回来，你俩当面谈吧。",
-              "en": "<i>Reties the bundle of materials and swings it onto his shoulder</i>She can deal with you herself when she's back."
+              "text": "（重新把材料扎牢，甩上肩。）等她回来，你俩当面谈吧。",
+              "en": "(Reties the bundle of materials and swings it onto his shoulder) She can deal with you herself when she's back."
             }
           ]
         }
@@ -2392,8 +2392,8 @@
             },
             {
               "speaker": "RevFighter",
-              "text": "<i>把包口掀开一条缝，低头往里看了看，又按回去</i>对面扔的，没坏。",
-              "en": "<i>Pulls the pack open, glances inside, closes it</i>The other side dropped them. Not damaged."
+              "text": "（把包口掀开一条缝，低头往里看了看，又按回去）对面扔的，没坏。",
+              "en": "(Pulls the pack open, glances inside, closes it) The other side dropped them. Not damaged."
             },
             {
               "speaker": "RevFighter",
@@ -2462,8 +2462,8 @@
             },
             {
               "speaker": "RevFighter",
-              "text": "<i>把包搁上柜台，按住一角</i>我脚有点疼。借这儿靠一会儿。",
-              "en": "<i>He rests the pack on the counter and holds a corner.</i> My foot's sore. Let me lean here a minute."
+              "text": "（把包搁上柜台，按住一角）我脚有点疼。借这儿靠一会儿。",
+              "en": "(He rests the pack on the counter and holds a corner.) My foot's sore. Let me lean here a minute."
             }
           ]
         },
@@ -2521,8 +2521,8 @@
             },
             {
               "speaker": "RevFighter",
-              "text": "<i>把包口掀开</i>你看，这些值多少？",
-              "en": "<i>He opens the pack.</i> What'll you give me for the lot?"
+              "text": "（把包口掀开）你看，这些值多少？",
+              "en": "(He opens the pack.) What'll you give me for the lot?"
             },
             {
               "speaker": "RevFighter",
@@ -2540,8 +2540,8 @@
             },
             {
               "speaker": "RevFighter",
-              "text": "<i>把空包卷成一卷塞到腋下</i>我先回去歇脚，她回来前得会走路。",
-              "en": "<i>Rolls up the empty bag and tucks it under one arm</i>I'm going back to rest my foot. I need to be walking before she's back."
+              "text": "（把空包卷成一卷塞到腋下）我先回去歇脚，她回来前得会走路。",
+              "en": "(Rolls up the empty bag and tucks it under one arm) I'm going back to rest my foot. I need to be walking before she's back."
             }
           ]
         },
@@ -2583,8 +2583,8 @@
             },
             {
               "speaker": "RevFighter",
-              "text": "<i>把包甩到背上，一瘸一拐地离了窗口</i>等她回来了，让她自己找你说。",
-              "en": "<i>Swings the pack onto his back and limps away from the window</i>When she gets back, let her talk to you herself."
+              "text": "（把包甩到背上，一瘸一拐地离了窗口）等她回来了，让她自己找你说。",
+              "en": "(Swings the pack onto his back and limps away from the window) When she gets back, let her talk to you herself."
             }
           ]
         },
@@ -2727,8 +2727,8 @@
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "<i>揉了揉鼻头</i>可你又不算队里的，说给你，不叫我嘴漏。",
-              "en": "<i>Rubs nose</i> But you're not in the squad, so telling you doesn't count as loose lips."
+              "text": "（揉了揉鼻头）可你又不算队里的，说给你，不叫我嘴漏。",
+              "en": "(Rubs nose) But you're not in the squad, so telling you doesn't count as loose lips."
             },
             {
               "speaker": "Player",
@@ -2772,8 +2772,8 @@
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "<i>掀开旧衣，里头的东西一样样往柜台上放</i>道上拾的，刀，还有几件抡起来使的硬家伙。",
-              "en": "<i>Unwraps the old clothes and sets the contents on the counter one by one</i>Found them on the road. A blade, and a few things for smashing stuff."
+              "text": "（掀开旧衣，里头的东西一样样往柜台上放）道上拾的，刀，还有几件抡起来使的硬家伙。",
+              "en": "(Unwraps the old clothes and sets the contents on the counter one by one) Found them on the road. A blade, and a few things for smashing stuff."
             },
             {
               "speaker": "RevGuerrilla",
@@ -2792,8 +2792,8 @@
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "<i>把东西码上柜台，两手拍灰</i>你自己瞧，我还得赶回营里送信，留守的都等着呢。",
-              "en": "<i>Lines them up on the counter, dusts off hands</i> Have a look. I've gotta get back and report. The ones holding the fort are waiting."
+              "text": "（把东西码上柜台，两手拍灰）你自己瞧，我还得赶回营里送信，留守的都等着呢。",
+              "en": "(Lines them up on the counter, dusts off hands) Have a look. I've gotta get back and report. The ones holding the fort are waiting."
             }
           ]
         },
@@ -2806,8 +2806,8 @@
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "<i>旧衣叠好揣进怀里</i>那椅子我连边都没沾。",
-              "en": "<i>Folds the old shirt and tucks it away</i> And I never touched the chair."
+              "text": "（旧衣叠好揣进怀里）那椅子我连边都没沾。",
+              "en": "(Folds the old shirt and tucks it away) And I never touched the chair."
             }
           ]
         },
@@ -2848,8 +2848,8 @@
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "<i>东西重新包进旧衣</i>反正她这一两天就到，你俩当面计较。",
-              "en": "<i>Wraps everything back in the old shirt</i> She'll be here in a day or two anyway. Settle it with her face to face."
+              "text": "（东西重新包进旧衣）反正她这一两天就到，你俩当面计较。",
+              "en": "(Wraps everything back in the old shirt) She'll be here in a day or two anyway. Settle it with her face to face."
             }
           ]
         }
@@ -2937,8 +2937,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>没起身，抬脸看那扇往上收的窗</i>这回没敲，半下都没给。",
-              "en": "<i>Still seated, looks up at the rising shutter</i>I didn't knock. Not once this time.",
+              "text": "（没起身，抬脸看那扇往上收的窗）这回没敲，半下都没给。",
+              "en": "(Still seated, looks up at the rising shutter) I didn't knock. Not once this time.",
               "expr": "neutral"
             },
             {
@@ -2965,8 +2965,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>左臂往身后收了半寸</i>划了一下，已经收口，不碍事。",
-              "en": "<i>Tucks her left arm behind her back</i>A cut. It's scabbed over. It's nothing.",
+              "text": "（左臂往身后收了半寸）划了一下，已经收口，不碍事。",
+              "en": "(Tucks her left arm behind her back) A cut. It's scabbed over. It's nothing.",
               "expr": "neutral"
             },
             {
@@ -2977,8 +2977,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>腿上那张纸摊开，又照旧折上</i>名册。昨晚进了屋，我挨个念过去。",
-              "en": "<i>Unfolds the paper on her knee, then folds it back along the creases</i>The list. When we got in last night, I read it off name by name.",
+              "text": "（腿上那张纸摊开，又照旧折上）名册。昨晚进了屋，我挨个念过去。",
+              "en": "(Unfolds the paper on her knee, then folds it back along the creases) The list. When we got in last night, I read it off name by name.",
               "expr": "neutral"
             },
             {
@@ -3030,8 +3030,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>扶着椅背起身，身子偏了一下，又立稳</i>你可真是。",
-              "en": "<i>Pushes herself up by the chair back, sways, then steadies</i>You.",
+              "text": "（扶着椅背起身，身子偏了一下，又立稳）你可真是。",
+              "en": "(Pushes herself up by the chair back, sways, then steadies) You.",
               "expr": "soft"
             }
           ]
@@ -3045,8 +3045,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>抬起眼看窗口里的他，名册揣进背心兜里</i>",
-              "en": "<i>Looks up at the shopkeeper inside the window and puts the roster in her vest pocket</i>",
+              "text": "（抬起眼看窗口里的他，名册揣进背心兜里）",
+              "en": "(Looks up at the shopkeeper inside the window and puts the roster in her vest pocket)",
               "expr": "neutral"
             },
             {
@@ -3065,8 +3065,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>左臂递上前，袖管卷起一截，没抽回去</i>",
-              "en": "<i>Holds out her left arm and pushes the sleeve up a little, not pulling it back</i>",
+              "text": "（左臂递上前，袖管卷起一截，没抽回去）",
+              "en": "(Holds out her left arm and pushes the sleeve up a little, not pulling it back)",
               "expr": "neutral"
             },
             {

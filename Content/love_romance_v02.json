@@ -54,8 +54,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把两只空水壶码到柜台脚边。</i>我们家还够。过道尽头那几户才不好办。",
-              "en": "<i>sets the two empty jugs by the counter</i> We're all right. The households at the end of the corridor are the problem."
+              "text": "（把两只空水壶码到柜台脚边。）我们家还够。过道尽头那几户才不好办。",
+              "en": "(sets the two empty jugs by the counter) We're all right. The households at the end of the corridor are the problem."
             },
             {
               "speaker": "Sophia",
@@ -99,8 +99,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把柜台上那张价签推回他手边。</i>那你琢磨什么？",
-              "en": "<i>pushes the price tag on the counter back toward him</i> Then what are you thinking?"
+              "text": "（把柜台上那张价签推回他手边。）那你琢磨什么？",
+              "en": "(pushes the price tag on the counter back toward him) Then what are you thinking?"
             },
             {
               "speaker": "Player",
@@ -196,8 +196,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>手指压在钱袋上。</i>你老看钱袋做什么？我带着的钱够。",
-              "en": "<i>presses a hand on her purse</i> Why do you keep looking at my purse? I brought enough."
+              "text": "（手指压在钱袋上。）你老看钱袋做什么？我带着的钱够。",
+              "en": "(presses a hand on her purse) Why do you keep looking at my purse? I brought enough."
             },
             {
               "speaker": "Player",
@@ -301,8 +301,8 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "<i>打烊前，索菲娅还在窗口外清点袋子。又一个人站了过来。</i>",
-              "en": "<i>Before closing, Sophia is still outside the window sorting her bag. Someone else steps up.</i>"
+              "text": "（打烊前，索菲娅还在窗口外清点袋子。又一个人站了过来。）",
+              "en": "(Before closing, Sophia is still outside the window sorting her bag. Someone else steps up.)"
             },
             {
               "speaker": "Resident",
@@ -316,8 +316,8 @@
             },
             {
               "speaker": "Resident",
-              "text": "等不了了。<i>他一把夺过水壶，推了索菲娅一下。</i>",
-              "en": "Can't wait. <i>He grabs the jug and shoves Sophia.</i>"
+              "text": "等不了了。（他一把夺过水壶，推了索菲娅一下。）",
+              "en": "Can't wait. (He grabs the jug and shoves Sophia.)"
             },
             {
               "speaker": "Sophia",
@@ -514,8 +514,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>将旧布袋铺到台面上</i>拿吧。选完照价签算。",
-              "en": "<i>spreads the old cloth bag on the counter</i> Go on. Once you've picked, charge by the tag."
+              "text": "（将旧布袋铺到台面上）拿吧。选完照价签算。",
+              "en": "(spreads the old cloth bag on the counter) Go on. Once you've picked, charge by the tag."
             }
           ],
           "cursor_revision": 2
@@ -542,8 +542,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>点下头</i>话少，但硬气。",
-              "en": "<i>nods</i> Not many words, but they're hard."
+              "text": "（点下头）话少，但硬气。",
+              "en": "(nods) Not many words, but they're hard."
             }
           ]
         },
@@ -715,8 +715,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>手掌在柜台上一摊，又缩回袖口</i>还看，早退红了。",
-              "en": "<i>holds her hand out over the counter, then quickly pulls half of it back</i> What's there to see? It's already faded."
+              "text": "（手掌在柜台上一摊，又缩回袖口）还看，早退红了。",
+              "en": "(holds her hand out over the counter, then quickly pulls half of it back) What's there to see? It's already faded."
             },
             {
               "speaker": "SEC",
@@ -767,8 +767,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>歪了下嘴角</i>夸她，你一点不含糊。",
-              "en": "<i>narrows her eyes</i> You don't hesitate at all when complimenting her."
+              "text": "（歪了下嘴角）夸她，你一点不含糊。",
+              "en": "(narrows her eyes) You don't hesitate at all when complimenting her."
             },
             {
               "speaker": "SEC",
@@ -787,8 +787,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>等索菲娅转身，凑到他耳边</i>这话留着晚上讲。",
-              "en": "<i>while Sophia has her back turned, grabs his hem and leans close to his ear</i> Say that again tonight. Not in front of anyone."
+              "text": "（等索菲娅转身，凑到他耳边）这话留着晚上讲。",
+              "en": "(while Sophia has her back turned, grabs his hem and leans close to his ear) Say that again tonight. Not in front of anyone."
             },
             {
               "speaker": "Player",
@@ -839,8 +839,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把选好的袋子搁到台子上</i>就这些，老板，结一下。",
-              "en": "<i>sets the chosen goods on the counter</i> That's all. Boss, ring it up."
+              "text": "（把选好的袋子搁到台子上）就这些，老板，结一下。",
+              "en": "(sets the chosen goods on the counter) That's all. Boss, ring it up."
             }
           ]
         },

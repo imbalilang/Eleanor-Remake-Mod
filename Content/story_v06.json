@@ -239,7 +239,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "<i>叹气</i>，你有生活用品吗？"
+              "text": "（叹气），你有生活用品吗？"
             },
             {
               "speaker": "eleanor",
@@ -2547,8 +2547,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "<i>她抽出手，掌心压着一张薄盘</i>实验室的数据盘。",
-              "en": "<i>She pulls her hand out, pressing a thin disc flat in her palm</i> Lab data disc."
+              "text": "（她抽出手，掌心压着一张薄盘）实验室的数据盘。",
+              "en": "(She pulls her hand out, pressing a thin disc flat in her palm) Lab data disc."
             },
             {
               "speaker": "eleanor",
@@ -2712,8 +2712,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "<i>她的手在盘上多压了一下，才推过去</i>就放几天。",
-              "en": "<i>She presses her hand on the drive one more time before pushing it over</i>Just for a few days."
+              "text": "（她的手在盘上多压了一下，才推过去）就放几天。",
+              "en": "(She presses her hand on the drive one more time before pushing it over) Just for a few days."
             },
             {
               "speaker": "eleanor",
@@ -2826,8 +2826,8 @@
             },
             {
               "speaker": "thug",
-              "text": "<i>他从怀里摸出一叠钱，拍在柜台上</i>三百，跑腿钱。",
-              "en": "<i>He digs a stack of money out of his coat and slaps it on the counter</i>Three hundred. Errand money."
+              "text": "（他从怀里摸出一叠钱，拍在柜台上）三百，跑腿钱。",
+              "en": "(He digs a stack of money out of his coat and slaps it on the counter) Three hundred. Errand money."
             },
             {
               "speaker": "thug",
@@ -2858,8 +2858,8 @@
             },
             {
               "speaker": "thug",
-              "text": "<i>他把钱揣回去</i>话我撂这儿了。你不带，我自己去她楼下说。",
-              "en": "<i>He pockets the money</i>I've said my piece. You won't take it to her, I'll go say it under her window myself."
+              "text": "（他把钱揣回去）话我撂这儿了。你不带，我自己去她楼下说。",
+              "en": "(He pockets the money) I've said my piece. You won't take it to her, I'll go say it under her window myself."
             },
             {
               "speaker": "thug",
@@ -2890,8 +2890,8 @@
             },
             {
               "speaker": "thug",
-              "text": "<i>他把钱揣回去</i>随你。少挣三百的又不是我。",
-              "en": "<i>He pockets the money</i>Your call. I'm not the one out three hundred."
+              "text": "（他把钱揣回去）随你。少挣三百的又不是我。",
+              "en": "(He pockets the money) Your call. I'm not the one out three hundred."
             },
             {
               "speaker": "thug",
@@ -2990,8 +2990,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "<i>她一把抓住柜沿</i>……他敢。",
-              "en": "<i>She grabs the edge of the counter</i>…He wouldn't dare.",
+              "text": "（她一把抓住柜沿）……他敢。",
+              "en": "(She grabs the edge of the counter)…He wouldn't dare.",
               "expr": "sad"
             },
             {
@@ -3119,8 +3119,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "现在拿。<i>她接过去，攥进掌心</i>",
-              "en": "Now. <i>She takes it and clutches it in her palm.</i>"
+              "text": "现在拿。（她接过去，攥进掌心）",
+              "en": "Now. (She takes it and clutches it in her palm.)"
             },
             {
               "speaker": "eleanor",
@@ -3240,8 +3240,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "<i>她没坐，手搭在柜台上</i>就是累，站着说也一样。",
-              "en": "<i>She doesn't sit, hand on the counter</i>Just tired. Same if I stand."
+              "text": "（她没坐，手搭在柜台上）就是累，站着说也一样。",
+              "en": "(She doesn't sit, hand on the counter) Just tired. Same if I stand."
             }
           ]
         },
@@ -3257,8 +3257,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "就坐一会儿。<i>她拉过窗口外的凳子，坐得很低</i>",
-              "en": "…Just for a bit.<i>She pulls over the stool by the counter and sits low</i>"
+              "text": "就坐一会儿。（她拉过窗口外的凳子，坐得很低）",
+              "en": "…Just for a bit.(She pulls over the stool by the counter and sits low)"
             },
             {
               "speaker": "eleanor",
@@ -3382,8 +3382,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "<i>她起身，退了一步又停住</i>审判有消息，我会来。",
-              "en": "<i>She gets up and pauses at the door</i>If there's any news on the review, I'll come."
+              "text": "（她起身，退了一步又停住）审判有消息，我会来。",
+              "en": "(She gets up and pauses at the door) If there's any news on the review, I'll come."
             }
           ]
         }

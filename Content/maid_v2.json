@@ -325,8 +325,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把那截钱塞进另一个口袋</i>\n条子我明天带来。",
-              "en": "<i>She slips the extra money into her other pocket.</i>\nI'll bring you the IOU tomorrow."
+              "text": "（把那截钱塞进另一个口袋）\n条子我明天带来。",
+              "en": "(She slips the extra money into her other pocket.)\nI'll bring you the IOU tomorrow."
             }
           ]
         },
@@ -1167,8 +1167,8 @@
             },
             {
               "speaker": "Player",
-              "text": "<i>又说了一遍，一字不差</i>\n三天以后，他还会来。",
-              "en": "<i>Repeats it, word for word</i>\nHe'll be back in three days."
+              "text": "（又说了一遍，一字不差）\n三天以后，他还会来。",
+              "en": "(Repeats it, word for word)\nHe'll be back in three days."
             },
             {
               "speaker": "Eleanor",
@@ -1473,8 +1473,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>低头抠着凳子边上那道裂缝。</i>\n前几天我差点把盘交了。你要是劝一句，我兴许就交了。",
-              "en": "<i>She picks at a crack in the stool.</i>\nI nearly handed over the disc the other day. If you'd said I should, I might have."
+              "text": "（低头抠着凳子边上那道裂缝。）\n前几天我差点把盘交了。你要是劝一句，我兴许就交了。",
+              "en": "(She picks at a crack in the stool.)\nI nearly handed over the disc the other day. If you'd said I should, I might have."
             },
             {
               "speaker": "Eleanor",
@@ -1646,8 +1646,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "杯子、灯，再拿一样擦洗用的。<i>把挑好的几件推到柜台中间</i>\n就这些。",
-              "en": "The cup, the lamp, and one cleaning item. <i>Pushes the chosen items to the middle of the counter</i>\nThat's all."
+              "text": "杯子、灯，再拿一样擦洗用的。（把挑好的几件推到柜台中间）\n就这些。",
+              "en": "The cup, the lamp, and one cleaning item. (Pushes the chosen items to the middle of the counter)\nThat's all."
             },
             {
               "speaker": "Sophia",
@@ -1855,8 +1855,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "杯子、灯，再拿一样擦洗用的。<i>把挑好的几件推到柜台中间</i>\n就这些。",
-              "en": "The cup, the lamp, and one cleaning item. <i>Pushes the chosen items to the middle of the counter</i>\nThat's all."
+              "text": "杯子、灯，再拿一样擦洗用的。（把挑好的几件推到柜台中间）\n就这些。",
+              "en": "The cup, the lamp, and one cleaning item. (Pushes the chosen items to the middle of the counter)\nThat's all."
             },
             {
               "speaker": "Sophia",
@@ -1969,8 +1969,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>指着最上面那格</i>\n最上面这格全是修船坞那位老伯的。他手上常年沾油，件件都留着印子。",
-              "en": "<i>Points at the top slot</i>\nThis whole slot is from the old man who fixes boats at the dock. His hands are always oily. Every piece has his prints."
+              "text": "（指着最上面那格）\n最上面这格全是修船坞那位老伯的。他手上常年沾油，件件都留着印子。",
+              "en": "(Points at the top slot)\nThis whole slot is from the old man who fixes boats at the dock. His hands are always oily. Every piece has his prints."
             },
             {
               "speaker": "Eleanor",
@@ -2358,8 +2358,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>偏开脸，耳根烧起来</i>\n这句我爱听，主人。",
-              "en": "<i>She turns away, her ears red.</i>\nI like hearing that, Master.",
+              "text": "（偏开脸，耳根烧起来）\n这句我爱听，主人。",
+              "en": "(She turns away, her ears red.)\nI like hearing that, Master.",
               "expr": "shy"
             }
           ]
@@ -2373,8 +2373,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>怔了一下</i>\n……头一回听你这么喊我。",
-              "en": "<i>Freezes for a moment</i>\n...That's the first time you've called me that.",
+              "text": "（怔了一下）\n……头一回听你这么喊我。",
+              "en": "(Freezes for a moment)\n...That's the first time you've called me that.",
               "expr": "soft"
             },
             {
@@ -3681,8 +3681,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>食指点住旧约那几行</i>\n这一页，我想今天就把它结清。",
-              "en": "<i>Taps the lines of the old contract</i>\nSo this page—I want to close it out today."
+              "text": "（食指点住旧约那几行）\n这一页，我想今天就把它结清。",
+              "en": "(Taps the lines of the old contract)\nSo this page—I want to close it out today."
             },
             {
               "speaker": "Player",
@@ -4174,9 +4174,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手从窗口外探进来</i>\n主人。",
+              "text": "（手从窗口外探进来）\n主人。",
               "expr": "soft",
-              "en": "<i>She reaches in through the window.</i>\nMaster."
+              "en": "(She reaches in through the window.)\nMaster."
             },
             {
               "speaker": "Player",
@@ -4242,8 +4242,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "你还挺会使唤人。<i>手上加重点</i>",
-              "en": "You do like giving orders. <i>She presses a little harder.</i>"
+              "text": "你还挺会使唤人。（手上加重点）",
+              "en": "You do like giving orders. (She presses a little harder.)"
             },
             {
               "speaker": "Eleanor",

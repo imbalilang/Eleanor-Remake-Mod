@@ -44,10 +44,10 @@ namespace EleanorRomance
             if (RomanceState.LastQueuedDay == day && !sameDayFollowUp) return false;
             if (id == "d06" || id == "dv10")
             {
-                // The paid closure is normally staged by the shutter-open hook.
-                // Retry from the daily pass as well, so a missed hook or an
-                // alternate open path cannot strand the route with no visits.
-                return DualClosingDay.OnShutterOpened();
+                // The paid closure is queued from the native morning customer
+                // generation hook (StoryDirector.OnGenerateCustomerVeryEarly),
+                // not from the daily pass. This matches Lou's special visit.
+                return false;
             }
             if (string.IsNullOrEmpty(id) && DualState.Active && DualState.Flag("d.route"))
             {

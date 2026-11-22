@@ -53,6 +53,36 @@ namespace EleanorRomance
 
         private static Sprite FindExpression(string baseKey, string expression)
         {
+            switch (baseKey)
+            {
+                case "eleanor_love_intimate":
+                    return null;
+                case "eleanor_revolution_undersuit":
+                case "lydia_date":
+                case "sophia":
+                case "sophia_home":
+                    // L2 uses the nearest of the six authored expressions while
+                    // keeping the original dialogue tags for other outfits.
+                    switch (expression)
+                    {
+                        case "angry":
+                        case "determined":
+                            expression = "serious";
+                            break;
+                        case "sad":
+                            expression = "hurt";
+                            break;
+                        case "tsun":
+                        case "flustered":
+                            expression = "shy";
+                            break;
+                        case "tease":
+                            expression = "smile";
+                            break;
+                    }
+                    break;
+            }
+
             string prefix = "er_expr_" + baseKey + "_";
             Sprite sprite = PortraitCompat.GetLocalSprite(prefix + expression);
             if (sprite != null) return sprite;

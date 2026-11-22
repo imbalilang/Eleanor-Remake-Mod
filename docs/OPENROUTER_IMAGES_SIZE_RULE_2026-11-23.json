@@ -1,0 +1,13 @@
+{
+  "endpoint": "https://openrouter.ai/api/v1/images",
+  "model": "openai/gpt-image-2.6-flare",
+  "aspect_ratio": "16:9",
+  "tests": [
+    {"requested": "no size", "actual": "1536x864"},
+    {"requested": "1536x864", "actual": "1536x864"},
+    {"requested": "1280x720", "actual": "1672x941"},
+    {"requested": "960x540", "actual": "1536x864"}
+  ],
+  "rule_observed": "1536x864 is the default/supported 16:9 output; 1672x941 is a fallback when explicit 1280x720 is not honored.",
+  "date": "2026-11-23"
+}

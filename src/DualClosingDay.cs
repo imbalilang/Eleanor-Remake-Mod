@@ -64,49 +64,41 @@ namespace EleanorRomance
                 ScheduleSleep(store, DualState.Today);
         }
 
-        internal static bool OnShutterOpened()
+        /// <summary>
+        /// Lou-style morning special visit: queue the closure date while the
+        /// native customer generator builds today's queue. It is inserted at
+        /// the front and presented by the normal opening flow; the player does
+        /// not need a special door scene or a separate trigger.
+        /// </summary>
+        internal static bool TryQueueMorning(StoreClientManager manager)
         {
             var store = PlayerStore.Instance;
-            if (!Enabled || !VersionGate.IsSupported || !DualState.Active || !DualState.Flag("d.route")
-                || store?.storeState != PlayerStore.StoreState.OPEN) return false;
-            int day = DualState.Today;
-            var manager = store.storeClientManager;
+            if (!Enabled || !VersionGate.IsSupported || store == null
+                || !DualState.Active || !DualState.Flag("d.route")) return false;
             if (manager?.clientStack == null) return false;
+            int day = DualState.Today;
             string scene = ClosingScene;
-            // A closure left over from an earlier day without a live client is
-            // stale. Clear it so opening the shop can retry instead of blocking
-            // every later visit through PendingId.
-            if (DualState.PendingId == scene && DualState.NextSceneDay >= 0 && DualState.NextSceneDay < day
-                && !IsVisit(store.currentClientInstance?.GetClientBlueprint()))
+            if (DualDirector.NextScene(day) != scene) return false;
+            if (store.currentClientInstance != null || store.isClientBeingArrested || store.isHandlingShootout) return false;
+            bool already = manager.clientStack.Exists(IsVisit);
+            if (DualState.PendingId == scene && already)
             {
-                manager.clientStack.RemoveAll(IsVisit);
-                DualState.PendingId = "";
-                DualState.PendingScene = 0;
-                DualState.NextSceneDay = -1;
+                DualState.NextSceneDay = day;
+                RomanceState.LastQueuedDay = day;
+                return true;
             }
-            if (DualState.PendingId == scene
-                && (manager.clientStack.Exists(IsVisit)
-                    || IsVisit(store.currentClientInstance?.GetClientBlueprint()))) return true;
-            // Native urgent scenes keep their priority. Never insert a routine visit
-            // ahead of them, or leave a closure client in the day's ordinary queue.
+            // Drop an old closure entry before rebuilding today's front slot.
             manager.clientStack.RemoveAll(IsVisit);
-            if (DualDirector.NextScene(day) != scene
-                || store.currentClientInstance != null || store.isClientBeingArrested || store.isHandlingShootout
-                || store.playerLocation != PlayerStore.PlayerLocation.IN_STORE
-                || manager.clientStack.Exists(c => c != null && !c.dismissable)) return false;
             var client = DualStory.CreateScene(scene);
+            if (client == null) return false;
             ModHelper.SetClientSource(client, ModConstants.ModId);
-            // Let the native arrival pipeline present the date. Setting
-            // currentClientInstance directly could leave an invisible customer
-            // holding the slot forever after a shutter/UI timing change.
             manager.AddNextClient(client);
             if (!manager.clientStack.Contains(client)) return false;
             DualState.PendingId = scene;
             DualState.PendingScene = DualDirector.SceneNumber(scene);
             DualState.NextSceneDay = day;
             RomanceState.LastQueuedDay = day;
-            store.callNextWhenPossible = false;
-            ModEntry.Log("Dual closing day queued: " + scene + " on day " + day);
+            ModEntry.Log("Dual closing day queued at morning generation: " + scene + " on day " + day);
             return true;
         }
 
@@ -166,20 +158,4 @@ namespace EleanorRomance
         }
     }
 
-    [HarmonyPatch(typeof(StoreShutterButton), nameof(StoreShutterButton.OpenShutter))]
-    internal static class DualMorningClosurePatch
-    {
-        private static void Postfix() => DualClosingDay.OnShutterOpened();
-    }
-
-    /// <summary>
-    /// The shutter button is not the only route into an open shop (shortcuts,
-    /// automation and other UI paths can call the store state method directly).
-    /// Run the same closure check from the central open call as well.
-    /// </summary>
-    [HarmonyPatch(typeof(PlayerStore), nameof(PlayerStore.OpenShutter))]
-    internal static class DualMorningClosureStorePatch
-    {
-        private static void Postfix() => DualClosingDay.OnShutterOpened();
-    }
 }

@@ -65,8 +65,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>把滑到台边的价签推回盒里</i>你少插嘴。",
-              "en": "<i>taps a finger on the counter</i> Shut up."
+              "text": "（把滑到台边的价签推回盒里）你少插嘴。",
+              "en": "(taps a finger on the counter) Shut up."
             },
             {
               "speaker": "SEC",
@@ -80,8 +80,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>隔着窗探过手，把他翻进去的领角掖出来</i>还穿它扛货，领口都压死了。",
-              "en": "<i>Reaches through the window and straightens his crooked collar</i>You wore this to carry boxes again. The collar is all flattened."
+              "text": "（隔着窗探过手，把他翻进去的领角掖出来）还穿它扛货，领口都压死了。",
+              "en": "(Reaches through the window and straightens his crooked collar) You wore this to carry boxes again. The collar is all flattened."
             },
             {
               "speaker": "Sophia",
@@ -106,8 +106,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>眼神在窗里窗外扫了一回，又去看架子</i>行，先看货。",
-              "en": "<i>lets her gaze rest between them, then returns it to the shelf</i> All right. Let's shop first."
+              "text": "（眼神在窗里窗外扫了一回，又去看架子）行，先看货。",
+              "en": "(lets her gaze rest between them, then returns it to the shelf) All right. Let's shop first."
             },
             {
               "speaker": "Sophia",
@@ -174,8 +174,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把旧布袋搁上台面</i>就这些。按日常价算。",
-              "en": "<i>sets the old cloth bag on the counter</i> That's all I need. Charge the usual price."
+              "text": "（把旧布袋搁上台面）就这些。按日常价算。",
+              "en": "(sets the old cloth bag on the counter) That's all I need. Charge the usual price."
             }
           ]
         },
@@ -191,8 +191,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>就着窗口把盖子扣紧，又轻轻一提</i>嗯，这只我不要。",
-              "en": "<i>She snaps the lid shut and gives it a light tug.</i> Hmm. I'll pass on this one."
+              "text": "（就着窗口把盖子扣紧，又轻轻一提）嗯，这只我不要。",
+              "en": "(She snaps the lid shut and gives it a light tug.) Hmm. I'll pass on this one."
             }
           ],
           "cursor_revision": 2
@@ -274,8 +274,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把东西装进旧布袋</i>老板，这账我记下了。",
-              "en": "<i>puts the goods into her cloth bag</i> Boss. I'll remember this."
+              "text": "（把东西装进旧布袋）老板，这账我记下了。",
+              "en": "(puts the goods into her cloth bag) Boss. I'll remember this."
             }
           ]
         },
@@ -372,8 +372,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>胳膊往柜台边上一搭，轻轻笑了一下</i>埃莉诺，跟花不完的钱，你挑哪个？",
-              "en": "<i>rests a hand on the edge of the counter and smiles</i> Eleanor, or money that never runs out. Which do you choose?"
+              "text": "（胳膊往柜台边上一搭，轻轻笑了一下）埃莉诺，跟花不完的钱，你挑哪个？",
+              "en": "(rests a hand on the edge of the counter and smiles) Eleanor, or money that never runs out. Which do you choose?"
             }
           ],
           "cursor_revision": 2
@@ -475,8 +475,8 @@
           "lines": [
             {
               "speaker": "Sophia",
-              "text": "<i>抬了抬下巴朝货架点了一下</i>拿几个我瞧瞧。整的要几个，带伤的也来两个。",
-              "en": "<i>points at the shelf</i> Let me see them. Pick a few good ones, and two lesser ones."
+              "text": "（抬了抬下巴朝货架点了一下）拿几个我瞧瞧。整的要几个，带伤的也来两个。",
+              "en": "(points at the shelf) Let me see them. Pick a few good ones, and two lesser ones."
             }
           ]
         },
@@ -528,8 +528,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把带伤那个放手上颠了颠</i>这个晚上切了吃。她听了八成又喊腻。",
-              "en": "<i>weighs the lesser one in her hand</i> I'll cut this one tonight. She'll probably say she's sick of it again."
+              "text": "（把带伤那个放手上颠了颠）这个晚上切了吃。她听了八成又喊腻。",
+              "en": "(weighs the lesser one in her hand) I'll cut this one tonight. She'll probably say she's sick of it again."
             }
           ]
         },
@@ -640,8 +640,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>拉过窗口下的凳子坐下，弯身捏了捏小腿</i>我还没要你管。",
-              "en": "<i>Sits on the stool outside the window and taps the back of his hand</i>You don't have to tell me."
+              "text": "（拉过窗口下的凳子坐下，弯身捏了捏小腿）我还没要你管。",
+              "en": "(Sits on the stool outside the window and taps the back of his hand) You don't have to tell me."
             },
             {
               "speaker": "Eleanor",
@@ -708,8 +708,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>攥住他的领口朝下一带，脸几乎贴上去</i>你下回换件齐整的再过来。",
-              "en": "<i>grabs his collar and pulls him close</i> Then wear one that isn't crooked."
+              "text": "（攥住他的领口朝下一带，脸几乎贴上去）你下回换件齐整的再过来。",
+              "en": "(grabs his collar and pulls him close) Then wear one that isn't crooked."
             },
             {
               "speaker": "Eleanor",
@@ -729,8 +729,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>松开他的领口，指尖没离开，反而在扣子上按了两下</i>今天我不早走。",
-              "en": "<i>lets go of his collar but leaves her hand there, tapping his button twice</i> I'm staying a little longer today."
+              "text": "（松开他的领口，指尖没离开，反而在扣子上按了两下）今天我不早走。",
+              "en": "(lets go of his collar but leaves her hand there, tapping his button twice) I'm staying a little longer today."
             },
             {
               "speaker": "Eleanor",
@@ -749,8 +749,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>从窗口探出身子，把头搁在他肩膀上</i>……一会儿就好。",
-              "en": "<i>Leans through the window, resting her forehead against his shoulder</i>...Just for a while."
+              "text": "（从窗口探出身子，把头搁在他肩膀上）……一会儿就好。",
+              "en": "(Leans through the window, resting her forehead against his shoulder)...Just for a while."
             }
           ],
           "cursor_revision": 2

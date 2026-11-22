@@ -41,9 +41,9 @@ Lydia 私服沿用现有约会装 `er_portrait_lydia_date_female_beauty`：玫�
 
 原版分支只作为缺失资源的防崩溃回退；不能把同一美化母图减色后当作另一套正式原版形象。已有原生资源可按回退方案复用，例如美化资源缺失时晚会回退原版上层区 Eleanor。
 
-革命线服装现状（2026-11-13）：公开/队伍场合使用 `eleanor_rev` 绿色正装（CutePortraits 设计）；R06 第一次杀人后的私下/亲密场合使用用户设计的黑色战术背心 `er_portrait_eleanor_revolution_undersuit_female_beauty`（v3 已导入 `Textures/Items`，母图/portrait 在 `Art/revolution-route-2026-11-10`；缺失时代码回退绿正装）。
+革命线服装现状：公开/队伍场合使用 `eleanor_rev` 绿色正装（CutePortraits 设计）；R06 第一次杀人等私下场合使用黑色战术背心 `er_portrait_eleanor_revolution_undersuit_female_beauty`，正式贴图为用户选定的 First Pixel Trial。缺失时回退绿正装。参见[战术背心交付](tactical-vest-expressions-2026-11-22/ART_DELIVERY.md)。
 
-革命军线约会装（2026-11-18 已定稿）：休假约会使用深紫色亮面连体皮衣、带蓝条的米白短夹克和细金链。拉链一体贯穿前身，拉头停在自然腰线。胸腰比例、皮革反光与裁片按[v6 母图](eleanor-revolution-date-outfit-2026-11-18/eleanor_revolution_cyberpunk_date_master_v6.png)校对。当前为后续 CG 的服装参考，具体使用章节待定。
+革命军线约会装（2026-11-18 已定稿）：休假约会使用深紫色亮面连体皮衣、带蓝条的米白短夹克和细金链。服装设定的拉链一体贯穿前身，拉头停在自然腰线。胸腰比例、皮革反光与裁片按[v6 母图](eleanor-revolution-date-outfit-2026-11-18/eleanor_revolution_cyberpunk_date_master_v6.png)校对。交接的半身像已导出为 L3 正式贴图 `er_portrait_eleanor_revolution_date_female_beauty`，待分配具体剧情场景。参见[立绘交付](revolution-date-portrait-2026-11-23/ART_DELIVERY.md)。
 
 常规恋爱线的白裙私服与 E1《回家》婚礼 CG 已存入工作区和本机 1.03 的贴图目录。白裙用于 `nl05.b006` 饭后独处与 `nl06.b006` 谈婚礼，E1 结局页在 `nl08` 使用婚礼 CG。1.03 尚未接入这些场景。资源与造型见[白裙私服交付](love-intimate-outfit-2026-11-13/ART_DELIVERY.md)和[婚礼 CG 交付](love-ending-2026-11-13/ART_DELIVERY.md)。
 
@@ -80,6 +80,18 @@ Ht 指整个人物透明包围盒等比缩放后的高度，可能被最终画�
 Lydia 新日常与约会的源包围盒略有不同，上表的 Ht/Cx 因此不同；它们实际共用 `s=0.14487300094073377, tx=38.81514581373473, ty=59.11665098777047`。表情沿用此映射，不能因为睁眼后虹膜可见面积增加而重新缩放人物。
 
 ## 5. 表情差分
+
+### 5.0 画像分级
+
+2026-11-22 定稿。默认像（`neutral`）单独计数。
+
+| 级别 | 画像 | 每套表情差分 |
+|---|---|---|
+| L1（6 套） | `eleanor1`、`eleanor_scav`、`eleanor_gala`、`lydia_daily`、`eleanor_maid`、`eleanor_rev` | 10 张，`angry`、`sad`、`serious`、`determined`、`hurt`、`shy`、`smile`、`soft`、`tired`、`tsun` |
+| L2（4 套） | `eleanor_revolution_undersuit`、`lydia_date`、`sophia`、`sophia_home` | 6 张，`serious`、`smile`、`hurt`、`shy`、`soft`、`tired` |
+| L3（5 套） | `eleanor_love_intimate`、`eleanor_revolution_date`、`eleanor_black_mesh_halter`、`eleanor_black_sports_hoodie`、`sophia_white_halter_knit_variant` | 0 张 |
+
+总目标为 15 张默认像和 84 张差分。项目已接入的 11 套画像均已按档位迁移。L2 的剧情标签 `angry`、`determined` 映射到 `serious`，`sad` 映射到 `hurt`，`tsun`、`flustered` 映射到 `shy`，`tease` 映射到 `smile`。L3 直接显示相应服装的默认像。超出档位的贴图已[归档](portrait-tier-rollout-2026-11-22/rollout_manifest.json)。
 
 ### 2026-11-16 审阅后的制作流程
 
@@ -143,7 +155,7 @@ Lydia 中性像略收眼睑，表现见过世面的从容。smile、flustered �
 
 旧288×211表情不能一律补一行后就算合格；须检查来源、风格和轮廓。旧批次的27张差分均为288×212且轮廓与各自中性像一致；这只说明规格和对应结构检查通过。Lydia 和索菲娅使用内置定稿立绘及对应表情族，定稿立绘缺失时分别回退到原游戏 `femaleUpper10` 与 `femaleUpper3`。自定义 `_vanilla` 仅用于旧档迁移。战术背心贴图缺失时回退到 `eleanor_rev` 立绘与对应表情族。
 
-通用表情现状（2026-11-14）见[接入记录](expression-expansion-2026-11-14/ART_DELIVERY.md)。13 套画像在内置美化资源中各有九种通用差分，另保留五张旧标签贴图。省略表情标签时保留当前表情，显式写 `neutral` 时回到该套画像的基础像。缺图时回退到当前服装的基础像。
+2026-11-14 的通用表情批次见[历史接入记录](expression-expansion-2026-11-14/ART_DELIVERY.md)。新目标按本节分级执行。省略表情标签时保留当前表情，显式写 `neutral` 时回到该套画像的基础像。查找差分及其回退均失败时显示当前服装的默认像。
 
 ## 6. B/detail 导出约定
 
@@ -180,6 +192,8 @@ CG 必须从当前结局文本取场景，不擅自增加婚礼、宫殿、人�
 文件名与运行资源键一致；差分采用 `er_expr_<实际基础键>_<表情>.png`。候选只有获得当前任务的替换指令后才写入 `Textures/Items`；发布是独立动作，按用户本轮指令执行。
 
 验收顺序：母图五官与材质 → 原生 1 倍 → 最近邻 3/4 倍边缘 → 白/黑/#252C35 背景 → 同框和表情切换 → 文件/资源键 → 实机 UI。文件存在、算法通过、审美通过、运行验收是不同结论，报告须如实区分。
+
+**立绘像素画法单独验收。** 将候选、现用图和已授权的《少女当铺》立绘在 288×212 的尺度下并排，原生尺寸看五官与服装是否易认，最近邻整数放大看发束、皮肤和布料的明暗是否由连贯的像素色块构成，以及轮廓、边线和点状高光的粗细是否协调。风格有明显改善的候选仍需核对角色身份、服装辨识和整套表情切换。[常服标尺](../Textures/Items/cp_portrait_eleanor1.png) · [拾荒装标尺](../Textures/Items/cp_portrait_eleanor_scav.png)
 
 交付记录须分别写明：比较的两份文件及其哈希、眼角等标点的坐标来源、采用的整体/局部变换、面部替换范围、实际看过的原生/放大/叠加预览、各检查的结果与局限，以及尚未处理的问题。自动识别失败或估读值不得包装为精确人体测量。视觉问题尚未解决时，其他检查通过仍保留该问题的待办状态。
 

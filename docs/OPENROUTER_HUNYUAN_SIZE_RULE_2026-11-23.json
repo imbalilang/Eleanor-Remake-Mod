@@ -1,0 +1,27 @@
+{
+  "model": "tencent/hy-image-v3.5-preview",
+  "route": "openai-compat/openrouter",
+  "tested_at": "2026-11-23",
+  "results": [
+    {
+      "requested_size": "1280x720",
+      "requested_tier": "1K (relay)",
+      "actual": "1024x576",
+      "file": "dsh-image-gen/image-d5c3491f.png"
+    },
+    {
+      "requested_size": "2048x1152",
+      "requested_tier": "2K (relay)",
+      "actual": "2048x1152",
+      "file": "dsh-image-gen/image-89e04f4e.png"
+    },
+    {
+      "requested_size": "4K",
+      "requested_tier": "4K (image_size)",
+      "actual": "2048x1152",
+      "file": "dsh-image-gen/image-6fe79a8c.png"
+    }
+  ],
+  "rule": "1K -> 1024x576; 2K -> 2048x1152; 4K request is capped at 2048x1152 by current route; 1.5K is not exposed by the tool enum.",
+  "runtime_note": "2048x1152 -> 960x540 is exact uniform 15/32 (0.46875); 1024x576 -> 960x540 is exact uniform 15/16 (0.9375) but much lower detail."
+}

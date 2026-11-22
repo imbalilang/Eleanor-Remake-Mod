@@ -61,8 +61,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>迈出去两步又折回来</i> 埃莉诺，他平时跟你讲话也这么短？",
-              "en": "<i>takes two steps, then turns back</i> Eleanor, is he always this sparing with words when he talks to you?",
+              "text": "（迈出去两步又折回来） 埃莉诺，他平时跟你讲话也这么短？",
+              "en": "(takes two steps, then turns back) Eleanor, is he always this sparing with words when he talks to you?",
               "expr": "smile"
             },
             {
@@ -103,8 +103,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "不行。<i>伸手捏住他领口，又摁了一遍</i>",
-              "en": "No. <i>She pinches his collar and smooths it down again.</i>",
+              "text": "不行。（伸手捏住他领口，又摁了一遍）",
+              "en": "No. (She pinches his collar and smooths it down again.)",
               "expr": "neutral"
             },
             {
@@ -181,14 +181,14 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>把空布袋在臂上折好</i> 他本来也不会少收。",
-              "en": "<i>She folds the empty cloth bag over her arm.</i> He wouldn't anyway.",
+              "text": "（把空布袋在臂上折好） 他本来也不会少收。",
+              "en": "(She folds the empty cloth bag over her arm.) He wouldn't anyway.",
               "expr": "neutral"
             },
             {
               "speaker": "Lydia",
-              "text": "<i>把拣好的糖一包一包码到柜台上</i> 就你明白。老板，算钱。",
-              "en": "<i>sets the chosen things on the counter one by one</i> You know everything. Boss, ring it up.",
+              "text": "（把拣好的糖一包一包码到柜台上） 就你明白。老板，算钱。",
+              "en": "(sets the chosen things on the counter one by one) You know everything. Boss, ring it up.",
               "expr": "neutral"
             }
           ],
@@ -239,8 +239,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>把纸袋往怀里搂了搂</i> 行，这回我记下。下回我多搬些来。",
-              "en": "<i>hugs the paper bag</i> I'll remember it this time. Next time I'll buy more.",
+              "text": "（把纸袋往怀里搂了搂） 行，这回我记下。下回我多搬些来。",
+              "en": "(hugs the paper bag) I'll remember it this time. Next time I'll buy more.",
               "expr": "neutral"
             }
           ]
@@ -379,8 +379,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手还悬在果子上方</i>……你再说一遍。",
-              "en": "<i>her hand stops in the air</i> ...What did you say?"
+              "text": "（手还悬在果子上方）……你再说一遍。",
+              "en": "(her hand stops in the air) ...What did you say?"
             },
             {
               "speaker": "Player",
@@ -421,8 +421,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "催什么。<i>撑起身，额头撞在他下巴上</i>答应。",
-              "en": "Don't rush me. <i>leans forward, presses her forehead to his chin</i> Yes.",
+              "text": "催什么。（撑起身，额头撞在他下巴上）答应。",
+              "en": "Don't rush me. (leans forward, presses her forehead to his chin) Yes.",
               "expr": "shy"
             },
             {
@@ -452,8 +452,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把布袋口撑开</i>这还差不多。自己装。",
-              "en": "<i>opens the cloth bag</i> That's more like it. Go on."
+              "text": "（把布袋口撑开）这还差不多。自己装。",
+              "en": "(opens the cloth bag) That's more like it. Go on."
             }
           ],
           "cursor_revision": 2
@@ -493,8 +493,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>捡起一个果子，半路又放下</i>你总看我做什么？",
-              "en": "<i>takes two fruits, then stops</i> Why do you keep looking at me?"
+              "text": "（捡起一个果子，半路又放下）你总看我做什么？",
+              "en": "(takes two fruits, then stops) Why do you keep looking at me?"
             },
             {
               "speaker": "Eleanor",
@@ -517,8 +517,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把布袋一提，退出半步又停住</i>明天我带她过来。你领子理一理。",
-              "en": "<i>Picks up her cloth bag, steps back, then pauses</i>I'll bring her tomorrow morning. Straighten your collar."
+              "text": "（把布袋一提，退出半步又停住）明天我带她过来。你领子理一理。",
+              "en": "(Picks up her cloth bag, steps back, then pauses) I'll bring her tomorrow morning. Straighten your collar."
             }
           ]
         },
@@ -715,13 +715,13 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>伸手按住索菲娅的手腕</i>母亲，单子呢？",
-              "en": "<i>She puts a hand on Sophia's wrist.</i> Mother, where's the list?"
+              "text": "（伸手按住索菲娅的手腕）母亲，单子呢？",
+              "en": "(She puts a hand on Sophia's wrist.) Mother, where's the list?"
             },
             {
               "speaker": "Sophia",
-              "text": "<i>把纸按在柜面上</i>这儿呢。碗，布，凳子，屋里都差着数。",
-              "en": "<i>She lays the sheet on the counter.</i> Here. Bowls, cloth, chairs. We're short of all three."
+              "text": "（把纸按在柜面上）这儿呢。碗，布，凳子，屋里都差着数。",
+              "en": "(She lays the sheet on the counter.) Here. Bowls, cloth, chairs. We're short of all three."
             },
             {
               "speaker": "Sophia",
@@ -751,7 +751,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>先一步站到柜台前，回头催</i>喂，你问他啊，准备叫谁。",
+              "text": "（先一步站到柜台前，回头催）喂，你问他啊，准备叫谁。",
               "en": "Hey, ask him who he wants to invite."
             },
             {
@@ -850,8 +850,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>别开脸，伸手抽走那张单</i>……取货。把碗和布都端过来，我要一只只敲过去。",
-              "en": "<i>turns her face away, grabs the list</i> ...Go get the goods. Bring the bowls and cloth up. I'm knocking on every one."
+              "text": "（别开脸，伸手抽走那张单）……取货。把碗和布都端过来，我要一只只敲过去。",
+              "en": "(turns her face away, grabs the list) ...Go get the goods. Bring the bowls and cloth up. I'm knocking on every one."
             },
             {
               "speaker": "Sophia",
@@ -1002,8 +1002,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>抽回单子，对折两下</i>碗我自己寻。摔不坏的，总有店铺卖。",
-              "en": "<i>folds the list</i> I'll find the bowls myself. There's always somewhere that sells unbreakable ones."
+              "text": "（抽回单子，对折两下）碗我自己寻。摔不坏的，总有店铺卖。",
+              "en": "(folds the list) I'll find the bowls myself. There's always somewhere that sells unbreakable ones."
             }
           ]
         }
@@ -1049,8 +1049,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "扣子歪了。别动，我来。<i>抬手把吊坠后头的扣子转正</i>",
-              "en": "The clasp is crooked. Don't move. Let me. <i>straightens the locket clasp</i>"
+              "text": "扣子歪了。别动，我来。（抬手把吊坠后头的扣子转正）",
+              "en": "The clasp is crooked. Don't move. Let me. (straightens the locket clasp)"
             },
             {
               "speaker": "Eleanor",
@@ -1080,8 +1080,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "最后一句。<i>往后退了半步</i>她有什么话，让她自己来。过去吧。",
-              "en": "Last sentence. <i>steps back</i> Whatever she wants to say, let her say it. Go on."
+              "text": "最后一句。（往后退了半步）她有什么话，让她自己来。过去吧。",
+              "en": "Last sentence. (steps back) Whatever she wants to say, let her say it. Go on."
             },
             {
               "speaker": "Eleanor",
@@ -1095,7 +1095,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "喂，你眼睛别躲。看我。<i>顺手把他翻起的领角按下去</i>",
+              "text": "喂，你眼睛别躲。看我。（顺手把他翻起的领角按下去）",
               "en": "Hey. Look at me.",
               "expr": "serious"
             },
@@ -1150,13 +1150,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "让他们多坐会儿。<i>回头朝母亲瞪过去，唇角没压住</i>",
-              "en": "Let them wait. <i>glances back at her mother, unable to hide her smile</i>"
+              "text": "让他们多坐会儿。（回头朝母亲瞪过去，唇角没压住）",
+              "en": "Let them wait. (glances back at her mother, unable to hide her smile)"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>抓住他的前襟往下一扯，踮起脚</i>低下来。今天轮到我安排。",
-              "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
+              "text": "（抓住他的前襟往下一扯，踮起脚）低下来。今天轮到我安排。",
+              "en": "(grabs his collar and rises on her toes) Lower. Today you listen to me."
             }
           ],
           "cursor_revision": 2
@@ -1173,8 +1173,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "后面的扣子别着。你别动。<i>伸手把吊坠扣掰顺</i>",
-              "en": "The clasp is crooked. Don't move. Let me. <i>straightens the locket clasp</i>"
+              "text": "后面的扣子别着。你别动。（伸手把吊坠扣掰顺）",
+              "en": "The clasp is crooked. Don't move. Let me. (straightens the locket clasp)"
             },
             {
               "speaker": "Eleanor",
@@ -1214,8 +1214,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "还有最后一句。<i>退了半步</i>她要说的话，让她自己来。去吧。",
-              "en": "Last sentence. <i>steps back</i> Whatever she wants to say, let her say it. Go on."
+              "text": "还有最后一句。（退了半步）她要说的话，让她自己来。去吧。",
+              "en": "Last sentence. (steps back) Whatever she wants to say, let her say it. Go on."
             },
             {
               "speaker": "Eleanor",
@@ -1224,7 +1224,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "喂，你站直了。看我。<i>抬手把他胸口那枚别针按实</i>",
+              "text": "喂，你站直了。看我。（抬手把他胸口那枚别针按实）",
               "en": "Hey. Look at me.",
               "expr": "serious"
             },
@@ -1279,13 +1279,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "让后头再坐坐。<i>回头朝母亲白了一眼，笑没收住</i>",
-              "en": "Let them wait. <i>glances back at her mother, unable to hide her smile</i>"
+              "text": "让后头再坐坐。（回头朝母亲白了一眼，笑没收住）",
+              "en": "Let them wait. (glances back at her mother, unable to hide her smile)"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>扯住他领口，踮起脚</i>头低点。今天你归我管。",
-              "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
+              "text": "（扯住他领口，踮起脚）头低点。今天你归我管。",
+              "en": "(grabs his collar and rises on her toes) Lower. Today you listen to me."
             }
           ],
           "cursor_revision": 2
@@ -1302,8 +1302,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "扣眼偏了。别动，我来。<i>把吊坠扣子正了正</i>",
-              "en": "The clasp is crooked. Don't move. Let me. <i>straightens the locket clasp</i>"
+              "text": "扣眼偏了。别动，我来。（把吊坠扣子正了正）",
+              "en": "The clasp is crooked. Don't move. Let me. (straightens the locket clasp)"
             },
             {
               "speaker": "Eleanor",
@@ -1317,8 +1317,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>后退半步</i>好了。过去吧。",
-              "en": "Last sentence. <i>steps back</i> Whatever she wants to say, let her say it. Go on."
+              "text": "（后退半步）好了。过去吧。",
+              "en": "Last sentence. (steps back) Whatever she wants to say, let her say it. Go on."
             },
             {
               "speaker": "Eleanor",
@@ -1332,7 +1332,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "喂，别盯地砖。看我。<i>把他偏掉的领结扶正</i>",
+              "text": "喂，别盯地砖。看我。（把他偏掉的领结扶正）",
               "en": "Hey. Look at me.",
               "expr": "serious"
             },
@@ -1387,13 +1387,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "让后边再等等。<i>回头朝母亲扫一眼，嘴角没绷住</i>",
-              "en": "Let them wait. <i>glances back at her mother, unable to hide her smile</i>"
+              "text": "让后边再等等。（回头朝母亲扫一眼，嘴角没绷住）",
+              "en": "Let them wait. (glances back at her mother, unable to hide her smile)"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>拽过他一侧袖口，踮起脚</i>低点。今天听我调。",
-              "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
+              "text": "（拽过他一侧袖口，踮起脚）低点。今天听我调。",
+              "en": "(grabs his collar and rises on her toes) Lower. Today you listen to me."
             }
           ],
           "cursor_revision": 2
@@ -1410,8 +1410,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "扣环别着。别动，我来。<i>伸手把吊坠扣拨到正位</i>",
-              "en": "The clasp is crooked. Don't move. Let me. <i>straightens the locket clasp</i>"
+              "text": "扣环别着。别动，我来。（伸手把吊坠扣拨到正位）",
+              "en": "The clasp is crooked. Don't move. Let me. (straightens the locket clasp)"
             },
             {
               "speaker": "Eleanor",
@@ -1435,8 +1435,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "最后一句。<i>退了半步</i>她要说的，让她自己来。过去吧。",
-              "en": "Last sentence. <i>steps back</i> Whatever she wants to say, let her say it. Go on."
+              "text": "最后一句。（退了半步）她要说的，让她自己来。过去吧。",
+              "en": "Last sentence. (steps back) Whatever she wants to say, let her say it. Go on."
             },
             {
               "speaker": "Eleanor",
@@ -1445,7 +1445,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "喂，你抬头。<i>伸手把他翻出来的衬衫领尖往里掖</i>看我。",
+              "text": "喂，你抬头。（伸手把他翻出来的衬衫领尖往里掖）看我。",
               "en": "Hey. Look at me.",
               "expr": "serious"
             },
@@ -1500,13 +1500,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "让他们先喝汤。<i>回头朝母亲横一眼，唇角没能压下去</i>",
-              "en": "Let them wait. <i>glances back at her mother, unable to hide her smile</i>"
+              "text": "让他们先喝汤。（回头朝母亲横一眼，唇角没能压下去）",
+              "en": "Let them wait. (glances back at her mother, unable to hide her smile)"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>攀住他一边胳膊踮起脚</i>头放低点。今天换我安排你。",
-              "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
+              "text": "（攀住他一边胳膊踮起脚）头放低点。今天换我安排你。",
+              "en": "(grabs his collar and rises on her toes) Lower. Today you listen to me."
             }
           ],
           "cursor_revision": 2
