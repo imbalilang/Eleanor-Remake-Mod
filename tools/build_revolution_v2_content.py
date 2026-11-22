@@ -49,9 +49,18 @@ def build(root):
                 segments.append(("result", None, seg["text"], None))
             elif seg["type"] == "choice":
                 cid = seg["id"]
-                prompt_key = f"er_rev_v2_{sid}_{cid.lower()}_prompt"
-                zh[prompt_key] = seg["prompt"]
-                en[prompt_key] = seg.get("prompt_en") or seg["prompt"]
+                prompt_key = None
+                host_block = None
+                if seg.get("attach_to_previous"):
+                    if not segments or segments[-1][0] != "lines":
+                        raise ValueError(f"{sid}/{cid}: inline choices require a preceding dialogue block")
+                    host_block = segments.pop()[1]
+                    if not scene["blocks"][host_block]["lines"] or "prompt" in seg or "prompt_en" in seg:
+                        raise ValueError(f"{sid}/{cid}: inline choices use the last line as their prompt")
+                else:
+                    prompt_key = f"er_rev_v2_{sid}_{cid.lower()}_prompt"
+                    zh[prompt_key] = seg["prompt"]
+                    en[prompt_key] = seg.get("prompt_en") or seg["prompt"]
                 options = []
                 for opt in seg["options"]:
                     label_key = f"er_rev_v2_{sid}_{cid.lower()}_{opt['id'].split('_')[-1]}"
@@ -59,7 +68,7 @@ def build(root):
                     en[label_key] = opt.get("label_en") or opt["label"]
                     options.append((label_key, opt.get("block"), opt.get("result"),
                                     bool(opt.get("mainline"))))
-                segments.append(("choice", prompt_key, int(seg["mainline"]), (cid, options)))
+                segments.append(("choice", prompt_key, int(seg["mainline"]), (cid, options, host_block)))
             else:
                 raise ValueError(f"unknown segment type {seg['type']}")
         trades = []
@@ -107,15 +116,17 @@ def build(root):
             elif seg[0] == "result":
                 seg_entries.append(f'new Segment("result",null,"{esc(seg[2])}",null)')
             else:
-                _, prompt_key, mainline, (cid, options) = seg
+                _, prompt_key, mainline, (cid, options, host_block) = seg
                 opt_entries = []
                 for label_key, block_id, result, is_main in options:
                     opt_entries.append(
                         f'new Option("{esc(label_key)}",{("null" if not block_id else chr(34)+esc(block_id)+chr(34))},'
                         f'{("null" if not result else chr(34)+esc(result)+chr(34))},{"true" if is_main else "false"})')
-                choice = (f'new Choice("{esc(cid)}","{esc(prompt_key)}",{mainline},'
+                prompt_arg = f'"{esc(prompt_key)}"' if prompt_key else "null"
+                block_arg = f'"{esc(host_block)}"' if host_block else "null"
+                choice = (f'new Choice("{esc(cid)}",{prompt_arg},{mainline},'
                           f'new[]{{{",".join(opt_entries)}}})')
-                seg_entries.append(f'new Segment("choice",null,null,{choice})')
+                seg_entries.append(f'new Segment("choice",{block_arg},null,{choice})')
         trade_array = f'new Trade[]{{{",".join(trade_entries)}}}'
         seg_array = f'new Segment[]{{{",".join(seg_entries)}}}'
         lines.append(

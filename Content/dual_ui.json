@@ -59,6 +59,10 @@
     "那瓶香水还替你留着。这次拿好。",
     "I still have that perfume for you. Take it this time."
   ],
+  "er_dual_receipt_claim": [
+    "还有一份回执要交给你。",
+    "There is also a receipt for you."
+  ],
   "er_dual_referral_intro": [
     "莉迪亚提起过这家店。我想看看适合带回上层的东西，价钱照常谈。",
     "Lydia mentioned this shop. I would like to see something suitable for the Upper Levels. We can negotiate as usual."

@@ -1,0 +1,85 @@
+Seedream 5.5
+Home
+Models
+Blog & Publication
+Seed Edge
+Join Us
+Try now
+Try Dola
+Try in Playground
+中文
+Seedream 5.5
+A multimodal image generation model with greater creativity and more precise execution.
+Tech blog
+Try now
+Get API
+Compare now
+Multi-turn editing, consistent every time
+Make precise, targeted changes across multiple edits while keeping unedited regions intact at the pixel level.
+Add and replace furniture, lighting, and décor across multiple edits, adjusting colors and placement while maintaining coherent perspective and lighting.
+Refine the hairstyle, eyewear, outfit, background, and tabletop props across multiple edits to explore different looks.
+Adjust the snake's position, length, and score across successive edits while keeping the monitor and interface layout consistent.
+Gradually add fruit, vessels, and floral stems to enrich the still-life composition while maintaining coherent lighting.
+Refine the hairstyle, makeup, and head accessories across multiple edits to explore different looks.
+Refine the vase, foliage, and decorative details across successive edits to enrich the traditional Chinese painting composition.
+Update the time, activity data, and charts across successive edits while keeping the watch face's layout and appearance consistent.
+Transparent creatives in one step
+Generate creatives you can reuse and build on, with native support for transparent and semi-transparent backgrounds.
+Generate a sequence of images showing a girl running to the right, each on a separate layer with a transparent background.
+Extract the flamingo from the image and output it as a separate RGBA layer with a transparent background.
+Generate two sets of cartoon stickers: one featuring ocean elements and cartoon cats, and the other featuring animals and plants. Keep the background transparent outside the sticker elements in both sets.
+Create “Seedream 5.5” inspired by the reference texture and style. Use rounded, bold sans-serif letters wrapped in alternating royal-blue and lake-blue yarn, with visible fibers, fuzz and side shadows. Use a 16:9 landscape format with a transparent background outside the lettering.
+Create a playful blue plush 3D cartoon character with a rounded body, big eyes and short limbs. Add three characters in the same style with distinct shapes and expressions. Output each character as a separate image with a transparent background, so the four characters can be separated and combined like puzzle pieces.
+Create a circular macro close-up of a snowy owl’s fine white feathers where they touch snow. Then enlarge the smaller owl foot on the right side of the reference into a circular macro close-up with a light gray background. Give both images a thin 3 px dark gray border and keep the area outside each circle transparent.
+Lifelike textures, fine details
+Renders more natural lighting, finer materials, and more refined skin textures, so every image looks more true to life.
+A white cat sits elegantly among bottles and glasses in a bar at night. Shoot from a low angle with a tilted composition, using flash, Fujifilm Provia colors and film grain. Capture dappled light, bright highlights and crisp detail for a vintage photographic feel.
+A warm documentary photograph of a young father reclining on a dark purple-gray fabric sofa, holding a sleeping baby. Cream knitted cushions and a mustard-yellow blanket show soft, tactile fabric textures. Warm golden daylight enters through a window on the right. Relaxed poses, natural skin tones, gentle shadows and film grain capture a quiet, intimate afternoon.
+A vertical 3:4 street photograph of a southern European corner. A lemon-yellow limewashed wall, an old deep-purple wooden door and hanging royal-purple linen form a bold geometric composition. Golden flowers fill a weathered metal bucket at the lower right. Strong afternoon sunlight casts crisp shadows, revealing textured plaster, fabric folds, rust and layered petals in vivid complementary purple and yellow.
+A candid horizontal street photograph of a long-haired woman in a burgundy top and light brown jacket looking down at her phone. Strong wind sweeps her hair across her sunglasses and face. The entire frame tilts about 25 degrees clockwise, with consistent perspective across the figure, buildings, lamppost and pavement. Natural clothing folds, hurried framing and asymmetric cropping create an unposed everyday moment.
+A candid horizontal snapshot inside a neighborhood bistro in Europe on a summer evening. Two older diners eat naturally at a table covered with cream linen, unaware of the camera. Glasses, cutlery, breadcrumbs and worn wooden furniture show everyday use. Warm pendant lights mix with traces of cool evening light. Slight underexposure, subtle high-ISO grain and foreground occlusion create an intimate, spontaneous atmosphere.
+A vertical 3:4 street photograph after rain, taken from a low angle looking down at wet paving stones and irregular puddles. Reflections of an old building’s golden carvings, window frames and colonnades are fragmented by exposed stones, puddle edges and ripples. Warm golden light contrasts with deep-blue reflections, preserving worn joints and wet surface textures. No full building, people or vehicles appear.
+Find inspiration, explore more possibilities
+View curated cases to spark fresh inspiration.
+Advancing the frontier of intelligence,
+ in service of humanity
+Join ByteDance Seed
+Models
+Seed2.1
+Seedance 2.5
+Seedream 5.5
+SeedRealtime
+Seed Audio 1.0
+Seed GR-RL
+Learn More
+Publications
+Seed Edge
+Seed STEM Fellows Program
+Seed Campus Recruitment
+Transparency
+Copyright© 2026 Bytedance Seed
+Disclaimer
+Contact us :
+seed.feedback@bytedance.com
+Models
+Seed2.1
+Seedance 2.5
+Seedream 5.5
+SeedRealtime
+Seed Audio 1.0
+Seed GR-RL
+Learn More
+Publications
+Seed Edge
+Seed STEM Fellows Program
+Seed Campus Recruitment
+Transparency
+Advancing the frontier of intelligence,
+ in service of humanity
+Join ByteDance Seed
+Contact us :
+seed.feedback@bytedance.com
+Copyright© 2026 Bytedance Seed
+Disclaimer
+Contact us :
+seed.feedback@bytedance.com

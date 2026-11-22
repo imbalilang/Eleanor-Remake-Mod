@@ -68,7 +68,7 @@ def collect(data: dict):
         for ci, seg in enumerate(scene.get("segments", [])):
             if seg.get("type") != "choice":
                 continue
-            if not seg.get("prompt_en") or seg.get("prompt_en") == seg.get("prompt"):
+            if seg.get("prompt") and (not seg.get("prompt_en") or seg["prompt_en"] == seg["prompt"]):
                 tasks.append({"id": f"C{si}:{ci}:prompt", "text": seg.get("prompt", ""),
                               "kind": "prompt", "si": si, "ci": ci})
             for oi, opt in enumerate(seg.get("options", [])):

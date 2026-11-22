@@ -1,0 +1,80 @@
+Approved CG: harem_two_bunny_bed / mirror_camera_facefix_v1
+Approved date: 2026-11-21
+Approved source: dsh-image-gen/image-46d9c848.png
+Master: Art/character-assets-2026-11-20/cg/harem_two_bunny_bed/approved/harem_two_bunny_bed_mirror_camera_cg_master_approved.png
+Master SHA-256: 08f6c0f53220f1df9fa7e417ea4faebb75fb059cba8c23c3ae8792b1f7ee7e9b
+Preview: Art/character-assets-2026-11-20/cg/harem_two_bunny_bed/approved/harem_two_bunny_bed_mirror_camera_cg_960_approved.png
+Preview SHA-256: d47a7061e43a97e7d5e0205d956693b86244e0449ae9b54c396f26aab2fac282
+Model: tencent/hy-image-v3.5-preview
+Channel: openrouter
+Size: 2K
+Aspect: 16:9
+Style conformance: FAIL_STYLE_LEGACY_ACCEPTED
+Review note: user approved image-46d9c848; camera and mirror pass; style metrics fail v1 but visually accepted.
+
+Generation chain:
+1) image-9396c49e: camera from pose_ref_eleanor_bunny.png; mirror relationship from image-613e77b4.png; face refs.
+2) image-968dfd33: targeted top correction only (no face refs; this caused face drift).
+3) image-46d9c848: targeted face correction with both face refs.
+
+References:
+- Art/character-assets-2026-11-20/cg/harem_two_bunny_bed/identity_refs_from_6df03986/eleanor_face_ref.png
+- Art/character-assets-2026-11-20/cg/harem_two_bunny_bed/identity_refs_from_6df03986/lydia_face_ref.png
+- Art/character-assets-2026-11-20/cg/harem_two_bunny_bed/mirror_pose_from_ref/references/pose_ref_eleanor_bunny.png
+- dsh-image-gen/image-613e77b4.png
+- Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/references/pixel_style_anchor_white_B.png
+
+Prompt 1 - base generation (image-9396c49e):
+Two young adult bunny girls lie close together on an ivory bed, Eleanor in black on the left and Lydia in white on the right, heads on pillows near the top and bodies angled diagonally toward the lower edge.
+
+Image 1 = Eleanor face and hair identity only.
+Image 2 = Lydia face and hair identity only.
+Image 3 = camera reference only.
+Image 4 = mirror-relationship reference only.
+Image 5 = pixel-art style reference only.
+
+Camera: exactly the high three-quarter view of Image 3, looking down at the bed, full body from head to feet, body diagonal across the frame, pillows at the top, sheets filling the frame.
+
+Mirror relationship: use Image 4 only to see how two bodies sit as left-right opposites. Lydia must be the horizontal mirror of Eleanor: if Eleanor's head tilts left, Lydia's tilts right; if Eleanor's hip angles left, Lydia's hip angles right; if Eleanor's knee points left, Lydia's knee points right. Do not copy Image 4's chest bows, faces, hair or outfit colors.
+
+Eleanor wears black bunny ears, a small black crown bow, a black neck bow, a black satin triangle bikini top, a black thong, one black ruffled garter, black wrist cuffs and black heels. Lydia wears the same in white, with one white garter and white heels. Lydia is only one cup larger, with the same slim waist and shoulders.
+
+Faces are youthful and soft, hair gathered close behind the head and shoulders. A hand rests on the other's waist. The bed and pillows fill the background.
+
+Style: dense pixel-art CG with visible pixel clusters, irregular localized dithering, crisp dark outlines and hard color steps. Avoid smooth anime shading and 3D rendering.
+
+No text, no watermark. 16:9, 2K.
+
+Prompt 2 - targeted top correction (image-968dfd33):
+Make one targeted costume correction to this exact image.
+
+On Lydia, replace the two small white bow-shaped pasties on her chest with a proper white satin triangle bikini top with thin straps, matching the shape and coverage of Eleanor's black triangle top but in white. The two white triangle cups must sit naturally over her breasts, with a thin centre bridge/strings and no bow shapes.
+
+Preserve everything else exactly:
+- the same mirrored two-person pose and camera
+- the same faces, hair, bunny ears, crown bows, neck bows
+- the same arms, hands, hips, legs and heels
+- the same single garter on each character
+- the same ivory bed, pillows and lighting
+- the same pixel-art style and colors
+
+Do not change Eleanor's black triangle top. No text, no watermark, no extra limbs. Output 16:9 2K.
+
+Prompt 3 - targeted face correction (image-46d9c848, approved):
+Make only a face correction to Lydia in this exact image.
+
+Image 1 = the current image to preserve.
+Image 2 = Eleanor face reference; keep Eleanor unchanged.
+Image 3 = Lydia face reference.
+
+Restore Lydia's face to match Image 3 exactly: same ash-brown hair, amber-honey eyes, youthful soft facial proportions, small nose, soft cheeks and pearl earrings. Her face should read as the same Lydia, not a generic or older face.
+
+Preserve everything else exactly:
+- the current mirrored two-person pose and camera
+- both characters' bodies, arms, hips, legs and heels
+- Eleanor's face and black outfit
+- Lydia's white triangle bikini top, white garter and white wrist cuffs
+- the ivory bed, pillows and lighting
+- the current pixel-art style and colors
+
+Do not change the chest, clothing, pose or framing. No text, no watermark. Output 16:9 2K.

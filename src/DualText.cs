@@ -21,7 +21,8 @@ namespace EleanorRomance
                     ModEntry.LogError("Missing dual story block: " + id);
                     continue;
                 }
-                int cursor=DualState.Int("cursor."+id);
+                string cursorKey = DualContent.CursorKey(id);
+                int cursor = DualState.Int(cursorKey);
                 int position=0;
                 foreach (DualContent.Line line in lines)
                 {
@@ -35,7 +36,7 @@ namespace EleanorRomance
                             StoryPresentation.MarkCompanion(node,
                                 string.IsNullOrEmpty(companionName) ? L.Eleanor : companionName);
                         PortraitExpression.Apply(node,line.Key,speaker);
-                        node.SetEndAction(()=>DualState.SetInt("cursor."+id,Math.Max(next,DualState.Int("cursor."+id))));
+                        node.SetEndAction(() => DualState.SetInt(cursorKey, Math.Max(next, DualState.Int(cursorKey))));
                         if (head == null) head = node;
                         else tail.SetNextDialogue(node);
                         tail = node;

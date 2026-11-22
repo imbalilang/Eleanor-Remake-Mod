@@ -1,0 +1,29 @@
+Use Image 1 as the exact pose, action, camera and composition base. Use Image 2 as the required pixel-art CG style. Use Image 3 only for Lydia's face and hair identity.
+
+CONTENT LOCK - Image 1:
+- same leaning-forward-over-white-pillow pose, low camera angle, shoulder/arm placement and framing
+- same large-bust adult body proportions
+- same white bunny-ear headband, white wrist cuff, dark burgundy background and warm lighting
+- remove the black censor blobs and watermark completely
+
+REPLACE THE PERSON:
+- face and hair must be Lydia from Image 3: long ash-brown hair, amber-honey eyes, youthful soft face, pearl earrings
+- do NOT keep the original blonde hair or blue eyes
+- do NOT add glasses
+- do NOT add any rose, ribbon, hairpin or extra hair ornament
+
+REMOVE:
+- glasses completely
+- golden halo/ring behind the head completely; fill the area with plain dark burgundy
+- plaid shirt/outer jacket completely
+- black censor blobs and watermark
+
+KEEP THE UNDERWEAR:
+- keep the white fitted bustier/bra top underneath the jacket, covering the nipples naturally
+- no plaid fabric anywhere
+
+STYLE LOCK - Image 2:
+- approved project pixel-art CG: visible pixel grid, dense dithering, layered intermediate tones, crisp dark outlines and rich shading
+- not flat anime, not smooth 3D
+
+Keep the pose, action, body, bunny ears, white top, wrist cuff, pillow and composition unchanged. Output 16:9 2K. No text, no watermark, no extra limbs.

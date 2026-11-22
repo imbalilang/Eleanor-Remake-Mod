@@ -312,8 +312,8 @@
     "Every word you said today will reach Security. (Security rep {0}+)"
   ],
   "er_maid_choice_threat_report_desc": [
-    "需要已有的栽赃或威胁记录，且渠道真的受理。",
-    "Requires an existing frame-up or threat record, and a channel that actually responds."
+    "治安部声望达到 30 即可受理这次的威胁记录。",
+    "Security reputation 30 is enough for them to take this threat report."
   ],
   "er_maid_choice_threat_upper": [
     "要谈，就让上层区的人正式来谈。（上层区声望 {0}+）",

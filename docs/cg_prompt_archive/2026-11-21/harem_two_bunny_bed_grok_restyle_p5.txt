@@ -1,0 +1,9 @@
+Image 1 is the content and layout master only: preserve the two bunny girls, faces, hairstyles, mirrored pose, camera, outfits, garters, heels and bed. Discard Image 1's smooth anime rendering completely.
+
+Image 5 is the primary pixel-style master.
+
+Images 2, 3 and 4 are additional pixel-style references.
+
+Redraw Image 1 from scratch in the pixel style of Image 5: broad pixel clusters, 2-3 hard shading steps, crisp dark outlines, large flat color areas and a limited palette. Replace skin gradients with flat tones, fine hair strands with broad ribbon-like locks, and soft sheet shading with a few hard folds. Use irregular localized dithering only at major transitions.
+
+Do not preserve Image 1's smooth shading. Do not add a rose or hair bow. No text, no watermark, no extra limbs. Exact 16:9, 2048x1152.

@@ -85,12 +85,6 @@ namespace EleanorRomance
         }
     }
 
-    [HarmonyPatch(typeof(PlayerStore), nameof(PlayerStore.AddDirectSellingItemToTableMiddle))]
-    internal static class Patch_NativeEleanorRewardPlacement
-    {
-        private static bool Prefix(GameItem __0) => !VanillaEleanorBridge.CaptureReward(__0);
-    }
-
     [HarmonyPatch(typeof(StoreClientManager), nameof(StoreClientManager.HandleEleanorEarlyClient))]
     internal static class Patch_HandleEleanorEarlyClient
     {

@@ -450,6 +450,7 @@ namespace EleanorRomance
             {
                 RomanceState.RevComplete = true;
                 RomanceState.RevEndingShown = false;
+                StoryEngine.GiveSelfRefillingPerfume();
                 Advance(ChR14, RomanceState.ChapterComplete);
                 StoryEngine.Dismiss();
                 EndingPageUI.ShowRevolutionCompletion();

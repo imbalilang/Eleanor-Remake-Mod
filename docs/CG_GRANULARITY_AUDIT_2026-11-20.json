@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-20",
+  "style_reference": "dsh-image-gen/image-8ebd4ec5.png",
+  "comparison_sheet": "Art/character-assets-2026-11-20/cg/approved_cg_granularity_compare.jpg",
+  "metrics_normalized_width_960": {
+    "style_reference": {
+      "size": [
+        1536,
+        864
+      ],
+      "colors": 246277,
+      "flat_ratio": 0.025,
+      "hf_ratio": 0.0912,
+      "lap_var": 1881.9
+    },
+    "love_white_sleepwear_B": {
+      "file": "Art/character-assets-2026-11-20/cg/love_white_sleepwear_wakeup/approved/love_white_sleepwear_wakeup_cg_960_approved.png",
+      "size": [
+        960,
+        540
+      ],
+      "colors": 82278,
+      "flat_ratio": 0.273,
+      "hf_ratio": 0.0515,
+      "lap_var": 777.9
+    },
+    "servant_bunny_service": {
+      "file": "Art/character-assets-2026-11-20/cg/servant_bunny_service/approved/servant_bunny_service_cg_960_approved.png",
+      "size": [
+        960,
+        540
+      ],
+      "colors": 53122,
+      "flat_ratio": 0.326,
+      "hf_ratio": 0.0399,
+      "lap_var": 869.6
+    },
+    "lydia_harem_bed_pose": {
+      "file": "Art/character-assets-2026-11-20/cg/lydia_harem_bed_pose/no_bow_pixel/approved/lydia_harem_bed_pose_no_bow_no_halo_cg_1291_approved.png",
+      "size": [
+        1291,
+        728
+      ],
+      "colors": 76073,
+      "flat_ratio": 0.416,
+      "hf_ratio": 0.0342,
+      "lap_var": 1097.0
+    },
+    "lydia_grok_final": {
+      "file": "Art/character-assets-2026-11-20/cg/lydia_white_bunny_glasses_test/grok_final_oneshot/approved/lydia_white_bunny_grok_final_1291x728_approved.png",
+      "size": [
+        1291,
+        728
+      ],
+      "colors": 51875,
+      "flat_ratio": 0.425,
+      "hf_ratio": 0.0282,
+      "lap_var": 1564.3
+    }
+  },
+  "relative_to_style": {
+    "love_white_sleepwear_B": {
+      "hf_ratio_pct": 56.5,
+      "flat_ratio_multiple": 10.9
+    },
+    "servant_bunny_service": {
+      "hf_ratio_pct": 43.7,
+      "flat_ratio_multiple": 13.0
+    },
+    "lydia_harem_bed_pose": {
+      "hf_ratio_pct": 37.5,
+      "flat_ratio_multiple": 16.6
+    },
+    "lydia_grok_final": {
+      "hf_ratio_pct": 30.9,
+      "flat_ratio_multiple": 17.0
+    }
+  },
+  "verdict": {
+    "closest": "lydia_harem_bed_pose",
+    "major_issues": [
+      "lydia_grok_final",
+      "lydia_harem_bed_pose",
+      "servant_bunny_service"
+    ],
+    "minor_issue": [
+      "love_white_sleepwear_B"
+    ],
+    "none_matches_style_reference": true
+  }
+}

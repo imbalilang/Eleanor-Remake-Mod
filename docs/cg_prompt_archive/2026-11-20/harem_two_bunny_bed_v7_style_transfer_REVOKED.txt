@@ -1,0 +1,19 @@
+Preserve the exact composition, identities, body proportions, pose, hair silhouette and costume placement of Image 1. Do NOT redesign the characters, move the garter, or change their bust sizes.
+
+Image 1 is the content lock:
+- Eleanor left, Lydia right, symmetrical mirrored poses
+- both hair pulled back into contained low ponytails behind the shoulders
+- both elbows bent, hands beside the ears, chests lifted
+- both legs bent outward in a mirrored shape
+- Lydia 32F/97 must stay visibly larger and fuller than Eleanor 32E/94
+- keep Lydia's white garter exactly where it is in Image 1
+- simple ivory bedding
+
+Image 2 is the approved pixel-art CG style reference. Re-render Image 1 in Image 2's dense pixel-art style:
+- visible pixel grid and pixel clusters
+- rich dithering and layered intermediate tones
+- detailed hair highlights, modeled skin shading and fabric folds
+- crisp dark outlines and rich color depth
+Do NOT copy Image 2's character, motorcycle, street, neon background or outfit.
+
+Only change the rendering style. Do not change the layout, pose, hair silhouette, garter side, breast size or limb positions. No new characters, no text, no watermark, no extra limbs.

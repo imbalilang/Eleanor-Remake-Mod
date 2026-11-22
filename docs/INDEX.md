@@ -27,6 +27,7 @@
 |---|---|---|
 | [PROJECT_PRINCIPLES.md](PROJECT_PRINCIPLES.md) | 项目定位、创作原则、检查表 | 作者决定；Agent 不得自行增删原则 |
 | 仓库根 `CLAUDE.md` | 工程与内容工作规则、发布纪律 | 规则变化时同步 |
+| [新章对白写作指引](新章对白写作指引.md) | 新章起草与监修。用《停下》、手镯和《窗口》等修订实例处理反复说明立场、机械断句、动作挤框与分支复述 | 写本次来访和选项时使用，按直接相接的前情与出口顺读 |
 | [原作Eleanor章节_对照稿_2026-11-10.md](原作Eleanor章节_对照稿_2026-11-10.md)、[原作非台词表现与MOD应用审计_2026-11-10.md](原作非台词表现与MOD应用审计_2026-11-10.md) | **作者的主要文风/表现参照**：游戏本体官方中文与原生表现 | 只作参照；不把原作文本当 MOD 事实 |
 | [埃利诺-角色设定.txt](埃利诺-角色设定.txt)、[莉迪亚-角色设定.txt](莉迪亚-角色设定.txt)、[索菲娅-角色设定.txt](索菲娅-角色设定.txt) | 三位角色的**一级人设**：共同线状态下的基准人设 | 人设变化先改卡 |
 | [埃莉诺与莉迪亚_全局人设基准_2026-11-11.md](埃莉诺与莉迪亚_全局人设基准_2026-11-11.md) | 各路线/阶段表的参考材料（§2.2、§3.2 的处境、欲望、回避、禁止项），可用于理解**路线二级人设**；本身不是正式二级人设，冲突时以一级静态卡与 Content 为准 | 关系或阶段行为变化时同步；正式路线人设写在各路线的 ActCard/world book（stage/facts/voice/boundaries，本地材料，`tools/NovelWorkFlow_Eleanor/` 不入库） |
@@ -48,7 +49,7 @@
 | [角色卡_前期共同线_c01-c05_2026-11-12.md](角色卡_前期共同线_c01-c05_2026-11-12.md) | NovelWorkFlow 输入 | 历史管线的 world book 输入之一 |
 | [RUNTIME_TEXT_MAP.md](RUNTIME_TEXT_MAP.md) | **工作参考**：v1.23 源码核对的正文调用链、块↔章节映射、死块与阅读文档漂移 | 改文案/查文本问题前先看；源码或内容结构变化时更新 |
 | [CURRENT_TEXT_READING.md](CURRENT_TEXT_READING.md) | **当前阅读底稿**：由 `tools/render_current_reading.py` 从 Content 生成（块级、按运行章节/场景分组，含未上屏块附录） | 修改 Content 后重新生成，不手改 |
-| [TEXT_STYLE_AUDIT_STANDARD.md](TEXT_STYLE_AUDIT_STANDARD.md) | **Agent 工作基准 v0.2（指标只做分诊，验收走盲测）**：AI 感来源假设 + 反循环条款 + 路线/场景/行级审计标准 | 用 `tools/audit_text_style.py` 分诊；验收须按 §5 盲测/消融，不以分数为准；不是项目原则 |
+| [TEXT_STYLE_AUDIT_STANDARD.md](TEXT_STYLE_AUDIT_STANDARD.md) | 既有正文的专项审计参考，记录 AI 感成因假设及盲测方法 | 专门评估某项写法时参照；日常新稿使用上面的《新章对白写作指引》 |
 
 参考与研究（不是 MOD 事实）：[原作经营机制盘点与Eleanor路线组合研究_2026-11-09.md](原作经营机制盘点与Eleanor路线组合研究_2026-11-09.md)、[NATIVE_STORY_MECHANISMS_ASSESSMENT.md](NATIVE_STORY_MECHANISMS_ASSESSMENT.md)。原作对照稿与非台词审计已见 §2。
 

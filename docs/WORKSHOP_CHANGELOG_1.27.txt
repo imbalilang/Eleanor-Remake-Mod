@@ -1,0 +1,13 @@
+1.27 Serpico 来访日与恋爱停水日冲突修复
+
+- 恋爱线第二幕的停水场景会强制收店并解散后续客户队列；若当天正好是原生 Serpico 剧情来访日，Serpico 的数据选择或最终奖励客户会被一起解散。
+- 当原生 Serpico 剧情来访到期时，恋爱线首次第二幕来访顺延到次日；保护全部 Serpico 来访日（含文件选择日、警官日与收尾奖励日），收尾奖励日仅在已做出真实文件选择（1/2/3）时保护。
+- 保留 1.26 文案收尾、1.25 全局文案修订、1.24 原生操作压价判定、1.23 王尔德筹备提示、1.22 假货检查反应、1.21 韩语修正及更早修复。
+- 不改路线、选项结果、目标日或结局。
+
+1.27 Serpico visit day and love water-shortage conflict fix
+
+- The love-route Act 2 water-shortage scene forces the shop closed and dismisses the remaining client stack; when it lands on a native Serpico story visit day, Serpico's document choice or final reward client is dismissed with it.
+- When a native Serpico story visit is due, the love route's first Act 2 visit is delayed to the next day. All Serpico visit days are protected, including the document choice, officer and concluding reward days; the concluding day is protected only when a real document choice (1/2/3) has been made.
+- The 1.26 final text polish, 1.25 global text revision, 1.24 native-action-only lowball rule, 1.23 Wilde preparation tip, 1.22 counterfeit-inspection reaction, 1.21 Korean fixes and earlier fixes remain.
+- No route, choice-outcome, target-day or ending changes.

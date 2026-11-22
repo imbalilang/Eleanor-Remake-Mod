@@ -80,3 +80,4 @@
 ## 已通过 CG：`love_white_sleepwear_wakeup` — Eleanor 恋爱线白色睡衣起床 CG，960×540，approved 2026-11-20。
 ## 已通过 CG：`love_white_sleepwear_wakeup` — B 版，960×540，approved 2026-11-20。
 ## 已通过 CG：`servant_bunny_service` — 采用 image-0488bb01，960×540，approved 2026-11-20。
+## 已通过 CG：`lydia_harem_bed_pose_no_bow_no_halo` — 1291×728，approved 2026-11-20。

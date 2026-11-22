@@ -486,28 +486,37 @@ namespace EleanorRomance
                 string departureBlock = RomanceState.UncleReported
                     ? StoryV06Content.B_C04_N008
                     : StoryV06Content.B_C04_B009;
+                bool resolved = false;
                 Action finishGift = () =>
                 {
-                    if (RomanceState.WarningGiftGiven) Advance(5, 6);
-                    StoryEngine.Dismiss();
-                };
-                Dialogue purifierGift = StoryEngine.Build(departureBlock);
-                StoryEngine.Tail(purifierGift).SetEndAction(finishGift);
-                Dialogue perfumeGift = StoryEngine.Build(departureBlock);
-                StoryEngine.Tail(perfumeGift).SetEndAction(finishGift);
-                Dialogue noGift = StoryEngine.Build(departureBlock);
-                StoryEngine.Tail(noGift).SetEndAction(() =>
-                {
+                    if (resolved) return;
+                    resolved = true;
                     Advance(5, 6);
                     StoryEngine.Dismiss();
+                };
+                Dialogue departure = StoryEngine.Build(departureBlock);
+                // The native free-reward barter UI transfers ownership and moves
+                // the chosen keepsake exactly like vanilla EleanorWarned.
+                departure.SetStartAction(() => RomanceState.WarningGiftGiven = true);
+                StoryEngine.Tail(departure).SetEndAction(finishGift);
+                client.acceptDealDialogue = departure;
+                // Dismiss/decline from the native offer UI still advances the
+                // chapter, just without the gift.
+                client.OnDismiss = finishGift;
+                StoreClient nativeWarned = StoreClientUniqueList.EleanorWarned();
+                client.SetBarterOffer(nativeWarned.barterOffer);
+                StoryEngine.Tail(tell).SetEndAction(() =>
+                {
+                    try
+                    {
+                        client.barterOffer.InstanciateOffer();
+                    }
+                    catch (Exception ex)
+                    {
+                        StoryDirector.LogError("Warning gift offer failed: " + ex);
+                        finishGift();
+                    }
                 });
-                StoryEngine.AddChoices(tell, Prompt("er_prompt_gift"),
-                    new StoryEngine.Choice(L.Get("er_choice_gift_purifier"), L.Get("er_choice_gift_purifier_desc"),
-                        purifierGift, () => GiveWarningGift(0)),
-                    new StoryEngine.Choice(L.Get("er_choice_gift_perfume"), L.Get("er_choice_gift_perfume_desc"),
-                        perfumeGift, () => GiveWarningGift(1)),
-                    new StoryEngine.Choice(L.Get("er_choice_no_gift"), L.Get("er_choice_no_gift_desc"),
-                        noGift, null));
             }
             else
             {
@@ -518,7 +527,7 @@ namespace EleanorRomance
                 });
             }
 
-            StoryEngine.AddChoices(root, Prompt("er_prompt_warning"),
+            StoryEngine.AddChoicesOn(root,
                 new StoryEngine.Choice(L.Get("er_choice_tell_crate"), L.Get("er_choice_tell_crate_desc"),
                     tell, () =>
                     {
@@ -531,19 +540,6 @@ namespace EleanorRomance
             client.mainDialogue = root;
             client.CompleteClientCreation();
             return client;
-        }
-
-        private static void GiveWarningGift(int option)
-        {
-            if (RomanceState.WarningGiftGiven) return;
-            if (!VanillaEleanorBridge.GiveWarningGift(option))
-            {
-                StoryDirector.Notify(L.Get("er_notice_gift_pending"));
-                return;
-            }
-
-            RomanceState.WarningGiftGiven = true;
-            StoryDirector.Notify(L.Get("er_notice_gift_received"));
         }
 
         // ------------------------------------------------------------------
@@ -1533,7 +1529,6 @@ namespace EleanorRomance
                     approved,
                     () => { if (StoryEngine.Spend(300)) RomanceState.ProtectionChannel = 1; },
                     () => StoryEngine.SecRep() >= 30
-                        && (RomanceState.UncleReported || RomanceState.ThreatRecorded)
                         && StoryEngine.HasCash(300)),
                 new StoryEngine.Choice(L.Get("er_choice_protect_ul", 30, 400), L.Get("er_choice_protect_ul_desc"),
                     approved,
@@ -1910,13 +1905,14 @@ namespace EleanorRomance
         // 23. Work and future
         // ------------------------------------------------------------------
 
-        internal static StoreClient CreateFutureChapter()
+        internal static StoreClient CreateFutureChapter(bool maidReturn = false)
         {
             StoreClient client = NewEleanorClient("ch23", "eleanor_scav", StoreClient.ClientIntent.DIALOGUE);
             Dialogue root = StoryEngine.Build(RomanceState.Route == 2
                 ? StoryV06Content.B_C22_B002
                 : StoryV06Content.B_C22_B001);
-            StoryEngine.Append(root, StoryV06Content.B_C22_B003);
+            if (RomanceState.Route == 2 || RomanceState.RomanceConfirmed || RomanceState.Romance == 2)
+                StoryEngine.Append(root, StoryV06Content.B_C22_B003);
 
             if (RomanceState.RomanceConfirmed)
             {
@@ -2027,7 +2023,7 @@ namespace EleanorRomance
             if(supplied==null)StoryEngine.Append(root, lover ? StoryV06Content.B_C23_B003 : StoryV06Content.B_C23_B004);
             Dialogue tail = StoryEngine.Tail(root);
             Dialogue gift = StoryEngine.Text(L.Eleanor, L.Get("er_line_end_perfume"));
-            MaidStory.GateOriginalReward(root,gift);
+            MaidStory.GrantOriginalReward(root,gift);
             Dialogue beforeClosing = gift;
             if (lover)
             {
@@ -2037,7 +2033,13 @@ namespace EleanorRomance
             bool receipt = MaidWorldEvents.AppendReceipt(beforeClosing);
             beforeClosing = StoryEngine.Tail(beforeClosing);
             if(receipt)beforeClosing.SetEndAction(MaidWorldEvents.SubmitReceipt);
-            Dialogue closing = StoryEngine.Text(L.Get("er_name_narrator"), L.Get("er_line_core_end"));
+            string coreEnd = L.Get("er_line_core_end");
+            if (!lover)
+            {
+                int cut = coreEnd.IndexOfAny(new[] { '。', '！', '？', '.', '!', '?' });
+                if (cut >= 0) coreEnd = coreEnd.Substring(0, cut + 1);
+            }
+            Dialogue closing = StoryEngine.Text(L.Get("er_name_narrator"), coreEnd);
             beforeClosing.SetNextDialogue(closing);
             DualText.FinishAll(root, () =>
             {

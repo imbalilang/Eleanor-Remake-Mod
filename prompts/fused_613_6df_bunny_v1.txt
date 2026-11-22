@@ -1,0 +1,35 @@
+Create a completely new 16:9 pixel-art CG from scratch, fusing the strongest parts of two previous prompts.
+
+Image 1 = Eleanor face and hair identity reference only.
+Image 2 = Lydia face and hair identity reference only.
+Image 3 = pixel-art style anchor only.
+
+SCENE:
+Two young adult bunny girls lying side by side on a simple ivory bed with soft pillows. Eleanor left, Lydia right. Simple bed background only.
+
+COSTUME:
+Eleanor: black bunny ears, black crown bow, black neck bow, black satin triangle bikini top, black thong, ONE black ruffled garter on her left thigh only, black wrist cuffs, black heels.
+Lydia: white bunny ears, white crown bow, white neck bow, white satin triangle bikini top, white thong, ONE white ruffled garter on her right thigh only, white wrist cuffs, white heels.
+Lydia is visibly one cup larger than Eleanor, but her waist, abdomen, hips, arms and thighs stay as slim as Eleanor's.
+
+POSE — EXACT MIRROR, BOTH HANDS NEAR EARS:
+- both lying on their backs, heads at the same height and angled slightly toward each other
+- both elbows bent, both hands resting near the ears/hair
+- both shoulders pulled back, both chests lifted toward the camera
+- both hips angled slightly inward
+- both legs bent outward to opposite sides in a mirrored shape
+- all four arms and all four legs clearly separated
+- both legs of each character fully visible: both thighs, knees, calves and heels readable
+- no leg hidden behind the other, no crossed or overlapping calves
+- exactly two bunny ears per character, exactly two arms and two legs each
+
+HAIR:
+Long hair gathered close behind the head and shoulders, not fanned across the bed.
+
+FACE:
+Youthful soft faces, large expressive eyes, soft cheeks, natural small nose and lips. Not mature, not sultry, no heavy makeup.
+
+STYLE:
+Dense pixel-art CG with visible pixel clusters, irregular localized dithering in tonal transitions, crisp dark outlines and hard color steps. Character-dominant scale. No repeating checkerboard, no smooth anime, no 3D, no blur, no large flat unshaded areas.
+
+No text, no watermark, no extra limbs. Output 16:9 2K.

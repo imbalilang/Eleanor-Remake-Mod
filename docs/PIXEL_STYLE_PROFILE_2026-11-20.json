@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-20",
+  "name": "Project Pixel CG Style Profile v1",
+  "canonical_id": "love_white_sleepwear_wakeup_B",
+  "canonical_file": "Art/character-assets-2026-11-20/cg/love_white_sleepwear_wakeup/approved/love_white_sleepwear_wakeup_cg_960_approved.png",
+  "canonical_note": "Chosen from the five previously accepted CGs because it has the lowest flat_ratio and highest edge density among the currently approved set. It becomes the single style target; the other four are legacy accepted but are not additional standards.",
+  "normalization": "RGB, resized to width 960 with Lanczos before measuring",
+  "metrics": {
+    "hf_ratio": {
+      "value": 0.0515,
+      "min": 0.0386,
+      "max": 0.0644,
+      "weight": "mandatory"
+    },
+    "flat_ratio": {
+      "value": 0.273,
+      "min": 0.205,
+      "max": 0.341,
+      "weight": "mandatory"
+    },
+    "palette_5bit": {
+      "value": 1607,
+      "min": 1205,
+      "max": 2009,
+      "weight": "mandatory"
+    },
+    "edge_density": {
+      "value": 0.1688,
+      "min": 0.135,
+      "max": 0.203,
+      "weight": "mandatory"
+    },
+    "smooth_fraction": {
+      "value": 0.622,
+      "min": 0.529,
+      "max": 0.715,
+      "weight": "mandatory"
+    }
+  },
+  "pass_rule": "All five metrics must be inside the bands. Additionally, no uniform checkerboard dithering and no smooth anime rendering.",
+  "legacy_accepted_not_standard": [
+    "servant_bunny_service",
+    "lydia_harem_bed_pose_no_bow_no_halo",
+    "lydia_white_bunny_grok_final",
+    "harem_two_bunny_bed_v7"
+  ]
+}

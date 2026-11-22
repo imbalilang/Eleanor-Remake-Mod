@@ -1,0 +1,304 @@
+腾讯混元大模型 提交混元生图任务_腾讯云
+腾讯云
+最新活动
+大模型
+产品
+解决方案
+定价
+企业中心
+云市场
+开发者
+客户支持
+合作与生态
+了解腾讯云
+搜索
+腾讯混元大模型
+文档中心
+入门中心
+API 中心
+SDK 中心
+文档活动
+我的反馈
+帮你快速理解、总结文档
+立即下载
+文档中心
+>
+腾讯混元大模型
+>
+API 文档
+>
+混元生图相关接口
+>
+提交混元生图任务
+提交混元生图任务
+最近更新时间：
+2026-02-03 01:56:24
+微信扫一扫
+QQ
+新浪微博
+复制链接
+链接复制成功
+我的收藏
+本页目录：
+1. 接口描述
+2. 输入参数
+3. 输出参数
+4. 示例
+示例1 调用成功
+5. 开发者资源
+腾讯云 API 平台
+API Inspector
+SDK
+命令行工具
+6. 错误码
+1. 接口描述
+接口请求域名： hunyuan.tencentcloudapi.com 。
+混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
+提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
+查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+推荐使用 API Explorer
+点击调试
+API Explorer 提供了在线调用、签名验证、SDK 代码生成和快速检索接口等能力。您可查看每次调用的请求内容和返回结果以及自动生成 SDK 调用示例。
+2. 输入参数
+以下请求参数列表仅列出了接口请求参数和部分公共参数，完整公共参数列表见
+公共请求参数
+。
+参数名称
+必选
+类型
+描述
+Action
+是
+String
+公共参数
+，本接口取值：SubmitHunyuanImageJob。
+Version
+是
+String
+公共参数
+，本接口取值：2023-09-01。
+Region
+是
+String
+公共参数
+，详见产品支持的
+地域列表
+，本接口仅支持其中的: ap-guangzhou 。
+Prompt
+是
+String
+文本描述。
+算法将根据输入的文本智能生成与之相关的图像。
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
+示例值：雨中, 竹林,  小路
+NegativePrompt
+否
+String
+反向提示词。
+推荐使用中文。最多可传1024个 utf-8 字符。
+示例值：黑色，雨
+Style
+否
+String
+绘画风格。
+请在
+混元生图风格列表
+中选择期望的风格，传入风格编号。
+不传默认不指定风格。
+示例值：riman
+Resolution
+否
+String
+生成图分辨率。
+支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3），不传默认使用1024:1024。
+如果上传 ContentImage 参考图，分辨率仅支持：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1），不传将自动适配分辨率。如果参考图被用于做风格转换，将生成保持原图长宽比例且长边为1024的图片，指定的分辨率不生效。
+示例值：1024:1024
+Num
+否
+Integer
+图片生成数量。
+支持1 ~ 4张，默认生成1张。
+示例值：1
+Clarity
+否
+String
+超分选项，默认不做超分，可选开启。
+x2：2倍超分
+x4：4倍超分
+在 Resolution 的基础上按比例提高分辨率，例如1024:1024开启2倍超分后将得到2048:2048。
+示例值：x2
+ContentImage
+否
+Image
+用于引导内容的参考图。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
+Revise
+否
+Integer
+prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。如果上传了参考图，扩写关闭不生效，将保持开启。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+示例值：0
+Seed
+否
+Integer
+随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+扩写开启时固定种子不生效，将保持随机。
+示例值：1
+LogoAdd
+否
+Integer
+为生成结果图添加显式水印标识的开关，默认为1。
+1：添加。
+0：不添加。
+其他数值：默认按1处理。
+建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+示例值：1
+LogoParam
+否
+LogoParam
+标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+3. 输出参数
+参数名称
+类型
+描述
+JobId
+String
+任务 ID。
+示例值：251197749-1731412663-5330d0c8-a0ed-11ef-b6bc-52540073409e-0
+RequestId
+String
+唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+4. 示例
+示例1 调用成功
+调用成功
+输入示例
+POST / HTTP/1.1
+Host: hunyuan.tencentcloudapi.com
+Content-Type: application/json
+X-TC-Action: SubmitHunyuanImageJob
+<公共请求参数>
+
+{
+    "Prompt": "雨中, 竹林, 小路"
+}
+输出示例
+{
+"Response"
+:
+{
+"JobId"
+:
+"251197749-1731412663-d4e1f224-fa21-40bc-9ee7-4bb13abece6e-0"
+,
+"RequestId"
+:
+"d4e1f224-fa21-40bc-9ee7-4bb13abece6e"
+}
+}
+5. 开发者资源
+腾讯云 API 平台
+腾讯云 API 平台
+是综合 API 文档、错误码、API Explorer 及 SDK 等资源的统一查询平台，方便您从同一入口查询及使用腾讯云提供的所有 API 服务。
+API Inspector
+用户可通过
+API Inspector
+查看控制台每一步操作关联的 API 调用情况，并自动生成各语言版本的 API 代码，也可前往
+API Explorer
+进行在线调试。
+SDK
+云 API 3.0 提供了配套的开发工具集（SDK），支持多种编程语言，能更方便的调用 API。
+Tencent Cloud SDK 3.0 for Python:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for Java:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for PHP:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for Go:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for Node.js:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for .NET:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for C++:
+CNB
+,
+GitHub
+,
+Gitee
+Tencent Cloud SDK 3.0 for Ruby:
+CNB
+,
+GitHub
+,
+Gitee
+命令行工具
+Tencent Cloud CLI 3.0
+6. 错误码
+以下仅列出了接口业务逻辑相关的错误码，其他错误码详见
+公共错误码
+。
+错误码
+描述
+FailedOperation.ImageDownloadError
+LogoUrl 或 LogoImage 有误，水印图下载失败。
+InvalidParameterValue.ParameterValueError
+参数字段或者值有误
+OperationDenied.ImageIllegalDetected
+图片可能包含敏感信息，请重试
+上一篇
+:
+文件删除
+下一篇
+:
+查询混元生图任务
+Copyright © 2013
+-2026
+Tencent Cloud. All Rights Reserved.
+腾讯云 版权所有
+深圳市腾讯计算机系统有限公司
+ICP备案/许可证号：
+粤B2-20090059
+粤公网安备44030502008569号
+腾讯云计算（北京）有限责任公司
+京ICP证150476号 |
+京ICP备11018762号
+中国站
+中文
+International
+文档“捉虫”活动
+检视指定产品文档，发现和反馈有效问题，奖！
+API专项"捉虫"
+反馈API文档问题，代金券、周边好礼奖不停！
+文档建议，你提了吗
+快来使用腾讯云产品文档，提出有效建议，奖！
+咨询

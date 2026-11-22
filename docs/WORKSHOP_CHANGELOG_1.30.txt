@@ -1,0 +1,15 @@
+1.30 后宫 v2 香水补齐与韩语校对合并
+
+- 补齐后宫 v2 终局香水：dv13 结局完成时直接发放自我补充香水；已完成旧存档在加载或开店时自动补发。
+- 韩语本地化以 1.29 的 ko.csv 为基线选择性合并：应用 200 行斜体动作后空格/排版修正，以及埃莉诺、莉迪亚的半语语气与标点修正。
+- 未整表替换；排除校对表中的旧版本内容、错位行、错误译文和不匹配的斜体标签，保留当前新增 key。
+- 保留 1.29 的莉迪亚闭店约会修复、原版警告礼 barter 流程、终局香水发放、文案修订、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。
+- 不改路线、选项结果、目标日或结局。
+
+1.30 Harem v2 perfume coverage and Korean proofreading merge
+
+- Completed the harem v2 endgame perfume: dv13 now grants the self-refilling perfume directly; completed saves receive it automatically on load or opening.
+- The Korean localization now selectively merges the reviewed proofreading pass on top of the 1.29 ko.csv: 200 spacing/formatting fixes after italic actions, plus speech-level and punctuation fixes for Eleanor and Lydia.
+- The translation table was not replaced wholesale; outdated content, misaligned lines, incorrect translations and mismatched italic tags were excluded, and current keys were retained.
+- The 1.29 Lydia closure-date fix, native warning-gift barter flow, endgame perfume delivery, text pass, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain.
+- No route, choice-outcome, target-day or ending changes.

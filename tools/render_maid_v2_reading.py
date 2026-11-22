@@ -100,13 +100,13 @@ def render():
                         lines.append(f"{SPEAKERS.get(line['speaker'],line['speaker'])}：{clean(line['text'])}")
                     lines.append("")
             elif seg["type"] == "choice":
-                lines.append(f"选择：{seg['prompt']}")
+                lines.append("在上句选择" if seg.get("attach_to_previous") else f"选择：{seg['prompt']}")
                 for opt in seg["options"]:
                     suffix = opt["id"].split("_")[-1]
                     note = IMPACTS.get((scene["id"], seg["id"], suffix),
                                        "不改变成功、驻场、邀请或关系结果；只改变语气/说法。")
                     lines.append(f"- **{opt['label']}**：{note}")
-                    if not opt.get("mainline") and opt.get("block"):
+                    if opt.get("block"):
                         for line in scene["blocks"][opt["block"]]["lines"]:
                             lines.append(f"  - {SPEAKERS.get(line['speaker'],line['speaker'])}：{clean(line['text'])}")
                         if opt.get("result"):

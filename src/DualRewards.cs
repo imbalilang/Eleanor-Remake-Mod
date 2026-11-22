@@ -46,7 +46,7 @@ namespace EleanorRomance
             return true;
         }
         public static bool NeedsClaim => !DualState.Flag("d.route")
-            && (Enumerable.Range(1,3).Any(Ready) || StoryCoreFacts.PerfumePending || StoryCoreFacts.LocketPending || MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24));
+            && (Enumerable.Range(1,3).Any(Ready) || StoryCoreFacts.LocketPending || MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24));
 
         public static int DueRewrittenReward(int day)
         {
@@ -67,10 +67,11 @@ namespace EleanorRomance
                 claim.SetEndAction(()=>{if(!Give(stage))StoryDirector.Notify(L.Get("er_dual_plaque_full"));});
                 StoryEngine.Tail(root).SetNextDialogue(claim);
             }
-            if(StoryCoreFacts.PerfumePending || MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24))
+            if(MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24))
             {
-                var claim=StoryEngine.Text(L.Eleanor,L.Get("er_dual_perfume_claim"));
-                claim.SetEndAction(()=>{StoryEngine.GiveSelfRefillingPerfume();if(!RomanceState.PerfumeGiven)StoryDirector.Notify(L.Get("er_dual_plaque_full"));});
+                // The perfume is now granted with the ending itself; this visit
+                // only carries the protection-case receipt.
+                var claim=StoryEngine.Text(L.Eleanor,L.Get("er_dual_receipt_claim"));
                 if(MaidWorldEvents.AppendReceipt(claim))StoryEngine.Tail(claim).SetEndAction(MaidWorldEvents.SubmitReceipt);
                 StoryEngine.Tail(root).SetNextDialogue(claim);
             }

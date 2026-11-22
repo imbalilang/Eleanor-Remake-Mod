@@ -4,6 +4,17 @@
 
 Before changing story, content, prompts, design, artwork direction, or release copy, read and follow `docs/PROJECT_PRINCIPLES.md`. It records the author's project-level positioning and constraints for the full project. Do not invent additional project principles, and do not treat an uncovered topic as permission to override those constraints. If a request conflicts with them, stop and ask the author. This is a self-funded personal hobby; the author's enjoyment is the success metric, not commercial metrics. Do not expand scope, recurring API cost, or asset spend without asking. Do not ask the author to specify chapter or act events by default; event-level planning belongs to the agent within these principles. Present finished scenes or a small set of concrete forks, not blank planning questions.
 
+## Collaboration protocol (user requirement)
+
+Before any multi-step edit or review task, read `docs/COLLABORATION_PROTOCOL.md` and follow it.
+
+- When the user says delete / remove / "not relevant", delete it first; do not rename it, downgrade it, or add a "this is out of scope" note.
+- After deleting, search the whole target scope for the same content and synonyms; report the search result as evidence.
+- Do not leave defensive footnotes such as "although this is not the main cause, ..." — if it does not serve the current goal, it should not be in the deliverable.
+- If you believe the deletion is wrong, ask before editing; do not half-comply and then explain.
+- When corrected, fix first and explain only if needed; do not replace correction with self-justification.
+- Definition of done: no matches in the agreed scope, related indexes/summaries updated, and build/check run if the change affects them.
+
 ## Content-rating labels and scene scale (user requirement)
 
 - Never add voluntary content-rating information or labels on your own — including Mature, all-ages, R18, adult, age-gating, age ratings, 成熟向, 全年龄, 年龄分级 or 年龄提示 — in README, manifest, Workshop/Nexus copy, site, docs, release notes, change logs, UI or configuration. If a platform requires a rating field, follow the platform rules and the author's decision.
@@ -54,6 +65,7 @@ If the route map is not updated, the story change is incomplete. After editing, 
 
 ## Content generation
 
+- For new Simplified Chinese scenes and choices, use the [dialogue writing guide](docs/新章对白写作指引.md) when outlining the visit, drafting it, and reading each new branch into its shared continuation. Apply the examples to the new material and its immediate context. Keep facts used for verification in the scene notes. If using NovelWorkFlow, carry the scene decisions through the selected world book under the pipeline rules below.
 - **Author update, 2026-11-17:** The author has lifted the default ban on Agent-authored prose revisions. Agents may directly edit dialogue and narration to reduce AI-like writing, while preserving canon, character appeal and runtime behavior. This supersedes older documents that require every substantive wording change to originate from NovelWorkFlow or Super QA. The current comparison task produces reviewable revisions alongside the published text and historical pipeline candidates; it does not authorize publication or deployment. Writer template and system prompt rules below remain in force.
 - Shipped localization is generated from the Content JSON via `tools/build_content.py`; the JSON is the real source.
 - **Do not run `tools/legacy/parse_v06.py`** — it overwrites `Content/story_v06.json` from the stale text script. Kept only as an archived legacy parser.

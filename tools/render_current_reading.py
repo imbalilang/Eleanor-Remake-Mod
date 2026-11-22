@@ -206,14 +206,14 @@ def render_love(out, data, blocks):
 
 
 def render_dual(out, data, blocks):
-    out.append("# 后宫线 v2（dv01–dv13；旧档 d0x/dr 只在旧存档运行）\n")
-    wanted = [f"dv{i:02d}" for i in range(1, 14)]
-    for sc in data["scenes"]:
-        if sc["id"] not in wanted:
-            continue
+    out.append("# 后宫线（新档入口《窗口》、dv01–dv13 与结局后复用日常）\n")
+    wanted = ["d01", *(f"dv{i:02d}" for i in range(1, 14)), "dr_daily_2", "dr_daily_3"]
+    scenes = {sc["id"]: sc for sc in data["scenes"]}
+    for sid in wanted:
+        sc = scenes[sid]
         out.append(f"## {sc['id']}　{sc.get('title_zh','')}")
         out.append("")
-        companion = {"dv01": "埃莉诺", "dv02": "埃莉诺", "dv03": "埃莉诺",
+        companion = {"d01": "埃莉诺", "dv01": "埃莉诺", "dv02": "埃莉诺", "dv03": "埃莉诺",
                      "dv05": "埃莉诺", "dv06": "埃莉诺", "dv07": "莉迪亚",
                      "dv13": "莉迪亚"}.get(sc["id"])
         for b in sc.get("blocks", []):
@@ -243,7 +243,7 @@ def render_v2(out, data, blocks, title):
                 out.append(f"- 结果旁白：{clean(seg.get('result',''))}")
                 out.append("")
             elif t == "choice":
-                out.append(f"- 选择：{seg.get('prompt','')}")
+                out.append("- 在上句选择" if seg.get("attach_to_previous") else f"- 选择：{seg.get('prompt','')}")
                 for opt in seg.get("options", []):
                     main = "主线" if opt.get("mainline") else "分支"
                     out.append(f"  - [{main}] {opt.get('label','')} → `{opt.get('block')}`" if opt.get("block") else f"  - [{main}] {opt.get('label','')}")
@@ -274,7 +274,8 @@ def render_legacy(out, maid, dual, rev1):
         out.append("")
     group(maid, lambda b: re.match(r"^m\d\d_", b), "侍从旧版 m11–m28")
     group(maid, lambda b: b.startswith(("world_", "wait_", "daily_", "exit_", "tragic_", "choicefix_", "legacy_", "gala_")), "侍从旧版 其他")
-    group(dual, lambda b: re.match(r"^(d0|dr|v05_|wait_)", b), "后宫旧档 d0x / dr / v05 / wait")
+    group(dual, lambda b: re.match(r"^(d0[2-9]_|dr|v05_|wait_)", b)
+          and not b.startswith(("dr_daily_2_", "dr_daily_3_")), "后宫旧档 d02–d09 / dr / v05 / wait")
     group(rev1, lambda b: b.startswith("rv"), "革命军旧版 R01–R14")
 
 
@@ -335,7 +336,7 @@ def main():
     out.append("## 口径与限制\n")
     out.append("- 本文件不模拟周目；标记为“分支/反应/条件”的块不会在一次周目中全部出现。")
     out.append("- 共同线的块顺序是代码引用顺序，不等于运行时的逐句顺序；实际拼接以 `src/EleanorStory.cs` 为准。")
-    out.append("- 旧档分支（侍从旧版、后宫 d0x/dr、革命军 R01–R14）不在正文区分，只在索引列出。")
+    out.append("- 旧档分支（侍从旧版、后宫 d02–d09 与旧 dr 排期、革命军 R01–R14）在索引列出。")
     out.append("- 重跑本脚本会整体重写本文件；修改 Content 后请重新生成，不要手改本文件。")
     out.append("")
     DOC.write_text("\n".join(out) + "\n", encoding="utf-8")

@@ -175,7 +175,7 @@ namespace EleanorRomance
                 if (item != null) tracker.Record(item, paid, eleanorIsSeller: false);
             };
 
-            Dialogue pre = LoveText.Build("la2_s2_pre");
+            Dialogue pre = LoveText.BuildForChoice("la2_s2_pre");
             pre.SetStartAction(StoryPresentation.Clear);
             Dialogue postMain = LoveText.Build("la2_s2_post_main");
             Dialogue common = LoveText.Build("la2_s2_common");
@@ -184,7 +184,7 @@ namespace EleanorRomance
             StoryEngine.Tail(postMain).SetNextDialogue(common);
             StoryEngine.Tail(alt2).SetNextDialogue(common);
             StoryEngine.Tail(alt3).SetNextDialogue(common);
-            StoryEngine.AddChoices(pre, L.Get("er_love_prompt_a2_c2"),
+            StoryEngine.AddChoicesOn(StoryEngine.Tail(pre),
                 Choice("la2_c2_1", postMain),
                 Choice("la2_c2_2", alt2),
                 Choice("la2_c2_3", alt3));
@@ -328,6 +328,7 @@ namespace EleanorRomance
             StoryEngine.Tail(root).SetEndAction(() =>
             {
                 LoveDirector.Complete(10);
+                StoryEngine.GiveSelfRefillingPerfume();
                 StoryDirector.CompleteCore();
                 EndingPageUI.ShowLoveCompletion();
                 StoryEngine.Dismiss();

@@ -1,0 +1,7 @@
+Image 1 is the content and layout master only: preserve the two bunny girls, faces, hairstyles, full-body proportions, mirrored pose, camera, outfits, garters, heels and the extended ivory bed on both sides. Discard Image 1's smooth anime rendering completely.
+
+Image 2 is the only pixel-style reference. Use it only for rendering logic and palette, not for content or composition.
+
+Redraw Image 1 in the pixel style of Image 2: broad pixel clusters, 2–3 hard shading steps, crisp dark outlines, large flat color areas and a limited palette. Replace skin gradients with flat tones, fine hair strands with broad ribbon-like locks, and soft sheet shading with a few hard folds. Use irregular localized dithering only at major transitions.
+
+Preserve the exact vertical scale and body proportions of Image 1. Do not stretch, squash or resize the two figures. Keep the added bed area on the left and right. Do not add a rose or hair bow. No text, no watermark, no extra limbs. Exact 16:9, 2048×1152.

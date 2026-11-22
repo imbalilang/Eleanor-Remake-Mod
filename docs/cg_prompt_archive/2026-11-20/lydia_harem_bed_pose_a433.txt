@@ -1,0 +1,15 @@
+Make only two targeted corrections to this exact image.
+
+1. Remove the golden halo/ring behind the head completely. Replace that area with the same plain dark burgundy background as the rest of the room. Do not leave any glowing ring, gold circle, arc or halo fragment.
+
+2. Simplify the white wrist cuff at the lower left. Make it a clean plain white cuff/band with a simple edge and at most one small button. Remove the clustered tissue-like/ruffled decoration and the hanging white cluster completely. Keep the cuff connected to the wrist.
+
+Preserve EVERYTHING else exactly:
+- same pose, face, ash-brown hair, amber eyes, expression
+- chest bare where the two bows were removed; do not add any bra, pasties, lace or new chest accessory
+- same white bunny ears, white crown bow, white neck bow
+- same body proportions, arms, hands, pillow and framing
+- same pixel-art CG style, dithering, outlines and shading
+- no necklace, no tray, no text, no watermark, no black bar
+
+Only remove the halo and simplify the wrist cuff. No other changes.

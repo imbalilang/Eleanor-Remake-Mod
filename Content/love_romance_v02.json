@@ -49,8 +49,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "埃莉诺清早存了一盆，我娘俩用到晚上够了。",
-              "en": "Eleanor saved a basin this morning. Enough for the two of us till tonight."
+              "text": "埃莉诺清早存了一盆，够我们母女用到晚上。",
+              "en": "Eleanor saved a basinful this morning. It'll last the two of us till tonight."
             },
             {
               "speaker": "Sophia",
@@ -74,12 +74,7 @@
             },
             {
               "speaker": "Sophia",
-              "text": "我不怪你。你按不按价签，我清楚。",
-              "en": "I'm not blaming you. I know how you price."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "我想给那几户凑点东西。接水得买盆，擦洗的物件也缺。她们现在那盆漏得存不住。",
+              "text": "她们那只盆漏水，得换个新的。我还想捎点擦洗用的东西。",
               "en": "I want to put together a few things for those households. A basin for water, something to wash with—their basin leaks and won't hold anything."
             },
             {
@@ -129,20 +124,16 @@
             },
             {
               "speaker": "Sophia",
-              "text": "明早胳膊抬不起来，别硬撑。",
-              "en": "If your arms won't lift tomorrow, don't push through it."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "多跑两趟。我也去，省得你一个人排队。",
-              "en": "A couple more trips. I'll come too—you shouldn't queue alone."
+              "text": "我跟你去。你提第一趟的时候，我替你排着。",
+              "en": "I'll come. While you carry the first lot, I'll hold our place."
             },
             {
               "speaker": "Sophia",
               "text": "行了，先办正事。依你看我拿几件合适？",
               "en": "All right, business first. How many do you think I should take?"
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la2_s1_post_main",
@@ -151,8 +142,8 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "钱是你的，你说了算。",
-              "en": "It's your money. You decide."
+              "text": "你挑吧，盆都在这儿。",
+              "en": "Take your pick. These are all the basins I've got."
             },
             {
               "speaker": "Sophia",
@@ -161,13 +152,13 @@
             },
             {
               "speaker": "Player",
-              "text": "货架上有什么，我报给你。要几件，你拍板。",
-              "en": "I'll tell you what's on the shelf. You decide how many."
+              "text": "你掂掂那个大的再说。",
+              "en": "Try lifting the big one first."
             },
             {
               "speaker": "Sophia",
-              "text": "<i>盯了他几秒，嘴角压下去，又没忍住翘起来。</i>行。你这种规矩，不烦人。",
-              "en": "<i>watches him for a few seconds, mouth pressing down, then curling up despite herself</i> Fine. I don't mind that rule of yours."
+              "text": "空着就这么沉？小的也拿给我看看。",
+              "en": "It's this heavy empty? Let me see the small one too."
             }
           ]
         },
@@ -503,11 +494,6 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>低声笑起来，抬指挡了下唇</i>你跟她一路人，干了活都赖在顺手头上。",
-              "en": "<i>laughs out loud, raising a hand to cover it</i> You have the same problem as her. You do something good and blame it on being on the way."
-            },
-            {
-              "speaker": "Sophia",
               "text": "农场里有个看库房的人，也跟你一样，嘴上只认账。",
               "en": "There was a warehouse keeper at the farm. Just like you, only acknowledged the ledger."
             },
@@ -518,61 +504,21 @@
             },
             {
               "speaker": "Sophia",
-              "text": "那时候我就想，这种人，东西托给他，踏实。",
-              "en": "That was when I thought, this kind of person, you could trust him with anything."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "我前几次登门，问货，问果子，问你怎么张罗着过……你心里有数吧。",
-              "en": "My last few visits—asking about goods, about fruit, about how you live... You've probably noticed.",
-              "expr": "soft"
+              "text": "这几家的口粮，劳你帮我挑吧。孩子要顶饱的，老人牙不好，得挑软的。",
+              "en": "Help me pick out rations for these families, will you? Something filling for the children, something soft for the old folks. Their teeth aren't good."
             },
             {
               "speaker": "Player",
-              "text": "有数。",
-              "en": "I noticed."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "这话我说到这儿，就不再盘问了。",
-              "en": "Then starting today, I won't ask anymore."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "下回再上门，只买货，串串门。",
-              "en": "From now on when I come, it's just to buy things. To visit."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "别跟埃莉诺提。她要晓得我在背后这么打量你，能跟我闹上三天。",
-              "en": "Don't tell Eleanor about this. If she finds out I was sizing you up behind her back, she'll fight with me for three days."
-            },
-            {
-              "speaker": "Player",
-              "text": "我不说。",
-              "en": "I won't."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "成。说粮食。",
-              "en": "Good. Let's talk food."
-            },
-            {
-              "speaker": "Sophia",
-              "text": "有孩子的那户要顶饱的，老人要软烂的。次一档的我也收，里头没坏就成。",
-              "en": "The family with children needs something filling. The old woman needs something soft. I'll take the lesser ones too, as long as the inside is good."
-            },
-            {
-              "speaker": "Player",
-              "text": "我都摆出来，你拣。",
-              "en": "Bring it all out. You pick."
+              "text": "我给你分开放。",
+              "en": "I'll set them out separately."
             },
             {
               "speaker": "Sophia",
               "text": "<i>将旧布袋铺到台面上</i>拿吧。选完照价签算。",
               "en": "<i>spreads the old cloth bag on the counter</i> Go on. Once you've picked, charge by the tag."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la2_s2_c2_2",
@@ -665,7 +611,7 @@
             },
             {
               "speaker": "Sophia",
-              "text": "昨天才加一半，今儿反倒给我涨了？多出的我记牢了，别让我改主意。",
+              "text": "昨天才加一半，今天反倒给我涨了？多出的我记牢了，别让我改主意。",
               "en": "Yesterday you only raised it by half. Today you're raising it again for me? I'll remember the extra. Don't make me change my mind."
             }
           ]
@@ -748,11 +694,6 @@
               "en": "Who looked three times? The mirror's crooked. One look doesn't show everything."
             },
             {
-              "speaker": "Player",
-              "text": "手给我看看。",
-              "en": "What are you buying?"
-            },
-            {
               "speaker": "Sophia",
               "text": "买点甜的。这几天净喝水吃干粮，嘴里寡得很。",
               "en": "Something sweet. These past few days it's just water and meals. My mouth tastes like nothing."
@@ -795,22 +736,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "喂，你发没发现，她这几天跟你讲话不拿腔了？",
-              "en": "Hey, have you noticed? These two days she doesn't talk to you so stiffly."
-            },
-            {
-              "speaker": "Player",
-              "text": "有吗？",
-              "en": "Does she?"
-            },
-            {
-              "speaker": "Sophia",
-              "text": "<i>拨着柜台上的小袋，没抬头</i>住得久了，就不想端了。",
-              "en": "<i>Fingers the goods on the counter without looking up</i>After a while, you stop bothering to keep up appearances."
-            },
-            {
-              "speaker": "SEC",
-              "text": "你觉得她这身衣裳怎么样？总比在上面那几套挺括的顺眼。",
+              "text": "你觉得她这身衣服怎么样？总比在上面那几套挺括的顺眼。",
               "en": "What do you think of what she's wearing? Better than those proper outfits she wore upstairs, right?"
             }
           ],
@@ -820,7 +746,8 @@
               "sprite": "eleanor1",
               "name": ""
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "la2_s3_post_main",
@@ -860,7 +787,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>等索菲娅转身去拿东西，捏了捏他的袖子，凑近他耳旁</i>这话留着晚上讲。有人在，不许说。",
+              "text": "<i>等索菲娅转身，凑到他耳边</i>这话留着晚上讲。",
               "en": "<i>while Sophia has her back turned, grabs his hem and leans close to his ear</i> Say that again tonight. Not in front of anyone."
             },
             {
@@ -1012,13 +939,13 @@
             },
             {
               "speaker": "Sophia",
-              "text": "也罢，甜的东西多收一点也正常。",
-              "en": "Fine. Sweets being a little more expensive makes sense."
+              "text": "我就要这包。你小时候专挑这一味。",
+              "en": "I want this bag. When you were little, you'd pick out this flavour every time."
             },
             {
               "speaker": "SEC",
-              "text": "你怎么还向着他？",
-              "en": "You're taking his side now?"
+              "text": "……那袋给我留两颗。",
+              "en": "…Save me two from that bag."
             }
           ]
         },

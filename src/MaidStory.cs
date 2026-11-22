@@ -165,7 +165,7 @@ namespace EleanorRomance
             if(code==201)return CreateExit();
             if(!MaidState.Active)
             {
-                if(code==23)return AttachOriginalSafe(EleanorStory.CreateFutureChapter());
+                if(code==23)return AttachOriginalSafe(EleanorStory.CreateFutureChapter(maidReturn: true));
                 if(code==24)return AttachOriginalSafe(EleanorStory.CreateConclusionChapter());
                 return null;
             }
@@ -217,7 +217,7 @@ namespace EleanorRomance
             StoryEngine.AddChoices(root,L.Get("er_prompt_threat"),
                 Option("er_maid_choice_threat_leave",leave,description:"er_maid_choice_threat_leave_desc"),
                 Option("er_maid_choice_threat_report",record,description:"er_maid_choice_threat_report_desc",
-                    enabled:()=>StoryEngine.SecRep()>=30 && (RomanceState.UncleReported||RomanceState.ThreatRecorded)),
+                    enabled:()=>StoryEngine.SecRep()>=30),
                 Option("er_maid_choice_threat_upper",record,description:"er_maid_choice_threat_upper_desc",
                     enabled:()=>StoryEngine.UlRep()>=30 && RomanceState.DriveState!=0),
                 Option("er_choice_threat_handover",ConfirmRisk("er_maid_handover_warning","er_maid_handover_confirm","er_choice_threat_handover_desc",betray,root),
@@ -276,7 +276,7 @@ namespace EleanorRomance
             FinishMain(fallback,16,17,()=>{RomanceState.Route=1;RomanceState.ProtectionFailed=true;});
             var menu=StoryEngine.Text(L.Player,L.Get("er_prompt_protection"));StoryEngine.Tail(root).SetNextDialogue(menu);
             GuardedOption(menu,"er_choice_protect_sec",approved,()=>PayProtection(300,1),"er_choice_protect_sec_desc",
-                ()=>StoryEngine.SecRep()>=30 && (RomanceState.UncleReported||RomanceState.ThreatRecorded) && StoryEngine.HasCash(300));
+                ()=>StoryEngine.SecRep()>=30 && StoryEngine.HasCash(300));
             GuardedOption(menu,"er_choice_protect_ul",approved,()=>PayProtection(400,2),"er_choice_protect_ul_desc",
                 ()=>StoryEngine.UlRep()>=30 && RomanceState.DriveState!=0 && StoryEngine.HasCash(400));
             GuardedOption(menu,"er_choice_protect_case",approved,()=>PayProtection(200,3),"er_choice_protect_case_desc",
@@ -287,7 +287,7 @@ namespace EleanorRomance
         }
         private static bool PayProtection(int amount,int channel)
         {
-            bool valid=channel==1 ? StoryEngine.SecRep()>=30 && (RomanceState.UncleReported||RomanceState.ThreatRecorded)
+            bool valid=channel==1 ? StoryEngine.SecRep()>=30
                 : channel==2 ? StoryEngine.UlRep()>=30 && RomanceState.DriveState!=0 : RomanceState.UncleReported;
             if(!valid)return false;
             if(RomanceState.ProtectionChannel!=0)return true;
@@ -464,23 +464,17 @@ namespace EleanorRomance
                 StoryDirector.CompleteCore();MaidState.LastImportantDay=MaidState.Today;MaidProjects.RefreshStates(true);
                 StoryDirector.Notify(L.Get("er_maid_notice_basic"));
             });
-            // Delivery succeeds before the gift speech; full storage leaves a visible retry.
-            var menu=StoryEngine.Text(L.Player,L.Get("er_maid_reward_prompt"));StoryEngine.Tail(root).SetNextDialogue(menu);
-            GuardedOption(menu,"er_maid_reward_claim",reward,()=>
-            { StoryEngine.GiveSelfRefillingPerfume();return RomanceState.PerfumeGiven; },"er_maid_reward_desc",()=>true);
-            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_reward_later"),L.Get("er_maid_reward_desc"),
-                StoryEngine.PlayerReply(L.Get("er_maid_reward_later"),
-                    MaidText.Finish(StoryEngine.Text(L.Eleanor,L.Get("er_maid_reward_keep")),null)),null,null);
+            // Vanilla Eleanor9 hands over the keepsake as part of the ending.
+            StoryEngine.Tail(root).SetNextDialogue(reward);
+            reward.SetStartAction(()=>StoryEngine.GiveSelfRefillingPerfume());
             return Ready(c,root);
         }
-        internal static void GateOriginalReward(Dialogue head,Dialogue reward)
+        internal static void GrantOriginalReward(Dialogue head,Dialogue reward)
         {
-            var menu=StoryEngine.Text(L.Player,L.Get("er_maid_reward_prompt"));StoryEngine.Tail(head).SetNextDialogue(menu);
-            GuardedOption(menu,"er_maid_reward_claim",reward,()=>
-            {StoryEngine.GiveSelfRefillingPerfume();return RomanceState.PerfumeGiven;},"er_maid_reward_desc",()=>true);
-            menu.AddChoice(DirectoryMaster.Item("yes"),L.Get("er_maid_reward_later"),L.Get("er_maid_reward_desc"),
-                StoryEngine.PlayerReply(L.Get("er_maid_reward_later"),
-                    MaidText.Finish(StoryEngine.Text(L.Eleanor,L.Get("er_maid_reward_keep")),null)),null,null);
+            // Vanilla Eleanor9 hands over the keepsake as part of the ending.
+            // Grant it when the gift line is reached; no claim/defer choice.
+            StoryEngine.Tail(head).SetNextDialogue(reward);
+            reward.SetStartAction(()=>StoryEngine.GiveSelfRefillingPerfume());
         }
         internal static void GateOriginalLocket(Dialogue head,Dialogue accept,Dialogue refuse)
         {

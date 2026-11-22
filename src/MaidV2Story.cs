@@ -279,13 +279,15 @@ namespace EleanorRomance
                     : MaidV2Text.Build("v2_a0c1_c1_o2");
 
             Dialogue continuation = BuildFlow(scene, index + 1, terminals);
-            Dialogue prompt = StoryEngine.Text(L.Player, L.Get(seg.Choice.PromptKey));
+            Dialogue choiceHead = seg.BlockId == null
+                ? StoryEngine.Text(L.Player, L.Get(seg.Choice.PromptKey))
+                : MaidV2Text.Build(seg.BlockId);
+            Dialogue prompt = StoryEngine.Tail(choiceHead);
             for (int i = 0; i < seg.Choice.Options.Length; i++)
             {
                 var option = seg.Choice.Options[i];
                 Dialogue next;
-                if (option.Mainline) next = continuation;
-                else if (!string.IsNullOrEmpty(option.BlockId))
+                if (!string.IsNullOrEmpty(option.BlockId))
                 {
                     next = MaidV2Text.Build(option.BlockId);
                     if (!string.IsNullOrEmpty(option.Result))
@@ -302,7 +304,7 @@ namespace EleanorRomance
                     ? L.Get("er_maid_v2_gap_desc") : "";
                 prompt.AddChoice(DirectoryMaster.Item("yes"), L.Get(option.LabelKey), description, reply, action, enabled);
             }
-            return prompt;
+            return choiceHead;
         }
 
         private static Action ChoiceAction(MaidV2Content.Scene scene, MaidV2Content.Choice choice, int option)
@@ -427,6 +429,7 @@ namespace EleanorRomance
                     MaidV2State.Act3Done = true;
                     MaidState.Progress = 24;
                     MaidState.ProgressDay = day;
+                    StoryEngine.GiveSelfRefillingPerfume();
                     StoryDirector.CompleteCore();
                     break;
                 case "v2_a4c1":

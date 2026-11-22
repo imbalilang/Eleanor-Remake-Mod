@@ -1,0 +1,11 @@
+1.26 文案收尾修订
+
+- 在 1.25 全局修订基础上，对共同线、恋爱线、后宫线、侍从线与革命军线的部分对白/文案做最后收尾；中英文同步，日文/韩文本地化更新。
+- 保留 1.25 全局文案修订、1.24 原生操作压价判定、1.23 王尔德筹备提示、1.22 假货检查反应、1.21 韩语语域/译名修正及更早修复。
+- 不改路线、选项结果、目标日、排期或结局编号。
+
+1.26 final text polish
+
+- A final dialogue/text polish pass on top of the 1.25 global revision across the common, romance, harem, attendant and revolution scripts, with matching Chinese/English text and updated Japanese/Korean localization.
+- The 1.25 global text revision, 1.24 native-action-only lowball rule, 1.23 Wilde preparation tip, 1.22 counterfeit-inspection reaction, 1.21 Korean register/name fixes and earlier fixes remain.
+- No route, choice-outcome, target-day, schedule or ending changes.

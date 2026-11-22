@@ -191,7 +191,7 @@ def main() -> int:
             for bid in re.findall(r'"([^"\n]+)"', call):
                 if bid not in love_blocks:
                     errors.append('Unknown love block reference: ' + bid)
-        for cid in re.findall(r'Choice\("([^"\n]+)"', source):
+        for cid in re.findall(r'(?<!For)Choice\("([^"\n]+)"', source):
             if cid.startswith(('la1_', 'la2_', 'la3_')) and cid not in love_choices:
                 errors.append('Unknown love choice: ' + cid)
         lovegen = open(os.path.join(ROOT, 'src', 'LoveContent.g.cs'), encoding='utf8').read()

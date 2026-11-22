@@ -335,7 +335,9 @@ namespace EleanorRomance
         }
         private static StoreClient CreateClaim()
         {
-            var c=StoryCoreFacts.PerfumePending?Eleanor("dual_claim"):Lydia("dual_claim");var root=DualText.Build("v05_claim_open");DualRewards.AppendClaims(root);
+            bool eleanorClaim=StoryCoreFacts.LocketPending
+                || (MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24));
+            var c=eleanorClaim?Eleanor("dual_claim"):Lydia("dual_claim");var root=DualText.Build("v05_claim_open");DualRewards.AppendClaims(root);
             Finish(c,root,"claim",()=>DualState.LastDailyDay=DualState.Today);return Ready(c,root);
         }
 

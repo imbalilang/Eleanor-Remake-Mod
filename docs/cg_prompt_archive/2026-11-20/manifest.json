@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-20",
+  "note": "Prompt archive reconstructed from the session transcript. Future approvals must include a prompt file at approval time.",
+  "assets": [
+    {
+      "id": "love_white_sleepwear_wakeup",
+      "approved_file": "Art/character-assets-2026-11-20/cg/love_white_sleepwear_wakeup/approved/love_white_sleepwear_wakeup_cg_960_approved.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/love_white_sleepwear_B.txt",
+      "provider": "openai-compat",
+      "model": "tencent/hy-image-v3.5-preview",
+      "parameters": {
+        "size": "1536x864"
+      },
+      "references": [
+        "wakeup_composition_ref_crop.jpg",
+        "eleanor_white_floral_bodysuit_master_v1.png",
+        "image-8ebd4ec5.png",
+        "QQ图片20261119200041.png"
+      ]
+    },
+    {
+      "id": "servant_bunny_service",
+      "approved_file": "Art/character-assets-2026-11-20/cg/servant_bunny_service/approved/servant_bunny_service_cg_960_approved.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/servant_bunny_service_0488.txt",
+      "provider": "openai-compat",
+      "model": "tencent/hy-image-v3.5-preview",
+      "parameters": {
+        "size": "1536x864"
+      },
+      "references": [
+        "servant_bunny_service_master_v3_angle_costume.png",
+        "image-8ebd4ec5.png"
+      ]
+    },
+    {
+      "id": "lydia_harem_bed_pose_no_bow_no_halo",
+      "approved_file": "Art/character-assets-2026-11-20/cg/lydia_harem_bed_pose/no_bow_pixel/approved/lydia_harem_bed_pose_no_bow_no_halo_cg_1291_approved.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/lydia_harem_bed_pose_a433.txt",
+      "provider": "openai-compat",
+      "model": "tencent/hy-image-v3.5-preview",
+      "parameters": {
+        "size": "1536x864"
+      },
+      "references": [
+        "lydia_harem_bed_pose_no_bow_master_v1.png"
+      ]
+    },
+    {
+      "id": "lydia_white_bunny_grok_final",
+      "approved_file": "Art/character-assets-2026-11-20/cg/lydia_white_bunny_glasses_test/grok_final_oneshot/approved/lydia_white_bunny_grok_final_1291x728_approved.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/lydia_white_bunny_grok_final.txt",
+      "provider": "openai-compat",
+      "channel": "openrouter",
+      "model": "x-ai/grok-imagine-image-2.0",
+      "parameters": {
+        "size": "2K",
+        "aspect_ratio": "16:9",
+        "quality": "medium"
+      },
+      "references": [
+        "white_bunny_glasses_pose_ref.png",
+        "image-8ebd4ec5.png",
+        "lydia_daily_portrait_master_v1.png"
+      ]
+    }
+  ],
+  "revoked_history": [
+    {
+      "id": "harem_two_bunny_bed_v7",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/harem_two_bunny_bed_v7_style_transfer_REVOKED.txt",
+      "status": "revoked"
+    }
+  ]
+}

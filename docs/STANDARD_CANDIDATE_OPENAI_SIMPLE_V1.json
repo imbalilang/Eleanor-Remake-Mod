@@ -1,0 +1,92 @@
+{
+  "id": "STD-OPENAI-SIMPLE-TRANSFER-V1",
+  "date": "2026-11-20",
+  "status": "near_qualified_3_of_4",
+  "model": "openai/gpt-image-2.6-flare",
+  "channel": "openrouter",
+  "parameters": {
+    "size": "2K",
+    "aspect_ratio": "16:9",
+    "quality": "high"
+  },
+  "mother_image": "Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/seedream_generic/masters/seedream_generic_G2_960_master.png",
+  "style_anchor": "Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/references/pixel_style_anchor_white_B.png",
+  "prompt_file": "prompts/standard_candidate_openai_simple_v1.txt",
+  "examples": [
+    {
+      "id": "R1",
+      "file": "Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/simple_transfer_repeat/masters/simple_transfer_R1_master.png",
+      "sha256": "73ba11eb9b4fae64617e8432618a48b34061f4f64d644fa202e51eeee92e181e"
+    },
+    {
+      "id": "R2",
+      "file": "Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/simple_transfer_repeat/masters/simple_transfer_R2_master.png",
+      "sha256": "d89b7129c7bd5cbd18638f586d020134c0cfde1831f3927885203bb2996bd171"
+    },
+    {
+      "id": "R3",
+      "file": "Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/simple_transfer_repeat/masters/simple_transfer_R3_master.png",
+      "sha256": "3327ce798b71ddd2e11ccea7ffaea856d7d33376e5cc7fd9ad4541b75ed78d5c"
+    },
+    {
+      "id": "R4",
+      "file": "Art/character-assets-2026-11-20/cg/eleanor_stage_solo_calibration/simple_transfer_repeat/masters/simple_transfer_R4_master.png",
+      "sha256": "060021f43450f4a71ce807b1547dadad568c553581c1b6a8c953cf8a0ac122d9"
+    }
+  ],
+  "consistency": "4/4 visually consistent pixel treatment; composition, pose, outfit and stage preserved.",
+  "metric_ranges": {
+    "hf_ratio": [
+      0.0139,
+      0.0187
+    ],
+    "flat_ratio": [
+      0.075,
+      0.102
+    ],
+    "palette_5bit": [
+      2751,
+      3274
+    ],
+    "edge_density": [
+      0.0684,
+      0.0806
+    ],
+    "smooth_fraction": [
+      0.545,
+      0.611
+    ]
+  },
+  "note": "The v1 profile rejects this recipe, but the v1 profile is scene-dependent. Per the revised standard definition, this recipe becomes a candidate if the art director accepts the pixel feel.",
+  "art_director_judgments": {
+    "R1": "pass",
+    "R2": "fail_lighting",
+    "R3": "pass_assistant_review",
+    "R4": "pass_assistant_review",
+    "grok_simple": "fail",
+    "tencent_simple": "barely_pass_lighting_issue"
+  },
+  "lighting_stats": {
+    "R1": {
+      "luminance": 95.5,
+      "saturation": 52.1,
+      "warm_shift": 44.4
+    },
+    "R2": {
+      "luminance": 100.6,
+      "saturation": 49.2,
+      "warm_shift": 40.8
+    },
+    "R3": {
+      "luminance": 95.9,
+      "saturation": 50.4,
+      "warm_shift": 43.1
+    },
+    "R4": {
+      "luminance": 96.0,
+      "saturation": 51.9,
+      "warm_shift": 45.0
+    }
+  },
+  "current_acceptance": "3/4 visual passes (R1, R3, R4); R2 fails because it is brighter, less saturated and less warm than R1. One more independent run is needed for the 5-run/3-pass formal threshold."
+}

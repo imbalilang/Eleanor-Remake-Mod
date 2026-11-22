@@ -45,11 +45,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "你看，她就这样。",
-              "en": "See? This is how she is."
-            },
-            {
-              "speaker": "Lydia",
               "text": "我说“我们下去一趟”，她拎起包就走，比我还快。",
               "en": "I said, let's go down there, and she grabbed her bag and was out the door before me."
             },
@@ -90,56 +85,15 @@
               "en": "I didn't think the ceiling would be so low. The shelves almost touch the beams."
             },
             {
-              "speaker": "SEC",
-              "text": "你别站在那儿感叹。",
-              "en": "Don't stand there sighing over it."
-            },
-            {
-              "speaker": "SEC",
-              "text": "你感叹的时候，人是往上飘的。",
-              "en": "When you sigh, you float upward."
-            },
-            {
-              "speaker": "SEC",
-              "text": "像在逛一个地方。",
-              "en": "Like you're touring the place."
-            },
-            {
               "speaker": "Lydia",
-              "text": "我没有逛。",
-              "en": "I'm not touring it.",
-              "expr": "hurt"
-            },
-            {
-              "speaker": "SEC",
-              "text": "你刚才说“没想到”。",
-              "en": "You just said you didn't expect it."
-            },
-            {
-              "speaker": "SEC",
-              "text": "说那三个字的时候，你嘴角是笑的。",
-              "en": "You were smiling when you said that."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……我笑了？",
-              "en": "...I was smiling?",
+              "text": "……我说话声是不是太大了？",
+              "en": "…Was I talking too loud?",
               "expr": "serious"
-            },
-            {
-              "speaker": "SEC",
-              "text": "笑了。",
-              "en": "Smiling."
             },
             {
               "speaker": "Narrator",
               "text": "她把搭在窗框上的手放下来，站直了。",
               "en": "She lowers her hand from the window frame and straightens up."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "行。我不感叹了。",
-              "en": "Fine. No more sighing."
             },
             {
               "speaker": "Lydia",
@@ -168,11 +122,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "你这人讲话怎么都这样。",
-              "en": "Why do you talk like this?"
-            },
-            {
-              "speaker": "Lydia",
               "text": "我大老远把人请来，你连句“辛苦”都不给。",
               "en": "I go through all that trouble bringing her here, and you can't spare a thanks?"
             },
@@ -180,22 +129,6 @@
               "speaker": "SEC",
               "text": "他给了你凳子。",
               "en": "He gave you a stool."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "他没给。",
-              "en": "He didn't."
-            },
-            {
-              "speaker": "SEC",
-              "text": "他说了“坐下”。",
-              "en": "He said sit."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……这也算。",
-              "en": "...I guess that counts.",
-              "expr": "smile"
             }
           ],
           "presentation": {
@@ -204,7 +137,8 @@
               "sprite": "eleanor1",
               "name": "埃莉诺"
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "d01_b002",
@@ -271,78 +205,13 @@
             },
             {
               "speaker": "Lydia",
-              "text": "盖子上这是什么，黑的。",
+              "text": "表盖上这点黑的是什么？",
               "en": "What's this black stuff on the lid?"
             },
             {
               "speaker": "Player",
               "text": "矿灰。",
               "en": "Mine dust."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "擦不掉？",
-              "en": "Won't wipe off?"
-            },
-            {
-              "speaker": "Player",
-              "text": "擦过。擦不掉。",
-              "en": "Tried. It won't."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "谁送来的。",
-              "en": "Who brought it in?"
-            },
-            {
-              "speaker": "Player",
-              "text": "姓什么我不知道。",
-              "en": "I don't know his name."
-            },
-            {
-              "speaker": "Player",
-              "text": "到窗口前先把手在裤子上蹭了三遍。",
-              "en": "Before coming up to the window, he wiped his hands on his trousers three times."
-            },
-            {
-              "speaker": "Player",
-              "text": "表放在柜上，他没松手。",
-              "en": "He put the watch on the counter and didn't let go."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "他舍不得。",
-              "en": "He didn't want to part with it."
-            },
-            {
-              "speaker": "Player",
-              "text": "他说这表还走。",
-              "en": "He said it still runs."
-            },
-            {
-              "speaker": "Player",
-              "text": "我说走不走我得看。",
-              "en": "I said I'd have to see if it runs."
-            },
-            {
-              "speaker": "Player",
-              "text": "他上弦，贴耳朵上听，听了很久。",
-              "en": "He wound it, put it to his ear, listened a long time."
-            },
-            {
-              "speaker": "Player",
-              "text": "然后说，慢了。",
-              "en": "Then he said it was slow."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "慢了还算好表？",
-              "en": "Slow and it's still a good watch?"
-            },
-            {
-              "speaker": "Player",
-              "text": "他说慢了也是走。",
-              "en": "He said slow is still running."
             },
             {
               "speaker": "Narrator",
@@ -359,46 +228,6 @@
               "speaker": "Player",
               "text": "名字。",
               "en": "A name."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你问过是谁？",
-              "en": "Did you ask whose?"
-            },
-            {
-              "speaker": "Player",
-              "text": "问了。他说刻的是他父亲的。",
-              "en": "I did. He said it was his father's."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "人呢。",
-              "en": "Where's he?"
-            },
-            {
-              "speaker": "Player",
-              "text": "搬走了。",
-              "en": "Moved."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "搬哪儿。",
-              "en": "Where to?"
-            },
-            {
-              "speaker": "Player",
-              "text": "不知道。押期过了一年，他没回来。",
-              "en": "Don't know. Pawn was up a year ago. He never came back."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "这表归你了。",
-              "en": "So the watch is yours."
-            },
-            {
-              "speaker": "Player",
-              "text": "归我。",
-              "en": "Mine."
             },
             {
               "speaker": "Lydia",
@@ -422,21 +251,6 @@
               "en": "You'd take it home, put it on a shelf, and tell people it came from down here."
             },
             {
-              "speaker": "Lydia",
-              "text": "我不会。",
-              "en": "I wouldn't."
-            },
-            {
-              "speaker": "Player",
-              "text": "会。",
-              "en": "You would."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……我可能会。",
-              "en": "...I might."
-            },
-            {
               "speaker": "SEC",
               "text": "她会。",
               "en": "She would."
@@ -445,24 +259,9 @@
               "speaker": "Lydia",
               "text": "你就不能让我体面一回。",
               "en": "Can't you let me keep some dignity for once?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "体面是拿钱换的？",
-              "en": "Dignity bought with money?"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我说不过你们两个。",
-              "en": "I can't win against you two.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "一个不开口，一个一开口就往人脸上戳。",
-              "en": "One doesn't talk, and the other only opens her mouth to jab you in the face."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "d01_b004",
@@ -542,236 +341,23 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "架子最下层压着一只旧血袋，塑料发黄，口子用线扎着。",
-              "en": "An old blood bag is pressed on the bottom shelf. Yellowed plastic, the port tied with string."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "那个又是什么。",
-              "en": "What's that, then?"
-            },
-            {
-              "speaker": "Player",
-              "text": "血袋。",
-              "en": "Blood bag."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "血？真血？",
-              "en": "Blood? Real blood?",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Player",
-              "text": "空的。",
-              "en": "Empty."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "空的你也收。",
-              "en": "You take empty ones too."
-            },
-            {
-              "speaker": "Player",
-              "text": "收了。",
-              "en": "Took it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "值多少。",
-              "en": "What's it worth?"
-            },
-            {
-              "speaker": "Player",
-              "text": "废塑料的价。",
-              "en": "Scrap plastic price."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "那你收它图什么。",
-              "en": "Then why take it?"
-            },
-            {
-              "speaker": "Player",
-              "text": "送来的人等着赎。",
-              "en": "The man who brought it is waiting to redeem it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "他赎了吗。",
-              "en": "Did he?"
-            },
-            {
-              "speaker": "Player",
-              "text": "没有。",
-              "en": "No."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "为什么。",
-              "en": "Why?"
-            },
-            {
-              "speaker": "Player",
-              "text": "他说矿上塌了一段，他哥在里面。",
-              "en": "He said part of the mine collapsed. His brother was inside."
-            },
-            {
-              "speaker": "Player",
-              "text": "抬出来还有气，医院给了两袋血。",
-              "en": "They pulled him out still breathing. The hospital gave two bags of blood."
-            },
-            {
-              "speaker": "Player",
-              "text": "用了一袋。",
-              "en": "Used one."
-            },
-            {
-              "speaker": "Player",
-              "text": "剩一袋他抱回家，塞床底下。",
-              "en": "He carried the other home and shoved it under the bed."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "留着做什么。",
-              "en": "What was he saving it for?"
-            },
-            {
-              "speaker": "Player",
-              "text": "他说万一还有一次。",
-              "en": "He said in case it happens again."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……万一还有一次。",
-              "en": "...In case it happens again.",
-              "expr": "hurt"
-            },
-            {
-              "speaker": "Player",
-              "text": "后来他拿来当。",
-              "en": "Later he brought it in to pawn."
-            },
-            {
-              "speaker": "Player",
-              "text": "我没按废塑料收。",
-              "en": "I didn't pay him scrap price."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你给了多少。",
-              "en": "How much did you give him?"
-            },
-            {
-              "speaker": "Player",
-              "text": "够他两个月。",
-              "en": "Enough for two months."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你图什么。",
-              "en": "What did you get out of it?"
-            },
-            {
-              "speaker": "Player",
-              "text": "他等着赎。",
-              "en": "He's waiting to redeem it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "他没赎。",
-              "en": "He didn't."
-            },
-            {
-              "speaker": "Player",
-              "text": "我催过一回。",
-              "en": "I reminded him once."
-            },
-            {
-              "speaker": "Player",
-              "text": "他说再等等。",
-              "en": "He said wait a little longer."
-            },
-            {
-              "speaker": "Narrator",
-              "text": "她把血袋放回原处，往架子里面推了推。",
-              "en": "She puts the blood bag back and pushes it deeper into the shelf."
-            },
-            {
-              "speaker": "SEC",
-              "text": "别摸。",
-              "en": "Don't touch it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我放正一点。",
-              "en": "I'm just setting it straight."
-            },
-            {
-              "speaker": "SEC",
-              "text": "你一摸，它就成展品了。",
-              "en": "Touch it and it becomes an exhibit."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……行。我不摸。",
-              "en": "...Fine. I won't touch.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "手都不知道往哪儿放了。",
-              "en": "Now I don't know where to put my hands."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我在上面从来没想过，一袋空的塑料还值得留在架子上。",
-              "en": "Upstairs, I never once thought a bag of empty plastic was worth keeping on a shelf."
-            },
-            {
-              "speaker": "SEC",
-              "text": "你现在想了。",
-              "en": "Now you're thinking about it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "想了。想得心里堵。",
-              "en": "Yeah. It's sitting heavy in my chest."
-            },
-            {
-              "speaker": "SEC",
-              "text": "堵一会儿。别急着把它弄顺。",
-              "en": "Let it sit. Don't rush to smooth it out."
-            },
-            {
-              "speaker": "Narrator",
               "text": "她从包里翻出一个小本子，笔帽咬在嘴里。",
               "en": "She digs a small notebook out of her bag and bites the pen cap."
             },
             {
               "speaker": "Lydia",
-              "text": "好。我知道该干什么了。",
-              "en": "Good. I know what to do."
+              "text": "营养果得挑耐放的，先给她送两箱。",
+              "en": "I'll send her two crates of Nutrifruit. Better get the kind that keeps."
             },
             {
               "speaker": "Lydia",
-              "text": "我列一下。",
-              "en": "Let me make a list."
+              "text": "再拿四张厚毯子。",
+              "en": "And four thick blankets."
             },
             {
               "speaker": "Lydia",
-              "text": "营养果，耐放的，两箱。",
-              "en": "Nutrient fruit, the kind that keeps. Two crates."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "毯子，厚的，四张。",
-              "en": "Blankets. Thick ones. Four."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "灯。她那个楼梯没灯，我上回是摸着墙下去的。",
-              "en": "A lamp. Her stairway has no light. Last time I felt my way down the wall."
+              "text": "对了，她家楼梯没灯！上回我可是摸着墙下来的。",
+              "en": "Oh, her stairs need a light! Last time I had to feel my way down the wall."
             },
             {
               "speaker": "SEC",
@@ -785,26 +371,11 @@
             },
             {
               "speaker": "SEC",
-              "text": "那你在给谁列。",
-              "en": "Then who are you listing for?"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……给我自己。",
-              "en": "...Myself.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "列完我心里好受点。",
-              "en": "Making the list makes me feel a little better."
-            },
-            {
-              "speaker": "SEC",
-              "text": "那就别列。",
-              "en": "Then don't make it."
+              "text": "先把笔给我放下。",
+              "en": "Put the pen down a minute."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "d01_b007",
@@ -828,45 +399,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "那不是正好，有人帮她。",
-              "en": "Isn't that good? Someone's helping her."
-            },
-            {
-              "speaker": "Player",
-              "text": "她要的是没人替她记这笔。",
-              "en": "She doesn't want anyone keeping a tab on her behalf."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我又不要她记。",
-              "en": "I don't need her to keep score.",
-              "expr": "hurt"
-            },
-            {
-              "speaker": "SEC",
-              "text": "你会的。",
-              "en": "You would."
-            },
-            {
-              "speaker": "SEC",
-              "text": "你送完回去，会想她吃没吃，会不会说谢谢。",
-              "en": "After you drop it off, you'll wonder if she ate it, if she'll say thank you."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……",
-              "en": "..."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "好吧。我会。",
-              "en": "All right. I would.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我承认，我会翻来覆去看手机，等一句回话。",
-              "en": "I admit it. I'd keep checking my phone, waiting for one reply."
+              "text": "知道就知道。她会介意吗？",
+              "en": "…I'd probably be sitting there with my phone, waiting for her to thank me."
             },
             {
               "speaker": "Player",
@@ -874,39 +408,14 @@
               "en": "Then ask her."
             },
             {
-              "speaker": "Lydia",
-              "text": "问什么。",
-              "en": "Ask what?"
-            },
-            {
               "speaker": "Player",
-              "text": "问她要不要。",
-              "en": "Ask if she wants it."
+              "text": "她就在这儿。",
+              "en": "She's right here."
             },
             {
               "speaker": "Lydia",
               "text": "我问了，她准说不要。",
               "en": "If I ask, she'll definitely say no."
-            },
-            {
-              "speaker": "SEC",
-              "text": "我说不要，你可以再问一遍。",
-              "en": "If I say no, you can ask again."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "再问一遍你就要？",
-              "en": "Ask again and you'll say yes?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "不会。",
-              "en": "No."
-            },
-            {
-              "speaker": "SEC",
-              "text": "但我会记着，你问过。",
-              "en": "But I'll remember that you asked."
             },
             {
               "speaker": "Narrator",
@@ -919,7 +428,8 @@
               "en": "Then I won't bring anything.",
               "expr": "serious"
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "d01_b008",
@@ -928,8 +438,8 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "营养果两箱，毯子四张，灯一盏，灯泡三只——",
-              "en": "Nutrient fruit, two crates, four blankets, one lamp, three bulbs—"
+              "text": "灯有一盏就够了，灯泡得备三只，还有——",
+              "en": "One lamp should do, but she'll need three bulbs. And then—"
             },
             {
               "speaker": "SEC",
@@ -987,7 +497,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "那你指一样，能送的。",
+              "text": "那你倒说说，我能送她哪样？",
               "en": "Then point to one thing. Something I can give."
             },
             {
@@ -1018,11 +528,6 @@
               "en": "Ask the ration station, ask who fixes lamps on this street, find out how many forms I have to run through."
             },
             {
-              "speaker": "Lydia",
-              "text": "问明白了，我再来把话说给你听。要不要装，你定。",
-              "en": "Once I know, I'll come back and tell you. You decide whether it gets installed."
-            },
-            {
               "speaker": "SEC",
               "text": "……行。",
               "en": "...Fine."
@@ -1036,11 +541,6 @@
               "speaker": "Lydia",
               "text": "下回我还来。",
               "en": "I'm coming back next time."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "空手来。不带车，不带我妈的名字。",
-              "en": "Empty-handed. No cart, no using my mother's name."
             },
             {
               "speaker": "Lydia",
@@ -1074,36 +574,17 @@
               "expr": "smile"
             },
             {
-              "speaker": "SEC",
-              "text": "他刚想起来。",
-              "en": "He just remembered."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你怎么知道。",
-              "en": "How do you know?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "他手上全是灰。",
-              "en": "His hands are covered in dust."
-            },
-            {
               "speaker": "Lydia",
               "text": "……这凳子真硬。",
               "en": "...This stool is hard."
-            },
-            {
-              "speaker": "Player",
-              "text": "坐硬一点。",
-              "en": "Hard is better."
             },
             {
               "speaker": "Narrator",
               "text": "埃莉诺把包往柜角挪了挪，腾出一块地方。",
               "en": "Eleanor shifts her bag to the corner of the counter, clearing a space."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -4495,7 +3976,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "那是她家的。上层区卖日用品、香水、布料的几家里，就有他们铺子。",
+              "text": "那是她家的。上层区卖日用品、香水、布料的几家里，就有他们店铺。",
               "en": "It's her family's. They're one of the upper-district houses selling household goods, perfume and fabric.",
               "expr": "serious"
             },
@@ -7019,24 +6500,9 @@
             },
             {
               "speaker": "Lydia",
-              "text": "早。人我领来了，你就说，我说话算不算数？",
-              "en": "Morning! I brought your person. So tell me—did I keep my word?",
+              "text": "早！今天我们俩谁也没赖床。",
+              "en": "Morning! We both managed to get up today.",
               "expr": "smile"
-            },
-            {
-              "speaker": "SEC",
-              "text": "领？我自己有脚，你不过是走前头。",
-              "en": "Brought? I walked here myself. You just walked in front."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "走前头怎么不算？行行行，别这么看我，路反正我问了。",
-              "en": "Walking in front still counts. Oh, don't glare at me—I asked for the directions."
-            },
-            {
-              "speaker": "SEC",
-              "text": "这路我闭着眼都能走。你问的人还给你指反了方向。",
-              "en": "I've walked this road dozens of times. That old man you asked gave us the wrong directions."
             },
             {
               "speaker": "Player",
@@ -7050,8 +6516,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>把外套往柜边一放，顺手拿下最上层的两件旧衣</i>最下格别碰。你上次排的那堆，我还没琢磨明白。",
-              "en": "<i>Drapes her coat over the edge of the counter</i>Leave the bottom cubby alone. I still can't make sense of how you arranged them last time."
+              "text": "<i>放下外套，从上层取了两件旧衣</i>最下格别碰。你上次排的那堆，我还没琢磨明白。",
+              "en": "<i>Sets down her coat and takes two old garments off the top shelf</i>Leave the bottom cubby alone. I still can't make sense of how you arranged them last time."
             },
             {
               "speaker": "Lydia",
@@ -7060,8 +6526,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>隔着窗子指了下柜台</i>那格里是表？怎么灰扑扑的。",
-              "en": "<i>Points through the window at the glass display on the counter</i>What's this? A watch? Why is the lid so dusty?"
+              "text": "<i>隔着窗子指了指</i>那只铜表还在呀。我带了块擦镜子的布。",
+              "en": "<i>She points through the window.</i> That brass watch is still here. I've got a cloth for polishing mirrors."
             },
             {
               "speaker": "Player",
@@ -7085,11 +6551,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>双手往胸口一按</i>……这话听得人心里发紧。",
-              "en": "<i>Presses both hands to her chest</i>Oh my God... that's so sad."
-            },
-            {
-              "speaker": "Lydia",
               "text": "我回头得说给她们听。下面的人连块表都得送进当铺，谁听了不难受？",
               "en": "I'm definitely telling the girls about this when I get back. People down below have to pawn even a watch—who wouldn't feel sorry for them?"
             },
@@ -7100,24 +6561,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "呵。说完她们什么反应？",
-              "en": "Hah. Tell them. Then what?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "放下茶，叹一句真苦，转头接着比谁的裙摆裁短了。",
-              "en": "They'll put down their cups, say 'How sad,' and go right back to whose skirt is a little shorter."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你别把我说得那样。我确实想帮。",
-              "en": "That's not what I meant! I really want to help.",
-              "expr": "hurt"
-            },
-            {
-              "speaker": "SEC",
-              "text": "你帮的是你脑里那出戏。表可不在你这儿。",
-              "en": "What you want to help is the story in your own head. The watch is his."
+              "text": "还落款？",
+              "en": "You're signing it, too?"
             },
             {
               "speaker": "SEC",
@@ -7141,7 +6586,8 @@
               "sprite": "eleanor1",
               "name": "埃莉诺"
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "dv01_b002",
@@ -7159,16 +6605,12 @@
               "en": "Aw, stingy. Stopping halfway is the worst."
             },
             {
-              "speaker": "SEC",
-              "text": "东西不是你的，讲多少由他定。这也值得你抢一句？",
-              "en": "It's his. His call whether he tells it. You're going to fight over that too?"
-            },
-            {
               "speaker": "Lydia",
-              "text": "……行，不抢。可我的落款还没写呢。",
-              "en": "...Fine, no fight. But I haven't signed it yet."
+              "text": "……那我理这筐。你看着点，别一会儿又叫我全倒出来。",
+              "en": "…I'll sort this basket, then. Keep an eye on me. I don't want to empty it out twice."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv01_b003",
@@ -7177,25 +6619,16 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "想知道，就自己问。",
-              "en": "Want to know, ask him yourself."
+              "text": "你问。",
+              "en": "Go on. Ask."
             },
             {
               "speaker": "Lydia",
-              "text": "我自己问？那……押表的人，如今怎么样？",
-              "en": "Me? Then... the one who pawned the watch—is he all right?"
-            },
-            {
-              "speaker": "Player",
-              "text": "去年冬天过后，没再来。",
-              "en": "Haven't seen him since last winter."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>手慢慢缩回身侧</i>……我还想问他叫什么。",
-              "en": "<i>pulls her hand back to her side</i>...I was going to ask his name."
+              "text": "我自己问？那……押表的人还来赎吗？",
+              "en": "Ask for myself? Well… is he coming back for his watch?"
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv01_b004",
@@ -7264,26 +6697,6 @@
               "en": "The ticket's not due yet. Until then, it's his."
             },
             {
-              "speaker": "Lydia",
-              "text": "……行。我不掏这个钱了。",
-              "en": "...All right. I'm not paying."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我刚才那番话，是不是很像站在旁边看戏的？",
-              "en": "Did I look like I was just here for the spectacle?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "像。我头回来这店，出口比你还冲。",
-              "en": "Yes. The first time I came to this shop, I said much worse things than you."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你？你会承认这个？",
-              "en": "You? You're actually admitting that?"
-            },
-            {
               "speaker": "SEC",
               "text": "<i>把脚边的旧货筐往她那边推了推</i>别绕。这筐归你，理完告诉我。",
               "en": "Cut it. Get to work. That basket of junk is yours."
@@ -7298,7 +6711,8 @@
               "text": "好。每样放哪儿你说明白，我可不想再被你训一回。",
               "en": "Fine. You need to tell me exactly what goes where. I don't want you scolding me again."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -7320,8 +6734,8 @@
           "id": "dv01_c1_3",
           "label_zh": "让她自己问",
           "label_en": "Let her ask",
-          "description_zh": "让莉迪亚自己去问那个人。",
-          "description_en": "Let Lydia go ask the person herself."
+          "description_zh": "让莉迪亚自己开口问押表的事。",
+          "description_en": "Let Lydia ask about the pledged watch herself."
         }
       ]
     },
@@ -7378,19 +6792,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>伸手把柜上的血袋朝自己这侧拨了半寸</i>我留谁、留多久，我自己会说。轮不到你站在这窗口前替我铺台阶。",
-              "en": "Who I spend time with, and how long, I'll say myself. I don't need you making up excuses at the window."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我哪铺台阶……就是听着你跟他讲话，比对我软和。",
-              "en": "I'm not making anything up... I just think you sound softer when you talk to him than when you talk to me.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "SEC",
-              "text": "少来。",
-              "en": "Ridiculous."
+              "text": "<i>把柜上的血袋朝自己这侧拨了半寸</i>你走了，谁来帮我理这堆？",
+              "en": "<i>She shifts the blood bag a little closer.</i> Who's helping me sort this lot if you go?"
             },
             {
               "speaker": "Player",
@@ -7429,8 +6832,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "她怎么能……<i>话到一半收住</i>好，我不插嘴。她划这些做什么？",
-              "en": "How can she... <i>cuts herself off</i> No, wait, I shouldn't talk. Why is she making marks?"
+              "text": "她划这些做什么？",
+              "en": "What were the marks for?"
             },
             {
               "speaker": "Player",
@@ -7465,7 +6868,8 @@
               "sprite": "eleanor1",
               "name": "埃莉诺"
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "dv02_b002",
@@ -7483,16 +6887,12 @@
               "en": "You're going to drive me crazy... Fine, I won't ask."
             },
             {
-              "speaker": "SEC",
-              "text": "他不往下说，那就有不说的道理。你自己接的那些后头，先收起来。",
-              "en": "If he won't say, there's a reason. Don't start inventing an ending."
-            },
-            {
               "speaker": "Lydia",
-              "text": "<i>把血袋推回柜台正中</i>好，我不编了，也不走了。刚才那个“另一边”，是我现找的。",
-              "en": "<i>pushes the blood bag back to the middle of the counter</i> Then I won't make anything up, and I won't leave. That stuff about over there—I made it up."
+              "text": "<i>把血袋推回柜台正中</i>那我留下来理货。给我腾个地儿。",
+              "en": "<i>She slides the bag back to the middle.</i> I'll stay and sort. Make room for me."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv02_b003",
@@ -7526,21 +6926,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>揉了下眼角</i>我是不是听这种收尾听顺了？好像这下面的事，只能照那么讲。",
-              "en": "<i>rubs the corner of her eye</i> Have I just gotten used to that kind of ending? Like things down here can only be told that way."
-            },
-            {
-              "speaker": "SEC",
-              "text": "她那边传过来的本子，收场从来就这一种。",
-              "en": "The versions they pass around over there all end like that."
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>把血袋没划满的那面转到莉迪亚眼前</i>这下面的人也会好，也会再来柜台前挑货。挑东西的时候，手不比你松。",
-              "en": "People down here get better too. They come in and buy things. And they're just as picky as you when they choose."
-            },
-            {
-              "speaker": "Lydia",
               "text": "嗯。<i>把血袋推回柜台中央</i>那我不走了。",
               "en": "Mm. <i>pushes the blood bag back to the middle of the counter</i> Then I'm not leaving."
             },
@@ -7559,7 +6944,8 @@
               "text": "哼。",
               "en": "Hmph."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -7596,32 +6982,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "这一下午我都在琢磨，其实我一样都没看明白。",
-              "en": "I thought about it all afternoon. I don't actually know anything.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "上头提起下面，绕来绕去也就那几个词：脏、乱、可怜。我跟着说，说得比谁都顺。",
-              "en": "Up top, people talk about the lower levels with the same few words over and over: dirty, messy, pitiful. I said it too. It came out so easy."
-            },
-            {
-              "speaker": "SEC",
-              "text": "早些年我比你还能讲。",
-              "en": "I used to say it even easier than you."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你现在不讲这些了。",
-              "en": "You don't say it now."
-            },
-            {
-              "speaker": "SEC",
-              "text": "讲了能干什么？他们照样过，谁差我这几句话。",
-              "en": "Doesn't help. They get on with their lives. Not like they live off my few words."
-            },
-            {
-              "speaker": "Lydia",
               "text": "<i>指尖在台面上碰了碰，没碰到矿石</i>这块呢？有来处吧？别一下讲完，我想慢慢听。",
               "en": "<i>points at the ore</i>What about this? It has a story too, right? Don't tell it all at once. I want to hear it slow."
             },
@@ -7637,8 +6997,8 @@
             },
             {
               "speaker": "Player",
-              "text": "换不出价。灰厚，矿薄。",
-              "en": "Not worth much. Lots of rock, little ore."
+              "text": "灰底下就那么一点矿，卖不上价。",
+              "en": "There's barely any ore under all that ash. It won't fetch much."
             },
             {
               "speaker": "Player",
@@ -7664,11 +7024,6 @@
               "speaker": "Player",
               "text": "说不好。",
               "en": "Don't know."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>目光落在灰道上，没抬头</i>嗯，说不好就说不好。",
-              "en": "<i>doesn't press, looks down at the gray streak</i>Mm. Don't know is don't know."
             }
           ],
           "presentation": {
@@ -7677,7 +7032,8 @@
               "sprite": "eleanor1",
               "name": "埃莉诺"
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "dv03_b002",
@@ -7691,15 +7047,11 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>手缩到窗边</i>行，我不动。",
-              "en": "<i>pulls her hand back</i>Okay. I won't."
-            },
-            {
-              "speaker": "SEC",
-              "text": "看看又不少块。它又没长脚。",
-              "en": "Looking's the same. It's not going anywhere."
+              "text": "<i>手缩到窗边</i>好，我不动。",
+              "en": "<i>She draws her hand back.</i> All right. Eleanor, are you coming tomorrow? …Oh, ask him yourself."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv03_b003",
@@ -7725,59 +7077,9 @@
               "speaker": "Lydia",
               "text": "<i>搁回柜台角，看了看指腹</i>先不擦。",
               "en": "<i>gently puts it back and looks at the dust on her fingertip</i>I'm not wiping it."
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>把矿石往柜台角拢了拢</i>这你倒学得快。",
-              "en": "You learn fast."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "还有件事。埃莉诺，往后我不替你张罗了。",
-              "en": "One more thing. Eleanor, I won't arrange things for you anymore."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "不找话溜，不订桌子，也不把你往窗边赶。你爱来就来，不来我也不提。",
-              "en": "No excuses to slip away, no reserving seats, no pushing you up to the window. Come if you want. If you don't, I won't nag."
-            },
-            {
-              "speaker": "SEC",
-              "text": "……你讲的，我可记牢了。",
-              "en": "…You said that yourself. I'll remember it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "记牢就记牢。那我去给我自己找点事。",
-              "en": "Fine, remember it. Now I'm going to do my own thing.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>隔着窗朝货架扬了扬下巴</i>你刚来时吃的是哪个？最便宜的那款？",
-              "en": "<i>Looks through the window at the shelves</i>Which kind did you eat when you first got here? The cheapest one?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "你咽不下去。",
-              "en": "You won't like it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "咽不下去也吃完。我只买我这份，不给你带。",
-              "en": "I'll finish it even if I don't like it. I'm only buying mine. Not for you."
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>把窗口前那一小块台面抹干净</i>随你。别咽到半道又找我要水。",
-              "en": "<i>lifts her chin</i>Fine. Don't come running to me for water halfway through."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>把吃的推到柜台中间</i>老板，照她早先的价。我就在这儿吃，不带走。",
-              "en": "<i>sets the basic food on the counter</i>Boss, same price as she paid back then. I'll eat it here. No takeout."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv03_b004",
@@ -7869,8 +7171,38 @@
             },
             {
               "speaker": "Lydia",
-              "text": "明儿我早来，跟你当初一样，自己上手。",
+              "text": "明天我早来，跟你当初一样，自己上手。",
               "en": "Then I'll come early tomorrow. Pick it myself, like you did."
+            }
+          ]
+        },
+        {
+          "id": "dv03_snack",
+          "lines": [
+            {
+              "speaker": "Lydia",
+              "text": "<i>隔着窗朝货架扬了扬下巴</i>你刚来时吃的是哪个？最便宜的那款？",
+              "en": "<i>Looks through the window at the shelves</i>Which kind did you eat when you first got here? The cheapest one?"
+            },
+            {
+              "speaker": "SEC",
+              "text": "你咽不下去。",
+              "en": "You won't like it."
+            },
+            {
+              "speaker": "Lydia",
+              "text": "咽不下去也吃完。我只买我这份，不给你带。",
+              "en": "I'll finish it even if I don't like it. I'm only buying mine. Not for you."
+            },
+            {
+              "speaker": "SEC",
+              "text": "<i>把窗口前那一小块台面抹干净</i>随你。别咽到半道又找我要水。",
+              "en": "<i>lifts her chin</i>Fine. Don't come running to me for water halfway through."
+            },
+            {
+              "speaker": "Lydia",
+              "text": "<i>把吃的推到柜台中间</i>老板，照她早先的价。我就在这儿吃，不带走。",
+              "en": "<i>sets the basic food on the counter</i>Boss, same price as she paid back then. I'll eat it here. No takeout."
             }
           ]
         }
@@ -8013,7 +7345,7 @@
             },
             {
               "speaker": "Thug",
-              "text": "上月没谈成的那位。叫我来看看你这铺子经不经摔。",
+              "text": "上月没谈成的那位。叫我来看看你这店铺经不经摔。",
               "en": "The one the deal fell through with last month. He sent me to see how sturdy this shop is."
             },
             {
@@ -8040,21 +7372,6 @@
             },
             {
               "speaker": "Thug",
-              "text": "我今天就一个人来，好话也说到这份上了。",
-              "en": "I came alone today. Asking nicely."
-            },
-            {
-              "speaker": "Player",
-              "text": "听出来了。",
-              "en": "I noticed."
-            },
-            {
-              "speaker": "Thug",
-              "text": "她们几时到，几时走，从哪条巷子过，我外面随便一打听就全有。不靠你。",
-              "en": "When they come, when they go, which alley they take — I ask around outside, I'll know. Don't need you."
-            },
-            {
-              "speaker": "Thug",
               "text": "来问你已经算给你台阶。你少掺和那两人，后头的事沾不着你。",
               "en": "I'm doing you a favor by asking. Stop looking out for those two and what happens next has nothing to do with you."
             },
@@ -8075,21 +7392,6 @@
             },
             {
               "speaker": "Thug",
-              "text": "<i>笑了一声</i>行，你记着这话。",
-              "en": "<i>laughs once</i>Fine. Remember you said that."
-            },
-            {
-              "speaker": "Thug",
-              "text": "下次来找你的，不会只有我一个。",
-              "en": "Next time there'll be more than just me."
-            },
-            {
-              "speaker": "Player",
-              "text": "下次来，照价签挑货。",
-              "en": "Next time, buy something at the marked price."
-            },
-            {
-              "speaker": "Thug",
               "text": "<i>退了两步，扭头扫过那排玻璃格</i>你那表太招眼，摆那么前头。",
               "en": "<i>Steps back and glances at the glass display</i>That watch of yours stands out."
             },
@@ -8098,7 +7400,8 @@
               "text": "<i>他抬手在窗框上一敲</i>，响动顺着巷子散了。",
               "en": "He knocks on the window frame as he leaves, the sound carrying down the alley."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -8210,22 +7513,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "都是我招的。镯子在我手上戴过，价钱也是我当面跟他谈的。",
-              "en": "I'm the one who caused this. I brought the bracelet. I talked the price in front of people.",
-              "expr": "hurt"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "那会儿有人肯出那么高，我还挺得意。我是不是当傻子当了太久？",
-              "en": "I was pretty pleased then. Thought someone would pay that much... Am I a total idiot?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "拿你当货换钱的，才是糊涂。",
-              "en": "The idiot is the one trying to trade you for money."
-            },
-            {
-              "speaker": "Lydia",
               "text": "<i>把镯子往下撸</i>那我把这个给他们行不行？东西拿走，别再来烦你们——",
               "en": "<i>Starts pulling the bracelet off</i> Then I'll just give it to them, okay? Let them take it and leave you alone—"
             },
@@ -8235,19 +7522,9 @@
               "en": "Keep it on."
             },
             {
-              "speaker": "Lydia",
-              "text": "为什么？他们盯的不就这个镯子吗？",
-              "en": "Why? Isn't that what they want?"
-            },
-            {
               "speaker": "Player",
               "text": "他说的是人，不是镯子。",
               "en": "He said he's asking about the person. Not the thing."
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>把柜台上的旧布往她那边推了推</i>你把镯子送过去，他只会觉得你好拿捏，下回开口更狠。",
-              "en": "You hand over the bracelet, he'll just think you're easy. Next time he'll ask for more."
             },
             {
               "speaker": "Lydia",
@@ -8297,7 +7574,7 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>手指点着数</i>左耳，手背，矿石。矿石叫他拿走了？",
+              "text": "<i>手指点着数</i>左耳缺一块，疤在手背……等等，他把你的矿石拿走了？",
               "en": "<i>Counting on her fingers</i>Left ear, back of the hand, ore... did he take the ore?"
             },
             {
@@ -8312,19 +7589,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "埃莉诺，这两天你先不要——",
-              "en": "Eleanor, for the next few days, don't—"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>后半句吞了回去</i>我答应过，不替你安排。",
-              "en": "<i>Stops herself</i>I said I wouldn't make plans for you.",
-              "expr": "soft"
-            },
-            {
-              "speaker": "SEC",
-              "text": "对，你早讲过。",
-              "en": "Mm. You said that."
+              "text": "埃莉诺，这两天你先别……",
+              "en": "Eleanor, for the next few days, don't…"
             },
             {
               "speaker": "SEC",
@@ -8380,7 +7646,8 @@
               "sprite": "eleanor1",
               "name": "埃莉诺"
             }
-          }
+          },
+          "cursor_revision": 2
         }
       ],
       "choices": []
@@ -8507,12 +7774,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "就他一个人扑上来，剩下两个还守着巷口！",
-              "en": "Only one of them rushed over. The other two are blocking the alley!",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Lydia",
               "text": "他冲的是那个戴镯子的人——我腕子上什么都没有！今天出门就没戴！",
               "en": "He said the one with the bracelet—I'm not wearing one! I didn't wear one at all today!",
               "expr": "serious"
@@ -8521,12 +7782,6 @@
               "speaker": "Player",
               "text": "<i>从窗口探出胳膊，架开那只抓向莉迪亚的手</i>货你随便拿，人别碰。",
               "en": "<i>Reaches through the window to block his hand as it grabs for Lydia</i>Take the goods. You're not taking anyone.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "老板！他手上攥着家伙，你胳膊上划着了！",
-              "en": "Boss! He's got something in his hand—your arm!",
               "expr": "serious"
             },
             {
@@ -8555,8 +7810,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "他撒手了！正拿手背蹭眼睛……老板，你还能站直吗？",
-              "en": "He let go! He's rubbing his eyes... Boss, can you stay on your feet?",
+              "text": "老板，你还能站稳吗？",
+              "en": "Boss, can you stand?",
               "expr": "serious"
             },
             {
@@ -8572,27 +7827,15 @@
               "expr": "determined"
             },
             {
-              "speaker": "SEC",
-              "text": "不跑？还想三个人一块儿被按在这儿？",
-              "en": "Still not running? Waiting for them to haul all three of you off together?",
-              "expr": "determined"
-            },
-            {
               "speaker": "Lydia",
               "text": "那两个人架着他……退了！他们撤了！",
               "en": "The other two are pulling him back... They're gone! They've gone!",
               "expr": "tired"
             },
             {
-              "speaker": "Lydia",
-              "text": "<i>腿发软，手按在柜台边</i>他临走嚷了什么，我一个字也没听明白。",
-              "en": "<i>Her legs buckle; she braces herself on the counter</i>He shouted something before he left—I didn't catch a single word.",
-              "expr": "tired"
-            },
-            {
               "speaker": "SEC",
-              "text": "他爱嚷什么嚷什么。<i>扳手还攥在手里，站在窗口外没挪地方</i>今晚不会再折回来了。",
-              "en": "Anything would have worked.<i>Stays outside the window, gripping the wrench</i>They won't be back tonight.",
+              "text": "<i>扳手还攥在手里</i>跑得倒快。",
+              "en": "<i>She still has the wrench in her hand.</i> Quick on their feet.",
               "expr": "serious"
             },
             {
@@ -8608,39 +7851,9 @@
               "expr": "hurt"
             },
             {
-              "speaker": "Player",
-              "text": "卷帘得查看一下。",
-              "en": "We need to check the shutter.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "SEC",
-              "text": "卷帘卡在上头了，先顾你自己，胳膊还往外渗血。",
-              "en": "It's stuck up there. Leave it for now. Your arm's still bleeding.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "几格玻璃全碎了，里里外外都是渣。你放窗口那块表还在玻璃碴里……",
-              "en": "The glass display is smashed too. Glass on both sides of the window. Your watch is still in there...",
-              "expr": "hurt"
-            },
-            {
               "speaker": "SEC",
               "text": "<i>扳手放到柜上，转身按住他肩</i>坐下。",
               "en": "<i>puts down the wrench, turns to him</i> Sit down.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Player",
-              "text": "地上这些玻璃得先清。",
-              "en": "The glass has to be swept first.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "SEC",
-              "text": "少说这些，给我坐下。",
-              "en": "Shut up and sit down.",
               "expr": "serious"
             },
             {
@@ -8667,7 +7880,8 @@
               "en": "Tear the gray one. Forget the price tag.",
               "expr": "serious"
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -8725,7 +7939,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "那个出价的我也提了，哪天来的，报的什么数。值班的写到一半抬头，问了一句家里知不知道。",
+              "text": "那人哪天来的、出了多少钱，我都说了。值班的抬头问我家里知不知道。",
               "en": "I told them about the man who made the offer too. What day he came, how much he offered. The officer on duty was halfway through writing when he looked up and asked if my family knew about this."
             },
             {
@@ -8922,11 +8136,6 @@
               "en": "I'll move them. I'll come tomorrow. And the day after."
             },
             {
-              "speaker": "Eleanor",
-              "text": "别当是为了你。你要是歇业，我上哪找按价签卖货的铺子。",
-              "en": "Don't think this is for you. If your shop goes under, where am I supposed to buy things at the marked price?"
-            },
-            {
               "speaker": "SEC",
               "text": "<i>把碎玻璃扫进簸箕</i>我也来。碎玻璃只能归我，别跟我抢。",
               "en": "<i>sweeps the broken glass into the dustpan</i>I'll help too. The broken glass is mine. Nobody fight me for it."
@@ -8943,7 +8152,8 @@
               "sprite": "er_portrait_lydia_female_beauty",
               "name": "莉迪亚"
             }
-          }
+          },
+          "cursor_revision": 2
         }
       ],
       "choices": []
@@ -9041,34 +8251,19 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "就那天夜里，你那条胳膊突然横过来，刚好挡在他跟我中间。",
-              "en": "That night, your arm came straight through the window, right between him and me."
+              "text": "那天他们抓莉迪亚，你一伸手，我还以为你这条胳膊要废了。",
+              "en": "When they grabbed Lydia and you stuck your arm out, I thought you'd lose the use of it."
             },
             {
               "speaker": "Eleanor",
-              "text": "上面那些人碰见事，只会杵在门口看。回去再拿到饭桌上当闲话讲。",
-              "en": "The people up top, when something happens they just stand in the doorway and watch. Then they go home and tell it as a joke over dinner."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "长这么大，肯站到我前头的就我母亲一个。",
-              "en": "Growing up, the only one who ever stood in front of me was my mother.",
+              "text": "后来给你换布，你还跟我说不疼。",
+              "en": "And when I changed the dressing, you told me it didn't hurt.",
               "expr": "sad"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手指把一张纸翻来覆去抹平</i>再之后就是你。下城区那间当铺里的。",
-              "en": "<i>Presses a sheet of paper flat, over and over</i> Then you. A pawnbroker from Lower Level."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "说出去没人信。连我自己都觉得这事不挨边。",
-              "en": "Ridiculous, right. Even I think it's ridiculous."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你这个人靠得住。没糊弄过我，没捧着我说好话，也没拿我当可怜虫。我烦死自己认下它了，可它就这么真。",
-              "en": "You're reliable. You don't lie to me, don't flatter me, don't pity me. I hate admitting it, but it's true."
+              "text": "<i>手指把一张纸翻来覆去抹平</i>有句话，那天我没敢说。",
+              "en": "<i>Presses a sheet of paper flat, over and over</i> There was something I couldn't bring myself to say that day."
             },
             {
               "speaker": "Eleanor",
@@ -9076,7 +8271,8 @@
               "en": "I like you.",
               "expr": "shy"
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv08_b002",
@@ -9090,15 +8286,11 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>整个人猛一下转过来</i>喊我干嘛？我还差一截没讲完。",
-              "en": "<i>Whirls around</i>What are you calling me for? I'm not done."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "叫一声就行，别再叫第二声。",
-              "en": "Once is enough. Don't call me twice."
+              "text": "喊我干嘛。",
+              "en": "What?"
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv08_b003",
@@ -9112,15 +8304,11 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "放下来算怎么回事？接着码你的。",
-              "en": "What are you putting it down for? Stack your goods."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你手一停，我下面的话更出不来了。",
-              "en": "When you stop, it's harder for me to keep going."
+              "text": "接着码呀，刚才不是挺忙的。",
+              "en": "Keep stacking. You looked busy a second ago."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv08_b004",
@@ -9134,8 +8322,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "别出声。你一张嘴我就要呛你，呛完我后头的话又全吞回去了。",
-              "en": "Don't talk. The second you open your mouth I'll snap back, and then I won't be able to finish."
+              "text": "别动。",
+              "en": "Hold still."
             },
             {
               "speaker": "Narrator",
@@ -9163,21 +8351,12 @@
               "en": "<i>Already two steps away</i>Don't follow me. Don't ask, either."
             },
             {
-              "speaker": "Eleanor",
-              "text": "你回我哪句话，我还没想明白自己接不接得住。",
-              "en": "I haven't figured out what you could say that I could take."
-            },
-            {
-              "speaker": "Narrator",
-              "text": "她走得很急，肩上的包带跟着甩。",
-              "en": "She walks away quickly, her bag strap bouncing on her shoulder."
-            },
-            {
               "speaker": "Player",
               "text": "……",
               "en": "..."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -9268,8 +8447,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>她自己先僵住了</i>……不对，等等，我没打算这么开口。",
-              "en": "<i>Freezes as soon as it's out</i>... No, wait, that's not how I rehearsed it."
+              "text": "<i>她自己先僵住了</i>……你先别笑。",
+              "en": "<i>She goes still.</i> …Don't laugh."
             }
           ]
         },
@@ -9285,15 +8464,11 @@
             },
             {
               "speaker": "Lydia",
-              "text": "就是……我想让你归我，哪怕只拿一点——不对，越说越偏。",
-              "en": "I mean... I want you to be mine, even a little—no, that's worse."
-            },
-            {
-              "speaker": "Player",
-              "text": "我不卖。",
-              "en": "People aren't for sale."
+              "text": "就是……哎呀，你让我从哪儿说起。",
+              "en": "It's… Oh, where do you want me to start?"
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv09_b003",
@@ -9307,15 +8482,11 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>她刚坐下又弹起来</i>一坐就更讲不出口。前面那句当我没说。",
-              "en": "<i>Sits, then stands again</i> It's harder to say sitting down. Pretend you didn't hear what I just said."
-            },
-            {
-              "speaker": "Player",
-              "text": "听见了。这个不卖。",
-              "en": "Heard you. People aren't for sale."
+              "text": "<i>她刚坐下又弹起来</i>还是站着吧。",
+              "en": "<i>She sits down and springs back up.</i> I'll stand."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv09_b004",
@@ -9324,44 +8495,18 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "我不卖。谁喊价也不卖。",
-              "en": "Not selling a person. Not to anyone's offer."
+              "text": "我不卖。",
+              "en": "I'm not for sale."
             },
             {
               "speaker": "Lydia",
-              "text": "我懂，我懂……说出口就后悔了。",
-              "en": "I know, I know... I knew it was wrong the moment I said it.",
-              "expr": "hurt"
+              "text": "那……你明天能歇一天吗？",
+              "en": "Then… could you take tomorrow off?"
             },
             {
               "speaker": "Lydia",
-              "text": "别用那种眼神。我没当你是货架上摆的东西，真的。",
-              "en": "Don't look at me like that. I don't think of you as goods on the counter. I really don't."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我只是没想出来还能怎么开口。回家张嘴要东西都是这套。",
-              "en": "I just... couldn't think of another way to say it. At home, that's how you ask for anything you want."
-            },
-            {
-              "speaker": "Player",
-              "text": "这里不是你那个家。",
-              "en": "This isn't your home."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "嗯。<i>她拿指节碰了碰腕上那只镯子</i>所以我换个问法。你听完再回绝，行吗？",
-              "en": "Yeah. <i>looks down and turns her bracelet</i> So I'll try again. Hear me out before you say no, okay?"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我不买你这个人。我买你关一天门。",
-              "en": "I'm not buying you. I'm buying one day of you not open."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "一整天，卷帘都别拉起来，窗口不用开。两千，当我补你停业的亏损。",
-              "en": "One whole day with the shutter down. You won't have to watch the window. Two thousand for the lost business."
+              "text": "两千。窗口关一天，少做的生意算我的。",
+              "en": "Two thousand. Keep the window shut for a day. I'll cover what you lose."
             },
             {
               "speaker": "Player",
@@ -9370,8 +8515,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我自己的。没从家里账上拿，攒了挺久，原本是留给别的东西。",
-              "en": "Mine. Not from the family accounts. Been saving a long time. Was going to buy something else."
+              "text": "我自己攒的。",
+              "en": "I've been saving up."
             },
             {
               "speaker": "Lydia",
@@ -9380,34 +8525,13 @@
             },
             {
               "speaker": "Lydia",
-              "text": "<i>她自己截住后半句</i>不加了。再往上加，又变回谈买卖了。",
-              "en": "<i>cuts herself off</i> No more. If I add more, it's shopping again."
-            },
-            {
-              "speaker": "Player",
-              "text": "只有关门能买。别的都不卖。",
-              "en": "Only buying closed doors. Nothing else for sale."
+              "text": "<i>她把手从钱袋上挪开</i>就两千。",
+              "en": "<i>She takes her hand off her purse.</i> Two thousand."
             },
             {
               "speaker": "Lydia",
-              "text": "谁买别的啊。我要的是一天，只给我自己，不是陪谁来的那种。",
-              "en": "Who said anything about buying anything else! I just want one day. My own day, not tagging along after someone.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "以前每次来都跟着埃莉诺，替她看布料问货。我也盼……有那么一回能是自己来。",
-              "en": "Every time I come, it's with Eleanor, helping her look at this and that. I want... for once, it to be me."
-            },
-            {
-              "speaker": "Player",
-              "text": "想清楚了？",
-              "en": "You sure?"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "来的时候一路都在想。想着想着拐错了一条巷子。",
-              "en": "Thought about it the whole way. Almost took a wrong alley."
+              "text": "刚才那句我在路上练过的。练得拐错了条巷子。",
+              "en": "I practised that line on the way here. Turned down the wrong alley doing it."
             },
             {
               "speaker": "Player",
@@ -9416,16 +8540,11 @@
             },
             {
               "speaker": "Lydia",
-              "text": "行，就这么定。你明早不许反悔开窗，卷帘外有人拍也别拉开。",
-              "en": "Then it's settled! No opening for business at the last minute. Not even if someone knocks on the shutter.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Lydia",
               "text": "<i>她往后让了一步，又扭头看他</i>明早，我来窗口等你。",
               "en": "<i>Steps back, then looks at him again</i>I'll come and wait for you tomorrow morning."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -9517,8 +8636,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "光点头啊？……行，算你讲过了。我记成“好看”。",
-              "en": "What kind of answer is a nod? ...Fine. I'll count it. I'll tell myself you said \"nice.\""
+              "text": "光点头啊？我想听你说。",
+              "en": "A nod? I want to hear you say it."
             }
           ]
         },
@@ -9536,13 +8655,9 @@
               "speaker": "Lydia",
               "text": "他们爱看就看。你还没回我，到底好不好看？",
               "en": "Let them look. You still haven't said it. Does it look good?"
-            },
-            {
-              "speaker": "Player",
-              "text": "挺好看。",
-              "en": "It looks good."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv10_b004",
@@ -9562,28 +8677,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "别人夸我，我能接一大段。到你这儿，我一个字都找不到。",
-              "en": "Usually when people compliment me, I can go on and on. With you, I can't think of a single word."
-            },
-            {
-              "speaker": "Player",
-              "text": "那就不用接。",
-              "en": "Then don't."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>笑出声，又赶紧把嘴抿住</i> 好，不接。",
-              "en": "<i>laughs out loud, then quickly presses her lips shut</i> Fine. I won't."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我先说清楚，今天我没订任何东西，也没给自己排时间。",
-              "en": "Let me be clear first. I didn't book anything today. I didn't plan any times."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "平时我总替别人安排，连先后都替人排好。今天想一样都不管。",
-              "en": "I'm always arranging things for other people, and I do it well. Today I want to try not arranging."
+              "text": "我昨晚差点把位子都订了。",
+              "en": "I nearly booked us a table last night."
             },
             {
               "speaker": "Player",
@@ -9596,12 +8691,6 @@
               "en": "You choose. I'd be fine sitting here all day looking at that watch of yours."
             },
             {
-              "speaker": "Lydia",
-              "text": "你有没有什么想去的地方？",
-              "en": "Anywhere you want to go?",
-              "expr": "serious"
-            },
-            {
               "speaker": "Player",
               "text": "走起来再看。",
               "en": "Let's see where we end up."
@@ -9612,16 +8701,12 @@
               "en": "All right, boss."
             },
             {
-              "speaker": "Lydia",
-              "text": "不对，今天你不当老板。",
-              "en": "No, you're not the boss today."
-            },
-            {
               "speaker": "Narrator",
               "text": "窗口的卷帘落了下去。",
               "en": "The window shutter comes down."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -9732,34 +8817,23 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "你来开价的前一天，她来过。就她一个人。",
-              "en": "The day before you came to make your offer, she came by. Alone."
+              "text": "你来开价的前一天，埃莉诺来过。就她一个人。",
+              "en": "The day before you came to name your price, Eleanor came by. Alone."
             },
             {
               "speaker": "Player",
-              "text": "她说喜欢我。亲了一下，没多留，走了。",
-              "en": "She said she likes me. Then she kissed me and left."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "……你说什么？",
-              "en": "...What?",
-              "expr": "serious"
+              "text": "她说喜欢我。亲了我一下就走了。",
+              "en": "She said she liked me. Gave me a kiss and left."
             },
             {
               "speaker": "Lydia",
               "text": "<i>手指从柜台撤回来，捏住手镯</i>前一天。她抢在我前头了。",
-              "en": "<i>Pulls her hand back from the counter and grips the bracelet</i>The day before. Before me."
-            },
-            {
-              "speaker": "Player",
-              "text": "对。",
-              "en": "Yeah."
+              "en": "<i>She draws her fingers off the counter and grips her bracelet.</i> The day before. She beat me to it."
             },
             {
               "speaker": "Lydia",
               "text": "那你……你当时怎么回她的？",
-              "en": "So... did you answer her?"
+              "en": "Then what… what did you say to her?"
             },
             {
               "speaker": "Player",
@@ -9768,61 +8842,31 @@
             },
             {
               "speaker": "Lydia",
-              "text": "行，是你们俩的事。我多这句嘴都不该。",
-              "en": "Right, right. It's your business. I shouldn't even ask.",
-              "expr": "hurt"
+              "text": "那你昨天怎么不说呀？我还非要你夸我好看。",
+              "en": "Why didn't you tell me yesterday? And there I was, making you say I looked pretty."
             },
             {
               "speaker": "Lydia",
-              "text": "她先开的口，我后头还攥着两千，跑来说要买一天。我办的这叫什么。",
-              "en": "She said it first. I came running up behind with two thousand to ask for a day. What have I done?"
+              "text": "……对不起，老板。",
+              "en": "…Sorry, boss."
             },
             {
               "speaker": "Lydia",
-              "text": "我还跟自己说别替她做主。结果我没替她做主，自己先绕到她前边去了。",
-              "en": "I told myself I wouldn't plan for her. So I didn't. I just walked right ahead of her."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>吸了口气，把背挺直</i>对不起。对不住你，也对不起她。",
-              "en": "<i>Takes a deep breath and stands straight</i>I'm sorry. To you. And to her."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "昨天那一次只到昨天。我再不买你哪一天，也不背着她来要什么。",
-              "en": "That day ends yesterday. I won't buy another day from you, and I won't come asking for anything behind her back."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "也不会把这事藏成只有你我知道。那个我熬不住。",
-              "en": "And I won't let this turn into the kind of thing only the two of us know about. I can't stand that."
+              "text": "那两千别退。你昨天关了一天门。",
+              "en": "Keep the two thousand. You were shut all day yesterday."
             },
             {
               "speaker": "Player",
-              "text": "她那边呢？",
-              "en": "What about her?"
+              "text": "还去找她吗？",
+              "en": "Still going to see her?"
             },
             {
               "speaker": "Lydia",
-              "text": "……我还没想清楚。",
-              "en": "...I haven't figured it out yet."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>手指搭上柜沿，停了一会儿</i>那两千是补你歇业的，别退给我。",
-              "en": "<i>Rests her hand on the counter edge for a moment</i>The two thousand was for the lost business. Don't give it back."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "你要是退回来，我就真成买完又退货的人了。",
-              "en": "If you give it back, I'll really be the kind of person who buys something and returns it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "<i>转身朝门口走，脚步停了一下，没回头</i>我先走了。今天不吵你。",
-              "en": "<i>Turns away and pauses without looking back</i>I'll go now. I won't bother you today."
+              "text": "去啊。……最好还是她室友来开门。",
+              "en": "I am. …I hope her roommate gets the door again."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -9861,8 +8905,8 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "<i>她先往窗口里探了探，肘弯支在窗台边上</i>老板，我来跟你报个喜。脸别绷那么紧，你再这样，我真会把话讲跑偏。",
-              "en": "Boss, I'm here with good news. So loosen up your face first — when you get all stiff, I start tripping over my words.",
+              "text": "<i>她用肘弯支着窗台</i>老板，跟你报个喜。",
+              "en": "<i>She props an elbow on the sill.</i> Good news, boss.",
               "expr": "smile"
             },
             {
@@ -9882,23 +8926,13 @@
             },
             {
               "speaker": "Lydia",
-              "text": "再后来，她自己把那天来店里的事讲了。我连半个字都没提。",
-              "en": "Then she told me about going to the shop that day. She told it herself — I didn't ask a single thing."
+              "text": "后来她自己跟我说，她亲过你。我那杯水端到一半，又放下了。",
+              "en": "Then she told me she'd kissed you. I had my glass halfway to my mouth. I put it down."
             },
             {
               "speaker": "Lydia",
-              "text": "所以啊……我来替你们高兴。",
-              "en": "So... congratulations to you two."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "她从小就这样，挑裙子挑鞋子，挑朋友也挑。这一回她没挑走眼。",
-              "en": "She's been picky since she was little — dresses, shoes, friends, all of it. And she didn't pick wrong this time either."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "行了，话我送到了，该走啦。",
-              "en": "There. Message delivered. I should go."
+              "text": "你俩……挺好的。那我走啦。",
+              "en": "You two… I'm glad. Well, I'll be off."
             },
             {
               "speaker": "Lydia",
@@ -9911,20 +8945,9 @@
               "en": "Lydia."
             },
             {
-              "speaker": "Lydia",
-              "text": "诶？我这就走了……",
-              "en": "Hm? I'm just leaving..."
-            },
-            {
               "speaker": "Narrator",
               "text": "她肩头一抖。",
               "en": "Her shoulders jerk."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "我也说不清为什么，泪就是往下掉。",
-              "en": "I don't know why, but the tears just won't stop.",
-              "expr": "hurt"
             },
             {
               "speaker": "Lydia",
@@ -9933,18 +8956,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我就说这一回，你听进去就行。",
-              "en": "I'll say it once. Just listen."
-            },
-            {
-              "speaker": "Lydia",
               "text": "我，喜欢你。",
               "en": "I like you."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "从你讲那块表那会儿就有苗头……不对，更早，镯子那回。我这会儿也分不清。",
-              "en": "Ever since you talked about that watch... no, wait, maybe earlier. The bracelet. I can't even tell."
             },
             {
               "speaker": "Lydia",
@@ -9953,15 +8966,16 @@
             },
             {
               "speaker": "Lydia",
-              "text": "可是先开口的是她。她在下边熬了那么久，才等到一个肯替她挡前头的人。",
-              "en": "But she spoke first. She's been grinding down there so long, and finally someone's willing to stand in front of her."
+              "text": "可她先告诉你了。",
+              "en": "But she told you first."
             },
             {
               "speaker": "Lydia",
-              "text": "<i>指尖在窗台边轻轻点了一下</i>我不能再横到她前面去。我退出。可下回我还来，还当她的朋友。",
-              "en": "I can't get in her way again. So I'm out. I'll still come by. Still be her friend."
+              "text": "我退出。",
+              "en": "I'll bow out."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv12_b002",
@@ -10000,13 +9014,9 @@
               "text": "<i>她边吸气边笑出声来</i>你……你就是把我欺负了。",
               "en": "<i>Laughs through her tears</i> You... you are bullying me.",
               "expr": "shy"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "一边护着我，一边又欺负我。",
-              "en": "You protect me, then you bully me too."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "dv12_b004",
@@ -10031,11 +9041,6 @@
             },
             {
               "speaker": "Lydia",
-              "text": "你这话，没唬我吧？",
-              "en": "You... do you mean that?"
-            },
-            {
-              "speaker": "Lydia",
               "text": "那埃莉诺怎么办？你别开口就说要把两个都——",
               "en": "Then what about Eleanor? Don't tell me you plan to have both—"
             },
@@ -10052,20 +9057,11 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我俩怎么会一起栽你手里，你这没脸没皮的混蛋。",
-              "en": "How did we both fall for a shameless bastard like you?"
-            },
-            {
-              "speaker": "Lydia",
               "text": "我去和埃莉诺把话摆开。",
               "en": "I'm going to talk to Eleanor."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "哪能这么容易让你占便宜。",
-              "en": "We can't both just let you have your way like this."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -10197,19 +9193,13 @@
             {
               "speaker": "Player",
               "text": "我喜欢你们俩，没打算只挑一个。",
-              "en": "You're both my wings."
+              "en": "I like you both. I don't want to choose between you."
             },
             {
               "speaker": "Eleanor",
               "text": "原来欺负是这么个意思。行，脸皮比我估的还厚。",
               "en": "This is what you meant by bullying? That's even more shameless than I imagined.",
               "expr": "smile"
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>她低下脑袋，轻轻点了一下。</i>",
-              "en": "<i>Blushes and nods</i>",
-              "expr": "shy"
             },
             {
               "speaker": "Eleanor",
@@ -10219,56 +9209,26 @@
             },
             {
               "speaker": "SEC",
-              "text": "别急着替我应下。",
-              "en": "But, but..."
+              "text": "我也愿意。",
+              "en": "I want this too."
             },
             {
               "speaker": "SEC",
-              "text": "我不想当那个被顺带提一句的人。你每回都先说“埃莉诺来了”，我再从后头冒出来。",
-              "en": "I don't want to be the tagalong. Don't make it 'Eleanor's here, and Lydia's here too' every time."
+              "text": "我想有几天自己过来。就咱俩，也不用拿帮忙看店当借口。",
+              "en": "I'd like some days when I can come on my own. Just us, without having to pretend you need help in the shop."
             },
             {
               "speaker": "SEC",
-              "text": "我得有自己过来的日子。我自己来，不用拿帮谁看店当借口。",
-              "en": "I want my own time. I'll come on my own—no excuses about helping someone watch the store."
-            },
-            {
-              "speaker": "SEC",
-              "text": "再就是，有事别最后一个传到我这儿。当面说，多难听我都听得进；事后才听说，我受不了。",
-              "en": "And don't let me be the last to know things. If it stings to hear, I'll deal. Hearing it after the fact, I can't stand."
-            },
-            {
-              "speaker": "SEC",
-              "text": "我也会酸。一酸话就多，你们到时可别捂耳朵。",
-              "en": "I get jealous too. When I'm jealous, I talk a lot. Don't get annoyed with me then."
+              "text": "还有，下回有话当面跟我说。别又等到第二天。",
+              "en": "And next time, say it to my face. Don't wait till the next day again."
             },
             {
               "speaker": "Eleanor",
-              "text": "你嘴皮子哪天闲过。",
-              "en": "Talking too much isn't a new problem for you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>她朝柜台后头抬了抬下巴</i>两位上层区的美少女，这会儿都瞧上你了。",
-              "en": "<i>Turns to look behind the counter</i> Two beautiful girls from Upper Level have fallen for you at the same time."
-            },
-            {
-              "speaker": "Player",
-              "text": "那不正显得我有本事。",
-              "en": "Doesn't that just mean I'm charming?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>她弯起眼睛，笑了一声</i>谁叫我们俩都看上你了呢。",
-              "en": "<i>Laughs out loud</i> Fine. What can we do? We both fell for you.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>她先把窗边两把椅子摆正，又拍了拍靠里的那把</i>我俩今天就坐这儿。你去忙柜台，眼神少往这儿拐。",
-              "en": "We'll sit beside the window today, the two of us. Get on with your business. Stop looking over here."
+              "text": "<i>摆正两把椅子，拍拍靠里那把</i>我俩今天就坐这儿。你去忙柜台，眼神少往这儿拐。",
+              "en": "<i>Straightens the two chairs and pats the inner one</i> We're sitting here today. Get on with your work. Stop looking over here."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [

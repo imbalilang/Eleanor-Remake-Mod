@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-20",
+  "channel": {
+    "provider": "openai-compat",
+    "channel": "openrouter",
+    "base_url": "https://openrouter.ai/api/v1/images",
+    "discovery": "https://openrouter.ai/api/v1/images/models"
+  },
+  "model_count_verified": 70,
+  "models": {
+    "seedream": {
+      "id": "bytedance-seed/seedream-5-5",
+      "name": "ByteDance Seed: Seedream 5.5",
+      "role": "composition, stage blocking, pose and camera exploration only; not a final pixel-CG renderer",
+      "resolution": [
+        "1K",
+        "1.5K",
+        "2K"
+      ],
+      "aspect_ratio": [
+        "1:1",
+        "1:2",
+        "2:1",
+        "2:3",
+        "3:2",
+        "3:4",
+        "4:3",
+        "4:5",
+        "5:4",
+        "9:16",
+        "16:9",
+        "9:19.5",
+        "19.5:9",
+        "9:20",
+        "20:9",
+        "9:21",
+        "21:9",
+        "auto"
+      ],
+      "output_format": [
+        "png",
+        "jpeg"
+      ],
+      "background": [
+        "auto",
+        "transparent",
+        "opaque"
+      ],
+      "n_max": 1,
+      "input_references_max": 10,
+      "seed": true,
+      "pricing": {
+        "output_image_usd": 0.02,
+        "high_resolution_usd": 0.035,
+        "input_image_usd": 0.008
+      },
+      "status": "composition_only_downgraded"
+    },
+    "openai": {
+      "id": "openai/gpt-image-2.6-flare",
+      "name": "OpenAI: GPT Image 2.6 Flare",
+      "role": "precise edits, text and complex multi-reference work",
+      "aspect_ratio": [
+        "1:1",
+        "3:2",
+        "2:3",
+        "4:3",
+        "3:4",
+        "16:9",
+        "9:16",
+        "21:9",
+        "auto",
+        "4:5",
+        "5:4",
+        "2:1",
+        "1:2",
+        "3:1",
+        "1:3"
+      ],
+      "output_format": [
+        "png",
+        "jpeg",
+        "webp",
+        "gif"
+      ],
+      "quality": [
+        "auto",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "background": [
+        "auto",
+        "transparent",
+        "opaque"
+      ],
+      "n_max": 10,
+      "input_references_max": 16,
+      "output_compression": [
+        0,
+        100
+      ],
+      "status": "prompt_only_failed_stage_test_needs_normalization"
+    },
+    "grok": {
+      "id": "x-ai/grok-imagine-image-2.0",
+      "name": "xAI: Grok Imagine Image 2.0",
+      "role": "alternative composition and pose tests",
+      "resolution": [
+        "1K",
+        "2K"
+      ],
+      "aspect_ratio": [
+        "1:1",
+        "3:4",
+        "4:3",
+        "9:16",
+        "16:9",
+        "2:3",
+        "3:2",
+        "9:19.5",
+        "19.5:9",
+        "9:20",
+        "20:9",
+        "1:2",
+        "2:1",
+        "auto",
+        "21:9",
+        "5:2"
+      ],
+      "quality": [
+        "low",
+        "medium",
+        "auto"
+      ],
+      "n_max": 10,
+      "input_references_max": 5,
+      "no_explicit_pixel_size": true,
+      "pricing": {
+        "input_image_usd": 0.01,
+        "low_1k_usd": 0.04,
+        "low_2k_usd": 0.06,
+        "medium_1k_usd": 0.06,
+        "medium_2k_usd": 0.08
+      },
+      "status": "prompt_only_failed_stage_test_needs_normalization",
+      "openrouter_size_shorthand": true,
+      "openrouter_resolution_supported": true,
+      "openrouter_aspect_ratio_supported": true,
+      "tool_path_parameter_note": "For provider=openai-compat/channel=openrouter, pass size=\"WIDTHxHEIGHT\"; image_size + aspect_ratio alone may arrive as 1:1.",
+      "tested_size": "2048x1152"
+    },
+    "tencent": {
+      "id": "tencent/hy-image-v3.5-preview",
+      "name": "Tencent: Hy Image 3.5 Preview",
+      "role": "private/explicit content fallback after moderation blocks",
+      "resolution": [
+        "1K",
+        "1.5K",
+        "2K",
+        "4K"
+      ],
+      "aspect_ratio": [
+        "1:1",
+        "1:2",
+        "1:4",
+        "2:1",
+        "2:3",
+        "3:2",
+        "3:4",
+        "4:1",
+        "4:3",
+        "4:5",
+        "5:4",
+        "9:16",
+        "16:9"
+      ],
+      "n_max": 1,
+      "input_references_max": 20,
+      "seed": true,
+      "size": true,
+      "pricing": {
+        "output_image_token_usd": 1.6e-06
+      },
+      "moderation_rejections_observed": 0,
+      "drift_risk": "high_on_repeated_edits",
+      "max_chained_edits": 1,
+      "status": "prompt_only_failed_stage_test_needs_normalization"
+    }
+  },
+  "rules": [
+    "Always specify the exact model ID; do not rely on the OpenRouter channel default.",
+    "For Grok, use resolution + aspect_ratio; never send explicit pixel size.",
+    "For 16:9 art use aspect_ratio 16:9 and resolution 2K where supported.",
+    "If a model explicitly rejects a content request, do not retry the same content on that model; switch to Tencent.",
+    "Pass reference images through input_references as image_url data URLs or HTTP(S) URLs."
+  ],
+  "permissiveness_order": [
+    "seedream",
+    "openai",
+    "grok",
+    "tencent"
+  ],
+  "permissiveness_note": "Seedream < OpenAI < Grok < Tencent Hunyuan. Tencent has not been observed rejecting any request yet; this is an observation, not a guarantee.",
+  "tencent_drift_policy": [
+    "Prefer a fresh generation from the original source over repeated edits.",
+    "Allow at most one correction pass on a Tencent output; if another correction is needed, restart from the original source or switch model.",
+    "Do not use the previous Tencent edit as the next source; always go back to the clean source master.",
+    "Reject any result with visible palette shift, pixel-grid density change or color cast; redraw from source instead of patching."
+  ]
+}

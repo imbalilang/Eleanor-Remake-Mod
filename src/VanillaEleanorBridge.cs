@@ -12,8 +12,6 @@ namespace EleanorRomance
     {
         private static readonly ConditionalWeakTable<StoreClient, object> decorated
             = new ConditionalWeakTable<StoreClient, object>();
-        private static bool capturingReward;
-        private static GameItem capturedReward;
 
         // Our rescue visits deliberately use private IDs.  Other mods (notably
         // Agri Expansion) treat every identifier starting with "eleanor" as a
@@ -257,40 +255,5 @@ namespace EleanorRomance
                     && (nativeDisabled == null || !nativeDisabled(response)));
         }
 
-        public static bool GiveWarningGift(int option)
-        {
-            if (capturingReward) return false;
-            capturedReward = null;
-            GameItem reward;
-            try
-            {
-                capturingReward = true;
-                // Use the actual native reward action, including future balance changes.
-                StoreClientUniqueList.EleanorWarned().barterOffer.offerSets[option]();
-                reward = capturedReward;
-            }
-            catch (Exception ex)
-            {
-                if (capturedReward != null)
-                    GraphUtils.DestroyIfUnplaced(capturedReward, "Native Eleanor reward failed");
-                StoryDirector.LogError("Native Eleanor reward failed: " + ex);
-                return false;
-            }
-            finally
-            {
-                capturingReward = false;
-                capturedReward = null;
-            }
-            return reward != null && StoryEngine.DeliverToPlayer(reward);
-        }
-
-        // Intercept only the synchronous placement issued by our native reward
-        // action. Everything else keeps the game's normal table placement.
-        public static bool CaptureReward(GameItem item)
-        {
-            if (!capturingReward) return false;
-            capturedReward = item;
-            return true;
-        }
     }
 }

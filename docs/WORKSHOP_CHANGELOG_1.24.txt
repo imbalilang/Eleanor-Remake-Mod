@@ -1,0 +1,13 @@
+1.24 压价只按原生砍价操作判定
+
+- 修复批发或其他未砍价成交被误判为玩家压价的问题；玩家接受埃莉诺自己提供的批发价后，不再播放“压这么狠，我捡了一上午”。
+- 压价现在只由原生砍价/黑名单/威胁操作判定；市场波动、检查或对峙成功后的降价等不再误触发压价反应。
+- 保留 1.23 王尔德筹备提示、1.22 假货检查反应、1.21 韩语语域/译名修正及更早修复。
+- 不改正文、路线、选项、目标日、排期或结局。
+
+1.24 lowball is native-action based
+
+- Fixed wholesale and other non-bargained purchases being classified as a player lowball; accepting Eleanor's own wholesale offer no longer plays "That's a harsh price. I scavenged all morning."
+- Lowball now comes only from native bargain/blackmail/threaten actions; market variance and inspection discounts no longer trigger it.
+- The 1.23 Wilde preparation tip, 1.22 counterfeit-inspection reaction, 1.21 Korean register/name fixes and earlier fixes remain.
+- No dialogue, route, choice, target-day, schedule or ending changes.

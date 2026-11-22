@@ -41,6 +41,9 @@ namespace EleanorRomance
             // Must run before project visibility is computed on load.
             MaidRouteMigration.MigrateDeferred();
             StoryCoreFacts.Migrate();
+            // The vanilla keepsake is part of the ending, not a separate claim.
+            // Old saves that deferred it receive it as soon as the save loads.
+            if (EndgamePerfumeDue) StoryEngine.GiveSelfRefillingPerfume();
             DualMigration.OnLoaded();
             VanillaEleanorBridge.OnLoaded();
             MaidProjects.OnLoaded();
@@ -127,6 +130,7 @@ namespace EleanorRomance
                 if (VanillaEleanorBridge.RescuePending) return;
 
                 int day = StoreStation.Instance != null ? StoreStation.Instance.dayCounter : 0;
+                if (EndgamePerfumeDue) StoryEngine.GiveSelfRefillingPerfume();
                 DualProgression.Check();
                 DualShowcaseEffects.FlushPending();
                 DualDirector.RecoverPending(manager);
@@ -146,7 +150,11 @@ namespace EleanorRomance
                     return;
                 }
                 if (DualDirector.TryQueue(manager, day)) return;
-                if (DualState.Active && DualState.Flag("d.route") && DualDirector.NextScene(day) == "d06") return;
+                if (DualState.Active && DualState.Flag("d.route"))
+                {
+                    string dualNext = DualDirector.NextScene(day);
+                    if (dualNext == "d06" || dualNext == "dv10") return;
+                }
                 if (MaidStory.TryQueue(manager, day)) return;
                 if (MaidState.LegacyResume == 1) return; // Await its dedicated due day and explicit choice.
                 if (DualBusiness.TryQueue(manager, day)) return;
@@ -433,6 +441,14 @@ namespace EleanorRomance
                     && !string.IsNullOrEmpty(c.identifier)
                     && VanillaEleanorBridge.IsOurClient(c));
         }
+
+        /// <summary>Vanilla Eleanor9's perfume belongs to every successful ending.</summary>
+        private static bool EndgamePerfumeDue => !RomanceState.PerfumeGiven
+            && (StoryCoreFacts.PerfumePending
+                || (MaidState.HasHistory && MaidState.BasicComplete)
+                || LoveState.Act3Done
+                || RomanceState.RevComplete
+                || DualDirector.RouteStoryFinished);
 
         public static int TargetDay(int chapter)
         {

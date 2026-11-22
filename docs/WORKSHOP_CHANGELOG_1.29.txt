@@ -1,0 +1,17 @@
+1.29 奖励发放、莉迪亚闭店约会与文案同步
+
+- 修复莉迪亚付费闭店约会：开店前约会已排入但未显示时，改走原生到店队列，同时挂中央开店方法，并在读档/再次开店时清理过期的待处理或卡住的闭店客户。
+- 恢复自我补充香水为所有成功结局的直接原生柜台奖励：单人恋爱、侍从 v2、革命军 v1/v2 补上发放；普通/朋友/后宫/旧侍从线不再经过“收下/稍后”菜单；旧存档在加载或开店时自动补发。
+- 假叔叔事件警告谢礼改用原版 EleanorWarned 自由奖励 barter 界面和原生归属转移，移除自定义拦截、背包投递与满仓重试菜单。
+- 同步本轮文案修订：共同第 20 章告白选项、革命军《空着手》《第七行》的回答、侍从线《唱快了》第一项和共同第 23 章朋友工作收尾；选项结果不变。
+- 同步日/韩缺失与错位行，包括革命军 r1c1 的市井反应、侍从线慢歌回答与后宫回执领奖文案。
+- 保留 1.28 治安部渠道与本地化修复、1.27 Serpico 顺延、1.26 文案收尾及更早修复；不改路线、目标日或结局。
+
+1.29 reward delivery, Lydia closure date and text sync
+
+- Fixed Lydia's paid closure date: when the pre-opening date was staged but not displayed, it now goes through the native arrival queue, with a central shutter-open hook and recovery for stale pending/current closure clients on load or reopening.
+- Restored the self-refilling perfume as an immediate native counter reward on every successful ending: solo romance, maid v2 and revolution v1/v2 now grant it; common/friends/harem/old maid endings no longer use the "accept/later" menu; old saves receive it automatically on load or opening.
+- The fake-uncle warning gift now uses the native EleanorWarned free-reward barter UI and native ownership transfer; the custom interception, inventory delivery and storage-full retry menu are removed.
+- Synced the latest text pass: the common chapter-20 confession option, the revolution "Empty-Handed" and "Seventh Line" answers, the maid "Sang Too Fast" first option and the common chapter-23 friend-work wrap-up; choice outcomes are unchanged.
+- Synced missing and shifted Japanese/Korean lines, including the revolution r1c1 street reaction, the maid slow-song answers and the harem receipt claim.
+- The 1.28 Security channel and localization fixes, 1.27 Serpico delay, 1.26 polish and earlier fixes remain; no route, target-day or ending changes.

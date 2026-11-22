@@ -51,6 +51,7 @@ def build(root):
         "private static readonly Dictionary<string,Line[]> Blocks = new Dictionary<string,Line[]> {",
     ]
 
+    revised_cursors = []
     for scene in scenes:
         for choice in scene.get("choices", []):
             cid = choice.get("id")
@@ -64,6 +65,9 @@ def build(root):
 
         for block in scene.get("blocks", []):
             bid = block["id"]
+            if block.get("cursor_revision"):
+                revision = int(block["cursor_revision"])
+                revised_cursors.append(f'case "{bid}": return "cursor.r{revision}.{bid}";')
             entries = []
             for index, line in enumerate(block.get("lines", []), 1):
                 key = f"er_love_{bid}_{index:02d}"
@@ -76,6 +80,9 @@ def build(root):
     code += [
         "};",
         "public static Line[] Get(string id) => Blocks.TryGetValue(id,out var block) ? block : null;",
+        "public static string CursorKey(string id) { switch (id) {",
+        *revised_cursors,
+        'default: return "cursor." + id; } }',
         "private static readonly Dictionary<string,StoryPresentationSpec> Presentations = new Dictionary<string,StoryPresentationSpec> {",
     ]
     for scene in scenes:

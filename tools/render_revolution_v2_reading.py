@@ -90,7 +90,7 @@ def render():
                 lines.append(f"旁白：{clean(seg['result'])}")
                 lines.append("")
             elif seg["type"] == "choice":
-                lines.append(f"选择：{seg['prompt']}")
+                lines.append("在上句选择" if seg.get("attach_to_previous") else f"选择：{seg['prompt']}")
                 for opt in seg["options"]:
                     lines.append(f"- **{opt['label']}**：{IMPACT}")
                     if opt.get("block"):

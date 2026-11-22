@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-20",
+  "goal": "Find one stable prompt recipe per model that produces images passing PIXEL_STYLE_PROFILE_2026-11-20.json.",
+  "style_anchor": {
+    "id": "love_white_sleepwear_wakeup_B",
+    "file": "Art/character-assets-2026-11-20/cg/love_white_sleepwear_wakeup/approved/love_white_sleepwear_wakeup_cg_960_approved.png"
+  },
+  "reference_roles": [
+    "content/pose reference",
+    "style anchor",
+    "character identity reference"
+  ],
+  "common_style_block": "Pixel-art CG rendering. Use dense 1-3 px pixel clusters to build every form. Use irregular, localized clustered dithering only in tonal transitions; never a repeating checkerboard or screen-door pattern. Use hard-edged color steps, crisp dark 1 px outlines, and rich pixel-level detail in hair, skin, fabric and background. Do not use anti-aliasing, soft airbrush, blur, smooth gradients, 3D rendering or flat anime shading.",
+  "negative_block": "No repeating checkerboard, no screen-door dithering, no smooth anime, no 3D render, no anti-aliasing, no soft airbrush, no blur, no large unbroken flat fills, no photographic gradients.",
+  "variants": {
+    "V1_conservative": "Preserve the reference composition and render it as pixel-art CG with dense pixel clusters, hard color steps and crisp outlines. Keep the palette and lighting close to the reference.",
+    "V2_balanced": "First design at a low-resolution native pixel canvas, then upscale with nearest-neighbor. Keep visible 2-4 px clusters at final 2K. Use irregular clustered dithering only in shadow and highlight transitions. Use hard-edged color steps and crisp dark outlines. Do not smooth the image after upscaling.",
+    "V3_strict": "Design at a 640x360 native pixel canvas, then upscale with nearest-neighbor to 2K. Every form must be built from visible 1-3 px clusters. Use a limited hard palette, irregular localized dithering, crisp dark 1 px outlines, and high detail density in hair, skin, fabric and background. Explicitly avoid checkerboard patterns, anti-aliasing, soft gradients, airbrush shading and flat anime rendering."
+  },
+  "model_adapters": {
+    "seedream": {
+      "id": "bytedance-seed/seedream-5-5",
+      "suffix": "Keep the 2K output crisp after upscaling; do not apply any smoothing, denoise or painterly pass. Preserve hard pixel edges and the reference palette."
+    },
+    "openai": {
+      "id": "openai/gpt-image-2.6-flare",
+      "suffix": "Follow the style constraints literally. Do not reinterpret the image as polished anime or 3D. Preserve exact composition, palette and pixel structure; add no new details smaller than one native pixel block."
+    },
+    "grok": {
+      "id": "x-ai/grok-imagine-image-2.0",
+      "suffix": "Render at a low-resolution native pixel canvas and upscale with nearest-neighbor. Do not repaint the image as smooth anime. Preserve the exact pose, outfit and framing; change only the pixel rendering."
+    },
+    "tencent": {
+      "id": "tencent/hy-image-v3.5-preview",
+      "suffix": "One-shot generation from the source references. Preserve the reference palette and composition. Do not chain edits. Render crisp pixel clusters and hard color steps; avoid the model default smooth finish."
+    }
+  },
+  "test_protocol": {
+    "models": 4,
+    "variants_per_model": 3,
+    "total_images": 12,
+    "output": "2K, 16:9",
+    "acceptance": "At least 2/3 variants PASS_STYLE; median fail_distance <= 0.10; no uniform checkerboard by manual review.",
+    "tools": [
+      "tools/check_pixel_style.py",
+      "docs/PIXEL_STYLE_PROFILE_2026-11-20.json"
+    ]
+  },
+  "prompt_assembly": "content prompt + common_style_block + variant + model_adapters[model].suffix + negative_block"
+}

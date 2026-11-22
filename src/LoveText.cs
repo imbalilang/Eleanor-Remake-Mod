@@ -8,7 +8,14 @@ namespace EleanorRomance
     {
         public static Dialogue Build(params string[] ids) => BuildBackup(L.Eleanor, ids);
 
-        public static Dialogue BuildBackup(string companionName, params string[] ids)
+        public static Dialogue BuildBackup(string companionName, params string[] ids) =>
+            BuildBackup(companionName, ids, false);
+
+        // A resumed visit still needs the spoken question that hosts its buttons.
+        public static Dialogue BuildForChoice(string blockId) =>
+            BuildBackup(L.Eleanor, new[] { blockId }, true);
+
+        private static Dialogue BuildBackup(string companionName, string[] ids, bool repeatLastLine)
         {
             Dialogue head = null, tail = null;
             foreach (string id in ids)
@@ -20,7 +27,8 @@ namespace EleanorRomance
                     continue;
                 }
 
-                int cursor = LoveState.Int("cursor." + id);
+                string cursorKey = LoveContent.CursorKey(id);
+                int cursor = LoveState.Int(cursorKey);
                 int position = 0;
                 foreach (LoveContent.Line line in lines)
                 {
@@ -30,11 +38,11 @@ namespace EleanorRomance
                     foreach (string paragraph in StoryEngine.SplitParagraphs(text))
                     {
                         int next = ++position;
-                        if (next <= cursor) continue;
+                        if (next <= cursor && !(repeatLastLine && line.Key == lines[lines.Length - 1].Key)) continue;
                         Dialogue node = StoryEngine.Text(speaker, paragraph);
                         if (line.Speaker == "SEC") StoryPresentation.MarkCompanion(node, companionName);
                         PortraitExpression.Apply(node, line.Key, speaker);
-                        node.SetEndAction(() => LoveState.SetInt("cursor." + id, Math.Max(next, LoveState.Int("cursor." + id))));
+                        node.SetEndAction(() => LoveState.SetInt(cursorKey, Math.Max(next, LoveState.Int(cursorKey))));
                         if (head == null) head = node;
                         else tail.SetNextDialogue(node);
                         tail = node;

@@ -191,7 +191,10 @@ namespace EleanorRomance
             if (seg.Type != "choice") return BuildFlow(scene, index + 1, terminals);
 
             var continuation = BuildFlow(scene, index + 1, terminals);
-            var prompt = StoryEngine.Text(L.Player, L.Get(seg.Choice.PromptKey));
+            var choiceHead = seg.BlockId == null
+                ? StoryEngine.Text(L.Player, L.Get(seg.Choice.PromptKey))
+                : RevolutionV2Text.Build(seg.BlockId);
+            var prompt = StoryEngine.Tail(choiceHead);
             for (int i = 0; i < seg.Choice.Options.Length; i++)
             {
                 var option = seg.Choice.Options[i];
@@ -208,7 +211,7 @@ namespace EleanorRomance
                 var reply = StoryEngine.PlayerReply(L.Get(option.LabelKey), next);
                 prompt.AddChoice(DirectoryMaster.Item("yes"), L.Get(option.LabelKey), "", reply, null, null);
             }
-            return prompt;
+            return choiceHead;
         }
 
         private static void ShowFirstKillScene()
@@ -231,6 +234,7 @@ namespace EleanorRomance
                     RevolutionV2State.Ended = true;
                     RomanceState.RevComplete = true;
                     RomanceState.RevEndingShown = false;
+                    StoryEngine.GiveSelfRefillingPerfume();
                     StoryDirector.AdvanceChapter(290, RomanceState.ChapterComplete);
                     EndingPageUI.ShowRevolutionCompletion();
                     return;

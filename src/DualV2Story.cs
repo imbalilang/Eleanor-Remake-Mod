@@ -120,9 +120,17 @@ namespace EleanorRomance
             return Ready(client, root, presentationBlock);
         }
 
-        private static StoreClient CreateDv01() => SimpleChoice(Lydia("dual_dv01"),
-            "dv01", "Eleanor", 1, "dv01_b001", "dv01_b004", 1,
-            new[] { "dv01_b002", "dv01_b003" }, "dv01_b001");
+        private static StoreClient CreateDv01()
+        {
+            StoreClient client = Lydia("dual_dv01");
+            Dialogue root = Build("Eleanor", "dv01_b001");
+            DualText.Choices(root, "er_dual_prompt",
+                DualText.Choice("dv01_c1_1", Build("Eleanor", "dv01_b004")),
+                DualText.Choice("dv01_c1_2", Build("Eleanor", "dv01_b002")),
+                DualText.Choice("dv01_c1_3", Build("Eleanor", "dv01_b003", "dv01_b004")));
+            Finish(client, root, "dv01");
+            return Ready(client, root, "dv01_b001");
+        }
 
         private static StoreClient CreateDv02()
         {
@@ -153,8 +161,8 @@ namespace EleanorRomance
             };
 
             Dialogue root = Build("Eleanor", "dv03_b001");
-            Dialogue branch = Build("Eleanor", "dv03_b002", "dv03_b003");
-            Dialogue common = Build("Eleanor", "dv03_b003");
+            Dialogue branch = Build("Eleanor", "dv03_b002", "dv03_snack");
+            Dialogue common = Build("Eleanor", "dv03_b003", "dv03_snack");
             DualText.Choices(root, "er_dual_prompt",
                 DualText.Choice("dv03_c3_1", common),
                 DualText.Choice("dv03_c3_2", branch));

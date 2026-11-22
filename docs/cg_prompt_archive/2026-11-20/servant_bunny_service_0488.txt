@@ -1,0 +1,22 @@
+Preserve the exact composition, camera angle, body, pose and costume of Image 1. Re-render it in the sharper approved pixel-art style of Image 2.
+
+Image 1 content lock:
+- high-angle close-up from the collar down, head entirely out of frame
+- black satin high-cut one-piece leotard with sweetheart neckline
+- black sheer pantyhose/tights on both legs
+- white wrist cuff on the floor hand
+- black high heels
+- white collar and black neck bow at the top edge
+- low squat, knees wide, one hand on the metal-panel floor
+- no props, no tray, no teacup
+- dark-red curtain and warm lamp background
+
+Image 2 approved pixel-art style reference: dense pixel clusters, crisp dark outlines, layered dithering, sharp fabric highlights, high contrast. Do NOT copy its motorcycle, street or neon background.
+
+Make the rendering noticeably crisper than Image 1:
+- sharper pixel edges on the leotard, stockings, heels, hand and floor panels
+- stronger dark outlines
+- clearer pixel dithering in the skin and fabric
+- no soft airbrush, no blurry gradients
+
+Preserve the exact pose, anatomy, outfit, framing and headless crop. No head, no face, no props, no text, no watermark, no extra limbs.

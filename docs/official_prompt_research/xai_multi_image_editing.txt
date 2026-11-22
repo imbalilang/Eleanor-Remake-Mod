@@ -1,0 +1,271 @@
+Multi-Image Editing | SpaceXSI Docs
+API
+Grok Build
+Grok Bot
+Grok
+X Subscription
+Search
+⌘
+K
+API Console
+Products
+Grok
+Grok Bot
+Grok Build
+Status
+Loading...
+Resources
+llms.txt
+Discord
+Email support
+Terms and Policies
+Get Started
+Overview
+Quickstart
+Grok 4.7
+Latest
+Models
+Pricing
+Release Notes
+Text
+Text Generation
+Streaming
+Reasoning
+Structured Outputs
+Image Understanding
+Multi Agent
+Best Practices Guide
+Image & Video
+Overview
+Image Generation
+Image Editing
+Multi-Image Editing
+Image Prompting Guide
+Video Generation
+Video Overview
+New
+Image-to-Video
+Reference-to-Video
+Video Editing
+Video Extension
+Voice
+Overview
+Speech to Speech
+Text to Speech
+Speech to Text
+Custom Voices
+Ephemeral Tokens
+Files & Collections
+Files Overview
+Managing Files
+Public URLs
+New
+Chat with Files
+Collections
+Collections via API
+Collection Metadata
+Generated Media
+Tools
+Overview
+Function Calling
+Web Search
+X Search
+Code Execution
+Image Generation
+Collections Search (RAG)
+Remote MCP Tools
+In Depth
+Advanced API Usage
+Rate Limits
+Prompt Caching
+Context Compaction
+Priority Processing
+Custom Moderation Controls
+New
+Batch API
+Deferred Completions
+Async Requests
+WebSocket Mode
+mTLS Authentication
+Regional Endpoints
+New
+Output Watermarking
+New
+Cost Tracking
+Debugging Errors
+Cookbook
+Platforms
+Community Integrations
+Google Cloud Vertex AI
+Microsoft Foundry
+Docs MCP
+Migration Guides
+Image Quality Model Retirement (Nov 2, 2026)
+New
+Model Retirement (May 15, 2026)
+Migrating to Responses API
+Chat Completions (Legacy)
+FAQ
+Data & Privacy
+General
+API
+Docs
+REST Reference
+Grok Build
+Grok Bot
+Grok
+X Subscription
+Get Started
+Overview
+Quickstart
+Grok 4.7
+Latest
+Models
+Pricing
+Release Notes
+Text
+Text Generation
+Streaming
+Reasoning
+Structured Outputs
+Image Understanding
+Multi Agent
+Best Practices Guide
+Image & Video
+Overview
+Image Generation
+Image Editing
+Multi-Image Editing
+Image Prompting Guide
+Video Generation
+Video Overview
+New
+Image-to-Video
+Reference-to-Video
+Video Editing
+Video Extension
+Voice
+Overview
+Speech to Speech
+Text to Speech
+Speech to Text
+Custom Voices
+Ephemeral Tokens
+Files & Collections
+Files Overview
+Managing Files
+Public URLs
+New
+Chat with Files
+Collections
+Collections via API
+Collection Metadata
+Generated Media
+Tools
+Overview
+Function Calling
+Web Search
+X Search
+Code Execution
+Image Generation
+Collections Search (RAG)
+Remote MCP Tools
+In Depth
+Advanced API Usage
+Rate Limits
+Prompt Caching
+Context Compaction
+Priority Processing
+Custom Moderation Controls
+New
+Batch API
+Deferred Completions
+Async Requests
+WebSocket Mode
+mTLS Authentication
+Regional Endpoints
+New
+Output Watermarking
+New
+Cost Tracking
+Debugging Errors
+Cookbook
+Platforms
+Community Integrations
+Google Cloud Vertex AI
+Microsoft Foundry
+Docs MCP
+Migration Guides
+Image Quality Model Retirement (Nov 2, 2026)
+New
+Model Retirement (May 15, 2026)
+Migrating to Responses API
+Chat Completions (Legacy)
+FAQ
+Data & Privacy
+General
+Model Capabilities
+Multi-Image Editing
+Copy for LLM
+View as Markdown
+Create API key
+Try Playground
+Meet grok-4.7
+Use up to five source images for a single image edit. You can specify images in the order they are sent in the request. By default, the output aspect ratio follows the first input image. You can override this by setting the
+aspect_ratio
+parameter to a specific ratio, such as
+"1:1"
+or
+"16:9"
+.
+Each source image can be a public URL, a base64-encoded data URI, or a
+file_id
+from the
+Files API
+— and you can mix kinds within a single request. See
+Files API integration for image & video requests
+for
+file_id
+details and examples.
+Click to select
+Select at least
+2 source images
+Bash
+Python
+curl -X POST https://api.x.ai/v1/images/edits \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $XAI_API_KEY" \
+-d '{
+"model": "grok-imagine-image-2.0",
+"prompt": "Show all subjects sitting together on the grass in a sunny park. Casual relaxed mood, natural daylight, warm tones. No additional people or animals.",
+"images": [
+{ "type": "image_url", "url": "https://docs.x.ai/assets/api-examples/images/image-merge/woman.jpg" },
+{ "type": "image_url", "url": "https://docs.x.ai/assets/api-examples/images/image-merge/man.jpg" },
+// { "type": "image_url", "url": "<image_url>" }
+],
+"aspect_ratio": "3:2"
+}'
+import xai_sdk
+client = xai_sdk.Client()
+response = client.image.sample(
+prompt="Show all subjects sitting together on the grass in a sunny park. Casual relaxed mood, natural daylight, warm tones. No additional people or animals.",
+model="grok-imagine-image-2.0",
+image_urls=[
+"https://docs.x.ai/assets/api-examples/images/image-merge/woman.jpg",
+"https://docs.x.ai/assets/api-examples/images/image-merge/man.jpg",
+# "<image_url>",
+],
+aspect_ratio="3:2",
+)
+print(response.url)
+Related
+Image Generation
+— Generate images from text prompts
+Image Editing
+— Edit a source image with natural language
+API Reference
+— Full endpoint documentation
+Image & Video API Landing Page
+— Showcase of the image & video API in action
+Last updated:
+November 13, 2026

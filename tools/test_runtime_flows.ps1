@@ -607,6 +607,16 @@ foreach($paid in @(101,110,120,125,130)){
     Assert ($tracker.Dominant -eq 'D') "Markup $paid was not generous."
 }
 'PASS: small and large overpayment classifications.'
+# Lowball must come from the native bargain action, not from the settled price
+# ratio.  Wholesale and other non-bargained low prices must stay fair.
+$item=New-Item '1' 1;$item.unitValue=100
+$tracker=[EleanorRomance.StoryEngine+DealTracker]::new()
+$tracker.Record($item,70,$true)
+Assert (!$tracker.Lowball -and $tracker.Dominant -eq 'F') 'A non-bargained low settled price was classified as a lowball.'
+$tracker=[EleanorRomance.StoryEngine+DealTracker]::new()
+$tracker.Record($item,50,$true)
+Assert (!$tracker.Lowball -and $tracker.Dominant -eq 'F') 'A deep non-bargained low price was classified as a lowball.'
+'PASS: non-bargained low prices stay fair; lowball is action-based.'
 
 # All trading chapter factories use the same native automatic completion
 # flow as well as the optional manual finish; assert real persisted progression.

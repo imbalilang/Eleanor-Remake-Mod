@@ -1,0 +1,7 @@
+Convert Image 1 into the pixel-art CG style of Image 2.
+
+Keep the exact composition, pose, face, hair, outfit, stage, lighting and framing of Image 1. Change only the rendering style.
+
+Match Image 2's pixel size, pixel clusters, palette behavior, dithering, outline weight and level of detail. Do not copy Image 2's subject or pose.
+
+No text, no watermark, no extra limbs. Output 16:9 2K.

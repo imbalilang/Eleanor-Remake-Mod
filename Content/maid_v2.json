@@ -55,14 +55,19 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "别急着翻。我分过了，三堆。",
-              "en": "Don't dig in yet. I've sorted it. Three piles.",
+              "text": "别急着翻，我都分成三堆了。",
+              "en": "Don't start digging. I've already sorted it into three piles.",
               "expr": "serious"
             },
             {
+              "speaker": "Narrator",
+              "text": "解开鞋带，把东西一样样往外拿",
+              "en": "Unties the shoelace and lays the items out one by one"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>解开鞋带，把东西一样样往外拿</i>左边是接口和线材，右边是外壳。中间那几件，我拿不准。",
-              "en": "<i>Unties the shoelace and lays the items out one by one</i> Ports and cables on the left, casings on the right. The middle ones, I'm not sure about."
+              "text": "左边是接口和线材，右边是外壳。中间那几件，我拿不准。",
+              "en": "Ports and cables on the left, casings on the right. The middle ones, I'm not sure about."
             },
             {
               "speaker": "Player",
@@ -90,9 +95,14 @@
               "en": "Last time you said to check the pins on the ports. I counted every one. The bent ones are wrapped separately."
             },
             {
+              "speaker": "Narrator",
+              "text": "把一个小布包推过去",
+              "en": "Pushes a small cloth bundle across"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把一个小布包推过去</i>这包别算好货。我室友说混在里头能蒙过去，我不干。",
-              "en": "<i>Pushes a small cloth bundle across</i> Don't count this one as good stock. My roommate said I could mix it in and get away with it. I won't."
+              "text": "这包别算好货。我室友说混在里头能蒙过去，我不干。",
+              "en": "Don't count this one as good stock. My roommate said I could mix it in and get away with it. I won't."
             },
             {
               "speaker": "Player",
@@ -110,10 +120,15 @@
               "en": "Besides, last time you priced by condition. If I slip junk in, how do I face you next time?"
             },
             {
+              "speaker": "Narrator",
+              "text": "手撑着柜台边，指甲缝里还嵌着黑灰",
+              "en": "Braces her hands on the counter's edge, black grime still under her nails"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>手撑着柜台边，指甲缝里还嵌着黑灰</i>这袋我翻了两个晚上。垃圾场东头那片，味道冲得人睁不开眼。",
-              "en": "<i>Braces her hands on the counter's edge, black grime still under her nails</i> Took me two nights to dig through this. The east end of the dump. The stench makes your eyes water.",
-              "expr": "tired"
+              "text": "这袋我翻了两个晚上。垃圾场东头那片，味道冲得人睁不开眼。",
+              "expr": "tired",
+              "en": "Took me two nights to dig through this. The east end of the dump. The stench makes your eyes water."
             },
             {
               "speaker": "Eleanor",
@@ -157,9 +172,14 @@
               "en": "How much do you have?"
             },
             {
+              "speaker": "Narrator",
+              "text": "从外套内袋摸出一只旧袜子改的钱袋，掂了掂",
+              "en": "Pulls a coin pouch made from an old sock out of her inner coat pocket and weighs it"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>从外套内袋摸出一只旧袜子改的钱袋，掂了掂</i>上回卖货的钱，加上省下的饭钱，五百出头。",
-              "en": "<i>Pulls a coin pouch made from an old sock out of her inner coat pocket and weighs it</i> Money from last sale, plus what I saved skipping meals. Just over five hundred."
+              "text": "上回卖货的钱，加上省下的饭钱，五百出头。",
+              "en": "Money from last sale, plus what I saved skipping meals. Just over five hundred."
             },
             {
               "speaker": "Eleanor",
@@ -188,10 +208,15 @@
               "en": "Hmph. I'll hold you to that."
             },
             {
+              "speaker": "Narrator",
+              "text": "把钱袋攥进手心",
+              "en": "Clenches the pouch in her fist"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把钱袋攥进手心</i>他说母亲那边越拖越难查。看守换一轮班，记录就可能少一页。",
-              "en": "<i>Clenches the pouch in her fist</i> He says the longer it drags, the harder Mother's case gets. Every guard rotation, a page of the records might go missing.",
-              "expr": "sad"
+              "text": "他说母亲那边越拖越难查。看守换一轮班，记录就可能少一页。",
+              "expr": "sad",
+              "en": "He says the longer it drags, the harder Mother's case gets. Every guard rotation, a page of the records might go missing."
             },
             {
               "speaker": "Eleanor",
@@ -215,8 +240,18 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "十来天就十来天，我多翻几袋就是了。<i>把三堆货推过去</i>开价吧。",
-              "en": "Ten days it is. I'll just dig through more sacks. <i>Pushes the three piles across</i> Name your price."
+              "text": "十来天就十来天，我多翻几袋就是了。",
+              "en": "Ten days it is. I'll just dig through more sacks."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "把三堆货推过去",
+              "en": "Pushes the three piles across."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "开价吧。",
+              "en": "Name your price."
             }
           ]
         },
@@ -239,17 +274,6 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "先讲清楚。这袋货照你的价收，我挣的就是我挣的，不跟你那笔混在一起。",
-              "en": "Let's be clear. You buy this sack at your price. What I earn is mine. It doesn't get mixed with your money.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Player",
-              "text": "行。",
-              "en": "Fine."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "你补的那截算借，不算给。我会还。",
               "en": "What you cover is a loan, not a gift. I'll pay it back."
             },
@@ -260,38 +284,33 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手指在柜台上敲了两下</i>我现在还说不出怎么还。得回去想想。",
-              "en": "<i>Taps the counter twice</i>I can't say how I'll pay it back yet. I need to think it over."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "别以为这样我就欠你人情了。这是账，一笔一笔的账。",
-              "en": "Don't think this means I owe you a favor. This is a debt, itemized line by line."
-            },
-            {
-              "speaker": "Player",
-              "text": "账就账。",
-              "en": "A debt, then."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "……那先看货。中间那几件你帮我认认，我想知道自己哪儿看走了眼。",
               "en": "...Then let's look at the goods. Appraise the middle ones for me. I want to know where I misjudged.",
               "expr": "soft"
             },
             {
+              "speaker": "Narrator",
+              "text": "把三堆货往你那边推",
+              "en": "Pushes the three piles toward you"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把三堆货往你那边推</i>开价吧，店主。",
-              "en": "<i>Pushes the three piles toward you</i>Name your price, shopkeeper."
+              "text": "开价吧，店主。",
+              "en": "Name your price, shopkeeper."
             }
           ]
         },
         "v2_a0c1_trade_1": {
           "lines": [
             {
+              "speaker": "Narrator",
+              "text": "把钱倒进袜子钱袋，嘴唇动着在心里数",
+              "en": "Pours the money into her sock purse, lips moving as she counts"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把钱倒进袜子钱袋，嘴唇动着在心里数</i>跟我估的差不多。中间那几件，原来是我看低了。",
-              "en": "<i>Pours the money into her sock purse, lips moving as she counts</i>About what I estimated. So I undervalued the middle ones."
+              "text": "跟我估的差不多。中间那几件，原来是我看低了。",
+              "en": "About what I estimated. So I undervalued the middle ones."
             },
             {
               "speaker": "Eleanor",
@@ -306,8 +325,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "货款是我挣的，这截是借的，我分两个口袋装。回头写个条子给你。",
-              "en": "The sale money I earned. This bit's borrowed. Separate pockets. I'll write you an IOU later."
+              "text": "<i>把那截钱塞进另一个口袋</i>\n条子我明天带来。",
+              "en": "<i>She slips the extra money into her other pocket.</i>\nI'll bring you the IOU tomorrow."
             }
           ]
         },
@@ -330,9 +349,14 @@
               "en": "Suit yourself."
             },
             {
+              "speaker": "Narrator",
+              "text": "把钱分成两摞",
+              "en": "Splits the money into two stacks."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把钱分成两摞</i>哼。下回再这样，我真拎袋子走。",
-              "en": "<i>Splits the money into two stacks</i>Hmph. Do that again and I really will take my bag and leave."
+              "text": "哼。下回再这样，我真拎袋子走。",
+              "en": "Hmph. Do that again and I really will take my bag and leave."
             }
           ]
         },
@@ -340,9 +364,19 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "比我估的低。<i>盯着那包弯针接口看了一会儿</i>……行，你是行家。",
-              "en": "Lower than I estimated. <i>Stares at the pack of bent-pin connectors for a while</i>...Fine. You're the expert.",
-              "expr": "sad"
+              "text": "比我估的低。",
+              "expr": "sad",
+              "en": "Lower than I estimated."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "盯着那包弯针接口看了一会儿",
+              "en": "Stares at the pack of bent-pin connectors for a while."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……行，你是行家。",
+              "en": "...Fine. You're the expert."
             },
             {
               "speaker": "Eleanor",
@@ -364,10 +398,15 @@
         "v2_a0c1_trade_4": {
           "lines": [
             {
+              "speaker": "Narrator",
+              "text": "把货一样样收回布袋，重新扎紧鞋带",
+              "en": "Packs the goods back into her cloth bag one by one and retightens the drawstring."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把货一样样收回布袋，重新扎紧鞋带</i>价谈不拢，我就不卖。",
-              "en": "<i>Packs the goods back into her cloth bag one by one, retightens the drawstring</i>If we can't agree on a price, I'm not selling.",
-              "expr": "serious"
+              "text": "价谈不拢，我就不卖。",
+              "expr": "serious",
+              "en": "If we can't agree on a price, I'm not selling."
             },
             {
               "speaker": "Eleanor",
@@ -453,7 +492,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "他接了活，这几天在翻农场以前的进出账，还托人去问当年值夜班的工人。",
+              "text": "他已经在查农场的旧账了，还托人去问当年值夜班的工人。",
               "en": "He took the job. He's been going through the farm's old ledgers, and he's asking around for the night-shift workers from back then."
             },
             {
@@ -482,46 +521,9 @@
               "en": "Enough. Not one credit of what you covered got wasted."
             },
             {
-              "speaker": "Eleanor",
-              "text": "上回那包电子元件，你收下了吧？我没别的拿得出手，那是我挑出来最干净的一包。",
-              "en": "You took that pack of electronic parts last time, right? It's all I had to give. I picked out the cleanest one.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Player",
-              "text": "收了。成色不错。",
-              "en": "Took it. Good condition."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "呵，那当然。是我挑的。",
-              "en": "Heh. Of course. I picked it."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "还有，莉迪亚来过了吧？她说拿着镯子来的，还问了你一堆话。",
-              "en": "And Lydia came by, didn't she? She said she brought the bracelet and asked you a pile of questions.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Player",
-              "text": "问了几句。",
-              "en": "A few."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "她就那样，嘴比脑子快。她问什么你别往心里去，替我说的话也别全信。",
-              "en": "That's just her. Mouth runs faster than her brain. Don't take her questions to heart, and don't believe everything she says for me."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我的事，我自己来说。",
-              "en": "I'll speak for myself."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>把一张折了几折的纸摊在柜台上</i>所以今天来，是谈正事。",
-              "en": "<i>Spreads a paper folded several times across the counter</i>So today, I'm here on business."
+              "speaker": "Narrator",
+              "text": "把一张折了几折的纸摊在柜台上",
+              "en": "Spreads a paper folded several times across the counter"
             },
             {
               "speaker": "Eleanor",
@@ -540,7 +542,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "上层家里那些东西，布料、表壳、瓷器，是真是假、新的旧的，我从小看到大，骗不过我。",
+              "text": "上层那些布料、表壳、瓷器，我从小见到大。拿旧货冒充新的，可骗不过我。",
               "en": "Upper Level household goods: fabric, watch cases, porcelain. Real or fake, new or old, I grew up around them. Nobody fools me."
             },
             {
@@ -560,13 +562,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "按天算，你开个公道的数。我从里头拿一部分慢慢还你，剩下的留着吃饭。",
-              "en": "By the day. Name a fair rate. I'll put part of it toward what I owe you and keep the rest for food."
+              "text": "按天算，哪天来、做多久，我自己排。工钱里给我留够饭钱，剩下的慢慢还你。",
+              "en": "By the day. I set my own hours. Leave me enough to eat, and the rest can go toward what I owe you."
             },
             {
               "speaker": "Eleanor",
-              "text": "我拾荒卖给你的货，照旧按货算钱，跟工钱分开。别给我混成一笔糊涂账。",
-              "en": "What I scavenge and sell you gets paid per item, same as always, separate from wages. Don't muddle it into one messy tab."
+              "text": "我捡来的货还归货，别往工钱那栏里填。",
+              "en": "When I bring in salvage, keep it out of the wages column."
             },
             {
               "speaker": "Player",
@@ -575,14 +577,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "有。最要紧的一条。",
-              "en": "Yes. The most important part.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "等母亲的事有了结果，我要回上层。用我自己的名字回去，不顶谁的身份，也不靠谁家收留。",
-              "en": "Once Mother's case is settled, I'm going back to the Upper Level. Under my own name. Not using anyone's identity, not living on anyone's charity."
+              "text": "等母亲的案子了了，我要用自己的名字回上层。",
+              "en": "When Mother's case is settled, I'm going back upstairs under my own name."
             },
             {
               "speaker": "Eleanor",
@@ -596,33 +592,18 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "要的就是这句。",
-              "en": "That's exactly what I wanted to hear."
+              "text": "那就先干到案子有结果那天。",
+              "en": "Then I'll work here until the verdict comes in."
             },
             {
               "speaker": "Eleanor",
-              "text": "期限我也想好了。先做到母亲的案子有结果，到时候再坐下来重谈。",
-              "en": "I've thought about the term, too. Until Mother's case is resolved. Then we sit down and renegotiate."
+              "text": "我来是给店里干活的。母亲和她的研究，我自己管。",
+              "en": "You're hiring me for the shop. Mother's affairs and her research are mine to handle."
             },
             {
               "speaker": "Eleanor",
-              "text": "这事跟那八百没关系。签了不用你再掏一笔，你补的那截照旧是我欠你的。",
-              "en": "This has nothing to do with the eight hundred. Signing doesn't cost you another cent, and the shortfall you covered is still my debt."
-            },
-            {
-              "speaker": "Player",
-              "text": "好。",
-              "en": "Fine."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "规矩也先讲明白。母亲的事、她的研究、我几点来几点走，都由我自己定。",
-              "en": "And let's set the rules now. Mother's affairs, her research, when I come and go: I decide those myself."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "有客人在，我叫你店主。没客人……也叫店主。别指望别的。",
-              "en": "With customers around, I call you shopkeeper. Without them... still shopkeeper. Don't expect anything else."
+              "text": "还有，我可只叫你店主。",
+              "en": "And all you're getting from me is “shopkeeper.”"
             },
             {
               "speaker": "Player",
@@ -636,9 +617,14 @@
               "expr": "smile"
             },
             {
+              "speaker": "Narrator",
+              "text": "把纸转过来推到你面前",
+              "en": "Turns the paper around and pushes it toward you"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把纸转过来推到你面前</i>条件都写在上面了。你点头，明天我就来。",
-              "en": "<i>Turns the paper around and pushes it toward you</i>The terms are all written there. Nod, and I start tomorrow."
+              "text": "你要肯签，我明天就来。",
+              "en": "Sign it and I'll be here tomorrow."
             }
           ]
         },
@@ -651,9 +637,19 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "知道了。<i>把纸折起来</i>那截钱我照样还，侦探照样查，查到哪一步我自己去办。",
-              "en": "Understood. <i>Folds up the paper</i>I'll still repay the shortfall. The detective keeps digging, and whatever he turns up, I'll handle myself.",
-              "expr": "serious"
+              "text": "知道了。",
+              "expr": "serious",
+              "en": "Understood."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "把纸折起来",
+              "en": "Folds up the paper."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "那截钱我照样还，侦探照样查，查到哪一步我自己去办。",
+              "en": "I'll still repay the shortfall. The detective keeps digging, and whatever he turns up, I'll handle myself."
             },
             {
               "speaker": "Eleanor",
@@ -670,10 +666,15 @@
               "en": "Come tomorrow before opening."
             },
             {
+              "speaker": "Narrator",
+              "text": "把纸折好，收进内袋",
+              "en": "Folds the paper neatly and tucks it into her inner pocket."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把纸折好，收进内袋</i>……行。",
-              "en": "<i>Folds the paper neatly and tucks it into her inner pocket</i>...Fine.",
-              "expr": "soft"
+              "text": "……行。",
+              "expr": "soft",
+              "en": "...Fine."
             },
             {
               "speaker": "Eleanor",
@@ -687,8 +688,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "笔我有。<i>退开一步，停了一下</i>店主，那截钱……谢了。就这一回，别让我说第二遍。",
-              "en": "I have a pen.<i>Steps back and pauses</i>Shopkeeper, that money... Thanks. Just this once. Don't make me say it again."
+              "text": "笔我有。",
+              "en": "I have a pen."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "店主，那截钱……谢了。就这一回，别让我说第二遍。",
+              "en": "Shopkeeper, that money... Thanks. Just this once. Don't make me say it again."
             }
           ]
         }
@@ -740,9 +746,14 @@
               "en": "Under one drawer he felt a thin panel. He pried it open, and inside was a data disk."
             },
             {
+              "speaker": "Narrator",
+              "text": "把数据盘从内袋里取出来，搁在柜台上",
+              "en": "Takes a data disk from her inner pocket and sets it on the counter, fingertips still pinning one corner"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把数据盘从内袋里取出来，搁在柜台上</i>就是这个。",
-              "en": "<i>Takes a data disk from her inner pocket and sets it on the counter, fingertips still pinning one corner</i> This is it."
+              "text": "就是这个。",
+              "en": "This is it."
             },
             {
               "speaker": "Player",
@@ -767,14 +778,14 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "她拿我生日锁这种东西。我十岁那年她忙到半夜，我还跟她赌气，说她连我哪天生的都记不住。",
-              "en": "She locked something like this with my birthday. When I was ten, she worked till midnight, and I sulked and said she couldn't even remember the day I was born.",
+              "text": "我十岁生日那天，她忙到半夜。我还冲她嚷，说她连我生日都忘了。",
+              "en": "On my tenth birthday she worked till midnight. I yelled at her. Told her she'd forgotten my birthday.",
               "expr": "sad"
             },
             {
               "speaker": "Eleanor",
-              "text": "里头是她的研究。营养果的。",
-              "en": "It's her research. On Nutrifruit.",
+              "text": "盘里存着她研究营养果的记录。",
+              "en": "Her notes on the Nutrifruit research are on here.",
               "expr": "serious"
             },
             {
@@ -810,8 +821,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "头一封还算客气，说研究先“暂缓”。后面一封比一封硬，到最后一封，就是停掉，资料全部交回。",
-              "en": "The first was polite enough—asked her to \"pause\" the research. Each one got harder. The last said shut it down and hand over all the data."
+              "text": "头一封还客客气气地说“暂缓”。到最后干脆叫她停手，把资料全交回去。",
+              "en": "The first letter politely asked her to \"pause.\" By the last one they were telling her to stop and hand over all her records."
             },
             {
               "speaker": "Player",
@@ -857,8 +868,18 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "除了侦探，我只跟你说过。<i>把盘塞回内袋，隔着布按了按</i>你也一样。",
-              "en": "Besides the detective, I've only told you. <i>Tucks the disk back into her inner pocket and presses it through the fabric</i> Same goes for you."
+              "text": "除了侦探，我只跟你说过。",
+              "en": "Besides the detective, I've only told you."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "把盘塞回内袋，隔着布按了按",
+              "en": "Tucks the disk back into her inner pocket and presses it through the fabric"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "你也一样。",
+              "en": "Same goes for you."
             },
             {
               "speaker": "Player",
@@ -872,9 +893,14 @@
               "expr": "tired"
             },
             {
+              "speaker": "Narrator",
+              "text": "翻开账本，笔尖停在纸上没落下去",
+              "en": "Opens the ledger; the pen hovers over the page for a long time"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>翻开账本，笔尖停在纸上没落下去</i>……店主，她把盘藏进夹层那天，是不是已经知道自己要出事了？",
-              "en": "<i>Opens the ledger; the pen hovers over the page for a long time</i> ...Shopkeeper, the day she hid the disk in that compartment—did she already know something was coming?"
+              "text": "……店主，她把盘藏进夹层那天，是不是已经知道自己要出事了？",
+              "en": "...Shopkeeper, the day she hid the disk in that compartment—did she already know something was coming?"
             },
             {
               "speaker": "Player",
@@ -934,13 +960,13 @@
             },
             {
               "speaker": "Thug",
-              "text": "你铺子里有个从上边下来的丫头，平日里替你认货记账。",
-              "en": "You've got a girl from the Upper Level here. Helps you appraise goods, keep the books.",
+              "text": "你店铺里有个从上边下来的丫头，平日里替你认货记账。",
+              "en": "You've a girl from upstairs who appraises goods and keeps the books.",
               "expr": "serious"
             },
             {
               "speaker": "Player",
-              "text": "她今儿没在。",
+              "text": "她今天没在。",
               "en": "She's not in today.",
               "expr": "neutral"
             },
@@ -993,10 +1019,15 @@
               "expr": "serious"
             },
             {
+              "speaker": "Narrator",
+              "text": "从衣兜里掏出一沓信用点，拍上柜台。",
+              "en": "He pulls a stack of credits from his pocket and slaps it on the counter."
+            },
+            {
               "speaker": "Thug",
-              "text": "从衣兜里掏出一沓信用点，拍上柜台。三百。跑腿费。话传到了，钱就留你这里。",
-              "en": "<i>Pulls a stack of credits from his pocket and slaps it on the counter</i>Three hundred. Errand money. Deliver the message, and it's yours.",
-              "expr": "serious"
+              "text": "三百，替我带句话。",
+              "expr": "serious",
+              "en": "Three hundred. Pass on a message for me."
             },
             {
               "speaker": "Player",
@@ -1006,8 +1037,8 @@
             },
             {
               "speaker": "Thug",
-              "text": "你接不接，钱都搁下了。钱搁下，这话你便得传。",
-              "en": "Take it or not, it's on the counter. And once it's down, you deliver the message.",
+              "text": "那你就让它搁着。",
+              "en": "Then leave it there.",
               "expr": "serious"
             },
             {
@@ -1041,34 +1072,9 @@
               "expr": "serious"
             },
             {
-              "speaker": "Player",
-              "text": "讲完了？",
-              "en": "Done?",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Thug",
-              "text": "讲完了。伸指敲了敲那叠钱。下头做生意，放明白点，铺子才开得久。",
-              "en": "Done. <i>Taps the stack of credits with a finger</i>Doing business on the Lower Level, you play it smart if you want to stay open.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Player",
-              "text": "传完话就走。",
-              "en": "If you're done talking, leave.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Thug",
-              "text": "嘁。三天。",
-              "en": "Hmph. Three days.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Thug",
-              "text": "往后退开几步，又朝柜台瞥一眼。那钱别乱用，是给你长记性的。",
-              "en": "<i>Steps away and glances back at the counter</i>Don't waste that money. It's there to remind you.",
-              "expr": "serious"
+              "speaker": "Narrator",
+              "text": "伸指敲了敲那叠钱。",
+              "en": "He taps the stack with a finger."
             }
           ]
         }
@@ -1092,7 +1098,7 @@
         {
           "type": "choice",
           "id": "C1",
-          "prompt": "埃莉诺决定救母路线",
+          "prompt": "你打算怎么走这一步",
           "mainline": 2,
           "options": [
             {
@@ -1161,8 +1167,8 @@
             },
             {
               "speaker": "Player",
-              "text": "<i>又说了一遍，一字不差</i>三天以后，他还会来。",
-              "en": "<i>Repeats it, word for word</i>He'll be back in three days."
+              "text": "<i>又说了一遍，一字不差</i>\n三天以后，他还会来。",
+              "en": "<i>Repeats it, word for word</i>\nHe'll be back in three days."
             },
             {
               "speaker": "Eleanor",
@@ -1191,10 +1197,15 @@
               "en": "Errand money. I refused. He left it anyway."
             },
             {
+              "speaker": "Narrator",
+              "text": "手指碰了碰那叠钱，又缩了回去",
+              "en": "Touches the stack, then pulls her hand back."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>手指碰了碰那叠钱，又缩了回去</i>他们拿三百块，买我母亲一条命。",
-              "en": "<i>Touches the stack, then pulls her hand back</i>Three hundred. That's their price for my mother's life.",
-              "expr": "sad"
+              "text": "他们拿三百块，买我母亲一条命。",
+              "expr": "sad",
+              "en": "Three hundred. That's their price for my mother's life."
             },
             {
               "speaker": "Eleanor",
@@ -1243,9 +1254,14 @@
               "en": "I won't go to the counter. I'll go to the man who took the crate."
             },
             {
+              "speaker": "Narrator",
+              "text": "盯着那叠钱看了很久",
+              "en": "Stares at the stack of credits for a long time."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>盯着那叠钱看了很久</i>……我自己定。",
-              "en": "<i>Stares at the stack of credits for a long time</i>...I'll decide myself."
+              "text": "……我自己定。",
+              "en": "...I'll decide myself."
             }
           ]
         },
@@ -1333,10 +1349,15 @@
               "en": "I'm keeping the drive. When the case is reviewed, I'll hand it over myself. No middlemen."
             },
             {
+              "speaker": "Narrator",
+              "text": "撕下一页账纸递过来",
+              "en": "Tears off a ledger page and hands it over."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>撕下一页账纸递过来</i>记录我来写。你出门之前，看一眼我有没有写错字。",
-              "en": "<i>Tears off a ledger page and hands it over</i>I'll write the report. Before you head out, check it for mistakes.",
-              "expr": "soft"
+              "text": "记录我来写。你出门之前，看一眼我有没有写错字。",
+              "expr": "soft",
+              "en": "I'll write the report. Before you head out, check it for mistakes."
             },
             {
               "speaker": "Player",
@@ -1367,10 +1388,15 @@
         "v2_a1c4_s0": {
           "lines": [
             {
+              "speaker": "Narrator",
+              "text": "她扶住窗边的凳子。",
+              "en": "She comes to the window and sits on the stool outside."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "走到窗口前，在外头的凳子上坐下。让我先坐一下，腿是软的。",
-              "en": "<i>Comes to the window and sits on the stool outside</i>Let me sit first. My legs are shaking.",
-              "expr": "tired"
+              "text": "让我先坐一下，腿是软的。",
+              "expr": "tired",
+              "en": "Let me sit a minute. My legs feel weak."
             },
             {
               "speaker": "Player",
@@ -1447,8 +1473,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "低头抠着凳子边上那道裂缝。前几天我差点把盘交了。你要是劝一句，我兴许就交了。",
-              "en": "<i>Picks at a crack in the edge of the stool, head down</i>A few days ago I almost handed over the drive. One word from you, and I might have."
+              "text": "<i>低头抠着凳子边上那道裂缝。</i>\n前几天我差点把盘交了。你要是劝一句，我兴许就交了。",
+              "en": "<i>She picks at a crack in the stool.</i>\nI nearly handed over the disc the other day. If you'd said I should, I might have."
             },
             {
               "speaker": "Eleanor",
@@ -1466,20 +1492,14 @@
               "en": "...Nothing yet. I'll tell you once I've decided."
             },
             {
-              "speaker": "Eleanor",
-              "text": "今天的工钱照旧，留一部分还你那一截。这个不变。",
-              "en": "Today's wages stand. Part goes toward what you owe. That doesn't change."
-            },
-            {
-              "speaker": "Player",
-              "text": "行。",
-              "en": "Fine."
+              "speaker": "Narrator",
+              "text": "站起身，把账本拉到面前。",
+              "en": "She stands and pulls the ledger toward her."
             },
             {
               "speaker": "Eleanor",
-              "text": "哼。站起身，把账本拉到面前。昨天那箱简单工具还没登记吧？锤头都松了，你肯定没看出来。",
-              "en": "Hmph. <i>Stands and pulls the ledger toward herself</i> You haven't logged yesterday's box of basic tools, have you? The hammerheads are loose. I bet you didn't notice.",
-              "expr": "smile"
+              "text": "昨天那箱简单工具还没登记吧？锤头都松了，你肯定没看出来。",
+              "en": "You haven't logged yesterday's tools, have you? Bet you missed that loose hammerhead."
             },
             {
               "speaker": "Player",
@@ -1521,8 +1541,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "你好，老板。我是索菲娅……算了，你叫我索菲娅就行。",
-              "en": "Hello, shopkeeper. I'm Sophia... Just call me Sophia.",
+              "text": "你好，老板。我是索菲娅，埃莉诺的母亲。",
+              "en": "Hello. I'm Sophia, Eleanor's mother.",
               "expr": "serious"
             },
             {
@@ -1557,9 +1577,9 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>手撑了一下柜台边</i>在里头待久了，站着挑东西都觉得费劲。",
-              "en": "<i>Steadies herself on the edge of the counter</i> After so long in there, even standing to shop wears me out.",
-              "expr": "tired"
+              "text": "在里头待久了，站着挑东西都觉得费劲。",
+              "expr": "tired",
+              "en": "After so long in there, even standing to shop wears me out."
             },
             {
               "speaker": "Sophia",
@@ -1599,8 +1619,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "你也别去问她。她要是想唱，用不着谁劝；她不想唱，谁劝都没用。",
-              "en": "Don't ask her about it. If she wants to sing, no one needs to push. If she doesn't, no one can.",
+              "text": "你可别去问她，回头她要怪我多嘴。",
+              "en": "Don't ask her about it. She'll say I couldn't keep my mouth shut.",
               "expr": "smile"
             },
             {
@@ -1626,8 +1646,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "杯子、灯，再拿一样擦洗用的。<i>把挑好的几件推到柜台中间</i>就这些。",
-              "en": "The cup, the lamp, and one cleaning item. <i>Pushes the chosen items to the middle of the counter</i> That's all."
+              "text": "杯子、灯，再拿一样擦洗用的。<i>把挑好的几件推到柜台中间</i>\n就这些。",
+              "en": "The cup, the lamp, and one cleaning item. <i>Pushes the chosen items to the middle of the counter</i>\nThat's all."
             },
             {
               "speaker": "Sophia",
@@ -1645,9 +1665,19 @@
           "lines": [
             {
               "speaker": "Sophia",
-              "text": "价钱和我心里算的差不多。<i>把杯子揣进怀里</i>灯今晚就能换上。",
-              "en": "About what I figured. <i>Tucks the cup into her coat</i> The lamp goes in tonight.",
-              "expr": "smile"
+              "text": "价钱和我心里算的差不多。",
+              "expr": "smile",
+              "en": "About what I figured."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "把杯子揣进怀里",
+              "en": "Tucks the cup into her coat."
+            },
+            {
+              "speaker": "Sophia",
+              "text": "灯今晚就能换上。",
+              "en": "The lamp goes in tonight."
             },
             {
               "speaker": "Sophia",
@@ -1675,9 +1705,14 @@
           "lines": [
             {
               "speaker": "Sophia",
-              "text": "比价签上写的多了一截。<i>停了一下，还是把钱付了</i>",
-              "en": "That's a fair bit over the tag. <i>Pauses, then pays anyway</i>",
-              "expr": "tired"
+              "text": "比价签上写的多了一截。",
+              "expr": "tired",
+              "en": "That's a fair bit over the tag."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "停了一下，还是把钱付了",
+              "en": "Pauses, then pays anyway."
             },
             {
               "speaker": "Sophia",
@@ -1695,9 +1730,14 @@
               "expr": "serious"
             },
             {
+              "speaker": "Narrator",
+              "text": "把杯子推回柜台中间",
+              "en": "Pushes the cup back to the middle of the counter."
+            },
+            {
               "speaker": "Sophia",
-              "text": "<i>把杯子推回柜台中间</i>那边的灯，再忍几天也行。",
-              "en": "<i>Pushes the cup back to the middle of the counter</i> I can live with that lamp a few more days."
+              "text": "那边的灯，再忍几天也行。",
+              "en": "I can live with that lamp a few more days."
             }
           ]
         },
@@ -1710,8 +1750,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "你好，老板。我是索菲娅……算了，你叫我索菲娅就行。",
-              "en": "Hello, shopkeeper. I'm Sophia... Just call me Sophia.",
+              "text": "你好，老板。我是索菲娅，埃莉诺的母亲。",
+              "en": "Hello. I'm Sophia, Eleanor's mother.",
               "expr": "serious"
             },
             {
@@ -1746,9 +1786,9 @@
             },
             {
               "speaker": "Sophia",
-              "text": "<i>手撑了一下柜台边</i>在里头待久了，站着挑东西都觉得费劲。",
-              "en": "<i>Steadies herself on the edge of the counter</i> After so long in there, even standing to shop wears me out.",
-              "expr": "tired"
+              "text": "在里头待久了，站着挑东西都觉得费劲。",
+              "expr": "tired",
+              "en": "After so long in there, even standing to shop wears me out."
             },
             {
               "speaker": "Sophia",
@@ -1788,8 +1828,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "你也别去问她。她要是想唱，用不着谁劝；她不想唱，谁劝都没用。",
-              "en": "Don't ask her about it. If she wants to sing, no one needs to push. If she doesn't, no one can.",
+              "text": "你可别去问她，回头她要怪我多嘴。",
+              "en": "Don't ask her about it. She'll say I couldn't keep my mouth shut.",
               "expr": "smile"
             },
             {
@@ -1815,8 +1855,8 @@
             },
             {
               "speaker": "Sophia",
-              "text": "杯子、灯，再拿一样擦洗用的。<i>把挑好的几件推到柜台中间</i>就这些。",
-              "en": "The cup, the lamp, and one cleaning item. <i>Pushes the chosen items to the middle of the counter</i> That's all."
+              "text": "杯子、灯，再拿一样擦洗用的。<i>把挑好的几件推到柜台中间</i>\n就这些。",
+              "en": "The cup, the lamp, and one cleaning item. <i>Pushes the chosen items to the middle of the counter</i>\nThat's all."
             },
             {
               "speaker": "Sophia",
@@ -1869,7 +1909,7 @@
         {
           "type": "choice",
           "id": "C1",
-          "prompt": "对她重新整理的陈列和讲法的回应",
+          "prompt": "这件外套，她说对了吗？",
           "mainline": 2,
           "options": [
             {
@@ -1883,8 +1923,9 @@
             {
               "id": "C1_o2",
               "label": "指出一处",
-              "mainline": true,
-              "label_en": "Point out one thing"
+              "mainline": false,
+              "label_en": "Point out one thing",
+              "block": "v2_a2c1_c1_o2"
             },
             {
               "id": "C1_o3",
@@ -1895,7 +1936,7 @@
               "label_en": "Just nod"
             }
           ],
-          "prompt_en": "Respond to her reorganized display and pitch"
+          "prompt_en": "Did she get the coat's story right?"
         },
         {
           "type": "lines",
@@ -1928,8 +1969,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>指着最上面那格</i>最上面这格全是修船坞那位老伯的。他手上常年沾油，件件都留着印子。",
-              "en": "<i>Points at the top slot</i>This whole slot is from the old man who fixes boats at the dock. His hands are always oily. Every piece has his prints."
+              "text": "<i>指着最上面那格</i>\n最上面这格全是修船坞那位老伯的。他手上常年沾油，件件都留着印子。",
+              "en": "<i>Points at the top slot</i>\nThis whole slot is from the old man who fixes boats at the dock. His hands are always oily. Every piece has his prints."
             },
             {
               "speaker": "Eleanor",
@@ -1964,12 +2005,12 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "你把那件灰外套递给他，他摸那块补丁摸了半天。我就在窗边，自己给他讲了。",
+              "text": "你把那件灰外套递给他，他摸那块补丁摸了半天。",
               "en": "You handed him that gray coat. He kept touching the patch, so I told him about it from beside the window."
             },
             {
               "speaker": "Eleanor",
-              "text": "没等你回来。我自己讲的，从头讲到尾。",
+              "text": "我自己给他讲的，从头讲到尾。",
               "en": "I didn't wait for you. I told him myself, start to finish."
             },
             {
@@ -1978,10 +2019,15 @@
               "en": "Told him what?"
             },
             {
+              "speaker": "Narrator",
+              "text": "接过店主递出的灰外套，摊在柜台上",
+              "en": "Takes the gray coat the shopkeeper passes out and spreads it on the counter."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>接过店主递出的灰外套，摊在柜台上</i>就这件。这一排里我最喜欢它。",
-              "en": "<i>Takes the gray coat the shopkeeper passes out and spreads it on the counter</i>This one. It's my favorite in the whole row.",
-              "expr": "soft"
+              "text": "就这件。这一排里我最喜欢它。",
+              "expr": "soft",
+              "en": "This one. It's my favorite in the whole row."
             },
             {
               "speaker": "Eleanor",
@@ -2010,9 +2056,14 @@
               "en": "When I finished, he touched the patch again and said he'd bring his wife next time to see it."
             },
             {
+              "speaker": "Narrator",
+              "text": "手按在外套领子上，没往回收",
+              "en": "Keeps her hand on the coat's collar."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>手按在外套领子上，没往回收</i>……店主，你看一眼。我讲的那些，有没有哪里不对。",
-              "en": "<i>Keeps her hand on the coat's collar</i>...Shopkeeper, take a look. Did I get anything wrong?"
+              "text": "……店主，你看一眼。我讲的那些，有没有哪里不对。",
+              "en": "...Shopkeeper, take a look. Did I get anything wrong?"
             }
           ]
         },
@@ -2030,9 +2081,14 @@
               "expr": "smile"
             },
             {
+              "speaker": "Narrator",
+              "text": "把外套往他那边推了推",
+              "en": "Pushes the coat toward him."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把外套往他那边推了推</i>那第三回是谁补的，你倒是说说看？",
-              "en": "<i>Pushes the coat toward him</i>Then you can tell me who did the third patch, right?"
+              "text": "那第三回是谁补的，你倒是说说看？",
+              "en": "Then you can tell me who did the third patch, right?"
             },
             {
               "speaker": "Player",
@@ -2044,9 +2100,9 @@
         "v2_a2c1_c1_o3": {
           "lines": [
             {
-              "speaker": "Player",
-              "text": "<i>点了一下头</i>",
-              "en": "<i>Nods once</i>"
+              "speaker": "Narrator",
+              "text": "点了一下头",
+              "en": "Nods once."
             },
             {
               "speaker": "Eleanor",
@@ -2069,54 +2125,31 @@
         "v2_a2c1_s1": {
           "lines": [
             {
-              "speaker": "Player",
-              "text": "第三回补的人，是那个儿子。",
-              "en": "The third patch was the son's."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你怎么知道？",
-              "en": "How do you know?",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Player",
-              "text": "针脚往左斜，是左手拿的针。他来的时候，用左手签的字。",
-              "en": "The stitches slant left. Left-handed needle. When he came in, he signed with his left hand."
-            },
-            {
               "speaker": "Eleanor",
               "text": "……那你倒是早说。我跟人家讲\"换了个人\"，讲得跟猜谜一样。",
               "en": "...Then you could've said so. I told the man \"someone else\" like I was posing a riddle.",
               "expr": "angry"
             },
             {
-              "speaker": "Eleanor",
-              "text": "<i>拉过台上的账本，翻到那页，把一个问号划掉</i>改了。下回我就这么讲。",
-              "en": "<i>Pulls over the ledger on the counter, turns to the page, and crosses out a question mark</i>Fixed. That's what I'll say next time."
+              "speaker": "Narrator",
+              "text": "拉过台上的账本，翻到那页，把一个问号划掉",
+              "en": "Pulls over the ledger on the counter, turns to the page, and crosses out a question mark"
             },
             {
               "speaker": "Eleanor",
-              "text": "别的呢？",
-              "en": "Anything else?",
-              "expr": "soft"
+              "text": "改了。下回我就这么讲。",
+              "en": "Fixed. That's what I'll say next time."
             },
             {
-              "speaker": "Player",
-              "text": "别的没毛病。",
-              "en": "Nothing else wrong."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "说到账。今天照旧按天记，留一截还你那笔；拾荒那格单独记，不动店里的账。",
-              "en": "Speaking of ledgers. Today's logged daily as usual, with a cut set aside for what I owe you. The scavenged slot stays separate. The shop's books aren't touched.",
-              "expr": "smile"
+              "speaker": "Narrator",
+              "text": "把外套叠好递回窗口里，在外头的凳子上坐下",
+              "en": "Folds the coat, passes it back through the window, and sits on the stool outside"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把外套叠好递回窗口里，在外头的凳子上坐下</i>跑了一上午腿，又讲了一通，嗓子都干了。",
-              "en": "<i>Folds the coat, passes it back through the window, and sits on the stool outside</i>A whole morning of errands and all that talking. My throat's dry.",
-              "expr": "tired"
+              "text": "跑了一上午腿，又讲了一通，嗓子都干了。",
+              "expr": "tired",
+              "en": "A whole morning of errands and all that talking. My throat's dry."
             },
             {
               "speaker": "Narrator",
@@ -2136,28 +2169,18 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "那我说一句。你听完别笑，也别搭话。",
-              "en": "Then I'll say one thing. Don't laugh, and don't answer."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "……主人。",
               "en": "...Master."
             },
             {
-              "speaker": "Eleanor",
-              "text": "<i>立刻把账本竖起来挡在脸前</i>算了，当我没说。收回。",
-              "en": "<i>Instantly props the ledger up in front of her face</i>Forget it. Pretend I didn't say that. I take it back."
-            },
-            {
-              "speaker": "Player",
-              "text": "收不回。听见了。",
-              "en": "Too late. I heard it."
+              "speaker": "Narrator",
+              "text": "立刻把账本竖起来挡在脸前",
+              "en": "Instantly props the ledger up in front of her face"
             },
             {
               "speaker": "Eleanor",
-              "text": "就这样定。没人的时候，我想叫才叫。你不许让我叫，客人面前一个字也别提。",
-              "en": "Then here's the deal. When we're alone, I say it only when I want to. You don't make me, and not one word in front of customers.",
+              "text": "客人跟前你可别应。",
+              "en": "Don't answer to that in front of a customer.",
               "expr": "shy"
             },
             {
@@ -2166,9 +2189,34 @@
               "en": "Fine."
             },
             {
+              "speaker": "Narrator",
+              "text": "把账本慢慢放平，眼睛盯着最后一行",
+              "en": "Slowly lowers the ledger, eyes fixed on the last line"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把账本慢慢放平，眼睛盯着最后一行</i>……那我先写账了，主人。",
-              "en": "<i>Slowly lowers the ledger, eyes fixed on the last line</i>...Then I'll do the books first, Master."
+              "text": "……那我先写账了，主人。",
+              "en": "...Then I'll do the books first, Master."
+            }
+          ]
+        },
+        "v2_a2c1_c1_o2": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "第三回补的人，是那个儿子。",
+              "en": "The third patch was the son's."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "你怎么知道？",
+              "en": "How do you know?",
+              "expr": "serious"
+            },
+            {
+              "speaker": "Player",
+              "text": "针脚往左斜，是左手拿的针。他来的时候，用左手签的字。",
+              "en": "The stitches slant left. Left-handed needle. When he came in, he signed with his left hand."
             }
           ]
         }
@@ -2192,7 +2240,7 @@
         {
           "type": "choice",
           "id": "C2",
-          "prompt": "告白后的回应语气",
+          "prompt": "你打算怎么回她",
           "mainline": 2,
           "options": [
             {
@@ -2206,8 +2254,9 @@
             {
               "id": "C2_o2",
               "label": "两样都给",
-              "mainline": true,
-              "label_en": "Give her both"
+              "mainline": false,
+              "label_en": "Give her both",
+              "block": "v2_a2c2_c2_o2"
             },
             {
               "id": "C2_o3",
@@ -2241,8 +2290,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "嗯。<i>笔别进账本，推回窗里，人没站起</i>",
-              "en": "Mm.<i>Clips the pen into the ledger and passes it back through the window, but stays seated</i>"
+              "text": "嗯。",
+              "en": "Mm."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "笔别进账本，推回窗里，人没站起",
+              "en": "Clips the pen into the ledger and passes it back through the window, but stays seated"
             },
             {
               "speaker": "Eleanor",
@@ -2257,51 +2311,30 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "别催。我还在想要怎么起头。",
-              "en": "Don't interrupt. I'm figuring out how to say this."
+              "text": "等等。我好不容易才等到下班。",
+              "en": "Give me a minute. I've been waiting all shift for this."
             },
             {
               "speaker": "Eleanor",
-              "text": "复核还没下来。先前讲定的，干到那天就停。",
-              "en": "The case review isn't back yet. Our deal was only until then."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我还接着做。认货、记账、跑腿，按天记，借你的照还。",
-              "en": "I want to keep going. Appraising, bookkeeping, errands, logged by the day. And I'll still repay what I owe you.",
+              "text": "等复核下来，我也还想给你看店。",
+              "en": "I want to keep working here after the review comes through.",
               "expr": "determined"
             },
             {
               "speaker": "Eleanor",
-              "text": "这是头一件。还有。",
-              "en": "That's one thing. There's another."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "没工的日子，我也要往这儿跑。不记工，不背拾荒货，就来看看你。",
-              "en": "On days with no work, I want to come too. Not as work, no scavenged goods. Just to see you.",
+              "text": "往后没工的日子，我也想来看看你。",
+              "en": "I'd like to come see you on my days off, too.",
               "expr": "shy"
             },
             {
               "speaker": "Eleanor",
-              "text": "行了，别摆出那副表情。我这几句还不够明白？",
-              "en": "Hah, what's that face? I was clear enough, wasn't I?"
+              "text": "……我喜欢你。想跟你谈恋爱。",
+              "en": "…I like you. I want to be with you."
             },
             {
               "speaker": "Eleanor",
-              "text": "……不够，那我重讲。我喜欢你。",
-              "en": "...If that wasn't clear enough, I'll say it again. I like you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "没人的时候，我还想叫你主人。我也要做你的恋人。两样我都要，少一样不行。",
-              "en": "When we're alone, I still want to call you Master. And I want to be your... lover. I want both. I'm not picking one."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "出了这扇窗，名字还是我自己的。听懂了，就回话。",
-              "en": "Away from here, I still use my own name. If you understand, answer me.",
-              "expr": "serious"
+              "text": "可我还想叫你主人。你肯不肯？",
+              "en": "I still want to call you Master, though. Would you mind?"
             }
           ]
         },
@@ -2314,19 +2347,19 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……这个“也”字后头是什么？把话说满。",
-              "en": "...\"Same\" what? Say all of it.",
+              "text": "……也什么？",
+              "en": "…You what?",
               "expr": "shy"
             },
             {
               "speaker": "Player",
-              "text": "喜欢你。两样都给。",
-              "en": "I like you. You get both."
+              "text": "我也喜欢你。",
+              "en": "I like you too."
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>偏开脸，耳根烧起来</i>行吧，这回你把话补全了，主人。",
-              "en": "<i>Turns her face away, ears red</i>Fine. This time you said it clearly, Master.",
+              "text": "<i>偏开脸，耳根烧起来</i>\n这句我爱听，主人。",
+              "en": "<i>She turns away, her ears red.</i>\nI like hearing that, Master.",
               "expr": "shy"
             }
           ]
@@ -2340,45 +2373,34 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>怔了一下</i>……头一回听你这么喊我。",
-              "en": "<i>Freezes for a moment</i>...That's the first time you've called me that.",
+              "text": "<i>怔了一下</i>\n……头一回听你这么喊我。",
+              "en": "<i>Freezes for a moment</i>\n...That's the first time you've called me that.",
               "expr": "soft"
             },
             {
               "speaker": "Player",
-              "text": "两样都给你。在外头，就叫这个名字。",
-              "en": "You get both. Out there, it's this name."
+              "text": "往后在外头，我也这么喊你。",
+              "en": "That's what I'll call you out in the street, too."
             },
             {
               "speaker": "Eleanor",
-              "text": "好。有人的地方你喊我名字，没人的地方我管你叫主人。",
-              "en": "Mm. Then when we're alone, I'll still call you Master."
+              "text": "……嗯，主人。",
+              "en": "…Mm, Master."
             }
           ]
         },
         "v2_a2c2_s1": {
           "lines": [
             {
-              "speaker": "Player",
-              "text": "两样都给。",
-              "en": "You get both."
+              "speaker": "Narrator",
+              "text": "朝柜台边又挪近半寸，袖子扫过他的手，空着的手按在账本边上",
+              "en": "Shifts half a step toward the counter, her sleeve brushing the back of his hand"
             },
             {
               "speaker": "Eleanor",
-              "text": "……到你嘴里，就这几个字啊？",
-              "en": "...That's all you've got?",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Player",
-              "text": "你讲得明白，我也答得明白。",
-              "en": "You were clear. So's my answer."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>朝柜台边又挪近半寸，袖子扫过他的手，空着的手按在账本边上</i>这本子替我记着，你不许反悔，主人。",
-              "en": "<i>Shifts half a step toward the counter, her sleeve brushing the back of his hand</i>Then it counts from today. No taking it back, Master.",
-              "expr": "shy"
+              "text": "这本子替我记着，你不许反悔，主人。",
+              "expr": "shy",
+              "en": "Then it counts from today. No taking it back, Master."
             },
             {
               "speaker": "Player",
@@ -2397,9 +2419,14 @@
               "expr": "soft"
             },
             {
+              "speaker": "Narrator",
+              "text": "手指勾着他的袖口，不放开",
+              "en": "Hooks a finger in his cuff and doesn't let go"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>手指勾着他的袖口，不放开</i>还有一件，只讲给你一个人。",
-              "en": "<i>Hooks a finger in his cuff and doesn't let go</i>One more thing. Just between us."
+              "text": "还有一件，只讲给你一个人。",
+              "en": "One more thing. Just between us."
             },
             {
               "speaker": "Eleanor",
@@ -2457,8 +2484,28 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "哼。<i>松开他的袖口，抄起外套转到一半，又停住</i>明儿我早到，主人。有旁人的时候，我喊你店主。",
-              "en": "Hmph.<i>Lets go of his sleeve, picks up her coat, and turns to leave, then stops</i>I'll come early tomorrow, master. When anyone else is around, I'll call you shopkeeper.",
+              "text": "哼。",
+              "expr": "smile",
+              "en": "Hmph."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "松开他的袖口，抄起外套转到一半，又停住",
+              "en": "Lets go of his sleeve, picks up her coat, and turns to leave, then stops"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "明天我早到，主人。",
+              "en": "I'll be in early tomorrow, Master."
+            }
+          ]
+        },
+        "v2_a2c2_c2_o2": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "……你倒是一口就应了。",
+              "en": "…That was quick.",
               "expr": "smile"
             }
           ]
@@ -2552,11 +2599,6 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "复核一天没消息，我就一天不能开嗓？没这样的道理。",
-              "en": "Every day without a review result is another day I stay silent? That's absurd."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "再这么闷下去，我怕往后连起音都起不准。",
               "en": "If I keep bottling it up, I'm afraid one day I won't even find the key."
             },
@@ -2583,13 +2625,18 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "就算上得去，还得有套像样的衣裳，台次名单里还得给我留一格。",
-              "en": "Even if I got up, I'd need proper clothes and a spot on the guest list."
+              "text": "就算上得去，还得有套像样的衣服，台次名单里还得给我留一格。",
+              "en": "Even if I get in, I'll need something decent to wear and a spot on the programme."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "指尖按着账本封皮，慢慢划过去",
+              "en": "Draws a finger across the ledger's cover"
             },
             {
               "speaker": "Eleanor",
-              "text": "这几样我手里一样没有。<i>指尖按着账本封皮，慢慢划过去</i>自己提起来都觉着寒碜。",
-              "en": "I have none of it. <i>Draws a finger across the ledger's cover</i>Sounds pathetic, saying it out loud."
+              "text": "自己提起来都觉着寒碜。",
+              "en": "I feel shabby just asking."
             },
             {
               "speaker": "Eleanor",
@@ -2611,11 +2658,6 @@
               "text": "说得倒轻巧。连往上走的门朝哪边开，你清楚吗？",
               "en": "Easy for you to say. Do you even know where the way up is?",
               "expr": "shy"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……行。要准备哪几样，我一样一样报给你。",
-              "en": "...Fine. I'll go through what I need, one by one."
             }
           ]
         },
@@ -2631,43 +2673,11 @@
               "text": "歌早就在我肚子里。把我挡在外头的是门和台次名单。",
               "en": "I could sing it in my sleep. What's stopping me is the gate and the list.",
               "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你要真搭手，就先听我把缺的东西念完。",
-              "en": "If you really want to help, hear me out on what I'm missing first."
             }
           ]
         },
         "v2_a3c1_s1": {
           "lines": [
-            {
-              "speaker": "Player",
-              "text": "缺哪些？",
-              "en": "What do you need?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>把账本朝他那侧推了推，没抬头</i>你倒爽利，一句软话都不给。",
-              "en": "...Blunt as ever. Not even a nice word to soften it.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "头一样，上楼的许可证。登记本上得写我自己的名字。",
-              "en": "First, a pass up. Registered under my own name.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "第二样，一身能上台面的衣裳。旧些无妨，合身最要紧。",
-              "en": "Second, something fit for the stage. Old is fine, as long as it fits."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "第三样，台次名单里留个位。只排一首，唱完我就下来。",
-              "en": "Third, a spot on the list. One song, then I'm off."
-            },
             {
               "speaker": "Player",
               "text": "衣服店里现成有。那身晚会礼服。",
@@ -2737,10 +2747,15 @@
               "en": "Just one. Any more and I'd look desperate to please."
             },
             {
+              "speaker": "Narrator",
+              "text": "往巷口扫了半圈，又朝你近前半步",
+              "en": "Glances down the alley"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>往巷口扫了半圈，又朝你近前半步</i>喂，旁边没人吧。",
-              "en": "<i>Glances down the alley</i>Hey, no one else nearby, right?",
-              "expr": "shy"
+              "text": "喂，旁边没人吧。",
+              "expr": "shy",
+              "en": "Hey, no one else nearby, right?"
             },
             {
               "speaker": "Player",
@@ -2758,10 +2773,15 @@
               "en": "All right."
             },
             {
+              "speaker": "Narrator",
+              "text": "把拾荒袋拖到脚边，解开扎口的旧电线",
+              "en": "Drags the scavenging bag to her feet and undoes the wire tie"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把拾荒袋拖到脚边，解开扎口的旧电线</i>我干活了。这里头有两截电线，看着还成。",
-              "en": "<i>Drags the scavenging bag to her feet and undoes the wire tie</i>Then I'll get to work. A couple of wires in here still look usable.",
-              "expr": "smile"
+              "text": "我干活了。这里头有两截电线，看着还成。",
+              "expr": "smile",
+              "en": "Then I'll get to work. A couple of wires in here still look usable."
             }
           ]
         }
@@ -2790,9 +2810,11 @@
           "options": [
             {
               "id": "C2_o1",
-              "label": "让她自己换曲",
+              "label": "答应不看",
               "mainline": true,
-              "label_en": "Let her pick a new song"
+              "label_en": "Agree not to look",
+              "block": "v2_a3c2_c2_o1",
+              "merge": true
             },
             {
               "id": "C2_o2",
@@ -2833,9 +2855,14 @@
               "expr": "tired"
             },
             {
+              "speaker": "Narrator",
+              "text": "伸手把裙摆一拎，侧身坐到窗外那张凳子上",
+              "en": "Lifts her skirt and sits on the stool outside."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>伸手把裙摆一拎，侧身坐到窗外那张凳子上</i>这鞋生来是给人站着看的，多走几步都别扭。",
-              "en": "<i>Lifts her skirt and sits on the stool outside</i>These shoes are made for standing around looking pretty. You can't walk in them."
+              "text": "这鞋生来是给人站着看的，多走几步都别扭。",
+              "en": "These shoes are made for standing around looking pretty. You can't walk in them."
             },
             {
               "speaker": "Player",
@@ -2926,10 +2953,15 @@
               "en": "But it's too rushed. Once I panicked, it was in a bigger hurry than I was."
             },
             {
+              "speaker": "Narrator",
+              "text": "把裙摆拢到膝上，先伸手擦掉窗沿上的一点灰，才低声问",
+              "en": "Gathers her skirt onto her knees, wipes a speck of dust off the windowsill, and asks quietly."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把裙摆拢到膝上，先伸手擦掉窗沿上的一点灰，才低声问</i>……主人，近处没旁的人吧。",
-              "en": "<i>Gathers the skirt on her knees and looks at the dusty streak</i>...Master, no one else nearby, right?",
-              "expr": "tired"
+              "text": "……主人，近处没旁的人吧。",
+              "expr": "tired",
+              "en": "...Master, no one else nearby, right?"
             },
             {
               "speaker": "Player",
@@ -2966,6 +2998,11 @@
               "speaker": "Eleanor",
               "text": "……下面乱，我不该跟着乱。还有，那一首我搁下，换别的。",
               "en": "...When they get loud, I can't rush with them. And I'm dropping that song. I'll pick another."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "那我换首慢的。收拾旧货那几天，嘴里老绕着的就是那个调子。",
+              "en": "Then I'll go slow. Sorting old stock these past few days, that old tune kept slipping out."
             }
           ]
         },
@@ -2984,29 +3021,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "我心里已经有一首备选。是我自己想到的，跟你那句话没关系。",
-              "en": "I already have one in mind. I thought of it myself. Nothing to do with you."
+              "text": "那我换首慢的。收拾旧货那几天，嘴里老绕着的就是那个调子。",
+              "en": "Then I'll go slow. Sorting old stock these past few days, that old tune kept slipping out."
             }
           ]
         },
         "v2_a3c2_s1": {
           "lines": [
-            {
-              "speaker": "Player",
-              "text": "曲目你自个定。",
-              "en": "Pick your own song."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你就不给我出个方向？",
-              "en": "You won't even give me an idea?",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "那我换首慢的。收拾旧货那几天，嘴里老绕着的就是那个调子。",
-              "en": "Then I'll go slow. Sorting old stock these past few days, that old tune kept slipping out."
-            },
             {
               "speaker": "Eleanor",
               "text": "它没什么高音。得压着唱，下面吵也得压。",
@@ -3034,20 +3055,33 @@
               "en": "He said maybe next time, so next time he'll look. I'll ask for the slot myself."
             },
             {
-              "speaker": "Eleanor",
-              "text": "<i>把袖口理了理</i>许可证你早办好了，还能用。这回不用你露脸。",
-              "en": "You already got the pass, and it's still good. This time you don't need to step in."
+              "speaker": "Narrator",
+              "text": "把袖口理了理",
+              "en": "She straightens her cuff."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "手扶住柜台慢慢起身，鞋跟在地上磕稳",
+              "en": "Stands with a hand on the counter and steadies her heels"
             },
             {
               "speaker": "Eleanor",
-              "text": "衣服我明早洗了再送回来……也不对，这本来就是拿给我上台穿的。",
-              "en": "I'll wash the dress and bring it back tomorrow... no. It was meant for me to wear onstage.",
-              "expr": "shy"
+              "text": "下回我会正正经经走到这扇窗前，不用再提着裙子。",
+              "en": "Next time I'll walk up to the window properly, without holding my skirt up."
+            }
+          ]
+        },
+        "v2_a3c2_c2_o1": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "好，我不看。",
+              "en": "All right, I won't look."
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手扶住柜台慢慢起身，鞋跟在地上磕稳</i>下回我会正正经经走到这扇窗前，不用再提着裙子。",
-              "en": "<i>Stands with a hand on the counter and steadies her heels</i>Next time I'll walk up to the window properly, without holding my skirt up."
+              "text": "……我想换首慢的。收拾旧货那几天，嘴里老绕着的就是那个调子。",
+              "en": "...I want to switch to a slower one. Those days clearing old stock, that tune kept circling in my head."
             }
           ]
         }
@@ -3084,9 +3118,14 @@
               "expr": "smile"
             },
             {
+              "speaker": "Narrator",
+              "text": "把账本翻过去两页，侧耳听了听外头",
+              "en": "Flips two pages, then looks up and listens"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>把账本翻过去两页，侧耳听了听外头</i>……行，人走远了。",
-              "en": "<i>Flips two pages, then looks up and listens</i>... Okay. They're gone."
+              "text": "……行，人走远了。",
+              "en": "... Okay. They're gone."
             },
             {
               "speaker": "Eleanor",
@@ -3138,8 +3177,8 @@
             },
             {
               "speaker": "Player",
-              "text": "主人怎么回？",
-              "en": "And the host?"
+              "text": "办沙龙的那位怎么说？",
+              "en": "What did the man running the salon say?"
             },
             {
               "speaker": "Eleanor",
@@ -3165,33 +3204,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "他还提了几句别的话，我没接。先把这一晚唱完，别的都不谈。",
-              "en": "He mentioned a few other things. I didn't bite. One good night first."
-            },
-            {
-              "speaker": "Player",
-              "text": "是你自己去谈下来的。",
-              "en": "You negotiated that yourself."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我自己去谈的。许可证是你办的，名字是我的，歌也是我挑的。",
-              "en": "I did. You got me the pass. The name's mine. I chose the song."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "那晚的钱拿回来，我先还你一份。",
               "en": "Once I get paid for that night, I'll pay back part of what I owe you first."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "工钱还照老规矩记上，拾荒那栏单独写，别并到一起。",
-              "en": "Log my wages as usual. Scavenging stays in its own column. Don't mix them."
-            },
-            {
-              "speaker": "Player",
-              "text": "成。",
-              "en": "Fine."
             },
             {
               "speaker": "Eleanor",
@@ -3206,8 +3220,18 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "主人。<i>隔着窗俯低一点，礼服领口落在灯下</i>从我站到这儿，你就一直盯着这衣裳看。",
-              "en": "Master.<i>Leans close through the window, the neckline of her gown catching the light</i>You've been looking at this dress since I got here."
+              "text": "主人。",
+              "en": "Master."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "隔着窗俯低一点，礼服领口落在灯下",
+              "en": "Leans close through the window, the neckline of her gown catching the light"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "从我站到这儿，你就一直盯着这衣服看。",
+              "en": "You've been looking at this dress since I got here."
             },
             {
               "speaker": "Eleanor",
@@ -3225,10 +3249,15 @@
               "en": "I won't."
             },
             {
+              "speaker": "Narrator",
+              "text": "手指在他手背上搭了一下，又收回来整了整肩带",
+              "en": "Rests her fingers on the back of his hand, then draws them back to straighten her strap"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>手指在他手背上搭了一下，又收回来整了整肩带</i>那首歌，我今天不给你唱。",
-              "en": "<i>Rests her fingers on the back of his hand, then draws them back to straighten her strap</i>I'm not singing you that song today.",
-              "expr": "soft"
+              "text": "那首歌，我今天不给你唱。",
+              "expr": "soft",
+              "en": "I'm not singing you that song today."
             },
             {
               "speaker": "Eleanor",
@@ -3236,9 +3265,14 @@
               "en": "…Just a couple of lines. Stay quiet."
             },
             {
+              "speaker": "Narrator",
+              "text": "低下声哼了两句，到第三句停住",
+              "en": "Hums two lines softly, stops at the third"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>低下声哼了两句，到第三句停住</i>好了，后头的先欠着。",
-              "en": "<i>Hums two lines softly, stops at the third</i>There. The rest can wait."
+              "text": "好了，后头的先欠着。",
+              "en": "There. The rest can wait."
             },
             {
               "speaker": "Player",
@@ -3252,9 +3286,14 @@
               "expr": "smile"
             },
             {
+              "speaker": "Narrator",
+              "text": "拎起裙摆转过身，脚下顿了顿",
+              "en": "Lifts her skirt and turns away, then pauses"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>拎起裙摆转过身，脚下顿了顿</i>明天我照常来上工。这身我穿回去，下一场还要接着穿。",
-              "en": "<i>Lifts her skirt and turns away, then pauses</i>I'll come to work tomorrow as usual. I'm wearing this home. I need it for the next performance."
+              "text": "明天我照常来上工。这身我穿回去，下一场还要接着穿。",
+              "en": "I'll come to work tomorrow as usual. I'm wearing this home. I need it for the next performance."
             }
           ]
         }
@@ -3321,14 +3360,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "店主，账本递我一下。今天这栏我想亲手动笔。",
-              "en": "Shopkeeper, give me the ledger. I want to write today's entry myself.",
+              "text": "店主，今天的账明天再记。",
+              "en": "Shopkeeper, today's figures can go in the ledger tomorrow.",
               "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>接过账本，笔尖悬在纸页上方半天</i>……不行，这笔落不下去。手还热着。",
-              "en": "<i>Takes the ledger, pen hovering over the page</i>…Forget it, I can't. My hands are still warm."
             },
             {
               "speaker": "Player",
@@ -3425,13 +3459,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "还有件事，我得先跟你说明白。等我说完你再接话。",
-              "en": "One more thing. Let me get it all out first. You talk after.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "人都散了以后，沙龙老板把下一回的节目单草稿拿来叫我看。我名字下面多了一行小字。",
+              "text": "散场后，老板给我看下回的节目单草稿。我名字底下多了行小字。",
               "en": "After the show, the salon owner showed me the draft of the next program. There was a new line in small print under my name."
             },
             {
@@ -3457,25 +3485,14 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "我母亲的复核还没结果。她的事，不该被谁拿去当请客人坐下的招牌。",
-              "en": "My mother's still waiting on that review. Her case isn't anyone's bait to get guests in seats.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "厅里能坐多少人，得是我唱出来的。多一位少一位，都该冲着我的声音来。",
-              "en": "However many sit out there, my voice has to earn them. Every last one has to come for me."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "后来他当着我面另写了一张。那行字没再出现，只留我的名字。",
               "en": "In the end he rewrote it right in front of me. The line's gone. Just my name."
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>账本放回柜面，指尖在封皮角上磨了磨</i>……等出了那边的大门，腿才开始发软。",
-              "en": "<i>Sets the ledger back on the counter, fingers rubbing along the cover's edge</i>...Only once I was out that door did my knees give.",
-              "expr": "tired"
+              "text": "……等出了那边的大门，腿才开始发软。",
+              "expr": "tired",
+              "en": "...Only once I was out that door did my knees give."
             },
             {
               "speaker": "Eleanor",
@@ -3512,10 +3529,15 @@
               "en": "Sit down."
             },
             {
+              "speaker": "Narrator",
+              "text": "提起裙子坐到那张凳子上",
+              "en": "Gathers her skirt and sits on the stool."
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>提起裙子坐到那张凳子上</i>……坐就坐。你也不评一句我划得对不对。",
-              "en": "<i>Gathers her skirt and sits on the stool</i>...Fine, I'm sitting. You won't even say if I was right to cut it.",
-              "expr": "tired"
+              "text": "……坐就坐。你也不评一句我划得对不对。",
+              "expr": "tired",
+              "en": "...Fine, I'm sitting. You won't even say if I was right to cut it."
             },
             {
               "speaker": "Eleanor",
@@ -3533,28 +3555,6 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……也就三个字。你嘴里真是不肯多漏一个。",
-              "en": "...Two words. You don't spare a single extra coin when you talk, do you.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "可我就愿意听这个。你重说一次。",
-              "en": "But I like hearing it. Say it again.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Player",
-              "text": "划得对。",
-              "en": "Right call."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "好了，这样就行。多讲两遍就没劲了。",
-              "en": "Fine, that's enough. Say it too often and it's worth nothing."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "过一会儿那位沙龙老板出来圆场，说名字利落，印在单子上也拿得出手。",
               "en": "Later the salon owner smoothed it over, said a clean name looks respectable in print."
             },
@@ -3564,26 +3564,36 @@
               "en": "He also wants to talk real business in a couple days. Told me not to say yes to anyone else first."
             },
             {
-              "speaker": "Eleanor",
-              "text": "<i>朝巷子里扫了一眼，把嗓子压下去</i>主人，他们鼓掌的时候，我朝最后面那排找过一圈。",
-              "en": "<i>Looks down the alley and lowers her voice</i>Master. While they were applauding, I looked all along the back row.",
-              "expr": "soft"
+              "speaker": "Narrator",
+              "text": "朝巷子里扫了一眼，把嗓子压下去",
+              "en": "Looks down the alley and lowers her voice"
             },
             {
               "speaker": "Eleanor",
-              "text": "我清楚你在铺子里守着窗口，可还是没管住眼睛。……这句你听过了就丢。",
-              "en": "I knew you were here watching the window. I looked anyway. ...Forget I said that."
+              "text": "主人，他们鼓掌的时候，我朝最后面那排找过一圈。",
+              "expr": "soft",
+              "en": "Master. While they were applauding, I looked all along the back row."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "最后一排有个跟你外套一个颜色的。我多看了两眼。",
+              "en": "There was a coat the same colour as yours in the back row. I looked twice."
             },
             {
               "speaker": "Player",
-              "text": "忘不了。",
-              "en": "Won't forget."
+              "text": "你连我穿哪件都记得。",
+              "en": "You even remember which coat I wear."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "把裙摆提起来转过去，手从柜边拿开，又扭回头",
+              "en": "Lifts her skirt to leave, takes her hand off the counter, then looks back"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把裙摆提起来转过去，手从柜边拿开，又扭回头</i>那你就记牢。明天我照常来做工，今天的账明儿再补。",
-              "en": "<i>Lifts her skirt to leave, takes her hand off the counter, then looks back</i>Then remember it. I'll be here for work tomorrow. I'll finish today's accounts then.",
-              "expr": "shy"
+              "text": "……下回我还看。",
+              "expr": "shy",
+              "en": "…I'll look again next time."
             }
           ]
         }
@@ -3650,8 +3660,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "今天要办的那件正事，我已经谈好了。",
-              "en": "We talked it through. The real business.",
+              "text": "沙龙那边给我排了日子。",
+              "en": "The salon's put me on the schedule.",
               "expr": "serious"
             },
             {
@@ -3666,24 +3676,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "他问我怎么挂牌。我说跟上次节目单一样，只写全名。",
-              "en": "He asked how to bill me. I said my full name, same as on that last program."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "沙龙那边往后会替我登记。门口只核对谁登台，不查那张单子了。",
               "en": "He also said the salon will register me when I go up from now on. The door checks the singer, not that list."
             },
             {
               "speaker": "Eleanor",
-              "text": "我早说过，得靠全名走回上层。今天这一条，到手了。",
-              "en": "I told you I'd return to the Upper Level under my own name. Today, I got that.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>食指点住旧约那几行</i>这一页，我想今天就把它结清。",
-              "en": "<i>Taps the lines of the old contract</i>So this page—I want to close it out today."
+              "text": "<i>食指点住旧约那几行</i>\n这一页，我想今天就把它结清。",
+              "en": "<i>Taps the lines of the old contract</i>\nSo this page—I want to close it out today."
             },
             {
               "speaker": "Player",
@@ -3697,76 +3696,28 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "可当初立约，为的是给我一口饭、一条活路。路我现在有了。",
-              "en": "But this contract was meant to get me fed and give me a way forward. I have the way now."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "再叫这张纸绑着你，就是我在占你。这么厚的脸皮我没长。",
-              "en": "Keep you tied down with it, and I'd be taking advantage. I'm not that shameless."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "有几样我先摆明白。许可证你办的。礼服是你从库里刨出来的。",
-              "en": "A few things up front. You arranged the pass. You dug the gown out of storage.",
-              "expr": "soft"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "头一回唱砸那夜，铺子的灯你没熄，一直点到我拎着裙摆摸到窗边。",
-              "en": "The night I first sang and made a mess of it, you left the light on until I came to the window, holding up my skirt."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "送我到门口的是你，这笔我记下了。",
-              "en": "You got me to the door. I'll own that."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "可站上台那口气，是我一点一点提上来的。这一样，你同样得认。",
-              "en": "But the breath I found on that stage was mine. You have to own that too.",
-              "expr": "serious"
+              "text": "我现在唱歌有钱拿了。这一页不用等那么久吧？",
+              "en": "They pay me to sing now. Do we have to leave this page open till then?"
             },
             {
               "speaker": "Player",
-              "text": "认。",
-              "en": "I do."
+              "text": "工钱今天结？",
+              "en": "Shall I pay you through today?"
             },
             {
               "speaker": "Eleanor",
-              "text": "行，那我来把账拢一拢。",
-              "en": "Good. Then let's settle up."
+              "text": "嗯。拾荒那栏另算。",
+              "en": "Mm. Keep the salvage separate."
             },
             {
               "speaker": "Eleanor",
-              "text": "工钱到今天为止，一天也不多记。拾荒另开一栏，不往工钱里搅。",
-              "en": "Wages through today, not a day more or less. Scavenging gets its own line—don't mix it with wages."
+              "text": "借你的钱，下月唱完我先还一截。剩下的还按月给。",
+              "en": "I'll pay back part of the loan after next month's show. The rest I'll pay by the month."
             },
             {
               "speaker": "Eleanor",
-              "text": "欠你的那笔不放在这一页。下月登台钱到手，我先还一截回来，剩下的还是按月慢慢填。",
-              "en": "The loan's not included. When next month's residency pay comes in, I'll pay a chunk back, slow as before."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "还有。这一页结清，我也没想过不再来铺子。",
-              "en": "And... the old contract's done, but I'm not planning to stop coming.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "往后不登台的时候，我来点货、入账。轮到我上台那两晚，我就告假。",
-              "en": "New terms: on days I don't sing, I still come appraise goods and keep the books. The two nights I sing, I take off."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "工钱按我来的日子算。拾荒可能没太多空闲，见着合用的，我仍带回来让你看。",
-              "en": "Pay me by the days I show up. I may have less time to scavenge, but if I spot good stuff, I'll bring it for you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就这么几项。你哪项不点头，就这当口说。",
-              "en": "That's it. Anything you don't like, say it now."
+              "text": "后头给我留张空页吧。我还来点货记账，唱歌那两晚给我空着。",
+              "en": "Save me a fresh page. I'll still be here to check stock and do the books. Leave those two show nights blank for me."
             }
           ]
         },
@@ -3779,14 +3730,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "半句都不回？价也不压一下。",
-              "en": "Not one change? You can't even be bothered to haggle.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>笔尖压在旧约末尾，横着拉过一道</i>这条线我落的。",
-              "en": "<i>Draws a line under the old contract herself</i>Then I'll draw this one."
+              "text": "笔给你。旧账你收尾。",
+              "en": "Here's the pen. You close the old account."
             }
           ]
         },
@@ -3805,28 +3750,22 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>笔跟着旧约最后一行划过去</i>旧页清掉。你问完了，新的一页我来写。",
-              "en": "<i>Draws a line under the old contract</i>The old one's done. You're done asking—now I write the new one."
+              "text": "旧页清掉。你问完了，新的一页我来写。",
+              "en": "The old one's done. You're done asking—now I write the new one."
             }
           ]
         },
         "v2_a4c2_s1": {
           "lines": [
             {
+              "speaker": "Narrator",
+              "text": "从柜台上抽过笔，在旧约末行下面拉了一道横线",
+              "en": "Takes the pen and draws a line under the old contract's last line"
+            },
+            {
               "speaker": "Player",
-              "text": "<i>从柜台上抽过笔，在旧约末行下面拉了一道横线</i>结清。",
-              "en": "<i>Takes the pen and draws a line under the old contract's last line</i>Settled."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "喂，这条线我原想自己收尾的。",
-              "en": "Hey, I wanted to draw that line myself.",
-              "expr": "angry"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "笔迹还这么齐整，你是不是拿尺子比着画的。",
-              "en": "...And so straight, too. Did you use a ruler?"
+              "text": "结清。",
+              "en": "Settled."
             },
             {
               "speaker": "Player",
@@ -3834,10 +3773,9 @@
               "en": "You write the next page."
             },
             {
-              "speaker": "Eleanor",
-              "text": "哼，总算轮到我动笔。<i>把账本拖近，掀到下一页落下一行，再转过去对着他</i>",
-              "en": "Hmph. That's more like it. <i>Turns a page, writes a line, and spins the ledger around for him to see</i>",
-              "expr": "smile"
+              "speaker": "Narrator",
+              "text": "把账本拖近，掀到下一页落下一行，再转过去对着他",
+              "en": "Turns a page, writes a line, and spins the ledger around for him to see"
             },
             {
               "speaker": "Eleanor",
@@ -3845,30 +3783,24 @@
               "en": "\"Clerk: Eleanor. Paid by the day, except the two singing nights.\" That's all."
             },
             {
-              "speaker": "Eleanor",
-              "text": "“侍从”这两个字不落纸面。账本拿来给外人瞧，不能写。",
-              "en": "The word \"attendant\" stays out of the ledger. The ledger is for outsiders to read."
-            },
-            {
               "speaker": "Player",
-              "text": "那它们落哪儿？",
-              "en": "Then where does that word go?"
+              "text": "那你平时叫我的那声呢？",
+              "en": "What about that other name you call me?"
+            },
+            {
+              "speaker": "Narrator",
+              "text": "笔帽按回去，目光朝巷口偏了一下",
+              "en": "Caps the pen and glances down the alley"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>笔帽按回去，目光朝巷口偏了一下</i>落我这儿。没人了，我自己说。",
-              "en": "<i>Caps the pen and glances down the alley</i>I'll remember it. When no one's around, I'll say it myself.",
-              "expr": "shy"
+              "text": "主人。",
+              "en": "Master."
             },
             {
               "speaker": "Eleanor",
-              "text": "主人。账本翻过一页，这个称呼不换。",
-              "en": "Master. The ledger turned a page today. This didn't."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "下月头一场，下了台我就折回铺子。账随手记掉，不压到明天。",
-              "en": "First night next month, I'll come straight back after I sing. Whatever comes in gets logged that night, not the next day.",
+              "text": "下月头一场，下了台我就折回店铺。账随手记掉，不压到明天。",
+              "en": "After next month's first show, I'll come straight back and do the books. No leaving them till morning.",
               "expr": "soft"
             },
             {
@@ -3878,8 +3810,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "上回我唱砸那晚，你在窗边等到那么晚。现在才肯冒出这句。真磨蹭。",
-              "en": "You waited for me that night I made a mess of the song. Only saying it now. Took you long enough."
+              "text": "头一回唱砸，我拎着裙子摸回来的时候，你这盏灯还亮着。",
+              "en": "The first time I sang and made a mess of it, I came back clutching my skirt. That light of yours was still on."
             }
           ]
         },
@@ -3887,13 +3819,13 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "<i>账本先落在柜台边，翻到最前头那页，她把折过的地方往反方向抹了两下。</i>",
-              "en": "She spreads the ledger on the counter, flips back to the first page, and presses the old crease flat with a fingernail."
+              "text": "账本先落在柜台边，翻到最前头那页，她把折过的地方往反方向抹了两下。",
+              "en": "She sets the ledger on the counter, opens it to the first page and smooths the crease back twice."
             },
             {
               "speaker": "Eleanor",
-              "text": "正事谈下来了。",
-              "en": "We talked it through. The real business.",
+              "text": "沙龙那边给我排了日子。",
+              "en": "The salon's put me on the schedule.",
               "expr": "serious"
             },
             {
@@ -3903,13 +3835,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "驻场。每月两晚，日子固定，常驻那栏里落我的名字。",
-              "en": "Residency. Two fixed nights a month, with my name in the resident slot."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "他问牌子怎么挂，我说按上次节目单的写法，写全名。",
-              "en": "He asked how to bill me. I said my full name, same as on that last program."
+              "text": "驻场。一个月两晚，日子定死，牌上写我的全名。",
+              "en": "A residency. Two fixed nights a month, and my full name on the bill."
             },
             {
               "speaker": "Eleanor",
@@ -3917,15 +3844,14 @@
               "en": "He also said the salon will register me when I go up from now on. The door checks the singer, not that list."
             },
             {
-              "speaker": "Eleanor",
-              "text": "我说过要拿自己的名字回上层。这一条，今天拿到了。",
-              "en": "I told you I'd return to the Upper Level under my own name. Today, I got that.",
-              "expr": "determined"
+              "speaker": "Narrator",
+              "text": "她把旧约那几行按在掌根下，从窗口边轻轻推过来。",
+              "en": "Taps the lines of the old contract"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>她把旧约那几行按在掌根下，从窗口边轻轻推过来。</i>这一页，我想今天就结。",
-              "en": "<i>Taps the lines of the old contract</i>So this page—I want to close it out today."
+              "text": "这一页，我想今天就结。",
+              "en": "So this page—I want to close it out today."
             },
             {
               "speaker": "Player",
@@ -3939,76 +3865,28 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "当初签它，是要给我一口饭、留一条路。这条路今天已经能走了。",
-              "en": "But this contract was meant to get me fed and give me a way forward. I have the way now."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "再让这一页拖着你，就成了我占便宜。我没那么厚的脸。",
-              "en": "Keep you tied down with it, and I'd be taking advantage. I'm not that shameless."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "先跟你把几笔账摆开。许可证是你办的，礼服也是你从库里翻出来的。",
-              "en": "A few things up front. You arranged the pass. You dug the gown out of storage.",
-              "expr": "soft"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "最开头那次我唱砸了，你那一晚没关灯，一直等到我拎着裙摆走到窗口前。",
-              "en": "The night I first sang and made a mess of it, you left the light on until I came to the window, holding up my skirt."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你把我送到门口，这笔我记下了。",
-              "en": "You got me to the door. I'll own that."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "可台上那口气，是我自己调上来的。你也得认。",
-              "en": "But the breath I found on that stage was mine. You have to own that too.",
-              "expr": "serious"
+              "text": "我现在唱歌有钱拿了。这一页不用等那么久吧？",
+              "en": "They pay me to sing now. Do we have to leave this page open till then?"
             },
             {
               "speaker": "Player",
-              "text": "我认。",
-              "en": "I do."
+              "text": "工钱今天结？",
+              "en": "Shall I pay you through today?"
             },
             {
               "speaker": "Eleanor",
-              "text": "成，那我把账算给你听。",
-              "en": "Good. Then let's settle up."
+              "text": "嗯。拾荒那栏另算。",
+              "en": "Mm. Keep the salvage separate."
             },
             {
               "speaker": "Eleanor",
-              "text": "工钱就结到今天，多一天少一天都不行。拾荒那栏单独算，别跟工钱搅在一起。",
-              "en": "Wages through today, not a day more or less. Scavenging gets its own line—don't mix it with wages."
+              "text": "借你的钱，下月唱完我先还一截。剩下的还按月给。",
+              "en": "I'll pay back part of the loan after next month's show. The rest I'll pay by the month."
             },
             {
               "speaker": "Eleanor",
-              "text": "跟你借的那笔另算。下个月驻场钱一到，我先还一部分，还是照老样子慢慢清。",
-              "en": "The loan's not included. When next month's residency pay comes in, I'll pay a chunk back, slow as before."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "还有……旧约今天不续了，但我没想躲着不来。",
-              "en": "And... the old contract's done, but I'm not planning to stop coming.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "接下来按新的来：不唱歌的日子，我照旧来认货、记账。唱的那两晚请假。",
-              "en": "New terms: on days I don't sing, I still come appraise goods and keep the books. The two nights I sing, I take off."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "工钱按我到店的天数结。拾荒我不一定顾得上，看见好东西还是带回来给你过目。",
-              "en": "Pay me by the days I show up. I may have less time to scavenge, but if I spot good stuff, I'll bring it for you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就这些。哪条你不点头，直接提。",
-              "en": "That's it. Anything you don't like, say it now."
+              "text": "后头给我留张空页吧。我还来点货记账，唱歌那两晚给我空着。",
+              "en": "Save me a fresh page. I'll still be here to check stock and do the books. Leave those two show nights blank for me."
             }
           ]
         }
@@ -4070,14 +3948,8 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "她把那张厚请柬按在柜台上，贴着台面推过去，指头仍压住边角。",
-              "en": "She slides a heavy card invitation across the counter, a fingertip pinning one corner, not letting go."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "这页你看进眼里之前，先别接话。",
-              "en": "Read first. Don't talk yet.",
-              "expr": "serious"
+              "text": "她把那张厚请柬推到柜台上。",
+              "en": "She slides the thick invitation onto the counter."
             },
             {
               "speaker": "Player",
@@ -4102,7 +3974,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "这回连那位老板都多留了心，交到我手上以前，自己先翻来覆去瞧了三回。",
+              "text": "老板把请柬翻来覆去看了三回，才肯递给我。",
               "en": "Even the salon owner learned his lesson this time. He read it three times himself before handing it over."
             },
             {
@@ -4127,14 +3999,24 @@
               "en": "Lend me a pen."
             },
             {
+              "speaker": "Narrator",
+              "text": "抽出笔放到她手边",
+              "en": "Hands her the pen"
+            },
+            {
               "speaker": "Player",
-              "text": "<i>抽出笔放到她手边</i>给。",
-              "en": "<i>Hands her the pen</i> Here."
+              "text": "给。",
+              "en": "Here."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "把袖口往上折了一折，笔尖在嘉宾栏边停了一停，写下去，又涂掉，再落笔",
+              "en": "Writes a line, pauses, then crosses it out and starts again."
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>把袖口往上折了一折，笔尖在嘉宾栏边停了一停，写下去，又涂掉，再落笔</i>好了。",
-              "en": "<i>Writes a line, pauses, then crosses it out and starts again.</i> There."
+              "text": "好了。",
+              "en": "There."
             },
             {
               "speaker": "Player",
@@ -4143,35 +4025,14 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "别念出来……我先头只写了“当铺店主”，搁在纸上像给货物登名字。",
-              "en": "Why read it out loud? ...At first I only wrote \"Shopkeeper, pawnshop.\" It looked like a stock entry.",
+              "text": "谁让你念出来的。",
+              "en": "Did I ask you to read it out loud?",
               "expr": "shy"
             },
             {
               "speaker": "Eleanor",
-              "text": "剩下两个字，我不落到这张纸上，留着只在嘴边和该叫的人前叫。",
-              "en": "I'm not putting that other word on paper. That's between you and me."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "别人要问起你，我只会讲这位是我店主，铺子开在下层区。",
-              "en": "If anyone asks, I'll say he's my shopkeeper. He runs a pawnshop on the Lower Level.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "哪个要笑，我就在他跟前立着，等他笑不动了自己收声。",
-              "en": "Anyone who laughs, I'll stand beside him and watch him finish. Once he's had his fill, he'll get bored on his own."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你别一开口就说去了不合适。那阵子是你给我跑许可证，现在该我拉着你往上走一程。",
-              "en": "Don't tell me you don't belong up there. You used to arrange my passes. This time I'll vouch for you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "衣裳你不用管，旧衣堆里那件深色外套，我收货时给你比过，肩宽对得上。",
-              "en": "I've picked your clothes too. There's a dark coat in the old-clothes pile. I measured it when I appraised it. The shoulders fit you."
+              "text": "那件深色外套还在吧？收货那天，我照你的肩比过。",
+              "en": "You've still got that dark coat? I checked it against your shoulders when it came in."
             },
             {
               "speaker": "Eleanor",
@@ -4186,8 +4047,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "该说的都在这了。现在告诉我，去，还是不去。",
-              "en": "That's all. Are you going or not? Give me an answer.",
+              "text": "你跟不跟我去？",
+              "en": "Will you come with me?",
               "expr": "serious"
             }
           ]
@@ -4210,36 +4071,21 @@
               "text": "……我若带旁人去，第二首唱着一半，眼神都没处放。话说到这儿，你去不去。",
               "en": "...If I brought anyone else, I wouldn't know where to look during the second song. There. Are you coming or not?",
               "expr": "shy"
-            },
-            {
-              "speaker": "Player",
-              "text": "去。",
-              "en": "I'll go."
             }
           ]
         },
         "v2_a4c3_c3_o3": {
           "lines": [
             {
-              "speaker": "Player",
-              "text": "<i>把请柬拿起来，低头定在嘉宾那一栏上，半天没动</i>",
-              "en": "<i>Picks up the invitation and stares at that line for a long time</i>"
+              "speaker": "Narrator",
+              "text": "把请柬拿起来，低头定在嘉宾那一栏上，半天没动",
+              "en": "Picks up the invitation and stares at that line for a long time"
             },
             {
               "speaker": "Eleanor",
-              "text": "还没看够？就四个字，又不是账本，值得看这么久？",
-              "en": "Finished staring? Two words. It's not a ledger.",
+              "text": "还没看够？名字又不会长腿跑了。",
+              "en": "Still staring? The name's not going to run off.",
               "expr": "shy"
-            },
-            {
-              "speaker": "Player",
-              "text": "去。",
-              "en": "I'll go."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……半天就挤出这一个字。行，这个答复我收着。",
-              "en": "...All that staring, and you squeeze out two words. Fine. I'll take it."
             }
           ]
         },
@@ -4249,17 +4095,6 @@
               "speaker": "Player",
               "text": "我去。",
               "en": "I'll go."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……你倒不推一下？我来之前想好一肚子话，全没处使了。",
-              "en": "...You're not even going to protest? I rehearsed my arguments the whole way here. All wasted.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Player",
-              "text": "你写了名字，我就去。",
-              "en": "You wrote my name. So I'll go."
             },
             {
               "speaker": "Eleanor",
@@ -4278,21 +4113,15 @@
               "en": "I won't."
             },
             {
-              "speaker": "Eleanor",
-              "text": "唱罢了有人拉着我搭话，我最多应三句就脱身，后面都陪你。",
-              "en": "If they corner me after, I'll give them three sentences and leave. The rest of the night is yours.",
-              "expr": "smile"
+              "speaker": "Narrator",
+              "text": "她朝巷口偏了偏头，见近处没人，声音压低",
+              "en": "Glances down the alley and lowers her voice"
             },
             {
               "speaker": "Eleanor",
-              "text": "散场怎么回我也打听清楚了。等散了场，我们一块下来。",
-              "en": "I've already asked about the way back. When it's over, we come down together."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "<i>她朝巷口偏了偏头，见近处没人，声音压低</i>主人，到了上头我改口叫你店主。你答应一声就好，别笑。",
-              "en": "<i>Glances down the alley and lowers her voice</i>Master, up there I'll call you shopkeeper. Just answer. No laughing.",
-              "expr": "shy"
+              "text": "主人。……上了楼，你可别笑场。",
+              "expr": "shy",
+              "en": "Master. …Try to keep a straight face when we're up there."
             },
             {
               "speaker": "Player",
@@ -4301,8 +4130,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>她把请柬转到他那一侧，压着边角的手指抬开</i>这张你收下。折了角我也不会替你再去讨一张。",
-              "en": "<i>Lifts the finger pinning the invitation</i>Keep this. If you crease it, I'm not asking for another."
+              "text": "这张你收下。折了角我也不会替你再去讨一张。",
+              "en": "Keep this. If you crease it, I'm not asking for another."
             }
           ]
         }
@@ -4345,30 +4174,14 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>手从窗口外探进来</i> 主人。",
-              "en": "<i>Reaches toward him through the window</i>Master.",
-              "expr": "soft"
+              "text": "<i>手从窗口外探进来</i>\n主人。",
+              "expr": "soft",
+              "en": "<i>She reaches in through the window.</i>\nMaster."
             },
             {
               "speaker": "Player",
               "text": "嗯。",
               "en": "Mm."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "楼上的人叫了我一整晚埃莉诺小姐。到你嘴里，就一个嗯。",
-              "en": "Just \"mm.\" I got called Miss Eleanor all night up there, and I come back to one \"mm\" from you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "行，我就图这一声。",
-              "en": "Fine. Of course that's the one I like best.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "有人问起你是谁，我答了句店主。他还没回神，我已经走了。",
-              "en": "Someone asked who was with me. I said my shopkeeper. He froze, and I walked off before he recovered."
             },
             {
               "speaker": "Eleanor",
@@ -4382,14 +4195,24 @@
               "en": "Sit down. Give me your hand. I'll do the work today. Don't touch anything."
             },
             {
+              "speaker": "Narrator",
+              "text": "靠窗坐下，把一只手放到柜面上",
+              "en": "Sits inside the window and puts his hand on the counter"
+            },
+            {
               "speaker": "Player",
-              "text": "<i>靠窗坐下，把一只手放到柜面上</i> 坐好了。",
-              "en": "<i>Sits inside the window and puts his hand on the counter</i>I'm sitting."
+              "text": "坐好了。",
+              "en": "I'm sitting."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "双手捧住他的手，把蜷紧的指头一点一点揉平",
+              "en": "Cups his hand in both of hers and slowly kneads his clenched fingers"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>双手捧住他的手，把蜷紧的指头一点一点揉平</i> 僵成这样。楼上的椅子比我的鞋还难坐？",
-              "en": "<i>Cups his hand in both of hers and slowly kneads his clenched fingers</i>Your hand's stiff too. Were those chairs upstairs worse than my shoes?"
+              "text": "僵成这样。楼上的椅子比我的鞋还难坐？",
+              "en": "Your hand's stiff too. Were those chairs upstairs worse than my shoes?"
             },
             {
               "speaker": "Eleanor",
@@ -4403,9 +4226,14 @@
               "en": "...Look if you want. There's no one in the alley."
             },
             {
+              "speaker": "Narrator",
+              "text": "身子往柜沿边压过去，领口向下坠了一点，指腹从手腕一路揉上去",
+              "en": "Leans over the counter edge, her neckline dipping as her fingers press up his wrist"
+            },
+            {
               "speaker": "Eleanor",
-              "text": "<i>身子往柜沿边压过去，领口向下坠了一点，指腹从手腕一路揉上去</i> 还要往上？到这儿？",
-              "en": "<i>Leans over the counter edge, her neckline dipping as her fingers press up his wrist</i>A little higher. Here?"
+              "text": "还要往上？到这儿？",
+              "en": "A little higher. Here?"
             },
             {
               "speaker": "Player",
@@ -4414,8 +4242,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "你还挺会使唤人。 <i>手上加重点</i>",
-              "en": "You're good at ordering people around. <i>Presses a little harder</i>"
+              "text": "你还挺会使唤人。<i>手上加重点</i>",
+              "en": "You do like giving orders. <i>She presses a little harder.</i>"
             },
             {
               "speaker": "Eleanor",
@@ -4441,16 +4269,6 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "下个月那两晚，我照旧上去唱。唱完还是下来，回这边记账。",
-              "en": "Those two nights next month, I'll still go up and sing. Then I'll come back down and keep the books here."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "楼上给我留门。我往哪头走，心里有数。",
-              "en": "The Upper Level left a door open for me. I know which way I'm going."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "还有半首欠着。那支老调，我上回到第三句就收住了。",
               "en": "Oh, and I still owe you half a song. That old tune from last time—I only hummed to the third line.",
               "expr": "shy"
@@ -4461,20 +4279,30 @@
               "en": "I remember."
             },
             {
-              "speaker": "Eleanor",
-              "text": "就知道你记得。 <i>手搭上他腕子，压下嗓子，从第三句往下接</i>",
-              "en": "Knew you'd remember.<i>Keeps her hand on his wrist and sings softly from the third line onward</i>"
+              "speaker": "Narrator",
+              "text": "手搭上他腕子，压下嗓子，从第三句往下接",
+              "en": "Keeps her hand on his wrist and sings softly from the third line onward"
+            },
+            {
+              "speaker": "Narrator",
+              "text": "唱到最末一句，弯下腰把柜台灯调低一点",
+              "en": "After the last line, she leans over and turns the counter lamp down a notch"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>唱到最末一句，弯下腰把柜台灯调低一点</i> 半首，还清了。",
-              "en": "<i>After the last line, she leans over and turns the counter lamp down a notch</i>Half a song. Paid in full."
+              "text": "半首，还清了。",
+              "en": "Half a song. Paid in full."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "伏在柜沿，掌心盖住他手背，抬眼看他",
+              "en": "Leans on the counter edge, her palm over his hand, and looks up at him"
             },
             {
               "speaker": "Eleanor",
-              "text": "<i>伏在柜沿，掌心盖住他手背，抬眼看他</i> 主人，别的账都等明天再记。",
-              "en": "<i>Leans on the counter edge, her palm over his hand, and looks up at him</i>Master, leave the rest of tonight's accounts until tomorrow.",
-              "expr": "soft"
+              "text": "主人，别的账都等明天再记。",
+              "expr": "soft",
+              "en": "Master, leave the rest of tonight's accounts until tomorrow."
             }
           ]
         }

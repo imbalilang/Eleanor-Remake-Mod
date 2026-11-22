@@ -48,7 +48,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "这包是什么时候进的？"
+              "text": "我以前吃东西，连封口都有人替我拆。"
             },
             {
               "speaker": "eleanor",
@@ -92,7 +92,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "……哼。也好。省得我说多了，回头还得自己收回去。",
+              "text": "……哼。也好。",
               "expr": "shy"
             },
             {
@@ -414,6 +414,10 @@
             },
             {
               "speaker": "eleanor",
+              "text": "我没有别的家人。只有母亲。"
+            },
+            {
+              "speaker": "eleanor",
               "text": "要是能回到上面，我就能把事情解释清楚。"
             },
             {
@@ -451,10 +455,6 @@
             {
               "speaker": "eleanor",
               "text": "最近按我的姓算的人，一个信用点都不肯出。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我没有别的家人。只有母亲。"
             },
             {
               "speaker": "narrator",
@@ -1040,52 +1040,18 @@
           "lines": [
             {
               "speaker": "narrator",
-              "text": "柜台上的袋子被解开，干粮和两枚营养果推到她面前。"
+              "text": "柜台上的袋子被解开，干粮和两枚营养果推到她面前。",
+              "en": "The bag on the counter is opened; dry food and two nutrifruits are pushed toward her."
             },
             {
               "speaker": "eleanor",
-              "text": "我不是来讨饭的。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "……行吧。我拿。"
+              "text": "……谢谢。",
+              "en": "...Thank you."
             },
             {
               "speaker": "narrator",
-              "text": "干粮被她按在怀里压了压，眼睛落到那两枚营养果上。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "账记着。我会还。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我室友昨天把自己那份分了我一半。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "她也没问我姓什么。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "别以为我这么说，就是喜欢这下面。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "营养果进了内袋，扣子扣好，扣了两回才扣上。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "今天的事，不许说出去。",
-              "expr": "shy"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "尤其是后半段。"
-            },
-            {
-              "speaker": "narrator",
-              "text": "她退开一步，手在柜沿上停了一停，才转身离开。"
+              "text": "她把干粮和营养果收好，退开一步，才转身离开。",
+              "en": "She puts the food and nutrifruits away, steps back, and only then turns to leave."
             }
           ]
         },
@@ -1120,10 +1086,6 @@
               "text": "问完了？"
             },
             {
-              "speaker": "eleanor",
-              "text": "我明白了。你开的是店，不是救济站。"
-            },
-            {
               "speaker": "narrator",
               "text": "她把空布袋折好，收回怀里。"
             },
@@ -1131,10 +1093,6 @@
               "speaker": "eleanor",
               "expr": "shy",
               "text": "今天的事，不许说出去。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我来过这儿，这件事，也不许说。"
             },
             {
               "speaker": "narrator",
@@ -1150,7 +1108,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "（把能吃的拿出来，或者先听她说完。）"
+              "text": "（可以给她食物，也可以给钱。）"
             }
           ]
         },
@@ -1630,15 +1588,11 @@
             },
             {
               "speaker": "lydia",
-              "text": "我一路走过来，鞋底沾了三种东西，有一种我到现在都不想确认是什么。"
+              "text": "我问了三个人，都说你收东西不坑人。"
             },
             {
               "speaker": "lydia",
-              "text": "问了三个人才找到这儿，都说这条街上只有你一家当铺不坑人。"
-            },
-            {
-              "speaker": "lydia",
-              "text": "你就说——这算不算夸你？"
+              "text": "这算夸你吧？"
             },
             {
               "speaker": "player",
@@ -2256,12 +2210,8 @@
             },
             {
               "speaker": "lydia",
-              "text": "我来赎那只镯子。",
+              "text": "我想赎回那只镯子，五百行吗？",
               "expr": "serious"
-            },
-            {
-              "speaker": "lydia",
-              "text": "五百。我自己的钱，不是家里的。"
             },
             {
               "speaker": "lydia",
@@ -2496,7 +2446,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "……锈的是外圈。里头亮的。",
+              "text": "……原来就外圈生了锈，里头还亮着呢。",
               "en": "...The rust's on the outer ring. The inside's bright."
             },
             {
@@ -2738,8 +2688,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "有。她记的班次，工人的名字，几笔没走完的账。",
-              "en": "Yes. Shifts she wrote down, workers' names, a few accounts left unfinished.",
+              "text": "有。工人的名字，还有几笔没结的账。",
+              "en": "Yes. The workers' names, and a few accounts still open.",
               "expr": "serious"
             }
           ]
@@ -2893,16 +2843,6 @@
               "speaker": "thug",
               "text": "牢里冷。人病倒了，谁也不会觉得奇怪。",
               "en": "It's cold in a cell. People get sick. Nobody finds it strange."
-            },
-            {
-              "speaker": "player",
-              "text": "你拿一个在押的人来压价。",
-              "en": "You're using someone locked up to push the price."
-            },
-            {
-              "speaker": "thug",
-              "text": "我这是报价。你们开当铺的最懂这个。",
-              "en": "I'm quoting a price. You pawnshop people know all about that."
             }
           ]
         },
@@ -3252,8 +3192,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "保释受理，案件待审。就为这几个字，我在治安部门口坐了一整天。",
-              "en": "Transferred to care, under review. I sat outside the Security office all day for those few words."
+              "text": "就为这张单子，我在治安部门口坐了一整天。",
+              "en": "I sat outside Security all day for that slip of paper."
             },
             {
               "speaker": "eleanor",
@@ -3903,7 +3843,7 @@
             },
             {
               "speaker": "mother",
-              "text": "配给站的批次，皮色发暗，里头是空的。",
+              "text": "配给站那批果子我认得。皮色这么暗，里头准是空的。",
               "en": "Ration station batches. Skin's dark. Hollow inside."
             },
             {
@@ -4165,7 +4105,7 @@
             },
             {
               "speaker": "lydia",
-              "text": "镯子我天天戴着。家里问起来，我就说是自己找回来的。",
+              "text": "镯子我天天戴着。",
               "en": "I wear the bracelet every day. When my family asks, I say I found it myself."
             },
             {
@@ -4206,8 +4146,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "屋子登记下来了。室友搬去了别处，母亲睡里头那张床。",
-              "en": "The room's registered now. The roommate moved somewhere else. My mother sleeps in the bed in there."
+              "text": "屋子登记下来了。母亲睡里头那张床。",
+              "en": "The room's registered now. Mother sleeps in the bed at the back."
             },
             {
               "speaker": "eleanor",
@@ -4476,7 +4416,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。"
+              "text": "可我每回都往你这儿走。你这儿也不便宜。"
             },
             {
               "speaker": "eleanor",
@@ -4631,7 +4571,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "可我每回都往你这儿走。不是因为便宜。你这儿也不便宜。"
+              "text": "可我每回都往你这儿走。你这儿也不便宜。"
             },
             {
               "speaker": "eleanor",
@@ -4870,7 +4810,7 @@
             },
             {
               "speaker": "lydia",
-              "text": "她也是个值得来往的朋友。就是嘴不饶人。",
+              "text": "换我当面夸她，她又嫌我话多。",
               "expr": "smile"
             }
           ]
@@ -5174,10 +5114,6 @@
             {
               "speaker": "eleanor",
               "text": "有事来找我，没事也可以。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "朋友不只在缺钱时才算数。"
             }
           ]
         }

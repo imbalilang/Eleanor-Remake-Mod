@@ -85,7 +85,9 @@ namespace EleanorRomance
                     else if (buyingMarkup) Discount = true;
                     else if (inspectionDiscount) Fair = true;
                     else if (paid > marketValue) Discount = true; // includes native +10% / +20% buying markup
-                    else if (marketRatio < 0.85f) Lowball = true;  // at least 15% below the displayed price
+                    // Lowball is a native bargaining action, not a price ratio:
+                    // wholesale, market variance and inspection discounts can
+                    // all pay below 85% without the player squeezing her.
                     else Fair = true;
                 }
                 else
@@ -327,6 +329,11 @@ namespace EleanorRomance
         {
             Dialogue tail = Tail(head);
             Dialogue node = tail.NextDialogue().SetText(L.Player, prompt);
+            AddChoicesOn(node, choices);
+        }
+
+        public static void AddChoicesOn(Dialogue node, params Choice[] choices)
+        {
             foreach (Choice choice in choices)
             {
                 Dialogue choiceLine = new Dialogue().SetText(L.Player, choice.Label);
@@ -524,7 +531,7 @@ namespace EleanorRomance
 
         public static bool CanPrepareProtection()
         {
-            return (SecRep() >= 30 && (RomanceState.UncleReported || RomanceState.ThreatRecorded))
+            return SecRep() >= 30
                 || (UlRep() >= 30 && RomanceState.DriveState != 0)
                 || (RomanceState.UncleReported && RomanceState.Savings >= 800);
         }
@@ -574,12 +581,17 @@ namespace EleanorRomance
             if (RomanceState.PerfumeGiven) return;
             try
             {
-                if (GiveToPlayer("self_refilling_neuroactive_perfume",
-                    item => ItemFeatureHelper.SetSecondHand(item)))
-                {
-                    RomanceState.PerfumeGiven = true;
-                    StoryDirector.Log("Self-refilling perfume granted as the endgame keepsake.");
-                }
+                var store = PlayerStore.Instance;
+                if (store == null) return;
+                // Match vanilla Eleanor9: spawn the keepsake as a second-hand
+                // item and place it directly on the counter. Inventory limits
+                // must not turn the authored ending reward into a lost item.
+                GameItem item = DirectoryMaster.Item("self_refilling_neuroactive_perfume", true);
+                if (item == null) return;
+                item = ItemFeatureHelper.SetSecondHand(item);
+                store.AddDirectSellingItemToTableMiddle(item, true);
+                RomanceState.PerfumeGiven = true;
+                StoryDirector.Log("Self-refilling perfume granted as the endgame keepsake.");
             }
             catch (Exception ex)
             {

@@ -1,0 +1,17 @@
+1.28 治安部渠道门槛与侍从线本地化修复
+
+- 治安部保护渠道改为只看治安部声望 30：保护菜单仍需 300 信用点，但不再要求此前举报假叔叔或已有威胁记录；侍从线威胁举报选项也可直接用 30 声望受理，并在完成后写入威胁记录。
+- 上层区渠道（声望 30＋数据盘＋400 信用点）与旧案渠道（曾举报假叔叔＋200 信用点）不变；条件不足仍会转入普通复查路线。
+- 修复侍从线数据盘场景及 16 个受影响块的英/日/韩文对齐：旁白动作归回独立行，后续对白逐行复位，补齐日/韩 26 个缺失键。
+- 斜体动作与后续对白之间加入换行；示例“撕下一页账纸递过来”不再和下一句台词连在一起。
+- 修正共同线 c05_n002 的旧版英/日/韩译文，补齐日文王尔德筹备提示；英文不再残留中文行。
+- 保留 1.27 Serpico 来访日顺延、1.26 文案收尾、1.25 全局修订、1.24 原生操作压价判定及更早修复；不改路线、目标日或结局。
+
+1.28 Security channel gating and maid-route localization fix
+
+- The Security protection channel now checks Security reputation 30 only: the protection menu still costs 300 credits, but no longer requires a prior fake-uncle report or threat record; the maid threat-report option can also be taken with 30 reputation and writes the threat record on completion.
+- The Upper Level channel (rep 30 + data drive + 400 credits) and the old-case channel (reported fake uncle + 200 credits) are unchanged; insufficient conditions still fall back to the normal review route.
+- Fixed English/Japanese/Korean alignment in the maid data-drive scene and 16 affected blocks: narration actions return to their own lines, later dialogue is restored line by line, and the 26 missing Japanese/Korean keys are filled.
+- Italic action lines now break before the following dialogue; "Tears off a ledger page and hands it over" no longer runs into the next line.
+- Corrected the stale English/Japanese/Korean lines in common-line c05_n002 and added the missing Japanese Wilde preparation notice; English no longer contains Chinese lines.
+- The 1.27 Serpico visit delay, 1.26 final text polish, 1.25 global revision, 1.24 native-action-only lowball rule and earlier fixes remain; no route, target-day or ending changes.

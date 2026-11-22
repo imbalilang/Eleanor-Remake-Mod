@@ -41,9 +41,7 @@ def main(root: Path) -> int:
                 if not isinstance(mainline, int) or not (1 <= mainline <= len(options)):
                     errors.append(f"{sid}/{seg.get('id')}: bad mainline {mainline}")
                 for opt in options:
-                    if opt.get("mainline"):
-                        continue
-                    if not opt.get("block") and not opt.get("result"):
+                    if not opt.get("mainline") and not opt.get("block") and not opt.get("result"):
                         errors.append(f"{sid}/{seg.get('id')}/{opt.get('id')}: no branch/result")
                     if opt.get("block") and opt["block"] not in blocks:
                         errors.append(f"{sid}/{seg.get('id')}/{opt.get('id')}: missing block {opt['block']}")

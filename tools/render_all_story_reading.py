@@ -348,14 +348,14 @@ def maid_v2_section():
                     clean = line['text'].replace('<i>','（').replace('</i>','）')
                     speak(line['speaker'], clean)
             elif seg['type'] == 'choice':
-                p('选择：' + seg['prompt'])
+                p('在上句选择' if seg.get('attach_to_previous') else '选择：' + seg['prompt'])
                 for opt in seg['options']:
                     suffix = opt['id'].split('_')[-1]
                     key = f"er_maid_v2_{scene['id']}_{seg['id'].lower()}_{suffix}"
                     note = impacts.get((scene['id'], seg['id'], suffix),
                                        '不改变成功、驻场、邀请或关系结果；只改变语气/说法。')
                     choice(key, note)
-                    if not opt.get('mainline') and opt.get('block'):
+                    if opt.get('block'):
                         p('若选「' + opt['label'] + '」：')
                         for line in scene['blocks'][opt['block']]['lines']:
                             clean = line['text'].replace('<i>','（').replace('</i>','）')

@@ -117,9 +117,42 @@ namespace EleanorRomance
         internal static bool IsA2FirstDue(int day)
         {
             if (!Conditions) return false;
-            if (LoveState.PendingVisit == 4) return true;
+            if (LoveState.PendingVisit == 4) return !SerpicoStoryVisitDue(day);
             if (LoveState.A2T1Done) return false;
             return NextVisit(day) == 4;
+        }
+
+        /// <summary>
+        /// Serpico's story visits are one-day native clients. The love water
+        /// event closes the shop and dismisses the remaining client stack, so
+        /// starting love_a2_01 on one of those days can discard Serpico's
+        /// document choice or final reward.  Delay the love visit instead of
+        /// risking the native storyline.  For the conclusion day, only a real
+        /// concluding choice (1/2/3) creates the final client.
+        /// </summary>
+        private static bool SerpicoStoryVisitDue(int day)
+        {
+            try
+            {
+                if (day == SerpicoStoryline.Serpico1Day
+                    || day == SerpicoStoryline.Serpico3Day
+                    || day == SerpicoStoryline.Serpico4Day
+                    || day == SerpicoStoryline.Serpico5Day
+                    || day == SerpicoStoryline.Serpico6Day
+                    || day == SerpicoStoryline.LetterDay
+                    || day == SerpicoStoryline.OfficerDay
+                    || day == SerpicoStoryline.DocumentDay)
+                    return true;
+                var data = PlayerStore.Instance?.storeClientData;
+                if (data == null) return false;
+                int choice = data.serpicoDocumentChoice;
+                return (choice == 1 || choice == 2 || choice == 3)
+                    && day == SerpicoStoryline.ConclusionDay;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private static int NextVisit(int day)
@@ -129,7 +162,8 @@ namespace EleanorRomance
             if (!LoveState.T1Done) return 1;
             if (!LoveState.T2Done) return 2;
             if (!LoveState.ClosingDone) return 3;
-            if (!LoveState.A2T1Done) return 4;
+            if (!LoveState.A2T1Done)
+                return SerpicoStoryVisitDue(day) ? 0 : 4;
             if (!LoveState.A2T2Done) return 5;
             if (!LoveState.A2T3Done) return 6;
             if (!LoveState.A3T1Done) return 7;

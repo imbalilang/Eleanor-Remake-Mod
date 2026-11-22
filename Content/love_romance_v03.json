@@ -54,12 +54,6 @@
               "expr": "neutral"
             },
             {
-              "speaker": "Lydia",
-              "text": "你说说，上门带盒甜的，是不是最稳妥？",
-              "en": "Tell me—when you visit, you bring food, something sweet, right?",
-              "expr": "neutral"
-            },
-            {
               "speaker": "Player",
               "text": "第三层架子上。",
               "en": "Third shelf.",
@@ -75,24 +69,6 @@
               "speaker": "SEC",
               "text": "跟我才不省。",
               "en": "He talks plenty to me.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "不省？那能多成什么样？",
-              "en": "Plenty? How much is plenty?",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "SEC",
-              "text": "<i>一扬下巴</i> 反正比你多。",
-              "en": "<i>lifts her chin</i> More than to you.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Lydia",
-              "text": "行啊，多就多。我又不会抢。",
-              "en": "Right, of course. I'm not competing.",
               "expr": "neutral"
             },
             {
@@ -127,8 +103,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "不行。<i>伸手捏住他领口又摁了一遍</i> 我弄出来的印子，旁人看几眼也白看。",
-              "en": "No. <i>presses his collar down again</i> I did it. Other people looking doesn't count.",
+              "text": "不行。<i>伸手捏住他领口，又摁了一遍</i>",
+              "en": "No. <i>She pinches his collar and smooths it down again.</i>",
               "expr": "neutral"
             },
             {
@@ -181,44 +157,32 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我那是没事干。<i>指尖卷了卷发梢</i> 也不全闲，替你高兴，总想听点下文。",
-              "en": "I was bored. <i>twirls the end of her hair</i> ...Not just bored. I'm happy for you. I want to know.",
+              "text": "要我背给你听？",
+              "en": "Want me to recite it?",
               "expr": "shy"
             },
             {
-              "speaker": "Lydia",
-              "text": "老板，你听，她说的没急。可不是我先问的。",
-              "en": "Boss, you heard that? She's not in a hurry. She said it herself.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Player",
-              "text": "听到了。",
-              "en": "I heard.",
-              "expr": "neutral"
-            },
-            {
               "speaker": "SEC",
-              "text": "<i>拽了下他的袖口，压低嗓子</i> 听见也不许记。……要记也可以。",
-              "en": "<i>tugs his sleeve, lowers her voice</i> If you heard, don't take it to heart. ...You can remember it, though.",
+              "text": "小点声。他耳朵好着呢。",
+              "en": "Keep it down. He can hear you.",
               "expr": "neutral"
             },
             {
               "speaker": "Lydia",
-              "text": "我可全看见了。行了，硬糖留给埃莉诺，软糖送她母亲。",
-              "en": "I'm watching. All right—the hard ones for Eleanor, the soft ones for her mother.",
+              "text": "好好好。硬糖给你，软糖给你母亲。",
+              "en": "All right, all right. Hard sweets for you, soft ones for your mother.",
               "expr": "smile"
             },
             {
               "speaker": "Lydia",
-              "text": "这钱是我自己的，别冲她情面少收。",
+              "text": "别冲她情面少收。",
               "en": "This is my own money. Don't give me a discount because of her.",
               "expr": "neutral"
             },
             {
               "speaker": "SEC",
               "text": "<i>把空布袋在臂上折好</i> 他本来也不会少收。",
-              "en": "He wouldn't anyway.",
+              "en": "<i>She folds the empty cloth bag over her arm.</i> He wouldn't anyway.",
               "expr": "neutral"
             },
             {
@@ -234,7 +198,8 @@
               "sprite": "eleanor1",
               "name": ""
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "la3_t1_fair",
@@ -369,19 +334,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "就“什么时候”那一句。我嘴里说不急，就是字面意思。你别当我天天盼你说话。",
-              "en": "The 'when are you two' part. I meant it—I'm not in a hurry. Don't think I'm waiting for you to speak.",
+              "text": "就那句“什么时候”。她跟谁都敢问。",
+              "en": "That “when's it happening” of hers. There's nobody she wouldn't ask.",
               "expr": "shy"
-            },
-            {
-              "speaker": "Player",
-              "text": "知道了。",
-              "en": "Mm."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "知道什么。<i>拿指甲在他手背上重重刮了一下</i>回我句长的，你会少块肉吗？",
-              "en": "Mm? <i>traces a line on the back of his hand</i> Would it cost you a piece of flesh to say two more words?"
             },
             {
               "speaker": "Player",
@@ -396,7 +351,7 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "营养果。母亲说研究公开了，下面的果子迟早能缓过来。那之前只能靠这个垫着。",
+              "text": "营养果。",
               "en": "Nutrifruit. Mother says the research is public now; the fruit down here will get better eventually. Until then, we chew this."
             },
             {
@@ -409,7 +364,8 @@
               "text": "等一下。",
               "en": "Wait."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la3_s2_post",
@@ -481,22 +437,6 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "还有，夜里我问你话，别老甩一个字回来。给我说整句。",
-              "en": "Also, at night you're not allowed to just say 'Mm.' When I ask, you say the whole thing."
-            },
-            {
-              "speaker": "Player",
-              "text": "记住了。",
-              "en": "Fine."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "又是两个字。<i>捏住他领口往这边扯</i>也行，嘴先省着，等会儿还有用。",
-              "en": "One word again. <i>hooks his collar and pulls</i> Fine. Keep your mouth. We'll do something else tonight.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
               "text": "我这就上楼告诉她。……不说了，天亮再说，让她今晚多睡几个钟头。",
               "en": "I have to go tell her. ...No, tomorrow morning. Let her sleep well tonight."
             },
@@ -515,7 +455,8 @@
               "text": "<i>把布袋口撑开</i>这还差不多。自己装。",
               "en": "<i>opens the cloth bag</i> That's more like it. Go on."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la3_s2_c1_2",
@@ -641,8 +582,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "母亲已经睡了。屋里只亮一盏小灯，她翻材料，我干坐着。",
-              "en": "Mother's asleep. One lamp in the room. She reads her papers; I watch her."
+              "text": "母亲睡下了。睡前还抱着她那摞材料。",
+              "en": "Mother's gone to bed. Still had that stack of papers in her arms when she turned in."
             },
             {
               "speaker": "Eleanor",
@@ -672,19 +613,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "就那句“什么时候”。我说不着急，是认真的。你别当我等着你给话。",
-              "en": "The 'when are you two' part. I meant it—I'm not in a hurry. Don't think I'm waiting for you to speak.",
+              "text": "就那句“什么时候”。她跟谁都敢问。",
+              "en": "That “when's it happening” of hers. There's nobody she wouldn't ask.",
               "expr": "shy"
-            },
-            {
-              "speaker": "Player",
-              "text": "好。",
-              "en": "Mm."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "好也不是单说个好吧。<i>屈起指节在他手背上一敲</i>多吐一个字能累死？",
-              "en": "Mm? <i>traces a line on the back of his hand</i> Would it cost you a piece of flesh to say two more words?"
             },
             {
               "speaker": "Player",
@@ -693,13 +624,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……没劲。我跟你倒心事，你掉头就谈营生。",
+              "text": "……没劲。我跟你倒心事，你掉头就谈生意。",
               "en": "...Absurd. I'm talking about this, and you talk business.",
               "expr": "angry"
             },
             {
               "speaker": "Eleanor",
-              "text": "营养果。研究已经交回去了，母亲说果子的事还没下文。这阵子没别的，先吃它。",
+              "text": "营养果。",
               "en": "Nutrifruit. Mother says the research went back. No further word on the fruit for now. Until then, we chew this."
             },
             {
@@ -712,7 +643,8 @@
               "text": "等一下。",
               "en": "Wait."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": [
@@ -782,19 +714,14 @@
               "en": "Mm."
             },
             {
-              "speaker": "Sophia",
-              "text": "她只说你话短，没提短成这样。",
-              "en": "She said you were spare with words. She didn't say this spare."
-            },
-            {
               "speaker": "SEC",
-              "text": "<i>伸手按住索菲娅的手腕</i>母亲，行了。",
-              "en": "Mother!"
+              "text": "<i>伸手按住索菲娅的手腕</i>母亲，单子呢？",
+              "en": "<i>She puts a hand on Sophia's wrist.</i> Mother, where's the list?"
             },
             {
               "speaker": "Sophia",
-              "text": "好好，不说了。<i>纸按到柜面上</i>办事得添东西。碗，布，凳子，屋里都差着数。",
-              "en": "All right, I'll stop. <i>puts the paper on the counter</i> We need things for the ceremony. Bowls, cloth, stools—the room doesn't have enough."
+              "text": "<i>把纸按在柜面上</i>这儿呢。碗，布，凳子，屋里都差着数。",
+              "en": "<i>She lays the sheet on the counter.</i> Here. Bowls, cloth, chairs. We're short of all three."
             },
             {
               "speaker": "Sophia",
@@ -823,11 +750,6 @@
               "en": "You pay your share."
             },
             {
-              "speaker": "Sophia",
-              "text": "行。她的归她，你的归你，账各算各的，谁也不欠谁的。",
-              "en": "Good. She pays hers, you pay yours. Keep the accounts clear. No one owes anyone."
-            },
-            {
               "speaker": "SEC",
               "text": "<i>先一步站到柜台前，回头催</i>喂，你问他啊，准备叫谁。",
               "en": "Hey, ask him who he wants to invite."
@@ -854,7 +776,8 @@
               "sprite": "eleanor1",
               "name": ""
             }
-          }
+          },
+          "cursor_revision": 2
         },
         {
           "id": "la3_s3_post_main",
@@ -906,7 +829,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "碗得厚实，落地不裂的。小孩子一天能摔八十次。",
+              "text": "碗可得经得住摔。小孩子一天能摔八十次。",
               "en": "Bowls need to be sturdy—the kind that don't break when dropped. Children drop them eight times a day."
             },
             {
@@ -1079,7 +1002,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "<i>抽回单子，对折两下</i>碗我自己寻。摔不坏的，总有铺子卖。",
+              "text": "<i>抽回单子，对折两下</i>碗我自己寻。摔不坏的，总有店铺卖。",
               "en": "<i>folds the list</i> I'll find the bowls myself. There's always somewhere that sells unbreakable ones."
             }
           ]
@@ -1141,13 +1064,13 @@
             },
             {
               "speaker": "SEC",
-              "text": "农场托人带话。那批果子的籽，出了。我本来想憋到明天。",
-              "en": "Word came from the farm. That batch of fruit—it seeded. I was going to wait until tomorrow to tell you."
+              "text": "农场来信了。那批果子结了活籽。",
+              "en": "We heard from the farm. Those fruit finally produced viable seed."
             },
             {
               "speaker": "SEC",
-              "text": "后来想想，今天讲也不耽误什么。将来下头的人，能吃带籽的果了。",
-              "en": "Then I thought, today's fine too. People down here will be able to eat fruit with seeds."
+              "text": "下面也能留种了。我把信带来了。",
+              "en": "They can save seed down here now. I've brought the letter."
             },
             {
               "speaker": "Eleanor",
@@ -1205,19 +1128,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "余下我跟你搭伙。账并着算，营养果并着吃，吃到不新鲜了，一人一句骂。",
+              "text": "剩下的我跟你搭伙。账并着算，营养果并着吃，吃到不新鲜了，一人一句骂。",
               "en": "From now on, I'm living with you. We'll count the accounts together, eat nutrifruit together, and complain together when we're sick of it.",
               "expr": "soft"
-            },
-            {
-              "speaker": "Player",
-              "text": "行。",
-              "en": "All right."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就憋出一个字？",
-              "en": "Just one word?"
             },
             {
               "speaker": "Player",
@@ -1226,8 +1139,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "这才像样。",
-              "en": "That's more like it.",
+              "text": "这句我等了。",
+              "en": "That's the one I was waiting for.",
               "expr": "smile"
             },
             {
@@ -1242,15 +1155,11 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "母亲刚刚说能亲了。……话不是她递的，算我起的头。",
-              "en": "Mother says we can kiss now. ...She didn't say it. I did."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "<i>抓住他的前襟往下一扯，踮起脚</i>低下来。今天轮到我安排。",
               "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la3_s4_small",
@@ -1279,13 +1188,13 @@
             },
             {
               "speaker": "SEC",
-              "text": "农场带口信，那批果出籽了。本打算明天再讲。",
-              "en": "Word came from the farm. That batch of fruit—it seeded. I was going to wait until tomorrow to tell you."
+              "text": "农场来信了。那批果子结了活籽。",
+              "en": "We heard from the farm. Those fruit finally produced viable seed."
             },
             {
               "speaker": "SEC",
-              "text": "再想，今天讲也一样。将来底下的人吃果不用吐籽。",
-              "en": "Then I thought, today's fine too. People down here will be able to eat fruit with seeds."
+              "text": "下面也能留种了。我把信带来了。",
+              "en": "They can save seed down here now. I've brought the letter."
             },
             {
               "speaker": "Eleanor",
@@ -1348,19 +1257,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "余下吃饭、算钱、吃营养果，都算你一份。果子难吃，再一起骂。",
+              "text": "剩下的吃饭、算钱、吃营养果，都算你一份。果子难吃，再一起骂。",
               "en": "From now on, I'm living with you. We'll count the accounts together, eat nutrifruit together, and complain together when we're sick of it.",
               "expr": "soft"
-            },
-            {
-              "speaker": "Player",
-              "text": "好。",
-              "en": "All right."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "又只给我一个字？",
-              "en": "Just one word?"
             },
             {
               "speaker": "Player",
@@ -1385,15 +1284,11 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "母亲刚说可以亲。……她哪说过？我抢的。",
-              "en": "Mother says we can kiss now. ...She didn't say it. I did."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "<i>扯住他领口，踮起脚</i>头低点。今天你归我管。",
               "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la3_s4_e1",
@@ -1422,23 +1317,7 @@
             },
             {
               "speaker": "SEC",
-              "text": "农场传话过来。研究交回去了，果子那头还没回音。原想等明天再说。",
-              "en": "Word came from the farm. The research went back. Nothing more on the fruit for now. I was going to wait until tomorrow to tell you."
-            },
-            {
-              "speaker": "SEC",
-              "text": "再想想，今天说也不耽误。余后的事，回头再看。",
-              "en": "Then I thought, today's fine too. What comes later can wait."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……你今天非得把工作摆出来？",
-              "en": "...Can you not talk about work today?",
-              "expr": "soft"
-            },
-            {
-              "speaker": "SEC",
-              "text": "最后一句。<i>后退半步</i>她有什么话，让她自己说。过去吧。",
+              "text": "<i>后退半步</i>好了。过去吧。",
               "en": "Last sentence. <i>steps back</i> Whatever she wants to say, let her say it. Go on."
             },
             {
@@ -1486,19 +1365,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "余下我跟你搭着过。一本账，一筐营养果，烂了也一起骂。",
+              "text": "剩下的我跟你搭着过。一本账，一筐营养果，烂了也一起骂。",
               "en": "From now on, I'm living with you. We'll count the accounts together, eat nutrifruit together, and complain together when we're sick of it.",
               "expr": "soft"
-            },
-            {
-              "speaker": "Player",
-              "text": "成。",
-              "en": "All right."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就一个“成”字？",
-              "en": "Just one word?"
             },
             {
               "speaker": "Player",
@@ -1523,15 +1392,11 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "母亲刚才说，能亲了。……她没提这句，我加上的。",
-              "en": "Mother says we can kiss now. ...She didn't say it. I did."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "<i>拽过他一侧袖口，踮起脚</i>低点。今天听我调。",
               "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
             }
-          ]
+          ],
+          "cursor_revision": 2
         },
         {
           "id": "la3_s4_small_e1",
@@ -1557,22 +1422,6 @@
               "speaker": "SEC",
               "text": "起太早。",
               "en": "I got up early."
-            },
-            {
-              "speaker": "SEC",
-              "text": "农场托人递话。研究交了，果子那边还悬着。我本来想明天再提。",
-              "en": "Word came from the farm. The research went back. Nothing more on the fruit for now. I was going to wait until tomorrow to tell you."
-            },
-            {
-              "speaker": "SEC",
-              "text": "再想，今天说也不多。余下那些，走一步看一步。",
-              "en": "Then I thought, today's fine too. What comes later can wait."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……你非得今天念这套？",
-              "en": "...Can you not talk about work today?",
-              "expr": "soft"
             },
             {
               "speaker": "SEC",
@@ -1629,19 +1478,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "余下吃饭、算账、吃营养果，我身边都算上你。难吃也一起受着。",
+              "text": "剩下的吃饭、算账、吃营养果，我身边都算上你。难吃也一起受着。",
               "en": "From now on, I'm living with you. We'll count the accounts together, eat nutrifruit together, and complain together when we're sick of it.",
               "expr": "soft"
-            },
-            {
-              "speaker": "Player",
-              "text": "行。",
-              "en": "All right."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "一句“行”就完了？",
-              "en": "Just one word?"
             },
             {
               "speaker": "Player",
@@ -1666,15 +1505,11 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "母亲说现在能亲。……她没开口，是我点的头。",
-              "en": "Mother says we can kiss now. ...She didn't say it. I did."
-            },
-            {
-              "speaker": "Eleanor",
               "text": "<i>攀住他一边胳膊踮起脚</i>头放低点。今天换我安排你。",
               "en": "<i>grabs his collar and rises on her toes</i> Lower. Today you listen to me."
             }
-          ]
+          ],
+          "cursor_revision": 2
         }
       ],
       "choices": []

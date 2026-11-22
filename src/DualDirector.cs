@@ -42,7 +42,13 @@ namespace EleanorRomance
             string id = NextScene(day);
             bool sameDayFollowUp = SameDayFollowUpDue(day);
             if (RomanceState.LastQueuedDay == day && !sameDayFollowUp) return false;
-            if (id == "d06") return false;
+            if (id == "d06" || id == "dv10")
+            {
+                // The paid closure is normally staged by the shutter-open hook.
+                // Retry from the daily pass as well, so a missed hook or an
+                // alternate open path cannot strand the route with no visits.
+                return DualClosingDay.OnShutterOpened();
+            }
             if (string.IsNullOrEmpty(id) && DualState.Active && DualState.Flag("d.route"))
             {
                 if (DualRewards.DueRewrittenReward(day) > 0) id = "reward";
@@ -86,6 +92,7 @@ namespace EleanorRomance
             if (!DualState.Active || !DualState.Flag("d.route") || !RouteStoryFinished || DualState.CoreCommitted) return;
             DualState.CoreTakenOver = true;
             DualState.CoreCommitted = true;
+            StoryEngine.GiveSelfRefillingPerfume();
             StoryDirector.CompleteCore();
             DualState.LastDailyDay = DualState.SceneDay(FinalStoryScene);
         }
