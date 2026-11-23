@@ -22,8 +22,16 @@ def _add_story(exprs, data):
                     exprs[key] = expr
 
 
+SHARED_MAID_BLOCKS = {
+    "m11_b001", "m11_b002", "m11_b003", "m11_b004",
+    "m23_b006", "world_b003",
+}
+
+
 def _add_maid(exprs, data):
     for block in data.get("blocks", []):
+        if block["id"] not in SHARED_MAID_BLOCKS:
+            continue
         for index, line in enumerate(block.get("lines", []), 1):
             expr = line.get("expr")
             if expr:
@@ -57,14 +65,6 @@ def _add_dual(exprs, data):
                     exprs[f"er_dual_{block['id']}_{index:02d}"] = expr
 
 
-def _add_revolution(exprs, data):
-    for block in data.get("blocks", []):
-        for index, line in enumerate(block.get("lines", []), 1):
-            expr = line.get("expr")
-            if expr:
-                exprs[f"er_rev_{block['id']}_{index:02d}"] = expr
-
-
 def _add_love(exprs, data):
     for scene in data.get("scenes", []):
         for block in scene.get("blocks", []):
@@ -78,10 +78,9 @@ def build(root):
     root = Path(root)
     exprs = {}
     for name, fn in (("story_v06.json", _add_story), ("maid_v05.json", _add_maid),
-                     ("interaction_v1.json", _add_maid), ("relationship_choices_v1.json", _add_maid),
                      ("maid_v2.json", _add_maid_v2),
                      ("revolution_v2.json", _add_revolution_v2),
-                     ("dual_romance_v04.json", _add_dual), ("revolution_v1.json", _add_revolution),
+                     ("dual_romance_v04.json", _add_dual),
                      ("love_romance_v01.json", _add_love), ("love_romance_v02.json", _add_love),
                      ("love_romance_v03.json", _add_love)):
         path = root / "Content" / name

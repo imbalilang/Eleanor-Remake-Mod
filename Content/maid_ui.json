@@ -331,38 +331,6 @@
     "明确退出调查并结束侍从约定，盘归还给她，后续归来项目关闭；既付支持照常交付，不退款，不撤销已有救母成果。",
     "Explicitly leave the investigation and end the attendant agreement. Return the drive and close future return projects. Paid support is delivered; no refund or reversal of existing rescue results."
   ],
-  "er_maid_legacy_help": [
-    "那天的话，我收回。换个说法：等查清楚了，我帮你。",
-    "I take back what I said that day. Let me put it another way: once the truth is clear, I'll help you."
-  ],
-  "er_maid_legacy_help_desc": [
-    "不扣款；谈完条件后可在最终确认时退回普通关系。",
-    "No charge. After the terms, you may still return to the ordinary relationship at the final confirmation."
-  ],
-  "er_maid_legacy_retract": [
-    "那天是我说错了。调查的事你自己安排，需要帮忙就来。",
-    "I was wrong that day. Arrange the investigation yourself. Come to me if you need anything."
-  ],
-  "er_maid_legacy_retract_desc": [
-    "不扣款；回到原有关系发展，数据盘及后续事件照常。",
-    "No charge. The original relationship continues, and the drive and later events proceed as before."
-  ],
-  "er_maid_legacy_confirm": [
-    "就这么定了。",
-    "Then it's settled."
-  ],
-  "er_maid_legacy_confirm_desc": [
-    "不扣款。旧约八百记为豁免，约定成立。",
-    "No charge. The old 800 is recorded as waived, and the agreement is made."
-  ],
-  "er_maid_legacy_back": [
-    "还是算了。你按自己的安排去查。",
-    "Let's leave it. Follow your own investigation plan."
-  ],
-  "er_maid_legacy_back_desc": [
-    "不扣款；回到原有关系发展。",
-    "No charge. Return to the original relationship."
-  ],
   "er_maid_notice_project_open": [
     "王尔德那里多了一项筹备：{0}。",
     "There's a new preparation at Wilde's: {0}."

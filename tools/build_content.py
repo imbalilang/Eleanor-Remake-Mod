@@ -197,7 +197,6 @@ def main() -> int:
     from build_maid_content import build as build_maid
     from build_maid_v2_content import build as build_maid_v2
     from build_dual_content import build as build_dual
-    from build_revolution_content import build as build_revolution
     from build_revolution_v2_content import build as build_revolution_v2
     from build_love_content import build as build_love
     maid_zh, maid_en = build_maid(root)
@@ -209,9 +208,6 @@ def main() -> int:
     dual_zh, dual_en = build_dual(root)
     all_zh.update(dual_zh)
     all_en.update(dual_en)
-    revolution_zh, revolution_en = build_revolution(root)
-    all_zh.update(revolution_zh)
-    all_en.update(revolution_en)
     revolution_v2_zh, revolution_v2_en = build_revolution_v2(root)
     all_zh.update(revolution_v2_zh)
     all_en.update(revolution_v2_en)

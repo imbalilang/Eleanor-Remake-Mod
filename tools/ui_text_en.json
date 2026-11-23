@@ -271,5 +271,10 @@
   "er_maid_v2_gap_desc": "Requires enough cash for the current shortfall. Only the actual remainder is lent after a sale; no sale means no loan.",
   "er_name_rev_quartermaster": "Revolutionary Quartermaster",
   "er_name_rev_fighter": "Revolutionary Fighter",
-  "er_name_rev_guerrilla": "Revolutionary Guerrilla"
+  "er_name_rev_guerrilla": "Revolutionary Guerrilla",
+  "er_ending_rev_v2_title": "Her Cup",
+  "er_ending_rev_v2_01": "A few days later, before dawn, two knocks came at the shutter.",
+  "er_ending_rev_v2_02": "You drew back the bolt. Eleanor set two energy bars on the sill.",
+  "er_ending_rev_v2_03": "She pushed one across to you, sat in her chair and unwrapped the other.",
+  "er_ending_rev_v2_04": "“Where's my cup? These things are dry.”"
 }

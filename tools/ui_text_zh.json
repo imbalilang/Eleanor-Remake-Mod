@@ -271,5 +271,10 @@
   "er_maid_v2_gap_desc": "需要持有足够现金覆盖当前缺口；成交后仅扣实际差额，未成交不扣款。",
   "er_name_rev_quartermaster": "革命军军需官",
   "er_name_rev_fighter": "革命军战士",
-  "er_name_rev_guerrilla": "革命军游击队"
+  "er_name_rev_guerrilla": "革命军游击队",
+  "er_ending_rev_v2_title": "她的杯子",
+  "er_ending_rev_v2_01": "过了几天，天还没亮，窗板响了两下。",
+  "er_ending_rev_v2_02": "你挪开门闩。埃莉诺把两根能量棒搁在窗台上。",
+  "er_ending_rev_v2_03": "她把一根推给你，自己坐上那把椅子，拆另一根的包装。",
+  "er_ending_rev_v2_04": "“杯子呢？吃这个干得很。”"
 }

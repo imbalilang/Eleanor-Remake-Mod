@@ -40,6 +40,10 @@
       <HintPath>..\Probably Stolen_Data\Managed\Unity.TextMeshPro.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>..\Probably Stolen_Data\Managed\Unity.Localization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>..\Probably Stolen_Data\Managed\UnityEngine.UI.dll</HintPath>
       <Private>false</Private>

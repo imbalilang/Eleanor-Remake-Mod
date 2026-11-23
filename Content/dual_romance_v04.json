@@ -6226,21 +6226,6 @@
       "id": "v05_checkpoints",
       "blocks": [
         {
-          "id": "v05_legacy_entry",
-          "lines": [
-            {
-              "speaker": "Lydia",
-              "text": "你们两个的事，我听她说过了，不是来让你重说一遍的。",
-              "en": "I've heard about you two from her. I'm not here to make you repeat it."
-            },
-            {
-              "speaker": "Lydia",
-              "text": "有件事，我想亲口问你。",
-              "en": "But there's one thing I want to ask you myself."
-            }
-          ]
-        },
-        {
           "id": "v05_reward50",
           "lines": [
             {

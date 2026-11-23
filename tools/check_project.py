@@ -77,17 +77,13 @@ def main() -> int:
         errors.append("Missing en code keys: " + ", ".join(missing_en_code[:20]))
     maid_path=os.path.join(ROOT,'Content','maid_v05.json')
     if os.path.exists(maid_path):
+        shared={'m11_b001','m11_b002','m11_b003','m11_b004','m23_b006','world_b003'}
         maid=json.load(open(maid_path,encoding='utf-8'))
-        interaction={'blocks':[]}
-        for extra_name in ['interaction_v1.json','relationship_choices_v1.json']:
-            interaction_path=os.path.join(ROOT,'Content',extra_name)
-            if os.path.exists(interaction_path):interaction['blocks'].extend(json.load(open(interaction_path,encoding='utf-8'))['blocks'])
-        maid['blocks'].extend(interaction['blocks'])
+        maid['blocks']=[b for b in maid['blocks'] if b['id'] in shared]
         blocks={b['id']:b for b in maid['blocks']}
         translations={}
         for path in glob.glob(os.path.join(ROOT,'Content','maid_v05_en_part*.json')):
             translations.update(json.load(open(path,encoding='utf-8')))
-        translations.update({b['id']:[line['en'] for line in b['lines']] for b in interaction['blocks']})
         for bid,b in blocks.items():
             if len(translations.get(bid,[]))!=len(b['lines']):errors.append('Maid translation mismatch: '+bid)
             for i,line in enumerate(b['lines'],1):
@@ -204,51 +200,6 @@ def main() -> int:
                 errors.append('Stale love UI: ' + k)
         print(f"love blocks: {len(love_blocks)}, choices: {len(love_choices)} (source/generated/bilingual checked)")
 
-    # Revolution route source, generated table and UI.
-    rev_path = os.path.join(ROOT, 'Content', 'revolution_v1.json')
-    if os.path.exists(rev_path):
-        rev = json.load(open(rev_path, encoding='utf-8'))
-        rev_blocks = {}
-        speaker_set = {'eleanor', 'player', 'news'}
-        terminus = []
-        for b in rev['blocks']:
-            if b['id'] in rev_blocks:
-                errors.append('Duplicate revolution block: ' + b['id'])
-            rev_blocks[b['id']] = b
-            for i, line in enumerate(b.get('lines', []), 1):
-                key = f"er_rev_{b['id']}_{i:02d}"
-                if line.get('speaker') not in speaker_set:
-                    errors.append('Unknown revolution speaker: ' + key)
-                if not line.get('text') or not line.get('en'):
-                    errors.append('Incomplete revolution translation: ' + key)
-                    continue
-                if zh.get(key) != line['text'] or en.get(key) != line['en']:
-                    errors.append('Stale revolution generation: ' + key)
-                if re.search(r'[\u4e00-\u9fff]', line['en']):
-                    errors.append('Untranslated revolution English: ' + key)
-                if '我想见你' in line['text']:
-                    terminus.append((b['id'], i))
-        if terminus != [('rv14_b004', 1)]:
-            errors.append('“我想见你” must appear once in rv14_b004 only; found ' + repr(terminus))
-        revgen_path = os.path.join(ROOT, 'src', 'RevolutionContent.g.cs')
-        revgen = open(revgen_path, encoding='utf-8').read() if os.path.exists(revgen_path) else ''
-        generated = set(re.findall(r'\{"([^"\n]+)",new\[\]', revgen))
-        if generated != set(rev_blocks):
-            errors.append('Revolution generated block set differs from source')
-        for const in re.findall(r'RevolutionContent\.(B_[A-Z0-9_]+)', source):
-            if const not in revgen:
-                errors.append('Unknown revolution block constant used: ' + const)
-        revui_path = os.path.join(ROOT, 'Content', 'revolution_ui.json')
-        revui = json.load(open(revui_path, encoding='utf-8')) if os.path.exists(revui_path) else {}
-        for key, pair in revui.items():
-            if len(pair) != 2 or not all(pair):
-                errors.append('Incomplete revolution UI translation: ' + key)
-                continue
-            if zh.get(key) != pair[0] or en.get(key) != pair[1]:
-                errors.append('Stale revolution UI: ' + key)
-            if set(re.findall(r'\{\d+\}', pair[0])) != set(re.findall(r'\{\d+\}', pair[1])):
-                errors.append('Revolution placeholder mismatch: ' + key)
-        print(f"revolution blocks: {len(rev_blocks)}, UI: {len(revui)} (source/generated/bilingual checked)")
     print(f"zh keys: {len(zh)}")
     print(f"en keys: {len(en)} (missing {len(missing_en_content)} content keys, {len(missing_en_code)} code keys)")
     print(f"content blocks: {len(content_blocks)}")

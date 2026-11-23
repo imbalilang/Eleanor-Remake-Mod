@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.32</ModVersion>
-  <Description>1.32 changes Lydia's paid closure date to the native Lou-style morning visit: the date is queued at the front while the game generates the morning customers, with no shutter-button patch or extra automatic-call workaround; presentation follows the normal opening flow. Stale closure state is cleared on load and re-queued the next morning. The 1.31 Korean proofreading merge, 1.30 harem v2 perfume coverage, 1.29 closure-date/reward/barter fixes, 1.28 Security channel and maid localization, 1.27 Serpico delay and earlier fixes remain. Story routes, outcomes, target days and endings are unchanged. 1.32 将莉迪亚付费闭店约会改为原版卢式晨间特殊来访：在游戏生成早晨顾客时直接插到队首，不再使用卷帘按钮补丁或额外自动叫号，展示交给正常开门流程；过期闭店状态会在读档时清理并在次晨重新排队。保留 1.31 韩语校对、1.30 后宫 v2 香水覆盖、1.29 闭店约会/奖励/警告礼修复、1.28 治安部渠道与侍从线本地化、1.27 Serpico 顺延及更早修复。不改路线、选项结果、目标日或结局。简体中文 / English / 日本語 / 한국어。</Description>
+  <ModVersion>1.34</ModVersion>
+  <Description>1.34 fixes the chapter 5 fake-uncle warning scene dismissing the same customer twice: the native OnDismiss callback called DismissCurrentClient again, which leaked one next-customer animation lock and left the bell showing “cannot call the next customer” even after the counter was empty. Every warning branch now commits once, and saves with a stuck lock recover when loaded or when the shop opens the next morning. This release also includes 1.33's current-language CG/ending-page fonts, portrait-manager compatibility and retired old-save content cleanup. Routes, outcomes, target days, schedules and endings are unchanged. 1.34 修复第 5 章假叔叔警告场景重复让同一顾客离场的问题：原版 OnDismiss 回调里再次调用 DismissCurrentClient，导致下一次叫号的动画锁多计一次，柜台已无人却永久显示“现在无法呼叫下一位顾客”。所有警告分支现在只提交一次，残留锁会在读档或次晨开店时恢复。本版同时包含 1.33 的游戏当前语言 CG/结局页字体、立绘管理器兼容与旧档内容清理。不改路线、选项结果、目标日、排期或结局。简体中文 / English / 日本語 / 한국어。</Description>
   <!-- Empty on purpose: the mod does not gate on the game version string,
        and a listed version that does not cover the running build is shown as
        a red warning in the mod menu. -->

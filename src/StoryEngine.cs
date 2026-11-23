@@ -271,14 +271,7 @@ namespace EleanorRomance
 
         private static StoryLine[] GetContentBlock(string blockId)
         {
-            StoryLine[] lines = StoryV06Content.Get(blockId);
-            if (lines != null) return lines;
-
-            return Array.ConvertAll(RevolutionContent.Get(blockId) ?? Array.Empty<RevolutionContent.Line>(),
-                line => new StoryLine(
-                    line.Speaker == "player" ? StorySpeaker.Player
-                        : line.Speaker == "news" ? StorySpeaker.News : StorySpeaker.Eleanor,
-                    line.Key));
+            return StoryV06Content.Get(blockId);
         }
 
         private static Dialogue ContentLine(StoryLine line, StorySpeaker? backup = null)

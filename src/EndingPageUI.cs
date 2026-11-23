@@ -1,6 +1,9 @@
 using System;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace EleanorRomance
@@ -177,7 +180,7 @@ namespace EleanorRomance
                 panelRect.offsetMin = Vector2.zero;
                 panelRect.offsetMax = Vector2.zero;
 
-                TMP_FontAsset font = FindFont();
+                TMP_FontAsset font = ResolvePageFont();
                 TextMeshProUGUI title = NewText(panel.transform, "title", L.Get(page.TitleKey), font,
                     34, TextAlignmentOptions.Center, new Color(1f, 0.85f, 0.55f));
                 RectTransform titleRect = title.rectTransform;
@@ -244,22 +247,35 @@ namespace EleanorRomance
             }
         }
 
-        private static TMP_FontAsset FindFont()
+        /// <summary>
+        /// Page text follows the game's current language.  TMP's has-glyph
+        /// probing used to pick a Chinese font for every locale and left
+        /// missing-glyph boxes in English/Japanese/Korean.
+        /// </summary>
+        private static TMP_FontAsset ResolvePageFont()
         {
-            TMP_FontAsset font = TMP_Settings.defaultFontAsset;
-            if (font != null && font.HasCharacter('埃')) return font;
-            TMP_FontAsset[] fonts = Resources.FindObjectsOfTypeAll<TMP_FontAsset>();
-            if (fonts != null)
+            try
             {
-                foreach (TMP_FontAsset candidate in fonts)
-                    if (candidate != null && candidate.HasCharacter('埃')) return candidate;
-                if (font == null && fonts.Length > 0) font = fonts[0];
+                TMP_FontAsset localized = TryLocaleFont();
+                if (localized != null) return localized;
             }
-            if (font != null) return font;
-            TMP_Text[] texts = Resources.FindObjectsOfTypeAll<TMP_Text>();
-            foreach (TMP_Text text in texts)
-                if (text != null && text.font != null) return text.font;
-            return null;
+            catch (Exception ex)
+            {
+                ModEntry.Log("Locale font unavailable; using TMP default: " + ex.GetType().Name);
+            }
+            return TMP_Settings.defaultFontAsset;
+        }
+
+        // Kept out of line so a game build without the localization package
+        // fails here and falls back instead of failing the whole page.
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static TMP_FontAsset TryLocaleFont()
+        {
+            FontLoader loader = FontLoader.Instance;
+            if (loader == null) return null;
+            Locale locale = LocalizationSettings.SelectedLocale;
+            if (locale == null) return null;
+            return loader.GetFontByRole(FontLoader.FontRole.Noto_Sans, locale);
         }
 
         private static Image NewImage(Transform parent, string name, Color color)

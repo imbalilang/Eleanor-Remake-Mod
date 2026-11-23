@@ -673,6 +673,19 @@ namespace EleanorRomance
             return own.Sprites.TryGetValue(key + "_female", out sprite) && sprite != null;
         }
 
+        private static bool HasAnyLoadedModSprite(string key)
+        {
+            if (string.IsNullOrEmpty(key) || ModLoader.Mods == null) return false;
+            foreach (LoadedMod mod in ModLoader.Mods)
+            {
+                if (mod == null || !mod.IsEnabled) continue;
+                if (mod.Sprites != null && mod.Sprites.ContainsKey(key)) return true;
+                if (mod.PaperSprites != null && mod.PaperSprites.ContainsKey(key)) return true;
+                if (mod.Textures != null && mod.Textures.ContainsKey(key)) return true;
+            }
+            return false;
+        }
+
         private static LoadedMod FindOurMod()
         {
             try
@@ -769,8 +782,11 @@ namespace EleanorRomance
                 client.spriteName = ResolveLydia();
             }
             else if (client.spriteName.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)
-                && !HasBundledSprite(client.spriteName))
+                && !HasBundledSprite(client.spriteName)
+                && !HasAnyLoadedModSprite(client.spriteName))
             {
+                // Another portrait mod may own this cp_portrait_* key; keep the
+                // player's chosen art instead of reverting it to a native key.
                 client.spriteName = RevertKey(client.spriteName);
             }
         }

@@ -39,6 +39,7 @@ namespace EleanorRomance
             }
 
             RomanceState.InitializeForSave();
+            RecoverStuckBellLock();
             PortraitCompat.SanitizeLoadedClients();
             // The vanilla keepsake is part of the ending, not a separate claim.
             // Old saves that deferred it receive it as soon as the save loads.
@@ -81,6 +82,7 @@ namespace EleanorRomance
             try
             {
                 if (RomanceState.IncompatibleSave || RomanceState.PredatesStoryRewrite) return;
+                RecoverStuckBellLock();
 
                 LoveDirector.EnsureA2FirstLast(manager);
                 LoveWaterShortage.Ensure(StoreStation.Instance?.storeEventManager);
@@ -172,6 +174,23 @@ namespace EleanorRomance
             {
                 LogError("Queueing failed: " + ex);
             }
+        }
+
+        /// <summary>
+        /// The native bell lock counts customer arrive/leave animations.  A
+        /// save taken while that count is up restores it with no animation left
+        /// to lower it, and an interrupted leave can leave it up across a day
+        /// change.  With no client on screen there is nothing to protect, so
+        /// clear the stale counter; a present client keeps its normal path.
+        /// </summary>
+        private static void RecoverStuckBellLock()
+        {
+            PlayerStore store = PlayerStore.Instance;
+            if (store == null || !RomanceState.StoryActive) return;
+            if (store.currentClientInstance != null || store.lockNextBellFlag <= 0) return;
+            int previous = store.lockNextBellFlag;
+            store.lockNextBellFlag = 0;
+            Log("Recovered stuck bell lock (" + previous + ") with no current client.");
         }
 
         /// <summary>

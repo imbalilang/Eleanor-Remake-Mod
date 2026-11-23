@@ -480,11 +480,19 @@ namespace EleanorRomance
                     ? StoryV06Content.B_C04_N008
                     : StoryV06Content.B_C04_B009;
                 bool resolved = false;
-                Action finishGift = () =>
+                // Commit chapter state once.  This must not dismiss: native
+                // DismissCurrentClient invokes OnDismiss while the client is
+                // still current, so a second Dismiss here would run the leave
+                // sequence twice and leak one lockNextBellFlag.
+                Action commitGift = () =>
                 {
                     if (resolved) return;
                     resolved = true;
                     Advance(5, 6);
+                };
+                Action finishGift = () =>
+                {
+                    commitGift();
                     StoryEngine.Dismiss();
                 };
                 Dialogue departure = StoryEngine.Build(departureBlock);
@@ -493,9 +501,8 @@ namespace EleanorRomance
                 departure.SetStartAction(() => RomanceState.WarningGiftGiven = true);
                 StoryEngine.Tail(departure).SetEndAction(finishGift);
                 client.acceptDealDialogue = departure;
-                // Dismiss/decline from the native offer UI still advances the
-                // chapter, just without the gift.
-                client.OnDismiss = finishGift;
+                // Native is already dismissing here; only commit the chapter.
+                client.OnDismiss = commitGift;
                 StoreClient nativeWarned = StoreClientUniqueList.EleanorWarned();
                 client.SetBarterOffer(nativeWarned.barterOffer);
                 StoryEngine.Tail(tell).SetEndAction(() =>
