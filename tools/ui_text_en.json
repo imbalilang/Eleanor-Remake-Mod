@@ -31,6 +31,7 @@
   "er_notice_gift_pending": "There is no room for the gift. Make space and collect it when Eleanor visits again.",
   "er_notice_version": "The game version does not match the mod target (0.46D). Story patches are disabled.",
   "er_notice_save_schema": "This save uses Eleanor story data version {0}. This mod requires version {1}. Her story is paused and your progress is preserved.",
+  "er_notice_save_before_rewrite": "This save predates the Eleanor story rewrite. The mod story is paused and your progress is preserved. Load a save started after the rewrite or start a new game to play the current story.",
   "er_notice_old_save": "This save has already progressed vanilla Eleanor's story. To protect it, the mod will not take over automatically. On the first shop day, an 'old file' will ask whether you want to reset her line.",
   "er_notice_keep_vanilla": "Vanilla Eleanor storyline kept. The remake will not be enabled in this save.",
   "er_notice_reset_arm": "Click again to confirm the reset. This will clear vanilla and mod Eleanor story progress.",

@@ -4,7 +4,7 @@ $locations=[AfterhourLocation]::GetAll()
 $savedLocations=@($locations)
 try {
     $locations.Clear();$locations.Add(($savedLocations | Where-Object Id -eq 'dumping_ground'))
-    New-MaidRun
+    Reset-Run
     $store.startingPerks=[System.Collections.Generic.List[StartingPerk]]::new()
     $store.healthData=[HealthData]::new()
     $store.afterhourState=[System.Collections.Generic.Dictionary[string,AfterhourLocationState]]::new()

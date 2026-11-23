@@ -1,19 +1,12 @@
-using System;
-using HarmonyLib;
 namespace EleanorRomance
 {
     /// <summary>The paid closure begins at the first free morning shutter opening.</summary>
     internal static class DualClosingDay
     {
-        private const string Scene = "d06"; // legacy route; v2 uses dv10
-        private const string SleepDay = "closure.sleep_day";
+        internal const string Scene = "dv10";
+        private const string ClientId = "er_story_dual_dv10";
         private const string Paid = "closure.paid";
-        private const string OldClientId = "er_story_dual_d06";
-        private const string V2ClientId = "er_story_dual_dv10";
-        private static object sleepTicket;
         internal static bool Enabled { private get; set; }
-
-        private static string ClosingScene => DualDirector.UsesV2 ? "dv10" : Scene;
 
         internal static void PayOnce()
         {
@@ -22,24 +15,21 @@ namespace EleanorRomance
             DualState.Flag(Paid, true);
         }
 
-        internal static void Reset() => sleepTicket = null;
-
         internal static bool IsVisit(StoreClient client)
             => client != null
-                && (client.identifier == OldClientId || client.identifier == V2ClientId)
+                && client.identifier == ClientId
                 && VanillaEleanorBridge.IsOurClient(client);
 
         internal static void OnLoaded()
         {
-            Reset();
-            if (!DualState.Active || !DualState.Flag("d.route")) return;
-            if (DualState.Done("d05") || DualState.Done("dv10")) PayOnce();
+            if (!DualState.Active) return;
+            if (DualState.Done(Scene)) PayOnce();
             var store = PlayerStore.Instance;
             // A closure date serialized in the current-client slot can block
             // every later visitor when its arrival/dialog never resumes. The
             // date is short and replayable; discard the stale presentation so
             // the next shutter opening can queue it again.
-            if (store != null && DualState.PendingId == ClosingScene
+            if (store != null && DualState.PendingId == Scene
                 && IsVisit(store.currentClientInstance?.GetClientBlueprint()))
             {
                 store.currentClientInstance = null;
@@ -54,14 +44,8 @@ namespace EleanorRomance
                 DualState.PendingId = "";
                 DualState.PendingScene = 0;
                 DualState.NextSceneDay = -1;
-                ModEntry.Log("Discarded stale dual closure client on load: " + ClosingScene);
+                ModEntry.Log("Discarded stale dual closure client on load: " + Scene);
             }
-            // Legacy d06 intentionally slept through the whole day.  The v2
-            // date must return the evening even if an old save still carries a
-            // sleep marker from a previously installed build.
-            if (!DualDirector.UsesV2 && DualState.Int(SleepDay, -1) == DualState.Today
-                && store?.storeState == PlayerStore.StoreState.CLOSED)
-                ScheduleSleep(store, DualState.Today);
         }
 
         /// <summary>
@@ -74,14 +58,13 @@ namespace EleanorRomance
         {
             var store = PlayerStore.Instance;
             if (!Enabled || !VersionGate.IsSupported || store == null
-                || !DualState.Active || !DualState.Flag("d.route")) return false;
+                || !DualState.Active) return false;
             if (manager?.clientStack == null) return false;
             int day = DualState.Today;
-            string scene = ClosingScene;
-            if (DualDirector.NextScene(day) != scene) return false;
+            if (DualDirector.NextScene(day) != Scene) return false;
             if (store.currentClientInstance != null || store.isClientBeingArrested || store.isHandlingShootout) return false;
             bool already = manager.clientStack.Exists(IsVisit);
-            if (DualState.PendingId == scene && already)
+            if (DualState.PendingId == Scene && already)
             {
                 DualState.NextSceneDay = day;
                 RomanceState.LastQueuedDay = day;
@@ -89,33 +72,17 @@ namespace EleanorRomance
             }
             // Drop an old closure entry before rebuilding today's front slot.
             manager.clientStack.RemoveAll(IsVisit);
-            var client = DualStory.CreateScene(scene);
+            var client = DualStory.CreateScene(Scene);
             if (client == null) return false;
             ModHelper.SetClientSource(client, ModConstants.ModId);
             manager.AddNextClient(client);
             if (!manager.clientStack.Contains(client)) return false;
-            DualState.PendingId = scene;
-            DualState.PendingScene = DualDirector.SceneNumber(scene);
+            DualState.PendingId = Scene;
+            DualState.PendingScene = DualDirector.SceneNumber(Scene);
             DualState.NextSceneDay = day;
             RomanceState.LastQueuedDay = day;
-            ModEntry.Log("Dual closing day queued at morning generation: " + scene + " on day " + day);
+            ModEntry.Log("Dual closing day queued at morning generation: " + Scene + " on day " + day);
             return true;
-        }
-
-        internal static void Finish()
-        {
-            var store = PlayerStore.Instance;
-            if (!IsVisit(store?.currentClientInstance?.GetClientBlueprint())
-                || store.storeState != PlayerStore.StoreState.OPEN || DualState.Done(Scene)) return;
-            int day = DualState.Today;
-            PayOnce();
-            DualDirector.CompleteScene(Scene);
-            DualState.SetInt(SleepDay, day);
-            // No normal business remains today. Preserve the game's close, nightly
-            // costs, inventory cycle, autosave and blackout into the next morning.
-            store.DismissCurrentClient(callNextWhenPossible: false, interruptDialog: false);
-            StoreShutterButton.Instance.EndAndClose();
-            ScheduleSleep(store, day);
         }
 
         /// <summary>
@@ -124,13 +91,13 @@ namespace EleanorRomance
         /// player to the normal evening/after-hours state.  The date must not
         /// sleep the player into the next morning.
         /// </summary>
-        internal static void FinishV2()
+        internal static void Finish()
         {
-            if (!DualState.Flag("d.route") || DualState.Done("dv10")) return;
+            if (!DualState.Active || DualState.Done(Scene)) return;
             var store = PlayerStore.Instance;
             int day = DualState.Today;
             PayOnce();
-            DualDirector.CompleteScene("dv10", () => DualState.Flag("d.act3", true));
+            DualDirector.CompleteScene(Scene, () => DualState.Flag("d.act3", true));
             if (store == null || store.storeState != PlayerStore.StoreState.OPEN) return;
             store.DismissCurrentClient(callNextWhenPossible: false, interruptDialog: false);
             StoreShutterButton.Instance.EndAndClose();
@@ -140,22 +107,5 @@ namespace EleanorRomance
             ModEntry.Log("Dual date finished; daytime business closed, evening returned. day=" + day);
         }
 
-        private static void ScheduleSleep(PlayerStore store, int day)
-        {
-            if (sleepTicket != null) return;
-            var ticket = new object();
-            sleepTicket = ticket;
-            store.visitLeftTonight = 0;
-            StoreUIManager.Instance.EnableBackingBlock();
-            ModHelper.StartCoroutine(ModConstants.ModId, MetaHelper.WaitAndDo(4.1f, () =>
-            {
-                if (!Enabled || !ReferenceEquals(sleepTicket, ticket)) return;
-                sleepTicket = null;
-                if (DualState.Today != day || store.storeState != PlayerStore.StoreState.CLOSED) return;
-                EndOfDayUIManager.Instance.InitUI();
-                EndOfDayUIManager.Instance.OnEndDayButtonClick();
-            }));
-        }
     }
-
 }

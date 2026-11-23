@@ -11,36 +11,24 @@ namespace EleanorRomance
         {
             public readonly string Id;
             public readonly int Project, BaseCost, DiscountCost, UpperGate, LowerGate;
-            public readonly bool Legacy;
-            public Plan(int project, string suffix, int cash, int discount = 0, int upperGate = 0, int lowerGate = 0)
-            { Project = project; Id = "er_maid_p" + project + "_" + suffix; BaseCost = cash; DiscountCost = discount; UpperGate = upperGate; LowerGate = lowerGate; Legacy = suffix == "favor"; }
+            public Plan(int project, int cash, int discount = 0, int upperGate = 0, int lowerGate = 0)
+            { Project = project; Id = "er_maid_p" + project + "_cash"; BaseCost = cash; DiscountCost = discount; UpperGate = upperGate; LowerGate = lowerGate; }
         }
         public static readonly Plan[] Plans = {
-            new Plan(1,"cash",1000), new Plan(2,"cash",3000,1500,lowerGate:30),
-            new Plan(3,"cash",5000,2500,upperGate:40),
-            new Plan(4,"cash",8000,4000,upperGate:50,lowerGate:50)
+            new Plan(1,1000), new Plan(2,3000,1500,lowerGate:30),
+            new Plan(3,5000,2500,upperGate:40),
+            new Plan(4,8000,4000,upperGate:50,lowerGate:50)
         };
-        // Recognize old saved rows/clicks and preserve payment history, but never
-        // register or offer the retired alternatives in a new game.
-        private static readonly Plan[] LegacyPlans = {
-            new Plan(2,"favor",1500), new Plan(3,"favor",2500), new Plan(4,"favor",4000)
-        };
-        private static IEnumerable<Plan> AllPlans()
-        { foreach(var p in Plans) yield return p; foreach(var p in LegacyPlans) yield return p; }
         private static bool registered, busy, deferredSave, refreshing;
         private static string unlockAllowance;
         public static bool TransactionActive => busy;
         public static bool IsOurs(string id) => Find(id) != null;
-        public static Plan Find(string id) { foreach (var p in AllPlans()) if (p.Id == id) return p; return null; }
+        public static Plan Find(string id) { foreach (var p in Plans) if (p.Id == id) return p; return null; }
         private static string Key(int p, string field) => "p" + p + "." + field;
         public static bool Paid(int p) => MaidState.Flag(Key(p,"paid"));
         public static bool ResultShown(int p) => MaidState.Flag(Key(p,"shown"));
         public static int PaidDay(int p) => MaidState.Int(Key(p,"day"), -1);
-        // Result dialogue acknowledges connections used at payment time, both
-        // for historical favor plans and for the new reputation discount.
-        public static bool FavorPlan(int p) => MaidState.Flag(Key(p,"discount"))
-            || MaidState.Text(Key(p,"plan")).EndsWith("_favor", StringComparison.Ordinal);
-        public static bool DiscountEligible(Plan p) => !p.Legacy && p.DiscountCost > 0
+        public static bool DiscountEligible(Plan p) => p.DiscountCost > 0
             && (p.UpperGate <= 0 || StoryEngine.UlRep() >= p.UpperGate)
             && (p.LowerGate <= 0 || StoryEngine.LlRep() >= p.LowerGate);
         public static int BaseQuote(Plan p) => DiscountEligible(p) ? p.DiscountCost : p.BaseCost;
@@ -57,21 +45,7 @@ namespace EleanorRomance
         /// </summary>
         private static bool StoryVisible(int project)
         {
-            if (MaidState.V2)
-            {
-                // The preparation arc opens P1/P2 together; P3/P4 appear at
-                // their later story beats.
-                if (project == 1 || project == 2) return MaidV2State.Act2Done;
-                if (project == 3) return MaidState.Progress >= 24;
-                if (project == 4) return MaidState.Progress >= 26;
-                return false;
-            }
-            // Reveal after completed story beats, never by calendar day:
-            // reunion (16), base conclusion + housing feedback (23),
-            // legal return (24), and the procurement visit (26).
-            if (project == 1) return true;
-            if (!MaidState.BasicComplete || !MaidState.Lovers) return false;
-            if (project == 2) return true;
+            if (project == 1 || project == 2) return MaidV2State.Act2Done;
             if (project == 3) return MaidState.Progress >= 24;
             if (project == 4) return MaidState.Progress >= 26;
             return false;
@@ -81,20 +55,8 @@ namespace EleanorRomance
         {
             if (!RomanceState.StoryActive || !MaidState.Active || !MaidState.SafeMother || Paid(p)) return false;
             if (!StoryVisible(p)) return false;
-            if (MaidState.V2)
-            {
-                // Purchasability is separate from visibility and strictly
-                // sequential: P1 -> P2 -> P3 -> P4.  P3/P4 stay optional for
-                // the story, but they cannot be bought out of order.
-                if (p == 1) return true;
-                if (p == 2) return Paid(1);
-                if (p == 3) return Paid(1) && Paid(2);
-                if (p == 4) return Paid(1) && Paid(2) && Paid(3);
-                return false;
-            }
             if (p == 1) return true;
-            if (!MaidState.BasicComplete || !MaidState.Lovers) return false;
-            if (p == 2) return ResultShown(1);
+            if (p == 2) return Paid(1);
             if (p == 3) return Paid(1) && Paid(2);
             if (p == 4) return Paid(1) && Paid(2) && Paid(3);
             return false;
@@ -132,7 +94,6 @@ namespace EleanorRomance
             Register();
             Recover();
             NetworkUpgrade.AddMissingAfterLoad();
-            RepairAbnormalUnlocks();
             RefreshStates();
             NotifyRepairNotice();
         }
@@ -144,14 +105,11 @@ namespace EleanorRomance
         /// </summary>
         public static bool Visible(Plan plan)
         {
-            if (plan == null || plan.Legacy) return false;
+            if (plan == null) return false;
             if (!VersionGate.IsSupported || !RomanceState.StoryActive || !MaidState.HasHistory) return false;
-            // A terminated relationship keeps no active project list; delivered
-            // story results remain in the save/history but the rows are hidden.
-            if (RomanceState.Route == 4) return false;
             if (Paid(plan.Project))
             {
-                return true; // One settled row, including old connections payments.
+                return true;
             }
             // Visibility follows story reveal only.  Purchasability is handled
             // separately by Available(), so later cards remain visible but
@@ -171,7 +129,7 @@ namespace EleanorRomance
             {
                 var store = PlayerStore.Instance;
                 var dict = store != null ? store.networkUpgrade : null;
-                foreach (var p in AllPlans())
+                foreach (var p in Plans)
                 {
                     bool visible = Visible(p);
                     int state = !visible ? 0 : Paid(p.Project) ? 2 : Available(p.Project) ? 1 : 0;
@@ -246,7 +204,6 @@ namespace EleanorRomance
         {
             Plan p = Find(id);
             if (p == null || busy) return false;
-            if (p.Legacy) { RefreshStates(); return false; }
             if (Paid(p.Project)) { StoryDirector.Notify(L.Get("er_maid_paid")); return false; }
             if (!Available(p.Project)) { StoryDirector.Notify(L.Get("er_maid_prereq_" + p.Project)); return false; }
             Quote q = GetQuote(p);
@@ -307,31 +264,6 @@ namespace EleanorRomance
             return success;
         }
 
-        public static bool TryEnter()
-        {
-            if (LoveState.Started) return false;
-            if (MaidState.HasHistory) return MaidState.EntryKind==1 && MaidState.Contract==1;
-            if (busy || !StoryEngine.HasCash(800)) return false;
-            bool success=false;
-            busy=true;
-            try
-            {
-                Snapshot(0,"entry");
-                PlayerStore.Instance.ModCash(-800,false);
-                MaidState.Enter(1);
-                MaidState.Text("entry_transaction",MaidState.Text("tx.id"));
-                MaidState.SetInt("tx.phase",2);
-                success=true;
-            }
-            catch(Exception ex){ Rollback(); ModEntry.LogError("Entry payment rolled back: "+ex); }
-            finally
-            {
-                busy=false;
-                if(deferredSave){ deferredSave=false;FlushSave(); }
-            }
-            return success;
-        }
-
         private static void Snapshot(int project,string id)
         {
             MaidState.Text("tx.id",Guid.NewGuid().ToString("N"));
@@ -352,11 +284,6 @@ namespace EleanorRomance
             store.wildFavor = MaidState.Int("tx.favor");
             StoreReputation.GetStoreReputation("FACTION_UPPER_LEVEL").SetReputation(MaidState.Number("tx.upper"));
             StoreReputation.GetStoreReputation("FACTION_LOWER_LEVEL").SetReputation(MaidState.Number("tx.lower"));
-            if(p==0)
-            {
-                MaidState.EntryKind=0; MaidState.EntryPaidCash=0; MaidState.Contract=0;
-                MaidState.Text("entry_transaction","");
-            }
             MaidState.Flag(Key(p,"paid"),false);
             MaidState.Text(Key(p,"plan"),"");
             foreach (string field in new[] { "cash","favor","upper","lower","day" }) MaidState.SetInt(Key(p,field),0);
@@ -375,38 +302,6 @@ namespace EleanorRomance
         {
             try { return Math.Max(0, upgrade != null ? upgrade.GetCost() : plan.BaseCost); }
             catch (Exception ex) { ModEntry.LogError("Native quote failed for " + plan.Id + ": " + ex); return plan.BaseCost; }
-        }
-
-        /// <summary>
-        /// A 0.68 save can contain native-unlocked ids with no transaction record.
-        /// Restore the story-gated state and refund the load-time native quote as
-        /// cash once per id.  No story result or reputation is invented.
-        /// </summary>
-        private static void RepairAbnormalUnlocks()
-        {
-            var store = PlayerStore.Instance;
-            var dict = store != null ? store.networkUpgrade : null;
-            if (dict == null) return;
-            int total = 0, repaired = 0;
-            foreach (var plan in AllPlans())
-            {
-                if (Paid(plan.Project)) continue;
-                string flag = "repair." + plan.Id;
-                if (MaidState.Flag(flag)) continue;
-                if (!dict.TryGetValue(plan.Id, out var upgrade) || upgrade == null || upgrade.state != 2) continue;
-                // These pre-transaction unlocks predate the new discount rule.
-                int refund = NativePrice(plan.BaseCost);
-                if (refund > 0)
-                    try { store.ModCash(refund, false); }
-                    catch (Exception ex) { ModEntry.LogError("Refund failed for " + plan.Id + ": " + ex); }
-                MaidState.Flag(flag, true);
-                upgrade.state = 0; upgrade.hidden = true;
-                var definition = NetworkUpgrade.GetDefinition(plan.Id);
-                if (definition != null) definition.hidden = true;
-                total += refund; repaired++;
-                ModEntry.Log("Revoked premature maid project unlock id=" + plan.Id + " refund=" + refund + " day=" + MaidState.Today);
-            }
-            if (repaired > 0) QueueRepairNotice(total);
         }
 
         private static void QueueRepairNotice(int amount)
@@ -513,7 +408,7 @@ namespace EleanorRomance
             // Wilde-UI open/rebuild refresh point without guessing private
             // screen method names.
             MaidProjects.RefreshStates();
-            __result=!p.Legacy && MaidProjects.Available(p.Project);
+            __result=MaidProjects.Available(p.Project);
         }
     }
     [HarmonyPatch(typeof(NetworkUpgrade),"GetCost")]
@@ -522,7 +417,7 @@ namespace EleanorRomance
         private static void Prefix(NetworkUpgrade __instance)
         {
             var p=MaidProjects.Find(__instance.id);
-            if(p!=null && !p.Legacy) __instance.cost=MaidProjects.BaseQuote(p);
+            if(p!=null) __instance.cost=MaidProjects.BaseQuote(p);
         }
     }
     [HarmonyPatch(typeof(NetworkUpgrade),"Unlock")]
@@ -533,7 +428,6 @@ namespace EleanorRomance
             if (__instance == null) return true;
             var plan = MaidProjects.Find(__instance.id);
             if (plan == null) return true;
-            if (plan.Legacy) return false;
             if (MaidProjects.Paid(plan.Project)) return true;
             if (MaidProjects.ConsumeUnlockAllowance(__instance.id)) return true;
             MaidProjects.RejectUnapprovedUnlock(__instance, plan);

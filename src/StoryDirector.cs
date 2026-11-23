@@ -17,15 +17,12 @@ namespace EleanorRomance
 
         public static void OnGameLoadedEarly()
         {
-            GalaClosing.Reset();
-            DualClosingDay.Reset();
             LoveA2Closing.Reset();
             EndingPageUI.HideRoutePage();
             StoryPresentation.Clear();
             VersionGate.Refresh();
             DualShowcaseEffects.OnLoaded();
             PortraitCompat.Refresh();
-            PortraitCompat.SanitizeLoadedClients();
 
             if (RomanceState.IncompatibleSave)
             {
@@ -34,33 +31,29 @@ namespace EleanorRomance
                 Notify(L.Get("er_notice_save_schema", RomanceState.SchemaVersion, RomanceState.Schema));
                 return;
             }
+            if (RomanceState.PredatesStoryRewrite)
+            {
+                ModEntry.Log("Eleanor story paused: save predates the story rewrite.");
+                Notify(L.Get("er_notice_save_before_rewrite"));
+                return;
+            }
 
             RomanceState.InitializeForSave();
-            RevolutionStory.OnLoaded();
-            MaidRouteMigration.OnLoaded();
-            // Must run before project visibility is computed on load.
-            MaidRouteMigration.MigrateDeferred();
-            StoryCoreFacts.Migrate();
+            PortraitCompat.SanitizeLoadedClients();
             // The vanilla keepsake is part of the ending, not a separate claim.
             // Old saves that deferred it receive it as soon as the save loads.
             if (EndgamePerfumeDue) StoryEngine.GiveSelfRefillingPerfume();
-            DualMigration.OnLoaded();
+            DualDirector.OnLoaded();
             VanillaEleanorBridge.OnLoaded();
             MaidProjects.OnLoaded();
             MaidDividends.Accrue();
-            MaidBusiness.OnLoaded();
-            MaidInteractions.OnLoaded();
-            GalaClosing.OnLoaded();
             DualClosingDay.OnLoaded();
             LoveA2Closing.OnLoaded();
             MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
-            GalaStory.TickNews(StoreStation.Instance?.storeEventManager);
         }
 
         public static void OnNewGameStarted(string scenarioId)
         {
-            GalaClosing.Reset();
-            DualClosingDay.Reset();
             LoveA2Closing.Reset();
             EndingPageUI.HideRoutePage();
             StoryPresentation.Clear();
@@ -74,16 +67,11 @@ namespace EleanorRomance
                     Notify(L.Get("er_notice_early_start"));
                 }
             }
-            // New runs use the maid v2 rewrite; loaded v1 saves keep FeatureVersion==1.
-            if (!MaidState.HasHistory && MaidState.FeatureVersion == 0)
-                MaidState.FeatureVersion = MaidState.V2Version;
-
+            DualShowcaseEffects.OnLoaded();
             ModEntry.Log("New game. scenario=" + scenarioId + ", chapter=" + RomanceState.Chapter
                 + ", next=" + RomanceState.NextVisitDay);
             MaidProjects.OnLoaded();
-            MaidInteractions.OnLoaded();
-            StoryCoreFacts.Migrate();
-            DualMigration.OnLoaded();
+            DualDirector.OnLoaded();
         }
 
         public static void OnGenerateCustomerVeryEarly(StoreClientManager manager)
@@ -92,22 +80,16 @@ namespace EleanorRomance
 
             try
             {
+                if (RomanceState.IncompatibleSave || RomanceState.PredatesStoryRewrite) return;
+
                 LoveDirector.EnsureA2FirstLast(manager);
                 LoveWaterShortage.Ensure(StoreStation.Instance?.storeEventManager);
                 PortraitCompat.SanitizeLoadedClients();
-                // Daily refresh runs before every early return: a story that is
-                // not active must still hide stale project rows, and a new shop
-                // may finish building its dictionary after the load-time pass.
-                // notifyNew also catches saves where a project became visible
-                // before this build (for example the chapter-20 P2 gate).
+                // Refresh the project rows after the game has set up the shop.
+                // This also announces newly visible projects on the next opening.
                 MaidProjects.RefreshStates(true);
                 MaidProjects.NotifyRepairNotice();
                 MaidDividends.Accrue();
-                MaidInteractions.OnLoaded();
-                GalaStory.TickNews(StoreStation.Instance?.storeEventManager);
-
-                if (RomanceState.IncompatibleSave) return;
-
                 if (RomanceState.OldBlocked)
                 {
                     TryQueueOldSavePrompt(manager);
@@ -117,12 +99,8 @@ namespace EleanorRomance
                 if (!RomanceState.StoryActive) return;
                 EleanorStory.EnsurePreludeBraceletCountInitialized();
                 RomanceState.SyncNativeSavings();
-                GalaClosing.RecoverQueuedVisits(manager);
 
                 VanillaEleanorBridge.SynchronizeRescue();
-                MaidRouteMigration.OnLoaded();
-                MaidRouteMigration.MigrateDeferred();
-                MaidRouteMigration.NotifyDeferred();
                 // Queue the rescue from our own daily hook.  Vanilla's
                 // CheckStoryLineEleanor may be suppressed by both this mod and
                 // another mod, so the rescue cannot depend on that patch order.
@@ -146,48 +124,20 @@ namespace EleanorRomance
                 if (MaidStory.HasUrgentClient(manager)) return;
                 MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
                 DualDirector.RecoverPending(manager);
-                if(!MaidState.Active && !DualState.Active && RomanceState.Romance==2
-                    && RomanceState.Chapter>=24 && RomanceState.Route!=3)
-                {
-                    var resolution=EleanorStory.CreateDeferredResolution();ModHelper.SetClientSource(resolution,ModConstants.ModId);
-                    manager.AddClient(resolution);if(manager.clientStack.Contains(resolution))RomanceState.LastQueuedDay=day;
-                    return;
-                }
                 if (DualDirector.TryQueue(manager, day)) return;
-                if (DualState.Active && DualState.Flag("d.route"))
-                {
-                    string dualNext = DualDirector.NextScene(day);
-                    if (dualNext == "d06" || dualNext == "dv10") return;
-                }
+                if (DualState.Active && DualDirector.NextScene(day) == DualClosingDay.Scene) return;
                 if (MaidStory.TryQueue(manager, day)) return;
-                if (MaidState.LegacyResume == 1) return; // Await its dedicated due day and explicit choice.
                 if (DualBusiness.TryQueue(manager, day)) return;
                 if (LoveDirector.TryQueue(manager, day)) return;
                 if (TryQueueRouteResetPrompt(manager, day)) return;
                 DualDirector.ReconcileMainProgression(day);
 
-                // A romance lock is not a world-story termination. In particular
-                // route D still needs its result visit. Only precise migration
-                // shapes are reopened; unknown old control locks remain diagnostic.
-                if (RomanceState.RomanceLocked && RomanceState.Route != 4) return;
+                if (RomanceState.RomanceLocked) return;
 
                 int chapter = PendingChapterForDay(day);
                 if (chapter <= 0)
                 {
                     if (MaidBusiness.TryQueue(manager,day)) return;
-                    if (!MaidState.Active && DualState.Writable && DualRewards.NeedsClaim
-                        && day>=DualState.LastDailyDay+4)
-                    {
-                        var claim=DualStory.CreateScene("claim");
-                        ModHelper.SetClientSource(claim,ModConstants.ModId);manager.AddClient(claim);
-                        if(manager.clientStack.Contains(claim)){RomanceState.LastQueuedDay=day;DualState.LastDailyDay=day;}
-                        return;
-                    }
-                    if (RevolutionStory.TryQueueDaily(manager, day))
-                    {
-                        RomanceState.LastQueuedDay = day;
-                        return;
-                    }
                     if (TryQueueEpilogue(manager, day)) RomanceState.LastQueuedDay = day;
                     return;
                 }
@@ -208,8 +158,7 @@ namespace EleanorRomance
                 }
 
                 ModHelper.SetClientSource(client, ModConstants.ModId);
-                if (RomanceState.Route == 3
-                    && (RevolutionStory.UseMorningQueue(chapter) || RevolutionV2Story.UseMorningQueue(chapter)))
+                if (RomanceState.Route == 3 && RevolutionV2Story.UseMorningQueue(chapter))
                     manager.AddNextClient(client);
                 else
                     manager.AddClient(client);
@@ -231,7 +180,7 @@ namespace EleanorRomance
         /// </summary>
         public static int PendingChapterForDay(int day)
         {
-            if (RomanceState.Chapter >= RomanceState.ChapterComplete) return 0;
+            if (!RomanceState.StoryActive || RomanceState.Chapter >= RomanceState.ChapterComplete) return 0;
 
             int chapter = RomanceState.PendingChapter > 0
                 ? RomanceState.PendingChapter
@@ -242,22 +191,18 @@ namespace EleanorRomance
             // story's day 42 has arrived (her other work fills the gap).  A v2
             // player who already answered the detective-fee choice must not be
             // locked out while a declined/unsettled gap waits for day 42.
-            bool maidGapAnswered = MaidState.V2
-                && (MaidV2State.GapPaid || MaidV2State.GapChoice != 0);
+            bool maidGapAnswered = MaidV2State.GapPaid || MaidV2State.GapChoice != 0;
             if (chapter == 12 && !maidGapAnswered
                 && RomanceState.Savings < 800 && day < 42 - StoryOffset()) return 0;
 
-            bool maidV2Route = MaidState.V2 && MaidState.Active;
-            if (!maidV2Route && chapter == 18 && RomanceState.MotherState != 1) return 19;
-            if (!maidV2Route && chapter == 19 && RomanceState.MotherState != 1) return 0;
+            bool attendantRoute = MaidState.Active;
+            if (!attendantRoute && chapter == 18 && RomanceState.MotherState != 1) return 19;
+            if (!attendantRoute && chapter == 19 && RomanceState.MotherState != 1) return 0;
 
             // v2: P2 is the first and only mainline Wilde project; Act 3 waits for it.
-            if (maidV2Route && chapter == 20 && !MaidProjects.Paid(2)) return 0;
+            if (attendantRoute && chapter == 20 && !MaidProjects.Paid(2)) return 0;
 
             if (chapter == 20 && RomanceState.Route == 3) return 0;
-            // Revolution supply gates and the R12-R13 interval wait for the
-            // repeatable visits queued below instead of blocking the route.
-            if (RomanceState.Route == 3 && RevolutionStory.BlocksChapter(chapter, day)) return 0;
             // The dual extension replaces the c21/c22/c23 visits while it owns
             // the post-rescue schedule; its own director queues those scenes.
             if (DualDirector.SuppressMainChapter(chapter)) return 0;
@@ -324,10 +269,7 @@ namespace EleanorRomance
                 && RomanceState.MotherState == 1
                 && RomanceState.RomanceConfirmed;
 
-            // The dual route calls CompleteCore at dr11, but its actual ending
-            // page is still ahead at dr20. Suppress the ordinary-route unlock
-            // notices there; the dual ending page is the completion signal, and
-            // the landfill assist is not offered in the dual route.
+            // The harem ending page is its own completion signal.
             bool dualOwnsEnding = DualState.Writable && DualState.HasHistory && DualState.Active;
 
             if (partnerEnding)
@@ -368,7 +310,7 @@ namespace EleanorRomance
             // an exited dual route falls back to the ordinary epilogue.
             if (DualState.Active && DualState.Relation != 3) return false;
             if (!RomanceState.EpilogueDone || RomanceState.RomanceLocked) return false;
-            if (RomanceState.Route == 3 || RomanceState.Route == 4) return false;
+            if (RomanceState.Route == 3) return false;
             if (RomanceState.MotherState != 1) return false;
             if (RomanceState.LastEpilogueDay >= 0 && day < RomanceState.LastEpilogueDay + 8) return false;
 
@@ -447,7 +389,7 @@ namespace EleanorRomance
         }
 
         /// <summary>Vanilla Eleanor9's perfume belongs to every successful ending.</summary>
-        private static bool EndgamePerfumeDue => !RomanceState.PerfumeGiven
+        private static bool EndgamePerfumeDue => RomanceState.StoryActive && !RomanceState.PerfumeGiven
             && (StoryCoreFacts.PerfumePending
                 || (MaidState.HasHistory && MaidState.BasicComplete)
                 || LoveState.Act3Done
@@ -486,19 +428,6 @@ namespace EleanorRomance
                 case 26: return 63;
                 case 27: return 65;
                 case 28: return 67;
-                case 101: return 46;
-                case 102: return 48;
-                case 103: return 49;
-                case 104: return 51;
-                case 105: return 0; // R06 is the next safe morning after R05.
-                case 106: return 55;
-                case 107: return 57;
-                case 108: return 59;
-                case 109: return 61;
-                case 110: return 63;
-                case 111: return 65;
-                case 112: return 68;
-                case 113: return 0; // R14 is the next safe morning after R13.
                 case 280: return 46;
                 case 281: return 48;
                 case 282: return 51;
@@ -510,10 +439,6 @@ namespace EleanorRomance
                 case 288: return 66;
                 case 289: return 69;
                 case 290: return 72;
-                case 201: return 45;
-                case 202: return 46;
-                case 203: return 48;
-                case 204: return 50;
                 default: return 0;
             }
         }

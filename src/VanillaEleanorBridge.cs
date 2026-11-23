@@ -6,7 +6,7 @@ namespace EleanorRomance
 {
     /// <summary>
     /// Keep the remake's chapters, but let vanilla own bail timing, payment,
-    /// reputation checks, old-arrest migration, and its aid/reward definitions.
+    /// reputation checks, and its aid/reward definitions.
     /// </summary>
     public static class VanillaEleanorBridge
     {
@@ -59,8 +59,6 @@ namespace EleanorRomance
             if (!RescuePending) return;
             StoreClientManager manager = PlayerStore.Instance.storeClientManager;
             if (manager == null || manager.clientStack == null) return;
-            // Replace obsolete mod-only rescue offers with the native scheduler.
-            manager.clientStack.RemoveAll(c => c != null && c.identifier == "er_story_rescue");
             foreach (StoreClient client in manager.clientStack)
                 if (IsRescueClient(client)) DecorateRescueClient(client);
             StoreClient current = PlayerStore.Instance.currentClientInstance?.GetClientBlueprint();
@@ -77,7 +75,6 @@ namespace EleanorRomance
             data.eleanorBailChoice = 0;
             data.eleanorBailDay = -1;
             data.eleanorFreedVisitDay = -1;
-            RomanceState.NativeRescueLinked = true;
             RomanceState.Arrested = true;
             RomanceState.Rescued = false;
             RomanceState.TrapResumeChapter = Math.Max(6, resumeChapter);
@@ -91,19 +88,6 @@ namespace EleanorRomance
         {
             if (!RescuePending) return;
             StoreClientData data = PlayerStore.Instance.storeClientData;
-            if (!RomanceState.NativeRescueLinked)
-            {
-                // Pre-bridge MOD arrests never initialized the native bail fields.
-                data.isEleanorDead = false;
-                data.eleanorArrested = true;
-                data.eleanorArrestDay = -1;
-                data.eleanorArrestVisit = RomanceState.TrapResumeChapter;
-                data.eleanorBailChoice = 0;
-                data.eleanorBailDay = -1;
-                data.eleanorFreedVisitDay = -1;
-                StoreClientData.MigrateEleanorBail(StoreStation.Instance.dayCounter);
-                RomanceState.NativeRescueLinked = true;
-            }
             if (data.eleanorBailChoice == 3) StoryDirector.AbandonStory();
         }
 
@@ -218,6 +202,7 @@ namespace EleanorRomance
                 RomanceState.RescueMethod = PlayerStore.Instance.storeClientData.eleanorBailChoice;
                 RomanceState.Rescued = true;
                 RomanceState.Arrested = false;
+                RomanceState.PendingChapter = 5;
                 StoryDirector.AdvanceChapter(5, Math.Max(6, RomanceState.TrapResumeChapter));
                 leave?.Invoke();
             });

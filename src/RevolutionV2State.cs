@@ -1,6 +1,6 @@
 namespace EleanorRomance
 {
-    /// <summary>Route-local state for the revolution v2 rewrite; old RevVersion==1 stays on RevolutionStory.</summary>
+    /// <summary>Route-local state for the revolution route.</summary>
     public static class RevolutionV2State
     {
         private const string P = "revv2.";

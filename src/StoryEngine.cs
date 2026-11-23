@@ -541,7 +541,7 @@ namespace EleanorRomance
         public static bool CanConfess()
         {
             if (RomanceState.MotherState != 1) return false;
-            if (RomanceState.Route == 3 || RomanceState.Route == 4) return false;
+            if (RomanceState.Route == 3) return false;
             if (RomanceState.Romance == 4) return false;
             bool risk = RomanceState.UncleReported || RomanceState.Rescued || RomanceState.ThreatRecorded;
             return PositiveDeals >= 3 && risk;

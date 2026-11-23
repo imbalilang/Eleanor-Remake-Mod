@@ -226,7 +226,7 @@ namespace EleanorRomance
                 DualText.Choice("dv10_c3_1", common),
                 DualText.Choice("dv10_c3_2", branch),
                 DualText.Choice("dv10_c3_3", branch3));
-            StoryEngine.OnDialogueFinished(root, DualClosingDay.FinishV2);
+            StoryEngine.OnDialogueFinished(root, DualClosingDay.Finish);
             return Ready(client, root);
         }
 

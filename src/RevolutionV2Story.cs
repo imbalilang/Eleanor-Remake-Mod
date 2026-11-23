@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EleanorRomance
 {
-    /// <summary>Runtime for the revolution v2 rewrite. Old RevVersion==1 saves stay on RevolutionStory.</summary>
+    /// <summary>Runtime for the revolution route.</summary>
     public static class RevolutionV2Story
     {
         public const int ChR01 = 280, ChR02 = 281, ChR03 = 282, ChR04 = 283, ChR05 = 284,

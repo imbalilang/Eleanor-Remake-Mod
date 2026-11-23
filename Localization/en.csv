@@ -3806,6 +3806,7 @@ er_notice_old_save,"This save has already progressed vanilla Eleanor's story. To
 er_notice_queue_now,"The next Eleanor chapter has been scheduled for today."
 er_notice_reset_arm,"Click again to confirm the reset. This will clear vanilla and mod Eleanor story progress."
 er_notice_reset_done,"Eleanor's story has been reset. Open the store or pass a day to restart. Items you already received will remain."
+er_notice_save_before_rewrite,"This save predates the Eleanor story rewrite. The mod story is paused and your progress is preserved. Load a save started after the rewrite or start a new game to play the current story."
 er_notice_save_schema,"This save uses Eleanor story data version {0}. This mod requires version {1}. Her story is paused and your progress is preserved."
 er_notice_savings_complete,"The investigation fund has reached 800 credits."
 er_notice_savings_progress,"Investigation fund: {0} / 800 ({1} credits to go)"

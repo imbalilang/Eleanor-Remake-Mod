@@ -15,14 +15,16 @@ namespace EleanorRomance
         private const string Prefix = "er.";
         public const int Schema = 2;
 
-        // Chapters 1..24 are the common/route A/B/friends spine.
-        // 101..108 are route C (public leak), 201..204 route D (betrayal/exit).
+        // Chapters 1–24 are the common story, with separate chapter IDs for the revolution route.
         public const int ChapterComplete = 300;
-        public const int RouteCFirst = 101;
-        public const int RouteDFirst = 201;
 
         public static bool StoryActive => Initialized && !OldBlocked
-            && VersionGate.IsSupported && SchemaVersion == Schema;
+            && VersionGate.IsSupported && SchemaVersion == Schema && !PredatesStoryRewrite;
+
+        // The rewrite started saving this route version in every new run,
+        // including runs that never enter the attendant route.
+        internal static bool PredatesStoryRewrite => Initialized && !OldBlocked
+            && (MaidState.FeatureVersion < MaidState.V2Version || RevVersion == 1 || DualState.HasRetiredProgress);
 
         public static bool IncompatibleSave => SchemaVersion != Schema
             && ModHelper.GetModDataKeys(ModConstants.ModId).Count > 0;
@@ -190,12 +192,6 @@ namespace EleanorRomance
             set => SetBool("hardship_cash_given", value);
         }
 
-        public static bool NativeRescueLinked
-        {
-            get => GetBool("native_rescue_linked", false);
-            set => SetBool("native_rescue_linked", value);
-        }
-
         public static bool SavingsAutoFilled
         {
             get => GetBool("savings_auto_filled", false);
@@ -310,15 +306,6 @@ namespace EleanorRomance
             set => SetBool("protection_failed", value);
         }
 
-        public static int BetrayalKind
-        {
-            get => GetInt("betrayal_kind", 0);
-            set => SetInt("betrayal_kind", value);
-        }
-
-        // 0 none, 1 player custody, 2 Eleanor custody, 3 returned (route A),
-        // 4 protected/public (route B), 5 leaked (route C), 6 sold (route D),
-        // 7 abandoned.
         public static int DriveState
         {
             get => GetInt("drive_state", 0);
@@ -419,18 +406,6 @@ namespace EleanorRomance
             set => SetInt("rev_version", value);
         }
 
-        public static int RevSupply
-        {
-            get => GetInt("rev_supply", 0);
-            set => SetInt("rev_supply", Math.Max(0, value));
-        }
-
-        public static int RevTier
-        {
-            get => GetInt("rev_tier", 0);
-            set => SetInt("rev_tier", Mathf.Clamp(value, 0, 3));
-        }
-
         public static bool RevComplete
         {
             get => GetBool("rev_complete", false);
@@ -443,74 +418,6 @@ namespace EleanorRomance
             set => SetBool("rev_ending_shown", value);
         }
 
-        public static bool RevLegacyCompleted
-        {
-            get => GetBool("rev_legacy_completed", false);
-            set => SetBool("rev_legacy_completed", value);
-        }
-
-        public static bool RevLydiaTold
-        {
-            get => GetBool("rev_lydia_told", false);
-            set => SetBool("rev_lydia_told", value);
-        }
-
-        public static bool RevStockR02
-        {
-            get => GetBool("rev_stock_r02", false);
-            set => SetBool("rev_stock_r02", value);
-        }
-
-        public static bool RevStockR05
-        {
-            get => GetBool("rev_stock_r05", false);
-            set => SetBool("rev_stock_r05", value);
-        }
-
-        public static bool RevStockR08
-        {
-            get => GetBool("rev_stock_r08", false);
-            set => SetBool("rev_stock_r08", value);
-        }
-
-        public static bool RevStockR13
-        {
-            get => GetBool("rev_stock_r13", false);
-            set => SetBool("rev_stock_r13", value);
-        }
-
-        public static int RevLastVisitDay
-        {
-            get => GetInt("rev_last_visit_day", -1);
-            set => SetInt("rev_last_visit_day", value);
-        }
-
-        public static int RevLastShort
-        {
-            get => GetInt("rev_last_short", 0);
-            set => SetInt("rev_last_short", value);
-        }
-
-        public static int RevR13EarliestDay
-        {
-            get => GetInt("rev_r13_earliest_day", -1);
-            set => SetInt("rev_r13_earliest_day", value);
-        }
-
-        public static int RevDailyStockDay
-        {
-            get => GetInt("rev_daily_stock_day", -1);
-            set => SetInt("rev_daily_stock_day", value);
-        }
-
-        public static int RevLastLootDay
-        {
-            get => GetInt("rev_last_loot_day", -1);
-            set => SetInt("rev_last_loot_day", value);
-        }
-
-        // Backward-compatible unlock flag for the native landfill event.
-        // Its presence alone no longer modifies scavenging attempts.
         public static bool ScavAssist
         {
             get => GetBool("scav_assist", false);
@@ -704,7 +611,6 @@ namespace EleanorRomance
             ReturnGiftChoice = 0;
             HardshipAidGiven = false;
             HardshipCashGiven = false;
-            NativeRescueLinked = false;
             CrateKept = false;
             CrateSold = false;
             TrapSprung = false;
@@ -714,7 +620,6 @@ namespace EleanorRomance
             RescueMethod = 0;
             TrapResumeChapter = 6;
             ProtectionFailed = false;
-            BetrayalKind = 0;
             DriveState = 0;
             ThreatRecorded = false;
             ProtectionChannel = 0;
@@ -729,21 +634,8 @@ namespace EleanorRomance
             LocketGiven = false;
             PerfumeGiven = false;
             RevVersion = 0;
-            RevSupply = 0;
-            RevTier = 0;
             RevComplete = false;
             RevEndingShown = false;
-            RevLegacyCompleted = false;
-            RevLydiaTold = false;
-            RevStockR02 = false;
-            RevStockR05 = false;
-            RevStockR08 = false;
-            RevStockR13 = false;
-            RevLastVisitDay = -1;
-            RevLastShort = 0;
-            RevR13EarliestDay = -1;
-            RevDailyStockDay = -1;
-            RevLastLootDay = -1;
             ScavAssist = false;
             LydiaFairBracelet = false;
             LydiaVisited = false;
@@ -762,8 +654,6 @@ namespace EleanorRomance
             LastEpilogueDay = -1;
             EpilogueStockIndex = -1;
             TrueUnlocked = keepMeta;
-            // New runs use the maid v2 rewrite.  Loaded v1 saves keep their
-            // existing FeatureVersion and continue on the v1 branch code.
             MaidState.FeatureVersion = MaidState.V2Version;
 
             ModEntry.Log("Story state initialized. earlyStart=" + earlyStart + ", next=" + NextVisitDay);

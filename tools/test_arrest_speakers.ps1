@@ -22,13 +22,13 @@ foreach($name in @('假叔叔','Fake Uncle')){
     $narrator=[EleanorRomance.L]::Get('er_name_narrator')
     $uncle=[EleanorRomance.L]::Get('er_name_uncle')
     $speakers=@($narrator,$officer,'Player',$uncle,$officer,$officer,$uncle,'Player',
-        $officer,$officer,'Player',$officer,$narrator)
+        $officer,$officer,'Player',$officer)
     $keys=@(
         'er_v06_c04_n005_01','er_v06_c04_n005_02','er_v06_c04_n005_03',
         'er_v06_c04_b003_02','er_v06_c04_b003_03','er_v06_c04_b003_04',
         'er_v06_c04_b003_05','er_v06_c04_b003_06',
         'er_v06_c04_n005_04','er_v06_c04_n005_05','er_v06_c04_n005_06',
-        'er_v06_c04_n005_07','er_v06_c04_n005_08')
+        'er_v06_c04_n005_07')
     Assert ($history.Count -eq $keys.Count) 'Reported uncle scene lost or duplicated lines.'
     for($i=0;$i -lt $keys.Count;$i++){
         Assert ($history[$i] -eq ($speakers[$i]+': '+$keys[$i])) "Wrong actual recorder speaker on uncle line $($i+1): $($history[$i])"

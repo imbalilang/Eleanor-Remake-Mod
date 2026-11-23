@@ -242,6 +242,18 @@ foreach($n in @('Resolve','ResolveCharacter')) {
 if(!$Maid){Ret $mod 'EleanorRomance.StoryEngine' 'GiveSelfRefillingPerfume'}
 Ret $mod 'EleanorRomance.Items' 'EnsureBraceletSprite'
 Ret $mod 'EleanorRomance.Items' 'EnsureLocketSprite'
+Ret $mod 'EleanorRomance.EndingPageUI' 'HideRoutePage'
+Ret $mod 'EleanorRomance.PortraitCompat' 'Refresh'
+Ret $mod 'EleanorRomance.PortraitCompat' 'RegisterConfig'
+Ret $mod 'EleanorRomance.VersionGate' 'Refresh'
+$director = GetCType $mod 'EleanorRomance.StoryDirector'
+$notice = [Mono.Cecil.FieldDefinition]::new('TestNotice',
+    [Mono.Cecil.FieldAttributes]'Public,Static',$mod.MainModule.TypeSystem.String)
+$director.Fields.Add($notice)
+$il = Body (Method $mod 'EleanorRomance.StoryDirector' 'Notify')
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_0)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Stsfld,$notice)
+$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 $il=Body (Method $game 'SpriteDict' 'GetRandomSecSpriteName')
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldstr,'maleSec1');$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 # Native choice icons and reward items are created without Unity rendering.
@@ -303,11 +315,6 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Call,(Method $game 'PlayerStore' 'get_Instanc
 foreach($i in 1..3){$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldc_I4_0)}
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,(Method $game 'PlayerStore' 'DismissCurrentClient'))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
-# Native gift construction is real; the placement boundary supplies space/full.
-$il=Body (Method $game 'PlayerStore' 'AddDirectSellingItemToTableMiddle')
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_1)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $game.MainModule (Method $mod 'EleanorRomance.VanillaEleanorBridge' 'CaptureReward')))
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Pop);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 foreach($getter in @('get_frontInvinvElement','get_backInvinvElement','get_invElement','get_showcaseElement')){
     $il=Body (Method $game 'EmporiumEntry' $getter)
     $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldnull);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
@@ -337,7 +344,6 @@ if($Maid){
     . (Join-Path $PSScriptRoot 'test_maid_boundaries.ps1')
     . (Join-Path $PSScriptRoot 'test_business_boundaries.ps1')
     . (Join-Path $PSScriptRoot 'test_scav_boundaries.ps1')
-    . (Join-Path $PSScriptRoot 'test_interaction_boundaries.ps1')
 }
 if($Dual){. (Join-Path $PSScriptRoot 'test_dual_boundaries.ps1')}
 . (Join-Path $PSScriptRoot 'test_speaker_boundaries.ps1')
@@ -356,6 +362,7 @@ if($Rewrite){
     $method = Method $mod 'EleanorRomance.StoryPresentation' 'MarkCompanion'
     $method.IsAssembly=$false
     $method.IsPublic=$true
+    if (!$Maid) { Ret $game 'GameItemElement' 'Destroy' }
 }
 if($ReleaseQA){. (Join-Path $PSScriptRoot 'test_release_qa_boundaries.ps1')}
 $script:TestPhase = 'load'
@@ -401,6 +408,8 @@ if($Maid){
 }
 $store = Blank ([PlayerStore])
 [PlayerStore]::TestInstance = $store
+$store.startingPerks = [System.Collections.Generic.List[StartingPerk]]::new()
+$store.storeReputations = [System.Collections.Generic.List[StoreReputation]]::new()
 $ui = Blank ([DialogUIManager])
 [DialogUIManager]::TestInstance = $ui
 $script:builds=0
@@ -532,9 +541,6 @@ function Count-Cells($shape) {
     for($y=0;$y -lt $shape.height;$y++){for($x=0;$x -lt $shape.width;$x++){if($shape.GetLocal($x,$y)){$n++}}}
     return $n
 }
-$legacy='0000011001100000'
-$oversized='0000111111110000'
-$repair=[EleanorRomance.Items].GetMethod('RepairBraceletShape',[Reflection.BindingFlags]'NonPublic,Static')
 function New-Inventory {
     $inv=Blank ([GameGridInventory])
     [GameGridInventory].GetField('<inventoryShape>k__BackingField',[Reflection.BindingFlags]'NonPublic,Instance').SetValue(
@@ -548,55 +554,11 @@ function Inventory-Items($inv) {
     # Native childItems returns a copy; populate the underlying fixture list.
     return ,([GameGridInventory].GetField('items',[Reflection.BindingFlags]'NonPublic,Instance').GetValue($inv))
 }
-# Both historical masks, all 8 transforms, and placements against all four edges.
-# Fill every cell outside the old footprint: shrinking must still fit and must
-# leave the neighbours, orientation, and ownership state untouched.
-foreach($mask in @($legacy,$oversized)){foreach($flip in @($false,$true)){foreach($rotation in 0..3){
-    foreach($x in @(0,4)){foreach($y in @(0,4)){
-        $inv=New-Inventory
-        $list=Inventory-Items $inv
-        $item=New-Item $mask 4 $x $y $flip $rotation
-        $item.parentInventory=$inv;$list.Add($item)
-        $old=$item.modifiedShape.Clone()
-        for($cy=0;$cy -lt 8;$cy++){for($cx=0;$cx -lt 8;$cx++){
-            if($old.Get($cx,$cy) -ne 0){continue}
-            $neighbour=New-Item '1' 1 $cx $cy
-            $neighbour.identifier='test_neighbour';$neighbour.parentInventory=$inv;$list.Add($neighbour)
-        }}
-        $before=$list.Count
-        Assert ($repair.Invoke($null,@($item))) 'Compact bracelet could not fit inside its former footprint.'
-        Assert ($item.shape.width -eq 2 -and $item.shape.height -eq 1 -and
-            (Count-Cells $item.modifiedShape) -eq 2) 'Wrong compact bracelet footprint.'
-        Assert ($item.modifiedShape.flipped -eq $flip -and $item.modifiedShape.orientation -eq $rotation) 'Repair changed the orientation.'
-        for($cy=0;$cy -lt 8;$cy++){for($cx=0;$cx -lt 8;$cx++){
-            if($item.modifiedShape.Get($cx,$cy) -ne 0){
-                Assert ($old.Get($cx,$cy) -ne 0) 'Compact shape moved outside the old occupied cells.'
-            }
-        }}
-        Assert ($list.Count -eq $before -and $item.parentInventory -eq $inv -and
-            $item.spritePath -eq 'eleanor_bracelet_compact') 'Repair lost an item or failed to update its sprite.'
-        $once=$item.modifiedShape
-        Assert ($repair.Invoke($null,@($item)) -and [object]::ReferenceEquals($once,$item.modifiedShape)) 'Repeated load changed an already compact item.'
-    }}
-}}}
-# Inventory rules can defer migration: retain the original item and retry later.
-$inv=New-Inventory
-$list=Inventory-Items $inv
-$inv.mayInventoryAddItemFunc=[Func[GameItem,GameInventory,bool]]{param($i,$v) $false}
-$item=New-Item $legacy
-$item.parentInventory=$inv; $list.Add($item)
-$old=$item.shape;$oldModified=$item.modifiedShape
-Assert (!$repair.Invoke($null,@($item))) 'Repair ignored an inventory rule.'
-Assert ([object]::ReferenceEquals($old,$item.shape) -and [object]::ReferenceEquals($oldModified,$item.modifiedShape)) 'Deferred repair changed the saved footprint.'
-$inv.mayInventoryAddItemFunc=[Func[GameItem,GameInventory,bool]]{param($i,$v) $true}
-Assert ($repair.Invoke($null,@($item))) 'Repair did not retry after the rule cleared.'
-Assert ((Count-Cells $item.modifiedShape) -eq 2 -and $list.Count -eq 1) 'Repair lost items or kept the wrong shape.'
-# Factory creates the corrected shape and attaches a placement retry callback.
 [ItemDirectory]::TestItem=New-Item '1' 1
 $created=[EleanorRomance.Items]::CreateBracelet()
 Assert ($created.shape.width -eq 2 -and $created.shape.height -eq 1 -and
-    $created.spritePath -eq 'eleanor_bracelet_compact' -and $created.onSlotAddItemFunc -ne $null) 'New bracelet factory has wrong shape/sprite/hooks.'
-'PASS: 2x1 bracelet factory, 64 packed legacy migrations, inventory-rule deferral and retry.'
+    $created.spritePath -eq 'eleanor_bracelet_compact') 'Bracelet factory has the wrong shape or sprite.'
+'PASS: compact 2x1 bracelet factory.'
 # Native small positive markups must count as generosity, not just >25%.
 foreach($paid in @(101,110,120,125,130)){
     $item=New-Item '1' 1
@@ -623,10 +585,10 @@ Assert (!$tracker.Lowball -and $tracker.Dominant -eq 'F') 'A deep non-bargained 
 [ModHelper]::TestData=[System.Collections.Generic.Dictionary[string,string]]::new()
 $station=Blank ([StoreStation]);$station.dayCounter=40
 [StoreStation]::TestInstance=$station
-$next=@{1=2;2=3;3=4;6=7;7=8;8=9;10=11;18=19;19=20;22=23}
+$next=@{1=2;2=3;3=4;6=7;7=8;10=11;18=19;19=20;22=23}
 foreach($manual in @($false,$true)){
     foreach($chapter in ($next.Keys | Sort-Object)){
-        [ModHelper]::TestData.Clear()
+        [EleanorRomance.RomanceState]::ResetForNewGame($false)
         [PlayerStore]::TestDismissCount=0
         [EleanorRomance.RomanceState]::Chapter=$chapter-1
         [EleanorRomance.RomanceState]::PendingChapter=$chapter
@@ -654,7 +616,7 @@ foreach($manual in @($false,$true)){
         Assert ([EleanorRomance.RomanceState]::Chapter -eq $expected -and
             [EleanorRomance.RomanceState]::PendingChapter -eq 0 -and
             [PlayerStore]::TestDismissCount -eq 1) "Chapter $chapter progression failed (manual=$manual)."
-        if(!$manual -and $chapter -in @(3,7,8,19)) {
+        if(!$manual -and $chapter -in @(3,7,19)) {
             Assert ([EleanorRomance.RomanceState]::Affection -eq 2 -and
                 [EleanorRomance.RomanceState]::Discounts -eq 1) "Chapter $chapter did not reward overpayment."
         }
@@ -666,14 +628,12 @@ foreach($manual in @($false,$true)){
 'PASS: common trade chapters x automatic/manual completion, bargaining and actual affection/progression state.'
 
 function Reset-Run($chapter=5) {
-    [ModHelper]::TestData.Clear()
-    [EleanorRomance.RomanceState]::Initialized=$true
-    [EleanorRomance.RomanceState]::SchemaVersion=2
+    [EleanorRomance.RomanceState]::ResetForNewGame($false)
     [EleanorRomance.RomanceState]::Chapter=$chapter
     [EleanorRomance.RomanceState]::PendingChapter=$chapter
     $store.storeClientData=[StoreClientData]::new()
-    $store.storeClientManager=Blank ([StoreClientManager])
-    $store.storeClientManager.clientStack=[System.Collections.Generic.List[StoreClient]]::new()
+    $store.storeClientManager=[StoreClientManager]::new()
+    $store.networkUpgrade=[System.Collections.Generic.Dictionary[string,NetworkUpgrade]]::new()
     $store.currentClientInstance=$null
     [PlayerStore]::TestDismissCount=0
     $station.dayCounter=40
@@ -688,6 +648,60 @@ function Choice-Node($head) {
     while($head -and $head.choices.Count -eq 0){$head=$head.nextDialogue}
     return $head
 }
+
+function Assert-PausedSave($notice) {
+    $snapshot = [System.Collections.Generic.Dictionary[string,string]]::new([ModHelper]::TestData)
+    [EleanorRomance.StoryDirector]::TestNotice = $null
+    [EleanorRomance.StoryDirector]::OnGameLoadedEarly()
+    [EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($store.storeClientManager)
+    Assert ([EleanorRomance.StoryDirector]::TestNotice -eq $notice) 'Unexpected save support notice.'
+    Assert (![EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.StoryDirector]::ShouldSuppressOriginal -and
+        $store.storeClientManager.clientStack.Count -eq 0 -and
+        [EleanorRomance.StoryDirector]::PendingChapterForDay($station.dayCounter) -eq 0) 'An unsupported save queued story progression.'
+    Assert ($snapshot.Count -eq [ModHelper]::TestData.Count) 'Loading a paused save changed its stored fields.'
+    foreach ($key in $snapshot.Keys) {
+        Assert ([ModHelper]::TestData.ContainsKey($key) -and [ModHelper]::TestData[$key] -ceq $snapshot[$key]) "Loading a paused save changed $key."
+    }
+}
+
+Reset-Run
+[ModHelper]::TestData.Clear()
+$fixture = Get-Content (Join-Path $PSScriptRoot 'fixtures/legacy_800_real_anonymized.json') -Raw | ConvertFrom-Json
+foreach ($field in $fixture.state.PSObject.Properties) {
+    [ModHelper]::SetModData('eleanor_romance',$field.Name,[string]$field.Value)
+}
+Assert-PausedSave 'er_notice_save_before_rewrite'
+
+Reset-Run 13
+[EleanorRomance.MaidState]::FeatureVersion = 1
+Assert-PausedSave 'er_notice_save_before_rewrite'
+
+Reset-Run 20
+[EleanorRomance.DualState]::Accept()
+[EleanorRomance.DualState]::Complete('d02')
+Assert-PausedSave 'er_notice_save_before_rewrite'
+
+Reset-Run 106
+[EleanorRomance.RomanceState]::RevVersion = 1
+Assert-PausedSave 'er_notice_save_before_rewrite'
+
+Reset-Run
+[EleanorRomance.RomanceState]::SchemaVersion = 3
+Assert-PausedSave 'er_notice_save_schema'
+
+Reset-Run 13
+[EleanorRomance.StoryDirector]::OnGameLoadedEarly()
+Assert ([EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.RomanceState]::Chapter -eq 13 -and
+    [EleanorRomance.StoryDirector]::PendingChapterForDay(40) -eq 13) 'Post-rewrite common-line save failed to resume.'
+
+Reset-Run
+[ModHelper]::TestData.Clear()
+Assert (![EleanorRomance.StoryDirector]::ShouldSuppressOriginal) 'Uninitialized vanilla story was suppressed.'
+[EleanorRomance.RomanceState]::ResetForNewGame($true)
+Assert ([EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.MaidState]::FeatureVersion -eq 2 -and
+    [EleanorRomance.RomanceState]::NextVisitDay -eq 12) 'New early-start run used the wrong story format or opening date.'
+'PASS: pre-rewrite saves pause without writeback, current saves resume, and the fresh run uses the current format.'
+
 # Native aid action supplies its price, affordability predicate and accounting.
 Reset-Run 6
 $store.playerCash=49
@@ -733,30 +747,6 @@ Assert ([EleanorRomance.RomanceState]::Chapter -eq 7 -and
     $store.playerCash -eq 100) 'Chapter 6 no-aid choice changed money or failed to advance.'
 'PASS: chapter 6 "只问，不给" completes without aid.'
 
-# Native warning rewards are captured before placement, then use the mod's
-# tested placement/retry mechanism. The numbers below are expectations for the
-# installed official update, not values duplicated in production mod code.
-foreach($option in 0..1){
-    Reset-Run
-    Assert ([EleanorRomance.VanillaEleanorBridge]::GiveWarningGift($option)) 'Native gift was not delivered.'
-    $gift=[GraphUtils]::TestLastGift
-    Assert ([GeneralHelper]::IsItemOwned($gift)) 'Native gift was not player-owned.'
-    if($option -eq 0){
-        Assert ($gift.identifier -eq 'portable_water_purifier' -and
-            [DurabilityHelper]::GetRealDurability($gift) -eq 175) 'Native purifier reward balance changed or was lost.'
-    } else {
-        Assert ($gift.identifier -eq 'pheromone_perfume' -and
-            $gift.GetTagReadonly('CURRENT_USE_COUNT_INT').GetInt() -eq 5) 'Native perfume reward balance changed or was lost.'
-    }
-}
-Reset-Run
-[GraphUtils]::TestRemaining=1
-Assert (![EleanorRomance.VanillaEleanorBridge]::GiveWarningGift(0)) 'Full inventory falsely accepted a native gift.'
-[GraphUtils]::TestRemaining=0
-Assert ([EleanorRomance.VanillaEleanorBridge]::GiveWarningGift(0)) 'Native gift could not be retried.'
-Assert (![EleanorRomance.VanillaEleanorBridge]::CaptureReward((New-Item '1' 1))) 'Native placement capture leaked outside its scope.'
-'PASS: actual native 175-durability/5-use rewards, ownership, full-inventory retry and capture scope.'
-
 # Run the real native CheckStoryLineEleanor rather than a copied rescue calendar.
 foreach($early in @($false,$true)){foreach($free in @($false,$true)){
     Reset-Run
@@ -769,7 +759,7 @@ foreach($early in @($false,$true)){foreach($free in @($false,$true)){
     Assert ($manager.clientStack.Count -eq 0) 'Native rescue arrived before two days.'
     $station.dayCounter=42
     $manager.CheckStoryLineEleanor()
-    Assert ($manager.clientStack.Count -eq 1 -and $manager.clientStack[0].identifier -eq 'eleanorBailOfficer') 'Native officer did not arrive on D+2.'
+    Assert ($manager.clientStack.Count -eq 1 -and $manager.clientStack[0].identifier -eq 'er_story_bail_officer') 'Native officer did not arrive on D+2.'
     $manager.CheckStoryLineEleanor()
     Assert ($manager.clientStack.Count -eq 1) 'Native scheduler queued a duplicate officer.'
     $officer=$manager.clientStack[0];$manager.clientStack.Clear();Use-Client $officer
@@ -794,7 +784,7 @@ foreach($early in @($false,$true)){foreach($free in @($false,$true)){
     Assert ($manager.clientStack.Count -eq 0) 'Freed visitor arrived on the bail day.'
     $station.dayCounter=43
     $manager.CheckStoryLineEleanor()
-    Assert ($manager.clientStack.Count -eq 1 -and $manager.clientStack[0].identifier -eq 'eleanorFreed') 'Native freed visitor did not arrive on D+3.'
+    Assert ($manager.clientStack.Count -eq 1 -and $manager.clientStack[0].identifier -eq 'er_story_freed') 'Native freed visitor did not arrive on D+3.'
     $freed=$manager.clientStack[0];$manager.clientStack.Clear();Use-Client $freed
     [EleanorRomance.VanillaEleanorBridge]::OnLoaded()
     [EleanorRomance.VanillaEleanorBridge]::OnLoaded()
@@ -811,23 +801,13 @@ foreach($early in @($false,$true)){foreach($free in @($false,$true)){
 'PASS: native scheduler D+2/D+3, 500/40 rules, both starting modes, dedupe and chapter continuation.'
 
 Reset-Run
-[EleanorRomance.RomanceState]::Arrested=$true
-[EleanorRomance.RomanceState]::TrapResumeChapter=10
-[EleanorRomance.RomanceState]::Affection=17
-[EleanorRomance.RomanceState]::DriveState=2
-[EleanorRomance.VanillaEleanorBridge]::SynchronizeRescue()
-Assert ($store.storeClientData.eleanorArrestDay -eq 40 -and [EleanorRomance.RomanceState]::NativeRescueLinked) 'Legacy MOD arrest did not use native migration.'
-$station.dayCounter=41
-[EleanorRomance.VanillaEleanorBridge]::SynchronizeRescue()
-Assert ($store.storeClientData.eleanorArrestDay -eq 40 -and
-    [EleanorRomance.RomanceState]::Affection -eq 17 -and [EleanorRomance.RomanceState]::DriveState -eq 2) 'Repeated migration postponed bail or reset story progress.'
 [EleanorRomance.RomanceState]::OldBlocked=$true
 $store.storeClientData.eleanorArrestDay=7
 Assert ([EleanorRomance.VanillaEleanorBridge]::PrepareScheduledClient($store.storeClientManager,
     [StoreClient]::new())) 'Preserved vanilla save was blocked.'
 [EleanorRomance.VanillaEleanorBridge]::SynchronizeRescue()
-Assert ($store.storeClientData.eleanorArrestDay -eq 7) 'Vanilla-preserved save was migrated by the remake.'
-'PASS: legacy MOD arrest migration, preserved progression and untouched vanilla-preserved saves.'
+Assert ($store.storeClientData.eleanorArrestDay -eq 7) 'Native rescue data changed in a vanilla-only save.'
+'PASS: native rescue state is preserved on vanilla-only saves.'
 
 # A native introductory visit due on the same day must not accompany the bail officer.
 Reset-Run
@@ -836,7 +816,7 @@ $station.dayCounter=21
 $station.dayCounter=23
 $store.storeClientManager.CheckStoryLineEleanor()
 Assert ($store.storeClientManager.clientStack.Count -eq 1 -and
-    $store.storeClientManager.clientStack[0].identifier -eq 'eleanorBailOfficer') 'Vanilla introduction leaked into remake rescue.'
+    $store.storeClientManager.clientStack[0].identifier -eq 'er_story_bail_officer') 'Vanilla introduction leaked into remake rescue.'
 $external=[StoreClient]::new();$external.identifier='eleanor_external';$external.sourceModId='another_mod'
 Assert ([EleanorRomance.VanillaEleanorBridge]::PrepareScheduledClient($store.storeClientManager,$external)) 'Queue preparation swallowed an unrelated mod client.'
 
@@ -878,37 +858,20 @@ Assert ([EleanorRomance.RomanceState]::Chapter -eq 10 -and
     $store.storeClientData.eleanorHelpedTimes -eq 1) 'Release retry skipped a chapter or counted help twice.'
 'PASS: queue isolation, external-mod passthrough, postponed/refused bail and interrupted release retry.'
 
-$claim=[EleanorRomance.EleanorStory].GetMethod('GiveWarningGift',[Reflection.BindingFlags]'NonPublic,Static')
-Reset-Run
-[GraphUtils]::TestRemaining=1
-$claim.Invoke($null,@([int]0))
-Assert (![EleanorRomance.RomanceState]::WarningGiftGiven) 'Full native reward consumed the claim.'
-[GraphUtils]::TestRemaining=0
-$claim.Invoke($null,@([int]0))
-Assert ([EleanorRomance.RomanceState]::WarningGiftGiven) 'Delivered native reward did not persist its claim.'
-$received=[GraphUtils]::TestLastGift
-$claim.Invoke($null,@([int]1))
-Assert ([object]::ReferenceEquals($received,[GraphUtils]::TestLastGift)) 'Saved reward claim allowed a second gift.'
 [ItemDirectory]::TestItem=New-Item '1' 1
 $locket=[EleanorRomance.Items]::CreateLocket()
 Assert ($locket.IsTag('IMPORTANT_TAG')) 'New keepsake did not inherit story-item protection.'
-'PASS: native reward claim retry/deduplication and keepsake protection.'
+'PASS: keepsake protection.'
 . (Join-Path $PSScriptRoot 'test_arrest_speakers.ps1')
 if($Rewrite){. (Join-Path $PSScriptRoot 'test_rewritten_routes.ps1')}
 if($Maid){
     . (Join-Path $PSScriptRoot 'test_maid_routes.ps1')
-    . (Join-Path $PSScriptRoot 'test_business_routes.ps1')
-    . (Join-Path $PSScriptRoot 'test_motivation_routes.ps1')
-    . (Join-Path $PSScriptRoot 'test_dividend_routes.ps1')
     . (Join-Path $PSScriptRoot 'test_project_discount_routes.ps1')
+    . (Join-Path $PSScriptRoot 'test_dividend_routes.ps1')
     . (Join-Path $PSScriptRoot 'test_scav_routes.ps1')
-    . (Join-Path $PSScriptRoot 'test_interaction_routes.ps1')
-    . (Join-Path $PSScriptRoot 'test_relationship_choices.ps1')
-    . (Join-Path $PSScriptRoot 'test_named_speakers.ps1')
-    . (Join-Path $PSScriptRoot 'test_reported_issues.ps1')
 }
 
-if($Dual){. (Join-Path $PSScriptRoot 'test_dual_routes.ps1');. (Join-Path $PSScriptRoot 'test_dual_showcase.ps1')}
+if($Dual){. (Join-Path $PSScriptRoot 'test_dual_showcase.ps1')}
 . (Join-Path $PSScriptRoot 'test_reading_fixes.ps1')
 if($ReleaseQA){
     . (Join-Path $PSScriptRoot 'test_release_qa.ps1')

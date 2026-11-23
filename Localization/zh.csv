@@ -3806,6 +3806,7 @@ er_notice_old_save,"检测到该存档已推进过原版埃莉诺剧情。为避
 er_notice_queue_now,"下一章埃莉诺剧情已安排在今天。"
 er_notice_reset_arm,"再点一次以确认重置。此操作会清除原版与 MOD 的埃莉诺剧情进度。"
 er_notice_reset_done,"埃莉诺剧情线已重置。下一次开店/过天后重新开始；已获得的物品不会消失。"
+er_notice_save_before_rewrite,"这个存档来自埃莉诺剧情重制前的版本。MOD 剧情已暂停，原进度仍在。请载入重制后的存档，或开新档体验当前剧情。"
 er_notice_save_schema,"此存档的埃莉诺剧情数据版本为 {0}，当前 MOD 需要版本 {1}。剧情已暂停，原有进度已保留。"
 er_notice_savings_complete,"调查款已攒够 800 信用点。"
 er_notice_savings_progress,"调查款：{0} / 800（还差 {1} 信用点）"

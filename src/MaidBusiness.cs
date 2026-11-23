@@ -7,12 +7,9 @@ namespace EleanorRomance
     /// <summary>Native shop actions. Only order scheduling and one-shot receipts are mod state.</summary>
     public static class MaidBusiness
     {
-        public const int CollectVisit=910, SellVisit=911, BuyVisit=912, SampleVisit=914;
-        private const int RetiredAppraiseVisit=913; // Reserved for old pending visits; never schedule again.
-        private const string LegacyAppraisalTag="ER_BUSINESS_APPRAISAL";
+        public const int CollectVisit=910, SellVisit=911, BuyVisit=912;
         private static readonly ConditionalWeakTable<StoreClient,Func<GameItem,bool>> BuyerFilters=
             new ConditionalWeakTable<StoreClient,Func<GameItem,bool>>();
-        public const string SampleTag="ER_BUSINESS_SAMPLE";
         private static string K(string key)=>"biz."+key;
         public static int Number(string key,int fallback=0)=>MaidState.Int(K(key),fallback);
         public static bool Done(string key)=>MaidState.Flag(K(key));
@@ -21,12 +18,6 @@ namespace EleanorRomance
         public static Dialogue Say(string key,params object[] args)=>StoryEngine.Text(L.Eleanor,L.Get("er_biz_"+key,args));
         private static string Receipt(StoreClient c)=>c.identifier+".stock";
 
-        public static void OnLoaded()
-        {
-            if(!RomanceState.StoryActive || MaidState.PendingVisit!=RetiredAppraiseVisit)return;
-            MaidState.PendingVisit=BuyVisit;
-            Set("routine.cycle",1);
-        }
         private static void PutStock(GameItem item)=>PlayerStore.Instance.AddDirectSellingItemToTableMiddle(item,isOwend:false);
         private static void Stock(StoreClient c,params string[] ids)
         {
@@ -44,7 +35,7 @@ namespace EleanorRomance
             Mark(Receipt(c));
         }
         private static bool SafeItem(GameItem item)=>item!=null && !item.IsTag("IMPORTANT_TAG") &&
-            !item.IsTag(LegacyAppraisalTag) && !StolenHelper.IsStolenItem(item);
+            !StolenHelper.IsStolenItem(item);
         public static bool RefusesBusinessItem(StoreClient client,GameItem item)=>
             BuyerFilters.TryGetValue(client,out var accepts) && !accepts(item);
         private static void Buyer(StoreClient c,int budget,string receipt,Func<GameItem,bool> filter=null,string[] interests=null)
@@ -109,67 +100,13 @@ namespace EleanorRomance
             c.OnArrival+=()=>{if(Number("order.first")==0)Set("order.first",MaidState.Today);};
             c.mainDialogue=Say("order_collect",Number("order.tools"),Number("order.materials"),
                 Math.Max(0,Number("order.budget",600)-Number("order.spent")));
-            StoryEngine.InterceptDismiss(c,()=>MaidInteractions.WithLight(MaidDividends.WithReceipt(Say(Number("order.state")==2?"order_done":
-                Number("order.spent")>=Number("order.budget",600)?"order_budget":"order_partial"))),()=>
+            StoryEngine.InterceptDismiss(c,()=>MaidDividends.WithReceipt(Say(Number("order.state")==2?"order_done":
+                Number("order.spent")>=Number("order.budget",600)?"order_budget":"order_partial")),()=>
             {
                 if(Number("order.spent")>=Number("order.budget",600) && Number("order.state")==1)Set("order.state",4);
                 Set("order.next",MaidState.Today+2);Complete(CollectVisit);
             });
             c.CompleteClientCreation();return c;
-        }
-
-        public static void ConfigureSupply(StoreClient c,Dialogue opening,Func<Dialogue> ending,Action complete)
-        {
-            c.clientIntent=StoreClient.ClientIntent.SELL;c.SetWholesale(10);
-            Action finish=()=>{if(!Done("supply.finished")){Mark("supply.finished");complete();}};
-            StoryEngine.InterceptDismiss(c,ending,finish);
-            if(Number("supply.choice")!=0)
-            {
-                StoryEngine.Tail(opening).SetNextDialogue(Say("supply_resume").SetEndAction(()=>SpawnSupply(c)));
-                return;
-            }
-            StoryEngine.Tail(opening).SetNextDialogue(Say("supply_offer"));
-            var trade=Say("supply_trade");trade.SetEndAction(()=>SpawnSupply(c));
-            var skip=MaidText.Finish(ending(),finish);
-            StoryEngine.AddChoices(opening,L.Get("er_biz_supply_prompt"),
-                new StoryEngine.Choice(L.Get("er_biz_supply_tools"),L.Get("er_biz_normal_prices"),trade,()=>ChooseSupply(1)),
-                new StoryEngine.Choice(L.Get("er_biz_supply_materials"),L.Get("er_biz_normal_prices"),trade,()=>ChooseSupply(2)),
-                new StoryEngine.Choice(L.Get("er_biz_supply_no"),L.Get("er_maid_choice_no_cost"),skip,()=>ChooseSupply(3)));
-        }
-        private static void ChooseSupply(int choice){if(Number("supply.choice")==0)Set("supply.choice",choice);}
-        private static void SpawnSupply(StoreClient c)
-        {
-            if(Number("supply.choice")==1)Stock(c,"screwdriver","wire_cutter");
-            else if(Number("supply.choice")==2)Stock(c,"metal_ingot","scrap_metal");
-        }
-        public static void AttachSample(StoreClient c,Dialogue opening)
-        {
-            c.clientIntent=StoreClient.ClientIntent.SELL;c.SetWholesale(10);
-            if(MaidProjects.Paid(3) && !MaidProjects.ResultShown(3))Mark("sample.entitled");
-            c.onItemSold+=(item,paid)=>
-            {
-                if(item!=null && item.IsTag(SampleTag))
-                {Mark("sample.claimed");item.RemoveItemFeatureByID("free");}
-            };
-            opening.SetStartAction(()=>
-            {
-                SpawnSample(c);
-                if(Number("supply.choice")==2)Stock(c,"metal_ingot","scrap_metal");
-                else Stock(c,"screwdriver","wire_cutter");
-            });
-        }
-        private static void SpawnSample(StoreClient c)
-        {
-            if(!Done("sample.entitled") || Done("sample.claimed") || Done(c.identifier+".sample"))return;
-            var item=DirectoryMaster.Item("screwdriver");
-            item.EnableTag(SampleTag);item.AddItemFeature(ItemFeatureList.FreeFeature());
-            item.shortDescription=L.Get("er_biz_sample_desc");
-            PutStock(item);Mark(c.identifier+".sample");
-        }
-        public static void AttachRestock(StoreClient c)
-        {
-            Buyer(c,900,"restock.spent");
-            c.mainDialogue=Say("restock_intro");
         }
 
         private static bool AvailableBusiness=>VersionGate.IsSupported && RomanceState.StoryActive &&
@@ -193,7 +130,6 @@ namespace EleanorRomance
             if(Number("order.state")==1 && Number("order.first")>0 && day>Number("order.first")+4)
             {Set("order.state",4);StoryDirector.Notify(L.Get("er_biz_order_expired"));}
             if(Number("order.state")==1 && day>=Number("order.next"))id=CollectVisit;
-            else if(Done("sample.entitled") && !Done("sample.claimed") && MaidProjects.ResultShown(3) && day>=Number("sample.next"))id=SampleVisit;
             else if(MaidDividends.Due(day))id=MaidDividends.VisitId;
             else if(MaidState.Active && NeedsFunding() && day>=Number("routine.next") && day>=MaidState.LastImportantDay+2)
             {
@@ -211,18 +147,7 @@ namespace EleanorRomance
         }
         public static StoreClient CreateEvent(int id)
         {
-            if(id==RetiredAppraiseVisit){OnLoaded();id=BuyVisit;}
             if(id==CollectVisit)return Collect();
-            if(id==SampleVisit)
-            {
-                var c=EleanorStory.NewEleanorClient("biz_sample_"+MaidState.Today,"eleanor_scav",StoreClient.ClientIntent.SELL);
-                c.mainDialogue=Say("sample_pickup");AttachSample(c,c.mainDialogue);
-                // Pickup is the already-paid sample only, not another shop stock.
-                c.mainDialogue.SetStartAction(()=>SpawnSample(c));
-                StoryEngine.InterceptDismiss(c,()=>MaidInteractions.WithLight(MaidDividends.WithReceipt(Say(Done("sample.claimed")?"sample_close":"sample_later"))),
-                    ()=>{Set("sample.next",MaidState.Today+7);Complete(id);});
-                c.CompleteClientCreation();return c;
-            }
             if(id<SellVisit || id>BuyVisit)return null;
             int serial=Number("routine.serial");
             var client=EleanorStory.NewEleanorClient("biz_routine_"+serial,"eleanor_scav",StoreClient.ClientIntent.SELL);
@@ -231,7 +156,7 @@ namespace EleanorRomance
             client.mainDialogue=Say(id==SellVisit?"routine_sell":"routine_buy");
             if(id==SellVisit)client.mainDialogue.SetEndAction(()=>Stock(client,"scrap_metal","screwdriver"));
             else Buyer(client,350,"routine.spent."+serial);
-            StoryEngine.InterceptDismiss(client,()=>MaidInteractions.WithLight(MaidDividends.WithReceipt(Say("routine_end"))),done);
+            StoryEngine.InterceptDismiss(client,()=>MaidDividends.WithReceipt(Say("routine_end")),done);
             client.CompleteClientCreation();return client;
         }
         private static void Complete(int id)

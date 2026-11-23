@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EleanorRomance
 {
-    /// <summary>Runtime for the maid v2 rewrite.  Old FeatureVersion==1 saves stay on MaidStory.</summary>
+    /// <summary>Runtime for the attendant route.</summary>
     public static class MaidV2Story
     {
         private sealed class ResultTerminal
@@ -409,8 +409,6 @@ namespace EleanorRomance
                     StoryDirector.AdvanceChapter(17, 18);
                     break;
                 case "v2_a2c1":
-                    MaidState.AddressAccepted = true;
-                    MaidState.DebutShown = true;
                     StoryDirector.AdvanceChapter(18, 19);
                     break;
                 case "v2_a2c2":

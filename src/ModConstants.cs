@@ -3,7 +3,6 @@ namespace EleanorRomance
     public static class ModConstants
     {
         public const string ModId = "eleanor_romance";
-        public const string LegacyScenarioId = "eleanor_romance.old_echo";
         public const string EarlyStartPerkId = "eleanor_romance.early_start";
         public const string LocketItemId = "eleanor_romance.locket";
         public const string BraceletItemId = "eleanor_romance.upper_bracelet";
@@ -18,11 +17,7 @@ namespace EleanorRomance
         public const string LydiaSprite = "femaleUpper10";
         public const string MotherSprite = "femaleUpper3";
 
-        // Legacy _vanilla keys remain for save migration only; they are
-        // upgraded to the beauty portraits when a save is loaded.
-        public const string LydiaPortraitVanilla = "er_portrait_lydia_female_vanilla";
         public const string LydiaPortraitBeauty = "er_portrait_lydia_female_beauty";
-        public const string MotherPortraitVanilla = "er_portrait_mother_female_vanilla";
         public const string MotherPortraitBeauty = "er_portrait_mother_female_beauty";
         public const string MotherHomePortraitBeauty = "er_portrait_mother_home_female_beauty";
         public const string EleanorVestPortrait = "er_portrait_eleanor_revolution_undersuit_female_beauty";

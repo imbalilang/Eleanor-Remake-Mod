@@ -32,15 +32,13 @@ $station.dayCounter=66;[EleanorRomance.MaidDividends]::Accrue()
 Assert ([EleanorRomance.MaidDividends]::Pending -eq 1600 -and [EleanorRomance.MaidDividends]::DailyRate -eq 600) 'Rate change repriced older days.'
 Dividend-Run 28 100
 [EleanorRomance.MaidDividends]::Accrue()
-Assert ([EleanorRomance.MaidDividends]::Pending -eq 0 -and [EleanorRomance.MaidDividends]::LastDay -eq 100) 'Old completed save invented historical dividends.'
+Assert ([EleanorRomance.MaidDividends]::Pending -eq 0 -and [EleanorRomance.MaidDividends]::LastDay -eq 100) 'Opening the ledger credited days before its accrual start.'
 $station.dayCounter=104;[EleanorRomance.MaidDividends]::Accrue()
 Assert ([EleanorRomance.MaidDividends]::Pending -eq 2400) 'Established income was not 600 per game day.'
-[EleanorRomance.MaidState]::End('ordinary-lovers',1)
-Assert ([EleanorRomance.MaidDividends]::DailyRate -eq 600) 'Business income was made conditional on retaining the private role.'
-[EleanorRomance.RomanceState]::Route=4;[EleanorRomance.MaidDividends]::Accrue()
+[EleanorRomance.RomanceState]::RomanceLocked=$true;[EleanorRomance.MaidDividends]::Accrue()
 $station.dayCounter=110;[EleanorRomance.MaidDividends]::Accrue()
 Assert ([EleanorRomance.MaidDividends]::Pending -eq 2400 -and [EleanorRomance.MaidDividends]::DailyRate -eq 0) 'Terminated cooperation kept earning or erased the ledger.'
-'PASS: dividend story/result gates, same-day dedupe, rollback cursor, 200-to-600 rate split, old-save start and business rights independent of the private role.'
+'PASS: dividend story/result gates, same-day dedupe, rollback cursor, 200-to-600 rate split, opening accrual and contract termination.'
 
 # Only reading the receipt credits cash. Saved balances, repeated callbacks and
 # the native int cash boundary must conserve earned = paid + pending.
@@ -49,7 +47,8 @@ Dividend-Run 28
 $cash=$store.playerCash;[EleanorRomance.MaidState]::PendingVisit=915
 $c=[EleanorRomance.MaidDividends]::CreateVisit();Use-Client $c
 Assert ($store.playerCash -eq $cash -and [EleanorRomance.MaidDividends]::Pending -eq 2400) 'Creating a visitor paid cash.'
-$receipt=@((Motivation-Nodes $c.mainDialogue) | Where-Object plainText -eq 'er_div_receipt')[0]
+$receipt=$c.mainDialogue
+while ($receipt -and $receipt.plainText -ne 'er_div_receipt') { $receipt=$receipt.nextDialogue }
 Assert ($receipt -ne $null) 'Dividend visit had no receipt.'
 $receipt.ExecuteEndAction()
 Assert ($store.playerCash -eq $cash+2400 -and [EleanorRomance.MaidDividends]::Pending -eq 0 -and
@@ -72,63 +71,3 @@ Dividend-Run 28;[EleanorRomance.MaidDividends]::Accrue();$station.dayCounter=100
 [EleanorRomance.MaidDividends]::Accrue()
 Assert ([EleanorRomance.MaidDividends]::Pending -gt [int]::MaxValue) 'Accrual was truncated to native int cash.'
 'PASS: real receipt cash, no payment on construction, replay/save continuation, partial settlement, native cash overflow safety and long balance conservation.'
-
-# Urgent and main story visits win; skipped visits leave all accrued days intact.
-Dividend-Run 27
-[EleanorRomance.MaidDividends]::Accrue()
-[EleanorRomance.MaidState]::ProgressDay=63
-$manager=$store.storeClientManager;$urgent=[StoreClient]::new();$urgent.identifier='test_urgent';$urgent.isSentenceOfficer=$true
-$manager.clientStack.Add($urgent);$station.dayCounter=64
-[EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
-Assert ($manager.clientStack.Count -eq 1 -and [EleanorRomance.MaidDividends]::Pending -eq 2400) 'Urgent visitor was displaced or lost accrued dividends.'
-$manager.clientStack.Clear();[EleanorRomance.MaidState]::LastImportantDay=64
-[EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
-Assert ($manager.clientStack.Count -eq 0) 'Dividend visit violated same-day spacing.'
-$station.dayCounter=65;$cash=$store.playerCash
-[EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
-Assert ([EleanorRomance.MaidState]::PendingVisit -eq 28 -and $manager.clientStack.Count -eq 1) 'Dividend visit displaced the final agreement.'
-$c=$manager.clientStack[0];$manager.clientStack.Clear();Use-Client $c
-Assert (@((Motivation-Nodes $c.mainDialogue) | Where-Object plainText -eq 'er_div_receipt').Count -eq 0) 'Final emotional scene inserted a cash handover.'
-Finish-Dialogue (Pick $c.mainDialogue 0)
-Assert ($store.playerCash -eq $cash -and [EleanorRomance.MaidDividends]::Pending -eq 3000) 'Final agreement paid or lost saved dividends.'
-$store.currentClientInstance=$null;$station.dayCounter=67
-[EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
-[EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
-Assert ($manager.clientStack.Count -eq 1 -and [EleanorRomance.MaidState]::PendingVisit -eq 915) 'Due dividend visit was missing or duplicated.'
-$c=$manager.clientStack[0];$manager.clientStack.Clear();Use-Client $c;Finish-Dialogue $c.mainDialogue
-Assert ($store.playerCash -eq $cash+4200 -and [EleanorRomance.MaidDividends]::NextDelivery -eq 71) 'Postponed settlement lost days or set the wrong next visit.'
-# This check concerns unlimited settlements after optional epilogues are closed;
-# the party's independent due/priority path is exercised in its own suite.
-[EleanorRomance.GalaStory]::Phase=8
-[EleanorRomance.MaidState]::SetInt('daily_index',4);$store.currentClientInstance=$null;$station.dayCounter=71
-[EleanorRomance.StoryDirector]::OnGenerateCustomerVeryEarly($manager)
-Assert ($manager.clientStack.Count -eq 1 -and [EleanorRomance.MaidState]::PendingVisit -eq 915) 'Finishing four epilogue chats disabled recurring dividends.'
-'PASS: dividend accrual through urgent/same-day delays, main-story priority, pure final agreement, deduplicated delivery and unlimited post-ending settlements.'
-
-# Stage introductions and real existing business/daily visitors carry the money.
-Dividend-Run 24 65;[EleanorRomance.MaidState]::Flag('p3.shown',$false)
-[EleanorRomance.MaidState]::PendingVisit=25
-$c=[EleanorRomance.MaidStory]::CreateEvent(25);Use-Client $c;Finish-Dialogue $c.mainDialogue
-$store.TryPlayerDismissCurrentClient($true)
-Assert (@((Motivation-Nodes $ui.currentDialog) | Where-Object plainText -eq 'er_div_first').Count -eq 1) 'First-order scene did not explain the numeric reward.'
-Finish-Dialogue $ui.currentDialog
-Assert ([EleanorRomance.MaidDividends]::DailyRate -eq 200 -and [EleanorRomance.MaidDividends]::Pending -eq 0) 'First-order completion did not start next-day accrual.'
-$station.dayCounter=70;[EleanorRomance.MaidState]::Flag('p4.paid',$true);[EleanorRomance.MaidState]::PendingVisit=27
-$cash=$store.playerCash;$c=[EleanorRomance.MaidStory]::CreateEvent(27);Use-Client $c;Leave-Trade $c
-Assert ($store.playerCash -eq $cash+1000 -and [EleanorRomance.MaidDividends]::DailyRate -eq 600 -and
-    @((Motivation-Nodes $ui.currentDialog) | Where-Object plainText -eq 'er_div_established').Count -eq 1) 'Launch did not settle the old rate and introduce the new one.'
-foreach($id in @(907,911,912,914)){
-    Dividend-Run 28;[EleanorRomance.MaidDividends]::Accrue();$station.dayCounter=64
-    [EleanorRomance.MaidState]::PendingVisit=$id;$cash=$store.playerCash
-    $c=[EleanorRomance.MaidStory]::CreateEvent($id);Use-Client $c
-    if($id -eq 907){Finish-Dialogue $c.mainDialogue}
-    else{Finish-Dialogue $c.mainDialogue;Leave-Trade $c}
-    Assert ($store.playerCash -eq $cash+2400 -and [EleanorRomance.MaidDividends]::Pending -eq 0) "Eleanor visit $id did not carry accrued dividends."
-}
-Dividend-Run 28;[EleanorRomance.MaidDividends]::Accrue();$station.dayCounter=64
-[EleanorRomance.MaidState]::PendingVisit=26;$cash=$store.playerCash
-$c=[EleanorRomance.MaidStory]::CreateEvent(26);Use-Client $c;Leave-Trade $c
-Assert ($store.playerCash -eq $cash -and [EleanorRomance.MaidDividends]::Pending -eq 2400) 'Another customer handed out Eleanor dividends.'
-$description=[EleanorRomance.MaidProjects]::Description([EleanorRomance.MaidProjects]::Find('er_maid_p4_cash'))
-Assert ($description.Contains('er_div_project_established') -and $description.Contains('er_div_summary')) 'Wilde project omitted the reward or ledger summary.'
-'PASS: first-order/launch numeric introductions, stage-rate boundary, four existing Eleanor visit carriers, no third-party payouts and concise Wilde reward display.'

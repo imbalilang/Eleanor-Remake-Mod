@@ -27,8 +27,7 @@ function Reset-Modern($kind,$code){
         [EleanorRomance.StoryCoreFacts]::Record(20)
     }
     if($kind -eq 'dual'){
-        [EleanorRomance.DualState]::Accept(1)
-        [EleanorRomance.DualState]::Flag('d.route',$true)
+        [EleanorRomance.DualState]::Accept()
     }
 }
 function Modern-Client($kind,$code){
@@ -152,7 +151,8 @@ foreach($option in 0..2){
     Assert (($text -contains 'er_dual_dv13_b003_01') -eq ($option -eq 1)) 'Closing kiss selected the wrong Lydia reaction'
     Assert (@($text | Where-Object {$_ -eq 'er_dual_dv13_b004_01'}).Count -eq 1) 'Closing branch lost or duplicated the common ending'
     $history=@(Render-ArrestHistory $head)
-    Assert (@($history | Where-Object {$_ -eq 'er_name_lydia: er_dual_dv13_b004_03'}).Count -eq 1) 'Closing companion action recorded as Eleanor'
+    Assert (@($history | Where-Object {$_ -eq 'er_name_lydia: er_dual_dv13_b004_04'}).Count -eq 1) 'Closing companion line recorded as Eleanor'
+    Assert ($history -contains 'name_eleanor: er_dual_dv13_b004_03') 'Eleanor closing line recorded as the companion'
     if($option -eq 0){
         Assert ($history -contains 'name_eleanor: er_dual_dv13_b002_01') 'Eleanor kiss recorded under the wrong name'
     }
@@ -328,7 +328,7 @@ foreach($route in @(1,2)){
     $endingShapes["maid$route"]=$page.TitleKey+'|'+$page.CgKey
     Reset-Modern dual 20
     [EleanorRomance.RomanceState]::Route=$route
-    [EleanorRomance.DualState]::Flag('d.act4',$true)
+    [EleanorRomance.DualState]::Complete('dv13')
     [EleanorRomance.DualState]::Relation=2
     $page=[EleanorRomance.EndingPages]::TryDualCompletion()
     Assert ($null -ne $page) 'Safe research choice lost the harem ending'

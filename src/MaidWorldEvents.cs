@@ -11,11 +11,8 @@ namespace EleanorRomance
         public static int State { get=>MaidState.Int("world.state"); set => MaidState.SetInt("world.state",value); }
         public static bool Acquitted=>State==3;
         public static bool Eligible=>RomanceState.StoryActive && RomanceState.Route==2 && RomanceState.MotherState==1
-            && RomanceState.ProtectionReady && RomanceState.DriveState==4 && RomanceState.BetrayalKind==0;
+            && RomanceState.ProtectionReady && RomanceState.DriveState==4;
         public static bool NeedsReceipt=>Eligible && State==0;
-        public static bool ChatPending=>Acquitted && !MaidState.Flag("world.chat_shown")
-            && RomanceState.Route!=4 && !RomanceState.RomanceLocked && RomanceState.EpilogueDone;
-
         public static bool AppendReceipt(Dialogue head)
         {
             if(!NeedsReceipt)return false;
@@ -50,12 +47,6 @@ namespace EleanorRomance
             }
             catch(Exception ex){ ModEntry.LogError("Acquittal news remains pending: "+ex); }
         }
-        public static void AppendChat(Dialogue head)
-        {
-            MaidText.Append(head,"world_b004");
-            if(MaidState.Progress>=27 && !MaidState.Flag("mother_at_27"))MaidText.Append(head,"world_b005");
-        }
-        public static void CompleteChat()=>MaidState.Flag("world.chat_shown",true);
     }
     [HarmonyPatch(typeof(StoreEventManager),"OnDayStart")]
     internal static class MaidWorldDayPatch

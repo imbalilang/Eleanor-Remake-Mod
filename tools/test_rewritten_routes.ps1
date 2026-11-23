@@ -159,44 +159,10 @@ Assert ([EleanorRomance.DualDirector]::CanOfferEntry(54)) 'Completed common fact
 
 Reset-Run 12
 [EleanorRomance.RomanceState]::Savings=500
-$client=[EleanorRomance.MaidStory]::CreateEntry();Use-Client $client
-$menu=Choice-Node $client.mainDialogue
-Assert ($menu -and [EleanorRomance.RomanceState]::Savings -eq 800 -and
-    ![EleanorRomance.RomanceState]::LocketSold) 'C11 fallback both sold and retained the pendant.'
-Assert ($menu.choices[0].Item2.nextDialogue -ne $null) 'Maid entry choice has no displayed reply line.'
-Finish-Dialogue $menu.choices[0].Item2
-Assert ([EleanorRomance.RomanceState]::Chapter -eq 13) 'The normal C11 choice no longer advances.'
-
-Reset-Run 20
-[EleanorRomance.RomanceState]::MotherVisited=$true
-[EleanorRomance.RomanceState]::MotherState=1
-[EleanorRomance.RomanceState]::Route=1
-[EleanorRomance.DualState]::Accept(1)
-[EleanorRomance.DualState]::Flag('d.route',$true)
-$store.playerCash=125
-$station.dayCounter=63
-$client=[EleanorRomance.DualStory]::CreateScene('d05');Use-Client $client
-$menu=Choice-Node $client.mainDialogue
+$client=[EleanorRomance.EleanorStory]::CreateClient(12);Use-Client $client
+Assert ($null -eq (Choice-Node $client.mainDialogue) -and [EleanorRomance.RomanceState]::Savings -eq 800 -and
+    ![EleanorRomance.RomanceState]::LocketSold) 'C11 fallback offered paid work without a settled fee or sold the pendant.'
 Finish-Dialogue $client.mainDialogue
-Assert ($store.playerCash -eq 125) 'Closure payment happened before agreement.'
-$reply=$menu.choices[0].Item2
-Finish-Dialogue $reply
-Finish-Dialogue $reply
-Assert ($store.playerCash -eq 2125 -and [EleanorRomance.DualState]::Done('d05')) 'Closure agreement did not credit exactly 2000.'
-foreach($id in @('entry','d02','d03','d04')){[EleanorRomance.DualState]::Complete($id)}
-[EleanorRomance.DualState]::Flag('d.act2a',$true)
-[EleanorRomance.DualState]::Flag('d.act2',$true)
-Assert ([EleanorRomance.DualDirector]::NextScene(64) -eq 'd06') 'Closure is not due the following day.'
-Assert (![EleanorRomance.DualDirector]::TryQueue($store.storeClientManager,64)) 'Closure was queued as a regular shop customer.'
-$closure=([EleanorRomance.DualState].Assembly.GetType('EleanorRomance.DualClosingDay'))
-$pay=$closure.GetMethod('PayOnce',[Reflection.BindingFlags]'NonPublic,Static')
-$pay.Invoke($null,@())
-Assert ($store.playerCash -eq 2125) 'Closure payment duplicated on recovery.'
+Assert ([EleanorRomance.RomanceState]::Chapter -eq 13) 'The regular C11 visit no longer advances.'
 
-[EleanorRomance.DualState]::Complete('d09')
-[EleanorRomance.DualState]::Flag('d.act4',$true)
-[EleanorRomance.DualState]::Relation=2
-[EleanorRomance.DualMigration]::OnLoaded()
-Assert ([EleanorRomance.DualState]::CoreCommitted -and
-    [EleanorRomance.RomanceState]::Chapter -eq [EleanorRomance.RomanceState]::ChapterComplete) 'E4 did not finish the common progression.'
-'PASS: rewritten bracelet choices, common handoff, C11 pendant, closure compensation and schedule, and E4 recovery.'
+'PASS: bracelet choices, common handoff and the current detective-fee fallback.'

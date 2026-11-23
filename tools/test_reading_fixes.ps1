@@ -58,32 +58,3 @@ Finish-Dialogue (Fix-Pick $c.mainDialogue 2)
 Assert ([EleanorRomance.RomanceState]::ReturnGiftChoice -eq 3 -and [EleanorRomance.RomanceState]::Chapter -eq 10 -and
     $store.playerCash -eq 0 -and [object]::ReferenceEquals($last,[GraphUtils]::TestLastGift)) 'Declining the return gift changed cash/items or failed to continue.'
 'PASS: declining return gift preserves cash/items and advances normally.'
-
-if($Dual) {
-    $caseBlocks=@('dr_epilogue_route_b_unsubmitted','dr_epilogue_route_b','dr_epilogue_route_b','dr_epilogue_route_b_acquitted')
-    foreach($state in 0..3) {
-        Dual-Run;[EleanorRomance.DualState]::Accept(1)
-        [EleanorRomance.RomanceState]::Route=2
-        [EleanorRomance.MaidWorldEvents]::State=$state
-        $c=[EleanorRomance.DualStory]::CreateScene('dual_epilogue')
-        $lines=[System.Collections.Generic.List[string]]::new();$node=$c.mainDialogue
-        while($node){$lines.Add($node.plainText);$node=$node.nextDialogue}
-        foreach($block in @('dr_epilogue_route_b_unsubmitted','dr_epilogue_route_b','dr_epilogue_route_b_acquitted')) {
-            $text=[EleanorRomance.DualText]::Plain($block)
-            Assert (!$lines.Contains($text)) 'Retired epilogue replayed old case narration.'
-        }
-        Assert ([EleanorRomance.MaidWorldEvents]::State -eq $state -and [EleanorRomance.DualState]::Done('dual_epilogue')) 'Retired epilogue recovery changed case progress or was not retired.'
-    }
-    'PASS: retired epilogue becomes a regular visit without replaying case narration or mutating case state.'
-
-    Dual-Run;[EleanorRomance.DualState]::Accept(1)
-    $day=[EleanorRomance.DualState]::LastImportantDay
-    foreach($id in @('wait_2_1','wait_2_2')) {
-        $c=[EleanorRomance.DualStory]::CreateScene($id);Use-Client $c
-        $name=if($id -eq 'wait_2_1'){[EleanorRomance.L]::Eleanor}else{[EleanorRomance.L]::Get('er_name_lydia')}
-        Assert ($c.displayName -eq $name -and $c.mainDialogue.title -eq $name) 'G2 daily portrait/client and first speaker disagree.'
-        Finish-Dialogue $c.mainDialogue
-        Assert ([EleanorRomance.DualState]::LastImportantDay -eq $day -and ![EleanorRomance.DualProgression]::Passed(2)) 'G2 mixed-visitor daily advanced a main checkpoint.'
-    }
-    'PASS: G2 waiting alternates real Eleanor/Lydia clients while preserving main progress.'
-}

@@ -112,7 +112,7 @@ namespace EleanorRomance
         public static StoreClient CreateVisit()
         {
             var c=EleanorStory.NewEleanorClient("dividend_"+MaidState.Today,"eleanor_scav",StoreClient.ClientIntent.DIALOGUE);
-            var root=MaidInteractions.WithLight(WithReceipt(Say("visit")));
+            var root=WithReceipt(Say("visit"));
             MaidText.Finish(root,()=>
             {
                 if(MaidState.PendingVisit!=VisitId)return;

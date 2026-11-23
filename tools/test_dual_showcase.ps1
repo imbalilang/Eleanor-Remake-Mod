@@ -1,3 +1,12 @@
+function Dual-Run {
+    Reset-Run 20
+    [EleanorRomance.RomanceState]::MotherState=1
+    [EleanorRomance.RomanceState]::Route=2
+    [EleanorRomance.DualState]::Accept()
+    [EleanorRomance.DualShowcaseEffects]::Enabled=$true
+    [PlayerStore]::TestAllItems=[System.Collections.Generic.List[GameItem]]::new()
+    [EmporiumEntry]::TestShowcase=New-Inventory
+}
 function Display-Ornaments($mask){
     $inv=New-Inventory;[EmporiumEntry]::TestShowcase=$inv
     [PlayerStore]::TestAllItems.Clear()

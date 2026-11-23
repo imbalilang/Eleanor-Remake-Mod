@@ -55,60 +55,19 @@ namespace EleanorRomance
             Add("测试：恋爱线 第三幕D（婚礼）", () => TestLoveVisit(10), true);
             Add("测试：打印恋爱线状态 / Print love state", PrintLoveState);
             Add("测试：重置恋爱线 / Reset love", ResetLove, true);
-            Add("测试：革命军线第 1 段", TestRouteC);
-            Add("测试：失败分支（擅自交盘）", TestRouteD);
+            Add("测试：革命军线第 1 段", TestRevolutionOpening);
             Add("测试：后日谈", TestEpilogue);
             Add("测试：旧档档案员", TestOldSavePrompt);
             Add("测试：通关后重置档案员", TestRouteResetPrompt, true);
             Add("测试：好感 +5", AddAffection);
             Add("标记完整恋爱线（测试）", MarkRomanceComplete);
             RegisterMaidTests();
-            RegisterDualTests();
-        }
-
-        private static void RegisterDualTests()
-        {
-            Add("测试：双恋入口 / Dual entry", TestDualEntry, true);
-            Add("测试：双恋 dr07 / Dual dr07", () => TestDualScene("dr07"), true);
-            Add("测试：双恋 dr17 / Dual dr17", () => TestDualScene("dr17"), true);
-            Add("测试：打印双恋状态 / Print dual state", PrintDualState);
-            Add("测试：重置双恋 / Reset dual", () => { DualState.Reset(); StoryDirector.Notify("双恋状态已重置。"); }, true);
-        }
-
-        private static void TestDualEntry()
-        {
-            SetupCommon();
-            RomanceState.MotherState = 1;
-            RomanceState.Route = 1;
-            RomanceState.Chapter = 21;
-            RomanceState.NextVisitDay = 0;
-            RomanceState.UncleReported = true;
-            DualState.Reset();
-            DualState.FeatureVersion = DualState.CurrentVersion;
-            bool queued = DualDirector.ForceQueue("entry");
-            StoryDirector.Notify(queued ? "已排队双恋入口。" : "双恋入口排队失败。");
-        }
-
-        private static void TestDualScene(string id)
-        {
-            SetupCommon();
-            RomanceState.MotherState = 1;
-            RomanceState.Route = 1;
-            RomanceState.Chapter = 21;
-            RomanceState.Romance = 1;
-            RomanceState.UncleReported = true;
-            RomanceState.FairDeals = 3;
-            DualState.Reset();
-            DualState.Accept(1);
-            foreach (string prior in new[] { "dr01", "dr02", "dr03", "dr04", "dr05", "dr06", "dr07", "dr08", "dr09", "dr10", "dr11", "dr12", "dr13", "dr14", "dr15", "dr16" })
+            Add("测试：打印后宫状态 / Print harem state", PrintDualState);
+            Add("测试：重置后宫 / Reset harem", () =>
             {
-                if (prior == id) break;
-                DualState.Flag("scene." + prior, true);
-            }
-            DualState.Flag("scene.dr05", true);
-            if (id != "dr07" && id != "dr17") DualState.FirstTraded = true;
-            bool queued = DualDirector.ForceQueue(id);
-            StoryDirector.Notify(queued ? "已排队双恋场景 " + id : "双恋场景 " + id + " 排队失败。");
+                DualState.Reset();
+                StoryDirector.Notify("后宫状态已重置。");
+            }, true);
         }
 
         private static void TestLoveVisit(int visit)
@@ -152,8 +111,6 @@ namespace EleanorRomance
             StoryDirector.Notify("Dual entry=" + DualState.Entry
                 + " rel=" + DualState.Relation
                 + " plaque=" + DualState.PlaqueReceived + "/" + DualBusiness.PlaquePlaced()
-                + " biz=" + DualState.FirstBusiness + "/" + DualState.SecondBusiness
-                + " traded=" + DualState.FirstTraded + "/" + DualState.SecondTraded
                 + " core=" + DualState.CoreCommitted
                 + " pending=" + DualState.PendingScene);
         }
@@ -294,8 +251,7 @@ namespace EleanorRomance
             RomanceState.MotherState = 1;
             RomanceState.MotherVisited = true;
             RomanceState.Route = 1;
-            DualState.Accept(1);
-            DualState.Flag("d.route", true);
+            DualState.Accept();
             DualState.Flag("d.act1", true);
         }
 
@@ -417,7 +373,7 @@ namespace EleanorRomance
 
         private static void TestPreparationB()
         {
-            SetupCommon();
+            SetupMaidFixture(false);
             RomanceState.Route = 2;
             RomanceState.DriveState = 1;
             RomanceState.UncleReported = true;
@@ -428,7 +384,7 @@ namespace EleanorRomance
 
         private static void TestReunionA()
         {
-            SetupCommon();
+            SetupMaidFixture(false);
             RomanceState.Route = 1;
             RomanceState.DriveState = 1;
             QueueTestChapter(17);
@@ -436,7 +392,7 @@ namespace EleanorRomance
 
         private static void TestReunionB()
         {
-            SetupCommon();
+            SetupMaidFixture(false);
             RomanceState.Route = 2;
             RomanceState.DriveState = 1;
             RomanceState.ProtectionReady = true;
@@ -482,24 +438,14 @@ namespace EleanorRomance
             QueueTestChapter(24);
         }
 
-        private static void TestRouteC()
+        private static void TestRevolutionOpening()
         {
             SetupCommon();
             RomanceState.Route = 3;
             RomanceState.MotherState = 2;
             RomanceState.DriveState = 5;
-            QueueTestChapter(101);
-        }
-
-        private static void TestRouteD()
-        {
-            SetupCommon();
-            RomanceState.Route = 4;
-            RomanceState.MotherState = 3;
-            RomanceState.DriveState = 6;
-            RomanceState.BetrayalKind = 1;
-            RomanceState.Romance = 4;
-            QueueTestChapter(201);
+            RomanceState.RevVersion = 2;
+            QueueTestChapter(RevolutionV2Story.ChR01);
         }
 
         private static void TestEpilogue()
@@ -574,7 +520,7 @@ namespace EleanorRomance
             int chapter = RomanceState.Chapter == 0 ? 1 : RomanceState.Chapter;
             if (chapter >= RomanceState.ChapterComplete)
             {
-                if (RomanceState.Route == 3 || RomanceState.Route == 4)
+                if (RomanceState.Route == 3)
                 {
                     StoryDirector.Notify("该路线没有后日谈。");
                     return;
@@ -700,28 +646,20 @@ namespace EleanorRomance
 
         private static void RegisterMaidTests()
         {
-            Add("测试：侍从入口 / Attendant entry",()=>{SetupCommon();RomanceState.Savings=800;QueueTestChapter(12);},true);
-            Add("测试：旧800序章 / Legacy continuation",()=>
-            {
-                SetupCommon();RomanceState.Chapter=13;RomanceState.PendingChapter=0;
-                RomanceState.Romance=4;RomanceState.Savings=800;
-                MaidState.FeatureVersion=MaidState.CurrentVersion;MaidState.LegacyResume=1;
-                MaidState.LegacyDueDay=MaidState.Today;MaidState.Text("legacy_source","debug-fixture");
-                RomanceState.Romance=0;QueueMaidEvent(MaidStory.LegacyVisit);
-            },true);
-            Add("测试：女仆首秀 / Maid debut",()=>{SetupMaidFixture(false);QueueTestChapter(19);},true);
-            Add("测试：侍从告白 / Attendant confession",()=>{SetupMaidFixture(false);QueueTestChapter(21);},true);
-            Add("测试：侍从基础结局 / Base conclusion",()=>{SetupMaidFixture(true);QueueTestChapter(24);},true);
+            Add("测试：侍从入口 / Attendant entry",()=>{SetupCommon();RomanceState.Savings=800;MaidV2State.GapPaid=true;QueueTestChapter(12);},true);
+            Add("测试：女仆首秀 / Maid debut",()=>{SetupMaidFixture(false);QueueTestChapter(18);},true);
+            Add("测试：侍从告白 / Attendant confession",()=>{SetupMaidFixture(false);QueueTestChapter(19);},true);
+            Add("测试：侍从基础结局 / Base conclusion",()=>{SetupMaidFixture(true);QueueTestChapter(22);},true);
             Add("测试：王尔德P1 / Wilde housing",()=>{SetupMaidFixture(false);MaidProjects.OnLoaded();ModHelper.OpenWildNetwork();},true);
             Add("测试：23章后未付P1 / Late housing",()=>
-            {SetupMaidFixture(true);StoryDirector.CompleteCore();MaidState.BasicComplete=true;MaidState.BasicDay=MaidState.Today;MaidState.ProgressDay=MaidState.Today;MaidProjects.OnLoaded();ModHelper.OpenWildNetwork();},true);
-            foreach(int value in new[]{24,25,26,27,28})
+            {SetupMaidFixture(true);StoryDirector.CompleteCore();MaidState.BasicComplete=true;MaidState.ProgressDay=MaidState.Today;MaidProjects.OnLoaded();ModHelper.OpenWildNetwork();},true);
+            foreach(int value in new[]{25,26,27,28})
             {
                 int chapter=value;
                 Add("测试：归来"+chapter+" / Return "+chapter,()=>
                 {
                     SetupMaidFixture(true);StoryDirector.CompleteCore();MaidState.BasicComplete=true;
-                    MaidState.BasicDay=MaidState.Today-12;MaidState.Progress=chapter-1;MaidState.ProgressDay=MaidState.Today-3;
+                    MaidState.Progress=chapter-1;MaidState.ProgressDay=MaidState.Today-3;
                     // Explicit debug-only paid fixtures: no actual deduction, not a playthrough.
                     for(int p=1;p<=4;p++)
                     {
@@ -747,8 +685,8 @@ namespace EleanorRomance
         }
         private static void SetupMaidFixture(bool lover)
         {
-            SetupCommon();MaidState.Enter(2);RomanceState.Route=2;RomanceState.MotherState=1;
-            RomanceState.ProtectionReady=true;RomanceState.DriveState=4;MaidState.DebutShown=true;
+            SetupCommon();MaidV2State.Enter();MaidV2State.Act2Done=true;RomanceState.Route=2;RomanceState.MotherState=1;
+            RomanceState.ProtectionReady=true;RomanceState.DriveState=4;
             if(lover){MaidState.Confession=1;RomanceState.Romance=1;}
         }
         private static void QueueMaidEvent(int id)

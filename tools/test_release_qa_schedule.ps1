@@ -1,5 +1,7 @@
 # Full route scheduling after the common-line handoff. Rendering/night UI stays
 # at the same in-memory boundaries as ReleaseQA; route state is never pre-completed.
+$closingType = [EleanorRomance.DualState].Assembly.GetType('EleanorRomance.DualClosingDay')
+$closingType.GetProperty('Enabled',[Reflection.BindingFlags]'Static,NonPublic').SetValue($null,$true)
 foreach($early in @($false,$true)){
     foreach($kind in @('love','maid','rev','dual')){
         $worlds=if($kind -in @('love','maid','dual')){@(1,2)}else{@(2)}
@@ -16,8 +18,7 @@ foreach($early in @($false,$true)){
                 [EleanorRomance.RomanceState]::ProtectionReady=($world -eq 2)
                 [EleanorRomance.RomanceState]::FairDeals=3
                 [EleanorRomance.RomanceState]::UncleReported=$true
-                # A new-run bracelet outcome with no harem qualification; zero
-                # is reserved for legacy fact-based entry migration.
+                # The bracelet outcome keeps this run on the common line.
                 [EleanorRomance.RomanceState]::DPreludeState=2
             }
             if($kind -eq 'maid'){

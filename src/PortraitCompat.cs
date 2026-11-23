@@ -10,11 +10,11 @@ namespace EleanorRomance
     /// native Eleanor art and its own authored clients, but deliberately leaves
     /// another mod's clients and textures untouched (same cooperative model as
     /// the portrait replacement mods).  Lydia and Mother always use this mod's
-    /// beautified portraits; the old vanilla keys remain only for migration.
+    /// beautified portraits.
     /// </summary>
     public static class PortraitCompat
     {
-        // Attribution and legacy-save keys.  No external mod lookup remains.
+        // Bundled portrait keys and attribution.  No external mod lookup remains.
         public const string BeautyModId = "cute_portraits";
         public const ulong BeautyWorkshopId = 3829696854UL;
         public const string BeautyKeyPrefix = "cp_portrait_";
@@ -22,9 +22,7 @@ namespace EleanorRomance
         /// <summary>Single external-facing default: our normal beautified Eleanor.</summary>
         public const string DefaultEleanorKey = "cp_portrait_eleanor1";
         public const string MaidKey = "er_portrait_eleanor_maid_female_beauty";
-        public const string VanillaMaidKey = "er_portrait_eleanor_maid_female_vanilla";
         public const string GalaKey = "er_portrait_eleanor_gala_female_beauty";
-        public const string LydiaDateVanillaKey = "er_portrait_lydia_date_female_vanilla";
         public const string LydiaDateBeautyKey = "er_portrait_lydia_date_female_beauty";
 
         /// <summary>The bundled beauty set is always active.</summary>
@@ -121,7 +119,7 @@ namespace EleanorRomance
 
         private static bool IsLocalEleanorOutfitKey(string key)
         {
-            return key == MaidKey || key == VanillaMaidKey || key == GalaKey
+            return key == MaidKey || key == GalaKey
                 || key == ModConstants.EleanorVestPortrait
                 || key == ModConstants.EleanorIntimatePortrait;
         }
@@ -146,7 +144,7 @@ namespace EleanorRomance
                 default:
                     break;
             }
-            if (key == MaidKey || key == VanillaMaidKey) return "eleanor_scav";
+            if (key == MaidKey) return "eleanor_scav";
             if (key == GalaKey) return "eleanor1";
             if (key == ModConstants.EleanorVestPortrait) return "eleanor_rev";
             if (key == ModConstants.EleanorIntimatePortrait) return "eleanor1";
@@ -191,34 +189,6 @@ namespace EleanorRomance
             return EnsureLocalPortrait(ModConstants.MotherHomePortraitBeauty)
                 ? ModConstants.MotherHomePortraitBeauty
                 : ResolveMother();
-        }
-
-        public static bool IsMaidScene(string id)
-        {
-            switch (id)
-            {
-                case "er_story_maid_m19": case "er_story_maid_m20":
-                case "er_story_maid_m22": case "er_story_maid_m23": case "er_story_maid_m28":
-                case "er_story_maid_wait": case "er_story_maid_daily": case "er_story_maid_housing":
-                case "er_story_maid_feedback": case "er_story_maid_world": return true;
-                default: return false;
-            }
-        }
-
-        public static bool CanUseMaid(string id)
-        {
-            return IsMaidSceneEligible(id) && HasLocalSprite(MaidKey);
-        }
-
-        private static bool IsMaidSceneEligible(string id)
-        {
-            return MaidState.Active && IsMaidScene(id)
-                && (MaidState.DebutShown || id == "er_story_maid_m19");
-        }
-
-        public static string ResolveMaid(string id, string fallback)
-        {
-            return CanUseMaid(id) && EnsureLocalPortrait(MaidKey) ? MaidKey : Resolve(fallback);
         }
 
         public static string ResolveLydiaDate()
@@ -569,18 +539,6 @@ namespace EleanorRomance
             return false;
         }
 
-        public static bool IsGalaScene(string id) => id == "er_story_gala" && GalaStory.Eligible
-            && MaidState.PendingVisit == GalaStory.VisitId;
-
-        public static string GalaDescription => L.Get(ResolveGala("er_story_gala") == GalaKey
-            ? "er_gala_gown_beauty" : "er_gala_gown_vanilla");
-
-        public static string ResolveGala(string id)
-        {
-            if (id == "er_story_gala" && GalaStory.Eligible && EnsureLocalPortrait(GalaKey)) return GalaKey;
-            return Resolve("eleanor1");
-        }
-
         /// <summary>
         /// Bridges a bundled cp_portrait_* sprite into the native dictionary for
         /// vanilla keys such as eleanor1.  Only characters bundled with this mod
@@ -637,13 +595,6 @@ namespace EleanorRomance
         {
             if (string.IsNullOrEmpty(key)) return;
 
-            if (key == VanillaMaidKey)
-            {
-                // Legacy maid key: show the beautified maid art when possible.
-                if (MaidState.Active && EnsureLocalPortrait(MaidKey))
-                    AliasLocalPortrait(MaidKey, VanillaMaidKey);
-                return;
-            }
             if (key == MaidKey)
             {
                 if (!MaidState.Active) return;
@@ -660,20 +611,6 @@ namespace EleanorRomance
                     AliasLocalPortrait(Resolve("eleanor1"), GalaKey);
                 return;
             }
-            if (key == ModConstants.LydiaPortraitVanilla || key == LydiaDateVanillaKey)
-            {
-                // Legacy Lydia keys must show the beautified portrait, never the old vanilla art.
-                string beauty = key == LydiaDateVanillaKey ? ResolveLydiaDate() : ResolveLydia();
-                AliasLocalPortrait(beauty, key);
-                return;
-            }
-            if (key == ModConstants.MotherPortraitVanilla)
-            {
-                // Legacy Mother key must show the beautified daily portrait.
-                AliasLocalPortrait(ResolveMother(), key);
-                return;
-            }
-
             if (key.StartsWith(LocalPortraitPrefix, StringComparison.Ordinal))
             {
                 EnsureLocalPortrait(key);
@@ -755,10 +692,7 @@ namespace EleanorRomance
         }
 
         /// <summary>
-        /// Migrates clients restored from a save: vanilla Lydia/Mother keys are
-        /// upgraded to the bundled beauty portraits, unbundled external
-        /// cp_portrait_* keys are reverted to their vanilla base, and local
-        /// beauty keys are preserved.
+        /// Resolves portraits for restored clients in the current portrait mode.
         /// </summary>
         public static void SanitizeLoadedClients()
         {
@@ -802,23 +736,19 @@ namespace EleanorRomance
 
             if (client.spriteName == GalaKey)
             {
-                // Maid v2 stage scenes reuse the gala look and carry an
-                // er_story_v2_* identifier; do not degrade them to the default
-                // portrait on load like a stale standalone-gala key.
-                bool keepGala = IsGalaScene(client.identifier)
-                    || (IsOurEleanorClient(client)
-                        && !string.IsNullOrEmpty(client.identifier)
-                        && client.identifier.StartsWith("er_story_v2_", StringComparison.Ordinal));
+                bool keepGala = IsOurEleanorClient(client)
+                    && (client.identifier ?? "").StartsWith("er_story_v2_", StringComparison.Ordinal);
                 client.spriteName = keepGala && EnsureLocalPortrait(GalaKey)
                     ? GalaKey : Resolve("eleanor1");
             }
-            else if (client.spriteName == MaidKey || client.spriteName == VanillaMaidKey)
+            else if (client.spriteName == MaidKey)
             {
-                client.spriteName = IsMaidSceneEligible(client.identifier)
-                    ? ResolveMaid(client.identifier, "eleanor_scav")
-                    : Resolve("eleanor_scav");
+                bool keepMaid = IsOurEleanorClient(client)
+                    && (client.identifier ?? "").StartsWith("er_story_v2_", StringComparison.Ordinal);
+                client.spriteName = keepMaid && EnsureLocalPortrait(MaidKey)
+                    ? MaidKey : Resolve("eleanor_scav");
             }
-            else if (client.spriteName == LydiaDateVanillaKey || client.spriteName == LydiaDateBeautyKey)
+            else if (client.spriteName == LydiaDateBeautyKey)
             {
                 client.spriteName = ResolveLydiaDate();
             }
@@ -826,15 +756,12 @@ namespace EleanorRomance
             {
                 client.spriteName = ResolveMotherHome();
             }
-            else if (client.spriteName == ModConstants.MotherPortraitVanilla
-                || client.spriteName == ModConstants.MotherPortraitBeauty
-                || client.identifier == "er_story_mother"
-                || client.identifier == "er_story_maid_m17")
+            else if (client.spriteName == ModConstants.MotherPortraitBeauty
+                || client.identifier == "er_story_mother")
             {
                 client.spriteName = ResolveMother();
             }
-            else if (client.spriteName == ModConstants.LydiaPortraitVanilla
-                || client.spriteName == ModConstants.LydiaPortraitBeauty
+            else if (client.spriteName == ModConstants.LydiaPortraitBeauty
                 || (client.spriteName == ModConstants.LydiaSprite
                     && !string.IsNullOrEmpty(client.displayName)
                     && client.displayName == L.Get("er_name_lydia")))

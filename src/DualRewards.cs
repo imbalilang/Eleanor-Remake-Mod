@@ -45,9 +45,6 @@ namespace EleanorRomance
             StoryDirector.Notify(L.Get("er_dual_reward_received",Name(s)));
             return true;
         }
-        public static bool NeedsClaim => !DualState.Flag("d.route")
-            && (Enumerable.Range(1,3).Any(Ready) || StoryCoreFacts.LocketPending || MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24));
-
         public static int DueRewrittenReward(int day)
         {
             if (!DualState.Active || !DualState.Flag("d.route") || day <= DualState.Int("reward.visit_day", -1))
@@ -56,35 +53,6 @@ namespace EleanorRomance
                 if (day > DualState.Int("reward." + stage + ".earned_day", -1) && Ready(stage))
                     return stage;
             return 0;
-        }
-        public static void AppendClaims(Dialogue root)
-        {
-            for(int s=1;s<=3;s++)
-            {
-                if(!Ready(s))continue;
-                int stage=s;
-                var claim=StoryEngine.Text(L.Get("er_name_lydia"),L.Get("er_dual_claim_line",Name(s)));
-                claim.SetEndAction(()=>{if(!Give(stage))StoryDirector.Notify(L.Get("er_dual_plaque_full"));});
-                StoryEngine.Tail(root).SetNextDialogue(claim);
-            }
-            if(MaidWorldEvents.NeedsReceipt && StoryCoreFacts.Done(24))
-            {
-                // The perfume is now granted with the ending itself; this visit
-                // only carries the protection-case receipt.
-                var claim=StoryEngine.Text(L.Eleanor,L.Get("er_dual_receipt_claim"));
-                if(MaidWorldEvents.AppendReceipt(claim))StoryEngine.Tail(claim).SetEndAction(MaidWorldEvents.SubmitReceipt);
-                StoryEngine.Tail(root).SetNextDialogue(claim);
-            }
-            if(StoryCoreFacts.LocketPending)
-            {
-                var locket=StoryEngine.Build(StoryV06Content.B_C22_B007);
-                var accept=StoryEngine.Build(StoryV06Content.B_C22_B008);
-                var refuse=StoryEngine.Build(StoryV06Content.B_C22_B009);
-                StoryEngine.Tail(accept).SetEndAction(()=>StoryCoreFacts.FinishLocket(false));
-                StoryEngine.Tail(refuse).SetEndAction(()=>StoryCoreFacts.FinishLocket(true));
-                MaidStory.GateOriginalLocket(locket,accept,refuse);
-                StoryEngine.Tail(root).SetNextDialogue(locket);
-            }
         }
     }
 }
