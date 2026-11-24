@@ -18,6 +18,6 @@
 - 服务器更新时间1794134825（18:47:05+08:00），大小1,589,973字节，与正式包一致；公开状态0，所有者76561198109201343、游戏4348910核对一致，正文包含0.73说明。
 - Steam客户端记录新ManifestID `6795903057145110376`，随后记录原条目上传完成OK。
 
-证据位于`dist/workshop-0.73/`：`release-files.json`、`tested.json`、`runtime-regression.log`、`native-scan.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`、`remote-verified.json`及`workshop-upload.log`。本地ZIP为`dist/EleanorRomance-0.73.zip`；发布正文和更新日志分别为`WORKSHOP_DESCRIPTION_0.73.txt`、`WORKSHOP_CHANGELOG_0.73.txt`。
+证据位于`dist/workshop-0.73/`：`release-files.json`、`tested.json`、`runtime-regression.log`、`native-scan.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`、`remote-verified.json`及`workshop-upload.log`。
 
 实机验证由用户进行。本轮不操作游戏界面或玩家存档，不提交或推送Git变更。离线回归不代替完整经营平衡、实际UI和存档交互的实机体验验证。

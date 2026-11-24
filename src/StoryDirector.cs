@@ -31,9 +31,46 @@ namespace EleanorRomance
                 Notify(L.Get("er_notice_save_schema", RomanceState.SchemaVersion, RomanceState.Schema));
                 return;
             }
+            // Do not leave old route saves permanently paused.  Stamp the
+            // current route versions and let the existing chapter/progress
+            // state continue on a best-effort basis; paid projects, items and
+            // chapter numbers are not cleared.
+            bool hasV2History = MaidState.HasHistory
+                && (MaidV2State.Act2Done || MaidV2State.Act3Done
+                    || MaidV2State.Residency || MaidV2State.CoWork
+                    || MaidV2State.GapPaid || MaidV2State.GapChoice != 0);
+            if (RomanceState.Initialized && !RomanceState.OldBlocked)
+            {
+                bool migrated = false;
+                if (MaidState.FeatureVersion < MaidState.V2Version)
+                {
+                    MaidState.FeatureVersion = MaidState.V2Version;
+                    migrated = true;
+                }
+                if (RomanceState.Route == 3 && RomanceState.RevVersion < 2)
+                {
+                    RomanceState.RevVersion = 2;
+                    migrated = true;
+                }
+                if (DualState.HasHistory && DualState.FeatureVersion < DualState.CurrentVersion)
+                {
+                    DualState.FeatureVersion = DualState.CurrentVersion;
+                    migrated = true;
+                }
+                if (migrated)
+                {
+                    ModEntry.Log("Released legacy story progress: maid="
+                        + MaidState.FeatureVersion + ", rev=" + RomanceState.RevVersion
+                        + ", dual=" + DualState.FeatureVersion + ", v2=" + hasV2History
+                        + ", p4=" + MaidProjects.Paid(4) + ".");
+                }
+            }
             if (RomanceState.PredatesStoryRewrite)
             {
-                ModEntry.Log("Eleanor story paused: save predates the story rewrite.");
+                ModEntry.Log("Eleanor story paused: save predates the story rewrite. maid="
+                    + MaidState.FeatureVersion + ", rev=" + RomanceState.RevVersion
+                    + ", retiredDual=" + DualState.HasRetiredProgress
+                    + ", v2=" + hasV2History + ", p4=" + MaidProjects.Paid(4) + ".");
                 Notify(L.Get("er_notice_save_before_rewrite"));
                 return;
             }
@@ -49,7 +86,6 @@ namespace EleanorRomance
             MaidProjects.OnLoaded();
             MaidDividends.Accrue();
             DualClosingDay.OnLoaded();
-            LoveA2Closing.OnLoaded();
             MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
         }
 
@@ -81,7 +117,14 @@ namespace EleanorRomance
 
             try
             {
-                if (RomanceState.IncompatibleSave || RomanceState.PredatesStoryRewrite) return;
+                if (RomanceState.IncompatibleSave) return;
+                if (RomanceState.PredatesStoryRewrite)
+                {
+                    // Do not leave a paused legacy save without an in-game exit.
+                    // The Archivist's existing old-save prompt offers reset/keep.
+                    TryQueueOldSavePrompt(manager);
+                    return;
+                }
                 RecoverStuckBellLock();
 
                 LoveDirector.EnsureA2FirstLast(manager);
@@ -122,7 +165,7 @@ namespace EleanorRomance
                 bool eveningFollowUp = DualDirector.SameDayFollowUpDue(day);
                 if (RomanceState.LastQueuedDay == day && !eveningFollowUp) return;
                 if (MaidState.LastImportantDay == day && !eveningFollowUp) return;
-                if (HasModClient(manager)) return;
+                if (HasModClient(manager, includeChapterTrades: false)) return;
                 if (MaidStory.HasUrgentClient(manager)) return;
                 MaidWorldEvents.TickNews(StoreStation.Instance?.storeEventManager);
                 DualDirector.RecoverPending(manager);
@@ -397,14 +440,12 @@ namespace EleanorRomance
             return true;
         }
 
-        private static bool HasModClient(StoreClientManager manager)
+        private static bool HasModClient(StoreClientManager manager, bool includeChapterTrades = true)
         {
-            StoreClient current=PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
-            if(current!=null && VanillaEleanorBridge.IsOurClient(current))return true;
-            return manager.clientStack != null
-                && manager.clientStack.Any(c => c != null
-                    && !string.IsNullOrEmpty(c.identifier)
-                    && VanillaEleanorBridge.IsOurClient(c));
+            bool Blocks(StoreClient c) => VanillaEleanorBridge.IsOurClient(c)
+                && (includeChapterTrades || !ChapterVisits.IsChapterClient(c));
+            return Blocks(PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint())
+                || (manager.clientStack != null && manager.clientStack.Any(Blocks));
         }
 
         /// <summary>Vanilla Eleanor9's perfume belongs to every successful ending.</summary>
@@ -457,7 +498,7 @@ namespace EleanorRomance
                 case 287: return 64;
                 case 288: return 66;
                 case 289: return 69;
-                case 290: return 72;
+                case 290: return 71;
                 default: return 0;
             }
         }

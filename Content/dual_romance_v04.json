@@ -8301,44 +8301,24 @@
           "label_en": "Moving Goods — Common",
           "lines": [
             {
-              "speaker": "Eleanor",
-              "text": "（等了会儿，见他不接话，才慢慢转回身）……你还挺能等。",
-              "en": "(Waits a moment, sees he hasn't spoken, then turns around)...You're good at waiting."
+              "speaker": "Narrator",
+              "text": "窗沿那包口粮慢慢歪下来。你侧过脸，伸手抵住它。埃莉诺按住袋子另一头，隔着窗口在你脸上亲了一下。",
+              "en": "The ration packet starts to tip. You turn to catch it. Eleanor steadies the other end and kisses your cheek across the sill."
+            },
+            {
+              "speaker": "Player",
+              "text": "这包现在归谁？",
+              "en": "Whose is this one, then?"
             },
             {
               "speaker": "Eleanor",
-              "text": "别动。",
-              "en": "Hold still."
+              "text": "封口开的，刚跟你说过，留着自己吃。",
+              "en": "The seal's split. Keep it for yourself, like I said."
             },
             {
               "speaker": "Narrator",
-              "text": "她探过柜台，在他脸边很快地啄了一下。",
-              "en": "She leans across the counter and quickly brushes his cheek."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（退回原处，抄起包）走了。",
-              "en": "(Pulls back, grabs her bag) I'm going."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "货还摊着。剩下的都是轻的，你自己弄完。",
-              "en": "The goods aren't stacked. Stack the rest yourself. The light ones."
-            },
-            {
-              "speaker": "Player",
-              "text": "埃莉诺——",
-              "en": "Eleanor—"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（已经往后让出两步）别追。也别问。",
-              "en": "(Already two steps away) Don't follow me. Don't ask, either."
-            },
-            {
-              "speaker": "Player",
-              "text": "……",
-              "en": "..."
+              "text": "你转过来看她。包已经挎上肩了，她的手指还扣着带子，两只脚都在原地。",
+              "en": "You turn to her. Her bag is on her shoulder, her fingers hooked through the strap. She hasn't moved an inch."
             }
           ],
           "cursor_revision": 2
@@ -9209,8 +9189,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "（摆正两把椅子，拍拍靠里那把）我俩今天就坐这儿。你去忙柜台，眼神少往这儿拐。",
-              "en": "(Straightens the two chairs and pats the inner one) We're sitting here today. Get on with your work. Stop looking over here."
+              "text": "（摆正两把椅子，拍拍靠里那把）我俩今天就坐这儿。",
+              "en": "(Straightens the two chairs and pats the inner one) We're sitting here today."
             }
           ],
           "cursor_revision": 2

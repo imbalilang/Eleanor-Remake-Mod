@@ -17,6 +17,6 @@
 - 服务器更新时间1794119067、大小1,566,942字节，与正式包一致；公开状态0，所有者及游戏ID核对一致，正文包含0.72更新说明。
 - 客户端记录新ManifestID `5838225324198756508`，随后明确记录该条目上传完成OK。
 
-证据位于`dist/workshop-0.72/`：`release-files.json`、`tested.json`、`runtime-regression.log`、`native-scan.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`。本地ZIP：`dist/EleanorRomance-0.72.zip`。正文和更新日志源文件为`WORKSHOP_DESCRIPTION_0.72.txt`、`WORKSHOP_CHANGELOG_0.72.txt`。
+证据位于`dist/workshop-0.72/`：`release-files.json`、`tested.json`、`runtime-regression.log`、`native-scan.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`。本地ZIP：`dist/EleanorRomance-0.72.zip`。
 
 实机验证由用户进行。本轮未操作游戏界面或玩家存档，未提交或推送Git变更。

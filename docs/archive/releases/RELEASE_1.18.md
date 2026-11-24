@@ -22,7 +22,7 @@
 - 2026-11-18 13:48:39（UTC）以 **content-only** 模式更新原条目，Steam 返回 `k_EResultOK`，耗时 6.53 秒；标题、简介和内容描述符未改动。
 - Steam Web API 复核：标题 `Eleanor Story Expand`；简介 4,246 bytes，SHA-256 `94DAFD60363B34D2BD988D1D7CEBD8E86398E831BCB88C4CAEDD202D189086F7`（与之前一致）；文件大小 19,424,246 bytes，与本地包一致；公开（visibility 0），未封禁。
 - 条目 ID `3834588749`，所有者 `76561198109201343`，更新时间 `2026-11-18T13:48:39Z`，内容句柄 `5787008847347446872`。
-- 证据：`dist/workshop-1.18/release-files.json`、`publish-result.json`、`publish.log`、`native-scan.log`、`remote-after.json`；更新说明 `docs/WORKSHOP_CHANGELOG_1.18.txt`。
+- 证据：`dist/workshop-1.18/release-files.json`、`publish-result.json`、`publish.log`、`native-scan.log`、`remote-after.json`。
 - 未执行本地 `Mods/` 部署；本地安装目录与存档未被修改。
 
 ## 待确认

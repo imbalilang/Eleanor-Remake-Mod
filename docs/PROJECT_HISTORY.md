@@ -36,7 +36,7 @@
 2. **角色层是两级**：一级是三位角色的静态卡（`docs/埃利诺-角色设定.txt` 等），描述共同线状态下的基准人设；进入各路线后使用**路线二级人设**——各路线自己的阶段、处境、欲望、回避方式、禁止项和声音参考。二级人设的正式载体是各路线 world book / ActCard 的 stage、facts、voice、boundaries 字段（`tools/NovelWorkFlow_Eleanor/` 是本地目录，不入库）；仓库里 `docs/埃莉诺与莉迪亚_全局人设基准` 的路线/阶段表只是参考材料，不能替代正式二级人设，也不能把一级静态卡直接套到所有路线。
 3. 改文本：改 Content 中文 + 对应英文 → `python tools/build_content.py` → `python tools/check_project.py` → Release 编译。
 4. 本地化：en 为人工意译（`tools/en_v06_part*.json`、`tools/ui_text_en.json`）；ja 由覆盖层 + `apply_ja_translations.py` 生成；ko 直接维护 CSV。生成物 `.g.cs` 与 CSV 不手改。
-5. 新剧情/选项/日期/结局：同一次改动更新 `route_map.html` + `ROUTE_MAP_MAINTENANCE.md`，跑 `check_route_map.py`。
+5. 路线图：仅作者主动要求时更新 `route_map.html` + `ROUTE_MAP_MAINTENANCE.md` 并跑 `check_route_map.py`；默认不随剧情改动或发布维护。
 6. 文风基准说明：作者的主要参照是游戏本体原文与官方中文本地化（`docs/原作Eleanor章节_对照稿`、`docs/原作非台词表现与MOD应用审计`）；`docs/文风与玩家台词基准` 是 Agent/流水线根据原作与预设整理的参考，不是作者提供的标准。
 
 ### 4.2 写作生产管线（历史实验）
@@ -52,7 +52,7 @@
 
 ### 4.4 校验与发布
 
-`check_project.py`（键、块、生成物一致性、场景图）、`check_route_map.py`（版本、结局、节点、指南链接）、`test_*.ps1`（离线内存回归）、`scan_package.ps1`（原生能力扫描，要求 0 反射/0 线程/0 弃用）是 Agent 能执行的检查。发布：升 `manifest.xml` 版本 → 同步 README/`DATA.version`/维护文档 → `package_release.ps1` → `publish_workshop.ps1` 上传并记录回执；`dist/` 保存证据但不入库。历史发布记录已归档到 [archive/releases/](archive/releases/)。
+`check_project.py`（键、块、生成物一致性、场景图）、`check_route_map.py`（仅作者要求维护路线图时运行：结局、节点、指南链接；版本落后不再报错）、`test_*.ps1`（离线内存回归）、`scan_package.ps1`（原生能力扫描，要求 0 反射/0 线程/0 弃用）是 Agent 能执行的检查。发布：升 `manifest.xml` 版本 → 同步 README 版本节 → `package_release.ps1` → `publish_workshop.ps1` 上传并记录回执；路线图不要求同步；`dist/` 保存证据但不入库。历史发布记录已归档到 [archive/releases/](archive/releases/)。
 
 两条项目事实（Agent 必须知道）：
 

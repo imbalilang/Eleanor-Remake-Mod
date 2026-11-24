@@ -22,9 +22,15 @@ namespace EleanorRomance
             && VersionGate.IsSupported && SchemaVersion == Schema && !PredatesStoryRewrite;
 
         // The rewrite started saving this route version in every new run,
-        // including runs that never enter the attendant route.
+        // including runs that never enter the attendant route.  Historical
+        // revolution/dual flags only block when they are the active branch;
+        // a current v2 attendant save can keep stale flags without losing
+        // its Wilde purchases or P4 progress.
         internal static bool PredatesStoryRewrite => Initialized && !OldBlocked
-            && (MaidState.FeatureVersion < MaidState.V2Version || RevVersion == 1 || DualState.HasRetiredProgress);
+            && (MaidState.FeatureVersion < MaidState.V2Version
+                || (RevVersion == 1 && Route == 3)
+                || (DualState.HasRetiredProgress
+                    && DualState.FeatureVersion < DualState.CurrentVersion));
 
         public static bool IncompatibleSave => SchemaVersion != Schema
             && ModHelper.GetModDataKeys(ModConstants.ModId).Count > 0;

@@ -20,6 +20,21 @@ namespace EleanorRomance
                 && client.identifier == ClientId
                 && VanillaEleanorBridge.IsOurClient(client);
 
+        // The paid date can dismiss ordinary walk-ins. Customers with a required visit or an
+        // explicit source already in the queue get served before the shutter comes down.
+        internal static void ServeReservedGuestFirst(StoreClientManager manager)
+        {
+            var queue = manager?.clientStack;
+            if (queue == null || queue.Count < 2 || !IsVisit(queue[0])) return;
+            int index = queue.FindIndex(1, c => c != null && !IsVisit(c) && (!c.dismissable
+                || c.isSentenceOfficer || c.isWanted || c.isSecurity || VanillaEleanorBridge.IsOurClient(c)
+                || !string.IsNullOrEmpty(c.sourceModId) || !string.IsNullOrEmpty(c.eventSourceId)));
+            if (index < 0) return;
+            var reserved = queue[index];
+            queue.RemoveAt(index);
+            queue.Insert(0, reserved);
+        }
+
         internal static void OnLoaded()
         {
             if (!DualState.Active) return;
@@ -101,7 +116,6 @@ namespace EleanorRomance
             if (store == null || store.storeState != PlayerStore.StoreState.OPEN) return;
             store.DismissCurrentClient(callNextWhenPossible: false, interruptDialog: false);
             StoreShutterButton.Instance.EndAndClose();
-            store.visitLeftTonight = 0;
             EndingPageUI.ShowStoryScene("er_story_cg_date_title", "er_event_harem_lydia_date_cg",
                 "er_story_cg_date_text");
             ModEntry.Log("Dual date finished; daytime business closed, evening returned. day=" + day);

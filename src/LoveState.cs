@@ -99,7 +99,10 @@ namespace EleanorRomance
                 WeddingDone = true;
                 Act3Done = true;
             }
-            NextVisitDay = Act3Done ? -1 : day + 1;
+            // Leave room for the day off after Old Friend and the separate pre-wedding visits.
+            int[] targetDays = { 54, 55, 56, 57, 58, 60, 61, 63, 65, 69 };
+            NextVisitDay = Act3Done || visit >= targetDays.Length ? -1
+                : Math.Max(day + 1, StoryDirector.StoryDay(targetDays[visit]));
         }
 
         public static void Reset()

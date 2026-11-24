@@ -34,9 +34,11 @@ For artwork generation, edits, expression variants or export, read `Art/ART_REQU
 
 For any CG generation, placement or review, read `docs/CG_LOCATION_AND_PLACEMENT_PLAN.md`. Its location, staging and placement constraints are mandatory. Do not invent back rooms, beds, sofas or bathrooms in the kiosk; do not place private clothing, lying poses or kisses in ordinary daily shop visits. The currently adopted CG slate is `docs/CG_CURRENT_PLAN.md` (4 routes × 8 slots, endings included); the 36-slot route document is a candidate/expansion pool, not the current schedule. CG style is two-track: **P (pixel/original)** for endings, news, documents and world cards; **A (anime)** for portraits, relationship, daily/private and outing CGs. Label every brief P or A and do not mix them in one image.
 
-## Route map maintenance (required)
+## Route map maintenance (author-requested only)
 
-Any change to story chapters, scene order, target days, story-impacting choices, routes, relationships, or endings must update these files in the same change:
+Do not update or check the route map during ordinary story changes or releases. Maintain it only when the author explicitly asks; the map may lag behind the current version between those requests.
+
+When maintenance is requested, update both files together:
 
 - `docs/route_map.html` — the visual route/ending preview.
 - `docs/ROUTE_MAP_MAINTENANCE.md` — the numbering and maintenance rules.
@@ -45,7 +47,7 @@ The public player-facing guide is the Steam Guide **3842734960**. GitHub Pages i
 
 The current endings are **E1 romance, E2 friends, E3 attendant, E4 harem, E9 revolution**. The author states that opening the nutrifruit research is flavor/business content: it does not create a different relationship ending or a perfect/non-perfect rank. E5/E6/E7/E8 are historical duplicates merged into E1/E2/E3/E4 respectively; keep those old numbers reserved as aliases, not separate endings. E10–E14 remain archived for legacy saves. Append actual new endings as E15, E16, …; never renumber or reuse a reserved number. Death/arrest/leaving the station are ending suffixes, not new numbers. Preserve existing business flags and conditional background lines; do not collapse save Route values merely to merge ending labels.
 
-If the route map is not updated, the story change is incomplete. After editing, run `python tools/check_route_map.py`; it verifies the manifest version, five current endings and historical aliases, act and scene coverage, guide links, and that duplicate research endings and retired nodes have not come back.
+When maintaining the map, run `python tools/check_route_map.py`; it verifies the five current endings and historical aliases, act and scene coverage, guide links, and that duplicate research endings and retired nodes have not come back. Version mismatch with the manifest is informational only.
 
 ## Route terminology (user requirement)
 
@@ -91,13 +93,14 @@ Operational notes:
 ## Release versioning (user requirement)
 
 - Every Steam Workshop or Nexus content update must increase `<ModVersion>` in `manifest.xml`. Publishing new files under the same version is forbidden: the game/loader uses the mod version to detect updates, so an unbumped item does not reach subscribers.
-- In the same change, sync `README.md` (MOD version), `docs/route_map.html` (`DATA.version`) and `docs/ROUTE_MAP_MAINTENANCE.md`, then run `python tools/check_route_map.py`.
+- In the same change, sync `README.md` (MOD version). The route map is not part of the release checklist; update it only when the author explicitly asks.
 - `-KeepDescription` / content-only only means the Workshop title and description stay untouched; it never waives the version bump.
 - Do not rely on file hashes or Steam's item update time as the player-facing update signal.
 
 ## Publishing
 
 - Do not push to GitHub, Steam Workshop, or Nexus unless the user explicitly asks.
+- Workshop change notes are owner-only. Agents must never create, edit, or publish Workshop changelogs/update notes (`WORKSHOP_CHANGELOG_*`, or Steam's update-notes field), even for content releases. Publish content-only with `-KeepDescription` and no notes; if a tool requires a notes file, stop and ask the author instead of writing one.
 - Build with `bash build.sh` only when a deploy to the local game is intended; use `dotnet build` for compile-only checks.
 - Keep release evidence in `dist/` and release notes in `docs/RELEASE_*.md`.
 - Keep all DLL/executable rollback copies outside the entire installed mod directory (for example in workspace `dist/`). Renaming a DLL to `.bak` inside the mod still triggers the game's `payload-file` rejection. After any local deployment, run `tools/scan_package.ps1` against the actual installed mod directory, not only a staging package, before reporting success.

@@ -22,7 +22,7 @@
 - 发布包：139 个文件，13,244,874 bytes；ZIP `dist/EleanorRomance-1.13.zip`，SHA-256 `7CE572E6F796758CAB768818D4635C8814330E608F0629CF5BD420C965E79F61`。
 - 2026-11-17 01:36（UTC）以 **content-only** 模式更新原条目，Steam 返回 `k_EResultOK`，耗时 5.60 秒；标题、简介和内容描述符未改动。
 - Steam Web API 复核：标题 `Eleanor Story Expand`，文件大小 13,244,874 bytes，与本地包一致，公开、未封禁。
-- 证据：`dist/workshop-1.13/publish-result.json`、`remote-after.json`；更新说明 `docs/WORKSHOP_CHANGELOG_1.13.txt`。
+- 证据：`dist/workshop-1.13/publish-result.json`、`remote-after.json`。
 
 ## 2026-11-17 兼容更新（同一 1.13 条目）
 
@@ -33,7 +33,6 @@
 - `python tools/check_project.py`、`python tools/check_route_map.py`：通过。
 - 对 1.0.0.15 游戏程序集原生扫描：0 capabilities、0 findings、0 pending、0 hard flags。证据：`dist/workshop-1.13-followup/native-scan.log`。
 - 发布包：139 个文件，13,258,238 bytes；ZIP `dist/EleanorRomance-1.13-followup.zip`，SHA-256 `0C5E6857DD2FFB6359587C70D09252CA92BF24B6F9CA217B16948706FDF36599`；DLL SHA-256 `13FF16053C903024277E85046116F5CD75B63B05F60F3678993557348DBC3535`。
-- 更新说明：`docs/WORKSHOP_CHANGELOG_1.13_followup.txt`。
 
 ### 兼容更新发布状态
 
@@ -43,4 +42,3 @@
 - 证据：`dist/workshop-1.13-followup/release-files.json`、`publish-result-followup.json`、`publish.log`、`native-scan.log`、`remote-after-followup.json`。
 - 该 1.13 follow-up 没有提升版本号，玩家端不会按版本自动更新；已由 1.14 取代，见 `docs/RELEASE_1.14.md`。
 - 未执行本地 `Mods/` 部署；本地安装目录与存档未被修改。
-

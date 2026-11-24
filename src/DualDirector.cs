@@ -26,7 +26,8 @@ namespace EleanorRomance
             FinishRewrittenCore();
         }
 
-        private static bool Ours(StoreClient c) => c != null && VanillaEleanorBridge.IsOurClient(c) && (c.identifier ?? "").Contains("dual_");
+        private static bool Ours(StoreClient c) => c != null && VanillaEleanorBridge.IsOurClient(c)
+            && !ChapterVisits.IsChapterClient(c) && (c.identifier ?? "").Contains("dual_");
         public static void RecoverPending(StoreClientManager manager)
         {
             if (!DualState.Writable || (DualState.PendingId == "" && DualState.PendingScene == 0)) return;

@@ -13,6 +13,6 @@
 - 服务器`time_updated=1794082736`，大小1,564,703字节，与正式包一致；公开状态0，条目、所有者和游戏ID均核对一致，线上正文包含0.71修复说明。
 - Steam客户端记录ManifestID `7066285286110773605`，随后明确记录该条目上传完成OK。
 
-证据位于`dist/workshop-0.71/`：`release-files.json`、`runtime-regression.log`、`native-scan.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`。本地ZIP为`dist/EleanorRomance-0.71.zip`。工坊正文与更新日志源文件为`WORKSHOP_DESCRIPTION_0.71.txt`、`WORKSHOP_CHANGELOG_0.71.txt`。
+证据位于`dist/workshop-0.71/`：`release-files.json`、`runtime-regression.log`、`native-scan.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`。本地ZIP为`dist/EleanorRomance-0.71.zip`。
 
 实机验证由用户进行；未将离线回归写成Unity界面实测结论。未修改玩家存档，未提交或推送Git变更。

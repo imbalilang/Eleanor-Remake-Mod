@@ -328,6 +328,16 @@
               "speaker": "Player",
               "text": "敢在我门口抢人。",
               "en": "Not at my door."
+            },
+            {
+              "speaker": "Sophia",
+              "text": "别追了。扶我一把，这只脚一踩地就疼。",
+              "en": "Let him go. Give me a hand? It hurts when I put weight on this foot."
+            },
+            {
+              "speaker": "Player",
+              "text": "扶着我。我送您回家。",
+              "en": "Lean on me. I'll walk you home."
             }
           ]
         }

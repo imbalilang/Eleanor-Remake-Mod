@@ -12,7 +12,9 @@ namespace EleanorRomance
     {
         private const string Done = "a2.robbery.done";
         private const string SleepDay = "a2.robbery.sleep_day";
-        private static bool finishing, sleepStarted;
+        private static bool finishing;
+        internal static bool OwnsTonight => finishing;
+        internal static void CancelTimer() => sleepTicket = null;
         private static object sleepTicket;
 
         internal static bool Enabled { get; set; }
@@ -20,22 +22,20 @@ namespace EleanorRomance
         internal static void Reset()
         {
             finishing = false;
-            sleepStarted = false;
+            ChapterBedtimePatch.Reset();
+            ChapterLoadedReportPatch.Reset();
             sleepTicket = null;
         }
 
         internal static void OnLoaded()
         {
-            Reset();
-            if (!Enabled || !LoveState.Active) return;
+            if (!Enabled || !RomanceState.StoryActive || !LoveState.Active) return;
             var store = PlayerStore.Instance;
             if (LoveState.Flag(Done) && LoveState.Int(SleepDay, -1) == LoveState.Today
-                && store?.storeState == PlayerStore.StoreState.CLOSED)
+                && store != null && store.storeState != PlayerStore.StoreState.MORNING)
             {
                 finishing = true;
-                store.visitLeftTonight = 0;
-                StoreUIManager.Instance.EnableBackingBlock();
-                ScheduleSleep(store, LoveState.Today);
+                CloseAndSleep(store, LoveState.Today);
             }
         }
 
@@ -61,12 +61,11 @@ namespace EleanorRomance
 
         private static void CloseAndSleep(PlayerStore store, int day)
         {
-            if (store == null) return;
+            if (!Enabled || !finishing || store == null || LoveState.Today != day || !ReferenceEquals(store, PlayerStore.Instance)) return;
             try
             {
-                StoreShutterButton.Instance.EndAndClose();
-                store.visitLeftTonight = 0;
-                StoreUIManager.Instance.EnableBackingBlock();
+                if (store.storeState == PlayerStore.StoreState.OPEN) StoreShutterButton.Instance.EndAndClose();
+                if (store.storeState != PlayerStore.StoreState.CLOSED) return;
                 ScheduleSleep(store, day);
             }
             catch (Exception ex)
@@ -77,10 +76,9 @@ namespace EleanorRomance
 
         private static void ScheduleSleep(PlayerStore store, int day)
         {
-            if (sleepTicket != null || sleepStarted) return;
+            if (sleepTicket != null) return;
             var ticket = new object();
             sleepTicket = ticket;
-            sleepStarted = true;
             store.visitLeftTonight = 0;
             StoreUIManager.Instance.EnableBackingBlock();
             ModHelper.StartCoroutine(ModConstants.ModId, MetaHelper.WaitAndDo(4.1f, () =>

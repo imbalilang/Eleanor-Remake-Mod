@@ -29,7 +29,7 @@ namespace EleanorRomance
             if (MaidV2State.CoWork && MaidState.Contract == 1)
             {
                 var resume = MaidV2Text.Build("v2_a0c2_s1");
-                MaidV2Text.Finish(resume, () => StoryDirector.AdvanceChapter(12, 13));
+                MaidV2Text.Finish(resume, FinishSignedChapter);
                 return Ready(ClientFor("v2_no_gap", "eleanor_scav", "DIALOGUE"), resume);
             }
             if (!MaidV2State.GapPaid)
@@ -365,6 +365,14 @@ namespace EleanorRomance
             CompleteScene(scene);
         }
 
+        private static void FinishSignedChapter()
+        {
+            StoryDirector.AdvanceChapter(12, 13);
+            if (MaidV2State.CoWork && MaidState.Contract == 1 && !MaidState.Flag("v2.signature_page"))
+                if (EndingPageUI.ShowChapterPage("er_cg_signature_title", "er_event_maid_signature_cg", "er_cg_signature_text"))
+                    MaidState.Flag("v2.signature_page", true);
+        }
+
         private static void CompleteScene(MaidV2Content.Scene scene)
         {
             int day = MaidState.Today;
@@ -383,7 +391,7 @@ namespace EleanorRomance
                     StoryDirector.AdvanceChapter(8, 9);
                     break;
                 case "v2_a0c2":
-                    StoryDirector.AdvanceChapter(12, 13);
+                    FinishSignedChapter();
                     break;
                 case "v2_a1c1":
                     RomanceState.DriveState = 2;
@@ -448,6 +456,9 @@ namespace EleanorRomance
                     EndingPageUI.ShowMaidCompletion();
                     break;
             }
+            // These walk-ins can become eligible only after today's main visit actually finishes.
+            if (scene.Id == "v2_a2c1" || scene.Id == "v2_a4c1")
+                ChapterTradeQueuePatch.TryInsert(PlayerStore.Instance?.storeClientManager);
             CompleteOptionalProjects();
             CollectDividends();
             // Mainline v2 scenes used to update the Wilde rows silently, so the

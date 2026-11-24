@@ -73,12 +73,15 @@ namespace EleanorRomance
             if (ShowRoutePage(page)) MaidState.Flag("ending_card_shown", true);
         }
 
-        public static void ShowDualCompletion()
+        public static bool ShowDualCompletion(Action onContinue = null)
         {
-            if (DualState.Flag("ending_card_shown")) return;
+            if (DualState.Flag("ending_card_shown")) return false;
             EndingPages.Page page = EndingPages.TryDualCompletion();
-            if (page == null) return;
-            if (ShowRoutePage(page)) DualState.Flag("ending_card_shown", true);
+            return page != null && ShowRoutePage(page, false, () =>
+            {
+                DualState.Flag("ending_card_shown", true);
+                onContinue?.Invoke();
+            });
         }
 
         public static void ShowRevolutionCompletion()
@@ -86,7 +89,7 @@ namespace EleanorRomance
             if (RomanceState.RevEndingShown) return;
             EndingPages.Page page = EndingPages.TryRevolutionCompletion();
             if (page == null) return;
-            if (ShowRoutePage(page)) RomanceState.RevEndingShown = true;
+            ShowRoutePage(page, false, () => RomanceState.RevEndingShown = true);
         }
 
         public static void ShowLoveCompletion()
@@ -109,8 +112,15 @@ namespace EleanorRomance
         internal static bool ShowStoryScene(string titleKey, string cgKey, string textKey, Action onContinue = null)
             => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), true, onContinue);
 
+        // New chapter pages retain their caption while the corresponding illustration is in production.
+        internal static bool ShowChapterPage(string titleKey, string cgKey, string textKey, Action onContinue = null)
+            => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), true, onContinue, true);
+
+        internal static bool PageOpen => routeRoot != null;
+
         private static Sprite GetCgSprite(string key)
         {
+            if (string.IsNullOrEmpty(key)) return null;
             Sprite sprite = PortraitCompat.GetLocalSprite(key);
             if (sprite == null) return null;
 
@@ -130,12 +140,16 @@ namespace EleanorRomance
             return sprite;
         }
 
-        private static bool ShowRoutePage(EndingPages.Page page, bool storyScene = false, Action onContinue = null)
+        internal static bool ShowScript(string title, string cg, string text, Action next,
+            string[] choices = null, Action decline = null)
+            => ShowRoutePage(new EndingPages.Page(title, cg, text, true), true, next, true, choices, decline);
+
+        private static bool ShowRoutePage(EndingPages.Page page, bool storyScene = false, Action onContinue = null, bool textFallback = false, string[] choices = null, Action decline = null)
         {
             try
             {
                 Sprite cg = GetCgSprite(page.CgKey);
-                if (storyScene && cg == null)
+                if (storyScene && cg == null && !textFallback)
                 {
                     ModEntry.LogError("Story CG missing: " + page.CgKey);
                     return false;
@@ -176,12 +190,12 @@ namespace EleanorRomance
                 Image panel = NewImage(root.transform, "panel", new Color(0.03f, 0.035f, 0.05f, 0.90f));
                 RectTransform panelRect = panel.rectTransform;
                 panelRect.anchorMin = new Vector2(0.055f, 0.035f);
-                panelRect.anchorMax = new Vector2(0.945f, storyScene ? 0.25f : 0.415f);
+                panelRect.anchorMax = new Vector2(0.945f, cg == null ? 0.72f : storyScene ? 0.25f : 0.415f);
                 panelRect.offsetMin = Vector2.zero;
                 panelRect.offsetMax = Vector2.zero;
 
                 TMP_FontAsset font = ResolvePageFont();
-                TextMeshProUGUI title = NewText(panel.transform, "title", L.Get(page.TitleKey), font,
+                TextMeshProUGUI title = NewText(panel.transform, "title", page.LiteralTitle ?? L.Get(page.TitleKey), font,
                     34, TextAlignmentOptions.Center, new Color(1f, 0.85f, 0.55f));
                 RectTransform titleRect = title.rectTransform;
                 titleRect.anchorMin = new Vector2(0f, 1f);
@@ -227,15 +241,31 @@ namespace EleanorRomance
                 Button button = buttonObject.GetComponent<Button>();
                 button.onClick.AddListener(() =>
                 {
-                    if (routeRoot != root) return;
+                    if (!ReferenceEquals(routeRoot, root)) return;
                     HideRoutePage();
                     onContinue?.Invoke();
                 });
 
                 TextMeshProUGUI buttonText = NewText(buttonObject.transform, "label",
-                    L.Get(storyScene ? "er_story_cg_continue" : "er_ending_return_button"), font, 20, TextAlignmentOptions.Center,
+                    choices == null ? L.Get(storyScene ? "er_story_cg_continue" : "er_ending_return_button") : choices[0], font, 20, TextAlignmentOptions.Center,
                     new Color(0.10f, 0.08f, 0.04f));
                 Stretch(buttonText.rectTransform);
+                if (choices != null)
+                {
+                    buttonRect.anchoredPosition = new Vector2(-230f, 22f);
+                    var other = UnityEngine.Object.Instantiate(buttonObject, panel.transform, false);
+                    other.GetComponent<RectTransform>().anchoredPosition = new Vector2(230f, 22f);
+                    other.GetComponentInChildren<TextMeshProUGUI>().text = choices[1];
+                    var otherButton = other.GetComponent<Button>();
+                    otherButton.onClick = new Button.ButtonClickedEvent();
+                    otherButton.onClick.AddListener(() =>
+                    {
+                        if (!ReferenceEquals(routeRoot, root)) return;
+                        HideRoutePage();
+                        decline?.Invoke();
+                    });
+                }
+
 
                 return true;
             }

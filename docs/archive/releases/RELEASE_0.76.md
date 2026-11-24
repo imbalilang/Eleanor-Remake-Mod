@@ -23,7 +23,7 @@
 
 - Steam返回 `k_EResultOK`，原条目3834588749，无待接受协议，上传4.03秒。
 - 服务器更新时间1794160176，公开状态0、封禁0；大小1,690,924字节与正式包一致。所有者76561198109201343、游戏4348910核对一致。
-- 服务器正文与 `WORKSHOP_DESCRIPTION_0.76.txt` 规范化换行后逐字一致。更新说明为 `WORKSHOP_CHANGELOG_0.76.txt`。
+- 服务器正文与 `WORKSHOP_DESCRIPTION_0.76.txt` 规范化换行后逐字一致。
 - ManifestID `330763494317360261`；Steam客户端日志明确记录原条目上传完成OK。
 
 证据目录 `dist/workshop-0.76/`：`release-files.json`、`package.json`、`tested.json`、`runtime-regression.log`、`native-scan.json`、`asset-validation.json`、`publish-result.json`、`publish.log`、`remote-before.json`、`remote-after.json`、`remote-verified.json`、`workshop-upload.log`。正式归档为 `dist/EleanorRomance-0.76.zip`，0.75及更早归档保留。

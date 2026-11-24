@@ -9,6 +9,13 @@ namespace EleanorRomance
             public readonly string TitleKey;
             public readonly string CgKey;
             public readonly string Text;
+            internal readonly string LiteralTitle;
+            internal Page(string title, string cgKey, string body, bool literal)
+            {
+                LiteralTitle = title;
+                CgKey = cgKey;
+                Text = body;
+            }
             public Page(string titleKey, string cgKey, params string[] textKeys)
             {
                 TitleKey = titleKey;
@@ -17,23 +24,19 @@ namespace EleanorRomance
             }
         }
 
-        private static Page HaremPage() => RomanceState.WorkState <= 0
-            ? new Page("er_ending_harem_title", "er_ending_harem_cg", "er_ending_harem_02", "er_ending_harem_03")
-            : new Page("er_ending_harem_title", "er_ending_harem_cg",
-                "er_ending_harem_01", "er_ending_harem_02", "er_ending_harem_03");
+        private static Page HaremPage() => new Page("er_cg_shop_title", "er_ending_harem_shop_cg", "er_cg_shop_caption");
 
         private static Page MaidPage() => new Page("er_ending_maid_title", "er_ending_maid_cg",
             "er_ending_maid_01", "er_ending_maid_02", "er_ending_maid_03", "er_ending_maid_04");
 
-        private static Page RevolutionPage() => new Page("er_ending_rev_v2_title", "er_ending_revolution_cg",
-            "er_ending_rev_v2_01", "er_ending_rev_v2_02", "er_ending_rev_v2_03", "er_ending_rev_v2_04");
+        private static Page RevolutionPage() => new Page("er_cg_knock_title", "er_ending_revolution_knock_cg", "er_cg_knock_caption");
 
         private static Page LovePage() => new Page("er_ending_love_title", "er_ending_love_wedding",
-            "er_ending_love_01",
+            "er_cg_wedding_caption", "er_ending_love_01",
             RomanceState.Route == 1 ? "er_ending_love_02_research_returned" : "er_ending_love_02_research_public",
             "er_ending_love_03");
 
-        private static bool DualCompleted() => DualState.Confirmed && DualDirector.RouteStoryFinished;
+        private static bool DualCompleted() => DualState.Confirmed && DualDirector.RouteStoryFinished && ChapterFinales.ShopFinished;
 
         public static Page TryDualCompletion()
         {
@@ -56,7 +59,7 @@ namespace EleanorRomance
         {
             if (!RomanceState.StoryActive) return null;
             if (RomanceState.Route != 3 || RomanceState.MotherState != 2) return null;
-            if (!RomanceState.RevComplete || RomanceState.RevEndingShown) return null;
+            if (!ChapterFinales.KnockFinished || RomanceState.RevEndingShown) return null;
             return RevolutionPage();
         }
 
@@ -91,8 +94,8 @@ namespace EleanorRomance
             // lovers variant; the archivist is offering another route, not
             // re-labelling the ending.
             if (MaidState.HasHistory && MaidState.Progress >= 28) return true;
-            if (DualState.HasHistory && DualDirector.RouteStoryFinished) return true;
-            if (RomanceState.Route == 3 && RomanceState.MotherState == 2 && RomanceState.RevComplete)
+            if (DualState.HasHistory && ChapterFinales.ShopFinished) return true;
+            if (RomanceState.Route == 3 && RomanceState.MotherState == 2 && ChapterFinales.KnockFinished)
                 return true;
 
             // E2 friends: the common line reached its ending without a partner

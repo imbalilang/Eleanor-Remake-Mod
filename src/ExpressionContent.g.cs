@@ -534,7 +534,6 @@ public static readonly Dictionary<string,string> ByKey = new Dictionary<string,s
 {"er_rev_v2_v2_r4c4_s0_16","neutral"},
 {"er_rev_v2_v2_r4c4_s0_17","soft"},
 {"er_rev_v2_v2_r4c4_s0_19","soft"},
-{"er_rev_v2_v2_r4c4_s1_01","neutral"},
 {"er_v06_c01_n001_02","angry"},
 {"er_v06_c01_n003_02","shy"},
 {"er_v06_c02_n001_02","sad"},

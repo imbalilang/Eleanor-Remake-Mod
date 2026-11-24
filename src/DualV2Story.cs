@@ -208,6 +208,7 @@ namespace EleanorRomance
             {
                 DualState.Relation = 1;
                 DualState.Flag("d.act3a", true);
+                EndingPageUI.ShowChapterPage("er_cg_dv08_title", "er_event_harem_first_kiss_cg", "er_cg_dv08_text");
             });
 
         private static StoreClient CreateDv09() => SimpleChoice(LydiaDate("dual_dv09"),
@@ -262,7 +263,7 @@ namespace EleanorRomance
                     DualState.Flag("d.act4", true);
                 });
                 DualDirector.FinishRewrittenCore();
-                EndingPageUI.ShowDualCompletion();
+                EndingPageUI.ShowChapterPage("er_cg_dv13_title", "er_ending_harem_cg", "er_cg_dv13_text");
             });
             return Ready(client, root, "dv13_b001");
         }

@@ -1,5 +1,7 @@
 # Updates the existing owned item using the game's bundled Steamworks client.
 # No credentials or new item are created. -CheckOnly performs authentication only.
+# Workshop change notes are owner-only: agents must not pass -NotesFile or write
+# update notes. Content-only publishes may omit -NotesFile entirely.
 param(
     [string]$GameRoot='D:/Program Files (x86)/Steam/steamapps/common/Probably Stolen',
     [string]$ContentFolder,
@@ -39,8 +41,8 @@ try {
     if($DescriptionOnly -and $MetadataOnly){throw '-DescriptionOnly and -MetadataOnly cannot be combined.'}
     if($DescriptionOnly -and $KeepDescription){throw '-DescriptionOnly and -KeepDescription cannot be combined.'}
     if($Mature -and $ClearContentDescriptors){throw '-Mature and -ClearContentDescriptors cannot be combined.'}
-    if(!$MetadataOnly -and !$DescriptionOnly -and (!$ContentFolder -or !$NotesFile)){
-        throw 'Content, notes, and result paths are required unless -MetadataOnly is used.'
+    if(!$MetadataOnly -and !$DescriptionOnly -and !$ContentFolder){
+        throw 'Content folder and result paths are required unless -MetadataOnly is used.'
     }
     if(!$KeepDescription -and !$DescriptionFile){throw 'Description path is required unless -KeepDescription is used.'}
     $description=if($DescriptionFile){Get-Content -LiteralPath $DescriptionFile -Raw -Encoding utf8}else{''}

@@ -51,7 +51,7 @@
 - ZIP：`dist/EleanorRomance-0.90.zip`；SHA-256 `BA0874C870BAD93E3C677BFCFE5442E6CAE374B74B75BF3C818EEFDBED255A48`。
 - 工坊发布：`k_EResultOK`，条目 `3834588749`，内容与说明同时提交，无待接受协议；完成于 2026-11-11T06:27:26Z，耗时 6.05 秒；回执 `dist/workshop-0.90/publish-result.json`。
 - 远程复核：`result=1`、`file_size=5,234,340`、`time_updated=1794378445`、公开、未封禁；远程快照 `dist/workshop-0.90/remote-after.json`。
-- 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，采用简短“旧存档兼容”口径后为 7,375 UTF-8 字节，低于 8,000 限制；更新日志 `docs/WORKSHOP_CHANGELOG_0.90.txt`。
+- 工坊说明：`docs/WORKSHOP_DESCRIPTION_0.90.txt`，采用简短“旧存档兼容”口径后为 7,375 UTF-8 字节，低于 8,000 限制。
 - 说明补充发布：两次 `description-only` 更新均为 `k_EResultOK`；回执 `dist/workshop-0.90/publish-description-result.json`、`publish-description-concise-result.json`；远程复核 `remote-after-concise.json`，远程说明 7,375 字节且包含中英“旧存档兼容”口径。
 - 扫描说明：本机没有 PowerShell 7，游戏自带 ModScanner 在 PowerShell 5.1 下报 `MissingMethodException`，因此本轮未取得原生扫描回执；已人工核对新增代码未引入 files/network/reflection/process/native 能力，0.89 的清理扫描结果仍作为上一次基线。
 - GitHub：发布提交 `9becd8e` 已推送到 `https://github.com/imbalilang/Eleanor-Remake-Mod.git` 的 `main`；同步细节保存在本地 `dist/workshop-0.90/github-sync.json`（发布证据目录不随仓库提交）。

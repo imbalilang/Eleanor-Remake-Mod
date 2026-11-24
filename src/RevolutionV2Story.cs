@@ -236,7 +236,8 @@ namespace EleanorRomance
                     RomanceState.RevEndingShown = false;
                     StoryEngine.GiveSelfRefillingPerfume();
                     StoryDirector.AdvanceChapter(290, RomanceState.ChapterComplete);
-                    EndingPageUI.ShowRevolutionCompletion();
+                    ChapterFinales.MarkReunion();
+                    EndingPageUI.ShowChapterPage("er_cg_reunion_title", "er_ending_revolution_cg", "er_cg_reunion_text");
                     return;
             }
             int next;

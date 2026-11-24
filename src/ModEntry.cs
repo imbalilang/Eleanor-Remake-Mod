@@ -30,6 +30,8 @@ namespace EleanorRomance
             {
                 ModHook.OnModItemDirectoryInit += Items.Register;
                 ModHook.OnGameLoadedEarly += StoryDirector.OnGameLoadedEarly;
+                ModHook.OnGameLoadedLate += LoveA2Closing.OnLoaded;
+                ModHook.OnGameLoadedLate += ChapterLoadedReportPatch.OnLoaded;
                 // The native registration API touches the lazy PlayerStore singleton.
                 // LoadGame has an existing store here, before save deserialization.
                 ModHook.OnGameLoadedInit += MaidProjects.Register;
@@ -60,6 +62,8 @@ namespace EleanorRomance
             {
                 ModHook.OnModItemDirectoryInit -= Items.Register;
                 ModHook.OnGameLoadedEarly -= StoryDirector.OnGameLoadedEarly;
+                ModHook.OnGameLoadedLate -= LoveA2Closing.OnLoaded;
+                ModHook.OnGameLoadedLate -= ChapterLoadedReportPatch.OnLoaded;
                 ModHook.OnGameLoadedInit -= MaidProjects.Register;
                 ModHook.OnNewGameStarted -= StoryDirector.OnNewGameStarted;
                 ModHook.OnGenerateCustomerEarly -= StoryDirector.OnGenerateCustomerVeryEarly;

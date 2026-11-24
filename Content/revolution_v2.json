@@ -3079,20 +3079,9 @@
         "v2_r4c4_s1": {
           "lines": [
             {
-              "speaker": "Eleanor",
-              "text": "我好想你。",
-              "en": "I missed you.",
-              "expr": "neutral"
-            },
-            {
               "speaker": "Narrator",
-              "text": "她把椅子朝窗边拖近一点，重新落座，左胳膊压在柜台上。",
-              "en": "She pulls the chair a little closer to the window, sits down, and rests her arm on the counter."
-            },
-            {
-              "speaker": "Narrator",
-              "text": "店主把台面上几样杂物移开，给她空出一块地方。",
-              "en": "The shopkeeper moves the clutter on the counter aside to make room for her."
+              "text": "你把窗边那把椅子扶稳。她的手伸到一半，改攥住了你的衣袖。你迎上去，她把头靠到你肩上。",
+              "en": "You steady the chair by the window. She reaches for it, then takes your sleeve instead. You lean out to meet her. Her head settles on your shoulder."
             }
           ]
         }

@@ -12,7 +12,7 @@
 | 英文 | `Content/*.json` 内 `en` 字段、`tools/en_v06_part*.json`、`tools/ui_text_en.json` | `Localization/en.csv` | 生成物 |
 | 日语 | `tools/ja_translations.json` + `tools/ja_batch_*.py` 覆盖层 | `Localization/ja.csv`（由 `tools/apply_ja_translations.py` 生成） | 生成物 |
 | 韩语 | `Localization/ko.csv`（直接维护）+ `Localization/ko_work/` 过程稿 | 无生成脚本 | — |
-| 路线/结局/节点 | [route_map.html](route_map.html) 的 `DATA`/`CHART` | [ROUTE_MAP_MAINTENANCE.md](ROUTE_MAP_MAINTENANCE.md) 日志 | — |
+| 路线/结局/节点（预览页） | [route_map.html](route_map.html) 的 `DATA`/`CHART`（仅作者要求时维护，可落后于实现） | [ROUTE_MAP_MAINTENANCE.md](ROUTE_MAP_MAINTENANCE.md) 日志 | — |
 | 规则与创作原则 | [PROJECT_PRINCIPLES.md](PROJECT_PRINCIPLES.md)、仓库根 `CLAUDE.md` | 各设计文档引用 | — |
 | 发布证据 | `dist/`（不入库）+ [archive/releases/](archive/releases/) | — | — |
 | 美术资源 | `Textures/Items/` + [美术资源登记_1.21_2026-11-19.json](美术资源登记_1.21_2026-11-19.json) | `Art/` 母版与交付记录 | `Textures/Items/` 之外的图不进运行区 |
@@ -34,7 +34,7 @@
 | [文风与玩家台词基准_2026-11-10.md](文风与玩家台词基准_2026-11-10.md) | **参考**：Agent/流水线根据原作与预设整理的写作分析，不是作者提供的标准 | 与游戏原文冲突时以原文与静态卡为准；不逐条修补 |
 | [表现与交互机制清单与内容契约_2026-11-12.md](表现与交互机制清单与内容契约_2026-11-12.md) | **Agent 工作机制约束**：约束主笔/机制建议用，作者不额外审核，不是项目原则 | 机制建议按其可用范围；不作为对作者的写作要求 |
 | [售卖亭空间修正_2026-11-15.md](售卖亭空间修正_2026-11-15.md) | 作者确认的售卖亭空间规则与逐条改稿证据 | 现行规则同时在 `CLAUDE.md` |
-| [ROUTE_MAP_MAINTENANCE.md](ROUTE_MAP_MAINTENANCE.md) + [route_map.html](route_map.html) | 路线图、结局编号、发布时间线 | 任何路线/选项/日期/结局改动必须同步并跑 `tools/check_route_map.py` |
+| [ROUTE_MAP_MAINTENANCE.md](ROUTE_MAP_MAINTENANCE.md) + [route_map.html](route_map.html) | 路线图、结局编号、发布时间线 | 仅作者主动要求维护时同步并跑 `tools/check_route_map.py`；默认不随剧情改动或发布更新，可落后于 manifest |
 | [MODDING_SECURITY_COMPATIBILITY.md](MODDING_SECURITY_COMPATIBILITY.md) | MOD API 安全边界、正式版/测试版兼容 | 发布前按该文件清单核对 |
 | [TESTING_CONSOLE.md](TESTING_CONSOLE.md) | F8/F9 调试与测试流程 | 调试按钮变化时同步（当前版本口径待更新） |
 
@@ -77,7 +77,7 @@
 |---|---|
 | [JA_LOCALIZATION_STYLE.md](JA_LOCALIZATION_STYLE.md)、[KO_LOCALIZATION_STYLE.md](KO_LOCALIZATION_STYLE.md) | 日语/韩语风格规则 |
 | [NEXUS_README.txt](NEXUS_README.txt) | Nexus 打包输入（本地内容可能落后；作者手动同步线上文案，仓库不回填） |
-| `docs/archive/workshop/` | AI 记录的旧工坊简介/更新日志（非权威） |
+| `docs/archive/workshop/` | 旧工坊/Nexus 简介源文件（非权威；更新说明由作者维护，仓库不保存） |
 | `docs/archive/releases/` | 0.67–1.23 发布记录（变更与验证证据） |
 | `dist/` | 打包与平台回执证据，不入库 |
 
@@ -117,8 +117,8 @@
 ## 9. 维护规则
 
 1. 正文改动：`Content/*.json` → `python tools/build_content.py` → `python tools/check_project.py`；不手改 `.g.cs` 或 CSV。
-2. 路线/选项/日期/结局改动：同一次改动更新 [route_map.html](route_map.html) 与 [ROUTE_MAP_MAINTENANCE.md](ROUTE_MAP_MAINTENANCE.md)，跑 `python tools/check_route_map.py`；公开条件变化时同步 Steam 指南 3842734960。
-3. 发布：`manifest.xml` 版本 + README 版本节 + `DATA.version` + 维护文档条目，跑检查；发布记录进 [archive/releases/](archive/releases/)，工坊更新说明另写。
+2. 路线图：仅作者主动要求时维护 [route_map.html](route_map.html) 与 [ROUTE_MAP_MAINTENANCE.md](ROUTE_MAP_MAINTENANCE.md)，维护时跑 `python tools/check_route_map.py`；默认不随剧情改动更新，也不影响发布完成度。作者要求维护且公开条件变化时，同步 Steam 指南 3842734960。
+3. 发布：`manifest.xml` 版本 + README 版本节；路线图不是发布检查项，除非作者明确要求维护。发布记录进 [archive/releases/](archive/releases/)。创意工坊更新说明由作者手动维护，Agent 不创建、不发布 `WORKSHOP_CHANGELOG_*`，也不填写 Steam 更新说明。
 4. 文档整理：现行文档放 `docs/` 根目录；被取代的设计、审计、发布材料移入 `docs/archive/<类别>/`，并同步本文件与 [archive/README.md](archive/README.md)。移入归档的文件默认不再更新。
 5. 实机验收：本项目从未由 Agent 主导实机验收（历次尝试均未成功）。Agent 只负责离线检查、Release 编译、原生扫描与打包证据；实机验证是否做、做到什么程度由作者决定与执行。
 6. Git 提交：本项目所有提交都由作者明确指令后执行；Agent 不自动提交、不自动推送（GitHub / Steam 工坊 / Nexus 同理）。

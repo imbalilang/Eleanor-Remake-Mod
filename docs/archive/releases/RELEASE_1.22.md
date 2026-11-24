@@ -28,6 +28,6 @@
 
 - 2026-11-20 05:33:07（UTC）以 **content-only** 模式更新原条目，Steam 返回 `k_EResultOK`，耗时 10.54 秒；标题、简介和内容描述符未改动。
 - Steam Web API 复核：标题保持不变；公开（Public），所有者 `76561198109201343`，文件大小 20,611,481 bytes，与本地包一致。
-- 证据：`dist/workshop-1.22/release-files.json`、`publish-result.json`、`publish.log`、`native-scan.log`、`remote-after.txt`；更新说明 `docs/WORKSHOP_CHANGELOG_1.22.txt`。
+- 证据：`dist/workshop-1.22/release-files.json`、`publish-result.json`、`publish.log`、`native-scan.log`、`remote-after.txt`。
 - 未执行本地 `Mods/` 部署；本地安装目录与存档未被修改。
 - 本地 git 变更未提交、未推送 GitHub。

@@ -15,4 +15,4 @@
 
 实机验证由用户进行，当前开发记录未补写完整经营平衡、磁盘存读档与界面验收的结论。工作区、正式包和工坊内容版本为0.67；没有向仓库提交或推送本轮改动。
 
-本地发布清单、扫描、上传与线上核对证据位于 `dist/workshop-0.67/`；本地ZIP为 `dist/EleanorRomance-0.67.zip`。工坊正文和更新记录的源文件为同目录的 `WORKSHOP_DESCRIPTION_0.67.txt`、`WORKSHOP_CHANGELOG_0.67.txt`。
+本地发布清单、扫描、上传与线上核对证据位于 `dist/workshop-0.67/`；本地ZIP为 `dist/EleanorRomance-0.67.zip`。

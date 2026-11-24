@@ -105,6 +105,8 @@ def write_mod_csv(path: str, table: dict) -> None:
 
 def main() -> int:
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    from build_cg_chapters import build as compile_chapter_scripts
+    compile_chapter_scripts()
     content_path = os.path.join(root, "Content", "story_v06.json")
     with open(content_path, encoding="utf-8") as f:
         data = json.load(f)

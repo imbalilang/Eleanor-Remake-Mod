@@ -8,8 +8,10 @@ param(
     [switch]$Dual,
     [switch]$Rewrite,
     [switch]$ReleaseQA,
+    [switch]$ChapterNight,
     [switch]$SmokeOnly
 )
+if($ChapterNight){$ReleaseQA=$true}
 if($ReleaseQA){$Rewrite=$true}
 $ErrorActionPreference = 'Stop'
 $script:TestPhase = 'fixture'
@@ -365,6 +367,7 @@ if($Rewrite){
     if (!$Maid) { Ret $game 'GameItemElement' 'Destroy' }
 }
 if($ReleaseQA){. (Join-Path $PSScriptRoot 'test_release_qa_boundaries.ps1')}
+if($ChapterNight){. (Join-Path $PSScriptRoot 'test_cg_night_boundaries.ps1')}
 $script:TestPhase = 'load'
 foreach ($assembly in @($game,$mod)) {
     $stream = [IO.MemoryStream]::new()
@@ -670,20 +673,24 @@ $fixture = Get-Content (Join-Path $PSScriptRoot 'fixtures/legacy_800_real_anonym
 foreach ($field in $fixture.state.PSObject.Properties) {
     [ModHelper]::SetModData('eleanor_romance',$field.Name,[string]$field.Value)
 }
-Assert-PausedSave 'er_notice_save_before_rewrite'
+[EleanorRomance.StoryDirector]::OnGameLoadedEarly()
+Assert ([EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.RomanceState]::Chapter -eq 13 -and [EleanorRomance.RomanceState]::Savings -eq 800) 'The released 800-savings save lost its chapter or savings.'
 
 Reset-Run 13
 [EleanorRomance.MaidState]::FeatureVersion = 1
-Assert-PausedSave 'er_notice_save_before_rewrite'
+[EleanorRomance.StoryDirector]::OnGameLoadedEarly()
+Assert ([EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.MaidState]::FeatureVersion -eq [EleanorRomance.MaidState]::V2Version -and [EleanorRomance.RomanceState]::Chapter -eq 13) 'Attendant migration lost chapter 13.'
 
 Reset-Run 20
 [EleanorRomance.DualState]::Accept()
 [EleanorRomance.DualState]::Complete('d02')
-Assert-PausedSave 'er_notice_save_before_rewrite'
+[EleanorRomance.StoryDirector]::OnGameLoadedEarly()
+Assert ([EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.DualState]::Done('d02') -and [EleanorRomance.RomanceState]::Chapter -eq 20) 'Dual migration erased the historical scene or the current chapter.'
 
 Reset-Run 106
 [EleanorRomance.RomanceState]::RevVersion = 1
-Assert-PausedSave 'er_notice_save_before_rewrite'
+[EleanorRomance.StoryDirector]::OnGameLoadedEarly()
+Assert ([EleanorRomance.RomanceState]::StoryActive -and [EleanorRomance.RomanceState]::Chapter -eq 106) 'Historical chapter 106 failed to resume.'
 
 Reset-Run
 [EleanorRomance.RomanceState]::SchemaVersion = 3

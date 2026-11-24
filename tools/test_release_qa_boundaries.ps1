@@ -22,7 +22,7 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Callvirt,$game.MainModule.ImportReference([Sy
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 Ret $mod 'EleanorRomance.StoryEngine' 'FreeNutrifruitOnce'
 Ret $mod 'EleanorRomance.MetaProgress' 'UnlockTrueEnding'
-Ret $mod 'EleanorRomance.LoveA2Closing' 'CloseAndSleep'
+if(!$ChapterNight){Ret $mod 'EleanorRomance.LoveA2Closing' 'CloseAndSleep'}
 # This fixture has no native reputation/perk tree. Economy and native quotes
 # run in the separate -Maid suite; schedule replays use the neutral cash quote.
 $il=Body (Method $mod 'EleanorRomance.MaidProjects' 'NativePrice')

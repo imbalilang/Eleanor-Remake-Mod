@@ -106,12 +106,12 @@ namespace EleanorRomance
             var stack = manager?.clientStack;
             if (stack == null) return;
             int index = stack.FindIndex(c => c != null
-                && (c.identifier ?? "") == "love_a2_01"
+                && c.identifier == "er_story_love_a2_01"
                 && VanillaEleanorBridge.IsOurClient(c));
             if (index < 0 || index == stack.Count - 1) return;
             StoreClient client = stack[index];
             stack.RemoveAt(index);
-            manager.AddClient(client);
+            stack.Add(client); // Already registered with the native queue.
         }
 
         internal static bool IsA2FirstDue(int day)
@@ -130,7 +130,7 @@ namespace EleanorRomance
         /// risking the native storyline.  For the conclusion day, only a real
         /// concluding choice (1/2/3) creates the final client.
         /// </summary>
-        private static bool SerpicoStoryVisitDue(int day)
+        internal static bool SerpicoStoryVisitDue(int day)
         {
             try
             {

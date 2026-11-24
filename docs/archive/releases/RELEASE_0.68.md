@@ -17,4 +17,4 @@
 
 离线测试使用安装游戏程序集，在内存替换对象供应、渲染及I/O边界；没有操作玩家存档或完成Unity界面实机验收。用户自行实机验证。未提交或推送Git变更。
 
-本地ZIP：`dist/EleanorRomance-0.68.zip`。发布清单、测试日志、原生扫描、Steam回调和线上核对证据：`dist/workshop-0.68/`。工坊正文及更新记录源文件：`WORKSHOP_DESCRIPTION_0.68.txt`、`WORKSHOP_CHANGELOG_0.68.txt`。
+本地ZIP：`dist/EleanorRomance-0.68.zip`。发布清单、测试日志、原生扫描、Steam回调和线上核对证据：`dist/workshop-0.68/`。

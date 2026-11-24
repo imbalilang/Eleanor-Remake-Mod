@@ -1,0 +1,115 @@
+{
+  "source": "Current shared maid blocks (migrated from the retired maid v0.5 route).",
+  "blocks": [
+    {
+      "id": "m11_b001",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "好了！给侦探的八百，凑齐了。数了三遍，一个不少。",
+          "en": "Done! I've saved up the eight hundred for the detective. Counted three times. Not a credit short."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "包括那块我死活不肯承认是废料的东西。它拆出来的材料卖了钱，你不许看不起它。",
+          "en": "Including that thing I refused to admit was scrap. The parts from it sold for money, so don't look down on it."
+        }
+      ]
+    },
+    {
+      "id": "m11_b002",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "侦探的钱凑齐了。剩下的货卖给另一家，短工那边也肯预支。",
+          "en": "I've got the detective's money. I sold the rest to another buyer, and the short-work people agreed to an advance."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "照样干活。工钱预支了，活不会自己干完。",
+          "en": "I'll still work. The advance is paid, but the work won't finish itself."
+        }
+      ]
+    },
+    {
+      "id": "m11_b003",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "吊坠也卖了。别盯着我的领口看，我自己都还没习惯。",
+          "en": "I sold the locket too. Stop staring at my neckline. I'm still getting used to it myself."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "卖给谁我知道。先办母亲的事。总不能因为我舍不得，把别的都耽误了。",
+          "en": "I know who I sold it to. Mother comes first. I can't hold everything else back just because I'm reluctant."
+        }
+      ]
+    },
+    {
+      "id": "m11_b004",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "侦探明天开始查。他答应先找母亲的工作记录，不直接去公司问人。",
+          "en": "The investigator starts tomorrow. He agreed to check the work records first, rather than question people at the company."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "查清楚，就拿给法院看。可法院会不会看，我不知道。",
+          "en": "Once it's clear, I'll take it to court. Whether the court will look at it, I don't know."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我连上层区的门都进不去，请不起律师。以前那些朋友，没一个肯接我的通讯。",
+          "en": "I can't even get through the upper district gate, let alone hire a lawyer. None of my old friends will take my calls."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我只知道先查。查清楚了，总会有下一步。",
+          "en": "All I know is to keep investigating. Once it's clear, there will be a next step."
+        }
+      ]
+    },
+    {
+      "id": "m23_b006",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "差点忘了。母亲的复核材料，正式递进去了。",
+          "en": "Almost forgot. Mother's review materials were formally submitted."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这次给回执了。调查报告、转移记录、研究签收单，一样没少。",
+          "en": "This time they gave a receipt. Investigation report, transfer record, research receipt. Nothing missing."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "日期我让他们当面写清楚，省得下回又说找不到。",
+          "en": "I made them write the dates clearly in front of me, so next time they can't say they can't find them."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "母亲的清白，可不能只靠谁嘴上答应过的一句话。",
+          "en": "Mother's name can't rest on someone's verbal promise."
+        }
+      ]
+    },
+    {
+      "id": "world_b003",
+      "lines": [
+        {
+          "speaker": "News",
+          "text": "空间站最大水培农场前负责人挪用公款案经复核，原判决正式撤销。相关指控与程序问题将另行调查。",
+          "en": "The embezzlement conviction of the former head of the station's largest hydroponics farm has been formally overturned on review. Related charges and procedural issues will be investigated separately."
+        },
+        {
+          "speaker": "News",
+          "text": "营养果自主结籽试种继续推进，研究人员表示会继续公开核验试种记录。",
+          "en": "Trial planting of self-seeding Nutrifruit continues. The researchers say trial records will remain open for verification."
+        }
+      ]
+    }
+  ]
+}
