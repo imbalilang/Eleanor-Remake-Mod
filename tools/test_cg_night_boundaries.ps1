@@ -17,7 +17,7 @@ foreach($type in @('StoreShutterButton','EndOfDayUIManager','StoreUIManager')) {
 }
 $uiType=GetCType $mod 'EleanorRomance.EndingPageUI'
 $pageFields=@{}
-foreach($pair in @(@('NightPage','Boolean'),@('FailPage','Boolean'),@('Next','Action'),@('Decline','Action'),@('Text','String'))) {
+foreach($pair in @(@('NightPage','Boolean'),@('FailPage','Boolean'),@('Next','Action'),@('Text','String'))) {
     $pageFields[$pair[0]]=AuditField $mod $uiType $pair[0] ($mod.MainModule.ImportReference([type]("System."+$pair[1])))
 }
 AuditGetter $mod $uiType.FullName 'get_PageOpen' $pageFields.NightPage
@@ -30,7 +30,6 @@ $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldc_I4_0);$il.Emit([Mono.Cecil.Cil.OpCodes]::
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldfld,((GetCType $mod 'EleanorRomance.EndingPages/Page').Fields | Where-Object Name -eq 'Text'))
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Stsfld,$pageFields.Text)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_2);$il.Emit([Mono.Cecil.Cil.OpCodes]::Stsfld,$pageFields.Next)
-$il.Emit([Mono.Cecil.Cil.OpCodes]::Ldarg_S,((Method $mod $uiType.FullName 'ShowRoutePage').Parameters[5]));$il.Emit([Mono.Cecil.Cil.OpCodes]::Stsfld,$pageFields.Decline)
 $il.Emit([Mono.Cecil.Cil.OpCodes]::Ldc_I4_1);$il.Emit([Mono.Cecil.Cil.OpCodes]::Dup);$il.Emit([Mono.Cecil.Cil.OpCodes]::Stsfld,$pageFields.NightPage);$il.Emit([Mono.Cecil.Cil.OpCodes]::Ret)
 # Preserve the enabled/story-active gates; the fixture locale is zh-CN.
 $m=Method $mod 'EleanorRomance.ChapterVisits' 'get_Active'

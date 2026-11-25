@@ -303,10 +303,11 @@ foreach($route in @(1,2)){
 }
 Reset-Modern dual 20
 $haremPage=[EleanorRomance.EndingPages].GetMethod('HaremPage',[Reflection.BindingFlags]'NonPublic,Static')
-[EleanorRomance.RomanceState]::WorkState=0
-Assert ($haremPage.Invoke($null,@()).Text -notlike '*er_ending_harem_01*') 'Rewrite ending invents an upper-level job'
-[EleanorRomance.RomanceState]::WorkState=1
-Assert ($haremPage.Invoke($null,@()).Text -like '*er_ending_harem_01*') 'Existing job ending was lost'
+foreach ($work in @(0,1)) {
+    [EleanorRomance.RomanceState]::WorkState=$work
+    Assert ($haremPage.Invoke($null,@()).Text -ceq 'er_cg_shop_caption' -and
+        [EleanorRomance.RomanceState]::WorkState -eq $work) 'E4 changed the authored caption or the stored employment result.'
+}
 
 $endingShapes=@{}
 foreach($route in @(1,2)){
@@ -317,7 +318,8 @@ foreach($route in @(1,2)){
     Assert ($null -ne $page) 'Safe research choice lost the romance ending'
     $endingShapes["love$route"]=$page.TitleKey+'|'+$page.CgKey
     $flavor=if($route -eq 1){'research_returned'}else{'research_public'}
-    Assert ($page.Text -like "*er_ending_love_02_${flavor}*") 'Romance ending lost its research background'
+    $afterword=[EleanorRomance.EndingPages].GetMethod('LoveAfterword',[Reflection.BindingFlags]'NonPublic,Static').Invoke($null,@())
+    Assert ($page.Text -eq 'er_cg_wedding_caption' -and $afterword.Text -like "*er_ending_love_02_${flavor}*") 'Romance ending lost its research background'
     Reset-Modern maid 28
     [EleanorRomance.RomanceState]::Route=$route
     [EleanorRomance.RomanceState]::Romance=1
@@ -325,20 +327,23 @@ foreach($route in @(1,2)){
     [EleanorRomance.MaidState]::Progress=28
     $page=[EleanorRomance.EndingPages]::TryMaidCompletion()
     Assert ($null -ne $page) 'Safe research choice lost the attendant ending'
+    Assert ($page.Text -ceq 'er_ending_maid_04') 'Maid CG includes epilogue prose'
     $endingShapes["maid$route"]=$page.TitleKey+'|'+$page.CgKey
     Reset-Modern dual 20
     [EleanorRomance.RomanceState]::Route=$route
     [EleanorRomance.DualState]::Complete('dv13')
     [EleanorRomance.DualState]::Relation=2
+    Assert ($null -eq [EleanorRomance.EndingPages]::TryDualCompletion()) 'Confirmation alone skipped the final visit'
+    [EleanorRomance.DualState]::Flag('cg.shop.finished',$true)
     $page=[EleanorRomance.EndingPages]::TryDualCompletion()
-    Assert ($null -ne $page) 'Safe research choice lost the harem ending'
+    Assert ($null -ne $page -and $page.Text -ceq 'er_cg_shop_caption') 'Safe research choice lost the harem ending'
     $endingShapes["dual$route"]=$page.TitleKey+'|'+$page.CgKey
 }
 foreach($kind in @('love','maid','dual')){
     Assert ($endingShapes["${kind}1"] -eq $endingShapes["${kind}2"]) 'Research choice split a relationship ending'
 }
 'PASS: both safe research choices reach the same three relationship endings; research background remains conditional.'
-'PASS: both research outcomes, both wedding guest lists, mother/drive facts, and conditional harem ending.'
+'PASS: both research outcomes, both wedding guest lists, mother/drive facts, and fixed E4 caption with either job status.'
 
 # Current common chapters: carry every drive/threat answer through to its
 # commit, and verify all three world decisions through the actual trade wrap.

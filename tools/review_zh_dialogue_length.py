@@ -23,8 +23,8 @@ ROUTES = {
 ORIGINAL_NAMES = {"埃莉诺": "Eleanor", "埃莉诺的叔叔": "Uncle", "治安部警官": "Officer", "黑市打手": "Thug"}
 # One-based lines unconditionally filtered by EleanorStory.Create* on these paths.
 UNPLAYED = {
-    "er_v06_c01_n003": {4}, "er_v06_c02_n002": {1, 7}, "er_v06_c04_n002": {1},
-    "er_v06_c04_b003": {1}, "er_v06_c05_n002": {1, 4, 9}, "er_v06_c17_b101": {8, 11, 19},
+    "er_v06_c01_n003": {4}, "er_v06_c02_n002": {1, 7},
+    "er_v06_c04_b003": {1}, "er_v06_c05_n002": {1}, "er_v06_c17_b101": {8, 11, 19},
 }
 
 
@@ -84,7 +84,10 @@ def route_frames(localization, with_actions=False):
             else:
                 speaker = speaker.capitalize()
             key = f"{prefix}_{i:02d}"
-            for frame in strings[key].replace(r"\n", "\n").splitlines():
+            text = strings.get(key)
+            if text is None:
+                continue
+            for frame in text.replace(r"\n", "\n").splitlines():
                 spoken = re.sub(r"<i>.*?</i>", "", frame)
                 if count(spoken) and not re.fullmatch(r"（.*）", spoken.strip()):
                     yield speaker, key, re.sub(r"</?i>", "", frame) if with_actions else spoken

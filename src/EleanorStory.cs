@@ -365,7 +365,7 @@ namespace EleanorRomance
 
             Dialogue root = StoryEngine.Build(StoryV06Content.B_C04_N001);
             Dialogue keepBox = StoryEngine.Build(StoryV06Content.B_C04_N003);
-            Dialogue register = StoryEngine.BuildSkipFirst(StoryV06Content.B_C04_N002);
+            Dialogue register = StoryEngine.Build(StoryV06Content.B_C04_N002);
             Dialogue refuseBox = StoryEngine.Build(StoryV06Content.B_C04_N004);
             StoryEngine.Tail(keepBox).SetEndAction(() => client.dismissable = true);
             StoryEngine.Tail(register).SetEndAction(() => client.dismissable = true);

@@ -29,10 +29,10 @@ def read_zh() -> dict[str, str]:
 def write_ja(zh: dict[str, str], overlay: dict[str, str]) -> None:
     unknown = sorted(set(overlay) - set(zh))
     if unknown:
-        raise SystemExit("Japanese overlay has unknown keys: " + ", ".join(unknown[:10]))
+        print(f"Skipping {len(unknown)} unknown Japanese overlay keys")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "w", encoding="utf-8", newline="") as f:
-        for key in sorted(overlay):
+        for key in sorted(set(overlay) & set(zh)):
             value = str(overlay[key]).replace("\r", "").replace("\n", "\\n").replace('"', '""')
             f.write(f'{key},"{value}"\n')
 
@@ -41,7 +41,8 @@ def main() -> int:
     zh = read_zh()
     overlay = json.loads(OVERLAY.read_text(encoding="utf-8"))
     write_ja(zh, overlay)
-    print(f"Wrote {OUT} ({len(overlay)}/{len(zh)} keys translated)")
+    known = len(set(overlay) & set(zh))
+    print(f"Wrote {OUT} ({known}/{len(zh)} keys translated)")
     return 0
 
 

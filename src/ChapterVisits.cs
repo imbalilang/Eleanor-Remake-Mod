@@ -9,26 +9,12 @@ namespace EleanorRomance
     internal sealed class CgChapter
     {
         internal readonly string Id, Title, Caption;
-        internal readonly string[] Intro, Labels, Yes, No, Picture;
-        internal CgChapter(string id, string title, string[] intro, string[] labels, string[] yes, string[] no, string[] picture, string caption)
+        internal readonly string[] Intro, Sold, Unsold;
+        internal CgChapter(string id, string title, string[] intro, string[] sold, string[] unsold, string caption)
         {
-            Id = id; Title = title; Intro = intro; Labels = labels; Yes = yes; No = no; Picture = picture; Caption = caption;
+            Id = id; Title = title; Intro = intro; Sold = sold; Unsold = unsold; Caption = caption;
         }
-        internal bool ShowStill(Action next)
-        {
-            string cg = ChapterVisits.Art[Id];
-            string body = PortraitCompat.GetLocalSprite(cg) == null && Picture.Length > 0
-                ? string.Join("\n", Picture) + "\n\n" + Caption : Caption;
-            return EndingPageUI.ShowScript(Title, cg, body, next);
-        }
-        internal void Still(Action next)
-        {
-            if (!ShowStill(next)) next?.Invoke();
-        }
-        internal void Read(string[] text, Action next)
-        {
-            if (text.Length == 0 || !EndingPageUI.ShowScript(Title, null, string.Join("\n\n", text), next)) next?.Invoke();
-        }
+        internal bool ShowStill(Action next) => EndingPageUI.ShowScript(Title, ChapterVisits.Art[Id], Caption, next);
     }
 
     internal static class ChapterVisits
@@ -101,29 +87,47 @@ namespace EleanorRomance
             var c = Eligible("love_night_stay") ? Find("love_night_stay")
                 : ChapterScripts.All.FirstOrDefault(x => (x.Id.Contains("_night_") || x.Id == "rev_ride") && Eligible(x.Id));
             if (c == null) return false;
-            return Offer(c, sleep, sleep, true);
-        }
-        private static bool Offer(CgChapter c, Action accepted, Action declined, bool night)
-        {
             int day = Day;
-            void Commit()
+            return WindowTalk(c.Intro, () =>
             {
-                Set(c.Id, day);
-                if (night) Set("night", day);
-            }
-            Action take = () =>
-            {
+                void Finish()
+                {
+                    Set(c.Id, day);
+                    Set("night", day);
+                    sleep();
+                }
                 if (c.Id == "love_night_stay")
                 {
-                    Commit();
                     Set("wake", day + 1);
-                    c.Read(c.Yes, accepted);
+                    Finish();
                 }
-                else c.Read(c.Yes, () => c.Still(() => { Commit(); accepted(); }));
-            };
-            Action leave = () => { Commit(); c.Read(c.No, declined); };
-            return EndingPageUI.ShowScript(c.Title, null, string.Join("\n\n", c.Intro), take,
-                c.Labels.Length == 2 ? c.Labels : null, leave);
+                else if (!c.ShowStill(Finish)) Finish();
+            });
+        }
+        // Ignore stale end actions from a dialogue belonging to another day or loaded slot.
+        private static object windowTicket;
+        internal static bool Talking => windowTicket != null;
+        internal static void ResetWindow() => windowTicket = null;
+        internal static bool WindowTalk(string[] lines, Action finish)
+        {
+            var ui = DialogUIManager.Instance;
+            var first = DialogueFor(lines);
+            if (Talking || ReferenceEquals(ui, null) || first == null) return false;
+            var ticket = new object();
+            windowTicket = ticket;
+            StoryEngine.OnDialogueFinished(first, () =>
+            {
+                if (!ReferenceEquals(windowTicket, ticket)) return;
+                windowTicket = null;
+                finish();
+            });
+            try
+            {
+                if (ui.StartDialogue(first)) return true;
+            }
+            catch (Exception ex) { ModEntry.LogError("CG window dialogue: " + ex); }
+            windowTicket = null;
+            return false;
         }
         internal static void Morning()
         {
@@ -135,20 +139,27 @@ namespace EleanorRomance
         }
         internal static bool AtClosing(Action close)
         {
-            return Active && !EndingPageUI.PageOpen && Eligible("maid_stage_soundcheck")
-                && Offer(Find("maid_stage_soundcheck"), close, close, false);
-        }
-        internal static bool DayOffAvailable(PlayerStore store) => Active && !EndingPageUI.PageOpen
-            && store?.storeState == PlayerStore.StoreState.OPEN && store.currentClientInstance == null
-            && Eligible("love_day_promenade") && StoryDirector.PendingChapterForDay(Day) == 0
-            && !LoveDirector.SerpicoStoryVisitDue(Day) && ChapterTradeQueuePatch.OnlyOrdinaryGuestsRemain(store.storeClientManager);
-
-        internal static bool OfferDayOff(Action resume, Action close) => Offer(Find("love_day_promenade"), () =>
-        {
             var store = PlayerStore.Instance;
-            if (store?.storeState == PlayerStore.StoreState.OPEN && store.currentClientInstance == null
-                && ChapterTradeQueuePatch.OnlyOrdinaryGuestsRemain(store.storeClientManager)) close();
-        }, resume, false);
+            if (!Active || EndingPageUI.PageOpen || store?.currentClientInstance != null) return false;
+            var scene = Eligible("maid_stage_soundcheck") ? Find("maid_stage_soundcheck")
+                : DayOffAvailable(store) ? Find("love_day_promenade") : null;
+            if (scene == null) return false;
+            int day = Day;
+            return WindowTalk(scene.Intro, () =>
+            {
+                void Finish()
+                {
+                    Set(scene.Id, day);
+                    if (store.storeState != PlayerStore.StoreState.OPEN || store.currentClientInstance != null) return;
+                    if (scene.Id != "love_day_promenade" || ChapterTradeQueuePatch.OnlyOrdinaryGuestsRemain(store.storeClientManager)) close();
+                }
+                if (!scene.ShowStill(Finish)) Finish();
+            });
+        }
+        private static bool DayOffAvailable(PlayerStore store) => Eligible("love_day_promenade")
+            && StoryDirector.PendingChapterForDay(Day) == 0 && !LoveDirector.SerpicoStoryVisitDue(Day)
+            && ChapterTradeQueuePatch.OnlyOrdinaryGuestsRemain(store.storeClientManager);
+
         internal static CgChapter TradeDue() => Active && Get("trade") != Day
             ? ChapterScripts.All.FirstOrDefault(c => c.Id.Contains("_trade_") && Eligible(c.Id)) : null;
         internal static StoreClient Trade(CgChapter c)
@@ -178,10 +189,10 @@ namespace EleanorRomance
             bool sold = false;
             client.onItemSold += (item, price) => sold |= item != null && price > 0;
             client.onItemBought += (item, price) => sold |= item != null && price > 0;
-            StoryEngine.InterceptDismiss(client, () => DialogueFor(sold ? c.Yes : c.No), () =>
+            StoryEngine.InterceptDismiss(client, () => DialogueFor(sold ? c.Sold : c.Unsold), () =>
             {
                 Set(c.Id, Day); Set("trade", Day);
-                if (sold) c.Still(null);
+                if (sold) c.ShowStill(null);
             });
             client.CompleteClientCreation();
             ModHelper.SetClientSource(client, ModConstants.ModId);
@@ -195,9 +206,9 @@ namespace EleanorRomance
             foreach (string line in lines)
             {
                 int pos = line.IndexOf('　');
-                string who = pos > 0 ? line.Substring(0, pos) : null;
-                string name = who == "店主" ? L.Player : who == null ? L.Get("er_name_narrator") : who;
-                Dialogue node = StoryEngine.Text(name, pos > 0 ? line.Substring(pos + 1) : line);
+                string who = line.Substring(0, pos);
+                string name = who == "店主" ? L.Player : who == "埃莉诺" ? L.Eleanor : who == "莉迪亚" ? L.Get("er_name_lydia") : who;
+                Dialogue node = StoryEngine.Text(name, line.Substring(pos + 1));
                 if (root == null) root = node; else tail.SetNextDialogue(node);
                 tail = node;
             }

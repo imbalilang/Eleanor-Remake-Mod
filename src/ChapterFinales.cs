@@ -23,31 +23,29 @@ namespace EleanorRomance
             if (!RomanceState.StoryActive || EndingPageUI.PageOpen || !DualState.Confirmed || !DualDirector.RouteStoryFinished
                 || DualState.Flag("ending_card_shown") || Today < Due(DualState.SceneDay("dv13"), 6)) return false;
             if (ShopFinished) { return EndingPageUI.ShowDualCompletion(resume); }
-            bool outing = PlayerStore.Instance.healthData.wentToAfterhoursLastNight;
-            return EndingPageUI.ShowChapterPage("er_cg_shop_title", null,
-                outing ? "er_cg_shop_out" : "er_cg_shop_inside", () =>
-                {
-                    DualState.Flag("cg.shop.finished", true);
-                    if (!EndingPageUI.ShowDualCompletion(resume)) resume();
-                });
+            return ChapterVisits.WindowTalk(new[] {
+                "莉迪亚　" + L.Get("er_cg_shop_inside"), "埃莉诺　" + L.Get("er_cg_shop_out")
+            }, () =>
+            {
+                DualState.Flag("cg.shop.finished", true);
+                if (!EndingPageUI.ShowDualCompletion(resume)) resume();
+            });
         }
 
         internal static void AtMorning()
         {
-            if (!RomanceState.StoryActive || EndingPageUI.PageOpen || !RevolutionV2State.Enabled
+            if (!RomanceState.StoryActive || ChapterVisits.Talking || EndingPageUI.PageOpen || !RevolutionV2State.Enabled
                 || !RomanceState.RevComplete || RomanceState.RevEndingShown || Today < Due(ReunionDay, 4)) return;
-            if (KnockFinished) { EndingPageUI.ShowRevolutionCompletion(); return; }
-            Action showRail = () => EndingPageUI.ShowChapterPage("er_cg_knock_title", null, "er_cg_knock_rail", () =>
-                {
-                    ModHelper.SetModDataBool(ModConstants.ModId, "revv2.cg.knock", true);
-                    EndingPageUI.ShowRevolutionCompletion();
-                });
-            if (ModHelper.GetModDataBool(ModConstants.ModId, "revv2.cg.knock_intro", false)) showRail();
-            else EndingPageUI.ShowChapterPage("er_cg_knock_title", null, "er_cg_knock_intro", () =>
+            Action show = () =>
             {
-                ModHelper.SetModDataBool(ModConstants.ModId, "revv2.cg.knock_intro", true);
-                showRail();
-            });
+                ModHelper.SetModDataBool(ModConstants.ModId, "revv2.cg.knock", true);
+                EndingPageUI.ShowRevolutionCompletion();
+            };
+            if (KnockFinished || ModHelper.GetModDataBool(ModConstants.ModId, "revv2.cg.knock_intro", false)) show();
+            else ChapterVisits.WindowTalk(new[] {
+                "埃莉诺　" + L.Get("er_cg_knock_intro"), "店主　" + L.Get("er_cg_knock_rail"),
+                "埃莉诺　" + L.Get("er_cg_knock_farewell")
+            }, show);
         }
     }
 
@@ -60,9 +58,13 @@ namespace EleanorRomance
         private static bool Prefix(EndOfDayUIManager __instance)
         {
             if (!LoveA2Closing.Enabled || !RomanceState.StoryActive) return true;
-            if (sleepStarting || EndingPageUI.PageOpen || PlayerStore.Instance?.storeState != PlayerStore.StoreState.CLOSED) return false;
+            if (sleepStarting || ChapterVisits.Talking || EndingPageUI.PageOpen || PlayerStore.Instance?.storeState != PlayerStore.StoreState.CLOSED) return false;
             Action sleep = __instance.OnEndDayButtonClick;
-            if (!LoveA2Closing.OwnsTonight && (ChapterFinales.AtBedtime(sleep) || ChapterVisits.Bedtime(sleep))) return false;
+            if (!LoveA2Closing.OwnsTonight && (ChapterFinales.AtBedtime(sleep) || ChapterVisits.Bedtime(sleep)))
+            {
+                if (__instance.IsOpen) __instance.CloseUI(false);
+                return false;
+            }
             sleepStarting = true;
             LoveA2Closing.CancelTimer();
             return true;
@@ -94,10 +96,10 @@ namespace EleanorRomance
     [HarmonyPatch(typeof(StartOfDayUIManager), nameof(StartOfDayUIManager.OpenUI))]
     internal static class ChapterMorningPatch
     {
-        internal static void CheckMorning()
+        internal static void CheckMorning(bool atShutter = false)
         {
             if (!LoveA2Closing.Enabled || PlayerStore.Instance?.storeState != PlayerStore.StoreState.MORNING) return;
-            ChapterFinales.AtMorning();
+            if (atShutter) ChapterFinales.AtMorning();
             ChapterVisits.Morning();
         }
         private static void Postfix() => CheckMorning();

@@ -50,9 +50,9 @@ function Fresh([int]$day,[string]$state='CLOSED') {
     $station.dayCounter=$day;$store.storeState=$state;$store.visitLeftTonight=1;$store.currentClientInstance=$null;$store.storeClientManager.clientStack.Clear();$store.playerCash=250
     Hook LoveA2Closing Reset;[EleanorRomance.EndingPageUI]::HideRoutePage();[EleanorRomance.EndingPageUI]::FailPage=$false;[MetaHelper]::NightTimer=$null
 }
-function Choose([switch]$No) {
+function Choose {
     Assert ([EleanorRomance.EndingPageUI]::NightPage) 'Expected a page before clicking.'
-    $action=if($No){[EleanorRomance.EndingPageUI]::Decline}else{[EleanorRomance.EndingPageUI]::Next}
+    $action=[EleanorRomance.EndingPageUI]::Next
     [EleanorRomance.EndingPageUI]::HideRoutePage(); if($action){$action.Invoke()}
 }
 function Reload { Hook LoveA2Closing Reset; [EleanorRomance.EndingPageUI]::HideRoutePage(); Hook LoveA2Closing OnLoaded; Hook ChapterLoadedReportPatch OnLoaded }
@@ -66,27 +66,31 @@ function Love { [EleanorRomance.LoveState]::Start(54) }
 function Dual { [EleanorRomance.RomanceState]::Route=1;[EleanorRomance.RomanceState]::MotherState=1;[EleanorRomance.DualState]::Accept();[EleanorRomance.DualState]::Relation=2 }
 function Maid { [EleanorRomance.MaidState]::FeatureVersion=2;[EleanorRomance.MaidState]::EntryKind=3;[EleanorRomance.MaidState]::Contract=1;[EleanorRomance.MaidV2State]::CoWork=$true }
 function Mark([string]$id){ [ModHelper]::GetModDataInt('eleanor_romance',"er.cg.$id",-1) }
-foreach($no in @($false,$true)) {
-    Fresh 62;Love;[EleanorRomance.LoveState]::Act1Done=$true;[EleanorRomance.LoveState]::Complete(8)
-    $bed.OnEndDayButtonClick();$bed.OnEndDayButtonClick();Assert ($counts.sleep -eq 0) 'Sleep leaked through the invitation.'
-    Choose -No:$no
-    Assert ((Mark love_night_stay) -eq 62 -and (Mark love_night_supper) -eq -1) 'Overlapping flexible invitation replaced the proposal.'
-    Assert (((Mark wake) -eq 63) -eq !$no) 'Wrong wake checkpoint while the answer is open.'
-    if(!$no){Reload;$bed.OnEndDayButtonClick()}else{Choose}
-    $bed.OnEndDayButtonClick();CrossNight
-    Assert ([EleanorRomance.EndingPageUI]::NightPage -eq !$no) 'Morning picture disagrees with proposal answer.'
-    if(!$no){Choose;Assert ((Mark wake) -eq -1) 'Wake not consumed';[ModHelper]::TestData=$morningSave;Reload;Assert (!(Hook ChapterOpenShutterPatch Prefix)) 'Reload missed morning picture';Choose}
-    Assert (Hook ChapterOpenShutterPatch Prefix) 'Morning opening blocked.'
+function FinishWindow {
+    Assert (Hook ChapterVisits get_Talking) 'Expected dialogue at the window.'
+    $node=[DialogUIManager]::TestInstance.currentDialog
+    while ($node) {
+        Assert ($node.choices.Count -eq 0 -and $node.title -ne 'er_name_narrator') 'Unexpected choice or narrator.'
+        if (!$node.nextDialogue) { [DialogUIManager]::TestInstance.currentDialog=$null; $node.ExecuteEndAction(); break }
+        $node=$node.nextDialogue
+    }
 }
-'PASS proposal yes/no, overlapping invitations, mid-answer load, morning autosave checkpoint and repeated sleep.'
+Fresh 62;Love;[EleanorRomance.LoveState]::Act1Done=$true;[EleanorRomance.LoveState]::Complete(8)
+$bed.OnEndDayButtonClick();$bed.OnEndDayButtonClick();Assert ($counts.sleep -eq 0) 'Sleep leaked through the window dialogue.'
+Reload;$bed.OnEndDayButtonClick();FinishWindow
+Assert ((Mark love_night_stay) -eq 62 -and (Mark love_night_supper) -eq -1 -and (Mark wake) -eq 63) 'Wrong wake checkpoint.'
+$bed.OnEndDayButtonClick();CrossNight;Choose;Assert ((Mark wake) -eq -1) 'Wake not consumed'
+[ModHelper]::TestData=$morningSave;Reload;Assert (!(Hook ChapterOpenShutterPatch Prefix)) 'Reload missed morning picture';Choose
+Assert (Hook ChapterOpenShutterPatch Prefix) 'Morning opening blocked.'
+'PASS automatic proposal night, window reload, next-morning illustration and single native autosave.'
 foreach($failArt in @($false,$true)) {
     Fresh 46 OPEN;Maid;[EleanorRomance.MaidState]::Progress=17;$shutter.EndAndClose();$shutter.EndAndClose();$bed.OnEndDayButtonClick()
     Assert ($counts.close -eq 0 -and $counts.sleep -eq 0) 'Trial performance closed too early.'
-    [EleanorRomance.EndingPageUI]::FailPage=$failArt;Choose;if(!$failArt){Choose};$shutter.EndAndClose()
+    [EleanorRomance.EndingPageUI]::FailPage=$failArt;FinishWindow;if(!$failArt){Choose};$shutter.EndAndClose()
     Assert ($counts.close -eq 1 -and $store.visitLeftTonight -eq 1 -and $counts.sleep -eq 0) 'Trial performance took the evening.'
     $bed.OnEndDayButtonClick();CrossNight
 }
-'PASS soundcheck through its actual continue button, unavailable picture, repeated shutter and native evening allowance.'
+'PASS trial performance and unavailable picture resume the shutter once.'
 foreach($loaded in @('none','OPEN','CLOSED','stale')) {
     Fresh 57 OPEN;Love; Hook LoveA2Closing FinishFromVisit
     if($loaded -eq 'OPEN'){Reload}else{Choose}
@@ -103,12 +107,16 @@ Choose;$bed.OnEndDayButtonClick();CrossNight
 'PASS paid closure awards 2000 once and leaves one outing until the player sleeps.'
 foreach($outing in @($false,$true)) {
     Fresh 73;Dual;[EleanorRomance.DualState]::Complete('dv13');[EleanorRomance.DualState]::SetSceneDay('dv13',67);$store.healthData.wentToAfterhoursLastNight=$outing
-    $bed.OnEndDayButtonClick();$key=if($outing){'er_cg_shop_out'}else{'er_cg_shop_inside'};Assert ([EleanorRomance.EndingPageUI]::Text -eq $key) 'Shop finale selected the wrong branch.'
-    Choose;Reload;$bed.OnEndDayButtonClick();Assert ([EleanorRomance.EndingPageUI]::Text -eq 'er_cg_shop_caption') 'E4 card did not resume';Choose;$bed.OnEndDayButtonClick();CrossNight
+    $bed.OnEndDayButtonClick();FinishWindow;Reload;$bed.OnEndDayButtonClick();Assert ([EleanorRomance.EndingPageUI]::Text -eq 'er_cg_shop_caption') 'E4 card did not resume';Choose;$bed.OnEndDayButtonClick();CrossNight
 }
-Fresh 75 MORNING;[EleanorRomance.RomanceState]::Route=3;[EleanorRomance.RomanceState]::MotherState=2;[EleanorRomance.RomanceState]::RevVersion=2;[EleanorRomance.RomanceState]::RevComplete=$true
-Hook ChapterMorningPatch Postfix;Choose;Reload;Assert (!(Hook ChapterOpenShutterPatch Prefix)) 'E9 missed second page';Assert ([EleanorRomance.EndingPageUI]::Text -eq 'er_cg_knock_rail') 'E9 intro repeated';Choose;Reload;Hook ChapterMorningPatch Postfix;Assert ([EleanorRomance.EndingPageUI]::Text -eq 'er_cg_knock_caption') 'E9 card did not resume';Choose;Assert (Hook ChapterOpenShutterPatch Prefix) 'E9 blocked opening after ending';Assert ([EleanorRomance.RomanceState]::RevEndingShown) 'E9 not committed'
-'PASS E4 inside/outing, E9 transition pages, mid-finale loads, final opening.'
+foreach($oldIntro in @($false,$true)) {
+    Fresh 75 MORNING;[EleanorRomance.RomanceState]::Route=3;[EleanorRomance.RomanceState]::MotherState=2;[EleanorRomance.RomanceState]::RevVersion=2;[EleanorRomance.RomanceState]::RevComplete=$true
+    if($oldIntro){[ModHelper]::SetModDataBool('eleanor_romance','revv2.cg.knock_intro',$true)}
+    Hook ChapterMorningPatch Postfix;Assert (!(Hook ChapterOpenShutterPatch Prefix)) 'E9 missed shutter';if(!$oldIntro){FinishWindow};Reload
+    Assert (!(Hook ChapterOpenShutterPatch Prefix)) 'E9 lost card';Assert ([EleanorRomance.EndingPageUI]::Text -eq 'er_cg_knock_caption') 'E9 added caption text';Choose
+    Assert (Hook ChapterOpenShutterPatch Prefix) 'E9 blocked opening';Assert ([EleanorRomance.RomanceState]::RevEndingShown) 'E9 not committed'
+}
+'PASS both E4 arrivals, E9 mid-finale loads, released intro checkpoint.'
 Fresh 61;[EndOfDayUIManager]::NightReactorFailure=$true;$bed.OnEndDayButtonClick();$beforeBlack.Invoke($blackInstance,@());$afterBlack.Invoke($blackInstance,@())
 Assert (($events -join '/') -eq 'night/events/day/over') 'Game over saved or opened the next morning.'
 'PASS native game-over fork ends before the save and morning report.'
@@ -121,17 +129,17 @@ function CaptureQueue([object[]]$walkins) {
     foreach($c in $walkins){Hook ChapterRandomWalkInPatch Postfix @($c)}
     Hook ChapterTradeQueuePatch Postfix @($store.storeClientManager)
 }
-foreach($action in @('bell','close')) { foreach($no in @($false,$true)) {
+foreach($late in @($false,$true)) {
     Fresh 62 OPEN;Love;[EleanorRomance.LoveState]::A3T1Done=$true;[EleanorRomance.LoveState]::NextVisitDay=63;[EleanorRomance.RomanceState]::Chapter=[EleanorRomance.RomanceState]::ChapterComplete
-    $one=WalkIn 'base';$q=$store.storeClientManager.clientStack;$q.Add($one);CaptureQueue @($one)
-    if($action -eq 'bell'){$store.TryCallNextClient()}else{$shutter.EndAndClose()};Choose -No:$no;Choose;if(!$no){Choose}
-    if($no -and $action -eq 'bell'){Assert ($counts.bell -eq 1 -and $counts.close -eq 0) 'Declining day off failed to resume bell'}
-    else {Assert ($counts.close -eq 1 -and $counts.bell -eq 0 -and $store.visitLeftTonight -eq 1 -and $counts.sleep -eq 0) 'Day off resumed the wrong action'}
-}}
-Fresh 62 OPEN;Love;[EleanorRomance.LoveState]::A3T1Done=$true;[EleanorRomance.LoveState]::NextVisitDay=63;[EleanorRomance.RomanceState]::Chapter=[EleanorRomance.RomanceState]::ChapterComplete
-$q=$store.storeClientManager.clientStack;$one=WalkIn 'base';$q.Add($one);CaptureQueue @($one);$store.TryCallNextClient();Choose;$external=WalkIn 'other_mod';$external.sourceModId='another_mod';$q.Add($external);Choose;Choose
-Assert ($counts.close -eq 0 -and $q.Contains($external)) 'A late guest was erased during an outing answer.'
-'PASS day off through bell and shutter, declined action once, accepted closure once, late special guest protected.'
+    $one=WalkIn 'base';$q=$store.storeClientManager.clientStack;$q.Add($one);CaptureQueue @($one);$store.TryCallNextClient()
+    Assert ($counts.bell -eq 1 -and $counts.close -eq 0) 'CG intercepted an ordinary call.'
+    $shutter.EndAndClose();FinishWindow
+    if($late){$external=WalkIn 'other_mod';$external.sourceModId='another_mod';$q.Add($external)}
+    Choose
+    if($late){Assert ($counts.close -eq 0 -and $q.Contains($external)) 'Lost late guest.'}
+    else{Assert ($counts.close -eq 1 -and $store.visitLeftTonight -eq 1 -and $counts.sleep -eq 0) 'Day off changed the night.'}
+}
+'PASS day off at voluntary closure, normal service bell, late special guest protected.'
 
 foreach($n in 0,1,2) {
     Fresh 70 OPEN;Dual;[EleanorRomance.DualState]::Complete('dv13');$q=$store.storeClientManager.clientStack
@@ -162,6 +170,49 @@ Fresh 66 OPEN;Dual;$paidDate=[EleanorRomance.DualStory]::CreateScene('dv10');$q=
 Hook ChapterServingOrderPatch Prefix @($store);Assert ([object]::ReferenceEquals($q[0],$delivery)) 'Paid date erased a reserved delivery.';$q.RemoveAt(0);Hook ChapterServingOrderPatch Prefix @($store);Assert ([object]::ReferenceEquals($q[0],$paidDate)) 'Ordinary walk-in displaced the paid date.'
 'PASS paid date yields to a reserved visit and keeps priority over walk-ins.'
 
+$trades = @('love_trade_wall','love_trade_kiss','dual_trade_dice','dual_trade_brooch',
+           'maid_trade_shopkeeper','maid_trade_shutters','rev_trade_sill','rev_trade_wrist')
+foreach ($id in $trades) {
+    foreach ($paid in @($true,$false)) {
+        Fresh 60 OPEN
+        $chapter = Hook ChapterVisits Find @($id)
+        $client = Hook ChapterVisits Trade @($chapter)
+        $instance = Blank ([StoreClientInstance]); $instance.storeClient = $client
+        $store.currentClientInstance = $instance
+        $ui = [DialogUIManager]::TestInstance; $ui.currentDialog = $null
+        $fieldFlags = [Reflection.BindingFlags]'Instance,NonPublic'
+        $field = if ($paid) { 'Sold' } else { 'Unsold' }
+        $expected = $chapter.GetType().GetField($field,$fieldFlags).GetValue($chapter)
+        for ($node=$client.mainDialogue; $node; $node=$node.nextDialogue) {
+            Assert ($node.choices.Count -eq 0 -and $node.title -ne 'er_name_narrator') "Extra prompt or narration in $id."
+        }
+        if ($paid) {
+            $item = [DirectoryMaster]::Item('scrap_metal',$true)
+            if ($client.clientIntent -eq [StoreClient+ClientIntent]::SELL) {
+                $client.onItemSold.Invoke($item,100)
+                [StoreClientInstance]::TestHasStock=$false
+            } else {
+                $client.onItemBought.Invoke($item,100)
+                $client.clientBudget=0
+            }
+            $client.TestOnDealAccepted($null)
+        } else { $store.TryPlayerDismissCurrentClient($true) }
+        $node = $ui.currentDialog
+        foreach ($spoken in $expected) {
+            Assert ($node -and $node.plainText -ceq $spoken.Split('　',2)[1] -and $node.choices.Count -eq 0) "Incorrect trade wrap in $id ($field)."
+            $last = $node; $node = $node.nextDialogue
+        }
+        Assert (!$node -and ![EleanorRomance.EndingPageUI]::NightPage) "Premature picture or extra wrap in $id."
+        $last.ExecuteEndAction()
+        Assert ((Mark $id) -eq 60 -and (Mark trade) -eq 60 -and [EleanorRomance.EndingPageUI]::NightPage -eq $paid) "Incorrect trade outcome for $id ($field)."
+        if ($paid) {
+            Assert ([EleanorRomance.EndingPageUI]::Text -ceq $chapter.GetType().GetField('Caption',$fieldFlags).GetValue($chapter)) "Incorrect caption for $id."
+            Choose
+        }
+    }
+}
+'PASS eight CG transactions, bought or sold versus dismissed unpaid (16 outcomes), no extra prompts.'
+
 $visits=@{
     'love_night_book'=54;'love_night_supper'=61;'love_night_bathhouse'=67;
     'dual_night_bath'=68;'dual_night_fireworks'=70;'dual_night_hotel'=72;
@@ -169,9 +220,7 @@ $visits=@{
     'rev_ride'=49;'rev_night_departure'=62;'rev_night_jacket'=73;'rev_night_barracks'=74
 }
 foreach($id in $visits.Keys){
-    $chapter=Hook ChapterVisits Find @($id);$labels=$chapter.GetType().GetField('Labels',[Reflection.BindingFlags]'Instance,NonPublic').GetValue($chapter)
-    $answers=if($labels.Length -eq 2){@($false,$true)}else{@($false)}
-    foreach($no in $answers){
+    $chapter=Hook ChapterVisits Find @($id)
         Fresh $visits[$id];$store.visitLeftTonight=0;$store.healthData.wentToAfterhoursLastNight=$true
         switch -Wildcard ($id) {
             'love*' { Love;[EleanorRomance.LoveState]::T1Done=$true;[EleanorRomance.LoveState]::Act1Done=$true;[EleanorRomance.LoveState]::A3T3Done=$true }
@@ -179,14 +228,14 @@ foreach($id in $visits.Keys){
             'maid*' { Maid;[EleanorRomance.MaidState]::Progress=27;[EleanorRomance.MaidV2State]::Act2Done=$true;[EleanorRomance.MaidV2State]::GalaInvited=$true }
             'rev*'  { [EleanorRomance.RomanceState]::MotherState=2;[EleanorRomance.RomanceState]::Route=3;[EleanorRomance.RomanceState]::RevVersion=2;[EleanorRomance.RevolutionV2State]::Progress=286;[EleanorRomance.RomanceState]::RevComplete=($visits[$id] -ge 73) }
         }
-        $bed.OnEndDayButtonClick();Choose -No:$no
-        if(!$no -and $id -eq 'love_night_book'){Reload;$bed.OnEndDayButtonClick();Choose}
-        for($page=0;$page -lt 4 -and [EleanorRomance.EndingPageUI]::NightPage;$page++){$bed.OnEndDayButtonClick();Choose}
+        $bed.OnEndDayButtonClick();FinishWindow
+        if($id -eq 'love_night_book'){Reload;$bed.OnEndDayButtonClick();FinishWindow}
+        Assert ([EleanorRomance.EndingPageUI]::Text -ceq $chapter.GetType().GetField('Caption',[Reflection.BindingFlags]'Instance,NonPublic').GetValue($chapter)) "Extra CG text for $id."
+        Choose
         Assert ((Mark $id) -eq $visits[$id] -and $store.visitLeftTonight -eq 0 -and $store.healthData.wentToAfterhoursLastNight) "Wrong scene or changed outing result for $id."
         $bed.OnEndDayButtonClick();CrossNight
-    }
 }
-'PASS all remaining 13 bedtime chapters via their actual available choices, including reloading before the book illustration.'
+'PASS 13 linear nights, exact authored captions even without art, one save after each.'
 if($ReleasedSnapshots){
     $rows=Get-Content -LiteralPath $ReleasedSnapshots -Raw | ConvertFrom-Json -AsHashtable
     $checked=0
@@ -195,9 +244,10 @@ if($ReleasedSnapshots){
         Fresh $row.day $state;[ModHelper]::TestData.Clear()
         foreach($key in $row.state.Keys){[ModHelper]::SetModData('eleanor_romance',$key,$row.state[$key])}
         [EleanorRomance.StoryDirector]::OnGameLoadedEarly();Hook LoveA2Closing OnLoaded;Hook ChapterLoadedReportPatch OnLoaded
-        if($dualRoute){$bed.OnEndDayButtonClick()}else{Hook ChapterMorningPatch Postfix}
+        if($dualRoute){$bed.OnEndDayButtonClick()}else{$null=Hook ChapterOpenShutterPatch Prefix}
+        if(Hook ChapterVisits get_Talking){FinishWindow}
         $pages=0;while([EleanorRomance.EndingPageUI]::NightPage -and $pages -lt 5){$pages++;Choose}
-        $expected=if($row.name.EndsWith('-shown')){0}elseif($dualRoute){2}else{3}
+        $expected=if($row.name.EndsWith('-shown')){0}else{1}
         Assert ($pages -eq $expected) "Released $($row.name) replayed $pages pages instead of $expected."
         if($dualRoute){CrossNight}else{Assert (Hook ChapterOpenShutterPatch Prefix) 'Released E9 blocked opening.'}
         $checked++

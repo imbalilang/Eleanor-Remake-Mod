@@ -11,8 +11,8 @@ namespace EleanorRomance
         private static bool Prefix()
         {
             if (!LoveA2Closing.Enabled || PlayerStore.Instance?.storeState != PlayerStore.StoreState.MORNING) return true;
-            ChapterMorningPatch.CheckMorning();
-            return !EndingPageUI.PageOpen;
+            ChapterMorningPatch.CheckMorning(atShutter: true);
+            return !EndingPageUI.PageOpen && !ChapterVisits.Talking;
         }
     }
 
@@ -23,9 +23,7 @@ namespace EleanorRomance
         private static bool Prefix(PlayerStore __instance)
         {
             if (!LoveA2Closing.Enabled || !RomanceState.StoryActive) return true;
-            if (EndingPageUI.PageOpen) return false;
-            if (!ChapterVisits.DayOffAvailable(__instance) || !__instance.CanNextClient()) return true;
-            return !ChapterVisits.OfferDayOff(__instance.TryCallNextClient, StoreShutterButton.Instance.EndAndClose);
+            return !EndingPageUI.PageOpen && !ChapterVisits.Talking;
         }
     }
 
@@ -35,10 +33,8 @@ namespace EleanorRomance
         private static bool Prefix(StoreShutterButton __instance)
         {
             if (!LoveA2Closing.Enabled || !RomanceState.StoryActive) return true;
-            if (EndingPageUI.PageOpen || PlayerStore.Instance?.storeState != PlayerStore.StoreState.OPEN) return false;
+            if (ChapterVisits.Talking || EndingPageUI.PageOpen || PlayerStore.Instance?.storeState != PlayerStore.StoreState.OPEN) return false;
             if (LoveA2Closing.OwnsTonight) return true;
-            if (ChapterVisits.DayOffAvailable(PlayerStore.Instance))
-                return !ChapterVisits.OfferDayOff(__instance.EndAndClose, __instance.EndAndClose);
             return !ChapterVisits.AtClosing(__instance.EndAndClose);
         }
     }

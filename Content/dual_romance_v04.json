@@ -8302,8 +8302,8 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "窗沿那包口粮慢慢歪下来。你侧过脸，伸手抵住它。埃莉诺按住袋子另一头，隔着窗口在你脸上亲了一下。",
-              "en": "The ration packet starts to tip. You turn to catch it. Eleanor steadies the other end and kisses your cheek across the sill."
+              "text": "口粮袋歪了。你伸手扶住。",
+              "en": "The ration bag tips. You catch it."
             },
             {
               "speaker": "Player",
@@ -8312,13 +8312,13 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "封口开的，刚跟你说过，留着自己吃。",
-              "en": "The seal's split. Keep it for yourself, like I said."
+              "text": "封口开了。你自己留着吃。",
+              "en": "The seal’s split. Keep this one."
             },
             {
               "speaker": "Narrator",
-              "text": "你转过来看她。包已经挎上肩了，她的手指还扣着带子，两只脚都在原地。",
-              "en": "You turn to her. Her bag is on her shoulder, her fingers hooked through the strap. She hasn't moved an inch."
+              "text": "她隔窗亲了你一下。",
+              "en": "She leans across the sill and kisses you."
             }
           ],
           "cursor_revision": 2
@@ -8870,9 +8870,8 @@
           "lines": [
             {
               "speaker": "Lydia",
-              "text": "（她用肘弯支着窗台）老板，跟你报个喜。",
-              "en": "(She props an elbow on the sill.) Good news, boss.",
-              "expr": "smile"
+              "text": "（她支着窗台，看不清表情）老板，跟你报个喜。",
+              "en": "(She props herself on the sill; her expression is hard to read.) Boss, good news."
             },
             {
               "speaker": "Lydia",
@@ -8881,18 +8880,18 @@
             },
             {
               "speaker": "Lydia",
-              "text": "把咱们那天在外头的事都跟她说了。",
-              "en": "I told her about our date that day."
+              "text": "把那天在外头的事跟她坦白了。",
+              "en": "I told her about what happened outside that day."
             },
             {
               "speaker": "Lydia",
-              "text": "她没听完就抬手拦我，说了句“知道，你接着讲”。（她学她那样，把下巴往上一扬），就这神气。",
-              "en": "Halfway through she raised a hand to stop me and said, \"I know. Keep going.\" (Copying how she lifts her chin) Just like that."
+              "text": "（她学着埃莉诺的样子，把下巴往上一扬）她就这么不咸不淡地说了句“知道，你接着讲”。",
+              "en": "(She lifts her chin in an imitation of Eleanor.) She just said, dry as could be, 'I know. Go on.'"
             },
             {
               "speaker": "Lydia",
-              "text": "后来她自己跟我说，她亲过你。我那杯水端到一半，又放下了。",
-              "en": "Then she told me she'd kissed you. I had my glass halfway to my mouth. I put it down."
+              "text": "后来她跟我说，她亲过你。我听完不知道还能再说什么，只觉得自己该安安静静消失。",
+              "en": "Then she told me she had kissed you. I did not know what else to say. I just felt I should quietly disappear."
             },
             {
               "speaker": "Lydia",
@@ -8901,8 +8900,8 @@
             },
             {
               "speaker": "Lydia",
-              "text": "（人刚背过去，又转回窗口跟前）……",
-              "en": "(Turns to leave, then comes back to the window)..."
+              "text": "（人刚背过身，又转回窗口跟前）……",
+              "en": "(She has just turned away, then turns back to the window.) ..."
             },
             {
               "speaker": "Player",
@@ -8911,13 +8910,13 @@
             },
             {
               "speaker": "Narrator",
-              "text": "她肩头一抖。",
-              "en": "Her shoulders jerk."
+              "text": "女孩肩头颤抖。",
+              "en": "Her shoulders tremble."
             },
             {
               "speaker": "Lydia",
-              "text": "哎呀，丢脸死了。（她用手背胡乱抹，末了手掌还按在窗框上）",
-              "en": "Ugh, so embarrassing. (Wipes with the back of her hand, making it worse)"
+              "text": "哎呀，丢脸死了。（她用手背胡乱抹了抹脸）",
+              "en": "Ugh, so embarrassing. (She wipes her face hastily with the back of her hand.)"
             },
             {
               "speaker": "Lydia",
@@ -8926,13 +8925,13 @@
             },
             {
               "speaker": "Lydia",
-              "text": "那天咱仨挤在这吃那包最便宜的，我回到家能乐到后半夜。",
-              "en": "The three of us crammed in here eating the cheapest pack of food—I'd go home happy all night."
+              "text": "那天咱们仨挤在这，分着吃那包泡面；我回到家的时候，还忍不住把自己埋进被子里傻乐。",
+              "en": "That day the three of us squeezed in here and shared that pack of instant noodles. When I got home, I buried myself in the blanket and giggled like an idiot."
             },
             {
               "speaker": "Lydia",
-              "text": "可她先告诉你了。",
-              "en": "But she told you first."
+              "text": "可她……先告诉你了。",
+              "en": "But she... told you first."
             },
             {
               "speaker": "Lydia",
@@ -8954,13 +8953,15 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我……想。嘴皮子上想。",
-              "en": "I... want to. That's what I keep saying."
+              "text": "我……想。你别问了，我就是想、我就是甘心。",
+              "en": "I... want to. Stop asking. I want to. I am willing.",
+              "expr": "shy"
             },
             {
               "speaker": "Lydia",
-              "text": "别这么问，再问，我连装硬气都快装不出来了。",
-              "en": "Don't ask me like that. I can't even keep pretending."
+              "text": "别再问了……再问，我真就骗不了自己了……",
+              "en": "Stop asking... If you keep asking, I will not be able to lie to myself anymore.",
+              "expr": "sad"
             }
           ]
         },
@@ -8971,14 +8972,14 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "行了，别抹了。等谁瞧见，还当我怎么你了。",
-              "en": "There, there. If someone sees you, they'll think I'm bullying you."
+              "text": "（递过去一张纸巾）行了，擦擦眼泪。让别人看见，还当我怎么你了。",
+              "en": "(Hands her a tissue.) All right, wipe your tears. If anyone sees, they will think I did something to you."
             },
             {
               "speaker": "Lydia",
-              "text": "（她边吸气边笑出声来）你……你就是把我欺负了。",
-              "en": "(Laughs through her tears) You... you are bullying me.",
-              "expr": "shy"
+              "text": "（她边擦泪边笑出声来）你……你就是欺负我了。",
+              "en": "(She wipes her tears and laughs.) You... you really did bully me.",
+              "expr": "smile"
             }
           ],
           "cursor_revision": 2
@@ -8990,14 +8991,13 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "我，也喜欢你。",
+              "text": "我也喜欢你。",
               "en": "I like you too."
             },
             {
               "speaker": "Lydia",
-              "text": "……你再说一回？",
-              "en": "...What did you say?",
-              "expr": "shy"
+              "text": "……你说什么？我好像幻听了。",
+              "en": "...What did you say? I think I misheard."
             },
             {
               "speaker": "Player",
@@ -9006,13 +9006,13 @@
             },
             {
               "speaker": "Lydia",
-              "text": "那埃莉诺怎么办？你别开口就说要把两个都——",
-              "en": "Then what about Eleanor? Don't tell me you plan to have both—"
+              "text": "那埃莉诺怎么办？你难不成想把我们两个都——",
+              "en": "Then what about Eleanor? You cannot mean to have both of us—"
             },
             {
               "speaker": "Player",
-              "text": "不行吗。",
-              "en": "Can't I?"
+              "text": "不行吗？",
+              "en": "Is that not allowed?"
             },
             {
               "speaker": "Lydia",
@@ -9022,8 +9022,9 @@
             },
             {
               "speaker": "Lydia",
-              "text": "我去和埃莉诺把话摆开。",
-              "en": "I'm going to talk to Eleanor."
+              "text": "行。谁叫我喜欢你。我找个机会去跟埃莉诺摊牌。",
+              "en": "Fine. I cannot help liking you. I will find a chance to talk to Eleanor.",
+              "expr": "smile"
             }
           ],
           "cursor_revision": 2
@@ -9041,8 +9042,8 @@
           "id": "dv12_c1_2",
           "label_zh": "问她真想放弃吗",
           "label_en": "Ask if she really wants to give up",
-          "description_zh": "让她把退和不退说清楚。",
-          "description_en": "Make her say clear whether she's in or out."
+          "description_zh": "让她把是否退出想清楚。",
+          "description_en": "Make her think through whether she really wants to give up."
         },
         {
           "id": "dv12_c1_3",
@@ -9065,24 +9066,25 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "人到了。她非拽着我过来，我甩都甩不掉。",
-              "en": "I brought her. More accurately, she dragged me here.",
-              "expr": "serious"
+              "text": "莉迪亚！别拽我，我自己能走！",
+              "en": "Lydia! Stop pulling. I can walk by myself!",
+              "expr": "angry"
             },
             {
               "speaker": "SEC",
-              "text": "是我张的口。可这一路她倒走得急，我差点追不上。",
-              "en": "I called for it. But she walked ahead the whole way. I could barely keep up."
+              "text": "（她放开埃莉诺的手腕）走到两条街开外的时候，是谁找借口支支吾吾不想来？我知道，但我不说是谁。",
+              "en": "(She lets go of Eleanor's wrist.) Who was it, two streets back, making excuses and dragging her feet? I know. I am just not saying."
             },
             {
               "speaker": "Eleanor",
-              "text": "（她松开莉迪亚的手腕，朝柜台后头看过去）她路上说，你欺负她了。",
-              "en": "She says you've been bullying her."
+              "text": "（她假装镇定地理了理被拽乱的袖口）莉迪亚跟我说，你欺负她了。",
+              "en": "(She pretends to be calm and straightens her rumpled cuff.) Lydia tells me you bullied her.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
-              "text": "再往下问，她就不肯细说了。",
-              "en": "But she won't tell me how."
+              "text": "再往下问，她就不肯细说了，非要让我一起来跟你当面讲。",
+              "en": "When I asked more, she would not say. She insisted I come and hear it from you face to face."
             },
             {
               "speaker": "SEC",
@@ -9091,8 +9093,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "（她勾出柜台前那张凳子，自己反身靠向窗台）讲。",
-              "en": "Then talk."
+              "text": "（她熟稔地拖出那把椅子，坐下靠着窗台）现在我来了，讲吧。我倒要看看你俩在搞什么小九九。",
+              "en": "(She pulls out the chair with practiced ease and sits back against the sill.) Now I am here. Talk. I want to see what the two of you are scheming.",
+              "expr": "serious"
             }
           ],
           "presentation": {
@@ -9116,13 +9119,14 @@
             },
             {
               "speaker": "SEC",
-              "text": "外头排队的人还堵着呢。",
-              "en": "Ah, there are still people waiting outside."
+              "text": "（探头）后面排队的人还堵着呢。",
+              "en": "(Pokes her head in.) The line behind us is still backed up."
             },
             {
               "speaker": "Eleanor",
-              "text": "你怎么专挑这种时候……（她脸往旁边一偏，耳尖红起来。）",
-              "en": "Why so sudden...(Her face turns red)"
+              "text": "你怎么专挑这种时候……（她耳尖红起来，用手捂住了脸。）",
+              "en": "Why do you always pick a time like this... (Her ears turn red; she covers her face with her hand.)",
+              "expr": "shy"
             }
           ]
         },
@@ -9133,9 +9137,8 @@
           "lines": [
             {
               "speaker": "SEC",
-              "text": "♥呣♥（莉迪亚唇间带着一点很淡的花香。）",
-              "en": "♥Mmm♥(Lydia's lips have a faint floral scent)",
-              "expr": "shy"
+              "text": "♥呣♥（她唇间带着一点很淡的花香。）",
+              "en": "♥Mmm♥ (A faint floral scent lingers on her lips.)"
             },
             {
               "speaker": "Eleanor",
@@ -9145,8 +9148,8 @@
             },
             {
               "speaker": "SEC",
-              "text": "埃莉诺可在旁边盯着。",
-              "en": "Ah, Eleanor's watching."
+              "text": "埃莉诺还看着呢……",
+              "en": "Eleanor is still watching..."
             }
           ]
         },
@@ -9157,20 +9160,20 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "我喜欢你们俩，没打算只挑一个。",
-              "en": "I like you both. I don't want to choose between you."
+              "text": "我喜欢你们俩，所以……我都要。",
+              "en": "I like both of you, so... I want you both."
             },
             {
               "speaker": "Eleanor",
-              "text": "原来欺负是这么个意思。行，脸皮比我估的还厚。",
-              "en": "This is what you meant by bullying? That's even more shameless than I imagined.",
+              "text": "原来是这么个欺负！哼，你这脸皮厚得能当防弹衣用！",
+              "en": "So that is what you meant by bullying! Hmph, your hide is thick enough for a bulletproof vest!",
               "expr": "smile"
             },
             {
               "speaker": "Eleanor",
-              "text": "换作别人，我早不在这儿了。你和莉迪亚，我点头。",
-              "en": "But if it's you and Lydia... all right.",
-              "expr": "soft"
+              "text": "莉迪亚也是帮凶吧？（她伸手捏了捏莉迪亚的脸颊）换作别人、换作以前，我早一巴掌上去了。（她装出高傲矜贵的样子）不过是你和莉迪亚……本小姐勉强给你们个考察的机会。",
+              "en": "Lydia is an accomplice too, isn't she? (She pinches Lydia's cheek.) With anyone else, or in the old days, I would have slapped you both. (She puts on a haughty look.) But since it is you and Lydia... I suppose I can grant you a trial.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
@@ -9179,18 +9182,19 @@
             },
             {
               "speaker": "SEC",
-              "text": "我想有几天自己过来。就咱俩，也不用拿帮忙看店当借口。",
-              "en": "I'd like some days when I can come on my own. Just us, without having to pretend you need help in the shop."
+              "text": "我想，以后有时会自己过来。不拿帮忙看店当借口，就我和你。",
+              "en": "I think I will come by myself sometimes. Not as an excuse to help at the shop—just you and me."
             },
             {
               "speaker": "SEC",
-              "text": "还有，下回有话当面跟我说。别又等到第二天。",
-              "en": "And next time, say it to my face. Don't wait till the next day again."
+              "text": "还有，下回有话当面跟我说。",
+              "en": "And next time, say it to my face."
             },
             {
               "speaker": "Eleanor",
-              "text": "（摆正两把椅子，拍拍靠里那把）我俩今天就坐这儿。",
-              "en": "(Straightens the two chairs and pats the inner one) We're sitting here today."
+              "text": "（她把店主身下的椅子抢走，轻踢到莉迪亚身侧）我俩今天就坐这儿。椅子？今天你站着！就当你花心的惩罚。",
+              "en": "(She pulls the chair out from under the shopkeeper and nudges it toward Lydia.) We are sitting here today. The chair? You can stand today! Call it punishment for being a flirt.",
+              "expr": "smile"
             }
           ],
           "cursor_revision": 2

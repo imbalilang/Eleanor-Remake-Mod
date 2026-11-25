@@ -79,7 +79,7 @@ foreach($early in @($false,$true)){
             Assert ($finished -and $count -eq $expected) "$kind scheduling stalled or replayed scenes ($count): $($schedule -join ', ')"
             if($kind -eq 'love'){
                 Assert ($schedule[3] -like "$((54-$offset)):er_story_love_a1_01" -and
-                    $schedule[12] -like "$((63-$offset)):er_story_love_a3_04") 'Love handoff lost the common next-visit reservation'
+                    $schedule[12] -like "$((69-$offset)):er_story_love_a3_04") "Love handoff or wedding mistimed: $($schedule -join ', ')"
             }
             if($kind -eq 'dual'){
                 Assert ($schedule[2] -like "$((51-$offset)):er_story_dual_d01" -and

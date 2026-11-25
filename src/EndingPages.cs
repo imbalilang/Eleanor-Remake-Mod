@@ -27,14 +27,19 @@ namespace EleanorRomance
         private static Page HaremPage() => new Page("er_cg_shop_title", "er_ending_harem_shop_cg", "er_cg_shop_caption");
 
         private static Page MaidPage() => new Page("er_ending_maid_title", "er_ending_maid_cg",
-            "er_ending_maid_01", "er_ending_maid_02", "er_ending_maid_03", "er_ending_maid_04");
+            "er_ending_maid_04");
 
         private static Page RevolutionPage() => new Page("er_cg_knock_title", "er_ending_revolution_knock_cg", "er_cg_knock_caption");
 
         private static Page LovePage() => new Page("er_ending_love_title", "er_ending_love_wedding",
-            "er_cg_wedding_caption", "er_ending_love_01",
+            "er_cg_wedding_caption");
+
+        internal static Page LoveAfterword() => new Page("er_ending_love_title", null, "er_ending_love_01",
             RomanceState.Route == 1 ? "er_ending_love_02_research_returned" : "er_ending_love_02_research_public",
             "er_ending_love_03");
+
+        internal static Page MaidAfterword() => new Page("er_ending_maid_title", null,
+            "er_ending_maid_01", "er_ending_maid_02", "er_ending_maid_03");
 
         private static bool DualCompleted() => DualState.Confirmed && DualDirector.RouteStoryFinished && ChapterFinales.ShopFinished;
 

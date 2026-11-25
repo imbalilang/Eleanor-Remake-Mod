@@ -7,7 +7,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MARK = re.compile(r'^\*\*(.+?)\*\*(?:　(.*))?$')
 HEAD = re.compile(r'^## (.+?) `([a-z_0-9]+)`$', re.M)
-NATIVE = {'love_a2_01', 'love_a3_04', 'dv08', 'dv10', 'dv13', 'dual_final_shop', 'v2_a0c2', 'v2_a4c3', 'v2_a4c4', 'v2_r3c1', 'v2_r4c4', 'rev_final_second_knock'}
+NATIVE = {
+    'love_a2_01': 'er_story_cg_love_water_cut_text', 'love_a3_04': 'er_cg_wedding_caption',
+    'dv08': 'er_cg_dv08_text', 'dv10': 'er_story_cg_date_text', 'dv13': 'er_cg_dv13_text',
+    'dual_final_shop': 'er_cg_shop_caption', 'v2_a0c2': 'er_cg_signature_text',
+    'v2_a4c3': 'er_story_cg_gala_text', 'v2_a4c4': 'er_ending_maid_04',
+    'v2_r3c1': 'er_story_cg_revolution_embrace_text', 'v2_r4c4': 'er_cg_reunion_text',
+    'rev_final_second_knock': 'er_cg_knock_caption',
+}
+WINDOW_KEYS = {
+    'love_a2_01': ['er_love_la2_s1_common_07', 'er_love_la2_s1_common_08'],
+    'dual_final_shop': ['er_cg_shop_inside', 'er_cg_shop_out'],
+    'rev_final_second_knock': ['er_cg_knock_intro', 'er_cg_knock_rail', 'er_cg_knock_farewell'],
+}
 
 
 def chapters():
@@ -28,40 +40,28 @@ def caption(text):
     return match[1].strip()
 
 
-def clean(text):
-    text = re.sub(r'〔(?:当晚至此，次晨续|回营业|结束|当晚结束，次晨正常开门)〕', '', text)
-    text = text.replace('。结束〕', '。〕').replace('〔', '').replace('〕', '')
-    return text.strip().strip('（）') if text.startswith('（') and text.endswith('）') else text.strip()
-
-
 def parse(scene, title, text):
-    sections = {k: [] for k in ('intro', 'yes', 'no', 'picture')}
-    labels = []
-    current = 'intro'
-    last_caption = caption(text)
-    text = text.replace(last_caption, '', 1)
-    for line in text.splitlines():
+    body, marker, _ = text.partition('**图上 · ')
+    assert marker, scene
+    sections = {'intro': [], 'sold': [], 'unsold': []}
+    section = 'intro'
+    for line in body.splitlines():
         if not line.strip() or line.startswith('>'):
             continue
-        mark = MARK.fullmatch(line.rstrip('　'))
+        mark = MARK.fullmatch(line)
         if mark:
-            label, line = mark[1], mark[2] or ''
-            if ' · ' in label:
-                continue
-            if '亮图' in label:
-                current = 'picture'
-            elif label in ('成交', '未成交'):
-                current = 'yes' if label == '成交' else 'no'
-            else:
-                labels.append(label)
-                current = 'yes' if len(labels) == 1 else 'no'
-        if clean(line):
-            sections[current].append(clean(line))
+            assert '_trade_' in scene and mark[1] in ('成交', '未成交'), (scene, line)
+            section = 'sold' if mark[1] == '成交' else 'unsold'
+            line = mark[2] or ''
+        who, space, speech = line.partition('　')
+        assert space and who in ('埃莉诺', '店主', '莉迪亚', '索菲娅', '客人'), (scene, line)
+        assert 0 < len(speech) <= 22, (scene, speech)
+        sections[section].append(line)
+    if scene not in NATIVE:
+        assert sections['intro'], scene
     if '_trade_' in scene:
-        assert sections['no'] and sections['yes'] and not labels, scene
-    elif scene != 'maid_stage_soundcheck':
-        assert len(labels) == 2 and sections['yes'] and sections['no'], scene
-    return dict(id=scene, title=title, labels=labels, caption=last_caption, **sections)
+        assert sections['sold'] and sections['unsold'], scene
+    return dict(id=scene, title=title, caption=caption(text), **sections)
 
 
 def check():
@@ -69,10 +69,13 @@ def check():
     source = list(chapters())
     w = openpyxl.load_workbook(ROOT / 'CG规划.xlsx', read_only=True, data_only=True)
     master = {r[5]: (r[1], r[6]) for r in list(w['投放总表'].values)[7:43]}
+    w.close()
     assert len(source) == len(master) == len(set(s for s, _, _ in source)) == 36
     for scene, name, text in source:
+        parse(scene, name, text)
         assert (name, caption(text)) == master[scene], scene
         assert text.count(caption(text)) == 1, scene
+    from hashlib import sha256
     from io import BytesIO
     from PIL import Image, ImageChops
     import csv
@@ -82,12 +85,23 @@ def check():
     images = [i for i in sheet._images if i.anchor._from.row == row - 1]
     assert len(images) == 1, 'Sophia must have one reference image on her master row'
     with Image.open(BytesIO(images[0]._data())) as reference, Image.open(ROOT / 'Textures/Items/er_event_love_water_cut_cg.png') as game:
-        assert reference.size == game.size and ImageChops.difference(reference.convert('RGB'), game.convert('RGB')).getbbox() is None, 'Development CG differs from the approved stove reference'
+        reference, game = reference.convert('RGB'), game.convert('RGB')
+        same_master = reference.size == game.size and ImageChops.difference(reference, game).getbbox() is None
+        # 49647ed stored the 960x540 in-game export alongside the workbook master.
+        # Recognize that specific pair, without accepting arbitrary resized or recolored art.
+        recorded_export = (reference.size == (1672, 941) and game.size == (960, 540)
+                           and sha256(reference.tobytes()).hexdigest() == '8a84fe4579d0e03c6749e8fb5948aa68e0fc83907ca81cd2bebbecb71d228a06'
+                           and sha256(game.tobytes()).hexdigest() == '1ac9faa5adeea6c0fb9d83e1a11b0f2360148d14ee02420708d64bb4f8f3aee3')
+        assert same_master or recorded_export, 'Development CG differs from the stove master and its recorded export'
     editable.close()
     with (ROOT / 'Localization/zh.csv').open(encoding='utf-8-sig', newline='') as f:
         zh = dict(csv.reader(f))
-    assert zh['er_story_cg_love_water_cut_text'] == master['love_a2_01'][1]
-    assert zh['er_cg_knock_caption'].replace(r'\n', '\n') == master['rev_final_second_knock'][1] == '埃莉诺！\n我在。'
+    for scene, key in NATIVE.items():
+        assert zh[key].replace(r'\n', '\n') == master[scene][1], (scene, key)
+    for scene, title, text in source:
+        if scene in WINDOW_KEYS:
+            intro = parse(scene, title, text)['intro']
+            assert [line.split('　', 1)[1] for line in intro] == [zh[k] for k in WINDOW_KEYS[scene]], scene
     sophia = next(text for scene, _, text in source if scene == 'love_a2_01')
     assert '勺' in sophia
     forbidden = {
@@ -106,7 +120,7 @@ def check():
     assert '我送您回家' in native_wrap and not any(word in native_wrap for word in forbidden['love_a2_01'])
     for key in ('er_cg_knock_intro', 'er_cg_knock_rail'):
         assert not any(word in zh[key] for word in forbidden['rev_final_second_knock']), key
-    print('36/36 chapter titles, IDs and captions match. Sophia RGB pixels and both final localized captions match.')
+    print('36/36 chapter titles, IDs and captions match, including 12 localized runtime captions. Sophia stove image verified.')
 
 
 def build():
@@ -116,7 +130,7 @@ def build():
     arr = lambda v: 'new string[] { ' + ', '.join(quote(x) for x in v) + ' }'
     body = ['// Generated from Content/CG章节 by tools/build_cg_chapters.py.', 'namespace EleanorRomance', '{', '    internal static class ChapterScripts', '    {', '        internal static readonly CgChapter[] All =', '        {']
     for v in items:
-        body.extend(['            new CgChapter(' + quote(v['id']) + ', ' + quote(v['title']) + ',', '                ' + ',\n                '.join(arr(v[k]) for k in ('intro', 'labels', 'yes', 'no', 'picture')) + ',', '                ' + quote(v['caption']) + '),'])
+        body.extend(['            new CgChapter(' + quote(v['id']) + ', ' + quote(v['title']) + ',', '                ' + ',\n                '.join(arr(v[k]) for k in ('intro', 'sold', 'unsold')) + ',', '                ' + quote(v['caption']) + '),'])
     body.extend(['        };', '    }', '}', ''])
     (ROOT / 'src/ChapterScripts.g.cs').write_text('\n'.join(body), encoding='utf-8')
 

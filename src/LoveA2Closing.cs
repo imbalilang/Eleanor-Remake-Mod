@@ -22,6 +22,7 @@ namespace EleanorRomance
         internal static void Reset()
         {
             finishing = false;
+            ChapterVisits.ResetWindow();
             ChapterBedtimePatch.Reset();
             ChapterLoadedReportPatch.Reset();
             sleepTicket = null;

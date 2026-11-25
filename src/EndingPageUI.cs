@@ -70,18 +70,19 @@ namespace EleanorRomance
             if (MaidState.Flag("ending_card_shown")) return;
             EndingPages.Page page = EndingPages.TryMaidCompletion();
             if (page == null) return;
-            if (ShowRoutePage(page)) MaidState.Flag("ending_card_shown", true);
+            if (ShowRoutePage(page, true, () => ShowRoutePage(EndingPages.MaidAfterword()), true))
+                MaidState.Flag("ending_card_shown", true);
         }
 
         public static bool ShowDualCompletion(Action onContinue = null)
         {
             if (DualState.Flag("ending_card_shown")) return false;
             EndingPages.Page page = EndingPages.TryDualCompletion();
-            return page != null && ShowRoutePage(page, false, () =>
+            return page != null && ShowRoutePage(page, true, () =>
             {
                 DualState.Flag("ending_card_shown", true);
                 onContinue?.Invoke();
-            });
+            }, true);
         }
 
         public static void ShowRevolutionCompletion()
@@ -89,7 +90,7 @@ namespace EleanorRomance
             if (RomanceState.RevEndingShown) return;
             EndingPages.Page page = EndingPages.TryRevolutionCompletion();
             if (page == null) return;
-            ShowRoutePage(page, false, () => RomanceState.RevEndingShown = true);
+            ShowRoutePage(page, true, () => RomanceState.RevEndingShown = true, true);
         }
 
         public static void ShowLoveCompletion()
@@ -97,7 +98,8 @@ namespace EleanorRomance
             if (LoveState.A3EndingShown) return;
             EndingPages.Page page = EndingPages.TryLoveCompletion();
             if (page == null) return;
-            if (ShowRoutePage(page)) LoveState.A3EndingShown = true;
+            if (ShowRoutePage(page, true, () => ShowRoutePage(EndingPages.LoveAfterword()), true))
+                LoveState.A3EndingShown = true;
         }
 
         public static void HideRoutePage()
@@ -110,11 +112,11 @@ namespace EleanorRomance
         }
 
         internal static bool ShowStoryScene(string titleKey, string cgKey, string textKey, Action onContinue = null)
-            => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), true, onContinue);
-
-        // New chapter pages retain their caption while the corresponding illustration is in production.
-        internal static bool ShowChapterPage(string titleKey, string cgKey, string textKey, Action onContinue = null)
             => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), true, onContinue, true);
+
+        // Chapters and existing illustrated visits use the same caption-only fallback.
+        internal static bool ShowChapterPage(string titleKey, string cgKey, string textKey, Action onContinue = null)
+            => ShowStoryScene(titleKey, cgKey, textKey, onContinue);
 
         internal static bool PageOpen => routeRoot != null;
 
@@ -140,11 +142,10 @@ namespace EleanorRomance
             return sprite;
         }
 
-        internal static bool ShowScript(string title, string cg, string text, Action next,
-            string[] choices = null, Action decline = null)
-            => ShowRoutePage(new EndingPages.Page(title, cg, text, true), true, next, true, choices, decline);
+        internal static bool ShowScript(string title, string cg, string text, Action next)
+            => ShowRoutePage(new EndingPages.Page(title, cg, text, true), true, next, true);
 
-        private static bool ShowRoutePage(EndingPages.Page page, bool storyScene = false, Action onContinue = null, bool textFallback = false, string[] choices = null, Action decline = null)
+        private static bool ShowRoutePage(EndingPages.Page page, bool storyScene = false, Action onContinue = null, bool textFallback = false)
         {
             try
             {
@@ -247,26 +248,9 @@ namespace EleanorRomance
                 });
 
                 TextMeshProUGUI buttonText = NewText(buttonObject.transform, "label",
-                    choices == null ? L.Get(storyScene ? "er_story_cg_continue" : "er_ending_return_button") : choices[0], font, 20, TextAlignmentOptions.Center,
+                    L.Get(storyScene ? "er_story_cg_continue" : "er_ending_return_button"), font, 20, TextAlignmentOptions.Center,
                     new Color(0.10f, 0.08f, 0.04f));
                 Stretch(buttonText.rectTransform);
-                if (choices != null)
-                {
-                    buttonRect.anchoredPosition = new Vector2(-230f, 22f);
-                    var other = UnityEngine.Object.Instantiate(buttonObject, panel.transform, false);
-                    other.GetComponent<RectTransform>().anchoredPosition = new Vector2(230f, 22f);
-                    other.GetComponentInChildren<TextMeshProUGUI>().text = choices[1];
-                    var otherButton = other.GetComponent<Button>();
-                    otherButton.onClick = new Button.ButtonClickedEvent();
-                    otherButton.onClick.AddListener(() =>
-                    {
-                        if (!ReferenceEquals(routeRoot, root)) return;
-                        HideRoutePage();
-                        decline?.Invoke();
-                    });
-                }
-
-
                 return true;
             }
             catch (Exception ex)

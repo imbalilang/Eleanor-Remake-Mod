@@ -36,19 +36,16 @@
             },
             {
               "speaker": "player",
-              "text": "货架上的，价签都挂着。"
+              "text": "价签都挂着，自己看。"
             },
             {
               "speaker": "eleanor",
-              "text": "价签……行。字我认得。"
+              "text": "价签……行。",
+              "expr": "soft"
             },
             {
               "speaker": "narrator",
-              "text": "她指了一包货。店主拿到柜台上，她的指尖停在封口上，没有撕开。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "我以前吃东西，连封口都有人替我拆。"
+              "text": "她指了指一包零食。店主拿到柜台上，她的指尖停在封口上，没有撕开。"
             },
             {
               "speaker": "eleanor",
@@ -64,7 +61,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "现在他们连上层区都不让我回。用不了多久，他们就会意识到自己犯了多么愚蠢的错误。"
+              "text": "用不了多久，他们就会意识到自己犯了多么愚蠢的错误。",
+              "expr": "determined"
             }
           ]
         },
@@ -88,7 +86,7 @@
           "lines": [
             {
               "speaker": "player",
-              "text": "要哪几样，指给我。"
+              "text": "要哪几样？"
             },
             {
               "speaker": "eleanor",
@@ -97,11 +95,11 @@
             },
             {
               "speaker": "eleanor",
-              "text": "这包，还有这个。再来一样能放久的。"
+              "text": "这个，还有这个。再来一样能放久一点的。"
             },
             {
               "speaker": "narrator",
-              "text": "三样东西排成一排。她指尖在最后一样上按了按，换成了更便宜的那包。"
+              "text": "三样东西排成一排。她指尖在最贵的那份上点了点，换了另一包便宜些的。"
             }
           ]
         },
@@ -133,11 +131,13 @@
             },
             {
               "speaker": "eleanor",
-              "text": "我还没落魄到要一个开当铺的来可怜我。"
+              "text": "我还没落魄到要一个开杂货店的来可怜我。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "钱我收下。就这一次。"
+              "text": "好意我收下。就这一次。",
+              "expr": "shy"
             }
           ]
         },
@@ -149,7 +149,8 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "就这么点东西？在上层区都够买两份了。"
+              "text": "就这么点东西？在上层区都没这么贵。",
+              "expr": "angry"
             },
             {
               "speaker": "eleanor",
@@ -181,11 +182,11 @@
           "lines": [
             {
               "speaker": "narrator",
-              "text": "她数出硬币，一枚一枚扣在柜面上，数目分毫不差。"
+              "text": "她数出硬币，一枚一枚扣在柜面上。"
             },
             {
               "speaker": "eleanor",
-              "text": "我叫埃莉诺。我母亲的名字，你迟早会在新闻上看见。"
+              "text": "我叫埃莉诺。"
             },
             {
               "speaker": "eleanor",
@@ -201,7 +202,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "我叫埃莉诺。我母亲的名字，你迟早会在新闻上看见。"
+              "text": "我叫埃莉诺。"
             },
             {
               "speaker": "eleanor",
@@ -247,7 +248,7 @@
             },
             {
               "speaker": "eleanor",
-              "text": "一只水杯、打扫用的东西，再来盏亮堂点的灯。"
+              "text": "水杯、洗漱用的东西，再来盏能亮的灯。"
             },
             {
               "speaker": "eleanor",
@@ -255,15 +256,17 @@
             },
             {
               "speaker": "narrator",
-              "text": "店主把有缺口的那只杯子放到柜台上。她拿起来，转了半圈。"
+              "text": "店主把有缺口的那只杯子放到柜台上。她拿起来，转着圈儿看了看。"
             },
             {
               "speaker": "eleanor",
-              "text": "这只杯子有缺口。完整的在那边，我又不是买不起。"
+              "text": "这只杯子有缺口。我又不是买不起好的。",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "还是拿便宜的。缺口又不在喝水那边。"
+              "text": "……算了，就拿这个吧。缺口不影响装水。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
@@ -275,15 +278,17 @@
             },
             {
               "speaker": "eleanor",
-              "text": "上层区定制的香水，她给我按房租算。"
+              "text": "那是柯伦娜大师为我定制的香水，呵！下层区半个月房租！",
+              "expr": "determined"
             },
             {
               "speaker": "eleanor",
-              "text": "哼。"
+              "text": "简直疯了。",
+              "expr": "angry"
             },
             {
               "speaker": "player",
-              "text": "这些，加上灯。"
+              "text": "这些，还有这盏灯。"
             }
           ]
         },
@@ -315,7 +320,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "东西我收下了。"
+              "text": "……我收下了。",
+              "expr": "soft"
             }
           ]
         },
@@ -355,15 +361,16 @@
           "lines": [
             {
               "speaker": "narrator",
-              "text": "旧布摊在柜台上。杯子、肥皂、毛巾一件件码进去，码得齐整。"
+              "text": "她用旧布垫在柜台上。店主送了个袋子，女孩儿把杯子、肥皂、毛巾一件件装进去。"
             },
             {
               "speaker": "eleanor",
-              "text": "隔壁每天晚上都吵架，吵得跟就在我床边一样。"
+              "text": "隔壁那俩人每天晚上都吵架，吵得跟就在我床边一样。"
             },
             {
               "speaker": "eleanor",
-              "text": "这动静，省得买收音机了。"
+              "text": "倒是省得买收音机了。",
+              "expr": "smile"
             },
             {
               "speaker": "eleanor",
@@ -376,11 +383,12 @@
             },
             {
               "speaker": "eleanor",
-              "text": "不是我怕黑。是我怕黑着看不清账。"
+              "text": "……我才不怕黑。",
+              "expr": "shy"
             },
             {
               "speaker": "narrator",
-              "text": "她抱起旧布，走前又回头看了一眼柜台上那盏灯。"
+              "text": "她提起袋子，走前又回头看了一眼，动了动唇。"
             }
           ]
         }
@@ -401,7 +409,7 @@
           "lines": [
             {
               "speaker": "narrator",
-              "text": "她来得比开张还早。窗口的卷帘刚升起来，她已经站在外头。"
+              "text": "她来得很早。窗口的卷帘刚升起来，她已经站在外头。"
             },
             {
               "speaker": "eleanor",
@@ -430,35 +438,24 @@
             },
             {
               "speaker": "eleanor",
-              "text": "拿的时候轻点，那瓶香水的盖子有些松。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "在这下面过日子，也用不着闻起来像要去赴晚宴。"
+              "text": "在这下面过日子，也用不着像要赴宴一样打扮自己。"
             },
             {
               "speaker": "narrator",
-              "text": "她把瓶子一只只立在柜面上，标签朝外，自己退开半步。"
+              "text": "她把瓶子一只只立在柜面上，自己退开半步。"
             },
             {
               "speaker": "player",
-              "text": "这瓶开过。按货算。"
+              "text": "这瓶香水开过。按八折算。"
             },
             {
               "speaker": "eleanor",
-              "text": "这种瓶子，下层区一年见不着两回。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "那你接着算。真要一样一样算？"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "最近按我的姓算的人，一个信用点都不肯出。"
+              "text": "柯伦娜大师调的香气……算了，说了你也听不懂。按你说的来吧。",
+              "expr": "soft"
             },
             {
               "speaker": "narrator",
-              "text": "她把最末一只瓶子的盖子拧紧，指尖在瓶身上抹了一道。"
+              "text": "她把香水瓶的盖子拧紧，往店主方向推了推。"
             }
           ]
         },
@@ -546,23 +543,24 @@
             },
             {
               "speaker": "narrator",
-              "text": "吊坠塞回领口。她把衣领抚平，抚了两下才理正。"
+              "text": "女孩把吊坠塞回领口。她把衣领抚平。"
             },
             {
               "speaker": "eleanor",
-              "text": "这是我的东西。我想好了再拿出来。"
+              "text": "等以后我……想好了再拿出来。",
+              "expr": "soft"
             }
           ]
         },
         {
           "id": "c03.n003",
           "chapter": "c03",
-          "scene": "选项：把秤收起来",
+          "scene": "选项：把吊坠推回去",
           "label": "",
           "lines": [
             {
               "speaker": "narrator",
-              "text": "店主把秤盘翻过来扣在柜台上，没有再动。"
+              "text": "店主把吊坠轻轻推了回去，没有再动。"
             },
             {
               "speaker": "eleanor",
@@ -636,7 +634,7 @@
             },
             {
               "speaker": "uncle",
-              "text": "年轻人受了委屈，总爱躲起来。听说她常来你这儿。"
+              "text": "听说她常来你这儿。"
             },
             {
               "speaker": "uncle",
@@ -656,7 +654,7 @@
             },
             {
               "speaker": "narrator",
-              "text": "他把盒子往柜台里推了推，缎带的一角垂到台沿外面。"
+              "text": "他把盒子往柜台里推了推。"
             }
           ]
         },
@@ -691,14 +689,6 @@
               "text": "家务事，别多问。"
             },
             {
-              "speaker": "player",
-              "text": "不登记，就不收。"
-            },
-            {
-              "speaker": "uncle",
-              "text": "那我放这儿。她来了，你自然会给她。"
-            },
-            {
               "speaker": "narrator",
               "text": "男人走远了。盒底压着一张农场物资的编号签，边角有撕过的痕迹。"
             },
@@ -720,7 +710,7 @@
             },
             {
               "speaker": "narrator",
-              "text": "他把礼盒抱回怀里，缎带垂在肘弯，转身走了。"
+              "text": "他把礼盒抱回怀里，转身走了。"
             }
           ]
         },
@@ -1020,7 +1010,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "就剩这个吊坠，一直戴着。"
+              "text": "（她攥着那枚吊坠，声音颤抖）",
+              "expr": "sad"
             },
             {
               "speaker": "eleanor",
@@ -1040,18 +1031,15 @@
           "lines": [
             {
               "speaker": "narrator",
-              "text": "柜台上的袋子被解开，干粮和两枚营养果推到她面前。",
-              "en": "The bag on the counter is opened; dry food and two nutrifruits are pushed toward her."
+              "text": "店主把营养果和干粮推到她面前。"
             },
             {
               "speaker": "eleanor",
-              "text": "……谢谢。",
-              "en": "...Thank you."
+              "text": "……谢谢。"
             },
             {
               "speaker": "narrator",
-              "text": "她把干粮和营养果收好，退开一步，才转身离开。",
-              "en": "She puts the food and nutrifruits away, steps back, and only then turns to leave."
+              "text": "她把干粮和营养果收好，退开一步，微微躬身，才转身离开。"
             }
           ]
         },
@@ -1067,7 +1055,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "还要我说多清楚？东西被偷了，钱花光了，判决也下来了。吊坠不能动。"
+              "text": "还要我说多清楚？东西被偷了，钱花光了，判决也下来了。我完了。完了！",
+              "expr": "sad"
             }
           ]
         },
@@ -1091,8 +1080,8 @@
             },
             {
               "speaker": "eleanor",
-              "expr": "shy",
-              "text": "今天的事，不许说出去。"
+              "text": "今天的事，不许说出去。",
+              "expr": "shy"
             },
             {
               "speaker": "narrator",
@@ -1279,7 +1268,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "多了。你今天多给，我下次就不好意思挑坏的带。",
+              "text": "多了。你今天多给，下次我挑最好的带给你。",
               "expr": "determined"
             }
           ]
@@ -1292,7 +1281,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "压这么狠。我捡了一上午。",
+              "text": "压这么狠。我在垃圾场翻找了一整天！",
               "expr": "angry"
             }
           ]
@@ -1353,10 +1342,6 @@
             {
               "speaker": "eleanor",
               "text": "这次我自己分了成色，价也先估过。"
-            },
-            {
-              "speaker": "eleanor",
-              "text": "数字写在纸背上。你先报，报完我再对。"
             }
           ]
         },
@@ -1368,7 +1353,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "跟我纸上写的差不多。那就是我估对了。",
+              "text": "跟我估的差不多。那就是我估对了。",
               "expr": "determined"
             }
           ]
@@ -1381,7 +1366,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "你比我纸上写的高。",
+              "text": "你比我估的高。",
               "expr": "soft"
             }
           ]
@@ -1394,7 +1379,7 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "好的那堆你也压了。我分了一早上。",
+              "text": "好的那些你也压价了。别趁火打劫行吗？",
               "expr": "angry"
             }
           ]
@@ -1407,8 +1392,8 @@
           "lines": [
             {
               "speaker": "eleanor",
-              "text": "嫌我分得不对？那你教我一次。",
-              "expr": "tired"
+              "text": "嫌我估得不对？那你教教我。",
+              "expr": "determined"
             }
           ]
         },
@@ -1424,11 +1409,11 @@
             },
             {
               "speaker": "player",
-              "text": "码头那边有人收。压价狠，秤也不准。"
+              "text": "码头那边有人收。不过那边危险，去的时候小心些。那家压价也狠，留个心眼。"
             },
             {
               "speaker": "eleanor",
-              "text": "那我去看看。货先不急着给他。"
+              "text": "那我去看看。货先不急。"
             }
           ]
         }
@@ -1449,12 +1434,11 @@
           "lines": [
             {
               "speaker": "narrator",
-              "text": "她来到窗口前，手里只捏着一小块东西，用布角包着。"
+              "text": "她来到窗口前，手里只捏着一小块东西，用布包着。"
             },
             {
               "speaker": "eleanor",
-              "text": "今天没货。",
-              "expr": "determined"
+              "text": "今天不是来卖货的。"
             },
             {
               "speaker": "eleanor",
@@ -1462,11 +1446,12 @@
             },
             {
               "speaker": "narrator",
-              "text": "布角摊开，里面是一枚电子元件，边角干净，没沾灰。"
+              "text": "布角摊开，里面是一枚电子元件，被她擦得干干净净。"
             },
             {
               "speaker": "eleanor",
-              "text": "从废料堆里捡的。接口没锈。"
+              "text": "在垃圾场里捡的。没锈烂掉，我给你擦干净了。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
@@ -1474,12 +1459,12 @@
             },
             {
               "speaker": "eleanor",
-              "text": "拿着。别问。",
+              "text": "对，是送你的。别再问了。",
               "expr": "shy"
             },
             {
               "speaker": "narrator",
-              "text": "她把元件推到柜台正中，手停了一下才收回。"
+              "text": "她把元件推到柜台正中，手停了一下，眼神倔强。"
             }
           ]
         },
@@ -1496,7 +1481,8 @@
             },
             {
               "speaker": "eleanor",
-              "text": "那我以后每回都得给你带点。"
+              "text": "那我以后每回都给你带点。",
+              "expr": "soft"
             },
             {
               "speaker": "narrator",
@@ -1517,23 +1503,26 @@
             },
             {
               "speaker": "eleanor",
-              "text": "你还按货单结。"
+              "text": "你怎么还给我钱。",
+              "expr": "soft"
             },
             {
               "speaker": "eleanor",
-              "text": "……随你。轮不到我求你白拿。"
+              "text": "……随你。白送的东西都不要。",
+              "expr": "determined"
             },
             {
               "speaker": "narrator",
-              "text": "硬币她没数，直接落进内袋。"
+              "text": "她没数硬币，胡乱塞进布袋。"
             },
             {
               "speaker": "eleanor",
-              "text": "下回你少算我，我可要问清楚。"
+              "text": "一码归一码。下回如果你压价，我也要问清楚。",
+              "expr": "determined"
             },
             {
               "speaker": "narrator",
-              "text": "她收好布角，转身走了。"
+              "text": "她收好布袋，转身走了。"
             }
           ]
         },
@@ -1554,7 +1543,7 @@
             },
             {
               "speaker": "narrator",
-              "text": "她重新包好元件，塞进兜里。"
+              "text": "她重新包好电子元件，塞进兜里。"
             },
             {
               "speaker": "narrator",
