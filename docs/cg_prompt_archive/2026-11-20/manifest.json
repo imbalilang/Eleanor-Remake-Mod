@@ -170,6 +170,234 @@
       "references": [
         "Art/cg_style_master.png"
       ]
+    },
+    {
+      "id": "dual_trade_dice",
+      "approved_file": "Textures/Items/er_event_harem_dice_cg.png",
+      "approval_record": "Art/eleanor-lydia-dice-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_lydia_dice_pixel_v3.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "master_size": [
+          1672,
+          941
+        ],
+        "face_patch_size": [
+          1254,
+          1254
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-lydia-dice-cg-2026-11-25/source.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/eleanor-lydia-dice-cg-2026-11-25/eleanor_lydia_dice_pixel_v2_master.png"
+      ]
+    },
+    {
+      "id": "dv08",
+      "approved_file": "Textures/Items/er_event_harem_first_kiss_cg.png",
+      "approval_record": "Art/eleanor-harem-first-kiss-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_harem_first_kiss_closeup_v4.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-harem-first-kiss-cg-2026-11-25/eleanor_harem_first_kiss_pixel_v2_master.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/eleanor-harem-first-kiss-cg-2026-11-25/v4/closeup_v3.png"
+      ]
+    },
+    {
+      "id": "dv10",
+      "approved_file": "Textures/Items/er_event_harem_lydia_date_cg.png",
+      "approval_record": "Art/harem-lydia-date-cg-2026-11-15/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/lydia_dv10_enclosed_atrium.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/harem-lydia-date-cg-2026-11-15/lydia_date_pixel_face_v2_reference_960x540.png",
+        "Art/场景参考/场景参考4.png"
+      ]
+    },
+    {
+      "id": "dv13",
+      "approved_file": "Textures/Items/er_event_harem_nod_cg.png",
+      "approval_record": "Art/eleanor-lydia-nod-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_lydia_nod_pixel_v4.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-lydia-nod-cg-2026-11-25/selected_source_0ade88ab.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/eleanor-lydia-nod-cg-2026-11-25/eleanor_lydia_nod_selected_v3.png"
+      ]
+    },
+    {
+      "id": "dual_night_bath",
+      "approved_file": "Textures/Items/er_event_harem_bath_cg.png",
+      "approval_record": "Art/lydia-invitation-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/lydia_invitation_pixel_v5.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1671,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "dsh-image-gen/image-d5e17f3e.png",
+        "Art/cg_style_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/lydia-invitation-cg-2026-11-25/lydia_invitation_pixel_v3.png",
+        "Art/lydia-invitation-cg-2026-11-25/lydia_invitation_pixel_v4_master.png"
+      ]
+    },
+    {
+      "id": "dual_trade_brooch",
+      "approved_file": "Textures/Items/er_event_harem_rivals_cg.png",
+      "approval_record": "Art/eleanor-lydia-rivals-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_lydia_rivals_pixel_v3.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-lydia-rivals-cg-2026-11-25/selected_source_31b15fb1.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/eleanor-lydia-rivals-cg-2026-11-25/eleanor_lydia_rivals_pixel_v1.png",
+        "Art/eleanor-lydia-rivals-cg-2026-11-25/eleanor_lydia_rivals_pixel_v2_master.png"
+      ]
+    },
+    {
+      "id": "dual_night_fireworks",
+      "approved_file": "Textures/Items/er_event_harem_fireworks_cg.png",
+      "approval_record": "Art/eleanor-lydia-fireworks-kiss-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_lydia_fireworks_kiss_pixel_v4.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-lydia-fireworks-kiss-cg-2026-11-25/selected_source_aaaaf40c.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/场景参考/场景参考2.png",
+        "Art/eleanor-lydia-fireworks-kiss-cg-2026-11-25/eleanor_lydia_fireworks_kiss_pixel_v1.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_gala_transparent_master.png"
+      ]
+    },
+    {
+      "id": "dual_night_hotel",
+      "approved_file": "Textures/Items/er_event_harem_hotel_cg.png",
+      "approval_record": "Art/eleanor-lydia-hotel-invitation-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_lydia_hotel_invitation_pixel_v2.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "dsh-image-gen/image-df743170.jpg",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/eleanor-lydia-hotel-invitation-cg-2026-11-26/eleanor_lydia_hotel_invitation_pixel_v1.png"
+      ]
+    },
+    {
+      "id": "v2_a0c2",
+      "approved_file": "Textures/Items/er_event_maid_signature_cg.png",
+      "approval_record": "Art/eleanor-in-my-own-name-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_in_my_own_name_hand_kiss_overhead_v12.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_v4_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_scav_transparent_master.png",
+        "Art/cg_style_master.png",
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v5_draft.png",
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v5_master.png",
+        "dsh-image-gen/image-789bbf25.jpg",
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v8_master.png",
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v9_master.png",
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v10_master.png",
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v11_master.png"
+      ]
     }
   ],
   "revoked_history": [

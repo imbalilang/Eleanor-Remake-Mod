@@ -263,7 +263,7 @@ namespace EleanorRomance
                     DualState.Flag("d.act4", true);
                 });
                 DualDirector.FinishRewrittenCore();
-                EndingPageUI.ShowChapterPage("er_cg_dv13_title", "er_ending_harem_cg", "er_cg_dv13_text");
+                EndingPageUI.ShowChapterPage("er_cg_dv13_title", "er_event_harem_nod_cg", "er_cg_dv13_text");
             });
             return Ready(client, root, "dv13_b001");
         }
