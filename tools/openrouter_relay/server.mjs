@@ -17,6 +17,10 @@
 //   OPENROUTER_IMAGES_URL upstream endpoint (default https://openrouter.ai/api/v1/images)
 
 import http from "node:http";
+import { spawn } from "node:child_process";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 
 const PORT = Number(process.env.PORT || 18787);
 const UPSTREAM =
@@ -24,6 +28,8 @@ const UPSTREAM =
 const DEFAULT_MODEL =
   process.env.RELAY_MODEL || "bytedance-seed/seedream-5-5";
 const TIMEOUT_MS = Number(process.env.RELAY_TIMEOUT_MS || 300000);
+const PROXY = process.env.RELAY_PROXY ?? "http://127.0.0.1:7897";
+const CURL_BIN = process.env.RELAY_CURL || "C:\\Windows\\System32\\curl.exe";
 const MAX_BODY = 40 * 1024 * 1024;
 
 const FORWARD_FIELDS = new Set([
@@ -219,35 +225,58 @@ function pickPayload(source, refs) {
   return payload;
 }
 
+
+function postViaCurl(payload, key) {
+  return new Promise((resolve, reject) => {
+    const tmp = path.join(os.tmpdir(), `relay-${process.pid}-${Date.now()}-${Math.random().toString(16).slice(2)}.json`);
+    fs.writeFileSync(tmp, JSON.stringify(payload));
+    const args = [
+      "-sS",
+      "--max-time", String(Math.ceil(TIMEOUT_MS / 1000)),
+      "--proxy", PROXY,
+      "-X", "POST", UPSTREAM,
+      "-H", `authorization: Bearer ${key}`,
+      "-H", "content-type: application/json",
+      "--data-binary", `@${tmp}`,
+      "-w", "\n__RELAY_STATUS__%{http_code}",
+    ];
+    const child = spawn(CURL_BIN, args, { windowsHide: true });
+    let out = "";
+    const cleanup = () => { try { fs.unlinkSync(tmp); } catch {} };
+    child.stdout.on("data", (d) => { out += d.toString("utf8"); });
+    child.stderr.on("data", (d) => { out += d.toString("utf8"); });
+    child.on("error", (err) => { cleanup(); reject(err); });
+    child.on("close", (code) => {
+      cleanup();
+      const marker = out.lastIndexOf("__RELAY_STATUS__");
+      if (marker < 0) return reject(new Error(`curl exit ${code}: ${out.slice(0, 200)}`));
+      const status = Number(out.slice(marker + "__RELAY_STATUS__".length).trim()) || 0;
+      resolve({ status, body: out.slice(0, marker).trim() });
+    });
+  });
+}
+
 async function forward(payload, key, res, label) {
   if (!key) {
     sendJson(res, 401, { error: { message: "relay: no OpenRouter API key" } });
     return;
   }
   const started = Date.now();
-  let upstream;
+  let status = 0;
+  let text = "";
   try {
-    upstream = await fetch(UPSTREAM, {
-      method: "POST",
-      headers: {
-        authorization: `Bearer ${key}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(TIMEOUT_MS),
-    });
+    const r = await postViaCurl(payload, key);
+    status = r.status;
+    text = r.body;
   } catch (error) {
     log(`${label} upstream error: ${error?.message || error}`);
     sendJson(res, 502, { error: { message: `relay upstream error: ${String(error?.message || error)}` } });
     return;
   }
-  const text = await upstream.text();
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
-  log(
-    `${label} model=${payload.model} refs=${(payload.input_references || []).length} status=${upstream.status} ${elapsed}s`,
-  );
-  res.writeHead(upstream.status, {
-    "content-type": upstream.headers.get("content-type") || "application/json",
+  log(`${label} model=${payload.model} refs=${(payload.input_references || []).length} status=${status} ${elapsed}s`);
+  res.writeHead(status, {
+    "content-type": "application/json",
     "content-length": Buffer.byteLength(text),
   });
   res.end(text);
