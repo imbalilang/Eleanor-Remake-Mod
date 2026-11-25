@@ -355,6 +355,12 @@ namespace EleanorRomance
                 // explicit player choice.  Auto also pauses expression switching
                 // so it cannot flash our art over theirs and back.
                 if (Mode != PortraitMode.Force && IsForeignModSprite(current)) return;
+                // A portrait manager can hand the renderer a runtime sprite that
+                // is not registered in LoadedMod.Sprites.  With another portrait
+                // source active, never speculate that such art is vanilla and
+                // overwrite it (this used to happen at OnArrived, after the
+                // selected portrait had already been shown during the walk-in).
+                if (ShouldLeavePortraitToOtherMod()) return;
 
                 Sprite desired = dialogue != null && ours
                     ? PortraitExpression.Resolve(dialogue) : null;
@@ -410,12 +416,56 @@ namespace EleanorRomance
                 if (mono == null || mono.image == null) return false;
                 Sprite current = mono.image.sprite;
                 if (current == null || IsOurSprite(current)) return false;
-                return IsForeignModSprite(current);
+                return IsForeignModSprite(current) || HasOtherPortraitSource();
             }
             catch
             {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Auto mode leaves the visible art to another portrait source when the
+        /// current sprite is not ours.  This is deliberately broader than exact
+        /// sprite ownership: portrait managers may hand the renderer runtime
+        /// sprites that are not registered in LoadedMod.Sprites.
+        /// </summary>
+        public static bool ShouldLeavePortraitToOtherMod()
+        {
+            if (Mode != PortraitMode.Auto) return false;
+            StoreClientMono mono = StoreClientMono.Instance;
+            if (mono == null || mono.image == null) return false;
+            if (IsOurSprite(mono.image.sprite)) return false;
+            return HasOtherPortraitSource();
+        }
+
+        /// <summary>True when another enabled mod supplies portrait art.</summary>
+        private static bool HasOtherPortraitSource()
+        {
+            try
+            {
+                if (ModLoader.Mods == null) return false;
+                foreach (LoadedMod mod in ModLoader.Mods)
+                {
+                    if (mod == null || !mod.IsEnabled || mod.Manifest == null) continue;
+                    if (mod.Manifest.ID == ModConstants.ModId) continue;
+                    string id = mod.Manifest.ID ?? "";
+                    string name = mod.Manifest.Name ?? "";
+                    if (id.IndexOf("portrait", StringComparison.OrdinalIgnoreCase) >= 0
+                        || name.IndexOf("portrait", StringComparison.OrdinalIgnoreCase) >= 0
+                        || name.IndexOf("立绘", StringComparison.Ordinal) >= 0)
+                        return true;
+                    if (mod.Sprites != null)
+                        foreach (string key in mod.Sprites.Keys)
+                            if (key.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal))
+                                return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Portrait source check failed: " + ex);
+            }
+            return false;
         }
 
         /// <summary>
@@ -673,19 +723,6 @@ namespace EleanorRomance
             return own.Sprites.TryGetValue(key + "_female", out sprite) && sprite != null;
         }
 
-        private static bool HasAnyLoadedModSprite(string key)
-        {
-            if (string.IsNullOrEmpty(key) || ModLoader.Mods == null) return false;
-            foreach (LoadedMod mod in ModLoader.Mods)
-            {
-                if (mod == null || !mod.IsEnabled) continue;
-                if (mod.Sprites != null && mod.Sprites.ContainsKey(key)) return true;
-                if (mod.PaperSprites != null && mod.PaperSprites.ContainsKey(key)) return true;
-                if (mod.Textures != null && mod.Textures.ContainsKey(key)) return true;
-            }
-            return false;
-        }
-
         private static LoadedMod FindOurMod()
         {
             try
@@ -781,14 +818,9 @@ namespace EleanorRomance
             {
                 client.spriteName = ResolveLydia();
             }
-            else if (client.spriteName.StartsWith(BeautyKeyPrefix, StringComparison.Ordinal)
-                && !HasBundledSprite(client.spriteName)
-                && !HasAnyLoadedModSprite(client.spriteName))
-            {
-                // Another portrait mod may own this cp_portrait_* key; keep the
-                // player's chosen art instead of reverting it to a native key.
-                client.spriteName = RevertKey(client.spriteName);
-            }
+            // Never rewrite a cp_portrait_* key we do not own.  A portrait
+            // manager may supply those keys at runtime; treating an unknown key
+            // as stale would revert every character it covers to native art.
         }
 
         private static string RevertKey(string beautyKey)

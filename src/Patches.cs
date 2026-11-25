@@ -165,14 +165,8 @@ namespace EleanorRomance
                 // If another portrait mod currently owns the visible image,
                 // leave it alone and do not switch expressions on top of it.
                 if (PortraitCompat.IsForeignPortraitOnCurrentClient()) return;
+                if (PortraitCompat.ShouldLeavePortraitToOtherMod()) return;
                 Sprite portrait = PortraitExpression.Resolve(dialogue);
-                if (portrait == null)
-                {
-                    // Never let a foreign Dialogue.portrait flash on Eleanor
-                    // before the final postfix restores our own art.
-                    StoreClient current = PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
-                    if (!PortraitCompat.IsEleanorClient(current)) portrait = dialogue.portrait;
-                }
                 if (portrait == null) return;
                 StoreClientMono mono = StoreClientMono.Instance;
                 if (mono != null && mono.image != null) mono.image.sprite = portrait;

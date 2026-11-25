@@ -75,10 +75,9 @@ namespace EleanorRomance
             var previous = (displaying, backupSpeaker);
             backupSpeaker = Enabled ? StoryPresentation.NameFor(line) : null;
             // Set the native SEC name label before DisplaySecText activates the
-            // bubble.  The postfix below is too late for the first line: the
-            // bubble can render the previous native "security officer" label
-            // until the next line replaces it.
-            if (backupSpeaker != null) StoryPresentation.SetBackupName(backupSpeaker);
+            // bubble and repeat it after the first activation, when the native
+            // name plate can reset itself to the default officer label.
+            if (backupSpeaker != null) StoryPresentation.SetBackupNameDeferred(backupSpeaker);
             displaying = backupSpeaker != null ? line : null;
             return previous;
         }
@@ -86,7 +85,7 @@ namespace EleanorRomance
         internal static void EndBackup(Dialogue line)
         {
             if (ReferenceEquals(displaying, line) && backupSpeaker != null)
-                StoryPresentation.SetBackupName(backupSpeaker);
+                StoryPresentation.SetBackupNameDeferred(backupSpeaker);
         }
 
         internal static void RestoreBackup((Dialogue, string) previous)

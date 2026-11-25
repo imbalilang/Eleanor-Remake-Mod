@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
@@ -49,6 +50,7 @@ namespace EleanorRomance
         private static Sprite savedSprite2;
         private static bool usedFirst;
         private static bool usedSecond;
+        private static int backupNameVersion;
         private static readonly ConditionalWeakTable<Dialogue, string> companionLines =
             new ConditionalWeakTable<Dialogue, string>();
 
@@ -103,7 +105,7 @@ namespace EleanorRomance
                 // Prime the native SEC name label as soon as the presentation
                 // is staged, so the first SEC line cannot flash the default
                 // "security officer" name before its per-line override runs.
-                if (!string.IsNullOrEmpty(backupName)) SetBackupName(backupName);
+                SetBackupNameDeferred(backupName);
                 savedId1 = usedFirst ? first.id : null;
                 savedId2 = usedSecond ? second.id : null;
                 savedSprite1 = usedFirst ? first.image.sprite : null;
@@ -139,6 +141,7 @@ namespace EleanorRomance
 
         public static void Clear()
         {
+            backupNameVersion++;
             try
             {
                 if (!shown) return;
@@ -186,6 +189,34 @@ namespace EleanorRomance
             {
                 ModEntry.LogError("StoryPresentation backup name failed: " + ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Sets the name now and once more on the next frame.  The native SEC
+        /// bubble can initialise its label when it is first activated, after the
+        /// prefix that primes it; the deferred set survives that first-enable
+        /// reset without affecting later lines.
+        /// </summary>
+        public static void SetBackupNameDeferred(string name)
+        {
+            int version = ++backupNameVersion;
+            if (string.IsNullOrEmpty(name)) return;
+            SetBackupName(name);
+            try
+            {
+                ModHelper.StartCoroutine(ModConstants.ModId, ApplyBackupNameAfterFrame(name, version));
+            }
+            catch (Exception ex)
+            {
+                ModEntry.LogError("StoryPresentation deferred backup name failed: " + ex.Message);
+            }
+        }
+
+        private static IEnumerator ApplyBackupNameAfterFrame(string name, int version)
+        {
+            yield return null;
+            if (version != backupNameVersion) yield break;
+            SetBackupName(name);
         }
     }
 }
