@@ -7,7 +7,7 @@ Contract: `docs/CG_STYLE_CONTRACT.md` / `docs/cg_style_contract.json`
 
 Use this block unchanged for every CG conversion:
 
-> Render as authentic project pixel art, not a filtered anime image.  
+> Match the rendering of the sole CG style master, `Art/cg_style_master.png`. Match its contour weight, pixel steps, highlight clusters, and shading.
 > Fine 1× pixel detail with hard pixel edges; do not force coarse 2×2/4×4 blocks.  
 > 3–5 hard cel-shading steps per material; clean flat color fields.  
 > Limited cohesive palette; no smooth gradients, no airbrush, no soft anti-aliasing, no photographic texture, no lens blur, no checkerboard dithering, no granular noise or stippling.  
@@ -18,11 +18,11 @@ Use this block unchanged for every CG conversion:
 
 ## Content slots
 
-- `{{CONTENT_MASTER}}`: source CG path
+- `{{CONTENT_MASTER}}`: source CG path for the event
 - `{{SCENE_TYPE}}`: pawnshop_interior | commercial_alley | ration_store | scrapyard | hideout | other
-- `{{SCENE_MOTHER}}`: one scene reference path
+- `{{SCENE_REFERENCE}}`: one location reference path
 - `{{CHARACTER_IDENTITY_REFS}}`: one or more character portrait paths
-- `{{CHARACTER_STYLE_MOTHER}}`: one global pixel-character style reference
+- `{{CG_STYLE_MASTER}}`: `Art/cg_style_master.png`, the sole CG style master
 - `{{PRESERVE_LIST}}`: explicit content-lock list for this CG
 - `{{OUTPUT_SIZE}}`:
   - OpenAI: native master **1536×864**; request **only** `aspect_ratio=16:9`, no `size`; runtime export 960×540 at 62.5% Lanczos
@@ -32,12 +32,10 @@ Use this block unchanged for every CG conversion:
 
 ## Reference order
 
-1. content master
+1. source CG for the event
 2. character identity portrait(s)
-3. one scene mother
-4. one character style mother
-
-Never mix multiple scene mothers or multiple character style mothers in one run unless the user explicitly requests a comparison test.
+3. one location reference
+4. `Art/cg_style_master.png`
 
 ## Model recipe (slot)
 
@@ -73,6 +71,12 @@ Content lock is checked before style. Numeric metrics are supporting evidence on
 ## Stop rules
 
 - One content master per run
-- No extra style mothers
+- Use the sole CG style master for style calibration
 - No batch until a 3-content repeatability test passes
 - No install without explicit approval
+
+## Fixed Hair Color Block (v6)
+
+HAIR COLOR LOCK: both Eleanor and Sophia use the same canonical copper-orange hair family: base #CC6A47, shadow #83344D, highlight #EEA175. Lighting may shift value, but the base hue must stay copper-orange. Do not generate golden-orange or dark brown-orange hair.
+
+This block belongs in the initial generation prompt. Do not recolor an already generated image afterward.

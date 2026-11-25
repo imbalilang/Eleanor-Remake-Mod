@@ -1,0 +1,15 @@
+{
+  "reference": "Art/原图参考/QQ图片20261119200057.png",
+  "reference_median": "#E07B49",
+  "reference_self_delta_e": 4.72,
+  "canonical": {"base":"#CC6A47","shadow":"#83344D","highlight":"#EEA175"},
+  "results": [
+    {"image":"image-e5953494.jpg","median":"#E26E4C","delta_e":15.62,"hue_delta":1.69,"sat_delta":-4.41,"val_delta":8.63,"verdict":"FAIL"},
+    {"image":"image-f6695819.jpg","median":"#B26A47","delta_e":24.08,"hue_delta":2.08,"sat_delta":-11.4,"val_delta":-10.2,"verdict":"FAIL"},
+    {"image":"image-2cdcd8c6.jpg","median":"#C16239","delta_e":18.58,"hue_delta":0.25,"sat_delta":-2.3,"val_delta":-4.31,"verdict":"FAIL"},
+    {"image":"eleanor_shy_romance_book_haircal_master_1280x720.jpg","median":"#BF613A","delta_e":18.36,"hue_delta":0.04,"sat_delta":-2.47,"val_delta":-5.1,"verdict":"FAIL"},
+    {"image":"eleanor_white_casual_kabedon_haircal_master_1280x720.jpg","median":"#DE6C4D","delta_e":14.93,"hue_delta":1.57,"sat_delta":-4.45,"val_delta":7.06,"verdict":"FAIL"},
+    {"image":"sophia_cooking_station_haircal_master_1280x720.jpg","median":"#B36846","delta_e":22.46,"hue_delta":1.29,"sat_delta":-9.79,"val_delta":-9.8,"verdict":"FAIL"}
+  ],
+  "thresholds": {"pass_max":6,"warn_max":12,"fail_above":12}
+}

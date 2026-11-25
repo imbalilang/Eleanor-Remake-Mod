@@ -2,8 +2,10 @@
 
 Status: active  
 Scope: all in-game CG assets  
-Source of truth for style: `Art/场景参考` and `Art/原图参考`  
-Existing approved CGs: content references only; not style masters
+
+- Sole CG style master: [Eleanor reclining](../Art/cg_style_master.png), 1280 × 720.
+- Supporting references: `Art/场景参考` for locations and `Art/原图参考` for character identity and costume.
+- Existing approved CGs: content references only; not style masters
 
 ## 1. Canonical geometry
 
@@ -36,7 +38,7 @@ Rationale: OpenAI 16:9 defaults to 1536×864 and Grok 1K 16:9 is 1280×720. All 
 
 ## 2. Scene grammar
 
-Primary references: `Art/场景参考/*`.
+Location references: `Art/场景参考/*`. Apply the rendering of the sole CG style master to the selected location.
 
 - Closed lower-district space-station spaces; no unobstructed open horizon (enclosed glass atrium with structural mullions is allowed when the source content requires it)
 - Roof, upper deck, beams, cable trays or low ceiling at the top of every exterior view
@@ -56,7 +58,7 @@ Scene type references:
 
 ## 3. Character grammar
 
-Primary style references: `Art/原图参考/QQ图片*.png` and `其他角色1/2.png` (render style only).
+Use the corresponding portrait in `Art/原图参考` to establish identity, expression, and costume. Compare the rendering of the character against the sole CG style master.
 
 - Build on a clean low-resolution logical grid, then integer nearest-neighbor upscale
 - 3–5 hard cel-shading steps per material
@@ -95,9 +97,9 @@ Not allowed:
 
 One production run uses:
 
-- one primary scene mother (or one scene-type grammar reference)
-- one character style mother per character
-- one content master
+- the single CG style master, `Art/cg_style_master.png`
+- a location reference and the applicable character identity references
+- one source CG for the event
 - one fixed prompt template
 - one fixed provider/model/size/quality/reference order
 
@@ -125,18 +127,29 @@ Hard checks:
 
 Soft checks:
 
-- visual distance to the selected scene grammar
-- visual distance to the selected character pixel grammar
+- location and character identity match their supporting references
+- outline weight, pixel steps, highlight clusters, and shading match the sole CG style master
 - palette and shading-step consistency
 
 `tools/check_pixel_style.py` is supporting evidence only. Its five metrics are not a global pass gate and must not be used as the generation target.
 
 ## 7. Acceptance order
 
-1. audit reference set and bind scene/character mothers
+1. bind the sole CG style master and select the applicable location and identity references
 2. fix prompt template and model recipe
 3. run 3 content variations
 4. QA content + style
 5. only then produce the CG batch
 6. install only after explicit approval
 
+
+## Hair Colour QA gate (2026-11-23)
+
+Every new Grok CG must run:
+
+```powershell
+python tools\check_hair_color.py --json <generated-image>
+```
+
+Record the result in the CG report. Thresholds: PASS <=6 ΔE, WARN <=12 ΔE, FAIL >12 ΔE.
+A FAIL image is not approvable; re-generate with the fixed HAIR COLOR LOCK block. Do not post-hoc recolour.

@@ -1,0 +1,13 @@
+Create a tasteful, non-explicit 16:9 pixel-art CG of Eleanor lying on a bed in the morning. Waist-up close-up; keep the hands out of the composition entirely.
+
+Image 1: ONLY chest, torso and white floral lace bodysuit: chest volume, torso proportions, white lace pattern and high-neck fit. No head, no earrings. Tasteful.
+Image 2: ONLY head and face: exact head/face shape, green eye shape, eyeliner, eyebrows, small nose, mouth, cheek fullness, orange hair, bangs, hairstyle. Bare ears. Do NOT copy shirt, necklace, earrings, jewelry, white background or body.
+Images 3 and 4: ONLY fine 1x pixel-art style, flat colour fields, hard edges and limited palette. Do not copy alley, lanterns, shops, shelves, signage or scene content.
+
+CRITICAL: bare ears, NO earrings, NO necklace, NO jewelry, NO hair ornaments. NO visible hands or fingers. Both arms tucked under pillow and blanket; only shoulders and upper arms visible. Do not draw hands.
+
+POSE: Eleanor lies on her side on white bedding, head on white pillow, face toward camera, calm soft smile. Shoulders angled slightly toward viewer; arms disappear under pillow/blanket. Waist-up framing; white lace bodysuit visible but tasteful.
+
+SCENE: plain warm bedroom, white pillows and duvet, soft morning light from upper right. One character only; no text, watermark or UI.
+
+STYLE: true pixel-art CG, crisp pixel structure, 1-2px lines, hard edges, 3-5 flat cel-shade steps, limited palette, no anti-aliasing, no blur, no dithering. Native 16:9 1280x720; head and upper body prominent, full face readable.

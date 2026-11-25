@@ -37,6 +37,7 @@
   },
   "upscale": "2x_nearest",
   "style_sources": {
+    "master": "Art/cg_style_master.png",
     "scene": [
       "Art/场景参考/场景参考1.png",
       "Art/场景参考/场景参考2.png",
@@ -85,7 +86,7 @@
     "numeric_metrics_role": "supporting_evidence_only"
   },
   "production_recipe": {
-    "style_mothers": "one_primary_per_scene_type_and_character",
+    "style_mothers": "one_canonical_for_all_cg",
     "prompt_template": "docs/CG_PROMPT_TEMPLATE.md",
     "fixed_parameters": true,
     "repeatability_test": "3_content_variations"

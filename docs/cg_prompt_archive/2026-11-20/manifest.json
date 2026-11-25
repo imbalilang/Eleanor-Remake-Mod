@@ -62,6 +62,114 @@
         "image-8ebd4ec5.png",
         "lydia_daily_portrait_master_v1.png"
       ]
+    },
+    {
+      "id": "love_night_supper",
+      "approved_file": "Textures/Items/er_event_love_supper_cg.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_first_embrace_v7.txt",
+      "approval_record": "Art/eleanor-first-embrace-cg-2026-11-24/APPROVED.json",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-first-embrace-cg-2026-11-24/v7/source.png",
+        "Art/cg_style_master.png"
+      ]
+    },
+    {
+      "id": "love_trade_wall",
+      "approved_file": "Textures/Items/er_event_love_wall_cg.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_kabedon_hair_v7.txt",
+      "approval_record": "Art/eleanor-white-casual-kabedon-cg-2026-11-18/APPROVED.json",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "patches": "square",
+        "returned_patch_size": [
+          1254,
+          1254
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "CG/eleanor_white_casual_kabedon_style_calibrated_v6_960x540.png",
+        "CG/eleanor_first_embrace_recalibrated_v7_960x540.png",
+        "Art/原图参考/QQ图片20261119194822.png"
+      ]
+    },
+    {
+      "id": "love_day_promenade",
+      "approved_file": "Textures/Items/er_event_love_promenade_cg.png",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_promenade_v5_lower_district.txt",
+      "approval_record": "Art/eleanor-white-casual-bridal-carry-cg-2026-11-18/APPROVED.json",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-white-casual-sunset-lane-cg/eleanor_white_casual_sunset_lane_pixel_v2_master.png",
+        "Art/场景参考/场景参考2.png"
+      ]
+    },
+    {
+      "id": "love_trade_kiss",
+      "approved_file": "Textures/Items/er_event_love_heart_kiss_cg.png",
+      "approval_record": "Art/eleanor-heart-kiss-cg-2026-11-25/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_heart_kiss_pixel_v2.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-heart-kiss-cg-2026-11-25/source.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119194822.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/eleanor-heart-kiss-cg-2026-11-25/eleanor_heart_kiss_pixel_v1.png"
+      ]
+    },
+    {
+      "id": "love_night_bathhouse",
+      "approved_file": "Textures/Items/er_event_love_bathhouse_cg.png",
+      "approval_record": "Art/eleanor-sophia-bathhouse-cg-2026-11-25/APPROVED.json",
+      "prompt_file": null,
+      "channel": "direct_source_export",
+      "references": [
+        "dsh-image-gen/image-ffb868c4.jpg"
+      ]
+    },
+    {
+      "id": "love_night_stay",
+      "approved_file": "Textures/Items/er_event_love_wakeup_cg.png",
+      "approval_record": "Art/character-assets-2026-11-20/cg/love_white_sleepwear_wakeup/APPROVED.json",
+      "prompt_file": null,
+      "channel": "direct_source_export",
+      "references": [
+        "Art/cg_style_master.png"
+      ]
     }
   ],
   "revoked_history": [
