@@ -398,6 +398,345 @@
         "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v10_master.png",
         "Art/eleanor-in-my-own-name-cg-2026-11-26/eleanor_in_my_own_name_hand_kiss_overhead_v11_master.png"
       ]
+    },
+    {
+      "id": "maid_trade_shopkeeper",
+      "approved_file": "Textures/Items/er_event_maid_shopkeeper_cg.png",
+      "approval_record": "Art/eleanor-maid-shopkeeper-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_maid_shopkeeper_pixel_v3.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-maid-shopkeeper-cg-2026-11-26/selected_source_b8dd3bfb.png",
+        "Art/cg_style_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_maid_transparent_master.png",
+        "Art/场景参考/场景参考2.png",
+        "Art/eleanor-maid-shopkeeper-cg-2026-11-26/eleanor_maid_shopkeeper_pixel_v1.png",
+        "Textures/Items/er_expr_eleanor_maid_smile.png",
+        "Art/eleanor-maid-shopkeeper-cg-2026-11-26/eleanor_maid_shopkeeper_pixel_v2.png"
+      ]
+    },
+    {
+      "id": "maid_night_steps",
+      "approved_file": "Textures/Items/er_event_maid_steps_cg.png",
+      "approval_record": "Art/eleanor-maid-night-steps-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_maid_night_steps_pixel_v2.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-maid-night-steps-cg-2026-11-26/selected_source_91b3eb9f.png",
+        "Art/cg_style_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_maid_transparent_master.png",
+        "Textures/Items/er_event_maid_shopkeeper_cg.png",
+        "Art/eleanor-maid-night-steps-cg-2026-11-26/eleanor_maid_night_steps_pixel_v1.png"
+      ]
+    },
+    {
+      "id": "maid_trade_shutters",
+      "approved_file": "Textures/Items/er_event_maid_shutters_cg.png",
+      "approval_record": "Art/eleanor-maid-shutters-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_maid_shutters_pixel_v2.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-maid-shutters-cg-2026-11-26/selected_source_86b1c0da.png",
+        "Art/cg_style_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_maid_transparent_master.png",
+        "Textures/Items/er_event_maid_shopkeeper_cg.png",
+        "Art/eleanor-maid-shutters-cg-2026-11-26/eleanor_maid_shutters_pixel_v1.png"
+      ]
+    },
+    {
+      "id": "maid_night_costume",
+      "approved_file": "Textures/Items/er_event_maid_costume_cg.png",
+      "approval_record": "Art/eleanor-maid-night-costume-cg-2026-11-26/APPROVED.json",
+      "prompt_file": null,
+      "channel": "direct_source_export",
+      "references": [
+        "dsh-image-gen/image-0660bc1b.png"
+      ]
+    },
+    {
+      "id": "v2_a4c3",
+      "approved_file": "Textures/Items/er_event_maid_gala_cg.png",
+      "approval_record": "Art/eleanor-maid-gala-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_maid_gala_pixel_v3.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "dsh-image-gen/image-55c544c0.png",
+        "Art/cg_style_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_gala_transparent_master.png",
+        "Textures/Items/er_event_harem_lydia_date_cg.png",
+        "Art/eleanor-maid-gala-cg-2026-11-26/eleanor_maid_gala_pixel_v1.png"
+      ]
+    },
+    {
+      "id": "maid_night_encore",
+      "approved_file": "Textures/Items/er_event_maid_encore_cg.png",
+      "approval_record": "Art/eleanor-maid-encore-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_maid_encore_pixel_v6.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "dsh-image-gen/image-2e330ca8.png",
+        "Art/cg_style_master.png",
+        "Textures/Items/er_event_maid_gala_cg.png",
+        "Textures/Items/er_event_love_book_cg.png",
+        "Art/eleanor-maid-encore-cg-2026-11-26/eleanor_maid_encore_pixel_v1.png",
+        "Art/eleanor-maid-encore-cg-2026-11-26/eleanor_maid_encore_pixel_v2_master.png",
+        "Art/eleanor-maid-encore-cg-2026-11-26/eleanor_maid_encore_pixel_v3_master.png"
+      ]
+    },
+    {
+      "id": "rev_trade_sill",
+      "approved_file": "Textures/Items/er_event_revolution_sill_cg.png",
+      "approval_record": "Art/eleanor-revolution-sill-cg-2026-11-26/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_sill_pixel_v10.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1670,
+          942
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-76c1010e-cf83-4335-ab7d-ef973938c490.png",
+        "Art/cg_style_master.png",
+        "Art/revolution-route-2026-11-10/masters/eleanor_revolution_undersuit_beauty_v3.png",
+        "Art/场景参考/场景参考1.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-af305bcd-be43-4af8-b840-e072f40d4156.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-bc2df5c1-d4d8-476f-9776-139afa201fe0.png",
+        "Art/eleanor-revolution-sill-cg-2026-11-26/eleanor_revolution_sill_pixel_v3_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_rev_transparent_master.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-45430018-27e4-4df9-8eeb-c36842c852fb.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-aae36e64-6d69-482a-873d-5185dc340cf7.png",
+        "Art/eleanor-revolution-sill-cg-2026-11-26/eleanor_revolution_sill_pixel_v6_master.png",
+        "Art/eleanor-revolution-sill-cg-2026-11-26/eleanor_revolution_sill_pixel_v7_master.png",
+        "Art/eleanor-revolution-sill-cg-2026-11-26/eleanor_revolution_sill_pixel_v8_master.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-bc8b6c4a-ccb4-43b0-829d-c38b054f7ce4.png"
+      ]
+    },
+    {
+      "id": "rev_ride",
+      "approved_file": "Textures/Items/er_event_revolution_ride_cg.png",
+      "approval_record": "Art/eleanor-revolution-ride-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_ride_pixel_v3.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "dsh-image-gen/image-8ebd4ec5.png",
+        "Art/cg_style_master.png",
+        "Art/revolution-date-portrait-2026-11-23/masters/image-adc9f6ff.png",
+        "Art/场景参考/场景参考2.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-06f9621c-bfd8-4c4b-b838-546c75ccdf34.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-33ce04d6-a9e7-47dc-ba91-7c1f60c3537f.png"
+      ]
+    },
+    {
+      "id": "rev_trade_wrist",
+      "approved_file": "Textures/Items/er_event_revolution_wrist_cg.png",
+      "approval_record": "Art/eleanor-revolution-wrist-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_wrist_pixel_v6.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-in-my-own-name-cg-2026-11-26/selected_source_79366086.png",
+        "Art/cg_style_master.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_rev_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Textures/Items/er_event_love_wall_cg.png",
+        "Art/eleanor-revolution-wrist-cg-2026-11-27/eleanor_revolution_wrist_v1_edit_base.png",
+        "Art/eleanor-revolution-wrist-cg-2026-11-27/eleanor_revolution_wrist_pixel_v3_master.png",
+        "Art/eleanor-revolution-wrist-cg-2026-11-27/eleanor_revolution_wrist_pixel_v4_master.png"
+      ]
+    },
+    {
+      "id": "v2_r3c1",
+      "approved_file": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "approval_record": "Art/eleanor-revolution-first-kill-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_first_kill_pixel_v2.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-revolution-first-kill-cg-2026-11-27/selected_source_e09dd11c.png",
+        "Art/cg_style_master.png",
+        "Art/tactical-vest-expressions-2026-11-22/masters/sad.png",
+        "Art/场景参考/场景参考2.png",
+        "C:/Users/Administrator/.codex/generated_images/01a1b183-fe07-7a03-9489-8962dca3d88f/exec-816ce13a-b42b-441f-8bf9-84fe2e3b1fac.png"
+      ]
+    },
+    {
+      "id": "rev_night_departure",
+      "approved_file": "Textures/Items/er_event_revolution_departure_cg.png",
+      "approval_record": "Art/eleanor-revolution-departure-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_departure_pixel_v7.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-revolution-departure-cg-2026-11-27/eleanor_revolution_departure_pixel_v2_master.png"
+      ]
+    },
+    {
+      "id": "v2_r4c4",
+      "approved_file": "Textures/Items/er_ending_revolution_cg.png",
+      "approval_record": "Art/eleanor-revolution-reunion-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_reunion_pixel_v3.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-revolution-reunion-cg-2026-11-27/selected_source_3d2bf03e.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119200052.png",
+        "Art/场景参考/场景参考2.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/eleanor-revolution-reunion-cg-2026-11-27/eleanor_revolution_reunion_pixel_v1_master.png",
+        "Art/eleanor-revolution-reunion-cg-2026-11-27/eleanor_revolution_reunion_pixel_v2_master.png",
+        "Textures/Items/er_event_revolution_embrace_cg.png",
+        "Textures/Items/er_event_revolution_departure_cg.png"
+      ]
+    },
+    {
+      "id": "rev_night_jacket",
+      "approved_file": "Textures/Items/er_event_revolution_jacket_cg.png",
+      "approval_record": "Art/eleanor-revolution-jacket-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_jacket_pixel_v8.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-revolution-jacket-cg-2026-11-27/selected_source_993501d9.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119200041.png",
+        "Art/eleanor-revolution-jacket-cg-2026-11-27/eleanor_revolution_jacket_pixel_v7_master.png"
+      ]
+    },
+    {
+      "id": "rev_night_barracks",
+      "approved_file": "Textures/Items/er_event_revolution_barracks_cg.png",
+      "approval_record": "Art/eleanor-revolution-barracks-cg-2026-11-27/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/eleanor_revolution_barracks_pixel_v1.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/eleanor-revolution-barracks-cg-2026-11-27/selected_source_3fd2279f.png",
+        "Art/cg_style_master.png",
+        "Art/原图参考/QQ图片20261119200041.png",
+        "Art/场景参考/场景参考1.png",
+        "Textures/Items/er_event_revolution_embrace_cg.png"
+      ]
     }
   ],
   "revoked_history": [

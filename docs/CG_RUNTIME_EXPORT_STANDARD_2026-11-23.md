@@ -14,6 +14,7 @@ Contract: `cg_pixel_contract_v5`
 - Resample: **Lanczos** by default (`box`/`bicubic` available for testing only)
 - Output: **PNG, lossless**
 - Display reference: 1920 × 1080 (2× nearest), not the runtime file
+- The game displays event and ending CGs with nearest-neighbor sampling (`FilterMode.Point`).
 
 ## Rationale
 

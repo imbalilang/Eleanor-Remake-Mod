@@ -126,19 +126,8 @@ namespace EleanorRomance
             Sprite sprite = PortraitCompat.GetLocalSprite(key);
             if (sprite == null) return null;
 
-            // The game loads every Textures/Items PNG with point filtering.
-            // Each of these CGs has its own texture, so filtering can be set per artwork.
-            switch (key)
-            {
-                case "er_event_harem_lydia_date_cg":
-                case "er_event_love_water_cut_cg":
-                case "er_event_maid_gala_cg":
-                case "er_event_revolution_embrace_cg":
-                case "er_ending_love_wedding":
-                    var texture = sprite.texture;
-                    if (texture != null) texture.filterMode = FilterMode.Bilinear;
-                    break;
-            }
+            Texture2D texture = sprite.texture;
+            if (texture != null) texture.filterMode = FilterMode.Point;
             return sprite;
         }
 
