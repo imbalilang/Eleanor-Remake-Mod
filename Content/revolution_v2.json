@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "source": "Novel_Output/volume_revolution_v2_Chapter_1..4_Final.txt",
+  "source": "Tiered Production Pipeline v4 (Dreammini + Ny-Gemini-1.4.5, google/gemini-4-argon, 2026-11-26)",
   "scenes": [
     {
       "id": "v2_r1c1",
@@ -20,7 +20,6 @@
         {
           "type": "choice",
           "id": "C1",
-          "prompt": "她把队伍的单子和一包货一起放上柜台",
           "mainline": 1,
           "options": [
             {
@@ -33,19 +32,20 @@
               "id": "C1_o2",
               "label": "问队伍缺什么",
               "mainline": false,
+              "label_en": "Ask what the squad needs",
               "block": "v2_r1c1_c1_o2",
-              "merge": true,
-              "label_en": "Ask what the squad needs"
+              "merge": true
             },
             {
               "id": "C1_o3",
               "label": "让她坐一会儿",
               "mainline": false,
+              "label_en": "Tell her to sit a while",
               "block": "v2_r1c1_c1_o3",
-              "merge": true,
-              "label_en": "Tell her to sit a while"
+              "merge": true
             }
           ],
+          "prompt": "她把队伍的单子和一包货一起放上柜台",
           "prompt_en": "She sets the squad's list and a bundle of goods on the counter"
         },
         {
@@ -58,94 +58,171 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "帆布包先压上柜台，包底带下的灰落下来，两张价签歪到一边。",
-              "en": "A bulging canvas bag lands on the counter first, knocking two price tags askew."
+              "text": "埃莉诺提着帆布包站在窗口前，把一张叠好的手写单子拍在柜台上。",
+              "en": "Eleanor stands at the window with a canvas bag and slaps a folded handwritten list on the counter."
             },
             {
               "speaker": "Eleanor",
-              "text": "包不用看。先看这个。",
-              "en": "Forget the bag. Look at this first.",
-              "expr": "serious"
+              "text": "你先看看这张单子上的东西。",
+              "expr": "serious",
+              "en": "Take a look at what's on this list first."
             },
             {
-              "speaker": "Eleanor",
-              "text": "（把一张叠了好几折的纸拍在柜台正中间）队里的单子。",
-              "en": "(Presses a sheet, folded several times, onto the middle of the counter) The unit's list."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "止血、退烧、消毒。再往下是枪和子弹。",
-              "en": "Stuff to stop bleeding, fever meds, antiseptic. Below that, guns and ammo."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "字写歪了，你凑合看。",
-              "en": "I wrote it. It's a bit crooked. Make do."
+              "speaker": "Player",
+              "text": "止血、退烧、消毒，底下是枪。",
+              "en": "Hemostatics, fever meds, antiseptic. Guns at the bottom."
             },
             {
               "speaker": "Player",
               "text": "你写的。",
-              "en": "You wrote it."
+              "en": "You wrote this."
             },
             {
               "speaker": "Eleanor",
-              "text": "嗯。对单子、采买、出货，现在都归我。",
-              "en": "Mm. Checking lists, buying, selling. That's all on me now."
+              "text": "我现在进了革命军，队里对单和出货都归我管。",
+              "en": "I'm with the Revolution now. I handle the unit's orders and shipments."
+            },
+            {
+              "speaker": "Player",
+              "text": "衣服大了一号。",
+              "en": "Your clothes are a size too big."
             },
             {
               "speaker": "Eleanor",
-              "text": "我进了革命军。以后队里要的药和枪，先过我手。",
-              "en": "I joined the Revolution. From now on, the unit's meds and guns go through my hands."
+              "text": "队里发的衣服，肩线直接宽出两指。",
+              "en": "Unit-issue. The shoulders are two fingers too wide."
             },
             {
               "speaker": "Eleanor",
-              "text": "别拿那种眼神扫我。衣服是他们发的。",
-              "en": "Don't look at me like that. They issued me these clothes."
+              "text": "以前在上面做衣服，裁缝总要反复量好几次。",
+              "en": "When I had clothes made on the Upper Level, the tailor measured me over and over."
             },
             {
               "speaker": "Eleanor",
-              "text": "（拽了拽袖口）肩线多出来两指。谁裁的不知道，手艺够绝。",
-              "en": "(Tugs at her cuff) The shoulders are two fingers too wide. Whoever cut this is a real genius."
+              "text": "现在只要能套在身上就行了。",
+              "en": "Now anything I can pull on will do."
             },
             {
               "speaker": "Eleanor",
-              "text": "以前在上面的衣服，裁缝都得来量够三回。",
-              "en": "Up there, a tailor came to measure me three times for one outfit."
+              "text": "刚才我穿这身走过街口，有人冲地上吐口水。",
+              "en": "I walked past the corner in this just now, and someone spat on the ground."
             },
             {
               "speaker": "Eleanor",
-              "text": "现在能套进身上就行。",
-              "en": "Now, if I can get it on, it's good enough."
+              "text": "也有人趁我不注意，往我兜里塞了半颗营养果。",
+              "en": "Someone else slipped half a Nutrifruit into my pocket when I wasn't looking."
+            },
+            {
+              "speaker": "Player",
+              "text": "今天就要拿药？",
+              "en": "You need the meds today?"
             },
             {
               "speaker": "Eleanor",
-              "text": "穿这身从街上过，有人冲地上吐口水，也有人偷往我手里塞半颗营养果。",
-              "en": "Walking the streets in this, some people spit on the ground. Some slip me half a Nutrifruit."
+              "text": "今天手头上的钱不够，单子上的货先不买。",
+              "en": "I don't have enough money today. I'm not buying anything on the list yet."
             },
             {
               "speaker": "Eleanor",
-              "text": "今天不拿单子上的货，钱不够。",
-              "en": "I'm not taking anything on the list today. Not enough money."
+              "text": "我先把这包旧工具卖成信用点，你别问来路。",
+              "en": "First I'm selling this bag of old tools for credits. Don't ask where they came from."
             },
             {
               "speaker": "Eleanor",
-              "text": "先卖这包。换成信用点，过两天我拿着单子来取。",
-              "en": "Selling first. Turn this bag into credits. I'll come back for the list in a couple days."
+              "text": "等过两天凑够了数，我再拿单子过来买药。",
+              "en": "In a couple of days, once I've scraped enough together, I'll bring the list back for the meds."
+            }
+          ]
+        },
+        "v2_r1c1_s1": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "包解开，先看货。",
+              "en": "Open the bag. Let's see the goods."
             },
             {
               "speaker": "Eleanor",
-              "text": "货的来路，别问。",
-              "en": "Don't ask where this came from."
+              "text": "（拉开帆布包）里面都是旧货，有两件边口还带着缺口。",
+              "en": "(Opening the canvas bag) It's all old stuff. Two pieces have chipped edges."
             },
             {
               "speaker": "Eleanor",
-              "text": "问了也白问。",
-              "en": "I wouldn't tell you anyway."
+              "text": "前几天治安部叫我去了一趟，让我认尸。",
+              "expr": "sad",
+              "en": "A few days ago, Public Security called me in to identify a body."
             },
             {
               "speaker": "Eleanor",
-              "text": "你这店本来就没只收干净货吧？",
-              "en": "Your shop never only took clean goods anyway, right?"
+              "text": "我一眼就看出来了，我母亲已经死了。",
+              "en": "I knew at a glance. My mother was dead."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "她的头发被人剪短了，我在那张纸底下签了字。",
+              "en": "Someone had cut her hair short. I signed at the bottom of the form."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "签完字的第二天，营养果的研究资料就贴得满站都是。",
+              "en": "The day after I signed, the Nutrifruit research was posted all over the station."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "那明明是我母亲攒了半辈子的东西。",
+              "en": "That was half a lifetime of my mother's work."
+            },
+            {
+              "speaker": "Player",
+              "text": "我知道了。",
+              "en": "Understood."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "你没跟我说什么节哀，这样反倒让我松口气。",
+              "en": "You didn't tell me you're sorry for my loss. Honestly, that's a relief."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "这几天那些空话我已经听够了。",
+              "en": "I've heard enough empty words these past few days."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "她低下头，把包里的旧工具一件接一件挪到柜台木面上。",
+              "en": "She lowers her head and moves the old tools from the bag onto the wooden counter, one by one."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "出发前队里有人劝我，让我把上面带下来的旧衣服也拿来。",
+              "expr": "serious",
+              "en": "Before I left, someone in the unit told me to bring the old clothes I brought down from the Upper Level too."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "他们说多换点信用点，就能给队里多拿几盒药。",
+              "en": "They said more credits would mean a few more boxes of meds for the unit."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "我没把那些衣服带出来，怎么处置得由我自己定。",
+              "en": "I didn't bring those clothes. What happens to them is my call."
+            },
+            {
+              "speaker": "Player",
+              "text": "成色看清了。",
+              "en": "I've checked the condition."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "你按成色老老实实开价，不准凑整也不准多给。",
+              "expr": "determined",
+              "en": "Price it honestly by condition. No rounding up, no extra."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "我来这里是为了换钱办事，不是来让你可怜的。",
+              "en": "I'm here to get money and get things done, not to be pitied."
             }
           ]
         },
@@ -158,13 +235,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "单子上有，自己看。不认字？",
-              "en": "It's on the list. Can't you read?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……都缺。止血的最缺，有人伤了，没东西压。",
-              "en": "...Everything. Stuff to stop bleeding most of all. People get hurt and we've got nothing to press on it."
+              "text": "止血和退烧药最急，但今天钱不够，先把这包工具换成信用点。",
+              "en": "Hemostatics and fever meds most of all. But I'm short on money today, so I'm turning these tools into credits first."
             }
           ]
         },
@@ -172,137 +244,18 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "（朝窗口外那把椅子抬了抬下巴）坐。",
-              "en": "(Points to the chair outside the window) Sit."
+              "text": "窗边有椅子，坐会儿。",
+              "en": "There's a chair by the window. Sit for a while."
             },
             {
               "speaker": "Eleanor",
-              "text": "不坐。坐下我就起不来了。",
-              "en": "No. If I sit, I won't want to get up.",
-              "expr": "tired"
+              "text": "我不坐，现在要是坐下去我怕自己起不来。",
+              "en": "I won't sit. If I sit down now, I'm afraid I won't get up."
             },
             {
               "speaker": "Eleanor",
-              "text": "（手指在椅背碰一下，缩回去）先看货。",
-              "en": "(Rests a hand on the chair back, then pulls it away) Goods first."
-            }
-          ]
-        },
-        "v2_r1c1_s1": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "（把那张纸展平，压在柜台边上）先看货。",
-              "en": "(Smooths out the list and pins it at the counter's edge) Let's see the goods."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（扯开包口的绳结）都是旧货，成色有好的也有坏的。",
-              "en": "(Unties the canvas bag's cord) All old stuff. Condition varies.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "有两件撞出了口子，我查过。",
-              "en": "Two pieces are chipped. I checked them myself."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（手探进包里，停住）",
-              "en": "(Reaches into the bag, then stops)"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "前几天，治安部的人叫我去认。",
-              "en": "A few days ago, Security called me in to identify someone."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "认出来了。",
-              "en": "I recognized her.",
-              "expr": "tired"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "她死了。我去认过尸。",
-              "en": "She's dead. I identified the body."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "头发短了。是在里面剪的吧，我也说不清。",
-              "en": "Her hair was cut short. Done inside, I guess. I never knew."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "一张纸递过来，让我在最底下签名。",
-              "en": "They handed me a paper and had me sign at the very bottom."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "签完字第二天，研究就公开了。",
-              "en": "The day after I signed, the research went public."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "营养果那份。现在满站都是，经过就能看见。",
-              "en": "The Nutrifruit one. It's posted all over the station now. Anyone walking by can take a look."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "她攒了半辈子的东西。",
-              "en": "Half her life's work."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "好了，就这些。",
-              "en": "There. I'm done."
-            },
-            {
-              "speaker": "Player",
-              "text": "嗯。",
-              "en": "Mm."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你就一个“嗯”？",
-              "en": "That's it? Just \"mm\"?",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "连“节哀”都省了。",
-              "en": "Not even a \"sorry for your loss.\""
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……也好。这几天听得够够的。",
-              "en": "...Fine. I've heard that one enough lately."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（包里的东西一件件摆出来，码在柜台）",
-              "en": "(Takes items out of the bag one by one and lines them up on the counter)"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "队里有人让我把上层那几件衣服一起带出来，说料子能多换点药。",
-              "en": "Someone in the squad told me to bring my Upper Level clothes too. Said Upper Level fabric trades for more medicine."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我没带。那几件怎么处置，我定。",
-              "en": "I didn't bring them. Whether I keep those is my call."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "其余的都在柜上。",
-              "en": "The rest is all here."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "按成色开价。别凑整，别多给。",
-              "en": "Price it by condition. Don't round up, and don't overpay.",
-              "expr": "determined"
+              "text": "你先把这包工具看完再说。",
+              "en": "Finish looking over these tools first."
             }
           ]
         },
@@ -310,13 +263,13 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "行，这个价我接。",
-              "en": "Fine. I'll take that number."
+              "text": "这个数还算公道，信用点我收下了。",
+              "en": "That's fair enough. I'll take the credits."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把空包折起来，塞进背心口袋）过两天我拿单子来取。",
-              "en": "(Folds the empty bag and tucks it into her vest pocket) I'll be back in a couple days with the list."
+              "text": "空包我带走，过两天我拿单子过来取药。",
+              "en": "I'll take the empty bag. I'll be back with the list in a couple of days for the meds."
             }
           ]
         },
@@ -324,14 +277,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "钱给多了。别当没这回事。",
-              "en": "You overpaid. Don't pretend you didn't.",
-              "expr": "angry"
+              "text": "这几件带缺口的旧货根本值不了这么多，你少来这套。",
+              "expr": "angry",
+              "en": "This chipped old junk isn't worth that much. Cut it out."
             },
             {
               "speaker": "Eleanor",
-              "text": "队里急用，先收。账我记下了，谢你谈不上。",
-              "en": "The squad needs it, so I'll take it this time. I'll remember this. Don't expect a thank-you."
+              "text": "队里急着买药我先收下，但你别指望我会跟你说谢谢。",
+              "en": "The squad needs medicine badly, so I'll take it. Don't expect a thank-you."
             }
           ]
         },
@@ -339,18 +292,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "你压价压得真狠。",
-              "en": "That's a pretty brutal price."
+              "text": "你压价压得也太狠了，就因为那两道小缺口吗？",
+              "expr": "angry",
+              "en": "That's a brutal lowball. All because of two little nicks?"
             },
             {
               "speaker": "Eleanor",
-              "text": "我讲过，给少了就装回去。……今天队里等不了，算你走运。",
-              "en": "I said I'd take it back if it was low. ...The squad can't wait today. Lucky you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "下次我先去别家问清楚价钱再来。",
-              "en": "Next time I'll check other shops' prices before coming here."
+              "text": "算了，队里还等着用钱，今天先按这个数算。",
+              "en": "Fine. The squad needs the money. We'll go with that number today."
             }
           ]
         },
@@ -358,13 +307,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "谈不拢，散。",
-              "en": "If we can't agree, forget it."
+              "text": "谈不拢就算了，我把东西装回去。",
+              "expr": "tired",
+              "en": "If we can't agree, forget it. I'll pack it back up."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把柜上的东西一件件收回包里）我换家店。单子你记着，说不定还用得上。",
-              "en": "(Stuffs the items back into the bag one by one) I'll try another shop. Keep the list in mind. You might need it."
+              "text": "别的铺子我也能去问，就是不知道今天还能走多远。",
+              "en": "I can ask at other shops. Just don't know how far I'll get today."
             }
           ]
         }
@@ -403,16 +353,15 @@
         {
           "type": "choice",
           "id": "C2",
-          "prompt": "她把单子推过来，等着拿货",
           "mainline": 2,
           "options": [
             {
               "id": "C2_o1",
               "label": "按单子结算",
               "mainline": false,
+              "label_en": "Settle by the list",
               "block": "v2_r1c2_c2_o1",
-              "merge": true,
-              "label_en": "Settle by the list"
+              "merge": true
             },
             {
               "id": "C2_o2",
@@ -424,11 +373,12 @@
               "id": "C2_o3",
               "label": "问她下次何时来",
               "mainline": false,
+              "label_en": "Ask when she'll be back",
               "block": "v2_r1c2_c2_o3",
-              "merge": true,
-              "label_en": "Ask when she'll be back"
+              "merge": true
             }
           ],
+          "prompt": "她把单子推过来，等着拿货",
           "prompt_en": "She slides the list over and waits for the goods"
         },
         {
@@ -441,156 +391,87 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "背包瘪瘪地挂在她肩上，帽檐上积着一层灰。",
-              "en": "A deflated backpack hangs from her shoulder. Her cap brim is coated in dust."
+              "text": "埃莉诺把改写过的手写单子按在窗口柜台上。",
+              "en": "Eleanor presses a rewritten handwritten list onto the window counter."
             },
             {
               "speaker": "Eleanor",
-              "text": "喂，没打烊吧。",
-              "en": "Hey. Still open?",
-              "expr": "tired"
+              "text": "上次卖工具换的信用点我都带过来了。",
+              "expr": "serious",
+              "en": "I brought all the credits from selling those tools last time."
             },
             {
               "speaker": "Eleanor",
-              "text": "上次那包旧货卖的钱，我一张没少带回来。",
-              "en": "The money from that bag of old stuff last time? I brought it back untouched.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（单子重摊开，折痕边起了毛）",
-              "en": "(Spreads the list out again, its creases worn fuzzy) Same list."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "昨晚动了一行。退烧的，提到最上面。",
-              "en": "Changed one line last night. Fever meds moved to the top.",
-              "expr": "neutral"
+              "text": "你看单子最上面，我把退烧药和消毒剂圈出来了。",
+              "en": "Look at the top of the list. I circled the fever meds and antiseptic."
             },
             {
               "speaker": "Player",
-              "text": "队里有人发热？",
-              "en": "Someone's running a fever?",
-              "expr": "neutral"
+              "text": "前天还排在后头。",
+              "en": "The day before yesterday, they were near the bottom."
             },
             {
               "speaker": "Eleanor",
-              "text": "伤口发起来了。",
-              "en": "His wound got infected.",
-              "expr": "neutral"
+              "text": "队里年纪最小的那个队员胳膊划了一道口子。",
+              "en": "The youngest kid in our squad got a gash on his arm."
             },
             {
               "speaker": "Eleanor",
-              "text": "他年纪比我小，昨天还追着我问上层长什么样。",
-              "en": "He's younger than me. Yesterday he asked me what the Upper Level looks like.",
-              "expr": "neutral"
+              "text": "三天前看着还没事，结果昨晚突然发起高烧。",
+              "en": "Three days ago he seemed fine. Then last night he spiked a high fever."
             },
             {
               "speaker": "Eleanor",
-              "text": "胳膊上一道口子拖了三天，昨天开始说胡话。",
-              "en": "A gash on his arm. Left it three days. Started raving yesterday.",
-              "expr": "neutral"
+              "text": "他烧得直说胡话，一直在喊一个队里没人听过的名字。",
+              "expr": "sad",
+              "en": "He's delirious, calling a name nobody in the squad has ever heard."
             },
             {
               "speaker": "Eleanor",
-              "text": "翻来覆去喊一个名，队里没这个人。",
-              "en": "He keeps calling a name. Nobody in the squad goes by it.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "后半夜来人换我，我才去躺了会儿。",
-              "en": "I sat with him past midnight. Only lay down when someone took over.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "消毒那瓶，上回就该买。",
-              "en": "That bottle of antiseptic. Should've bought it last time.",
-              "expr": "sad"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我原想先把旧货换成现钱，再一块取，账好算。",
-              "en": "I figured I'd turn the old stock into cash first, then buy it all at once. Cleaner books.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "他因此多熬了两天。",
-              "en": "He waited two extra days because of that.",
-              "expr": "neutral"
+              "text": "都怪我前天忙着先来卖货，把买消毒药的事拖了两天。",
+              "en": "My fault. I was busy selling first and put off the antiseptic two days."
             },
             {
               "speaker": "Player",
-              "text": "（把单子拽过来）下半截呢？",
-              "en": "(Turns the list around) And the bottom half?"
+              "text": "下面枪弹也画了圈。",
+              "en": "The guns and ammo below are circled too."
             },
             {
               "speaker": "Eleanor",
-              "text": "枪，子弹。领头那人画了两个圈。",
-              "en": "Guns, ammo. The leader circled them twice.",
-              "expr": "neutral"
+              "text": "那是领队画的，可手头的钱只够买单子的一半。",
+              "expr": "determined",
+              "en": "The squad leader did that. But we only have enough for half the list."
             },
             {
               "speaker": "Eleanor",
-              "text": "钱只够买一头。",
-              "en": "There's only enough money for one.",
-              "expr": "neutral"
+              "text": "既然现在单子归我管，就得先把救命的药拿回去。",
+              "en": "The list is mine to manage now, so the lifesaving meds come first."
             },
             {
               "speaker": "Eleanor",
-              "text": "单子在我手里。药先拿，枪下回。",
-              "en": "The list's in my hands now. Medicine first, guns next time.",
-              "expr": "determined"
+              "text": "枪和子弹留到下次再说，你先把备好的药拿出来吧。",
+              "en": "Guns and bullets can wait. Bring out the meds you set aside."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "几盒退烧药与几卷绷带摆在窗口柜台前。",
+              "en": "Several boxes of fever medicine and a few rolls of bandages sit on the window counter."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把单子下半截折起来，按在手掌下）",
-              "en": "(Folds the bottom half of the list and pins it under her palm)"
-            }
-          ]
-        },
-        "v2_r1c2_c2_o1": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "（照单子把货一行行摆到柜台上）",
-              "en": "(Lays the goods on the counter, line by line, following the list)"
+              "text": "这几卷绷带的边角怎么受潮泛黄了？",
+              "expr": "tired",
+              "en": "Why are the edges of these bandages damp and yellowed?"
             },
             {
               "speaker": "Eleanor",
-              "text": "退烧那栏，你眼睛多停了一下。",
-              "en": "You looked twice at the fever line.",
-              "expr": "neutral"
+              "text": "算了，拿回去用开水煮过一样能包扎伤口。",
+              "en": "Whatever. Boil them and they'll still dress a wound."
             },
             {
               "speaker": "Eleanor",
-              "text": "对，照这个次序走。",
-              "en": "Right. Do it in that order.",
-              "expr": "neutral"
-            }
-          ]
-        },
-        "v2_r1c2_c2_o3": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "下回什么时候来？",
-              "en": "When's your next visit?",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "看那家伙退不退烧。",
-              "en": "Depends on whether his fever breaks.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "退了，我来取枪。没退，也得来。",
-              "en": "If it breaks, I'll come for the guns. If it doesn't... I'll still have to come.",
-              "expr": "neutral"
+              "text": "要是换作以前在上面，这种东西我当场就把杯子摔了。",
+              "en": "Back on the Upper Level, I'd have smashed a cup over junk like this."
             }
           ]
         },
@@ -598,91 +479,109 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "（侧过身子让出台面）你自己挑。",
-              "en": "(Steps aside to leave the counter clear) Pick for yourself."
+              "text": "货在柜上，自己挑。",
+              "en": "Goods are on the counter. Pick."
             },
             {
               "speaker": "Eleanor",
-              "text": "……你倒不怕我把好的几样全挑了？",
-              "en": "...Aren't you worried I'll take all the best stuff?",
-              "expr": "shy"
+              "text": "行，我自己过一遍手才放心。",
+              "expr": "serious",
+              "en": "Fine. I won't trust it until I've checked it myself."
             },
             {
               "speaker": "Eleanor",
-              "text": "行，你自己说的，别反悔。",
-              "en": "Fine. Your call. Don't regret it.",
-              "expr": "neutral"
+              "text": "（她低头翻看血袋的封口）日期还行，没放坏。",
+              "en": "(She looks down at the blood bag seals.) Dates are fine. Not spoiled."
             },
             {
               "speaker": "Eleanor",
-              "text": "（没等他招呼，自己弯下腰翻下层的货架，一样样拿起来看）",
-              "en": "(Leans toward the lower shelf, turning items over one by one)"
+              "text": "退烧药和消毒剂我码在最上面，回去就能直接用。",
+              "en": "Fever meds and antiseptic on top, so they're ready to use when I get back."
             },
             {
               "speaker": "Eleanor",
-              "text": "这卷绷带边发黄了，受过潮吧。",
-              "en": "The edges of this bandage roll are yellowed. Got damp, didn't it?",
-              "expr": "neutral"
+              "text": "绷带我也一卷卷数清楚了，数目正好对得上单子。",
+              "en": "I counted the bandages roll by roll. Matches the list exactly."
+            },
+            {
+              "speaker": "Player",
+              "text": "泛黄的算便宜点？",
+              "en": "Discount for the yellowed ones?"
             },
             {
               "speaker": "Eleanor",
-              "text": "煮一遍还能使。我们那儿没那么多讲究。",
-              "en": "Boil it once and it's usable. We're not that picky out there.",
-              "expr": "neutral"
+              "text": "免了，我今天花的是队里公家的钱。",
+              "en": "No. Today I'm spending the squad's money."
             },
             {
               "speaker": "Eleanor",
-              "text": "呵。放以前听见这话，我得把杯子摔了。",
-              "en": "Heh. The old me would've smashed a cup hearing that.",
-              "expr": "smile"
+              "text": "你按正常成色算账，不准私下少收或者当成白送。",
+              "en": "Charge standard rate. No quiet discounts, no freebies."
             },
             {
               "speaker": "Eleanor",
-              "text": "血袋要是有，拿给我看一眼。",
-              "en": "If you've got blood bags, let me take a look.",
-              "expr": "serious"
+              "text": "我不想欠你私情，队里的账目也必须一笔笔算清楚。",
+              "en": "I won't owe you favors, and the squad's books have to add up."
             },
             {
               "speaker": "Eleanor",
-              "text": "退烧的放最上，消毒的摞一起。",
-              "en": "Fever meds on top. Stack the antiseptic together.",
-              "expr": "neutral"
+              "text": "以后队里采买补给，我还会固定来你这儿拿货。",
+              "expr": "soft",
+              "en": "From now on, I'll come here regularly for the squad's supplies."
             },
             {
               "speaker": "Eleanor",
-              "text": "绷带我自己数，你别碰。",
-              "en": "I'll count the bandages myself. Hands off.",
-              "expr": "neutral"
+              "text": "你别多想，我可不是为了照顾你的生意。",
+              "en": "Don't read into it. I'm not doing your business any favors."
             },
             {
               "speaker": "Eleanor",
-              "text": "价钱照你平时的来。",
-              "en": "Charge your usual prices.",
-              "expr": "neutral"
+              "text": "外面别的铺子账目太乱，那些掌柜我一个都信不过。",
+              "en": "The other shops keep messy books. I don't trust a single owner."
             },
             {
               "speaker": "Eleanor",
-              "text": "这是队里的钱。你让一分，我回去说不清。",
-              "en": "It's the squad's money. Knock off even one credit and I can't account for it.",
-              "expr": "neutral"
+              "text": "挑出来的药都在这儿了，你直接报个实价吧。",
+              "expr": "serious",
+              "en": "These are the meds I picked. Just give me a real price."
+            }
+          ]
+        },
+        "v2_r1c2_c2_o1": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "照单子拢好了，直接结？",
+              "en": "Bundled per the list. Settle up?"
             },
             {
               "speaker": "Eleanor",
-              "text": "队里再要什么，我都到你这儿拿。",
-              "en": "From now on, whatever the squad needs, I'll buy here.",
-              "expr": "soft"
+              "text": "等一下，数目和封口我得自己过一遍手。",
+              "en": "Wait. I need to check the count and seals myself."
             },
             {
               "speaker": "Eleanor",
-              "text": "别家的账，我不信。",
-              "en": "I don't trust anyone else's books.",
-              "expr": "neutral"
+              "text": "队里的钱每一分都有数，我自己点清了才好交差。",
+              "en": "Every credit of the squad's is accounted for. I count it, I answer for it."
+            }
+          ]
+        },
+        "v2_r1c2_c2_o3": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "下半截什么时候来拿？",
+              "en": "When are you picking up the rest?"
             },
             {
               "speaker": "Eleanor",
-              "text": "算吧。换班前我得赶回去。",
-              "en": "Ring it up. I need to be back before the shift change.",
-              "expr": "serious"
+              "text": "等队里再凑够一批能出手的东西，我自然会过来。",
+              "en": "When the squad scrapes together another batch to sell, I'll come."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "现在先别管下次的事了，让我把眼前的药挑完。",
+              "en": "Forget next time for now. Let me finish picking these meds."
             }
           ]
         },
@@ -690,20 +589,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "（没等他问，按说好的顺序把药往背包里塞）一样不差。",
-              "en": "(Packs the medicine into her bag in the order she gave) Nothing missing."
+              "text": "数目正好，这包药我先拎走了。",
+              "expr": "soft",
+              "en": "That's the right amount. I'm taking the medicine."
             },
             {
               "speaker": "Eleanor",
-              "text": "今晚就用得上。",
-              "en": "We can use it tonight.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "走了。下回来拿单子下半截。",
-              "en": "I'm off. Next time I'll come for the bottom half of the list.",
-              "expr": "neutral"
+              "text": "队里那个人还在发烧，我得赶快回去给他把烧退下来。",
+              "en": "Someone in the unit still has a fever. I need to get back and bring it down."
             }
           ]
         },
@@ -711,20 +604,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "你又少算了。说过别让。",
-              "en": "You undercharged again. I told you not to cut me slack.",
-              "expr": "serious"
+              "text": "你这人怎么回事，刚才不是说了不准私下给我打折吗？",
+              "expr": "angry",
+              "en": "What's wrong with you? Didn't I just say no secret discounts?"
             },
             {
               "speaker": "Eleanor",
-              "text": "……行。这笔记在我这儿，下回一块对。",
-              "en": "...Fine. I'm keeping track of this. We'll square it next time.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（背上包，从窗口退开，停了一下）走了。",
-              "en": "(Shoulders her bag and steps away from the window, then pauses) I'm off."
+              "text": "今天急着救人我先拿走，下次再少收我就去别家买。",
+              "en": "Someone needs saving, so I'll take it today. Charge me less again and I'll buy elsewhere."
             }
           ]
         },
@@ -732,21 +619,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "比我估的贵。",
-              "en": "Pricier than I thought.",
-              "expr": "angry"
+              "text": "趁着别人急用退烧药坐地起价，你这算盘打得够精啊。",
+              "expr": "angry",
+              "en": "Jacking up the price when someone needs fever medicine. Clever math."
             },
             {
               "speaker": "Eleanor",
-              "text": "我不跟你吵，那边人还烧着。",
-              "en": "I'm not arguing. Someone back there's still running a fever.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "账我记下了，下回一条条对。",
-              "en": "I've noted the tab. Next time we go over it line by line.",
-              "expr": "neutral"
+              "text": "队里那个人等不起，今天这口闷气我先咽下了。",
+              "en": "He can't wait, so I'll swallow it today."
             }
           ]
         },
@@ -754,14 +634,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "拿不下来。",
-              "en": "I can't afford it.",
-              "expr": "tired"
+              "text": "（她沉下脸收起单子）这价钱我手头的钱根本拿不下。",
+              "expr": "sad",
+              "en": "(Her face darkens as she folds the list away) I can't afford that."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把单子折好，收回胸口袋）我去别家问问。都不成，再回你这里。",
-              "en": "(Folds the list and tucks it back into her chest pocket) I'll ask around. If nobody can, I'll come back."
+              "text": "人还在屋里烧着，我只能去隔街的铺子再碰碰运气了。",
+              "en": "He's still burning up. I'll have to try my luck at the shop across the street."
             }
           ]
         }
@@ -803,180 +683,121 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "冷风从窗口灌进来，柜台上多了一张边角起毛的单子。",
-              "en": "A cold gust blows through the window as the frayed list is slapped down in the middle of the counter."
+              "text": "埃莉诺把那张折过的补给单拍在窗口柜台上。",
+              "en": "Eleanor slaps a folded supply list onto the counter."
             },
             {
               "speaker": "Eleanor",
-              "text": "上次欠的半截，今天结清。",
-              "en": "Here to cover the half I owed last time.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "只要枪和子弹，其余不看。",
-              "en": "Guns, ammo. Nothing else."
+              "text": "把上次留下的单子下半截拿出来吧，今天只拿枪和子弹。",
+              "expr": "serious",
+              "en": "Get out the bottom half of the list I left last time. Today it's just guns and ammo."
             },
             {
               "speaker": "Player",
-              "text": "（把单子翻到背面）药没写？",
-              "en": "(Turns the list over to check the back) Medicine?"
+              "text": "发烧的那个好了？",
+              "en": "The one with the fever better?"
             },
             {
               "speaker": "Eleanor",
-              "text": "那边药还顶着。",
-              "en": "We have enough."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "退烧那盒管用，烧已经退了。",
-              "en": "That box of fever reducers worked. The fever broke."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "早上他自己端碗，还嫌营养果没味。",
-              "en": "The kid held his own bowl this morning. Complained the Nutrifruit's bland."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "哼，还能挑嘴，就没事。",
-              "en": "Heh. If he's got the strength to be picky, he'll live.",
-              "expr": "smile"
+              "text": "烧已经退干净了，昨晚还有力气嫌配给的营养果没味道。",
+              "en": "Fever's gone. Last night he had the energy to complain the ration Nutrifruit has no taste."
             },
             {
               "speaker": "Player",
-              "text": "这单子比上次短。",
-              "en": "The list's short."
+              "text": "最上面那行涂死了？",
+              "en": "Top line's blacked out?"
             },
             {
               "speaker": "Eleanor",
-              "text": "你眼真毒。",
-              "en": "...Sharp eyes.",
-              "expr": "serious"
+              "text": "（她低头用指尖压住那道黑印）原本写的是护膝带。",
+              "expr": "sad",
+              "en": "(She looks down, pressing a fingertip to the black mark) It said knee brace."
             },
             {
               "speaker": "Eleanor",
-              "text": "（指腹压住单子顶端划黑的那条）我涂黑的。",
-              "en": "(Presses a fingertip on the blacked-out bar at the top) I crossed this one out."
+              "text": "队里有个人膝盖受过伤，一到阴冷天走路就吃力。",
+              "en": "Someone in the unit had a bad knee. Cold, damp days made walking hard."
             },
             {
               "speaker": "Eleanor",
-              "text": "那行原是要买护膝的带子，给他的。",
-              "en": "It said bandages for a knee. For one person."
+              "text": "两天前晚上四个人出去办事，天快亮的时候只走回来三个。",
+              "en": "Two nights ago, four went out on a job. Near dawn, only three came back."
             },
             {
               "speaker": "Eleanor",
-              "text": "那人不用了。",
-              "en": "He won't need them now."
+              "text": "他被人抬回来的时候已经没气了，这东西自然也就用不上了。",
+              "en": "He was already dead when they carried him in. So he won't be needing it."
             },
             {
               "speaker": "Player",
-              "text": "知道了。",
-              "en": "Mm."
+              "text": "你也去了？",
+              "en": "You went too?"
             },
             {
               "speaker": "Eleanor",
-              "text": "前天夜里他们四个一块儿出去的，就他没回来。",
-              "en": "The four of them went out together the night before last. He was the only one who didn't come back."
+              "text": "没有，我留在据点里核对库存和单子。",
+              "en": "No. I stayed at the base checking inventory and lists."
             },
             {
               "speaker": "Eleanor",
-              "text": "第二天清早给抬回来的。",
-              "en": "They carried him in the next morning."
+              "text": "我是天亮听见动静出去帮忙的时候，才看到他被抬进来的。",
+              "en": "I heard the commotion at dawn and went out to help. That's when I saw them carry him in."
             },
             {
               "speaker": "Eleanor",
-              "text": "别问，我不在当场，只听人讲了一半。",
-              "en": "Don't ask how. I only heard secondhand. Not the whole story."
+              "text": "领队说得对，再不把家伙补齐，下次少的人只会更多。",
+              "expr": "determined",
+              "en": "The squad leader's right. If we don't restock our weapons, we'll lose more next time."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "她用掌心把单子按平，抬眼看向窗口内侧。",
+              "en": "She smooths the list flat with her palm and looks up into the window."
             },
             {
               "speaker": "Eleanor",
-              "text": "那天我留在房里盘账。",
-              "en": "I was inside that day, balancing the books.",
-              "expr": "tired"
+              "text": "今天别的都不用拿，你把店里现有的枪和弹药取出来就行。",
+              "en": "Nothing else today. Just bring out whatever guns and ammo you have."
             },
             {
               "speaker": "Player",
-              "text": "你划得挺重。",
-              "en": "You pressed hard."
+              "text": "要哪种？",
+              "en": "Which kind?"
             },
             {
               "speaker": "Eleanor",
-              "text": "笔不顺手。",
-              "en": "Bad pen."
+              "text": "我直说了吧，其实我以前根本没碰过这些东西。",
+              "en": "I'll be blunt. I've never actually touched these things before."
             },
             {
               "speaker": "Eleanor",
-              "text": "……第一次没涂住，又压了两回。",
-              "en": "...The first stroke didn't take. I went over it twice more."
+              "text": "前几天在队里学压子弹，我还把方向塞反过两次，被旁边的人笑话了半天。",
+              "en": "A few days ago I was learning to load rounds and put them in backwards twice. They laughed at me for ages."
             },
             {
               "speaker": "Eleanor",
-              "text": "领头的说，再没枪，下回得折更多人。",
-              "en": "The squad leader says without guns, next time we'll lose more than one."
+              "text": "所以我丑话说在前面，枪要是会卡壳或者有暗病，你必须当面讲清楚。",
+              "en": "So fair warning: if a gun jams or has a hidden flaw, you tell me to my face."
             },
             {
               "speaker": "Eleanor",
-              "text": "这次我不跟他吵。",
-              "en": "This time I didn't argue."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（从怀里掏出个布包，搁在单子边上）钱全在这。",
-              "en": "(Pulls a cloth bundle from an inner pocket and sets it beside the list) All the money's here."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "旧货剩的，加队里凑的。",
-              "en": "What's left from fencing the old stuff, plus what the unit scraped together."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "能用的摆出来。磨狠的、卡壳的，别拿。",
-              "en": "Show me what works. Nothing worn down, nothing that jams."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "枪我不懂。队里人教装弹，我两次装反。",
-              "en": "I don't know guns. Someone in the squad taught me to load. I did it backwards twice."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你乐什么。……没乐？那省事。",
-              "en": "What's funny? ...You're not laughing? Good.",
-              "expr": "shy"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "枪哪里不行，当着我面讲。",
-              "en": "If one's got a problem, tell me to my face.",
-              "expr": "serious"
+              "text": "弹药我只要整盒没拆封的，拆散的我得在柜台上一颗颗数过。",
+              "en": "Ammo only in sealed boxes. Loose rounds, I count one by one on this counter."
             },
             {
               "speaker": "Player",
-              "text": "会讲。",
-              "en": "I will."
+              "text": "有毛病的不拿。",
+              "en": "No faulty ones."
             },
             {
               "speaker": "Eleanor",
-              "text": "子弹按盒算，散的别糊弄。",
-              "en": "Ammo by the box. Don't fob me off with loose rounds."
+              "text": "价钱你也照实报，别因为我刚才说的话就私下给我抹零。",
+              "en": "And quote me the real price. Don't knock anything off because of what I just said."
             },
             {
               "speaker": "Eleanor",
-              "text": "回去我守着他们一颗颗数。",
-              "en": "I'm going back to count them out for them, one by one."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "价钱也别给我让。",
-              "en": "And no discounts.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（把那张纸推到台面正中）就这些，店主。",
-              "en": "(Pushes the list to the middle of the counter) Go on, shopkeeper."
+              "text": "把你备好的枪和子弹推过来吧，我现在就清点。",
+              "en": "Push over the guns and ammo you've got ready. I'll count them now."
             }
           ]
         },
@@ -984,19 +805,13 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "枪的毛病你讲过，钱数也合得上。",
-              "en": "You told me which ones have problems, and the price adds up."
+              "text": "数目和成色我都看过了，这批枪和子弹够队里应付一阵子了。",
+              "en": "Count and condition check out. These guns and rounds will hold the unit for a while."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把子弹盒一个个塞进布包）回去我再数。差一发，我回头寻你。",
-              "en": "(Stacks the ammo boxes into a cloth bag one by one) I'll count them back there. One short, and I'm coming for you."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "这回家伙算补齐了。",
-              "en": "This time the guns actually made it.",
-              "expr": "serious"
+              "text": "东西我先装包带走，等下次凑齐了经费再来找你。",
+              "en": "I'll pack these up. I'll be back once we scrape the funds together."
             }
           ]
         },
@@ -1004,20 +819,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "停，这数不对。你往里搭钱了。",
-              "en": "Hey, this number's wrong. You gave me a discount.",
-              "expr": "angry"
+              "text": "这价钱不对吧，你是不是又在私下给我算便宜了？",
+              "expr": "angry",
+              "en": "That price is wrong. Are you quietly giving me a discount again?"
             },
             {
               "speaker": "Eleanor",
-              "text": "说好了别给我让价的。",
-              "en": "I said I wouldn't take one."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……这次先带走。下回拿消毒的货，多出的从那里抵。",
-              "en": "...Fine, I'll take it for now. Next time I buy antiseptic, take it out of that.",
-              "expr": "tired"
+              "text": "这批货算队里公家的，你别拿可怜人那套来应付生意。",
+              "en": "This is the unit's purchase. Don't treat it like charity."
             }
           ]
         },
@@ -1025,19 +834,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "比我想的价钱高出不少。",
-              "en": "That's a good chunk higher than I figured.",
-              "expr": "serious"
+              "text": "看着我们急需武器就临时抬价，你这生意做得真够狠的。",
+              "expr": "angry",
+              "en": "Raising the price because we're desperate for weapons. That's ruthless business."
             },
             {
               "speaker": "Eleanor",
-              "text": "成，我接了。队里拖不得。",
-              "en": "Fine, I'll take it. The squad can't wait."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "下次还这样，我去别家拿货。",
-              "en": "Pull this again and I'll ask somewhere else."
+              "text": "队里现在等着用枪，今天这口气我先咽下了。",
+              "en": "The unit needs guns now, so I'll swallow it today."
             }
           ]
         },
@@ -1045,19 +849,14 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "一支能用的都没有？还是就不愿给我？",
-              "en": "Nothing that works? Or you just won't sell to me?",
-              "expr": "serious"
+              "text": "（她合上手里的单子）拿去保命的枪可不能随便凑合。",
+              "expr": "serious",
+              "en": "(She closes the list in her hand) I can't cut corners on guns that keep us alive."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把单子叠好，收回怀里）成，我去别处找。",
-              "en": "(Folds the list and tucks it back into her inner pocket) Fine. I'll ask elsewhere."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "领头的跟前，我担着。",
-              "en": "I'll explain it to the leadership myself."
+              "text": "这价钱我拿不下来，只能先回去跟领队想别的办法了。",
+              "en": "I can't afford that. I'll have to go back and find another way with the squad leader."
             }
           ]
         }
@@ -1108,17 +907,17 @@
               "id": "C1_o2",
               "label": "问她怎么了",
               "mainline": false,
+              "label_en": "Ask what's wrong",
               "block": "v2_r2c2_c1_o2",
-              "merge": true,
-              "label_en": "Ask what's wrong"
+              "merge": true
             },
             {
               "id": "C1_o3",
               "label": "做自己的事",
               "mainline": false,
+              "label_en": "Get on with your work",
               "block": "v2_r2c2_c1_o3",
-              "merge": true,
-              "label_en": "Get on with your work"
+              "merge": true
             }
           ],
           "attach_to_previous": true
@@ -1133,58 +932,24 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "她停在窗口外，没往近处靠。",
-              "en": "She stops outside the window and keeps her distance."
+              "text": "埃莉诺穿了件战术背心站在窗口前，两手空空。",
+              "en": "Eleanor stands at the window in a tactical vest, empty-handed."
             },
             {
               "speaker": "Eleanor",
-              "text": "今天没有单子带给你，别往我身上扫。",
-              "en": "Quit looking. No list today.",
-              "expr": "tired"
+              "text": "别找账本了，我今天没带单子也没带货。",
+              "en": "Don't bother with the ledger. No list, no goods today."
             },
-            {
-              "speaker": "Eleanor",
-              "text": "我不过是打这儿过。",
-              "en": "Just passing by."
-            }
-          ]
-        },
-        "v2_r2c2_c1_o2": {
-          "lines": [
             {
               "speaker": "Player",
-              "text": "出什么事了？",
-              "en": "What's wrong?"
+              "text": "有事？",
+              "en": "Need something?"
             },
             {
               "speaker": "Eleanor",
-              "text": "张嘴就问这句，你跟队里那些人一个路子。",
-              "en": "That's the first thing you ask. You're just like them.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（没等你开口，她把窗边那把椅子拖到窗下摆正）别问，先让我坐下。",
-              "en": "(Pulls the chair closer to the window herself) Don't ask. Let me sit."
-            }
-          ]
-        },
-        "v2_r2c2_c1_o3": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "（仍低头理着架子上的绷带）",
-              "en": "(Keeps sorting the bandages on the shelf, head down)"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……喂，你真打算一句话都不给？",
-              "en": "...Hey, you're just going to leave me standing there?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "行，那正好。椅子我先借了。",
-              "en": "Fine. Maybe that's better. Lend me the chair."
+              "text": "我就是顺路走过来，在外面待一会儿。",
+              "expr": "tired",
+              "en": "I was passing by. I'll just stay out here a while."
             }
           ]
         },
@@ -1192,114 +957,129 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "（朝窗边那把椅子抬抬下巴）坐吧。",
-              "en": "(Points to the chair outside) Sit."
+              "text": "窗下椅子空着，坐吧。",
+              "en": "Chair under the window's free. Sit."
             },
             {
               "speaker": "Eleanor",
-              "text": "……",
-              "en": "..."
+              "text": "（她走过去坐下，椅子晃了一下）啧，有条腿短了一截。",
+              "en": "(She sits; the chair wobbles) Tch. One leg's short."
             },
             {
               "speaker": "Eleanor",
-              "text": "（把椅子抵住墙才坐下，双手搁在膝上）这椅子一腿长一腿短。",
-              "en": "(Braces the chair against the wall before sitting, hands in her lap) The legs are uneven."
+              "text": "你这店里连把能安稳坐人的椅子都凑不出来吗？",
+              "en": "Can't this shop manage one chair a person can actually sit on?"
             },
             {
               "speaker": "Player",
-              "text": "它一直就这样。",
-              "en": "Always have been."
+              "text": "没回配给站对面？",
+              "en": "Not going back across from the ration station?"
             },
             {
               "speaker": "Eleanor",
-              "text": "呵，那你就由着它？",
-              "en": "Heh. And you never fixed it."
+              "text": "那间小房子我前两天就已经退掉了。",
+              "en": "I gave up that little room a few days ago."
             },
             {
               "speaker": "Eleanor",
-              "text": "晃就晃吧。队里没椅子，都坐木箱上。",
-              "en": "Let it wobble. We don't have chairs back there. We sit on crates.",
-              "expr": "soft"
+              "text": "既然每天都在队里忙活，干脆就搬进驻地住了。",
+              "en": "I'm with the unit every day anyway, so I moved into the base."
             },
             {
               "speaker": "Eleanor",
-              "text": "配给站对面那间房我退了，现在跟他们挤一屋。",
-              "en": "I gave up my room across from the ration station. Now we all bunk in together.",
-              "expr": "neutral"
+              "text": "搬走那天，同屋那个人还非要塞给我一条旧毯子。",
+              "en": "The day I left, my roommate insisted I take an old blanket."
+            },
+            {
+              "speaker": "Player",
+              "text": "驻地不忙？",
+              "en": "Base not busy?"
             },
             {
               "speaker": "Eleanor",
-              "text": "今天屋里的人在清点那个人的物件。",
-              "en": "Today they were clearing out his things."
+              "text": "今天上午，队里把前阵子没回来的那个人留下的东西拢了拢。",
+              "expr": "sad",
+              "en": "This morning the unit gathered up what the one who didn't come back left behind."
             },
             {
               "speaker": "Eleanor",
-              "text": "外套一件，鞋一双，铁盒一个。",
-              "en": "A coat, a pair of shoes, a tin box."
+              "text": "就一件厚外套和一双鞋，外加一个小铁皮盒。",
+              "en": "Just a heavy coat, a pair of shoes, and a little tin box."
             },
             {
               "speaker": "Eleanor",
-              "text": "有人拎着外套说还能穿，问谁要。",
-              "en": "Someone said the coat was still wearable. Asked who wanted it."
+              "text": "有人提了一嘴，问要不要把那件外套拿去换点药回来。",
+              "en": "Someone suggested trading the coat for some medicine."
             },
             {
               "speaker": "Eleanor",
-              "text": "没人应。后来有人说，那就拿去换药。",
-              "en": "Nobody said a word. Then someone said, trade it for medicine."
+              "text": "话刚说完，屋里所有人就都转过头看着我，等我拿主意。",
+              "en": "The moment they said it, everyone in the room turned to me to decide."
+            },
+            {
+              "speaker": "Player",
+              "text": "那你怎么说的？",
+              "en": "What did you say?"
             },
             {
               "speaker": "Eleanor",
-              "text": "接着全朝我看。往外换什么，向来我说了算。",
-              "en": "Then they all looked at me. Trading is my job.",
-              "expr": "serious"
+              "text": "还能怎么说，我只丢下一句明天再议，自己先走出来了。",
+              "en": "What could I say? I told them we'd discuss it tomorrow, and walked out."
             },
             {
               "speaker": "Eleanor",
-              "text": "我让他们明天再论，自己先出了门。",
-              "en": "I said we'd deal with it tomorrow, and walked out."
+              "text": "以前在上面心里烦的时候，我还能躲进母亲的温室里待着。",
+              "expr": "soft",
+              "en": "Up above, when things got to me, I could hide in Mother's greenhouse."
             },
             {
               "speaker": "Eleanor",
-              "text": "从前在上边，心里一烦，我就躲去母亲的花房。",
-              "en": "Up top, when things got to me, I'd go to Mother's greenhouse.",
-              "expr": "tired"
+              "text": "现在驻地里走两步就是人，连个能清静喘口气的地方都没有。",
+              "en": "At the base there are people every two steps. Nowhere quiet to breathe."
             },
             {
               "speaker": "Eleanor",
-              "text": "架子一排排，水声不住，灯通宵点着。",
-              "en": "Rows of racks, water always running, lights on all night."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（掌心对搓两下，朝指缝里哈了哈气）你这里比队里暖。",
-              "en": "(Rubs her hands together, breathes into them) It's warmer here than at our place."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我搬走那天，室友哭着把她那条旧毯子塞给我。早知道就拿了。",
-              "en": "The day I moved out, my roommate was crying and trying to press her old blanket on me. Wish I'd taken it.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我再坐一小会儿。",
-              "en": "I'll sit a while longer."
+              "text": "比起来，反倒是你这破当铺的窗口外面更暖和清静一点。",
+              "en": "By comparison, outside your shabby pawnshop window is warmer. Quieter."
             },
             {
               "speaker": "Narrator",
-              "text": "椅子轻响了一下，换班的铃从巷子那头飘过来。",
-              "en": "The chair creaks now and then. A shift-change bell rings in the distance down the alley."
+              "text": "远处的街区响起了换班的铃声，她扶着窗台站起身。",
+              "en": "A shift bell rings in a distant block. She steadies herself on the sill and stands."
             },
             {
               "speaker": "Eleanor",
-              "text": "（起身，把椅子推回窗边）得走了。",
-              "en": "(Stands and pushes the chair back beside the window) I've got to go.",
-              "expr": "determined"
+              "text": "椅子我给你推回原位了，下次来之前记得把那条短腿垫平。",
+              "expr": "serious",
+              "en": "I pushed the chair back. Shim that short leg before I come again."
+            }
+          ]
+        },
+        "v2_r2c2_c1_o2": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "队里出事了？",
+              "en": "Trouble in the unit?"
             },
             {
               "speaker": "Eleanor",
-              "text": "（走出两步，又回头看一眼椅子）椅腿真该垫垫，你记着。",
-              "en": "(Takes two steps away, then looks back at the chair) You really should prop up that chair leg."
+              "text": "没事，你少一上来就问东问西的。",
+              "en": "No. And stop interrogating me the second I show up."
+            }
+          ]
+        },
+        "v2_r2c2_c1_o3": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "随你，我先理货。",
+              "en": "Suit yourself. I'll sort stock."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "哼，你忙你的正好，省得我还要费神应付你。",
+              "en": "Hmph. Good, go be busy. Saves me the effort of dealing with you."
             }
           ]
         }
@@ -1329,17 +1109,17 @@
               "id": "C2_o1",
               "label": "问那个人",
               "mainline": false,
+              "label_en": "Ask about that person",
               "block": "v2_r2c3_c2_o1",
-              "merge": true,
-              "label_en": "Ask about that person"
+              "merge": true
             },
             {
               "id": "C2_o2",
               "label": "问她要什么",
               "mainline": false,
+              "label_en": "Ask what she wants",
               "block": "v2_r2c3_c2_o2",
-              "merge": true,
-              "label_en": "Ask what she wants"
+              "merge": true
             },
             {
               "id": "C2_o3",
@@ -1360,44 +1140,174 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "还是我。",
-              "en": "Me again.",
-              "expr": "tired"
+              "text": "我又来了，今天还是不买东西。",
+              "expr": "tired",
+              "en": "Me again. Still not buying anything."
+            },
+            {
+              "speaker": "Player",
+              "text": "椅子空着，自己拉。",
+              "en": "Chair's free. Pull it up."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺坐下后，把四折的纸和一张压平的糖纸放上柜台沿。",
+              "en": "Eleanor sits and sets a paper folded in four and a flattened candy wrapper on the counter's edge."
             },
             {
               "speaker": "Eleanor",
-              "text": "这把椅子我自个儿拽，手别伸。",
-              "en": "I'll drag the chair myself. Don't get up."
+              "text": "这是队里现在的名单，我昨晚重抄了三遍。",
+              "en": "This is the unit's current roster. I recopied it three times last night."
             },
             {
               "speaker": "Eleanor",
-              "text": "（坐下，从背心口袋掏出张四折的纸）队里的花名册。发药分饭都照它。",
-              "en": "(Sits, pulls a paper folded in quarters from her vest pocket) The unit roster. Medicine, food, it all goes by this."
+              "text": "驻地墙上贴着的那份，第七行已经用黑墨划掉了。",
+              "en": "On the one posted at the base, line seven is struck out in black ink."
             },
             {
               "speaker": "Eleanor",
-              "text": "我誊了三份。墙上贴一份，领头的拿一份，我自己收着一份。",
-              "en": "I copied it. Three copies. One on the wall, one for the squad leader, one for me."
+              "text": "但我手里留的这份，第七行还空着。",
+              "expr": "sad",
+              "en": "But on the copy I kept, line seven is still blank."
+            }
+          ]
+        },
+        "v2_r2c3_s1": {
+          "lines": [
+            {
+              "speaker": "Narrator",
+              "text": "半杯热水搁在窗口柜台沿上，店里一时安静下来。",
+              "en": "Half a cup of hot water rests on the counter by the window, and the shop falls quiet."
             },
             {
               "speaker": "Eleanor",
-              "text": "第七行空出来了。",
-              "en": "Line seven is empty now."
+              "text": "（她手指拢住温热的杯壁）那个人左膝一直不太好。",
+              "en": "(Her fingers close around the warm cup) His left knee was always bad."
             },
             {
               "speaker": "Eleanor",
-              "text": "墙边那张叫人划了。我这张没动。",
-              "en": "Someone crossed it out on the wall copy. Mine, I didn't."
+              "text": "一遇上管道返潮就疼，连爬楼梯都比别人慢半拍。",
+              "en": "It hurt whenever the pipes got damp. He was a beat slower on stairs than everyone."
             },
             {
               "speaker": "Eleanor",
-              "text": "（又从另一边贴袋摸出张糖纸，铺在膝盖上用手掌捋平）",
-              "en": "(Pulls out another crumpled candy wrapper and slowly smooths it flat on her knee)"
+              "text": "可每次队里分发药品，他总是默不作声排在最后。",
+              "en": "But whenever the unit handed out medicine, he'd quietly get in line last."
             },
             {
               "speaker": "Eleanor",
-              "text": "那个铁盒里，满当的是这些。",
-              "en": "That tin box was full of these."
+              "text": "他平时难得能分到一颗糖，吃完了也舍不得扔。",
+              "en": "He rarely got a piece of candy, and even after eating it he wouldn't toss the wrapper."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "每次都把糖纸一张张压平，收在那个小铁皮盒里。",
+              "en": "He flattened every wrapper and kept them in that little tin box."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "他说等攒满了一整盒，就能去换一顿上层区的饭。",
+              "en": "He said once the box was full, he could trade it for a meal on the Upper Level."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "我当时还泼他冷水，说上面根本没人收这种废纸。",
+              "en": "I threw cold water on it. Told him nobody up there takes that kind of trash."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "他听完也不恼，就挠着头冲我笑。",
+              "en": "He didn't get mad when he heard that. He just scratched his head and grinned at me."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "他说那就留给我，因为我是从上面下来的。",
+              "en": "He said I should have it, then, since I came down from up there."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "上午打开盒子看的时候，其实还差一点才装满。",
+              "en": "When I opened the box this morning, it actually wasn't quite full yet."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "单子上那条护膝带，每次都被我排在药和子弹后面。",
+              "expr": "hurt",
+              "en": "That knee strap on the list, I always put it after meds and ammo."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "买东西的先后顺序，明明都是我亲手定的。",
+              "en": "And I'm the one who set the order we buy things in."
+            },
+            {
+              "speaker": "Player",
+              "text": "护膝带救不了那天晚上。",
+              "en": "A knee strap couldn't have saved that night."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "那也轮不到你来替我开脱！",
+              "expr": "angry",
+              "en": "That doesn't mean you get to make excuses for me!"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……算了，你说得对，是我自己在钻牛角尖。",
+              "expr": "tired",
+              "en": "...Forget it. You're right. I'm just tying myself in knots."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "有时候我真不知道，除了跑单子和点子弹，我还剩什么。",
+              "en": "Sometimes I honestly don't know what's left of me besides running lists and counting bullets."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "你别接话，我不是来向你讨答案的。",
+              "en": "Don't answer. I didn't come here asking you for answers."
+            },
+            {
+              "speaker": "Player",
+              "text": "第七行你还空着。",
+              "en": "Line seven's still blank."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "（她低头看着那行空白）你眼神倒是一如既往地毒。",
+              "expr": "soft",
+              "en": "(She looks down at the blank line) Sharp-eyed as ever, aren't you."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "这张糖纸我先折进名单里收着，第七行就这么留着吧。",
+              "en": "I'll fold this candy wrapper into the list for now. Line seven can stay blank."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "至于他留下的那件外套，明天我还是拿去换消毒水。",
+              "en": "As for the coat he left behind, I'm still trading it for antiseptic tomorrow."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "咦，这把破椅子今天怎么一点都不晃了？",
+              "en": "Huh. Why isn't this junk chair wobbling at all today?"
+            },
+            {
+              "speaker": "Player",
+              "text": "拿硬纸片垫了。",
+              "en": "Shimmed it with cardboard."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "哼，算你还有点店主的自觉。",
+              "expr": "smile",
+              "en": "Hmph. Guess you've got some sense of being a shopkeeper after all."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "我得回驻地赶早清点药品了，以后没单子我也照样来坐。",
+              "en": "I need to get back to base early to count meds. Even without a list, I'll still come sit here."
             }
           ]
         },
@@ -1405,13 +1315,18 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "那人是谁？",
-              "en": "Who was he?"
+              "text": "第七行是那个人？",
+              "en": "Line seven is him?"
             },
             {
               "speaker": "Eleanor",
-              "text": "名不报了。说你也对不上人，我还懒得再念。",
-              "en": "I won't say his name. You wouldn't know it, and I don't want to say it again."
+              "text": "嗯，名字我就不提了，反正说了你也不认识。",
+              "en": "Yeah. I won't say his name. You wouldn't know him anyway."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "不过那张糖纸，确实是从他留下的铁皮盒里翻出来的。",
+              "en": "But that candy wrapper really did come from the tin box he left behind."
             }
           ]
         },
@@ -1419,201 +1334,18 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "缺什么？",
-              "en": "What do you need?"
+              "text": "今天要什么？",
+              "en": "What do you need today?"
             },
             {
               "speaker": "Eleanor",
-              "text": "呵，我要的，你这里可没货。",
-              "en": "Heh. What I need, you don't sell.",
-              "expr": "smile"
-            }
-          ]
-        },
-        "v2_r2c3_s1": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "（倒了半杯热水，搁她面前的柜面边沿）",
-              "en": "(Pours a cup of hot water and sets it on the counter by her hand)"
+              "text": "我刚才不是说了吗，今天什么都不买。",
+              "en": "Didn't I just say? I'm not buying anything today."
             },
             {
               "speaker": "Eleanor",
-              "text": "（手指没沾杯把，先把那杯热水往台面中间推了推）你倒是耐得住。",
-              "en": "(Runs a finger once around the rim, doesn't pick it up) You're a patient one."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……他左腿膝盖不行，一变天就疼。",
-              "en": "...His knee was bad. The left one. Hurt whenever it clouded over."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "上楼得扒墙走，下楼比上楼还磨蹭。谁喊他快点，他回头就吼。",
-              "en": "Used the wall going upstairs, slower going down. Anyone rushed him, he cussed them out."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "领药总站最后一个，说排前头的比他等不了。",
-              "en": "Always last in line for meds. Said the people ahead needed it more."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "取完药就含一颗糖，糖纸捋平，塞进那个铁盒。",
-              "en": "After his meds, he'd suck on a candy, smooth the wrapper, and put it in the box."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我们那儿根本没糖。不知道他哪里搞来的。",
-              "en": "Where would we even get candy? No idea where he found it."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "他说等盒子装满，就带上头换一顿饭。",
-              "en": "He said once the box was full, he'd trade it to someone Upper Level for a meal."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我跟他说了，上面没人收糖纸。",
-              "en": "I told him nobody up there wants candy wrappers."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "他就说，那给你，反正你从上层来。",
-              "en": "He said then he'd trade them to me. I came from the Upper Level."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "呵，那东西给我做什么。",
-              "en": "Heh. What would I want with that junk?",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "到走也没满，差一小截。",
-              "en": "The box never filled. Short by a good bit.",
-              "expr": "sad"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "绑带那事他找过我几回，我全给排后面去了。",
-              "en": "He asked me about the bandages a few times. I kept pushing them back."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "买完药还得先买枪，他要的绑带就一直往后拖。",
-              "en": "Meds first, then guns, bandages last."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "顺序我定的。",
-              "en": "I made that call."
-            },
-            {
-              "speaker": "Player",
-              "text": "那晚，绑带没派上用场。",
-              "en": "That night, bandages wouldn't have helped."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我懂！不用你插嘴……",
-              "en": "I know! I don't need you to...",
-              "expr": "angry"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……是，没派上。",
-              "en": "...Right. They wouldn't have.",
-              "expr": "tired"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我管单子，盯账本，还跟你压价。",
-              "en": "I run orders, balance the books, haggle with you.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "人往外跑了，我留守在房里数子弹。",
-              "en": "They go out. I stay in and count bullets."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "离了跑单子这一样，我手里还剩别的吗？",
-              "en": "Besides running orders, what else have I got?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "别接。我不是问你。",
-              "en": "Don't answer. I wasn't asking you."
-            },
-            {
-              "speaker": "Player",
-              "text": "第七行，你留着没划。",
-              "en": "Line seven. You didn't cross it out."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……",
-              "en": "..."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "嗯。没动。",
-              "en": "Yeah. I didn't.",
-              "expr": "soft"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（把糖纸折成小方块，往名单里一夹）就这么留。空着不补。",
-              "en": "(Folds the candy wrapper into a small square and tucks it into the list) It stays like that. Blank is fine."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "外衣我收着。下次带来，跟你换消毒水。",
-              "en": "I kept the coat. Next time I'll bring it here and trade it for antiseptic."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你那张椅子，现在稳了。",
-              "en": "This chair of yours doesn't wobble anymore."
-            },
-            {
-              "speaker": "Player",
-              "text": "垫过。",
-              "en": "Shimmed it."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（弓身扫了扫椅脚）呵，垫的啥？没用的标价纸？",
-              "en": "(Bends down to look at the chair leg) Heh. With what? Old price tags?",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "行。比队里那些收木箱强。",
-              "en": "Fine. Beats the crates back at our place."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（起身，名单塞回背心口袋，顺带把窗页推小了些）到点了，我回队。",
-              "en": "(Stands up and presses the list back into her tactical vest pocket) Shift change. I'm heading back.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "明天发药，我得在边上清数。",
-              "en": "Meds get handed out tomorrow. I have to stand there and count."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（脚挪开一步，手还留在窗框上）……下回没单子，我照来。",
-              "en": "(Steps back, her hand still on the window frame)...Next time I'll come even without a list."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "别问为啥。",
-              "en": "Don't ask why."
+              "text": "就是看这张糖纸闷在铁皮盒里太久，拿出来透透气。",
+              "en": "This candy wrapper's just been shut in that tin box too long. Figured it needed some air."
             }
           ]
         }
@@ -1637,24 +1369,23 @@
         {
           "type": "choice",
           "id": "C1",
-          "prompt": "她站在窗外，外套搭在胳膊上，一直没坐",
           "mainline": 3,
           "options": [
             {
               "id": "C1_o1",
               "label": "拉椅子",
               "mainline": false,
+              "label_en": "Pull out a chair",
               "block": "v2_r3c1_c1_o1",
-              "merge": true,
-              "label_en": "Pull out a chair"
+              "merge": true
             },
             {
               "id": "C1_o2",
               "label": "倒水",
               "mainline": false,
+              "label_en": "Pour water",
               "block": "v2_r3c1_c1_o2",
-              "merge": true,
-              "label_en": "Pour water"
+              "merge": true
             },
             {
               "id": "C1_o3",
@@ -1665,6 +1396,7 @@
               "merge": true
             }
           ],
+          "prompt": "她站在窗外，外套搭在胳膊上，一直没坐",
           "prompt_en": "She stands outside the window, coat over her arm, still not sitting."
         },
         {
@@ -1677,138 +1409,74 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "窗上的卷帘没拉起来，外头有人敲，力气很轻，隔一会儿才响下一声。",
-              "en": "The window shutter is still down. Someone taps on it softly, one knock at a time."
+              "text": "天还没亮，半拉开的卷帘窗外响起两下很轻的敲击声。",
+              "en": "Before dawn, two soft knocks sound outside the half-raised shutter window."
             },
             {
               "speaker": "Eleanor",
-              "text": "你醒了？我原先还当你睡着。",
-              "en": "You're open? I figured you weren't up yet.",
-              "expr": "tired"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "别去翻钟。我也知道这一趟太早。",
-              "en": "Don't look at the clock. I know it's early."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（胳膊上搭着件外衣，没往你跟前递，也没撂到旁边）手里没单子，也没有要出的货。",
-              "en": "(A coat hangs over her arm. She doesn't hold it out, doesn't put it down) No list, no goods."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我开枪打死了人。",
-              "en": "I killed someone.",
-              "expr": "serious"
+              "text": "吵醒你了？我看里面还亮着灯。",
+              "expr": "tired",
+              "en": "Did I wake you? I saw the light was still on."
             },
             {
               "speaker": "Player",
-              "text": "……",
-              "en": "..."
+              "text": "刚醒，还没开门。",
+              "en": "Just woke up. Not open yet."
             },
             {
               "speaker": "Eleanor",
-              "text": "昨晚，后半夜。",
-              "en": "Last night, a few hours before dawn."
+              "text": "我没带单子，手里也没有货。",
+              "en": "I didn't bring a list. No goods on me either."
             },
-            {
-              "speaker": "Eleanor",
-              "text": "别这么看我。",
-              "en": "Don't look at me like that."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "在营房里，这话我对着墙练了半宿，到底张不开嘴。",
-              "en": "Back home, I couldn't get the words out."
-            }
-          ]
-        },
-        "v2_r3c1_c1_o1": {
-          "lines": [
             {
               "speaker": "Player",
-              "text": "（朝她身后、窗边那把椅子抬了抬下巴）先坐。",
-              "en": "(Points to the chair behind her, beside the window) Sit."
+              "text": "那就站窗口喘口气。",
+              "en": "Then stand at the window and catch your breath."
             },
             {
               "speaker": "Eleanor",
-              "text": "我先站着把话说完。现在坐下，后头就续不上了。",
-              "en": "I'll finish standing. Then I'll sit."
+              "text": "我杀了人。",
+              "expr": "serious",
+              "en": "I killed someone."
             },
             {
               "speaker": "Eleanor",
-              "text": "（外衣甩上椅背，手扶住椅背顶，人还直挺挺站着）木头冰手。",
-              "en": "(Drapes the coat over the chair back, hand on it, but doesn't sit) The chair's cold."
+              "text": "就在后半夜那场行动里。",
+              "en": "In the operation late last night."
             },
             {
               "speaker": "Eleanor",
-              "text": "你闻这股冲味儿，沾的是火药。我搓了一回，没褪掉。",
-              "en": "You can smell that on it, right? Gunpowder. It didn't scrub out."
-            }
-          ]
-        },
-        "v2_r3c1_c1_o2": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "（倒了杯开水，放在柜台边上）",
-              "en": "(Pours a cup of hot water and sets it at the edge of the counter)"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（外衣撇到柜台另一头，再两手去捧杯子，热水晃出来打湿了指根）谁让你倒这么满。",
-              "en": "(Tosses the coat on the counter and lifts the cup with both hands; a little water sloshes out) Why fill it so full?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "半杯才合我的手。这会儿端什么都要洒。",
-              "en": "Half a cup's enough. My hands aren't steady."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "那件衣服你也别上手，火药气还熏着呢。",
-              "en": "Don't touch the coat. It reeks of gunpowder."
+              "text": "驻地那边一屋子都是人，这话我没法跟他们提。",
+              "en": "Back at base the room's full of people. I can't bring this up with them."
             }
           ]
         },
         "v2_r3c1_c1_o3": {
           "lines": [
             {
-              "speaker": "Player",
-              "text": "（伸手把她小臂上那件外衣拿过来）给我。",
-              "en": "(Reaches over and takes the coat off her arm) Give it here."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "哎——",
-              "en": "Hey..."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（两手把外衣对折一下，才松开劲）拿就拿吧，叠过一道，省得味儿扑你满脸。",
-              "en": "Fine, take it. It smells."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "沾的是火药。我蘸水搓过，干透了仍然有。",
-              "en": "Gunpowder. I scrubbed it with water once. It didn't come out."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（两只手空下来没处摆，末了攥住战术背心的下摆）你挂到远点的地方。",
-              "en": "(Her hands are empty now. She doesn't know where to put them, and finally grips the hem of her tactical vest) Hang it somewhere far.",
-              "expr": "tired"
+              "speaker": "Narrator",
+              "text": "你从窗口伸手接过她胳膊上的外套，放到柜台边。",
+              "en": "You reach through the window, take the coat from her arm, and set it by the counter."
             },
             {
               "speaker": "Player",
-              "text": "我挂远些。",
-              "en": "I'll hang it out of the way."
+              "text": "袖口湿着，还有硝烟味。",
+              "en": "The cuffs are wet. They smell of gunsmoke."
             },
             {
               "speaker": "Eleanor",
-              "text": "行。",
-              "en": "Fine."
+              "text": "回来的时候拿冷水搓过两遍了。",
+              "en": "I scrubbed them twice in cold water on the way back."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "那股味跟长在布料里一样，怎么都散不干净。",
+              "en": "The smell's like it grew into the fabric. It won't come out no matter what."
+            },
+            {
+              "speaker": "Player",
+              "text": "先放这儿晾着吧。",
+              "en": "Leave it here to dry for now."
             }
           ]
         },
@@ -1816,59 +1484,102 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "这趟我带出去一个，队里年纪最小的。",
-              "en": "I took someone out with me. The youngest in the unit."
+              "text": "领队这次让我带着队里年纪最小的那个一起走。",
+              "en": "This time the squad leader had me take the youngest in the unit with me."
             },
             {
               "speaker": "Eleanor",
-              "text": "领头的把人交给我，叫我看住他，我应了。",
-              "en": "The squad leader told me to watch him. I said okay."
+              "text": "转过拐角的时候，对面的人先举起了枪。",
+              "en": "When we turned the corner, the one on the other side raised his gun first."
             },
             {
               "speaker": "Eleanor",
-              "text": "对面先抬的枪，瞄着他开的。",
-              "en": "They fired first. At him."
+              "text": "那个小家伙当时就贴在我左手肘边上。",
+              "en": "The kid was right up against my left elbow."
             },
             {
               "speaker": "Eleanor",
-              "text": "他跟我并排，就在左边，离不到一肘远。",
-              "en": "He was right on my left. Less than an arm's length away."
+              "text": "枪口正对着他，我脑子里什么都没来得及想。",
+              "en": "His gun was pointed right at him. I didn't have time to think."
             },
             {
               "speaker": "Eleanor",
-              "text": "我没经想，枪已经叫响了。",
-              "en": "I raised my gun and pulled the trigger. Didn't think at all."
+              "text": "手指自己就扣下去了。",
+              "en": "My finger just pulled the trigger on its own."
             },
             {
               "speaker": "Eleanor",
-              "text": "就我这么个会把子弹装倒的人，那一下却稳得没边。",
-              "en": "Me. The one who loads rounds in backwards. My hand didn't shake once."
+              "text": "可笑吧，前阵子我还是个连子弹都会装反的人。",
+              "expr": "sad",
+              "en": "Funny, right? Not long ago I'd load bullets in backwards."
             },
             {
               "speaker": "Eleanor",
-              "text": "再倒回去，我还照扣。他今早还有劲嫌饭没热透。",
-              "en": "I'd do it again. He still had the energy to gripe about cold food this morning."
+              "text": "结果刚才那一枪稳得离谱。",
+              "en": "And that shot just now was absurdly steady."
+            },
+            {
+              "speaker": "Player",
+              "text": "那个队员没事？",
+              "en": "The squad member's okay?"
             },
             {
               "speaker": "Eleanor",
-              "text": "就是……",
-              "en": "It's just…",
-              "expr": "sad"
+              "text": "没事，刚回驻地那会儿还有精神嫌早饭凉了。",
+              "en": "Fine. Back at base he had energy to complain breakfast was cold."
             },
             {
               "speaker": "Eleanor",
-              "text": "枪口冒出来一根烟，很细，直直立着往上走。",
-              "en": "A wisp of smoke came off the muzzle. Thin. Going straight up."
+              "text": "所以我一点也不后悔开那一枪。",
+              "en": "So I don't regret that shot one bit."
             },
             {
               "speaker": "Eleanor",
-              "text": "对面早就没动静了，那根烟还在一截一截地升。",
-              "en": "The other side had gone quiet long before. That smoke kept rising."
+              "text": "可对面倒下不动的时候，枪口还笔直飘着一缕细烟。",
+              "en": "But when the other guy went down and stayed down, a thin wisp of smoke rose straight from the muzzle."
             },
             {
               "speaker": "Eleanor",
-              "text": "眼一合，就是那根烟。",
-              "en": "Every time I close my eyes, it's that smoke."
+              "text": "我现在只要一闭上眼，满脑子就全是那缕散不掉的烟。",
+              "en": "Now every time I close my eyes, that smoke is all I see. It won't clear."
+            }
+          ]
+        },
+        "v2_r3c1_c1_o1": {
+          "lines": [
+            {
+              "speaker": "Narrator",
+              "text": "你把窗外那把垫稳的旧椅子往她手边推了推。",
+              "en": "You push the old, steadied chair outside the window closer to her."
+            },
+            {
+              "speaker": "Player",
+              "text": "别站着，坐下。",
+              "en": "Don't stand. Sit."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "外衣上全是后半夜沾的味，我坐这儿缓口气就行。",
+              "en": "My coat reeks of the small hours. I'll just sit here and catch my breath."
+            }
+          ]
+        },
+        "v2_r3c1_c1_o2": {
+          "lines": [
+            {
+              "speaker": "Narrator",
+              "text": "你倒了一杯温水，推到窗口柜台沿上。",
+              "en": "You pour a cup of warm water and slide it to the edge of the window counter."
+            },
+            {
+              "speaker": "Player",
+              "text": "手凉，先喝口热水。",
+              "en": "Your hands are cold. Drink something warm."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "谢了，我先把手指头贴杯壁上缓一下。",
+              "en": "Thanks. I'll warm my fingers on the cup first."
             }
           ]
         }
@@ -1895,163 +1606,123 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "店里只开了靠柜台的那排灯，窗外那把椅子已经摆在墙根，正朝着她常坐的方向。",
-              "en": "Only half the shop lights are on. The chair outside the window is already in her usual spot."
+              "text": "天刚蒙蒙亮，店里留着盏暗灯，窗外那把旧椅子昨晚就没收回去。",
+              "en": "Barely dawn. A dim lamp is still on in the shop. The old chair outside the window never got brought in last night."
             },
             {
               "speaker": "Eleanor",
-              "text": "这回我敲门下了力气，你总该听见了吧。",
-              "en": "Knocked hard this time. You heard that, right?",
-              "expr": "tired"
+              "text": "你这椅子昨晚干脆就没往里搬吧？",
+              "en": "You didn't even bother bringing this chair in last night, did you?"
             },
             {
               "speaker": "Eleanor",
-              "text": "（朝窗外那把椅子扫过去一眼） 你早就把它放好了？",
-              "en": "(Looks at the chair outside the window) You already put it there?"
+              "text": "你倒是挺会算计我什么时候过来，今天也没带单子。",
+              "en": "You've got my schedule figured out. No list today, by the way."
             },
             {
               "speaker": "Player",
-              "text": "昨天夜里就没往屋里收。",
-              "en": "Never put it back last night."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "你倒是料得挺死。",
-              "en": "Hah. You called it."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（坐下去，手指勾着拉链往下拽了半寸，又一点点推回去） 先讲清楚，今天照样没单子。",
-              "en": "(Sits, unzips her tactical vest partway, then zips it back up) Just so you know, no list today either."
+              "text": "热水。这半块是我早饭。",
+              "en": "Hot water. This half is my breakfast."
             },
             {
               "speaker": "Player",
-              "text": "（倒好热水推到她手边，又弯下腰从柜台下头摸出半块面包）",
-              "en": "(Pours a cup of hot water and slides it over, then takes half a loaf of bread from under the counter)"
+              "text": "不算补给，不记账。",
+              "en": "Not supplies. Not on the books."
             },
             {
               "speaker": "Eleanor",
-              "text": "你拿这个出来干什么？",
-              "en": "What's this?",
-              "expr": "serious"
+              "text": "（接过面包咬了一小口）干得简直能噎死人。",
+              "expr": "shy",
+              "en": "(Takes the bread and bites off a little.) Dry enough to choke on."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "不过比营养果强多了，这话你可别让队里听见。",
+              "expr": "soft",
+              "en": "Still beats Nutrifruit. Don't let the unit hear I said that."
             },
             {
               "speaker": "Player",
-              "text": "面包，我的早点。",
-              "en": "Bread. My breakfast."
+              "text": "手比前两天稳了。",
+              "en": "Your hands are steadier than a couple days ago."
             },
             {
               "speaker": "Eleanor",
-              "text": "（捏掉一小角塞进嘴里，腮帮子动得慢） 干。",
-              "en": "(Breaks off a small piece and chews slowly) A bit dry."
+              "text": "还是有一点抖，但总算不像那天似的控制不住了。",
+              "en": "Still shaking a little, but at least not like that day, when I couldn't stop it."
             },
             {
               "speaker": "Eleanor",
-              "text": "总比营养果好下口。这话别让队里听见，不然有人眼红。",
-              "en": "Still beats Nutrifruit. Don't spread that around, or the unit'll get jealous."
+              "text": "昨晚闭上眼，枪口那缕细烟散了一半，天亮前勉强睡了一会儿。",
+              "en": "Last night when I closed my eyes, half that smoke was gone. I managed some sleep before dawn."
             },
             {
               "speaker": "Eleanor",
-              "text": "（两只手包住杯子，水面在杯口下头一晃一晃） 还抖，比前天轻。",
-              "en": "(Holds the cup in both hands; the water keeps trembling) Still shaking. Better than two days ago.",
-              "expr": "tired"
+              "text": "喂，我大清早跑来这儿坐着的事，你千万别往队里说。",
+              "expr": "serious",
+              "en": "Hey. Don't you dare tell the unit I come sit here at the crack of dawn."
             },
             {
               "speaker": "Eleanor",
-              "text": "昨晚一闭眼，就看见那根烟。",
-              "en": "Last night, when I closed my eyes, that smoke was still there."
+              "text": "驻地那边现在都觉得我稳得像块石头，连领队都打算让我带人了。",
+              "en": "Everyone at base thinks I'm steady as a rock. The squad leader even wants me leading people."
             },
             {
               "speaker": "Eleanor",
-              "text": "只是烟短了些，飘到半路就散开。",
-              "en": "It just wasn't as long. It broke up halfway."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我盯着那点烟消下去，后来就迷糊过去一阵。",
-              "en": "I watched it break up, and somewhere in there, I slept a little."
+              "text": "这时候要是露了怯，底下的人心里该没底了。",
+              "en": "If I show nerves now, the ones under me will lose their footing."
             },
             {
               "speaker": "Player",
-              "text": "迷糊了多久？",
-              "en": "How long?"
+              "text": "那个年轻队员呢？",
+              "en": "And the young squad member?"
             },
             {
               "speaker": "Eleanor",
-              "text": "天没透亮就睁眼，撑得住。",
-              "en": "Woke before dawn. It's enough."
+              "text": "别提了，那小子昨天居然跑来问我眼睛怎么红了。",
+              "en": "Don't get me started. Yesterday the kid actually asked why my eyes were red."
             },
             {
               "speaker": "Eleanor",
-              "text": "我来过这儿，别让队里知道。早上的那几趟，尤其不能提。",
-              "en": "Don't tell the unit I've been here. Especially not these early mornings."
+              "text": "我没好气地把他训了一顿，让他先把散开的鞋带系紧。",
+              "en": "I snapped at him and told him to tie his loose shoelaces first."
             },
             {
               "speaker": "Eleanor",
-              "text": "队里现在觉着我稳，说下次还叫我带。",
-              "en": "They look at me like a squad leader now. Say I'm steady. Want me leading again next time."
+              "text": "结果他现在一看见我，第一件事就是低头检查鞋带。",
+              "expr": "smile",
+              "en": "Now the first thing he does when he sees me is check his shoelaces."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺把剩下的一小角面包用纸包好，仔细揣进衣兜里。",
+              "en": "Eleanor wraps the last corner of bread in paper and tucks it carefully into her pocket."
             },
             {
               "speaker": "Eleanor",
-              "text": "要是他们撞见，我连杯水都端得晃，这差事就给别人了。",
-              "en": "If they knew I can't even hold a cup of water steady, they wouldn't let me."
+              "text": "留着路上垫肚子吧，我得赶回去点算弹药了。",
+              "en": "I'll save it for the road. I need to get back and count ammo."
             },
             {
               "speaker": "Player",
-              "text": "我不说。",
-              "en": "I won't."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "早上那个小的问我，眼睛怎么红了。",
-              "en": "The kid asked me this morning why my eyes were red."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "我让他把鞋带先系牢，上回带子松着就往出跑。",
-              "en": "I told him to tie his own laces first. Last time he ran out with them loose."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "现在看见我，头一低就瞄鞋。活该。",
-              "en": "Now he stares at his shoes whenever he sees me. Heh. Serves him right.",
-              "expr": "smile"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（把最后那点面包团进掌心，站起来） 留到路上吃。",
-              "en": "(Closes her hand around the last of the bread and stands) I'll eat this on the way.",
-              "expr": "determined"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "得走了，今天还要数子弹。",
-              "en": "I should go. Still have ammo to count today."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（她把杯子推回柜台里侧）",
-              "en": "(She slides the cup back to the shopkeeper's side of the counter.)"
-            },
-            {
-              "speaker": "Player",
-              "text": "下回别等开门。",
+              "text": "下次不用等到开门。",
               "en": "Next time, don't wait for opening."
             },
             {
               "speaker": "Eleanor",
-              "text": "……谁应了你还有下回。",
-              "en": "...Who said there's a next time?"
+              "text": "谁答应过你还有下次了？",
+              "expr": "shy",
+              "en": "Who said there'd be a next time?"
             },
             {
               "speaker": "Eleanor",
-              "text": "（人朝窗子转过去，手指还搭在窗框上，没回头） 外面那地方，凉。",
-              "en": "(Turns to leave, her hand still on the window frame, without looking back) That ground out here is cold."
+              "text": "这窗下冷风嗖嗖的，冷得要命。",
+              "en": "The wind under this window cuts right through you. It's freezing."
             },
             {
               "speaker": "Eleanor",
-              "text": "随你吧。",
-              "en": "Do what you want with that."
+              "text": "你要是愿意留着椅子吹冷风，那也随你的便。",
+              "en": "If you want to leave the chair out in the cold, suit yourself."
             }
           ]
         }
@@ -2078,18 +1749,23 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "那人肩上扛着一捆用粗绳扎紧的东西，到窗边就卸到地上，斜靠在墙根。",
-              "en": "The visitor carries a tightly bound bundle on his shoulder, then sets it against the outside wall beside the window."
+              "text": "军需官拎着沉甸甸的帆布袋走到营业窗口前。",
+              "en": "The Revolutionary Quartermaster walks up to the service window carrying a heavy canvas bag."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "这店铺是你开的？",
-              "en": "You the one running this shop?"
+              "text": "老板，埃莉诺临走前让我认准你这家店。",
+              "en": "Before she left, Eleanor told me to stick with your shop."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "我在队里管仓库。以前来跟你对单的人出门了，这些日子换我来跑。",
-              "en": "I keep the unit's stores. The one who usually checks lists with you is out, so I'm making the runs for now."
+              "text": "她说你报价痛快，从不跟人绕弯子磨嘴皮。",
+              "en": "She said you quote fast and never waste time haggling."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "我们仓库腾出点废铁和金属锭，想折价换点买口粮的钱。",
+              "en": "We cleared some scrap and metal ingots out of the warehouse. We'd like to sell them cheap for ration money."
             },
             {
               "speaker": "Player",
@@ -2098,140 +1774,108 @@
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "随大队出发了，前两天没亮就动身。",
-              "en": "Went with the main force. Left before dawn, two days ago."
+              "text": "两天前天还没亮，她就跟着大队出发远征了。",
+              "en": "Two days ago, before dawn, she left with the main unit on an expedition."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "说大概十天。顺不顺，路上没个准。",
-              "en": "Ten days, give or take. Whether the road goes smooth, nobody can promise."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "（他把捆绳松开，把东西在地上铺开。）库里剩下的料，人少了，用不上，还占着地方。",
-              "en": "(Unties the rope and spreads the bundle on the floor) Materials piled up in storage. Most of our people left, so we can't use them. They just take up space.",
-              "expr": "tired"
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "留在这的几张嘴得吃饭，队里就按低价放。别嫌，也别乱琢磨。",
-              "en": "The few of us left behind still need to eat, so the price is low. Don't complain, and don't read into it."
+              "text": "路途不近，来回算下来怎么也得十天左右。",
+              "en": "It's a long way. The round trip will take about ten days at least."
             },
             {
               "speaker": "Player",
-              "text": "是她叫你来的？",
-              "en": "She sent you?"
+              "text": "走得这么急？",
+              "en": "In such a hurry?"
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "走前一晚交代的。",
-              "en": "Told me the night before she left."
+              "text": "可不是嘛，出发前一晚她整宿都没怎么合眼。",
+              "en": "Tell me about it. She barely slept the night before."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "她原话是，那家报价格不转弯，别跟人磨，磨也占不到便宜。",
-              "en": "Her exact words: that shop quotes straight. Don't haggle. You won't win."
+              "text": "她攥着张手写单子，挨个检查每个人的背包。",
+              "en": "She had a handwritten list and checked everyone's pack, one by one."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "（他抓了抓后脑。）我到现在还没弄懂，这句算夸你还是笑我。",
-              "en": "(Scratches the back of his head) I still can't tell if that was praise for you or a dig at me."
+              "text": "有个老队员嫌烦嘟囔了一句，她也没跟人吵。",
+              "en": "One of the veterans grumbled about it. She didn't argue with him."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "她就抱着单子站在原地，一声不吭地盯着人家看。",
+              "en": "She just stood there holding the list, staring at him without a word."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "最后那老队员自己扛不住，乖乖把包重新解开了。",
+              "en": "In the end he cracked and unpacked his bag again."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "结果你猜怎么着？里头还真少带了一卷绷带。",
+              "en": "And guess what? He really was missing a roll of bandages."
             },
             {
               "speaker": "Player",
-              "text": "都算。",
-              "en": "Both."
+              "text": "倒确实是她的脾气。",
+              "en": "Sounds like her."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "临出门前一晚，她一个包一个包翻开看。",
-              "en": "The night before we moved out, she opened every single pack."
+              "text": "还不止呢，队里最年轻那小子临出门被她拦了三次。",
+              "en": "That's not all. She stopped the youngest kid three times on his way out."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "绷带几卷，消毒水几瓶，子弹按人头拨，她拿着单子一样样对。",
-              "en": "Rolls of bandages, bottles of antiseptic, ammo split per head. She read the list item by item."
+              "text": "她非让人家把鞋带重系，放话不系死结就别跟着走。",
+              "en": "Made him retie his laces. Said no double knot, no coming along."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "有人嫌麻烦，说差不多就成。",
-              "en": "Someone got fed up and said that was good enough."
+              "text": "全队大半的急救药，也全让她塞进自己包里了。",
+              "en": "She stuffed most of the unit's first-aid supplies into her own pack, too."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "她站到那人面前，不出声，就等他再把包打开。",
-              "en": "She just stood in front of him without a word until he opened his pack himself."
+              "text": "她原本那个包就最沉，嘴上还硬说是交给别人不放心。",
+              "en": "Her pack was already the heaviest. She insisted she didn't trust anyone else with it."
             },
             {
               "speaker": "Player",
-              "text": "开了？",
-              "en": "Did he?"
+              "text": "还交代别的了？",
+              "en": "Anything else?"
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "开了，真就差一卷绷带。",
-              "en": "He did. One roll of bandages short."
+              "text": "就让我把这批多余的材料提过来找你换粮钱。",
+              "en": "Just told me to bring you this surplus and trade it for ration money."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "军需官解开袋口，把捆扎整齐的废铁和金属锭推上柜台。",
+              "en": "The Quartermaster opens the sack and pushes neatly bundled scrap and metal ingots onto the counter."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "那人后来没言语，蹲在墙根把包重新捆了一遍。",
-              "en": "Not a word from him after that. He crouched in the corner and repacked the whole thing."
+              "text": "这些前阵子受了点潮，不过都已经彻底晾干了。",
+              "en": "They got a little damp a while back, but they're fully dried out now."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "顶小的那个，鞋带被她查了三遍。",
-              "en": "The youngest one? She checked his shoelaces three times."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "（他低头揪了揪自己的鞋带。）得系成死扣。她讲一跑散开，就别跟在她后面。",
-              "en": "(Looks down and tugs at his own laces) Double knots. She said if they come loose on the run, don't bother following her."
+              "text": "每一包都是她出发前亲手点过数封好的。",
+              "en": "She counted and sealed every bundle herself before she left."
             },
             {
               "speaker": "Player",
-              "text": "她自己的包呢？",
-              "en": "And her own pack?"
+              "text": "成色我先看看。",
+              "en": "Let me check the quality."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "比我的沉。药一多半在她身上，她说放别人那里不放心。",
-              "en": "Heavier than mine. She carried most of the medicine. Said she didn't trust anyone else with it."
-            },
-            {
-              "speaker": "Player",
-              "text": "嗯。",
-              "en": "Mm."
-            },
-            {
-              "speaker": "Player",
-              "text": "先看货。",
-              "en": "Goods first."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "是该看。我回去还得给守着的几个熬汤。",
-              "en": "Fair. I still have to cook a pot of soup for the ones left behind."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "（他提起一头抖了两下。）这捆受过潮，已经晾过，不碍事。成色你自个瞧。",
-              "en": "(Picks up a length and shakes it out) This bundle got damp, but it's dried out. No harm done. Judge the quality yourself."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "这些全是她走前点过数的，短一件你来问我。",
-              "en": "She counted all of this before she left. Anything missing, come find me."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "（他把材料往台边推了推。）都摆这了，你挑。",
-              "en": "(Pushes the materials toward the counter) That's all of it. Take your pick.",
-              "expr": "serious"
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "价是队里定的。你还要压，我回头照实报给她。",
-              "en": "The unit set the price. If you want to go lower, I'll have to report that to her as is."
+              "text": "留守的弟兄还等着买口粮，价钱上好商量。",
+              "en": "The guys back at base still need rations. We're flexible on price."
             }
           ]
         },
@@ -2239,13 +1883,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "就按这数，和她讲的一样，不跟你绕。",
-              "en": "That's the number. Just like she said. Straight."
+              "text": "埃莉诺果然没推荐错人，跟你做买卖就是省心。",
+              "en": "Eleanor was right about you. Doing business with you is easy."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "（把绳子一圈圈绕在手上。）夜里汤能多下两把料了。",
-              "en": "(Winds the rope around his hand and stows it) That's two more handfuls in the soup."
+              "text": "谢了老板，我这就拿钱去给留守的弟兄买口粮。",
+              "en": "Thanks. I'll go buy rations for the guys at base right now."
             }
           ]
         },
@@ -2253,14 +1897,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "你多给了。",
-              "en": "You gave too much.",
-              "expr": "serious"
+              "text": "没想到老板出手这么厚道，比我预想的还多出不少。",
+              "en": "Didn't expect you to be this generous. That's a lot more than I hoped for."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "我收下，不过回头她对单子问，你自个去跟她交代。",
-              "en": "I'll take it. But when she checks the list and asks, you explain it to her."
+              "text": "这份人情我替留守的弟兄记下了，多谢。",
+              "en": "I'll remember this on behalf of the guys at base. Thank you."
             }
           ]
         },
@@ -2268,14 +1911,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "……行，我磨不过，她早就讲明了。",
-              "en": "...Fine. Can't out-haggle you. She warned me.",
-              "expr": "tired"
+              "text": "（咂了下嘴）老板，你这价压得实在有点狠了。",
+              "en": "(Clicks tongue) That's a pretty brutal lowball."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "这数我原样报给她，她回来要怎么说，我不担。",
-              "en": "I'll pass that number on to her as is. What she says when she's back isn't my problem."
+              "text": "算了，驻地那边急着等米下锅，少点就少点吧。",
+              "en": "Fine. The base needs food on the table. Less is better than nothing."
             }
           ]
         },
@@ -2283,13 +1925,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "不要就拉倒，我扛回去。",
-              "en": "Fine, forget it. I'll haul it back."
+              "text": "（叹了口气）这价钱实在合不上，我没法跟队里交差。",
+              "en": "(Sighs) That price doesn't work. I can't take that back to the unit."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "（重新把材料扎牢，甩上肩。）等她回来，你俩当面谈吧。",
-              "en": "(Reties the bundle of materials and swings it onto his shoulder) She can deal with you herself when she's back."
+              "text": "东西我先收回去，回仓库再另想办法吧。",
+              "en": "I'll take these back to the warehouse and figure something else out."
             }
           ]
         }
@@ -2328,7 +1970,6 @@
         {
           "type": "choice",
           "id": "C1",
-          "prompt": "战士说完，弯腰去提地上的包",
           "mainline": 1,
           "options": [
             {
@@ -2342,19 +1983,20 @@
               "id": "C1_o2",
               "label": "继续谈货",
               "mainline": false,
+              "label_en": "Keep talking trade",
               "block": "v2_r4c2_c1_o2",
-              "merge": true,
-              "label_en": "Keep talking trade"
+              "merge": true
             },
             {
               "id": "C1_o3",
               "label": "说她会回来",
               "mainline": false,
+              "label_en": "Say she'll be back",
               "block": "v2_r4c2_c1_o3",
-              "merge": true,
-              "label_en": "Say she'll be back"
+              "merge": true
             }
           ],
+          "prompt": "战士说完，弯腰去提地上的包",
           "prompt_en": "Done talking, the fighter bends to pick up the bag"
         },
         {
@@ -2367,127 +2009,97 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "那人走到窗口时，裤腿上已经干成一层泥壳。他先把肩上的包摘下来放在地上，喘了好一会儿。",
-              "en": "With dried mud caked on his trousers, the visitor reaches the window, drops his pack to the ground, and catches his breath."
+              "text": "一名裤腿沾满泥的革命军战士一瘸一拐地走到营业窗口前。",
+              "en": "A Revolutionary Fighter, pants caked in mud, limps up to the service window."
             },
             {
               "speaker": "RevFighter",
-              "text": "店主，我手上有点货，你收不收？",
-              "en": "Shopkeeper, you buying?"
-            },
-            {
-              "speaker": "RevFighter",
-              "text": "路上得的，队里叫先带回来换点钱。",
-              "en": "We took it on the road. The squad sent me back first to sell it."
+              "text": "老板，埃莉诺让我顺路过来找你。",
+              "en": "Eleanor told me to stop by on my way back."
             },
             {
               "speaker": "Player",
-              "text": "都什么。",
-              "en": "What is it."
+              "text": "脚怎么了？他们人呢？",
+              "en": "What happened to your foot? Where are the others?"
             },
             {
               "speaker": "RevFighter",
-              "text": "几把枪，再就是些零碎子弹。",
-              "en": "Guns, a few. Plus some loose rounds."
+              "text": "大部队还在前头，我走到第五天踩空崴了脚。",
+              "en": "The main unit's still up ahead. On day five I misstepped and twisted my ankle."
             },
             {
               "speaker": "RevFighter",
-              "text": "（把包口掀开一条缝，低头往里看了看，又按回去）对面扔的，没坏。",
-              "en": "(Pulls the pack open, glances inside, closes it) The other side dropped them. Not damaged."
+              "text": "领队嫌我留着拖慢脚程，就派我先折返回来了。",
+              "en": "The squad leader said I'd slow them down, so he sent me back early."
             },
             {
               "speaker": "RevFighter",
-              "text": "走到半路崴了脚，撵不上队，领头的就让我带货先撤回来。",
-              "en": "I twisted my ankle and couldn't keep up, so the squad leader had me bring these back on my way.",
-              "expr": "tired"
+              "text": "半道上我们端了对面一个哨卡，缴获了点手枪和弹药。",
+              "en": "On the way we took out an enemy checkpoint and seized some pistols and ammo."
             },
             {
               "speaker": "RevFighter",
-              "text": "去的时候走了五天，回来我磨了一天半。",
-              "en": "Five days out, a day and a half limping back."
+              "text": "埃莉诺交代我把这批货直接拿来你店里变现。",
+              "en": "Eleanor told me to bring the haul straight here and cash it in."
             },
             {
               "speaker": "Player",
-              "text": "队上呢？",
-              "en": "And the squad?"
+              "text": "前头的路不好走？",
+              "en": "Rough road ahead?"
             },
             {
               "speaker": "RevFighter",
-              "text": "一直没停，还在往前赶。",
-              "en": "Still pushing forward."
+              "text": "可不是嘛，前两天经过一段塌方的窄道。",
+              "en": "You said it. A couple days back we went through a narrow, half-collapsed passage."
             },
             {
               "speaker": "RevFighter",
-              "text": "前头有段路塌了，只留一条窄口，还得等天黑再摸过去。",
-              "en": "A stretch of the route collapsed. Only one narrow path left to walk, and we had to cross at night."
+              "text": "里头黑得伸手不见五指，领队只能在最前头探路。",
+              "en": "Pitch black in there. The squad leader had to scout up front."
             },
             {
               "speaker": "RevFighter",
-              "text": "领头的去前头看路，后面那五个，由埃莉诺一路领过来。",
-              "en": "The squad leader scouted up front. Eleanor brought the back five across."
+              "text": "埃莉诺断后带着我们五个人，每走几步就低声点一遍名。",
+              "en": "Eleanor took the rear with the five of us, calling roll under her breath every few steps."
             },
             {
               "speaker": "RevFighter",
-              "text": "她隔几步就回头数人，一个一个念出声。",
-              "en": "Every few steps she'd stop and do a headcount, muttering the numbers."
+              "text": "她还拿绳子把队里最年轻那小子拴在自己左手边。",
+              "en": "She even roped the youngest kid in the unit to her left hand."
             },
             {
               "speaker": "RevFighter",
-              "text": "她把那小的系在自己左边，一步都不让落下。",
-              "en": "She kept the youngest tied to her left side. Not half a step away."
+              "text": "那么黑的塌方道，硬是一个没落地全让她带出来了。",
+              "en": "That collapsed passage was black as anything, and she got every one of us out."
             },
             {
               "speaker": "RevFighter",
-              "text": "等过了那段再点，全在。",
-              "en": "We counted on the other side. Nobody missing."
+              "text": "后来我脚崴了走不动，也是她二话没说拽过我半个背包。",
+              "en": "Later I twisted my ankle and couldn't keep up. She took half my pack without a word."
             },
             {
               "speaker": "RevFighter",
-              "text": "我脚刚崴，她就解开我的包，分了一半过去自己背。",
-              "en": "My ankle had just gone. She came over, split my pack, and hung half of it on herself."
-            },
-            {
-              "speaker": "RevFighter",
-              "text": "我拦了一句，她只回，别废话，跟上。",
-              "en": "I said she didn't have to. She said, \"Shut up and keep up.\""
+              "text": "她把那半个包甩自己肩上，就冷着脸丢给我一句闭嘴跟紧。",
+              "en": "Slung it over her shoulder, gave me a cold look, and said, \"Shut up and keep up.\""
             }
           ]
         },
-        "v2_r4c2_c1_o2": {
+        "v2_r4c2_c1_o1": {
           "lines": [
             {
               "speaker": "Player",
-              "text": "把货摆出来。",
-              "en": "Show me the goods."
+              "text": "她人怎么样？",
+              "en": "How is she?"
             },
             {
               "speaker": "RevFighter",
-              "text": "（把包搁上柜台，按住一角）我脚有点疼。借这儿靠一会儿。",
-              "en": "(He rests the pack on the counter and holds a corner.) My foot's sore. Let me lean here a minute."
-            }
-          ]
-        },
-        "v2_r4c2_c1_o3": {
-          "lines": [
-            {
-              "speaker": "Player",
-              "text": "她会回来。",
-              "en": "She'll be back."
+              "text": "她精神头硬着呢，半点事都没有。",
+              "en": "Tough as ever. Not a scratch on her."
             },
             {
               "speaker": "RevFighter",
-              "text": "你倒真不慌。",
-              "en": "You sound pretty sure."
-            },
-            {
-              "speaker": "Player",
-              "text": "人是她带走的，就得她原样带回来。",
-              "en": "The people she takes out, she brings back herself."
-            },
-            {
-              "speaker": "RevFighter",
-              "text": "……过窄道前，她也这么说过，一个字不差。",
-              "en": "...She said that at the mouth of the path. Word for word."
+              "text": "歇脚时她还蹲下来，一边训人一边帮那年轻小子重系鞋带。",
+              "en": "When we rested, she crouched down and retied that kid's laces while chewing him out."
             }
           ]
         },
@@ -2495,39 +2107,71 @@
           "lines": [
             {
               "speaker": "RevFighter",
-              "text": "对了，还有一桩。我往回走那天，她单独把我叫到边上。",
-              "en": "Oh, one more thing. The day I headed back, she pulled me aside.",
-              "expr": "tired"
+              "text": "（拍了下脑门）差点把她私下交代的正事给忘了。",
+              "en": "(Slaps forehead) Almost forgot what she told me in private."
             },
             {
               "speaker": "RevFighter",
-              "text": "叫我路过这店铺，替她瞧一眼门板还开不开。",
-              "en": "Said if I passed this shop on the way, check if it's still open."
+              "text": "临分头前她把我拉到一边，压低嗓门嘱咐了我三句话。",
+              "en": "Before we split up, she pulled me aside and gave me three things, real quiet."
             },
+            {
+              "speaker": "RevFighter",
+              "text": "第一句是让我顺道帮她瞅一眼，看你这店还正常开着没。",
+              "en": "First, swing by and check if your shop's still open."
+            },
+            {
+              "speaker": "RevFighter",
+              "text": "第二句是让你千万别把她的杯子收起来。",
+              "en": "Second, tell you not to put her cup away."
+            },
+            {
+              "speaker": "RevFighter",
+              "text": "第三句是让你见到货照常给价，别在那儿磨叽发愣。",
+              "en": "Third, when you see the goods, give a normal price. No dawdling or spacing out."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "战士解开帆布包，把缴获的左轮手枪和几盒弹药放到柜台上。",
+              "en": "The fighter opens a canvas bag and sets a captured revolver and a few boxes of ammo on the counter."
+            },
+            {
+              "speaker": "RevFighter",
+              "text": "话我可一字不落带到了，老板你给看看这些枪弹能出多少。",
+              "en": "That's every word, delivered. Now, what'll you give me for these guns and rounds?"
+            }
+          ]
+        },
+        "v2_r4c2_c1_o2": {
+          "lines": [
             {
               "speaker": "Player",
-              "text": "开着。",
-              "en": "It is."
+              "text": "先把货拿出来看看。",
+              "en": "Let's see the goods first."
             },
             {
               "speaker": "RevFighter",
-              "text": "她让捎句话，她的杯子你别给收了。",
-              "en": "She told me to tell you: don't put her cup away."
-            },
+              "text": "行，反正她人好着呢，老板你尽管放心。",
+              "en": "Sure. Anyway, she's doing fine. Don't you worry."
+            }
+          ]
+        },
+        "v2_r4c2_c1_o3": {
+          "lines": [
             {
               "speaker": "Player",
-              "text": "没收。",
-              "en": "I haven't."
+              "text": "她会带人回来的。",
+              "en": "She'll bring them back."
             },
             {
               "speaker": "RevFighter",
-              "text": "（把包口掀开）你看，这些值多少？",
-              "en": "(He opens the pack.) What'll you give me for the lot?"
+              "text": "那可不，我们队里属她最认路。",
+              "en": "Damn right. Nobody in our unit knows the routes like she does."
             },
             {
               "speaker": "RevFighter",
-              "text": "她也留了话，价照老样子算，别在你这儿抹眼泪。",
-              "en": "She said normal prices, and no playing pitiful in front of you."
+              "text": "有她盯着单子和路线，谁也丢不了。",
+              "en": "With her watching the list and the route, nobody gets lost."
             }
           ]
         },
@@ -2535,13 +2179,13 @@
           "lines": [
             {
               "speaker": "RevFighter",
-              "text": "这些够队里用几天。",
-              "en": "That'll keep the unit going a while."
+              "text": "痛快，难怪埃莉诺非让我上你这儿来。",
+              "en": "Straight deal. No wonder Eleanor insisted I come here."
             },
             {
               "speaker": "RevFighter",
-              "text": "（把空包卷成一卷塞到腋下）我先回去歇脚，她回来前得会走路。",
-              "en": "(Rolls up the empty bag and tucks it under one arm) I'm going back to rest my foot. I need to be walking before she's back."
+              "text": "钱我收好了，这就回驻地养脚等大部队回来。",
+              "en": "Got the money. I'll head back to base, rest my foot, and wait for the others."
             }
           ]
         },
@@ -2549,13 +2193,13 @@
           "lines": [
             {
               "speaker": "RevFighter",
-              "text": "多出来的这份，我记她单子上，算你的。",
-              "en": "The extra, I'll mark on her list. I'll say it was your call."
+              "text": "嘿，老板你出手可真够爽快的！",
+              "en": "Hey, you don't haggle at all!"
             },
             {
               "speaker": "RevFighter",
-              "text": "回头她发火，别拉上我。",
-              "en": "If she yells, don't pin it on me."
+              "text": "等埃莉诺回来，我一定替你多说两句好话。",
+              "en": "When Eleanor's back, I'll put in a good word for you."
             }
           ]
         },
@@ -2563,14 +2207,13 @@
           "lines": [
             {
               "speaker": "RevFighter",
-              "text": "这价……行吧，反正是路上白拿的，没本钱。",
-              "en": "That price... fine. We picked it up on the road. Didn't cost us anything.",
-              "expr": "tired"
+              "text": "（皱起眉头）老板你这价压得也太狠了点。",
+              "en": "(Frowns) That's a pretty brutal lowball."
             },
             {
               "speaker": "RevFighter",
-              "text": "她要问，我照实学。",
-              "en": "If she asks, I'll tell her straight."
+              "text": "算了，我这脚疼得厉害，懒得再拎着跑别家了。",
+              "en": "Forget it. My foot hurts too much to haul this somewhere else."
             }
           ]
         },
@@ -2578,22 +2221,13 @@
           "lines": [
             {
               "speaker": "RevFighter",
-              "text": "你要不收，我还背回去。",
-              "en": "Not buying? Then I'll haul it back."
+              "text": "这价钱差太多，我可没法回去跟埃莉诺交差。",
+              "en": "That's way too low. I can't face Eleanor with that."
             },
             {
               "speaker": "RevFighter",
-              "text": "（把包甩到背上，一瘸一拐地离了窗口）等她回来了，让她自己找你说。",
-              "en": "(Swings the pack onto his back and limps away from the window) When she gets back, let her talk to you herself."
-            }
-          ]
-        },
-        "v2_r4c2_c1_o1": {
-          "lines": [
-            {
-              "speaker": "RevFighter",
-              "text": "那小孩鞋带老散。她蹲下去替他系，嘴里还数落他。",
-              "en": "That kid's laces kept coming undone. She got down to tie them for him, scolding him the whole time."
+              "text": "东西我还是拎走，去别处问问价吧。",
+              "en": "I'll take my stuff and ask around elsewhere."
             }
           ]
         }
@@ -2635,165 +2269,133 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "来人停在窗口跟前，气还喘不匀，手里拎着旧衣裹成的长包。",
-              "en": "The visitor is still panting when he reaches the window, carrying a long bundle wrapped in old clothes."
+              "text": "一名风尘仆仆的革命军游击队大步走到营业窗口前。",
+              "en": "A travel-worn Revolutionary Guerrilla strides up to the service window."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "店里有人没？我天不亮就动了，一路没停脚。",
-              "en": "Shopkeeper here? I left early. Didn't stop once."
+              "text": "老板，先给你报个天大的好消息！",
+              "en": "Boss, I've got huge news!"
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "我打前站先回来。后头的人落我一天多。",
-              "en": "I came ahead to scout. The main group's a day and change behind me."
+              "text": "我们整支队伍全平平安安回来了，一个人也没少！",
+              "en": "Our whole unit made it back safe. Not one missing!"
+            },
+            {
+              "speaker": "RevGuerrilla",
+              "text": "我是前哨先一步赶回来的，大部队明后天就能进站。",
+              "en": "I'm the advance scout. The main group reaches the station in a day or two."
+            },
+            {
+              "speaker": "RevGuerrilla",
+              "text": "这一路紧赶慢赶，可算能歇口气了。",
+              "en": "We rushed the whole way. Finally I can catch my breath."
             },
             {
               "speaker": "Player",
-              "text": "全回来了？",
-              "en": "Everyone?"
+              "text": "别坐那把椅子。",
+              "en": "Not that chair."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "全回来了，一个不缺。",
-              "en": "Everyone. Not one missing."
+              "text": "（刚弯下腰又猛地站直）哟，是我没眼力见了。",
+              "en": "(Starts to sit, then straightens up fast) Whoa, my bad."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "窗口那把椅子你摆的？我差一点就坐上去了。",
-              "en": "Did you put that chair beside the window? I nearly plopped down on it."
+              "text": "早听说你这窗外专门给人留着座，果然名不虚传。",
+              "en": "Heard you keep a seat by this window for someone. Guess it's true."
             },
             {
               "speaker": "Player",
-              "text": "没打算给你。",
-              "en": "It's not for you."
+              "text": "返程路上还顺利吗？",
+              "en": "How was the trip back?"
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "……那行，我站这儿。",
-              "en": "...Right. I'll stand."
+              "text": "后半程人人体力见底，走起来最磨人。",
+              "en": "Second half, everyone was running on empty. That's the worst stretch."
+            },
+            {
+              "speaker": "RevGuerrilla",
+              "text": "埃莉诺硬是主动揽了殿后的活，一路盯着大伙的脚程。",
+              "en": "Eleanor insisted on taking the rear and kept an eye on everyone's pace the whole way."
+            },
+            {
+              "speaker": "RevGuerrilla",
+              "text": "队里最年轻那小子也算争气，咬着牙一步都没落下。",
+              "en": "The youngest kid in the squad did well too. Gritted his teeth and never fell behind."
+            },
+            {
+              "speaker": "RevGuerrilla",
+              "text": "不过有件事我悄悄透给你，你可别说是从我嘴里漏的。",
+              "en": "But here's something on the quiet. Don't say you heard it from me."
             },
             {
               "speaker": "Player",
-              "text": "她在哪？",
-              "en": "Where is she?"
+              "text": "她怎么了？",
+              "en": "What happened to her?"
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "埃莉诺？最后头压阵。",
-              "en": "Eleanor? Bringing up the rear."
+              "text": "前天翻一堵塌了一半的矮墙，她拿左手托了别人一把。",
+              "en": "Day before yesterday, climbing a half-collapsed wall, she gave someone a boost with her left hand."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "末尾那段她自己要走的。谁落下，她扭头就能瞧见。",
-              "en": "She insisted on walking last that final stretch. Anyone falls behind, she sees it."
+              "text": "结果左胳膊让墙头翘起的铁皮划了一道口子。",
+              "en": "A piece of sheet metal sticking up on top sliced her left arm open."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "说邪了你别不认。往回这一路，最小的那孩子一回都没掉过队。",
-              "en": "Believe it or not, the whole way back, the youngest never fell behind once.",
-              "expr": "tired"
+              "text": "好在伤口不算深，就是看着有点渗人。",
+              "en": "Luckily it's not deep. Just looks nasty."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "他想掉也不行。她后边一喊名，那孩子两条腿就快了。",
-              "en": "Couldn't if he tried. She calls his name from the back and his legs speed right up."
+              "text": "她愣是没舍得动队里的急救药，自己撕了布条勒紧缠上了。",
+              "en": "She wouldn't touch the squad's first-aid supplies. Tore up some cloth and bound it tight herself."
+            },
+            {
+              "speaker": "RevGuerrilla",
+              "text": "缠完还板着脸下令，叫大伙谁也别拿这点小伤瞎操心。",
+              "en": "Then she ordered, straight-faced, that nobody waste worry on a scratch like that."
             },
             {
               "speaker": "Player",
-              "text": "她伤着没？",
-              "en": "Is she okay?"
+              "text": "她还交代别的没有？",
+              "en": "She say anything else?"
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "胳膊刮了一道。",
-              "en": "Got a cut on her arm."
+              "text": "她确实私下塞给我一句口信，让我一定带到。",
+              "en": "She did slip me a message in private. Said I had to deliver it."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "过矮墙时让铁皮边擦的，不深。",
-              "en": "Caught it on sheet metal climbing a low wall. Not deep."
+              "text": "她让你在店里替她留一根能量棒。",
+              "en": "She wants you to save her an energy bar at the shop."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "绷带她自己裹的。管药的要帮忙，她说药留给用得着的人。",
-              "en": "Wrapped the bandages herself. Our medic offered to look. She said save it for someone who needs it."
+              "text": "依我看，等她回来你可千万别一照面就问胳膊的伤。",
+              "en": "If you ask me, when she's back, don't bring up the arm the second you see her."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "她嘱咐我别在队里说，怕大家知道了分神。",
-              "en": "She told me not to mention it to the unit. Said it'd distract everyone.",
-              "expr": "serious"
+              "text": "她那脾气你最清楚，最烦别人盯着她的伤口看。",
+              "en": "You know her temper. She hates people staring at her wounds."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "游击队解下背上的帆布袋，把几把格斗刀和重铁管放上柜台。",
+              "en": "The guerrilla unslings a canvas bag and sets several combat knives and heavy iron pipes on the counter."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "（揉了揉鼻头）可你又不算队里的，说给你，不叫我嘴漏。",
-              "en": "(Rubs nose) But you're not in the squad, so telling you doesn't count as loose lips."
-            },
-            {
-              "speaker": "Player",
-              "text": "算。",
-              "en": "It counts."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "……那回头她问，别讲是我漏的。",
-              "en": "...Then don't tell her you heard it from me."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "她托我捎句话。",
-              "en": "Right, she asked me to pass along a message."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "让店主给她留根能量棒。",
-              "en": "She says to save an energy bar for her."
-            },
-            {
-              "speaker": "Player",
-              "text": "小意思。",
-              "en": "Can do."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "大队明天到，最迟后天。她估的脚程，一般没差。",
-              "en": "Main unit arrives tomorrow, day after at the latest. Her words, and her words usually hold."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "她胳膊那伤，见了别先提。她不乐意听。",
-              "en": "That cut on her arm, don't ask about it to her face. She hates that."
-            },
-            {
-              "speaker": "Player",
-              "text": "嗯。",
-              "en": "Mm."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "（掀开旧衣，里头的东西一样样往柜台上放）道上拾的，刀，还有几件抡起来使的硬家伙。",
-              "en": "(Unwraps the old clothes and sets the contents on the counter one by one) Found them on the road. A blade, and a few things for smashing stuff."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "全是对面扔下的。东西不精，但压手，砍起来不卷刃。",
-              "en": "All dropped by the other side. Not great, but heavy. Edges won't roll on a chop."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "她扫过一眼，说别跟你讲虚的，你认得成色。",
-              "en": "She took a look. Said you know quality, so don't try sweet-talking you."
-            },
-            {
-              "speaker": "Player",
-              "text": "递上来。",
-              "en": "Bring them up."
-            },
-            {
-              "speaker": "RevGuerrilla",
-              "text": "（把东西码上柜台，两手拍灰）你自己瞧，我还得赶回营里送信，留守的都等着呢。",
-              "en": "(Lines them up on the counter, dusts off hands) Have a look. I've gotta get back and report. The ones holding the fort are waiting."
+              "text": "这些是路上缴获的近战家伙，老板你给估个价吧。",
+              "en": "Melee gear we seized on the road. Give me a price on these."
             }
           ]
         },
@@ -2801,13 +2403,13 @@
           "lines": [
             {
               "speaker": "RevGuerrilla",
-              "text": "行嘞，我回营把数报上。",
-              "en": "Deal. I'll go report, and bring the numbers too."
+              "text": "跟老板做买卖就是省心，钱我收好了。",
+              "en": "Always easy doing business with you. Got the money."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "（旧衣叠好揣进怀里）那椅子我连边都没沾。",
-              "en": "(Folds the old shirt and tucks it away) And I never touched the chair."
+              "text": "能量棒你可得给她留好，她最迟明天就到。",
+              "en": "Keep that energy bar for her. She'll be here tomorrow at the latest."
             }
           ]
         },
@@ -2815,13 +2417,13 @@
           "lines": [
             {
               "speaker": "RevGuerrilla",
-              "text": "给多了？那我不推，营里缺的正是这些。",
-              "en": "Too much? I won't argue. The ones holding the fort need it."
+              "text": "看来老板今天心情相当不错，出手这么大方！",
+              "en": "Someone's in a good mood today. That's generous!"
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "回头她回来一盘，数目错了别赖我。",
-              "en": "If her books don't add up when she's back, that's on you."
+              "text": "那我就替后头的大部队先谢过你了，回见！",
+              "en": "I'll thank you on behalf of the main group behind me. See you!"
             }
           ]
         },
@@ -2829,13 +2431,13 @@
           "lines": [
             {
               "speaker": "RevGuerrilla",
-              "text": "啧，还不如我估的数。",
-              "en": "Tch. Less than I figured."
+              "text": "（撇了下嘴）这价压得实在有点低了。",
+              "en": "(Purses lips) That's a pretty lowball price."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "算了，她早说过你识货，你说多少就多少。",
-              "en": "Fine. She said you know quality, so that's the quality."
+              "text": "算了，我还赶着回去报信，就按这个数结吧。",
+              "en": "Fine. I need to get back and report. We'll settle at that."
             }
           ]
         },
@@ -2843,13 +2445,13 @@
           "lines": [
             {
               "speaker": "RevGuerrilla",
-              "text": "不要？那成，我提回去。",
-              "en": "Don't want them? Fine, I'll haul them back."
+              "text": "这价钱我可没法向队里交差，家伙我先收起来了。",
+              "en": "I can't take that price back to the squad. I'll hold on to the gear."
             },
             {
               "speaker": "RevGuerrilla",
-              "text": "（东西重新包进旧衣）反正她这一两天就到，你俩当面计较。",
-              "en": "(Wraps everything back in the old shirt) She'll be here in a day or two anyway. Settle it with her face to face."
+              "text": "买卖不成仁义在，那根能量棒你可千万别忘了留。",
+              "en": "No deal, no hard feelings. Just don't forget to save that energy bar."
             }
           ]
         }
@@ -2888,7 +2490,6 @@
         {
           "type": "choice",
           "id": "C2",
-          "prompt": "她站在门外，手还扶着椅背，没往里走",
           "mainline": 1,
           "options": [
             {
@@ -2901,19 +2502,20 @@
               "id": "C2_o2",
               "label": "说门一直留着",
               "mainline": false,
+              "label_en": "Say the door was always open.",
               "block": "v2_r4c4_c2_o2",
-              "merge": true,
-              "label_en": "Say the door was always open."
+              "merge": true
             },
             {
               "id": "C2_o3",
               "label": "问她伤要不要紧",
               "mainline": false,
+              "label_en": "Ask if her wounds are serious.",
               "block": "v2_r4c4_c2_o3",
-              "merge": true,
-              "label_en": "Ask if her wounds are serious."
+              "merge": true
             }
           ],
+          "prompt": "她站在门外，手还扶着椅背，没往里走",
           "prompt_en": "She stands outside, hand still on the chair back, not stepping in."
         },
         {
@@ -2926,113 +2528,115 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "卷帘升到一半，埃莉诺就坐在窗下那把椅子里，腿上按着一张叠起的纸。",
-              "en": "As the window shutter rises, Eleanor comes into view on the chair outside, a folded sheet of paper on her knees."
+              "text": "清晨卷帘门刚拉起，埃莉诺已经坐在窗外那把垫稳的椅子上。",
+              "en": "Early morning. As the shutter rolls up, Eleanor is already sitting outside the window in the steadied chair."
             },
             {
               "speaker": "Eleanor",
-              "text": "……你挺会挑点开门。",
-              "en": "...You're right on time opening that door.",
-              "expr": "tired"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（没起身，抬脸看那扇往上收的窗）这回没敲，半下都没给。",
-              "en": "(Still seated, looks up at the rising shutter) I didn't knock. Not once this time.",
-              "expr": "neutral"
+              "text": "你今天倒是起得挺早。",
+              "expr": "tired",
+              "en": "You're up early today."
             },
             {
               "speaker": "Player",
-              "text": "坐多长时间了？",
-              "en": "How long?"
+              "text": "你什么时候来的？",
+              "en": "When did you get here?"
             },
             {
               "speaker": "Eleanor",
-              "text": "没看。来那会儿外头还没亮。",
-              "en": "No idea. It was still dark when I sat down.",
-              "expr": "neutral"
+              "text": "也就刚坐下没多久，刚才听见你在里面响动，就没敲窗。",
+              "en": "Not long ago. Heard you moving around inside, so I didn't knock."
             },
             {
               "speaker": "Eleanor",
-              "text": "椅面潮得很，我拿袖子抹了两下。",
-              "en": "There was dew on the chair. I wiped it off with my sleeve.",
-              "expr": "neutral"
+              "text": "这把椅子，你居然还真的一直替我留着。",
+              "expr": "soft",
+              "en": "You actually kept this chair for me the whole time."
             },
             {
               "speaker": "Player",
-              "text": "胳膊。",
-              "en": "Your arm."
+              "text": "能量棒也给你留着。",
+              "en": "Kept the energy bar too."
             },
             {
               "speaker": "Eleanor",
-              "text": "（左臂往身后收了半寸）划了一下，已经收口，不碍事。",
-              "en": "(Tucks her left arm behind her back) A cut. It's scabbed over. It's nothing.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "少看。带子是我自己上的，比你绑得平。",
-              "en": "Stop staring. I wrapped the bandages myself. Neater than you would.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（腿上那张纸摊开，又照旧折上）名册。昨晚进了屋，我挨个念过去。",
-              "en": "(Unfolds the paper on her knee, then folds it back along the creases) The list. When we got in last night, I read it off name by name.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "没缺。那孩子也点到了，鞋绳还系成死扣。",
-              "en": "All there. The kid too. Shoelaces still in a dead knot.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "里头第七排还空着，我没写新的。",
-              "en": "Line seven's still blank. I didn't add anyone.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "值夜那会儿，我数上头那几盏灯。数没了就猜，这钟点你该上锁了。",
-              "en": "On night watch, I counted the lights up above. Then I'd think: about now, you'd be locking up.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "昨晚点完名，回去躺了一会儿。",
-              "en": "After roll call last night I went back and lay down for a bit.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "怎么都睡不着。",
-              "en": "Couldn't stay down.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "到窗底下，见这椅子还搁外头。",
-              "en": "I came to the window and saw this chair outside.",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "……你一直没搬进去？",
-              "en": "...You never brought it in?",
-              "expr": "soft"
+              "text": "（拿起能量棒捏了捏）算你守信，这顿算我先欠着。",
+              "expr": "smile",
+              "en": "(Picks up the energy bar and squeezes it) Good, you kept your word. I'll owe you for this one."
             },
             {
               "speaker": "Player",
-              "text": "没收。",
-              "en": "Never did."
+              "text": "昨晚回来的？",
+              "en": "Got back last night?"
             },
             {
               "speaker": "Eleanor",
-              "text": "（扶着椅背起身，身子偏了一下，又立稳）你可真是。",
-              "en": "(Pushes herself up by the chair back, sways, then steadies) You.",
-              "expr": "soft"
+              "text": "嗯，后半夜刚进的驻地，我挨个清点了一遍人数。",
+              "expr": "serious",
+              "en": "Yeah. Reached the camp after midnight. I did a headcount, one by one."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "带出去的人全都平平安安带回来了，一个都没少。",
+              "en": "Everyone I took out came back safe. Not one missing."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "最年轻的那个小子也全须全尾地跟着队伍走到了最后。",
+              "en": "Even the youngest kid made it to the end with the squad, all in one piece."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "口袋里那张名单，还是只有第七行空着。",
+              "expr": "sad",
+              "en": "The list in her pocket still has only the seventh line blank."
+            },
+            {
+              "speaker": "Player",
+              "text": "怎么不多睡会儿？",
+              "en": "Why not sleep in?"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "点完名回屋躺下了，翻来覆去怎么也睡不着。",
+              "expr": "soft",
+              "en": "Lay down after roll call. Tossed and turned, couldn't sleep."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "索性趁着天还没亮透，顺着路走过来透透气。",
+              "en": "So before it got fully light, I walked over for some air."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺站起身，缠着干净绷带的左臂搭在椅背上，没有迈步离开。",
+              "en": "Eleanor stands, her left arm in clean bandages resting on the chair back. She doesn't walk away."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "你这儿刚开门，我是不是耽误你整理货架了？",
+              "en": "You just opened up. Am I keeping you from stocking the shelves?"
+            }
+          ]
+        },
+        "v2_r4c4_s1": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "不耽误，再待会儿。",
+              "en": "You're not. Stay a while."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "（手指轻轻摩挲着椅背）既然你都这么说了，那我就再占你一点时间。",
+              "expr": "shy",
+              "en": "(Fingers lightly tracing the chair back) Well, since you put it that way, I'll take a little more of your time."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "反正驻地那边上午也没什么急事，我就站在这儿歇口气。",
+              "expr": "soft",
+              "en": "Nothing urgent at the base this morning anyway. I'll just stand here and catch my breath."
             }
           ]
         },
@@ -3040,19 +2644,14 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "我没动过地方。",
-              "en": "I've been here all along."
+              "text": "这扇窗一直留着。",
+              "en": "This window stays open."
             },
             {
               "speaker": "Eleanor",
-              "text": "（抬起眼看窗口里的他，名册揣进背心兜里）",
-              "en": "(Looks up at the shopkeeper inside the window and puts the roster in her vest pocket)",
-              "expr": "neutral"
-            },
-            {
-              "speaker": "Player",
-              "text": "椅子也一直搁着。",
-              "en": "The chair too."
+              "text": "少说这种好听的话，我可没打算天天往你这儿跑。",
+              "expr": "shy",
+              "en": "Spare me the sweet talk. I'm not planning to come running here every day."
             }
           ]
         },
@@ -3060,28 +2659,20 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "胳膊伸来。",
-              "en": "Let me see your arm."
+              "text": "胳膊上的伤没事？",
+              "en": "Your arm okay?"
             },
             {
               "speaker": "Eleanor",
-              "text": "（左臂递上前，袖管卷起一截，没抽回去）",
-              "en": "(Holds out her left arm and pushes the sleeve up a little, not pulling it back)",
-              "expr": "neutral"
+              "text": "肯定又是前哨那家伙多嘴，明明千叮万嘱让他别乱说的。",
+              "expr": "angry",
+              "en": "Bet that guy at the outpost ran his mouth again. I told him a hundred times to keep quiet."
             },
             {
-              "speaker": "Player",
-              "text": "放平，我重新给你裹。",
-              "en": "Put your arm on the counter. I'll rewrap it."
-            }
-          ]
-        },
-        "v2_r4c4_s1": {
-          "lines": [
-            {
-              "speaker": "Narrator",
-              "text": "她攥住你的衣袖，额头靠上你的肩。",
-              "en": "She takes your sleeve and rests her head on your shoulder."
+              "speaker": "Eleanor",
+              "text": "就是被铁皮蹭破了一点皮，早上已经重新换过干净绷带了。",
+              "expr": "soft",
+              "en": "Just a scrape from some sheet metal. I put on clean bandages this morning."
             }
           ]
         }
