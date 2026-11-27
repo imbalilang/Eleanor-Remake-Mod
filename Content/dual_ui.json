@@ -11,10 +11,6 @@
     "底座背面刻着一行小字：莉迪亚，替朋友说话。",
     "A small line is engraved on the back: Lydia, speaking up for a friend."
   ],
-  "er_dual_biz_second_intro": [
-    "莉迪亚说你能找到便携净水器。预算 {0} 信用点，耐久至少要有 {1}。东西先给我看，价钱照常谈。",
-    "Lydia said you can find a portable water purifier. Budget {0} credits, at least {1} durability. Show me the item first; we'll negotiate the price normally."
-  ],
   "er_dual_prompt": [
     "你的回答。",
     "Your answer."
@@ -26,18 +22,6 @@
   "er_dual_entry_resume": [
     "这段话还没有说完。",
     "This conversation is not finished yet."
-  ],
-  "er_dual_notice_ending": [
-    "三人关系已稳定，日常来访继续。",
-    "The three of you are steady. Everyday visits continue."
-  ],
-  "er_dual_gate_passed": [
-    "上层区声望达到{0}，奖励已解锁。",
-    "Upper Level reputation reached {0}. Reward unlocked."
-  ],
-  "er_dual_gate_progress": [
-    "上层区声望：{0}／{1}",
-    "Upper Level reputation: {0} / {1}"
   ],
   "er_dual_reward_received": [
     "获得{0}（放入橱窗生效）。",
@@ -54,14 +38,6 @@
   "er_dual_reputation_gift": [
     "最近上层有不少人问起你的店。喏，这件{0}是给你的。",
     "People upstairs have been asking about your shop. Here, this is for you: {0}."
-  ],
-  "er_dual_perfume_claim": [
-    "那瓶香水还替你留着。这次拿好。",
-    "I still have that perfume for you. Take it this time."
-  ],
-  "er_dual_receipt_claim": [
-    "还有一份回执要交给你。",
-    "There is also a receipt for you."
   ],
   "er_dual_referral_intro": [
     "莉迪亚提起过这家店。我想看看适合带回上层的东西，价钱照常谈。",
@@ -95,18 +71,6 @@
     "底座上的字很小：承蒙照应。",
     "Tiny words on the base: With thanks for your care."
   ],
-  "er_gala_not_attend": [
-    "这次不参加。",
-    "I will miss this party."
-  ],
-  "er_gala_not_attend_desc": [
-    "明确谢绝本次邀请，不再另约下一场；关系不变。",
-    "Decline this invitation without arranging another party. Your relationship is unchanged."
-  ],
-  "er_dual_resolution_ack": [
-    "好。那就照我们说定的。",
-    "All right. Then that is what we have agreed."
-  ],
   "er_dual_future_schema": [
     "后宫扩展存档版本{0}高于本版本，已暂停该扩展写入；现有数据保留。",
     "Harem save schema {0} is newer than this version. Extension writes are paused; existing data is preserved."
@@ -126,41 +90,5 @@
   "er_d01_c2_prompt": [
     "笔尖悬在纸上。",
     "The pen hovers over the paper."
-  ],
-  "er_d02_c1_prompt": [
-    "他的手搭在柜沿，人还站着没动。",
-    "His hand rests on the counter's edge. He has not moved."
-  ],
-  "er_d03_c2_prompt": [
-    "纸上两行字摊在柜面，两个人都在看他。",
-    "Two lines of handwriting lie on the counter. Both women are looking at him."
-  ],
-  "er_d_act2a_done": [
-    "后宫线第二幕（上）已完成；几天后继续。",
-    "D Act 2, part one, is complete. The rest comes in a few days."
-  ],
-  "er_d_act2_done": [
-    "后宫线第二幕已完成；第三幕「双螺旋」接入中。",
-    "D Act 2 is complete. Act 3, Double Helix, is being connected."
-  ],
-  "er_d04_c1_prompt": [
-    "她捏着布袋口，话说完了，人还没走。",
-    "She is holding the bag closed. She has said it, and she has not left."
-  ],
-  "er_d05_c2_prompt": [
-    "她说完那句话，自己先把手缩了回去。",
-    "She has pulled her hand back before he can answer."
-  ],
-  "er_d_act3_done": [
-    "后宫线第三幕已完成；第四幕「结局」接入中。",
-    "D Act 3 is complete. Act 4, the ending, is being connected."
-  ],
-  "er_d08_c1_prompt": [
-    "她说要退出，手已经搭上凳子边，准备起身。",
-    "She says she is leaving, one hand already on the stool."
-  ],
-  "er_d09_c2_prompt": [
-    "埃莉诺看着莉迪亚，莉迪亚看着地，两个人都在等下一句。",
-    "Eleanor looks at Lydia. Lydia looks at the floor. Both are waiting."
   ]
 }

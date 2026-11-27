@@ -127,6 +127,9 @@ footer a{color:var(--gold);text-decoration:none}
 .scene-list{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:13px 0}
 .scene-list li{font-size:12px;line-height:1.5;border:1px solid var(--line);border-radius:7px;background:var(--panel-2);padding:5px 9px}
 .act-summary{color:var(--muted);font-size:14px;line-height:1.8;margin:12px 0}
+.post-ending{margin-top:20px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.015)}
+.post-ending h4{margin:0 0 8px;font-size:15px;color:var(--gold)}
+.post-ending p{margin:0;color:var(--muted);line-height:1.8;font-size:14px}
 .guide-back{display:inline-block;color:var(--gold);font-size:12px;margin-top:20px}.chart-node{cursor:pointer}
 .chart-node:focus-visible rect{stroke-width:4}.guide-act:target,.guide-route:target{outline:2px solid var(--gold);outline-offset:6px}
 @media(max-width:600px){.guide-route{padding:18px 15px}.entry-box{padding:14px}.entry-box ul,.act-checks{font-size:13px}.guide-route h3{font-size:22px}}
@@ -218,7 +221,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <p>常规节点统一按幕；金色为四条主路线的完成结局。点击节点查看条件与操作。</p>
   </div>
-  <div class="chart-note"><b>先看判定，再看日期：</b>普通告白的交易记录、手镯交割、侍从实际补款和P2付款是主要门槛。点击图中节点可跳到下面对应的分幕攻略。日期只是及时推进示例；入线失败不会靠等天数自动修复。两个安全救母方案都可继续恋爱E1、侍从E3、后宫E4或朋友E2；营养果开源不另分结局。立即公开转革命军E9。</div>
+  <div class="chart-note"><b>先看判定，再看日期：</b>普通告白的交易记录、手镯交割、侍从实际补款和P2付款是主要门槛。点击图中节点可跳到下面对应的分幕攻略。日期只是及时推进示例；入线失败不会靠等天数自动修复。两个安全救母方案都可继续恋爱E1、侍从E3、后宫E4或朋友E2；营养果开源不另分结局。立即公开转革命军E9。完成 E1／E3／E4／E9 后，恋爱、侍从、革命军各解锁 4 场循环窗口日常，后宫沿用两人日常；日常不推进主线，也不参与结局判定。</div>
   <div class="toolbar">
   <div class="legend">
     <span class="chip"><i class="dot regular"></i>恋爱线</span>
@@ -234,7 +237,7 @@ footer a{color:var(--gold);text-decoration:none}
 </section>
 
 <section id="guide" class="guide-section" aria-labelledby="guide-title">
-  <div class="section-head"><div><div class="eyebrow">Walkthrough</div><h2 id="guide-title">入线条件与分幕攻略</h2></div><p>先读“必须做到”，再按幕看剧情顺序和推进条件。这里只写当前新档流程。</p></div>
+  <div class="section-head"><div><div class="eyebrow">Walkthrough</div><h2 id="guide-title">入线条件与分幕攻略</h2></div><p>先读“必须做到”，再按幕看剧情顺序和推进条件。这里只写当前新档流程；结局后另有循环窗口日常，见各路线末尾。</p></div>
   <div class="guide-filter" role="group" aria-label="筛选路线攻略">
     <button type="button" data-guide-filter="all" aria-pressed="true">全部</button>
     <button type="button" data-guide-filter="common" aria-pressed="false">共同剧情</button>
@@ -297,10 +300,10 @@ footer a{color:var(--gold);text-decoration:none}
 </footer>
 <script>
 const DATA = {
-  "version": "1.37",
-  "updated": "2026-11-24",
+  "version": "1.40",
+  "updated": "2026-11-27",
   "scope": "current_rewrite",
-  "commonTextRevision": "2026-11-24 chapter 5 warning dismissal fix and 1.33 content cleanup; chapter order, choice outcomes and ending conditions unchanged",
+  "commonTextRevision": "2026-11-27 1.40 CG window expressions, trade-CG scheduling fixes and the maid salon-buzz visit; act order, target days, choice outcomes and ending conditions unchanged",
   "routes": {
     "regular": {
       "name": "恋爱线"
@@ -513,7 +516,11 @@ const DATA = {
             "love_a3_04"
           ]
         }
-      ]
+      ],
+      "postEnding": {
+        "title": "结局后日常（E1 后）",
+        "summary": "婚礼后每 4 天可触发一场循环窗口日常，共 4 场：《热汤与账本》《新裙子与小私心》《母亲的话与她的话》《披着你的外套等打烊》。不推进主线，也不改变结局判定。"
+      }
     },
     {
       "id": "harem",
@@ -613,7 +620,11 @@ const DATA = {
             "dv13"
           ]
         }
-      ]
+      ],
+      "postEnding": {
+        "title": "结局后复用日常（E4 后）",
+        "summary": "完成 E4 后，两人会轮流在窗口来访；现有循环日常为《莉迪亚独自》《埃莉诺独自》。不推进主线，也不改变结局判定。"
+      }
     },
     {
       "id": "maid",
@@ -699,17 +710,20 @@ const DATA = {
           "scenes": [
             "想试一次",
             "唱快了",
-            "再唱一晚"
+            "再唱一晚",
+            "楼上的风声"
           ],
-          "summary": "P2已付款后进入试唱、第一次失利和再次登台。",
+          "summary": "P2已付款后进入试唱、第一次失利和再次登台。 演出成功后，一位上层客人在交易时带来沙龙的风声。",
           "checks": [
             "“答应不看／问她学到什么／提一首稳的歌”都会继续第二次登台，没有额外唱功数值检查。",
-            "完成成功返场后，继续营业等第四幕；不是到这里就已经出现最终CG。"
+            "完成成功返场后，继续营业等第四幕；不是到这里就已经出现最终CG。",
+            "《楼上的风声》是第三幕后、第四幕前的交易来访；成交或未成交都有收尾，不影响入线。"
           ],
           "sourceIds": [
             "v2_a3c1",
             "v2_a3c2",
-            "v2_a3c3"
+            "v2_a3c3",
+            "v2_salon_buzz"
           ]
         },
         {
@@ -735,7 +749,11 @@ const DATA = {
             "v2_a4c4"
           ]
         }
-      ]
+      ],
+      "postEnding": {
+        "title": "结局后日常（E3 后）",
+        "summary": "完成 E3 后，每 4 天可触发一场循环窗口日常，共 4 场：《白围裙的报账与讨赏》《新曲的私房试听》《磨脚的新鞋扣》《作废的旧契约》。不推进主线，也不改变结局判定。"
+      }
     },
     {
       "id": "rev",
@@ -825,7 +843,11 @@ const DATA = {
             "v2_r4c4"
           ]
         }
-      ]
+      ],
+      "postEnding": {
+        "title": "结局后日常（E9 后）",
+        "summary": "完成 E9 后，每 4 天可触发一场循环窗口日常，共 4 场：《敲两下的暗号》《偷来的半个钟头》《藏不住的擦伤》《隧道里的风还在等》。不推进主线，也不改变结局判定。"
+      }
     }
   ],
   "endings": [
@@ -1698,6 +1720,7 @@ function renderGuides(){
     <ol class="act-list">${g.acts.map(a=>`<li class="guide-act" id="${a.id}"><div class="act-heading"><h4>${escapeText(a.title)}</h4><span class="act-date">普通 ${escapeText(a.day)} 天 · 提前 ${escapeText(a.early)} 天</span></div>
       <ol class="scene-list" aria-label="剧情顺序">${a.scenes.map(t=>`<li>${escapeText(t)}</li>`).join('')}</ol>
       <p class="act-summary">${escapeText(a.summary)}</p><ul class="act-checks">${a.checks.map(t=>`<li>${escapeText(t)}</li>`).join('')}</ul></li>`).join('')}</ol>
+    ${g.postEnding?`<div class="post-ending"><h4>${escapeText(g.postEnding.title)}</h4><p>${escapeText(g.postEnding.summary)}</p></div>`:''}
     <a class="guide-back" href="#map">↑ 回到流程图</a></article>`).join('');
   document.querySelectorAll('[data-guide-filter]').forEach(el=>el.addEventListener('click',()=>showGuide(el.dataset.guideFilter)));
   document.querySelectorAll('[data-route].card-link').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();followGuide('guide-'+el.dataset.route);}));

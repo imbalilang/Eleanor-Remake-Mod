@@ -267,6 +267,18 @@ def render_dual_post(out, data, blocks):
         out.append("")
 
 
+def render_post_daily(out, data, route, label):
+    scenes = [sc for sc in data.get("scenes", []) if sc.get("route") == route]
+    if not scenes:
+        return
+    out.append(f"# 结局后日常（{label}；循环内容，不推进故事）\n")
+    for sc in scenes:
+        out.append(f"## {sc['id']}　{sc.get('title_zh','')}")
+        out.append("")
+        out.extend(lines_of(sc))
+        out.append("")
+
+
 def render_v2(out, data, blocks, title, story=None, extra=None, cg_data=None, route_key=None, route_name=None):
     out.append(title)
     for sc in data["scenes"]:
@@ -546,6 +558,7 @@ def main():
     rev1_blocks = {b["id"]: b for b in rev1.get("blocks", [])}
     rev2_data = load(ROOT / "Content" / "revolution_v2.json")
     rev2_blocks = content_blocks_from_scenes(rev2_data)
+    post_daily = load(ROOT / "Content" / "post_ending_daily_v1.json")
     ui = load(ROOT / "tools" / "ui_text_zh.json")
     for ui_path in sorted((ROOT / "Content").glob("*_ui.json")):
         raw = load(ui_path)
@@ -566,19 +579,23 @@ def main():
         "- 恋爱/后宫/v2 路线按玩家实际触发顺序排列；CG 章节插在对应场景之后，每条路线以最终场景/结局收束。",
         "- CG 章节来自 `Content/CG章节`、`src/ChapterScripts.g.cs` 与 `src/ChapterVisits.cs`；现有场景接图以“本次接图定稿”列在同场之后。",
         "- CG 章节只在中文界面启用；交易章插在营业客位，夜邀章在睡前，晨图在次日开门前。后宫结局后的复用日常单列。",
+        "- 结局后日常来自 `Content/post_ending_daily_v1.json`（恋爱/侍从/革命军各 4 场）与后宫 `dr_daily_2/3`；属循环内容，不推进主线。",
         "- 旧档路线只给块索引；`附录`列出确认不会被任何代码路径播放的块。",
         "- 选择、交易反应、条件块都在正文中标注；一次周目实际只走其中一条。",
         "",
     ]
     render_common(out, story, src, ui)
     render_love(out, love_data, love_blocks, cg_data=cg_data)
+    render_post_daily(out, post_daily, "love", "恋爱线")
     render_dual(out, dual_data, dual_blocks, cg_data=cg_data)
     render_dual_post(out, dual_data, dual_blocks)
     render_v2(out, maid2_data, maid2_blocks, "# 侍从线 v2（新档；按玩家实际顺序，CG 插在对应场景之后）\n",
               story=story, extra={"v2_a0c1": ["c07.b004", "c07.b005", "c07.b006", "c07.b007"]},
               cg_data=cg_data, route_key="maid", route_name="侍从线 E3")
+    render_post_daily(out, post_daily, "maid", "侍从线")
     render_v2(out, rev2_data, rev2_blocks, "# 革命军线 v2（新档；按玩家实际顺序，CG 插在对应场景之后）\n",
               cg_data=cg_data, route_key="rev", route_name="革命军线 E9")
+    render_post_daily(out, post_daily, "rev", "革命军线")
     render_endings(out, ui)
     render_legacy(out, maid_blocks, dual_blocks, rev1_blocks)
     out.append("# 附录：确认不会被代码播放的块\n")
@@ -592,6 +609,7 @@ def main():
     out.append("- 本文件不模拟周目；标记为“分支/反应/条件”的块不会在一次周目中全部出现。")
     out.append("- 共同线的块顺序是代码引用顺序，不等于运行时的逐句顺序；实际拼接以 `src/EleanorStory.cs` 为准。")
     out.append("- CG 事件按路线、日期和前置触发。独立事件从窗口对白接图，交易按实际成交结果收尾。《一起醒来》在次晨亮图。旧章的接图位置排在同场正文之后。")
+    out.append("- 结局后日常需对应路线结局后才触发，循环播放，不改变周目顺序。")
     out.append("- 旧档分支（侍从旧版、后宫 d02–d09 与旧 dr 排期、革命军 R01–R14）在索引列出。")
     out.append("- 重跑本脚本会整体重写本文件；修改 Content 后请重新生成，不要手改本文件。")
     out.append("")

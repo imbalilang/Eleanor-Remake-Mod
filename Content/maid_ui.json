@@ -8,28 +8,28 @@
     "A pass and formal clothes"
   ],
   "er_maid_project_3": [
-    "第一单",
-    "The first order"
+    "曲谱与常驻筹备",
+    "Scores and residency prep"
   ],
   "er_maid_project_4": [
-    "自己的事业",
-    "A business of her own"
+    "年度晚会与长期合约",
+    "Annual gala and long-term contract"
   ],
   "er_maid_project_desc_1": [
     "给她们母女找个能长住的地方，添上门锁、灯和一张工作台。",
     "A lasting home for mother and daughter, with a lock, lights and room for a worktable."
   ],
   "er_maid_project_desc_2": [
-    "办妥埃莉诺的通行手续，再备一套出入上层区的正装。",
-    "Arrange Eleanor's legal passage and a set of formal clothes for the Upper Level."
+    "办妥埃莉诺的上层区通行手续，打通沙龙试唱台次，并备齐登台礼服。",
+    "Arrange Eleanor's Upper Level pass, secure a salon audition slot, and prepare her stage attire."
   ],
   "er_maid_project_desc_3": [
-    "备好样品和验货工具，让她接下第一笔正式生意。",
-    "Samples and inspection tools for her first legitimate order."
+    "替她约好固定伴奏乐手、租下排练间，并打点沙龙常驻档期。",
+    "Book a steady accompanist, rent a rehearsal room, and arrange her salon residency slots."
   ],
   "er_maid_project_desc_4": [
-    "办登记、找场地，为她自己的事业安排一场正式亮相。",
-    "Registration, premises and a proper launch for her own business."
+    "打点年度晚会的礼服翻新、乐队排练与长期演出合约，替她彻底站稳舞台。",
+    "Arrange gown tailoring, band rehearsals, and a long-term salon contract to secure her place on stage."
   ],
   "er_maid_plan_cash": [
     "现金方案",
@@ -50,26 +50,6 @@
   "er_maid_project_lower_cost": [
     "需下城区声望≥{0}，消耗{1}。",
     "Requires Lower Level reputation ≥{0}; spends {1}."
-  ],
-  "er_maid_wait_project_1": [
-    "你托王尔德找住处的事，还得再等等？",
-    "The home you asked Wilde to find. Does that need a little longer?"
-  ],
-  "er_maid_wait_project_2": [
-    "回上层区的手续，还有那套正装，王尔德那边还得再等等？",
-    "The papers for going upstairs, and the formal clothes. Does Wilde need to wait a little longer?"
-  ],
-  "er_maid_wait_project_3": [
-    "第一单的样品和工具，跟王尔德谈得怎么样了？",
-    "The samples and tools for the first order. How are things going with Wilde?"
-  ],
-  "er_maid_wait_project_4": [
-    "登记、场地，还有那场亮相……王尔德那边的筹备，你还在想办法？",
-    "Registration, premises, the launch... Still working out the preparations with Wilde?"
-  ],
-  "er_maid_quote": [
-    "基准费用：{0}\n本次原生报价：{1}\n王尔德抵付额度：{2}（优先使用，非派系声望）\n实际现金：{3}／当前持有：{4}\n上层区声望：当前{5}，要求≥{6}，消耗{7}，扣后{8}\n下城区声望：当前{9}，要求≥{10}，消耗{11}，扣后{12}\n声望消耗固定；降低声望可能影响原版派系待遇。",
-    "Base cost: {0}\nCurrent native quote: {1}\nWilde's credit used first: {2} (not faction reputation)\nCash charged: {3} / held: {4}\nUpper Level reputation: {5}, requires {6}, spends {7}, leaves {8}\nLower Level reputation: {9}, requires {10}, spends {11}, leaves {12}\nReputation costs are fixed. Lower reputation may affect native faction benefits."
   ],
   "er_maid_paid_record": [
     "已结清：{0}\n实际现金支出：{1}\n王尔德抵付额度支出：{2}\n上层区声望支出：{3}\n下城区声望支出：{4}\n{5}",
@@ -92,16 +72,16 @@
     "Requires an active attendant agreement and her mother's confirmed safety in either research outcome."
   ],
   "er_maid_prereq_2": [
-    "需要完成基础主从恋爱第23章，并已听取安顿结果。",
-    "Requires the base attendant romance conclusion (reading chapter 23) and the housing result."
+    "需要完成侍从线前期确认，并先办妥「安顿」。",
+    "Requires completing the earlier attendant route milestone and settling 'A place to live' first."
   ],
   "er_maid_prereq_3": [
-    "需要完成第24章通行来访。",
-    "Requires the pass visit in reading chapter 24."
+    "需要埃莉诺完成上层沙龙首次成功登台，并已办妥「通行与正装」。",
+    "Requires Eleanor's successful Upper Level salon debut and 'A pass and formal clothes' settled."
   ],
   "er_maid_prereq_4": [
-    "需要完成第26章采购商来访。",
-    "Requires the procurement buyer's visit in reading chapter 26."
+    "需要埃莉诺敲定沙龙常驻排期，并已办妥「曲谱与常驻筹备」。",
+    "Requires Eleanor's salon residency schedule to be settled and 'Scores and residency prep' completed."
   ],
   "er_maid_purchase_terms": [
     "可延期，无期限、利息或催缴；不买不影响救母或已有恋爱。每项仅一个现金方案，有声望优惠的项目达标后自动降价，不消耗声望，最多结算一次。明确解除约定后，后续项目关闭，已付款支持仍交付，资源不退还。",
@@ -110,10 +90,6 @@
   "er_maid_purchase_success": [
     "本项筹备已完成，等待埃莉诺来访。下一项将在本次结果确认后开放。",
     "Preparations paid. Await Eleanor's visit. The next project opens after its required result."
-  ],
-  "er_maid_missing": [
-    "当前还缺：现金{0}、上层区声望{1}、下城区声望{2}。本次未扣除任何资源。",
-    "Still needed: {0} cash, {1} Upper Level reputation, {2} Lower Level reputation. No resources were charged."
   ],
   "er_maid_purchase_failed": [
     "本次筹备未完成，购买已回滚，可重试。",
@@ -131,77 +107,9 @@
     "不追加付款。按本次明确选择推进。",
     "No additional payment. Continue with this choice."
   ],
-  "er_maid_entry_normal": [
-    "你都安排好了。去找侦探吧。",
-    "You've arranged it. Go see the detective."
-  ],
-  "er_maid_entry_offer": [
-    "下一步，我可以帮你。",
-    "I can help with what comes next."
-  ],
-  "er_maid_entry_confirm": [
-    "就这么定了。（支付800信用点）",
-    "Agreed. (Pay 800 credits)"
-  ],
-  "er_maid_entry_back": [
-    "还是算了。你按自己的安排去查。",
-    "Let's leave it. Follow your own investigation plan."
-  ],
-  "er_maid_entry_confirm_desc": [
-    "支付800信用点作为预付工钱；她自筹的调查款不动。",
-    "Pay 800 credits as advance wages; her own investigation fund is untouched."
-  ],
-  "er_maid_entry_offer_desc": [
-    "先听条件。不付款，也不锁定路线。",
-    "Hear the terms first. No payment and no route lock."
-  ],
   "er_maid_payment_retry": [
     "当前未能完成领取或付款。请腾出物品空间或补足资源后重试；尚未结算的选项不会推进。",
     "Delivery or payment could not complete. Make storage space or obtain the resources, then retry. An uncompleted choice does not advance the story."
-  ],
-  "er_maid_notice_entry": [
-    "约定成立：到她以自己的名字重返上层区为止。调查继续。",
-    "Agreement made: until she returns upstairs under her own name. The investigation continues."
-  ],
-  "er_maid_notice_continue": [
-    "继续共同调查，关系照常发展。",
-    "The investigation and your relationship continue."
-  ],
-  "er_maid_convert_terms": [
-    "明确结束侍从约定，后续归来项目关闭。既付支持照常交付，成果保留，资源不退还。不取消既有救母结果。",
-    "Ends the attendant agreement and closes future return projects. Paid support is delivered, achievements remain, and resources are not refunded. Existing rescue results remain."
-  ],
-  "er_maid_confirm_leak": [
-    "确认：不等保护落实，现在公开。",
-    "Confirm: publish now, before protection is secured."
-  ],
-  "er_maid_reconsider": [
-    "返回，重新选择。",
-    "Go back and choose again."
-  ],
-  "er_maid_reconcile_yes": [
-    "是我做错了。以后我知道的危险，第一个告诉你。",
-    "I was wrong. From now on, you'll be the first to hear about any danger I know of."
-  ],
-  "er_maid_reconcile_no": [
-    "以后该瞒的，我还是会瞒着你。",
-    "If I think something should be kept from you, I'll still keep it."
-  ],
-  "er_maid_notice_honesty": [
-    "侍从约定已结束：你明确拒绝了今后坦诚相告。后续接朋友关系。",
-    "Agreement ended: you explicitly refused future honesty. The relationship continues as friends."
-  ],
-  "er_maid_confess_yes": [
-    "听明白了。做我的侍从，也做我的恋人。",
-    "I understand. Be my attendant, and my lover."
-  ],
-  "er_maid_confess_normal": [
-    "我也喜欢你。约定作废吧，我们就做恋人。",
-    "I love you too. End the agreement; let's just be lovers."
-  ],
-  "er_maid_confess_friend": [
-    "你对我很重要，但我想我们还是做朋友。",
-    "You're important to me, but we should stay friends."
   ],
   "er_maid_procure_no1": [
     "她的生意，不归我卖。",
@@ -215,125 +123,9 @@
     "那个想绕过我、给你开双倍价的采购商，去过了？……你没答应他吧？——我知道你没有。我就是想听你亲口说。",
     "That buyer who wanted to cut me out and offered you twice my price. He came by? ...You didn't agree, did you? I know you didn't. I just want to hear you say it."
   ],
-  "er_maid_one_step": [
-    "收好。一步一步来。",
-    "Keep it safe. One step at a time."
-  ],
-  "er_maid_final_1": [
-    "那就重新约一次。这回，没有期限。",
-    "Then let's make a new agreement. No end date this time."
-  ],
-  "er_maid_final_2": [
-    "听清楚了。我的大小姐，过来。",
-    "I hear you. Come here, my lady."
-  ],
-  "er_maid_final_3": [
-    "既然是你自己选的，这声主人，我就当真了。",
-    "Since it's your choice, I'll take that 'master' to heart."
-  ],
-  "er_maid_notice_basic": [
-    "主从恋爱已确认。上层区归来篇已开放，可在王尔德处筹备；没有期限。",
-    "Attendant romance confirmed. The return upstairs is open at Wilde's, without a deadline."
-  ],
-  "er_maid_reward_prompt": [
-    "她为你留了一件纪念物。",
-    "She has kept a memento for you."
-  ],
-  "er_maid_reward_claim": [
-    "收下纪念物，继续谈话。",
-    "Accept the memento and continue."
-  ],
-  "er_maid_reward_later": [
-    "稍后再来领取。",
-    "Collect it on another visit."
-  ],
-  "er_maid_reward_desc": [
-    "需要可用物品空间。领取成功才记录奖励；空间不足可以重试。",
-    "Requires storage space. The reward is recorded only after delivery. Retry if storage is full."
-  ],
-  "er_maid_reward_keep": [
-    "那我先收好。你准备好了再来拿。",
-    "I'll keep it safe. Collect it when you're ready."
-  ],
-  "er_maid_safe_visit": [
-    "今天有件事想告诉你。",
-    "There's something I'd like to tell you today."
-  ],
-  "er_maid_buyer_intro": [
-    "埃莉诺说这里有值得一看的货。东西和价钱，我们当面谈。",
-    "Eleanor said your stock was worth a look. Let's discuss the goods and price in person."
-  ],
-  "er_maid_buyer_close": [
-    "今天就谈到这里。合不合适，按东西说话。",
-    "That will do for today. The goods decide whether a deal is right."
-  ],
   "er_maid_news_title": [
     "水培农场旧案正式撤销",
     "Hydroponic farm conviction overturned"
-  ],
-  "er_maid_tragic_food_close": [
-    "今天就到这儿吧。谢谢你……没催我。",
-    "That's enough for today. Thank you... for not rushing me."
-  ],
-  "er_maid_betrayal_mother_died": [
-    "后来传来消息：她的母亲没能活下来。",
-    "Word comes later: her mother did not survive."
-  ],
-  "er_maid_ending_exit": [
-    "后来，你没有再参与她母亲的调查。该还的东西都还了，那份约定也到此为止。她照着自己的办法往前走，往后的事，就是她自己的事了。",
-    "Later, you take no further part in her mother's investigation. What needed returning is returned, and the agreement ends there. She goes on her own way; what comes next is hers."
-  ],
-  "er_maid_choice_custody_keep": [
-    "盘放我这儿。在我柜台上，没人拿得走。",
-    "Leave the drive with me. It's on my counter. No one takes it from there."
-  ],
-  "er_maid_choice_custody_keep_desc": [
-    "你成为保管人。交给谁，仍须她点头。",
-    "You become the custodian. Who receives it still needs her approval."
-  ],
-  "er_maid_choice_custody_carry": [
-    "你贴身带着。他们要找，会先找到我这儿——让他们来。",
-    "Keep it on you. If they come looking, they'll find me first — let them."
-  ],
-  "er_maid_choice_custody_carry_desc": [
-    "盘由她贴身保管，你不能擅自出售它；你的店替她挡人。",
-    "She keeps the drive on her person; you cannot sell it behind her back. Your shop takes the first knock."
-  ],
-  "er_maid_choice_threat_leave": [
-    "话我会带到。门在那边。",
-    "I'll pass the message on. The door is that way."
-  ],
-  "er_maid_choice_threat_leave_desc": [
-    "记住条件，下一章告诉她；威胁仍在。",
-    "Remember the offer and tell her next time. The threat remains."
-  ],
-  "er_maid_choice_threat_report": [
-    "你今天说的每个字，治安部都会知道。（治安部声望 {0}+）",
-    "Every word you said today will reach Security. (Security rep {0}+)"
-  ],
-  "er_maid_choice_threat_report_desc": [
-    "治安部声望达到 30 即可受理这次的威胁记录。",
-    "Security reputation 30 is enough for them to take this threat report."
-  ],
-  "er_maid_choice_threat_upper": [
-    "要谈，就让上层区的人正式来谈。（上层区声望 {0}+）",
-    "If you want to talk, have the Upper Level make a formal approach. (Upper Level rep {0}+)"
-  ],
-  "er_maid_choice_threat_upper_desc": [
-    "用研究工作记录换取一个可核验的回应。",
-    "Trade the research work log for a verifiable response."
-  ],
-  "er_maid_choice_route_exit": [
-    "我想清楚了。调查我不再参与，店里的约定也到这里。",
-    "I've decided. I'll leave the investigation, and our agreement ends here too."
-  ],
-  "er_maid_choice_route_exit_desc": [
-    "明确退出调查并结束侍从约定，盘归还给她，后续归来项目关闭；既付支持照常交付，不退款，不撤销已有救母成果。",
-    "Explicitly leave the investigation and end the attendant agreement. Return the drive and close future return projects. Paid support is delivered; no refund or reversal of existing rescue results."
-  ],
-  "er_maid_notice_project_open": [
-    "王尔德那里多了一项筹备：{0}。",
-    "There's a new preparation at Wilde's: {0}."
   ],
   "er_maid_notice_wilde_help": [
     "王尔德现在可以为埃莉诺提供更多的帮助。",
@@ -342,21 +134,5 @@
   "er_maid_notice_repair": [
     "埃莉诺的筹备项目此前被提前解锁，已撤销并退回 {0} 信用点。剧情进度不受影响。",
     "Eleanor's preparation was unlocked ahead of the story. It has been revoked and {0} credits refunded. Story progress is unaffected."
-  ],
-  "er_maid_notice_migrated": [
-    "主从恋爱已确认。",
-    "Attendant romance confirmed."
-  ],
-  "er_maid_outfit_a": [
-    "这身是穿给上面的人看的。那身，穿给我看的。",
-    "This one is for the people upstairs. That one is for me."
-  ],
-  "er_maid_outfit_b": [
-    "两身都好看。反正你都得回来。",
-    "Both look good. You have to come back either way."
-  ],
-  "er_maid_outfit_c": [
-    "先过来。让我看清楚。",
-    "Come here first. Let me see for myself."
   ]
 }

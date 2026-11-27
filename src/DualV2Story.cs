@@ -123,13 +123,66 @@ namespace EleanorRomance
         private static StoreClient CreateDv01()
         {
             StoreClient client = Lydia("dual_dv01");
+            var tracker = ConfigureLydiaLuxuryBuy(client, 500);
             Dialogue root = Build("Eleanor", "dv01_b001");
             DualText.Choices(root, "er_dual_prompt",
-                DualText.Choice("dv01_c1_1", Build("Eleanor", "dv01_b004")),
-                DualText.Choice("dv01_c1_2", Build("Eleanor", "dv01_b002")),
-                DualText.Choice("dv01_c1_3", Build("Eleanor", "dv01_b003", "dv01_b004")));
-            Finish(client, root, "dv01");
+                DualText.Choice("dv01_c1_1", Build("Eleanor", "dv01_b004", "dv01_shop")),
+                DualText.Choice("dv01_c1_2", Build("Eleanor", "dv01_b002", "dv01_shop")),
+                DualText.Choice("dv01_c1_3", Build("Eleanor", "dv01_b003", "dv01_b004", "dv01_shop")));
+            StoryEngine.InterceptDismiss(client, () => TradeOutcome("dv01", "Eleanor", tracker, seller: false), () =>
+            {
+                DualState.SetSceneDay("dv01", DualState.Today);
+                DualDirector.CompleteScene("dv01");
+            });
             return Ready(client, root, "dv01_b001");
+        }
+
+        private static StoryEngine.DealTracker ConfigureLydiaLuxuryBuy(StoreClient client, int budget)
+        {
+            client.clientIntent = StoreClient.ClientIntent.BUY;
+            client.clientBuyingTagList.Add(TypeHelper.LUXURY_ITEM);
+            client.clientBuyingTagList.Add(TypeHelper.ART);
+            client.clientBuyingTagList.Add(TypeHelper.HIGHEND);
+            client.SetBudget(budget);
+            client.SetVariety();
+            var tracker = new StoryEngine.DealTracker();
+            client.onItemBought += (item, paid) =>
+            {
+                if (item != null) tracker.Record(item, paid, eleanorIsSeller: false);
+            };
+            return tracker;
+        }
+
+        private static Dialogue TradeOutcome(string prefix, string companion, StoryEngine.DealTracker tracker, bool seller)
+        {
+            string suffix = !tracker.Any ? "_t_none"
+                : seller ? (tracker.Lowball ? "_t_low" : tracker.Discount ? "_t_over" : "_t_fair")
+                : (tracker.Overcharge ? "_t_over" : tracker.Discount ? "_t_disc" : "_t_fair");
+            string label = prefix + suffix;
+            DualState.SetInt("cursor." + label, 0);
+            return Build(companion, label);
+        }
+
+        private static void SpawnDv08Stock()
+        {
+            string[] ids = { "scrap_metal", "common_electronic" };
+            for (int i = 0; i < ids.Length; i++)
+            {
+                string key = "stock.dv08." + i;
+                if (DualState.Flag(key)) continue;
+                try
+                {
+                    GameItem item = ItemSpawner.Spawn(ids[i]);
+                    if (item == null) throw new InvalidOperationException("Missing item " + ids[i]);
+                    ItemFeatureHelper.SetSecondHand(item);
+                    PlayerStore.Instance.AddDirectSellingItemToTable(item, isOwend: false, isStolen: false);
+                    DualState.Flag(key, true);
+                }
+                catch (Exception ex)
+                {
+                    ModEntry.LogError("Dual dv08 stock " + ids[i] + ": " + ex);
+                }
+            }
         }
 
         private static StoreClient CreateDv02()
@@ -202,14 +255,42 @@ namespace EleanorRomance
         private static StoreClient CreateDv07() => Single(Eleanor("dual_dv07"),
             "dv07", "Lydia", "dv07_b001", "dv07_b001");
 
-        private static StoreClient CreateDv08() => SimpleChoice(Eleanor("dual_dv08"),
-            "dv08", null, 1, "dv08_b001", "dv08_b004", 1,
-            new[] { "dv08_b002", "dv08_b003" }, null, () =>
+        private static StoreClient CreateDv08()
+        {
+            StoreClient client = EleanorStory.NewEleanorClient(
+                "dual_dv08", ModConstants.EleanorPlainCasualPortrait, StoreClient.ClientIntent.SELL);
+            client.SetWholesale(20);
+            var tracker = new StoryEngine.DealTracker();
+            client.onItemSold += (item, paid) =>
+            {
+                if (item != null) tracker.Record(item, paid, eleanorIsSeller: true);
+            };
+            Dialogue root = Build(null, "dv08_b001");
+            Dialogue common = Build(null, "dv08_b004");
+            Dialogue b2 = Build(null, "dv08_b002", "dv08_b004");
+            Dialogue b3 = Build(null, "dv08_b003", "dv08_b004");
+            DualText.Choices(root, "er_dual_prompt",
+                DualText.Choice("dv08_c1_1", common),
+                DualText.Choice("dv08_c1_2", b2),
+                DualText.Choice("dv08_c1_3", b3));
+            StoryEngine.OnDialogueFinished(root, () =>
+            {
+                SpawnDv08Stock();
+                if (!DualState.Flag("cg.dv08_shown"))
+                {
+                    DualState.Flag("cg.dv08_shown", true);
+                    EndingPageUI.ShowChapterPage("er_cg_dv08_title", "er_event_harem_first_kiss_cg", "er_cg_dv08_text");
+                }
+            });
+            StoryEngine.InterceptDismiss(client, () => TradeOutcome("dv08", null, tracker, seller: true), () =>
             {
                 DualState.Relation = 1;
                 DualState.Flag("d.act3a", true);
-                EndingPageUI.ShowChapterPage("er_cg_dv08_title", "er_event_harem_first_kiss_cg", "er_cg_dv08_text");
+                DualState.SetSceneDay("dv08", DualState.Today);
+                DualDirector.CompleteScene("dv08");
             });
+            return Ready(client, root);
+        }
 
         private static StoreClient CreateDv09() => SimpleChoice(LydiaDate("dual_dv09"),
             "dv09", null, 2, "dv09_b001", "dv09_b004", 1,
@@ -231,13 +312,27 @@ namespace EleanorRomance
             return Ready(client, root);
         }
 
-        private static StoreClient CreateDv11() => SimpleChoice(Lydia("dual_dv11"),
-            "dv11", null, 4, "dv11_b001", "dv11_b004", 1,
-            new[] { "dv11_b002", "dv11_b003" }, null, () =>
+        private static StoreClient CreateDv11()
+        {
+            StoreClient client = Lydia("dual_dv11");
+            var tracker = ConfigureLydiaLuxuryBuy(client, 500);
+            Dialogue root = Build(null, "dv11_b001");
+            Dialogue common = Build(null, "dv11_b004", "dv11_shop");
+            Dialogue b2 = Build(null, "dv11_b002", "dv11_b004", "dv11_shop");
+            Dialogue b3 = Build(null, "dv11_b003", "dv11_b004", "dv11_shop");
+            DualText.Choices(root, "er_dual_prompt",
+                DualText.Choice("dv11_c4_1", common),
+                DualText.Choice("dv11_c4_2", b2),
+                DualText.Choice("dv11_c4_3", b3));
+            StoryEngine.InterceptDismiss(client, () => TradeOutcome("dv11", null, tracker, seller: false), () =>
             {
                 DualState.Flag("dv11.told", true);
                 DualState.Flag("d.act3b", true);
+                DualState.SetSceneDay("dv11", DualState.Today);
+                DualDirector.CompleteScene("dv11");
             });
+            return Ready(client, root);
+        }
 
         private static StoreClient CreateDv12() => SimpleChoice(Lydia("dual_dv12"),
             "dv12", null, 1, "dv12_b001", "dv12_b004", 1,

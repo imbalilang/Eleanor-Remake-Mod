@@ -74,6 +74,23 @@ def _add_love(exprs, data):
                     exprs[f"er_love_{block['id']}_{index:02d}"] = expr
 
 
+def _add_post_daily(exprs, data):
+    for scene in data.get("scenes", []):
+        sid = scene["id"]
+        for index, line in enumerate(scene.get("lines", []), 1):
+            expr = line.get("expr")
+            if expr:
+                exprs[f"er_postdaily_{sid}_{index:02d}"] = expr
+
+
+def _add_cg_expressions(exprs, data):
+    for scene_id, sections in data.get("scenes", {}).items():
+        for section, items in sections.items():
+            for idx_str, expr in items.items():
+                if expr:
+                    exprs[f"er_cg_{scene_id}_{section}_{int(idx_str):02d}"] = expr
+
+
 def build(root):
     root = Path(root)
     exprs = {}
@@ -82,7 +99,9 @@ def build(root):
                      ("revolution_v2.json", _add_revolution_v2),
                      ("dual_romance_v04.json", _add_dual),
                      ("love_romance_v01.json", _add_love), ("love_romance_v02.json", _add_love),
-                     ("love_romance_v03.json", _add_love)):
+                     ("love_romance_v03.json", _add_love),
+                     ("post_ending_daily_v1.json", _add_post_daily),
+                     ("cg_expressions_v1.json", _add_cg_expressions)):
         path = root / "Content" / name
         if path.exists():
             fn(exprs, json.loads(path.read_text(encoding="utf-8")))

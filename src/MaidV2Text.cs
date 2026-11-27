@@ -54,6 +54,7 @@ namespace EleanorRomance
                 case "Eleanor": return L.Eleanor;
                 case "Sophia": return L.Get("er_name_sophia");
                 case "Thug": return L.Get("er_name_thug");
+                case "UpperBuyer": return L.Get("er_name_upper_buyer");
                 default: return L.Get("er_name_narrator");
             }
         }

@@ -276,10 +276,11 @@ namespace EleanorRomance
 
         private static Dialogue ContentLine(StoryLine line, StorySpeaker? backup = null)
         {
-            string speaker = line.Speaker == backup ? DialogUIManager.SEC : SpeakerName(line.Speaker);
+            string realName = SpeakerName(line.Speaker);
+            string speaker = line.Speaker == backup ? DialogUIManager.SEC : realName;
             Dialogue node = Text(speaker, L.Get(line.Key));
-            if (line.Speaker == backup) StoryPresentation.MarkCompanion(node, SpeakerName(line.Speaker));
-            PortraitExpression.Apply(node, line.Key, speaker);
+            if (line.Speaker == backup) StoryPresentation.MarkCompanion(node, realName);
+            PortraitExpression.Apply(node, line.Key, realName);
             return node;
         }
 

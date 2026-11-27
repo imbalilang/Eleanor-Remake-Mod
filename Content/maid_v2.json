@@ -1387,8 +1387,23 @@
       "title_en": "Sorted by Person",
       "client": "Eleanor",
       "portrait": "eleanor_scav",
-      "intent": "DIALOGUE",
+      "intent": "BUY",
       "next_code": 19,
+      "trades": [
+        {
+          "id": "T1",
+          "intent": "BUY",
+          "type": "HOUSEHOLD_GOOD",
+          "budget": "240",
+          "client": "Eleanor",
+          "outcomes": {
+            "公道": "v2_a2c1_trade_1",
+            "让利": "v2_a2c1_trade_2",
+            "高价": "v2_a2c1_trade_3",
+            "未成交": "v2_a2c1_trade_4"
+          }
+        }
+      ],
       "segments": [
         {
           "type": "lines",
@@ -1637,8 +1652,72 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "……那我先写账了，主人。",
-              "en": "...I'll do the ledger then, Master.",
+              "text": "对了，屋里吃的和日用品正好见底了，顺手先给我挑两样吧，省得收工再绕去配给站。",
+              "en": "By the way, food and household supplies at my place are running low—pick me out a couple of things now so I don't have to detour to the ration station after shift.",
+              "expr": "soft"
+            }
+          ]
+        },
+        "v2_a2c1_trade_1": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "数目刚好，我自己记进账本里了。",
+              "en": "Right on the mark. I've logged it in the ledger myself.",
+              "expr": "smile"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……那我先写今天的账了，主人。",
+              "en": "...I'll do today's ledger then, Master.",
+              "expr": "soft"
+            }
+          ]
+        },
+        "v2_a2c1_trade_2": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "喂，怎么又偷偷抹了零头？这回算我领你的情，下回不许再少算。",
+              "en": "Hey, did you knock the odd change off again? I'll accept it this once, but don't undercharge me next time.",
+              "expr": "shy"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……那我先写今天的账了，主人。",
+              "en": "...I'll do today's ledger then, Master.",
+              "expr": "soft"
+            }
+          ]
+        },
+        "v2_a2c1_trade_3": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "连自家店员都要多收一截，算了，懒得再跑一趟配给站，钱给你。",
+              "en": "Overcharging your own clerk... fine, I don't feel like hiking to the ration station. Take the money.",
+              "expr": "tsun"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "先写今天的账吧，主人。",
+              "en": "Back to today's ledger, Master.",
+              "expr": "neutral"
+            }
+          ]
+        },
+        "v2_a2c1_trade_4": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "今天架上正好缺顺手的吃的和日用品，算了，收工再去街口转转。",
+              "en": "Nothing suitable for food or daily supplies on the shelf today. Never mind, I'll check the corner after shift.",
+              "expr": "neutral"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……那我先写今天的账了，主人。",
+              "en": "...I'll do today's ledger then, Master.",
               "expr": "soft"
             }
           ]
@@ -1687,11 +1766,11 @@
           "options": [
             {
               "id": "C2_o1",
-              "label": "说我也是",
+              "label": "认真回应她",
               "mainline": false,
               "block": "v2_a2c2_c2_o1",
               "merge": true,
-              "label_en": "Say \"me too\""
+              "label_en": "Answer her seriously"
             },
             {
               "id": "C2_o2",
@@ -1777,13 +1856,18 @@
             },
             {
               "speaker": "Player",
+              "text": "从你咬着牙把这排货架理顺那天起，我就没把你当外人看过。",
+              "en": "Ever since the day you gritted your teeth and set those shelves in order, I've never looked at you as an outsider."
+            },
+            {
+              "speaker": "Player",
               "text": "我也喜欢你。",
               "en": "I like you too."
             },
             {
               "speaker": "Eleanor",
-              "text": "（偏开脸）……这句倒还算中听，主人。",
-              "en": "(Looks away) ...That one's not bad to hear, Master.",
+              "text": "（偏开脸）……平时惜字如金，这会儿倒会挑好听的说，主人。",
+              "en": "(Looks away) ...So stingy with words most days, and now you suddenly know what to say, Master.",
               "expr": "shy"
             }
           ]
@@ -1849,8 +1933,8 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "被赶到下层区的这段日子，我更是连一声都没哼过。",
-              "en": "Since being driven to the Lower Level, I haven't hummed a single note."
+              "text": "被赶到下层区的这段日子，连像样开回口的心思都没了。",
+              "en": "Since being driven to the Lower Level, I didn't even have the heart to sing properly."
             },
             {
               "speaker": "Eleanor",
@@ -1931,8 +2015,23 @@
       "title_en": "One Try",
       "client": "Eleanor",
       "portrait": "er_portrait_eleanor_casual_no_earrings_female_beauty",
-      "intent": "DIALOGUE",
+      "intent": "SELL",
       "next_code": 21,
+      "trades": [
+        {
+          "id": "T1",
+          "intent": "SELL",
+          "type": "MATERIAL",
+          "budget": "原生议价",
+          "client": "Eleanor",
+          "outcomes": {
+            "公道": "v2_a3c1_trade_1",
+            "溢价": "v2_a3c1_trade_2",
+            "压价": "v2_a3c1_trade_3",
+            "未成交": "v2_a3c1_trade_4"
+          }
+        }
+      ],
       "segments": [
         {
           "type": "lines",
@@ -2165,6 +2264,70 @@
               "expr": "neutral"
             }
           ]
+        },
+        "v2_a3c1_trade_1": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "成色算得清清楚楚，这袋旧货总算清完了。",
+              "en": "Every grade priced fair and square. Glad to have this sack cleared out.",
+              "expr": "smile"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "通行证和台次有信了，记得第一个告诉我。",
+              "en": "Once there's word on the pass and the slot, tell me first.",
+              "expr": "soft"
+            }
+          ]
+        },
+        "v2_a3c1_trade_2": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "这两样成色也就一般，你故意多给的钱我可记在账上了。",
+              "en": "These pieces were only average—I've logged the extra you slipped in.",
+              "expr": "shy"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "等唱完这趟，一并跟主人算清。",
+              "en": "Once this performance is over, I'll settle the whole score with you, Master.",
+              "expr": "soft"
+            }
+          ]
+        },
+        "v2_a3c1_trade_3": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "压得倒是一点不手软……行吧，谁让你现在是店主呢。",
+              "en": "You really don't hold back when squeezing a price... fine, you're the shopkeeper.",
+              "expr": "tsun"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "钱收好了，别忘了替我办正事。",
+              "en": "Money's pocketed. Don't forget the pass and the slot.",
+              "expr": "serious"
+            }
+          ]
+        },
+        "v2_a3c1_trade_4": {
+          "lines": [
+            {
+              "speaker": "Eleanor",
+              "text": "今天不收就算了，我先扎回袋子里搁墙角，明早再清。",
+              "en": "Passing on them today? Fine, I'll tie the sack back up in the corner for tomorrow morning.",
+              "expr": "serious"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "通行证和台次的事别忘了。",
+              "en": "Don't forget about the pass and the slot.",
+              "expr": "neutral"
+            }
+          ]
         }
       }
     },
@@ -2191,9 +2354,9 @@
           "options": [
             {
               "id": "C2_o1",
-              "label": "答应不看",
+              "label": "递热茶，安抚她",
               "mainline": true,
-              "label_en": "Agree not to look",
+              "label_en": "Hand her hot tea and reassure her",
               "block": "v2_a3c2_c2_o1",
               "merge": true
             },
@@ -2437,14 +2600,24 @@
         "v2_a3c2_c2_o1": {
           "lines": [
             {
+              "speaker": "Narrator",
+              "text": "你隔着窗沿推过去一杯热茶，指节轻轻碰了碰她发凉的手背。",
+              "en": "You push a cup of hot tea across the sill, your knuckles lightly brushing the cold back of her hand."
+            },
+            {
               "speaker": "Player",
-              "text": "好，我不看。",
-              "en": "Fine. I won't look."
+              "text": "好，我不看你的手。",
+              "en": "Fine. I won't look at your hands."
+            },
+            {
+              "speaker": "Player",
+              "text": "在台上一直绷到谢幕才走下来，你已经比大多数人撑得稳了。",
+              "en": "You held yourself together all the way to the curtain call. That's steadier than most people ever manage."
             },
             {
               "speaker": "Eleanor",
-              "text": "……我打算换掉那首快歌，改唱前些天理货时哼的慢调子。",
-              "en": "...I'm dropping the fast song for that slow tune I hummed while sorting stock the other day.",
+              "text": "……就你会挑时候顺着我说。先喝口茶……我打算换掉那首快歌，改唱前些天理货时哼的慢调子。",
+              "en": "...Trust you to say the right thing just when it counts. Let me take a sip... I'm dropping the fast song for that slow tune I hummed while sorting stock.",
               "expr": "soft"
             }
           ]
@@ -2585,6 +2758,258 @@
               "speaker": "Eleanor",
               "text": "后半首今天先欠着，等我明天照常来上工。",
               "en": "You'll get the rest of that song later—I'll be here for work tomorrow as usual."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "v2_salon_buzz",
+      "act": 4,
+      "code": 24,
+      "title_zh": "楼上的风声",
+      "title_en": "Word From Upstairs",
+      "client": "UpperBuyer",
+      "portrait": "upper_salon_guest",
+      "intent": "BUY",
+      "next_code": 25,
+      "trades": [
+        {
+          "id": "T1",
+          "intent": "BUY",
+          "type": "LUXURY_ITEM",
+          "budget": "400",
+          "client": "UpperBuyer",
+          "outcomes": {
+            "公道": "v2_salon_buzz_trade_1",
+            "让利": "v2_salon_buzz_trade_2",
+            "高价": "v2_salon_buzz_trade_3",
+            "未成交": "v2_salon_buzz_trade_4"
+          }
+        }
+      ],
+      "segments": [
+        {
+          "type": "lines",
+          "block": "v2_salon_buzz_s0"
+        },
+        {
+          "type": "choice",
+          "id": "C1",
+          "prompt": "他顺口问你认不认识埃莉诺",
+          "prompt_en": "He casually asks if you know Eleanor",
+          "mainline": 1,
+          "options": [
+            {
+              "id": "C1_o1",
+              "label": "只认名字，不认家世",
+              "label_en": "Know her name, not her pedigree",
+              "mainline": true,
+              "block": "v2_salon_buzz_c1_o1",
+              "merge": true
+            },
+            {
+              "id": "C1_o2",
+              "label": "说她一直稳得住",
+              "label_en": "Say she always keeps her footing",
+              "mainline": false,
+              "block": "v2_salon_buzz_c1_o2",
+              "merge": true
+            },
+            {
+              "id": "C1_o3",
+              "label": "只谈货，不打听人",
+              "label_en": "Stick to goods, not people",
+              "mainline": false,
+              "block": "v2_salon_buzz_c1_o3",
+              "merge": true
+            }
+          ]
+        },
+        {
+          "type": "lines",
+          "block": "v2_salon_buzz_s1"
+        }
+      ],
+      "blocks": {
+        "v2_salon_buzz_s0": {
+          "lines": [
+            {
+              "speaker": "Narrator",
+              "text": "一位衣领熨得笔挺的上层区客人停在窗口外，目光扫过架上的老物件。",
+              "en": "An Upper Level customer with a crisp pressed collar stops outside the window, scanning the old pieces on the shelves."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "老板，你这儿有没有带旧铜件的八音盒，或者成色体面点的老摆件？",
+              "en": "Shopkeeper, do you have a music box with old brass fittings, or a decent vintage piece?"
+            },
+            {
+              "speaker": "Player",
+              "text": "架上有几件，自己挑。",
+              "en": "A few on the shelf. Take a look."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "这巷子可真够绕的，要不是听熟人说你这儿的老件不掺假，我还真摸不过来。",
+              "en": "This alley twists around enough to lose a map. If an acquaintance hadn't told me your vintage pieces were genuine, I'd never have found it."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "说起来，我这趟下来找旧曲盒，也是昨晚在上层沙龙被一首老慢调勾起兴致了。",
+              "en": "Come to think of it, I only came down hunting for an old music box because of a slow vintage tune I heard at the Upper Level salon last night."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "沙龙前两天新来了一位女歌手，头回唱得太急没压住场，谁想昨晚再听，整个人完全变了。",
+              "en": "A new singer started at the salon a couple of days ago. First time out she rushed and lost the room—then last night, she was someone else entirely."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "前排那几位端着酒杯聊天的老主顾，愣是被她站在台上盯得自己闭了嘴。",
+              "en": "Those regulars in the front row chatting over their drinks? She just stood on stage and stared them into shutting up on their own."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "第一句一出口，全场静得连冰块碰杯底的声音都听得清清楚楚。",
+              "en": "The moment her first line came out, the room went so quiet you could hear ice settle against glass."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "今早东区露台那边两位嘴最刁的熟客，已经托人提前订了明晚的前排桌，还拉着朋友一块儿去听。",
+              "en": "This morning two of the pickiest regulars from the east terrace already booked front tables for tomorrow night and dragged their friends along to hear her."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "现在沙龙里没人问她出身哪一家了，酒桌上传来传去就一个名字——埃莉诺。",
+              "en": "Nobody in the salon bothers asking which family she comes from anymore. One name is making the rounds from table to table—Eleanor."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "听说那姑娘前阵子常在这一带走动。老板，你守这条巷子，听说过她吗？",
+              "en": "Heard she used to come through this neighborhood a lot. Shopkeeper, you've held this alley for years—ever heard of her?"
+            }
+          ]
+        },
+        "v2_salon_buzz_c1_o1": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "听说过。她凭的是嗓子，不是上面那套出身。",
+              "en": "Heard of her. She earns it with her voice, not whatever pedigree sits upstairs."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "哈，老板这话倒说得透亮。",
+              "en": "Ha—now that's putting it plainly, shopkeeper."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "沙龙老板已经放出话来想留她多唱几场，照这势头，下回怕是要满座了。",
+              "en": "The salon owner's already putting out word to book her for more nights. At this rate, her next show's going to fill the hall."
+            }
+          ]
+        },
+        "v2_salon_buzz_c1_o2": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "认识。台上台下，她都稳得住。",
+              "en": "I know her. On stage or off, she keeps her footing."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "哟，原来还是旧识！怪不得我一提名字，你连眼皮都没抬一下。",
+              "en": "Well now—an old acquaintance! No wonder you didn't even blink when I said her name."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "那你可替她高兴吧，昨晚她把上面那帮挑剔耳朵都唱服了，明晚开场怕是连过道都得加椅子。",
+              "en": "Then be glad for her. Last night she won over the pickiest ears upstairs—tomorrow night they'll probably have to set extra chairs in the aisle."
+            }
+          ]
+        },
+        "v2_salon_buzz_c1_o3": {
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "这儿只看货，不打听客人的事。",
+              "en": "I look at goods here, not customers' lives."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "好规矩，不套你的话了。",
+              "en": "Fair rule. I won't pry."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "不过用不着旁人多嘴，再过两晚，她那名字自己就能传遍整条上层廊道。",
+              "en": "No need for anyone to spread word anyway. Give it two more nights and her name will carry itself down the whole upper promenade."
+            }
+          ]
+        },
+        "v2_salon_buzz_s1": {
+          "lines": [
+            {
+              "speaker": "UpperBuyer",
+              "text": "不说闲话了，还是办正事。挑一件成色稳妥的老物件给我瞧瞧，价钱公道我今天就带走。",
+              "en": "Enough chatter—down to business. Show me a solid vintage piece; if the price is fair, I'll take it today."
+            }
+          ]
+        },
+        "v2_salon_buzz_trade_1": {
+          "lines": [
+            {
+              "speaker": "UpperBuyer",
+              "text": "货正价公道，怪不得上面有人说你这铺子靠得住。",
+              "en": "Genuine goods and a fair price. No wonder folks upstairs say this shop is reliable."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "我先收着走了，明晚沙龙开场还得带两个朋友早点去占前排呢。",
+              "en": "I'll take this and head back—bringing two friends to the salon tomorrow night, and we'll need to get there early for front seats."
+            }
+          ]
+        },
+        "v2_salon_buzz_trade_2": {
+          "lines": [
+            {
+              "speaker": "UpperBuyer",
+              "text": "这价给得痛快，连上层那几家老古董行都没这么爽利。",
+              "en": "That's a generous price—even the old antique houses upstairs aren't that straightforward."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "等下回在沙龙听完她唱，我顺口也替你这铺子给熟人们带两句。",
+              "en": "Next time I'm at the salon hearing her sing, I'll put in a good word for your shop with my circle too."
+            }
+          ]
+        },
+        "v2_salon_buzz_trade_3": {
+          "lines": [
+            {
+              "speaker": "UpperBuyer",
+              "text": "要价倒是一点不客气，好在东西底子硬，也算值这个数。",
+              "en": "You don't hold back on the price, though the piece is solid enough to be worth it."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "行，带回上面去摆着，明晚去听沙龙正好多个谈资。",
+              "en": "Fine, I'll bring it back upstairs—gives me something else to talk about at the salon tomorrow night."
+            }
+          ]
+        },
+        "v2_salon_buzz_trade_4": {
+          "lines": [
+            {
+              "speaker": "UpperBuyer",
+              "text": "今天架上正好缺合眼缘的老件，改天我再顺路下来转转。",
+              "en": "Nothing on the shelf catches my eye today—I'll stop by again another time."
+            },
+            {
+              "speaker": "UpperBuyer",
+              "text": "我先回上面订明晚的桌了，听说晚去半步，连后排都快没座啦。",
+              "en": "Better get back upstairs to book tomorrow's table. Word is if you're half a step late, even the back rows are gone."
             }
           ]
         }
@@ -3112,11 +3537,11 @@
             },
             {
               "id": "C3_o3",
-              "label": "先看那栏字",
+              "label": "说只冲她去",
               "mainline": false,
               "block": "v2_a4c3_c3_o3",
               "merge": true,
-              "label_en": "Read that line first"
+              "label_en": "Say you're going only for her"
             }
           ],
           "prompt_en": "She invites the shopkeeper to the Upper Level gala"
@@ -3228,13 +3653,23 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "你低头盯着嘉宾栏那四个字半天没动。",
-              "en": "You stare at the words in the guest slot for a long while without moving."
+              "text": "你低头盯着嘉宾栏那四个字看了半晌，抬眼望向她。",
+              "en": "You gaze at the words in the guest slot for a long moment, then look up at her."
+            },
+            {
+              "speaker": "Player",
+              "text": "上面那些酒会我原本懒得沾边。",
+              "en": "I wouldn't normally bother with any Upper Level gala."
+            },
+            {
+              "speaker": "Player",
+              "text": "但请柬上写的是“我的店主”，台上是你——这趟我不缺席。",
+              "en": "But the card says \"my shopkeeper,\" and you're the one on stage—I'm not missing it."
             },
             {
               "speaker": "Eleanor",
-              "text": "还没看够？名字写上去又不会自己跑掉。",
-              "en": "Not done looking? The name won't run off the page.",
+              "text": "……谁准你把那四个字又念一遍的，别得意忘形了，给个准话。",
+              "en": "...Who told you to read those words aloud again? Don't get smug—just give me a straight answer.",
               "expr": "shy"
             }
           ]

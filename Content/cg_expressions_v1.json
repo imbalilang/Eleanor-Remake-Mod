@@ -1,0 +1,152 @@
+{
+  "version": "1.0",
+  "description": "Expression tags for L1/L2 independent CG chapters and finale WindowTalks (compiled by tools/build_expressions.py). L3/L4 portraits are intentionally untagged.",
+  "scenes": {
+    "dual_final_shop": {
+      "intro": {
+        "2": "smile"
+      }
+    },
+    "dual_night_bath": {
+      "intro": {
+        "1": "tsun",
+        "3": "smile",
+        "6": "soft",
+        "10": "shy"
+      }
+    },
+    "dual_night_fireworks": {
+      "intro": {
+        "2": "smile",
+        "3": "smile",
+        "6": "tsun",
+        "9": "shy"
+      }
+    },
+    "dual_night_hotel": {
+      "intro": {
+        "2": "smile",
+        "3": "shy",
+        "7": "angry",
+        "8": "soft",
+        "9": "determined",
+        "10": "smile",
+        "11": "tsun"
+      }
+    },
+    "dual_trade_dice": {
+      "intro": {
+        "2": "smile",
+        "3": "smile",
+        "6": "shy"
+      },
+      "unsold": {
+        "1": "serious"
+      }
+    },
+    "love_night_bathhouse": {
+      "intro": {
+        "2": "soft",
+        "5": "smile"
+      }
+    },
+    "maid_night_costume": {
+      "intro": {
+        "2": "smile",
+        "4": "tsun",
+        "6": "shy",
+        "8": "soft"
+      }
+    },
+    "maid_night_encore": {
+      "intro": {
+        "2": "smile",
+        "5": "tsun",
+        "6": "soft",
+        "10": "smile"
+      }
+    },
+    "maid_night_steps": {
+      "intro": {
+        "2": "serious",
+        "5": "smile",
+        "6": "soft",
+        "11": "tsun"
+      }
+    },
+    "maid_stage_soundcheck": {
+      "intro": {
+        "5": "tsun",
+        "7": "shy",
+        "10": "tsun"
+      }
+    },
+    "maid_trade_shopkeeper": {
+      "intro": {
+        "2": "smile"
+      },
+      "sold": {
+        "2": "shy",
+        "5": "tsun"
+      }
+    },
+    "maid_trade_shutters": {
+      "intro": {
+        "3": "serious",
+        "6": "tsun"
+      },
+      "sold": {
+        "2": "soft",
+        "5": "shy"
+      }
+    },
+    "rev_final_second_knock": {
+      "intro": {
+        "1": "smile",
+        "3": "soft"
+      }
+    },
+    "rev_night_barracks": {
+      "intro": {
+        "2": "tired",
+        "3": "hurt",
+        "4": "soft",
+        "7": "smile",
+        "9": "shy"
+      }
+    },
+    "rev_night_departure": {
+      "intro": {
+        "2": "smile",
+        "4": "tired",
+        "5": "soft",
+        "9": "shy"
+      }
+    },
+    "rev_trade_sill": {
+      "intro": {
+        "2": "serious",
+        "6": "tsun"
+      },
+      "sold": {
+        "2": "smile",
+        "4": "tsun"
+      },
+      "unsold": {
+        "2": "soft"
+      }
+    },
+    "rev_trade_wrist": {
+      "intro": {
+        "4": "tsun",
+        "7": "shy"
+      },
+      "sold": {
+        "3": "tsun"
+      },
+      "unsold": {
+        "1": "hurt"
+      }
+    }
+  }
+}

@@ -11,13 +11,14 @@
       "lines": [
         {
           "speaker": "Narrator",
-          "text": "她穿轻便居家裙停在窗前，掀开食盒盖，把热汤推到你手边。",
-          "en": "She's stopped by the window in a light house dress. She lifts the lid off the food box and slides the hot soup over to your hand."
+          "text": "她停在窗前，掀开食盒盖，把热汤推到你手边。",
+          "en": "She stops by the window, lifts the lid off the food box, and slides the hot soup over to your hand."
         },
         {
           "speaker": "Eleanor",
           "text": "我就猜到你一翻起这堆旧账本，连午饭钟点都能忘得一干二净。",
-          "en": "I knew it. The moment you start flipping through those old ledgers, you forget all about lunch."
+          "en": "I knew it. The moment you start flipping through those old ledgers, you forget all about lunch.",
+          "expr": "smile"
         },
         {
           "speaker": "Eleanor",
@@ -32,7 +33,8 @@
         {
           "speaker": "Eleanor",
           "text": "少拿好听话糊弄我，跑腿送饭可不是白送的呀。",
-          "en": "Don't think sweet talk gets you out of this — running errands and delivering lunch isn't free, you know."
+          "en": "Don't think sweet talk gets you out of this — running errands and delivering lunch isn't free, you know.",
+          "expr": "tsun"
         },
         {
           "speaker": "Narrator",
@@ -42,7 +44,8 @@
         {
           "speaker": "Eleanor",
           "text": "今晚早点落锁回家……进门得先补我一个结结实实的拥抱。",
-          "en": "Lock up early and come home tonight... and the first thing through the door better be a proper, tight hug for me."
+          "en": "Lock up early and come home tonight... and the first thing through the door better be a proper, tight hug for me.",
+          "expr": "soft"
         },
         {
           "speaker": "Player",
@@ -52,21 +55,22 @@
         {
           "speaker": "Eleanor",
           "text": "这还差不多，可不许再让我和晚饭一块儿干等你。",
-          "en": "That's more like it. And don't leave me and dinner waiting on you again."
+          "en": "That's more like it. And don't leave me and dinner waiting on you again.",
+          "expr": "tsun"
         }
       ]
     },
     {
       "id": "love_daily_2",
       "route": "love",
-      "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
+      "sprite": "er_portrait_eleanor_love_intimate_female_beauty",
       "title_zh": "新裙子与小私心",
       "title_en": "New Dress, Secret Plan",
       "lines": [
         {
           "speaker": "Narrator",
-          "text": "她拎着商街纸袋在窗前轻快转了半圈，浅色露肩裙衬得锁骨雪白。",
-          "en": "She whirls half a turn by the window with a paper bag from the shopping street, the pale off-shoulder dress making her collarbones look snow-white."
+          "text": "她拎着商街纸袋，在窗前轻快转了半圈。",
+          "en": "She whirls half a turn by the window, carrying a paper bag from the shopping street."
         },
         {
           "speaker": "Eleanor",
@@ -130,7 +134,8 @@
         {
           "speaker": "Eleanor",
           "text": "咳，我来替母亲带句话。",
-          "en": "Ahem. I'm here to pass along a message from Mother."
+          "en": "Ahem. I'm here to pass along a message from Mother.",
+          "expr": "serious"
         },
         {
           "speaker": "Eleanor",
@@ -155,7 +160,8 @@
         {
           "speaker": "Eleanor",
           "text": "慢着，话还没传完呢。",
-          "en": "Hold on—the message isn't finished yet."
+          "en": "Hold on—the message isn't finished yet.",
+          "expr": "shy"
         },
         {
           "speaker": "Eleanor",
@@ -165,12 +171,14 @@
         {
           "speaker": "Eleanor",
           "text": "但把打烊时间再提前半个钟头，进门不许再翻半页账本——",
-          "en": "But closing up another half hour earlier, and not turning a single page of the ledger once you're through the door—"
+          "en": "But closing up another half hour earlier, and not turning a single page of the ledger once you're through the door—",
+          "expr": "tsun"
         },
         {
           "speaker": "Eleanor",
           "text": "这两条，可是我自己硬塞进去的新规矩。",
-          "en": "Those two? Those are new rules I wedged in myself."
+          "en": "Those two? Those are new rules I wedged in myself.",
+          "expr": "shy"
         },
         {
           "speaker": "Player",
@@ -180,7 +188,8 @@
         {
           "speaker": "Eleanor",
           "text": "这还差不多，少一分钟我可就在窗前盯梢了。",
-          "en": "That's more like it. Be even a minute late and I'll be keeping watch from the window."
+          "en": "That's more like it. Be even a minute late and I'll be keeping watch from the window.",
+          "expr": "tsun"
         }
       ]
     },
@@ -199,7 +208,8 @@
         {
           "speaker": "Eleanor",
           "text": "看什么呀，我可是专门来盯你准点收摊的。",
-          "en": "What are you looking at? I came all this way just to make sure you close up on time."
+          "en": "What are you looking at? I came all this way just to make sure you close up on time.",
+          "expr": "smile"
         },
         {
           "speaker": "Eleanor",
@@ -214,12 +224,14 @@
         {
           "speaker": "Eleanor",
           "text": "大点才好呢……领口全是你的木头味，闻着就让人安心。",
-          "en": "The bigger the better... the collar smells all of your woodshop. Just breathing it in settles me."
+          "en": "The bigger the better... the collar smells all of your woodshop. Just breathing it in settles me.",
+          "expr": "soft"
         },
         {
           "speaker": "Eleanor",
           "text": "以前隔着这扇窗，我满脑子都在算计怎么跟你压价还债。",
-          "en": "Back when it was just this window between us, all I could think about was how to haggle you down and pay off my debt."
+          "en": "Back when it was just this window between us, all I could think about was how to haggle you down and pay off my debt.",
+          "expr": "shy"
         },
         {
           "speaker": "Eleanor",
@@ -239,7 +251,8 @@
         {
           "speaker": "Eleanor",
           "text": "那你快点呀……今晚脚凉，到家门口就得抱我回被窝，不许偷懒。",
-          "en": "Then hurry it up... my feet are cold tonight, so the moment we're at the door you're carrying me straight to bed. No slacking."
+          "en": "Then hurry it up... my feet are cold tonight, so the moment we're at the door you're carrying me straight to bed. No slacking.",
+          "expr": "soft"
         }
       ]
     },
@@ -253,7 +266,8 @@
         {
           "speaker": "Eleanor",
           "text": "早市进的那批日用品清点完了，账单在这儿。",
-          "en": "I've finished tallying the daily goods from the morning market. Here's the bill."
+          "en": "I've finished tallying the daily goods from the morning market. Here's the bill.",
+          "expr": "serious"
         },
         {
           "speaker": "Eleanor",
@@ -272,18 +286,20 @@
         },
         {
           "speaker": "Narrator",
-          "text": "巷口脚步声彻底走远，她忽然倾身拢住窗沿，白荷叶围裙轻擦过台面。",
-          "en": "The footsteps at the mouth of the alley fade away entirely. She suddenly leans in against the windowsill, her white ruffled apron brushing lightly across the counter."
+          "text": "巷口脚步声彻底走远，她忽然倾身撑住窗沿。",
+          "en": "The footsteps at the mouth of the alley fade away entirely. She suddenly leans in over the windowsill."
         },
         {
           "speaker": "Eleanor",
           "text": "……主人。",
-          "en": "...Master."
+          "en": "...Master.",
+          "expr": "soft"
         },
         {
           "speaker": "Eleanor",
           "text": "替店里省下这么大一笔信用点，光嘴上夸一句就想打发我呀？",
-          "en": "I saved the shop a good pile of credits, and you think a few kind words are enough to send me off?"
+          "en": "I saved the shop a good pile of credits, and you think a few kind words are enough to send me off?",
+          "expr": "tsun"
         },
         {
           "speaker": "Player",
@@ -293,26 +309,28 @@
         {
           "speaker": "Eleanor",
           "text": "现在先记在账上……等今晚落了锁，主人再慢慢拿私房奖赏犒劳我。",
-          "en": "Put it on the ledger for now... Once the doors are locked tonight, Master can take his time paying me back with a little private reward."
+          "en": "Put it on the ledger for now... Once the doors are locked tonight, Master can take his time paying me back with a little private reward.",
+          "expr": "soft"
         }
       ]
     },
     {
       "id": "maid_daily_2",
       "route": "maid",
-      "sprite": "er_portrait_eleanor_maid_female_beauty",
+      "sprite": "er_portrait_eleanor_gala_female_beauty",
       "title_zh": "新曲的私房试听",
       "title_en": "Private Encore Preview",
       "lines": [
         {
           "speaker": "Narrator",
-          "text": "发间细碎的金饰还在晃，她微喘着趴上窗台。",
-          "en": "The little gold ornaments in her hair are still swaying as she leans, a touch breathless, onto the windowsill."
+          "text": "她步子还没停稳，微喘着趴上窗台。",
+          "en": "Still catching her breath, she leans onto the windowsill."
         },
         {
           "speaker": "Eleanor",
           "text": "刚从上层剧场排完新曲，花束都快把后台堆满了。",
-          "en": "Just came from rehearsing the new number up at the Upper Theater — the bouquets nearly buried the whole backstage."
+          "en": "Just came from rehearsing the new number up at the Upper Theater — the bouquets nearly buried the whole backstage.",
+          "expr": "smile"
         },
         {
           "speaker": "Eleanor",
@@ -337,12 +355,14 @@
         {
           "speaker": "Eleanor",
           "text": "……主人。那首新歌里，我私藏了一段绝不登台的副歌。",
-          "en": "…Master. In that new song, I've stashed away a chorus that will never see a stage."
+          "en": "…Master. In that new song, I've stashed away a chorus that will never see a stage.",
+          "expr": "soft"
         },
         {
           "speaker": "Eleanor",
           "text": "连乐师都没听全呢，词写得太羞人，我才不唱给别人听。",
-          "en": "Even the musicians haven't heard all of it. The lyrics are far too scandalous — I won't sing them for anyone else."
+          "en": "Even the musicians haven't heard all of it. The lyrics are far too scandalous — I won't sing them for anyone else.",
+          "expr": "shy"
         },
         {
           "speaker": "Player",
@@ -352,7 +372,8 @@
         {
           "speaker": "Eleanor",
           "text": "嗯，回房只留一盏暖灯，我贴在你耳边慢慢唱给你听。",
-          "en": "Mm. Back in our room, just one warm lamp lit — I'll press against your ear and sing it to you, nice and slow."
+          "en": "Mm. Back in our room, just one warm lamp lit — I'll press against your ear and sing it to you, nice and slow.",
+          "expr": "soft"
         }
       ]
     },
@@ -371,7 +392,8 @@
         {
           "speaker": "Eleanor",
           "text": "嘶……这双新鞋的金属搭扣太紧了，连着长袜勒得脚踝发烫。",
-          "en": "Hiss... the metal clasp on these new shoes is far too tight—pinching right through my stockings, and my ankle's burning."
+          "en": "Hiss... the metal clasp on these new shoes is far too tight—pinching right through my stockings, and my ankle's burning.",
+          "expr": "hurt"
         },
         {
           "speaker": "Eleanor",
@@ -386,7 +408,8 @@
         {
           "speaker": "Eleanor",
           "text": "现在回去，还不是得我自己弯腰解扣子？那多没意思呀。",
-          "en": "And if I go back now, I'd still have to bend down and undo them myself, wouldn't I? Where's the fun in that?"
+          "en": "And if I go back now, I'd still have to bend down and undo them myself, wouldn't I? Where's the fun in that?",
+          "expr": "smile"
         },
         {
           "speaker": "Narrator",
@@ -401,7 +424,8 @@
         {
           "speaker": "Eleanor",
           "text": "今晚打烊回房，你肯不肯俯下身，亲手替我解开鞋扣好好揉揉？",
-          "en": "Tonight, after we close up and go to our room—would you be willing to bend down and undo my shoe clasps with your own hands, and rub them properly for me?"
+          "en": "Tonight, after we close up and go to our room—would you be willing to bend down and undo my shoe clasps with your own hands, and rub them properly for me?",
+          "expr": "soft"
         },
         {
           "speaker": "Player",
@@ -411,7 +435,8 @@
         {
           "speaker": "Eleanor",
           "text": "这可是你亲口应下的……要是敢敷衍我，今晚就罚你多揉半个钟头。",
-          "en": "You said that out loud, so it counts... If you dare skimp on me, I'll sentence you to half an hour extra tonight."
+          "en": "You said that out loud, so it counts... If you dare skimp on me, I'll sentence you to half an hour extra tonight.",
+          "expr": "tsun"
         }
       ]
     },
@@ -424,13 +449,14 @@
       "lines": [
         {
           "speaker": "Narrator",
-          "text": "昏暖的灯光落在窗台，她指尖慢悠悠绕着白围裙半松的系带。",
-          "en": "The warm dusk light spills across the windowsill as her fingertips drift lazily around the half-loosened ties of her white apron."
+          "text": "昏暖的灯光落在窗台，她指尖慢悠悠绕着围裙半松的系带。",
+          "en": "The warm dusk light spills across the windowsill as her fingertips drift lazily around the half-loosened ties of her apron."
         },
         {
           "speaker": "Eleanor",
           "text": "喂，我刚才擦完窗台，突然想起一件事。",
-          "en": "Hey—I just finished wiping down the sill, and something popped into my head."
+          "en": "Hey—I just finished wiping down the sill, and something popped into my head.",
+          "expr": "smile"
         },
         {
           "speaker": "Eleanor",
@@ -440,7 +466,8 @@
         {
           "speaker": "Eleanor",
           "text": "现在没凭没据的，你凭什么笃定我每天还会乖乖来窗口报到呀？",
-          "en": "So with no papers and no proof, what makes you so sure I'll keep showing up at this window like a good girl every day?"
+          "en": "So with no papers and no proof, what makes you so sure I'll keep showing up at this window like a good girl every day?",
+          "expr": "tsun"
         },
         {
           "speaker": "Player",
@@ -454,18 +481,20 @@
         },
         {
           "speaker": "Narrator",
-          "text": "绕在指间的纯白丝带滑落，她红着耳根往前倾身，鼻尖几乎蹭过窗沿。",
-          "en": "The pure white ribbon slips loose from her fingers. Ears burning, she leans in closer, her nose almost brushing the edge of the sill."
+          "text": "绕在指间的系带滑落，她红着耳根往前倾身，鼻尖几乎蹭过窗沿。",
+          "en": "The tie slips loose from her fingers. Ears burning, she leans in closer, her nose almost brushing the edge of the sill."
         },
         {
           "speaker": "Eleanor",
           "text": "……这还差不多，算你会说话。",
-          "en": "...That's more like it. I suppose you know how to talk."
+          "en": "...That's more like it. I suppose you know how to talk.",
+          "expr": "shy"
         },
         {
           "speaker": "Eleanor",
           "text": "既然我的主人不肯放人，那这条围裙，今晚就留着回房再替我解吧。",
-          "en": "Well then—since my master won't let me go, I'll keep this apron on, and you can undo it for me back in my room tonight."
+          "en": "Well then—since my master won't let me go, I'll keep this apron on, and you can undo it for me back in my room tonight.",
+          "expr": "soft"
         }
       ]
     },
@@ -478,18 +507,20 @@
       "lines": [
         {
           "speaker": "Narrator",
-          "text": "穿橄榄绿军装的她轻敲窗沿两下，见你默契回敲，眼角微红笑开。",
-          "en": "She raps twice on the windowsill, olive-green uniform and all — and when you knock back in perfect sync, her eyes go a little red and she breaks into a smile."
+          "text": "她轻敲窗沿两下，见你默契回敲，眼角一弯笑开。",
+          "en": "She raps twice on the windowsill, and when you knock back in sync, her eyes curve into a smile."
         },
         {
           "speaker": "Eleanor",
           "text": "头都没全抬就敲回来，算你反应快。",
-          "en": "Didn't even get your head all the way up before you knocked back. Sharp reflexes — I'll give you that."
+          "en": "Didn't even get your head all the way up before you knocked back. Sharp reflexes — I'll give you that.",
+          "expr": "tsun"
         },
         {
           "speaker": "Eleanor",
           "text": "趁换班空档例行巡街，我顺道检查一下这片的防务。",
-          "en": "Shift change gave me a gap, so I'm doing the rounds. Figured I'd swing by and inspect the defenses in this sector."
+          "en": "Shift change gave me a gap, so I'm doing the rounds. Figured I'd swing by and inspect the defenses in this sector.",
+          "expr": "serious"
         },
         {
           "speaker": "Narrator",
@@ -504,7 +535,8 @@
         {
           "speaker": "Eleanor",
           "text": "笑什么呀，配给站刚发的，揣兜里正好捂热了嘛。",
-          "en": "What's that laugh for? The ration station just handed them out. They warmed up nicely in my pocket, that's all."
+          "en": "What's that laugh for? The ration station just handed them out. They warmed up nicely in my pocket, that's all.",
+          "expr": "shy"
         },
         {
           "speaker": "Eleanor",
@@ -514,7 +546,8 @@
         {
           "speaker": "Eleanor",
           "text": "全站上下那么多巡逻点，只有这两下敲响是专门叫你抬头看我。",
-          "en": "There are patrol points all over this station, but these two knocks are the only ones that exist just to make you look up at me."
+          "en": "There are patrol points all over this station, but these two knocks are the only ones that exist just to make you look up at me.",
+          "expr": "soft"
         },
         {
           "speaker": "Eleanor",
@@ -543,7 +576,8 @@
         {
           "speaker": "Eleanor",
           "text": "可算逃出来了……操练场的哨声吵得我太阳穴直跳。",
-          "en": "Finally, a clean escape... Those drill-yard whistles had my temples throbbing."
+          "en": "Finally, a clean escape... Those drill-yard whistles had my temples throbbing.",
+          "expr": "tired"
         },
         {
           "speaker": "Eleanor",
@@ -553,7 +587,8 @@
         {
           "speaker": "Eleanor",
           "text": "还是你这扇窗前好，刚站过来，紧绷了一上午的筋骨就全散了。",
-          "en": "It's better here at your window. I'd barely been standing here a moment before all the tension knotted up in me from the morning melted away."
+          "en": "It's better here at your window. I'd barely been standing here a moment before all the tension knotted up in me from the morning melted away.",
+          "expr": "soft"
         },
         {
           "speaker": "Player",
@@ -573,7 +608,8 @@
         {
           "speaker": "Eleanor",
           "text": "贴身轻便，省得你待会儿又嫌扣子多……记得留门，不许先睡。",
-          "en": "Snug and light—saves you from complaining about all the buttons later... Leave the door unlocked, and don't fall asleep on me."
+          "en": "Snug and light—saves you from complaining about all the buttons later... Leave the door unlocked, and don't fall asleep on me.",
+          "expr": "smile"
         },
         {
           "speaker": "Player",
@@ -592,12 +628,13 @@
         {
           "speaker": "Eleanor",
           "text": "顺路过来歇口气，今天巡防那片街区还算太平。",
-          "en": "I was passing by, thought I'd catch my breath. That patrol district was quiet enough today."
+          "en": "I was passing by, thought I'd catch my breath. That patrol district was quiet enough today.",
+          "expr": "smile"
         },
         {
           "speaker": "Narrator",
-          "text": "她说话时指尖微蜷，不动声色地把军装袖口往下扯了半寸。",
-          "en": "As she speaks, her fingertips curl ever so slightly, and she casually tugs her uniform cuff down half an inch."
+          "text": "她说话时指尖微蜷，不动声色地把袖口往下扯了半寸。",
+          "en": "As she speaks, her fingertips curl slightly, and she casually tugs her cuff down half an inch."
         },
         {
           "speaker": "Player",
@@ -607,7 +644,8 @@
         {
           "speaker": "Eleanor",
           "text": "……你这双眼睛到底是用来看货还是专盯我的呀？",
-          "en": "…Are those eyes of yours for appraising merchandise, or just for staring at me?"
+          "en": "…Are those eyes of yours for appraising merchandise, or just for staring at me?",
+          "expr": "tsun"
         },
         {
           "speaker": "Eleanor",
@@ -627,7 +665,8 @@
         {
           "speaker": "Eleanor",
           "text": "轻点嘛……也就只有在你这扇窗前，我才这么听话。",
-          "en": "Easy now… Only in front of your window am I ever this well-behaved."
+          "en": "Easy now… Only in front of your window am I ever this well-behaved.",
+          "expr": "soft"
         },
         {
           "speaker": "Eleanor",
@@ -637,7 +676,8 @@
         {
           "speaker": "Eleanor",
           "text": "往后每次出任务，我都记着全须全尾、准点回来向你报到。",
-          "en": "From now on, every mission, I'll remember to come back in one piece, right on time, and report to you."
+          "en": "From now on, every mission, I'll remember to come back in one piece, right on time, and report to you.",
+          "expr": "determined"
         }
       ]
     },
@@ -656,7 +696,8 @@
         {
           "speaker": "Eleanor",
           "text": "喂，算算日子，你有多久没听过重机车的引擎声了？",
-          "en": "Hey—count the days. How long has it been since you heard a heavy bike's engine roar?"
+          "en": "Hey—count the days. How long has it been since you heard a heavy bike's engine roar?",
+          "expr": "smile"
         },
         {
           "speaker": "Eleanor",
@@ -676,7 +717,8 @@
         {
           "speaker": "Eleanor",
           "text": "怕啦？某人站在柜台后面倒是沉得住气。",
-          "en": "Scared? Says the one who stands behind the counter looking so calm and collected."
+          "en": "Scared? Says the one who stands behind the counter looking so calm and collected.",
+          "expr": "smile"
         },
         {
           "speaker": "Eleanor",
@@ -686,7 +728,8 @@
         {
           "speaker": "Eleanor",
           "text": "抓那么紧，连你贴着我后背的呼吸都发烫呢。",
-          "en": "Holding on that tight—even your breath against my back feels scorching."
+          "en": "Holding on that tight—even your breath against my back feels scorching.",
+          "expr": "soft"
         },
         {
           "speaker": "Player",
@@ -696,7 +739,8 @@
         {
           "speaker": "Eleanor",
           "text": "今晚只会更狠。给你十分钟落卷帘，去把隧道的风全抢回来！",
-          "en": "Tonight it'll be even harder. You've got ten minutes to pull the shutter down—let's go steal back all the wind in that tunnel!"
+          "en": "Tonight it'll be even harder. You've got ten minutes to pull the shutter down—let's go steal back all the wind in that tunnel!",
+          "expr": "determined"
         }
       ]
     }

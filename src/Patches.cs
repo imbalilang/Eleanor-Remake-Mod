@@ -162,6 +162,8 @@ namespace EleanorRomance
             try
             {
                 if (dialogue == null) return;
+                if (StoryPresentation.IsShown)
+                    StoryPresentation.ApplyExpression(dialogue);
                 // If another portrait mod currently owns the visible image,
                 // leave it alone and do not switch expressions on top of it.
                 if (PortraitCompat.IsForeignPortraitOnCurrentClient()) return;
@@ -178,6 +180,11 @@ namespace EleanorRomance
         }
 
         [HarmonyPriority(Priority.Last)]
-        private static void Postfix(Dialogue dialogue) => PortraitCompat.EnforceCooperativeClientPortrait(dialogue);
+        private static void Postfix(Dialogue dialogue)
+        {
+            if (dialogue != null && StoryPresentation.IsShown)
+                StoryPresentation.ApplyExpression(dialogue);
+            PortraitCompat.EnforceCooperativeClientPortrait(dialogue);
+        }
     }
 }

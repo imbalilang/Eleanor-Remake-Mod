@@ -83,6 +83,14 @@ namespace EleanorRomance
             Dialogue root = BuildDialogue(sceneId);
             if (root == null) return false;
 
+            string sceneSprite = PostEndingDailyContent.SpriteFor(sceneId);
+            if (!string.IsNullOrEmpty(sceneSprite))
+            {
+                sprite = sceneSprite.StartsWith(PortraitCompat.LocalPortraitPrefix, StringComparison.Ordinal)
+                    ? PortraitCompat.ResolveOutfit(sceneSprite, sprite)
+                    : sceneSprite;
+            }
+
             StoreClient client = EleanorStory.NewEleanorClient(
                 "post_daily_" + sceneId,
                 sprite,

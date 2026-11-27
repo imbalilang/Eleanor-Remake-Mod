@@ -30,6 +30,43 @@ namespace EleanorRomance
             Tags.Add(node, new Tag(expr, speaker));
         }
 
+        /// <summary>Return the attached expression metadata for a dialogue node, if any.</summary>
+        internal static bool TryGetTag(Dialogue node, out string expression, out string speaker)
+        {
+            expression = null;
+            speaker = null;
+            if (node == null || !Tags.TryGetValue(node, out var tag)) return false;
+            expression = tag.Expression;
+            speaker = tag.Speaker;
+            return true;
+        }
+
+        /// <summary>Resolve an expression sprite for a specific portrait key (used by backup/WindowTalk slots).</summary>
+        internal static Sprite ResolveForSprite(string spriteName, string speaker, string expression)
+        {
+            if (!PortraitCompat.IsBeautyActive || string.IsNullOrEmpty(spriteName) || string.IsNullOrEmpty(expression))
+                return null;
+            string baseKey = BaseKey(spriteName);
+            if (baseKey == null || !MatchesCharacter(baseKey, speaker)) return null;
+
+            Sprite sprite = expression == "neutral" ? null : FindExpression(baseKey, expression);
+            if (sprite != null) return sprite;
+
+            try
+            {
+                string resolved = PortraitCompat.Resolve(spriteName);
+                Sprite local = PortraitCompat.GetLocalSprite(resolved);
+                if (local != null) return local;
+                if (SpriteDict.Instance != null && !string.IsNullOrEmpty(resolved))
+                    return SpriteDict.Instance.GetSprite(resolved);
+            }
+            catch (Exception ex)
+            {
+                StoryDirector.LogError("Backup base portrait lookup failed: " + ex);
+            }
+            return null;
+        }
+
         /// <summary>Resolve the sprite against the current client immediately before display.</summary>
         internal static Sprite Resolve(Dialogue node)
         {
@@ -41,22 +78,36 @@ namespace EleanorRomance
             var blueprint = client.GetClientBlueprint();
             if (blueprint == null) return null;
 
-            // Only the visible client has a portrait. Do not put Eleanor's face on Lydia.
-            if (!string.Equals(tag.Speaker, blueprint.displayName, StringComparison.Ordinal)) return null;
-
             string baseKey = BaseKey(blueprint.spriteName);
             if (baseKey == null) return null;
 
+            // Only the visible client has a portrait. Do not put Eleanor's face on Lydia.
+            if (!string.Equals(tag.Speaker, blueprint.displayName, StringComparison.Ordinal)
+                && !MatchesCharacter(baseKey, tag.Speaker))
+                return null;
+
             Sprite sprite = tag.Expression == "neutral" ? null : FindExpression(baseKey, tag.Expression);
             return sprite != null ? sprite : BaseSprite(blueprint);
+        }
+
+        private static bool MatchesCharacter(string baseKey, string speaker)
+        {
+            if (string.IsNullOrEmpty(baseKey) || string.IsNullOrEmpty(speaker)) return false;
+            if (baseKey.StartsWith("eleanor", StringComparison.Ordinal))
+                return speaker == L.Eleanor || speaker == "埃莉诺" || speaker == "Eleanor";
+            if (baseKey.StartsWith("lydia", StringComparison.Ordinal))
+                return speaker == L.Get("er_name_lydia") || speaker == "莉迪亚" || speaker == "Lydia";
+            if (baseKey.StartsWith("sophia", StringComparison.Ordinal))
+                return speaker == L.Get("er_name_sophia") || speaker == L.Get("er_name_mother")
+                    || speaker == "索菲娅" || speaker == "索菲亚" || speaker == "Sophia"
+                    || speaker == "母亲" || speaker == "Mother";
+            return false;
         }
 
         private static Sprite FindExpression(string baseKey, string expression)
         {
             switch (baseKey)
             {
-                case "eleanor_love_intimate":
-                    return null;
                 case "eleanor_revolution_undersuit":
                 case "lydia_date":
                 case "sophia":
@@ -130,18 +181,21 @@ namespace EleanorRomance
             }
             switch (spriteName)
             {
-                case "eleanor1": case "eleanor2": case "eleanor3":
-                case "eleanor_scav": case "eleanor_rev":
+                // L1 (10 expressions): eleanor1, eleanor_scav, eleanor_rev, eleanor_maid, eleanor_gala, lydia_daily
+                case "eleanor1":
+                case "eleanor_scav":
+                case "eleanor_rev":
                     return spriteName;
                 case ModConstants.EleanorPlainCasualPortrait: return "eleanor1_no_earrings";
                 case PortraitCompat.MaidKey: return "eleanor_maid";
                 case PortraitCompat.GalaKey: return "eleanor_gala";
-                case ModConstants.EleanorVestPortrait: return "eleanor_revolution_undersuit";
-                case ModConstants.EleanorIntimatePortrait: return "eleanor_love_intimate";
                 case ModConstants.LydiaPortraitBeauty: return "lydia_daily";
+                // L2 (6 expressions): eleanor_revolution_undersuit, lydia_date, sophia, sophia_home
+                case ModConstants.EleanorVestPortrait: return "eleanor_revolution_undersuit";
                 case PortraitCompat.LydiaDateBeautyKey: return "lydia_date";
                 case ModConstants.MotherPortraitBeauty: return "sophia";
                 case ModConstants.MotherHomePortraitBeauty: return "sophia_home";
+                // L3 / legacy static portraits (no expression assets): return null
                 default:
                     return null;
             }

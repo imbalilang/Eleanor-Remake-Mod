@@ -25,7 +25,8 @@
             {
               "speaker": "SEC",
               "text": "明明是你半路非要先拐去逛布店，害我在巷口干等。",
-              "en": "You're the one who insisted on detouring to the fabric shop and left me waiting at the alley mouth."
+              "en": "You're the one who insisted on detouring to the fabric shop and left me waiting at the alley mouth.",
+              "expr": "tsun"
             },
             {
               "speaker": "Lydia",
@@ -45,12 +46,14 @@
             {
               "speaker": "Lydia",
               "text": "噗，他平时跟你待在一块也这么惜字如金吗？",
-              "en": "Pfft, is he this sparing with words when he's with you too?"
+              "en": "Pfft, is he this sparing with words when he's with you too?",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "才没有呢，他平时跟我说话可从来不省字数。",
-              "en": "Not at all. He never skimps on words when he talks to me."
+              "en": "Not at all. He never skimps on words when he talks to me.",
+              "expr": "shy"
             },
             {
               "speaker": "Lydia",
@@ -65,7 +68,8 @@
             {
               "speaker": "SEC",
               "text": "（隔窗伸手又把你的衣领摁了一下）这里刚才明明还有点翘边。",
-              "en": "(Reaches through the window and presses your collar down again) This was sticking up just now."
+              "en": "(Reaches through the window and presses your collar down again) This was sticking up just now.",
+              "expr": "soft"
             },
             {
               "speaker": "Player",
@@ -80,7 +84,8 @@
             {
               "speaker": "SEC",
               "text": "定什么定，他都还没正式开口呢。",
-              "en": "Official what? He hasn't even properly asked yet."
+              "en": "Official what? He hasn't even properly asked yet.",
+              "expr": "shy"
             },
             {
               "speaker": "SEC",
@@ -105,7 +110,8 @@
             {
               "speaker": "Lydia",
               "text": "行啦我不逗你了，还是先挑正经礼物要紧。",
-              "en": "Fine, I'll stop teasing. Picking a proper gift comes first."
+              "en": "Fine, I'll stop teasing. Picking a proper gift comes first.",
+              "expr": "neutral"
             },
             {
               "speaker": "Lydia",
@@ -120,7 +126,8 @@
             {
               "speaker": "Lydia",
               "text": "谁让某人从以前就一直惦记着这一口脆硬糖呢。",
-              "en": "Because a certain someone's always had a thing for crunchy hard candy."
+              "en": "Because a certain someone's always had a thing for crunchy hard candy.",
+              "expr": "smile"
             },
             {
               "speaker": "Player",
@@ -130,7 +137,8 @@
             {
               "speaker": "Lydia",
               "text": "对，老板你按店里的实价给我算清楚就行。",
-              "en": "Yes. Just charge me the shop's real price."
+              "en": "Yes. Just charge me the shop's real price.",
+              "expr": "serious"
             },
             {
               "speaker": "Lydia",
@@ -140,7 +148,8 @@
             {
               "speaker": "SEC",
               "text": "他做买卖向来有分寸，哪用得着你特意叮嘱。",
-              "en": "He always knows what he's doing. No need to tell him."
+              "en": "He always knows what he's doing. No need to tell him.",
+              "expr": "smile"
             }
           ],
           "presentation": {
@@ -160,12 +169,14 @@
             {
               "speaker": "Lydia",
               "text": "数额算得这么痛快，埃莉诺看人的眼光确实不错。",
-              "en": "Such a clean, quick tally. Eleanor really does have a good eye for people."
+              "en": "Such a clean, quick tally. Eleanor really does have a good eye for people.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "少在窗口贫嘴了，拎上你的糖袋赶紧走吧。",
-              "en": "Stop chattering at the window. Grab your candy and go."
+              "en": "Stop chattering at the window. Grab your candy and go.",
+              "expr": "tsun"
             }
           ]
         },
@@ -177,12 +188,14 @@
             {
               "speaker": "Lydia",
               "text": "哎呀，这个数额明显比平时便宜了一截吧？",
-              "en": "Oh my, that's quite a bit cheaper than usual, isn't it?"
+              "en": "Oh my, that's quite a bit cheaper than usual, isn't it?",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "就当是谢你大老远绕路过来，让你占回便宜好了。",
-              "en": "Call it thanks for coming all this way. Enjoy the bargain."
+              "en": "Call it thanks for coming all this way. Enjoy the bargain.",
+              "expr": "soft"
             },
             {
               "speaker": "Lydia",
@@ -204,7 +217,8 @@
             {
               "speaker": "SEC",
               "text": "居然敢多收她的钱，等晚上关门我再找你算账。",
-              "en": "You dared overcharge her? We'll settle this after closing tonight."
+              "en": "You dared overcharge her? We'll settle this after closing tonight.",
+              "expr": "angry"
             }
           ]
         },
@@ -216,12 +230,14 @@
             {
               "speaker": "Lydia",
               "text": "没买成甜食总不好空手登门，我再去别家铺子看看吧。",
-              "en": "I can't show up empty-handed without sweets. I'll try another shop."
+              "en": "I can't show up empty-handed without sweets. I'll try another shop.",
+              "expr": "sad"
             },
             {
               "speaker": "SEC",
               "text": "不用折腾去别家了，屋里备好茶点了你人到了就行。",
-              "en": "Don't bother with another shop. Tea and snacks are ready. Just come."
+              "en": "Don't bother with another shop. Tea and snacks are ready. Just come.",
+              "expr": "soft"
             }
           ]
         }
@@ -246,7 +262,8 @@
             {
               "speaker": "Eleanor",
               "text": "母亲已经睡下了，床头小灯旁还摊着那几页研究笔记。",
-              "en": "Mother's already asleep. Her research notes are still spread beside the bedside lamp."
+              "en": "Mother's already asleep. Her research notes are still spread beside the bedside lamp.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -261,7 +278,8 @@
             {
               "speaker": "Eleanor",
               "text": "少得意了，这截柜台台面今晚归我靠一会儿。",
-              "en": "Don't get smug. This stretch of counter is mine to lean on tonight."
+              "en": "Don't get smug. This stretch of counter is mine to lean on tonight.",
+              "expr": "tsun"
             },
             {
               "speaker": "Eleanor",
@@ -276,7 +294,8 @@
             {
               "speaker": "Eleanor",
               "text": "你这人真是绝了，话还没聊两句就掉头谈生意。",
-              "en": "You're unbelievable. Two sentences in and you're back to business."
+              "en": "You're unbelievable. Two sentences in and you're back to business.",
+              "expr": "angry"
             },
             {
               "speaker": "Eleanor",
@@ -286,7 +305,8 @@
             {
               "speaker": "Eleanor",
               "text": "母亲半夜要是醒了容易饿，屋里备着点总归安心。",
-              "en": "If Mother wakes at night she gets hungry. Better to have something on hand."
+              "en": "If Mother wakes at night she gets hungry. Better to have something on hand.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -314,7 +334,8 @@
             {
               "speaker": "Eleanor",
               "text": "……你刚才说什么，有本事再清楚说一遍。",
-              "en": "...What did you just say? Say it again, clearly, if you dare."
+              "en": "...What did you just say? Say it again, clearly, if you dare.",
+              "expr": "serious"
             },
             {
               "speaker": "Player",
@@ -324,7 +345,8 @@
             {
               "speaker": "Eleanor",
               "text": "你就隔着这扇破窗口求婚，甚至连手边还放着营养果？",
-              "en": "You're proposing through this shabby window, with Nutrifruit right by your hand?"
+              "en": "You're proposing through this shabby window, with Nutrifruit right by your hand?",
+              "expr": "tsun"
             },
             {
               "speaker": "Player",
@@ -343,8 +365,9 @@
             },
             {
               "speaker": "Eleanor",
-              "text": "你倒好，统共才蹦出三个字，连柜台上歪着的袋口我都记住了。",
-              "en": "And you—three words, that's all, and I'll remember even the bag slumped crooked on the counter."
+              "text": "你倒好，隔着台面就敢直接开口，连柜台上歪着的袋口我都记住了。",
+              "en": "And you—asking right across the counter like that, and I'll remember even the bag slumped crooked by your hand.",
+              "expr": "soft"
             },
             {
               "speaker": "Player",
@@ -354,12 +377,14 @@
             {
               "speaker": "Eleanor",
               "text": "催什么催，我又没说要拒绝你。",
-              "en": "Don't rush me. I never said I'd refuse."
+              "en": "Don't rush me. I never said I'd refuse.",
+              "expr": "shy"
             },
             {
               "speaker": "Eleanor",
               "text": "答应。",
-              "en": "Yes."
+              "en": "Yes.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -379,7 +404,8 @@
             {
               "speaker": "Eleanor",
               "text": "求婚归求婚，今晚的营养果和干货照买照算。",
-              "en": "Proposal or not, tonight's Nutrifruit and dry goods still get rung up."
+              "en": "Proposal or not, tonight's Nutrifruit and dry goods still get rung up.",
+              "expr": "tsun"
             }
           ],
           "cursor_revision": 2
@@ -390,19 +416,31 @@
           "label_en": "",
           "lines": [
             {
-              "speaker": "Eleanor",
-              "text": "叫住我又不吭声，干嘛一直拿那种眼神盯着我看？",
-              "en": "You stop me, then say nothing. Why keep staring at me like that?"
+              "speaker": "Player",
+              "text": "从你第一次端着架子来买带缺口的杯子起，我就记着了。",
+              "en": "I've remembered you since the first time you marched in here too proud to admit you needed a chipped cup."
+            },
+            {
+              "speaker": "Player",
+              "text": "这扇窗前每天过这么多人，只有你会替我理衣领、拉着母亲一起算家里的账。",
+              "en": "Plenty of people pass this window every day, but only you smooth my collar and bring your mother along to work out household budgets."
+            },
+            {
+              "speaker": "Player",
+              "text": "以后别只在打烊前靠在窗外了。",
+              "en": "Don't just lean outside the window before closing anymore."
             },
             {
               "speaker": "Eleanor",
-              "text": "被你看得心跳都乱了，有话赶紧说出来。",
-              "en": "You've got my heart all out of rhythm. Just say it."
+              "text": "……平时省字省成那样，突然一口气说这么多干什么……",
+              "en": "...You barely spare a word on a normal day—why say so much all at once now...",
+              "expr": "shy"
             },
             {
               "speaker": "Eleanor",
-              "text": "再闷着不说，我可要转身上楼了。",
-              "en": "Keep stalling and I'm heading upstairs."
+              "text": "把后面那句说完，别半道停住。",
+              "en": "Finish the next line. Don't stop halfway.",
+              "expr": "soft"
             }
           ]
         },
@@ -419,12 +457,14 @@
             {
               "speaker": "Eleanor",
               "text": "（拿起一颗营养果又放回台面）你从刚才起就一直盯着我瞧。",
-              "en": "(Picks up a Nutrifruit, then sets it back down) You've been staring at me this whole time."
+              "en": "(Picks up a Nutrifruit, then sets it back down) You've been staring at me this whole time.",
+              "expr": "shy"
             },
             {
               "speaker": "Eleanor",
               "text": "心里藏着什么话就直说，别拿挑货当幌子。",
-              "en": "If something's on your mind, say it. Don't hide behind the merchandise."
+              "en": "If something's on your mind, say it. Don't hide behind the merchandise.",
+              "expr": "tsun"
             }
           ]
         },
@@ -436,12 +476,14 @@
             {
               "speaker": "Eleanor",
               "text": "刚求完婚做买卖还是老样子，半点都不带含糊的。",
-              "en": "Just proposed, and business is still business. Not the slightest slip."
+              "en": "Just proposed, and business is still business. Not the slightest slip.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
               "text": "明天我带母亲一块过来，你记得把衣领理平了。",
-              "en": "I'm bringing Mother tomorrow. Make sure your collar's straight."
+              "en": "I'm bringing Mother tomorrow. Make sure your collar's straight.",
+              "expr": "soft"
             }
           ]
         },
@@ -453,12 +495,14 @@
             {
               "speaker": "Eleanor",
               "text": "这个数明显少收了，你少拿便宜账来哄我。",
-              "en": "That's clearly undercharging. Don't try to sweet-talk me with cheap math."
+              "en": "That's clearly undercharging. Don't try to sweet-talk me with cheap math.",
+              "expr": "tsun"
             },
             {
               "speaker": "Eleanor",
               "text": "我先替你记着，回头拌嘴时再拿出来抵账。",
-              "en": "I'll keep it on record and cash it in next time we argue."
+              "en": "I'll keep it on record and cash it in next time we argue.",
+              "expr": "smile"
             }
           ]
         },
@@ -470,12 +514,14 @@
             {
               "speaker": "Eleanor",
               "text": "好啊，前脚刚求完婚，后脚就开始给我涨价是吧？",
-              "en": "Oh, nice. Proposal one minute, price hike the next?"
+              "en": "Oh, nice. Proposal one minute, price hike the next?",
+              "expr": "angry"
             },
             {
               "speaker": "Eleanor",
               "text": "罚你今晚打烊前，把刚才那三个字再多说两遍。",
-              "en": "Your penalty: before closing, say those three words twice more."
+              "en": "Your penalty: before closing, say those three words twice more.",
+              "expr": "shy"
             }
           ]
         },
@@ -487,7 +533,8 @@
             {
               "speaker": "Eleanor",
               "text": "算了，屋里还剩半袋干粮，足够母亲先顶两天。",
-              "en": "Never mind. There's half a bag of dry food left—enough to tide Mother over two days."
+              "en": "Never mind. There's half a bag of dry food left—enough to tide Mother over two days.",
+              "expr": "sad"
             },
             {
               "speaker": "Eleanor",
@@ -509,7 +556,8 @@
             {
               "speaker": "Eleanor",
               "text": "母亲今晚睡得早，只在屋里留了一盏小灯。",
-              "en": "Mother went to bed early tonight. She left just one small lamp on."
+              "en": "Mother went to bed early tonight. She left just one small lamp on.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -524,7 +572,8 @@
             {
               "speaker": "Eleanor",
               "text": "少得意了，这截柜台台面今晚归我靠一会儿。",
-              "en": "Don't get smug. This stretch of counter is mine to lean on tonight."
+              "en": "Don't get smug. This stretch of counter is mine to lean on tonight.",
+              "expr": "tsun"
             },
             {
               "speaker": "Eleanor",
@@ -539,7 +588,8 @@
             {
               "speaker": "Eleanor",
               "text": "你这人真是绝了，话还没聊两句就掉头谈生意。",
-              "en": "Unbelievable. Barely two lines in and you're back to business."
+              "en": "Unbelievable. Barely two lines in and you're back to business.",
+              "expr": "angry"
             },
             {
               "speaker": "Eleanor",
@@ -549,7 +599,8 @@
             {
               "speaker": "Eleanor",
               "text": "母亲半夜要是醒了容易饿，屋里备着点总归安心。",
-              "en": "If Mother wakes at night, she gets hungry. Having something on hand eases my mind."
+              "en": "If Mother wakes at night, she gets hungry. Having something on hand eases my mind.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -568,24 +619,24 @@
       "choices": [
         {
           "id": "la3_c1_1",
-          "label_zh": "开口求婚",
-          "label_en": "Propose now",
-          "description_zh": "直接开口。",
-          "description_en": "Say it now."
+          "label_zh": "直接求婚",
+          "label_en": "Propose directly",
+          "description_zh": "不多绕弯，直接开口。",
+          "description_en": "No speeches—just ask her."
         },
         {
           "id": "la3_c1_2",
-          "label_zh": "等她先说",
-          "label_en": "Wait for her",
-          "description_zh": "等她先开口。",
-          "description_en": "Let her speak first."
+          "label_zh": "先把心里话说透",
+          "label_en": "Tell her how you feel first",
+          "description_zh": "把这段日子藏着的话讲明白，再向她求婚。",
+          "description_en": "Put what you've kept inside into words before proposing."
         },
         {
           "id": "la3_c1_3",
           "label_zh": "让她先挑货",
           "label_en": "Let her pick first",
-          "description_zh": "先让她挑货。",
-          "description_en": "Let her pick her goods first."
+          "description_zh": "先逗她挑货，再开口。",
+          "description_en": "Tease her into picking first, then ask."
         }
       ]
     },
@@ -607,7 +658,8 @@
             {
               "speaker": "Sophia",
               "text": "天还没亮透，我那床头就有人直勾勾盯着我看了。",
-              "en": "Before dawn, someone was already at my bedside, staring straight at me."
+              "en": "Before dawn, someone was already at my bedside, staring straight at me.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -617,7 +669,8 @@
             {
               "speaker": "SEC",
               "text": "母亲！我们清早过来明明是为了对采买单的。",
-              "en": "Mother! We came this early to go over the shopping list!"
+              "en": "Mother! We came this early to go over the shopping list!",
+              "expr": "tsun"
             },
             {
               "speaker": "Player",
@@ -632,17 +685,20 @@
             {
               "speaker": "SEC",
               "text": "母亲起草的时候写了一大片，被我硬生生删改了三遍。",
-              "en": "Mother's draft went on forever. I cut it down three times."
+              "en": "Mother's draft went on forever. I cut it down three times.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "咱们那间小屋子就那么大，买多了连下脚的地方都没有。",
-              "en": "Our place is tiny. Buy too much and there's nowhere to stand."
+              "en": "Our place is tiny. Buy too much and there's nowhere to stand.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
               "text": "删归删，单子上的东西今天全都由我来付钱。",
-              "en": "Cuts or not, I'm paying for everything on this list today."
+              "en": "Cuts or not, I'm paying for everything on this list today.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -697,12 +753,14 @@
             {
               "speaker": "SEC",
               "text": "我就知道你会提他们，前阵子提水时他们也帮过忙。",
-              "en": "I knew you'd mention them. They helped us carry water a while back."
+              "en": "I knew you'd mention them. They helped us carry water a while back.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
               "text": "你记性倒是细，连哪家有几个孩子都挂在心上。",
-              "en": "You've got a keen memory. You even remember who has how many kids."
+              "en": "You've got a keen memory. You even remember who has how many kids.",
+              "expr": "soft"
             }
           ]
         },
@@ -714,7 +772,8 @@
             {
               "speaker": "SEC",
               "text": "过道那位老太太前两天见了我，还一直念叨你提水的事。",
-              "en": "The old lady down the corridor saw me the other day. She kept talking about you carrying water."
+              "en": "The old lady down the corridor saw me the other day. She kept talking about you carrying water.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
@@ -729,12 +788,14 @@
             {
               "speaker": "Sophia",
               "text": "我前两天刚念叨过一模一样的话，当时你还嫌我操心太多。",
-              "en": "I said the exact same thing a few days ago, and you said I worry too much."
+              "en": "I said the exact same thing a few days ago, and you said I worry too much.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "我那是按实际情况盘算，才不是瞎操心。",
-              "en": "I'm planning for the actual situation. That's not worrying."
+              "en": "I'm planning for the actual situation. That's not worrying.",
+              "expr": "tsun"
             },
             {
               "speaker": "Player",
@@ -749,7 +810,8 @@
             {
               "speaker": "SEC",
               "text": "（轻敲桌面）瓷碗一只只敲过听完声音，没毛病我们再按实价付钱。",
-              "en": "(Taps the table) We'll tap each bowl and listen. If they're sound, we pay full price."
+              "en": "(Taps the table) We'll tap each bowl and listen. If they're sound, we pay full price.",
+              "expr": "serious"
             },
             {
               "speaker": "Player",
@@ -771,7 +833,8 @@
             {
               "speaker": "Sophia",
               "text": "我先看看成色，挑中了就照店里的老价钱结账。",
-              "en": "Let me check the quality first. Whatever I pick, we'll pay the shop's usual price."
+              "en": "Let me check the quality first. Whatever I pick, we'll pay the shop's usual price.",
+              "expr": "serious"
             }
           ]
         },
@@ -788,17 +851,20 @@
             {
               "speaker": "SEC",
               "text": "只叫莉迪亚一个人的话，屋里倒确实宽敞不少。",
-              "en": "If it's only Lydia, the place will feel a lot roomier."
+              "en": "If it's only Lydia, the place will feel a lot roomier.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
               "text": "过道老太太那边也不用挂心，等办完事我装一兜甜食送去。",
-              "en": "Don't worry about the old lady down the corridor. I'll bring her a bag of sweets afterward."
+              "en": "Don't worry about the old lady down the corridor. I'll bring her a bag of sweets afterward.",
+              "expr": "soft"
             },
             {
               "speaker": "SEC",
               "text": "那今天瓷碗就少拿两只，桌布和矮凳还是照原样挑。",
-              "en": "Then we'll take two fewer bowls. Same tablecloths and stools as planned."
+              "en": "Then we'll take two fewer bowls. Same tablecloths and stools as planned.",
+              "expr": "serious"
             }
           ]
         },
@@ -815,12 +881,14 @@
             {
               "speaker": "SEC",
               "text": "既然你让我们做主，那就把过道尽头那几户也叫上。",
-              "en": "Since you're leaving it to us, let's invite the families at the end of the corridor too."
+              "en": "Since you're leaving it to us, let's invite the families at the end of the corridor too.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
               "text": "前阵子停水大家互相照应过，请过来热闹一下也好。",
-              "en": "Everyone helped each other during the water outage. It'd be nice to have them over."
+              "en": "Everyone helped each other during the water outage. It'd be nice to have them over.",
+              "expr": "smile"
             }
           ]
         },
@@ -832,12 +900,14 @@
             {
               "speaker": "Sophia",
               "text": "碗底厚实布料也密，这钱花得确实踏实。",
-              "en": "Thick-bottomed bowls, tightly woven cloth. Money well spent."
+              "en": "Thick-bottomed bowls, tightly woven cloth. Money well spent.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "算你过关，刚才敲了一遍连只声音发闷的次品都没有。",
-              "en": "You pass. I tapped every one, and not a single dud."
+              "en": "You pass. I tapped every one, and not a single dud.",
+              "expr": "tsun"
             }
           ]
         },
@@ -849,12 +919,14 @@
             {
               "speaker": "Sophia",
               "text": "明明说好了按实价付，少收的这部分我改天买东西补上。",
-              "en": "We agreed on full price. I'll make up the difference next time I shop."
+              "en": "We agreed on full price. I'll make up the difference next time I shop.",
+              "expr": "serious"
             },
             {
               "speaker": "SEC",
               "text": "母亲你就别跟他争了，他这人做买卖向来是这副脾气。",
-              "en": "Don't argue with him, Mother. That's just how he does business."
+              "en": "Don't argue with him, Mother. That's just how he does business.",
+              "expr": "smile"
             }
           ]
         },
@@ -866,12 +938,14 @@
             {
               "speaker": "Sophia",
               "text": "趁着家里办喜事抬价，老板这算盘打得可真响。",
-              "en": "Raising prices during our family's wedding. Quite the scheme, shopkeeper."
+              "en": "Raising prices during our family's wedding. Quite the scheme, shopkeeper.",
+              "expr": "serious"
             },
             {
               "speaker": "SEC",
               "text": "连母亲的钱你都敢多收，等忙完这阵我再跟你慢慢算。",
-              "en": "You'd overcharge even my mother? Once things settle down, we'll settle this."
+              "en": "You'd overcharge even my mother? Once things settle down, we'll settle this.",
+              "expr": "angry"
             }
           ]
         },
@@ -888,7 +962,8 @@
             {
               "speaker": "SEC",
               "text": "要是别处挑不到经摔的碗，我们回头再来找你。",
-              "en": "If we can't find sturdy bowls elsewhere, we'll come back to you."
+              "en": "If we can't find sturdy bowls elsewhere, we'll come back to you.",
+              "expr": "tsun"
             }
           ]
         }
@@ -940,12 +1015,14 @@
             {
               "speaker": "SEC",
               "text": "胡说，我那是今早起来对名单起太早了。",
-              "en": "Nonsense—I got up too early going over the name list."
+              "en": "Nonsense—I got up too early going over the name list.",
+              "expr": "shy"
             },
             {
               "speaker": "SEC",
               "text": "对了，早上农场刚递来信，那批营养果结出活籽了。",
-              "en": "By the way, word came from the farm this morning—the Nutrifruit batch has viable seeds now."
+              "en": "By the way, word came from the farm this morning—the Nutrifruit batch has viable seeds now.",
+              "expr": "serious"
             },
             {
               "speaker": "SEC",
@@ -955,7 +1032,8 @@
             {
               "speaker": "SEC",
               "text": "行了，扣子拨正了，我退开半步，省得挡着你们。",
-              "en": "All right, clasp's fixed. I'll step back so I'm not in your way."
+              "en": "All right, clasp's fixed. I'll step back so I'm not in your way.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -1010,7 +1088,8 @@
             {
               "speaker": "SEC",
               "text": "说定了就快着点，过道的老太太和小孩攥着的喜糖都快捂化了。",
-              "en": "If we're agreed, hurry—the old woman and kids in the aisle are clutching wedding candy that's about to melt."
+              "en": "If we're agreed, hurry—the old woman and kids in the aisle are clutching wedding candy that's about to melt.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
@@ -1043,12 +1122,14 @@
             {
               "speaker": "SEC",
               "text": "胡说，我那是今早起来核对桌椅起太早了。",
-              "en": "Nonsense—I got up too early checking the tables and chairs."
+              "en": "Nonsense—I got up too early checking the tables and chairs.",
+              "expr": "shy"
             },
             {
               "speaker": "SEC",
               "text": "对了，早上农场刚递来信，那批营养果结出活籽了。",
-              "en": "By the way, word came from the farm this morning—the Nutrifruit batch has viable seeds now."
+              "en": "By the way, word came from the farm this morning—the Nutrifruit batch has viable seeds now.",
+              "expr": "serious"
             },
             {
               "speaker": "SEC",
@@ -1058,7 +1139,8 @@
             {
               "speaker": "SEC",
               "text": "行了，扣子拨正了，我退开半步，把场子留给你们。",
-              "en": "All right, clasp's fixed. I'll step back half a pace and leave the floor to you two."
+              "en": "All right, clasp's fixed. I'll step back half a pace and leave the floor to you two.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -1113,7 +1195,8 @@
             {
               "speaker": "SEC",
               "text": "说定了就准备开席吧，过道那几户的回礼甜食我明天装袋送去。",
-              "en": "Once it's settled, let's start the feast. Tomorrow I'll bag the thank-you sweets for the households down the corridor and deliver them."
+              "en": "Once it's settled, let's start the feast. Tomorrow I'll bag the thank-you sweets for the households down the corridor and deliver them.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
@@ -1146,12 +1229,14 @@
             {
               "speaker": "SEC",
               "text": "胡说，我那是今早起来对名单起太早了。",
-              "en": "Nonsense. I just got up too early this morning to go over the list."
+              "en": "Nonsense. I just got up too early this morning to go over the list.",
+              "expr": "shy"
             },
             {
               "speaker": "SEC",
               "text": "行了，扣子拨正了，我退开半步，省得挡着你们。",
-              "en": "All right, the clasp is fixed. I'll step back half a pace so I'm not in your way."
+              "en": "All right, the clasp is fixed. I'll step back half a pace so I'm not in your way.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -1206,7 +1291,8 @@
             {
               "speaker": "SEC",
               "text": "说定了就快着点，过道的老太太和小孩攥着的喜糖都快捂化了。",
-              "en": "Once it's settled, hurry up. The old women and children in the corridor are clutching their wedding candy, and it's about to melt."
+              "en": "Once it's settled, hurry up. The old women and children in the corridor are clutching their wedding candy, and it's about to melt.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
@@ -1244,12 +1330,14 @@
             {
               "speaker": "SEC",
               "text": "胡说，我那是今早起来核对桌椅起太早了。",
-              "en": "Nonsense. I just got up too early this morning checking the tables and chairs."
+              "en": "Nonsense. I just got up too early this morning checking the tables and chairs.",
+              "expr": "shy"
             },
             {
               "speaker": "SEC",
               "text": "行了，扣子拨正了，我退开半步，把场子留给你们。",
-              "en": "All right, the clasp is fixed. I'll step back half a pace and leave the floor to you two."
+              "en": "All right, the clasp is fixed. I'll step back half a pace and leave the floor to you two.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
@@ -1304,7 +1392,8 @@
             {
               "speaker": "SEC",
               "text": "说定了就准备开席吧，过道那几户的回礼甜食我明天装袋送去。",
-              "en": "Once it's settled, let's start the feast. Tomorrow I'll bag the thank-you sweets for the households down the corridor and deliver them."
+              "en": "Once it's settled, let's start the feast. Tomorrow I'll bag the thank-you sweets for the households down the corridor and deliver them.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",

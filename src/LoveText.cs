@@ -41,7 +41,7 @@ namespace EleanorRomance
                         if (next <= cursor && !(repeatLastLine && line.Key == lines[lines.Length - 1].Key)) continue;
                         Dialogue node = StoryEngine.Text(speaker, paragraph);
                         if (line.Speaker == "SEC") StoryPresentation.MarkCompanion(node, companionName);
-                        PortraitExpression.Apply(node, line.Key, speaker);
+                        PortraitExpression.Apply(node, line.Key, line.Speaker == "SEC" ? companionName : speaker);
                         node.SetEndAction(() => LoveState.SetInt(cursorKey, Math.Max(next, LoveState.Int(cursorKey))));
                         if (head == null) head = node;
                         else tail.SetNextDialogue(node);

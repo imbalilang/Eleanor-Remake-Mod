@@ -99,6 +99,9 @@ namespace EleanorRomance
                 WeddingDone = true;
                 Act3Done = true;
             }
+            foreach (string key in new System.Collections.Generic.List<string>(ModHelper.GetModDataKeys(ModConstants.ModId)))
+                if (key.StartsWith(Prefix + "cursor.", StringComparison.Ordinal))
+                    ModHelper.SetModData(ModConstants.ModId, key, "");
             // Leave room for the day off after Old Friend and the separate pre-wedding visits.
             int[] targetDays = { 54, 55, 56, 57, 58, 60, 61, 63, 65, 69 };
             NextVisitDay = Act3Done || visit >= targetDays.Length ? -1

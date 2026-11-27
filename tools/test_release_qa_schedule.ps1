@@ -75,7 +75,7 @@ foreach($early in @($false,$true)){
                     }
                 }
             }
-            $expected=switch($kind){love{13}maid{if($world -eq 1){13}else{14}}rev{11}dual{16}}
+            $expected=switch($kind){love{13}maid{if($world -eq 1){14}else{15}}rev{11}dual{16}}
             Assert ($finished -and $count -eq $expected) "$kind scheduling stalled or replayed scenes ($count): $($schedule -join ', ')"
             if($kind -eq 'love'){
                 Assert ($schedule[3] -like "$((54-$offset)):er_story_love_a1_01" -and

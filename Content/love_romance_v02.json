@@ -20,7 +20,8 @@
             {
               "speaker": "Sophia",
               "text": "配给站那根主水管裂了大口子，刚放了一半就彻底断了水。",
-              "en": "The ration station's main water pipe split wide open. The water cut out completely halfway through."
+              "en": "The ration station's main water pipe split wide open. The water cut out completely halfway through.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -60,7 +61,8 @@
             {
               "speaker": "Sophia",
               "text": "我就知道你是个做实在生意的，不会趁着这时候跟着乱涨。",
-              "en": "I knew you were honest. You wouldn't jack up prices at a time like this."
+              "en": "I knew you were honest. You wouldn't jack up prices at a time like this.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -75,7 +77,8 @@
             {
               "speaker": "Sophia",
               "text": "谁也不准白送谁东西，不然我下次可不来你这儿买了。",
-              "en": "Nobody gives anything away for free, or I won't shop here again."
+              "en": "Nobody gives anything away for free, or I won't shop here again.",
+              "expr": "shy"
             },
             {
               "speaker": "Player",
@@ -95,7 +98,8 @@
             {
               "speaker": "Sophia",
               "text": "咱们先把眼前的买卖结了，你看我拿几件水盆合适？",
-              "en": "Let's settle this first. How many basins should I take?"
+              "en": "Let's settle this first. How many basins should I take?",
+              "expr": "neutral"
             }
           ],
           "cursor_revision": 2
@@ -113,7 +117,8 @@
             {
               "speaker": "Sophia",
               "text": "这只大盆空着拎都觉得坠手，装满水我可端不稳。",
-              "en": "This big one's heavy even empty. Filled with water, I'd never hold it steady."
+              "en": "This big one's heavy even empty. Filled with water, I'd never hold it steady.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -135,7 +140,8 @@
             {
               "speaker": "Sophia",
               "text": "你这算盘打得比我还快，连怎么分都替我想好了。",
-              "en": "You calculate faster than I do. You've even worked out how to split them."
+              "en": "You calculate faster than I do. You've even worked out how to split them.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -157,7 +163,8 @@
             {
               "speaker": "Sophia",
               "text": "（她下意识按住腰间的钱袋）你这孩子怎么还小看人呢？",
-              "en": "(She instinctively presses a hand to the purse at her waist) Are you looking down on me, young one?"
+              "en": "(She instinctively presses a hand to the purse at her waist) Are you looking down on me, young one?",
+              "expr": "shy"
             },
             {
               "speaker": "Sophia",
@@ -174,7 +181,8 @@
             {
               "speaker": "Sophia",
               "text": "盆底厚实不漏水，价钱也算得这么公道。",
-              "en": "Thick bottoms, no leaks, and such a fair price."
+              "en": "Thick bottoms, no leaks, and such a fair price.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -191,7 +199,8 @@
             {
               "speaker": "Sophia",
               "text": "这数目不对吧，你是不是又偷偷给我抹了零头？",
-              "en": "This number's off. Did you knock some off again behind my back?"
+              "en": "This number's off. Did you knock some off again behind my back?",
+              "expr": "serious"
             },
             {
               "speaker": "Player",
@@ -213,7 +222,8 @@
             {
               "speaker": "Sophia",
               "text": "怎么连你也跟着别人乱抬价，趁着停水敲起竹杠来了？",
-              "en": "Even you're hiking prices like the rest, fleecing people during the outage?"
+              "en": "Even you're hiking prices like the rest, fleecing people during the outage?",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -230,7 +240,8 @@
             {
               "speaker": "Sophia",
               "text": "今天这价钱谈不拢就算了，我再去隔街的杂货铺看看。",
-              "en": "If we can't agree on a price, never mind. I'll try the shop on the next street."
+              "en": "If we can't agree on a price, never mind. I'll try the shop on the next street.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -262,7 +273,8 @@
             {
               "speaker": "Sophia",
               "text": "我这壶水是刚接出来的，你要是急用就先拿去救个急吧。",
-              "en": "This jug is fresh. If you need it that badly, take it for now."
+              "en": "This jug is fresh. If you need it that badly, take it for now.",
+              "expr": "soft"
             },
             {
               "speaker": "Resident",
@@ -272,7 +284,8 @@
             {
               "speaker": "Sophia",
               "text": "（她被一把推得踉跄跌坐下去）嘶……我的脚踝好像扭到了。",
-              "en": "(She's shoved hard, stumbling to the ground) Ah... I think I twisted my ankle."
+              "en": "(She's shoved hard, stumbling to the ground) Ah... I think I twisted my ankle.",
+              "expr": "hurt"
             },
             {
               "speaker": "Player",
@@ -344,7 +357,8 @@
             {
               "speaker": "Sophia",
               "text": "歇了一宿已经消肿了，慢点走不碍事。",
-              "en": "The swelling went down overnight. I'm fine if I walk slowly."
+              "en": "The swelling went down overnight. I'm fine if I walk slowly.",
+              "expr": "soft"
             },
             {
               "speaker": "Sophia",
@@ -359,7 +373,8 @@
             {
               "speaker": "Sophia",
               "text": "她昨晚跟着提水把手心都磨红了，沾着枕头就睡沉了。",
-              "en": "Her palms got rubbed red hauling water last night. She was out the moment she hit the pillow."
+              "en": "Her palms got rubbed red hauling water last night. She was out the moment she hit the pillow.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -379,12 +394,14 @@
             {
               "speaker": "Sophia",
               "text": "那边一壶水卖到三倍价，连卖干粮的都跟着坐地起价。",
-              "en": "Water's going for triple there, and even the dry-food sellers jacked up their prices."
+              "en": "Water's going for triple there, and even the dry-food sellers jacked up their prices.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
               "text": "反倒是你这儿的货价，昨天从头到尾也只微调了一半。",
-              "en": "Your prices, though, only went up half as much all day yesterday."
+              "en": "Your prices, though, only went up half as much all day yesterday.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -438,7 +455,8 @@
             {
               "speaker": "Sophia",
               "text": "以前在我的水培农场里，也有个替我看管库房的老人。",
-              "en": "Back on my hydroponic farm, there was an old man who kept the storeroom for me."
+              "en": "Back on my hydroponic farm, there was an old man who kept the storeroom for me.",
+              "expr": "soft"
             },
             {
               "speaker": "Sophia",
@@ -453,7 +471,8 @@
             {
               "speaker": "Sophia",
               "text": "事后我去查库房的册子，上面居然连一个字都没记。",
-              "en": "Afterward I checked the storeroom ledger. Not a single word of it was recorded."
+              "en": "Afterward I checked the storeroom ledger. Not a single word of it was recorded.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -481,7 +500,8 @@
             {
               "speaker": "Sophia",
               "text": "住得近又怎么样，下层区专坑熟人的摊子可不少。",
-              "en": "Living close doesn't mean much. Plenty of Lower Level stalls fleece their regulars."
+              "en": "Living close doesn't mean much. Plenty of Lower Level stalls fleece their regulars.",
+              "expr": "serious"
             },
             {
               "speaker": "Player",
@@ -491,7 +511,8 @@
             {
               "speaker": "Sophia",
               "text": "你这人平时话不多，说出来的话倒是一句顶一句硬气。",
-              "en": "You don't talk much, but every word you say holds firm."
+              "en": "You don't talk much, but every word you say holds firm.",
+              "expr": "smile"
             }
           ]
         },
@@ -520,7 +541,8 @@
             {
               "speaker": "Sophia",
               "text": "数目算得真清楚，既顶饱又适合老人嚼。",
-              "en": "A fair tally. Filling, and easy for an old woman to chew."
+              "en": "A fair tally. Filling, and easy for an old woman to chew.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -537,12 +559,14 @@
             {
               "speaker": "Sophia",
               "text": "这数明显少收了，我就先替走廊那两户人家接着。",
-              "en": "You clearly undercharged. I'll accept it on behalf of those two families down the hall."
+              "en": "You clearly undercharged. I'll accept it on behalf of those two families down the hall.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
               "text": "下次可别再这样让利了，不然埃莉诺又要念叨我占你便宜。",
-              "en": "Don't cut me deals like this again, or Eleanor will nag me about taking advantage of you."
+              "en": "Don't cut me deals like this again, or Eleanor will nag me about taking advantage of you.",
+              "expr": "smile"
             }
           ]
         },
@@ -554,12 +578,14 @@
             {
               "speaker": "Sophia",
               "text": "昨天停水时你还克制着，今天卖点吃食倒多收起来了。",
-              "en": "You held back during the water outage yesterday, but now you're overcharging for a bit of food."
+              "en": "You held back during the water outage yesterday, but now you're overcharging for a bit of food.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
               "text": "钱我照给，不过你这忽高忽低的脾气我可记在心里了。",
-              "en": "I'll pay. But I'm making a note of these mood swings of yours."
+              "en": "I'll pay. But I'm making a note of these mood swings of yours.",
+              "expr": "smile"
             }
           ]
         },
@@ -571,12 +597,14 @@
             {
               "speaker": "Sophia",
               "text": "这价钱不太合适，我还是先去配给站那边问问看吧。",
-              "en": "That price doesn't sit right. I'll go ask at the ration station first."
+              "en": "That price doesn't sit right. I'll go ask at the ration station first.",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
               "text": "不过刚才夸你的那些话，我照样算数。",
-              "en": "Still, I meant what I said about you earlier."
+              "en": "Still, I meant what I said about you earlier.",
+              "expr": "soft"
             }
           ]
         }
@@ -623,22 +651,26 @@
             {
               "speaker": "SEC",
               "text": "喂，你快抬头看看我母亲今天这身打扮。",
-              "en": "Hey, look up. Look at how my mother's dressed today."
+              "en": "Hey, look up. Look at how my mother's dressed today.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "出门前我劝她换件正式点的衣裳，她偏不听。",
-              "en": "I told her to change into something proper before we left. She wouldn't listen."
+              "en": "I told her to change into something proper before we left. She wouldn't listen.",
+              "expr": "tsun"
             },
             {
               "speaker": "Sophia",
               "text": "也不知是谁出门前对着墙上那面小斜镜照了三遍。",
-              "en": "And who was it that checked herself three times in that little tilted wall mirror before we left?"
+              "en": "And who was it that checked herself three times in that little tilted wall mirror before we left?",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
               "text": "那是屋里的镜子太小，一次根本照不全好不好！",
-              "en": "That mirror's too small! You can't see everything at once!"
+              "en": "That mirror's too small! You can't see everything at once!",
+              "expr": "shy"
             },
             {
               "speaker": "Sophia",
@@ -648,7 +680,8 @@
             {
               "speaker": "Sophia",
               "text": "今天过来买点甜食，犒劳一下昨晚提水的功臣。",
-              "en": "We came for something sweet, a reward for last night's water-hauling heroes."
+              "en": "We came for something sweet, a reward for last night's water-hauling heroes.",
+              "expr": "soft"
             },
             {
               "speaker": "SEC",
@@ -713,12 +746,13 @@
             {
               "speaker": "SEC",
               "text": "哼，那我天天穿身上这套，怎么没见你夸一句？",
-              "en": "Hmph, I wear this outfit every day, and I've never heard you compliment it once."
+              "en": "Hmph, I wear this outfit every day, and I've never heard you compliment it once.",
+              "expr": "tsun"
             },
             {
               "speaker": "Player",
-              "text": "你穿哪套都好看。",
-              "en": "You look good in anything."
+              "text": "你穿哪套我都记在眼里，只是白天客多，不想当着外人说。",
+              "en": "I notice every outfit you wear—there are just too many customers around in the daytime to say it in front of strangers."
             },
             {
               "speaker": "SEC",
@@ -733,7 +767,8 @@
             {
               "speaker": "SEC",
               "text": "……刚才那句话，你给我留到晚上再说。",
-              "en": "...Save what you just said for tonight."
+              "en": "...Save what you just said for tonight.",
+              "expr": "shy"
             }
           ]
         },
@@ -750,7 +785,8 @@
             {
               "speaker": "SEC",
               "text": "当然是嚼起来嘎嘣响的硬糖，越脆越有味道。",
-              "en": "Hard candy that crunches, obviously. The crunchier, the better."
+              "en": "Hard candy that crunches, obviously. The crunchier, the better.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -770,7 +806,8 @@
             {
               "speaker": "SEC",
               "text": "谁说我一定会分给他了，那得看他表现。",
-              "en": "Who says I'll share with him? Depends on how he behaves."
+              "en": "Who says I'll share with him? Depends on how he behaves.",
+              "expr": "tsun"
             },
             {
               "speaker": "Sophia",
@@ -802,7 +839,8 @@
             {
               "speaker": "Sophia",
               "text": "你们两个这默契，不知道的还以为提前对过词呢。",
-              "en": "The way you two sync up, anyone would think you'd rehearsed."
+              "en": "The way you two sync up, anyone would think you'd rehearsed.",
+              "expr": "smile"
             }
           ]
         },
@@ -819,7 +857,8 @@
             {
               "speaker": "SEC",
               "text": "胡说，我跟她穿衣风格哪有一点像的地方……也就眼睛随她。",
-              "en": "Nonsense, our styles are nothing alike... Only my eyes take after her."
+              "en": "Nonsense, our styles are nothing alike... Only my eyes take after her.",
+              "expr": "shy"
             },
             {
               "speaker": "Sophia",

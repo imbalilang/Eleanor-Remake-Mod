@@ -32,10 +32,14 @@ namespace EleanorRomance
                         int next=++position;
                         if(next<=cursor)continue;
                         Dialogue node = StoryEngine.Text(speaker, paragraph);
+                        string exprSpeaker = speaker;
                         if (line.Speaker == "SEC")
-                            StoryPresentation.MarkCompanion(node,
-                                string.IsNullOrEmpty(companionName) ? L.Eleanor : companionName);
-                        PortraitExpression.Apply(node,line.Key,speaker);
+                        {
+                            string backup = string.IsNullOrEmpty(companionName) ? L.Eleanor : companionName;
+                            StoryPresentation.MarkCompanion(node, backup);
+                            exprSpeaker = backup;
+                        }
+                        PortraitExpression.Apply(node, line.Key, exprSpeaker);
                         node.SetEndAction(() => DualState.SetInt(cursorKey, Math.Max(next, DualState.Int(cursorKey))));
                         if (head == null) head = node;
                         else tail.SetNextDialogue(node);

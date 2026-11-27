@@ -90,6 +90,12 @@ Operational notes:
 - The engine selects the world book with `ELEANOR_WORLD_BOOK` (default `world_book.json`), for example `ELEANOR_WORLD_BOOK=world_book_D.json python Novel_Engine_V7.py`.
 - Existing custom-prompt experiment scripts in `tools/NovelWorkFlow_Eleanor/` are not valid pipeline entry points under these rules. Do not use them for production generation.
 
+## Mod manifest and TMP font constraints (user requirement)
+
+- **Never mix Korean Hangul (`U+AC00–D7AF`, `U+1100–11FF`, `U+3130–318F`), Japanese Kana (`U+3040–30FF`, `U+31F0–31FF`), or non-GB2312 traditional/rare characters (e.g. `語`) into Chinese text in `manifest.xml` (`<Name>` / `<Description>`).** The game's `ModUIManager` renders mod names and descriptions through `ScriptFontSwap.FontForText`, which scans the entire string and binds a single TMP font with fixed priority `koreanFont > japaneseFont > simplifiedChineseFont`. Even a single Hangul or Kana character forces the entire description onto `koreanFont`/`japaneseFont` and turns Simplified Chinese characters into missing-glyph boxes (`□`), including before the mod is enabled. Write language lists as `简体中文 / English / 日语 / 韩语 (ZH / EN / JA / KO)` instead of `日本語 / 한국어`.
+- **Keep Chinese UI/CG/dialogue text (`Localization/zh.csv`, `Content/CG章节/E*.md`) free of stray Hangul or Kana**, and resolve fonts for custom TMP panels (such as `src/EndingPageUI.cs`) from the active locale via `FontLoader.Instance.GetFontByRole(FontLoader.FontRole.Noto_Sans, LocalizationSettings.SelectedLocale)` rather than probing glyphs across fonts.
+- `python tools/check_project.py` enforces the `manifest.xml` script/GB2312 check automatically.
+
 ## Release versioning (user requirement)
 
 - Every Steam Workshop or Nexus content update must increase `<ModVersion>` in `manifest.xml`. Publishing new files under the same version is forbidden: the game/loader uses the mod version to detect updates, so an unbumped item does not reach subscribers.

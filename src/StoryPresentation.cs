@@ -51,6 +51,8 @@ namespace EleanorRomance
         private static SpriteRenderer hiddenHostPortrait;
         private static bool usedFirst;
         private static bool usedSecond;
+        private static string slot1Sprite;
+        private static string slot2Sprite;
         private static int backupNameVersion;
         private static readonly ConditionalWeakTable<Dialogue, string> companionLines =
             new ConditionalWeakTable<Dialogue, string>();
@@ -112,6 +114,8 @@ namespace EleanorRomance
                 savedSprite1 = usedFirst ? first.image.sprite : null;
                 savedSprite2 = usedSecond ? second.image.sprite : null;
                 shown = true;
+                slot1Sprite = usedFirst ? backup1Sprite : null;
+                slot2Sprite = usedSecond ? backup2Sprite : null;
                 bool walkIn = string.Equals(mode, "arrive", StringComparison.OrdinalIgnoreCase);
                 if (usedFirst) ShowSlot(first, backup1Sprite, walkIn);
                 if (usedSecond) ShowSlot(second, backup2Sprite, walkIn);
@@ -133,6 +137,27 @@ namespace EleanorRomance
             if (walkIn) slot.StartArrive();
             else slot.SetImmediatlyArrive();
             slot.image.sprite = SpriteDict.Instance.ShowClientSprite(PortraitCompat.Resolve(sprite));
+        }
+
+        internal static void ApplyExpression(Dialogue dialogue)
+        {
+            if (!shown || dialogue == null) return;
+            if (PortraitCompat.Mode == PortraitCompat.PortraitMode.Other) return;
+            if (!PortraitExpression.TryGetTag(dialogue, out string expr, out string speaker)) return;
+            StoreUIManager ui = StoreUIManager.Instance;
+            if (ui == null) return;
+            if (usedFirst && !string.IsNullOrEmpty(slot1Sprite)
+                && ui.secGameObject != null && ui.secGameObject.image != null)
+            {
+                Sprite s1 = PortraitExpression.ResolveForSprite(slot1Sprite, speaker, expr);
+                if (s1 != null) ui.secGameObject.image.sprite = s1;
+            }
+            if (usedSecond && !string.IsNullOrEmpty(slot2Sprite)
+                && ui.secGameObject2 != null && ui.secGameObject2.image != null)
+            {
+                Sprite s2 = PortraitExpression.ResolveForSprite(slot2Sprite, speaker, expr);
+                if (s2 != null) ui.secGameObject2.image.sprite = s2;
+            }
         }
 
         internal static void HideHostPortrait()
@@ -176,6 +201,7 @@ namespace EleanorRomance
                 savedSprite1 = savedSprite2 = null;
                 hiddenHostPortrait = null;
                 usedFirst = usedSecond = false;
+                slot1Sprite = slot2Sprite = null;
             }
         }
 

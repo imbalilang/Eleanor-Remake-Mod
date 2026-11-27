@@ -22,6 +22,21 @@ private static readonly Dictionary<string, string[]> RouteOrder = new Dictionary
 {"maid", new[] { "maid_daily_1","maid_daily_2","maid_daily_3","maid_daily_4" }},
 {"rev", new[] { "rev_daily_1","rev_daily_2","rev_daily_3","rev_daily_4" }},
 };
+private static readonly Dictionary<string, string> Sprites = new Dictionary<string, string> {
+{"love_daily_1", "er_portrait_eleanor_casual_no_earrings_female_beauty"},
+{"love_daily_2", "er_portrait_eleanor_love_intimate_female_beauty"},
+{"love_daily_3", "er_portrait_eleanor_casual_no_earrings_female_beauty"},
+{"love_daily_4", "er_portrait_eleanor_casual_no_earrings_female_beauty"},
+{"maid_daily_1", "er_portrait_eleanor_maid_female_beauty"},
+{"maid_daily_2", "er_portrait_eleanor_gala_female_beauty"},
+{"maid_daily_3", "er_portrait_eleanor_maid_female_beauty"},
+{"maid_daily_4", "er_portrait_eleanor_maid_female_beauty"},
+{"rev_daily_1", "eleanor_rev"},
+{"rev_daily_2", "eleanor_rev"},
+{"rev_daily_3", "eleanor_rev"},
+{"rev_daily_4", "eleanor_rev"},
+};
 public static Line[] Get(string id) => Scenes.TryGetValue(id, out var lines) ? lines : null;
 public static string[] ForRoute(string route) => RouteOrder.TryGetValue(route, out var ids) ? ids : null;
+public static string SpriteFor(string id) => Sprites.TryGetValue(id, out var sp) ? sp : null;
 }}

@@ -18,6 +18,7 @@ namespace EleanorRomance
             {13,"v2_a1c1"}, {14,"v2_a1c2"}, {15,"v2_a1c3"}, {16,"v2_a1c4"}, {17,"v2_a1c5"},
             {18,"v2_a2c1"}, {19,"v2_a2c2"},
             {20,"v2_a3c1"}, {21,"v2_a3c2"}, {22,"v2_a3c3"},
+            {24,"v2_salon_buzz"},
             {25,"v2_a4c1"}, {26,"v2_a4c2"}, {27,"v2_a4c3"}, {28,"v2_a4c4"},
         };
 
@@ -63,7 +64,7 @@ namespace EleanorRomance
 
         public static StoreClient CreateEvent(int id)
         {
-            if (!Enabled || id < 25 || id > 28) return null;
+            if (!Enabled || id < 24 || id > 28) return null;
             return CreateChapter(id);
         }
 
@@ -72,11 +73,12 @@ namespace EleanorRomance
             if (!Enabled || !MaidState.Active || !RomanceState.EpilogueDone) return 0;
             int progress = MaidState.Progress;
             if (progress < 24 || progress >= 28) return 0;
+            if (progress == 24 && !MaidState.Flag("v2.salon_buzz_done"))
+            {
+                int buzzDue = MaidState.ProgressDay + 1;
+                return day >= buzzDue ? 24 : 0;
+            }
             int next = progress == 24 ? 25 : progress + 1;
-            // v2_a3c3 ends with "I'll be at work tomorrow".  The post-story
-            // visits follow the previous visit's day; absolute target days can
-            // leave a week of silence after the main story and look like a
-            // permanent pause.
             int due = MaidState.ProgressDay + (progress == 24 ? 1 : 2);
             if (due <= 0) due = MaidState.ProgressDay + 2;
             return day >= due ? next : 0;
@@ -142,7 +144,23 @@ namespace EleanorRomance
                 }
             };
             client.onItemBought += (item, paid) => tracker.Record(item, paid, seller);
-            if (seller) client.SetWholesale(scene.Id == "v2_a0c1" ? 30 : 0);
+            if (seller) client.SetWholesale(scene.Id == "v2_a0c1" ? 30 : 20);
+            else if (scene.Id == "v2_salon_buzz")
+            {
+                client.clientBuyingTagList.Add(TypeHelper.LUXURY_ITEM);
+                client.clientBuyingTagList.Add(TypeHelper.ART);
+                client.clientBuyingTagList.Add(TypeHelper.HIGHEND);
+                client.clientBuyingTagList.Add("HOUSEHOLD_GOOD");
+                client.SetBudget(400);
+                client.SetVariety();
+            }
+            else if (scene.Id == "v2_a2c1")
+            {
+                client.clientBuyingTagList.Add("FOOD");
+                client.clientBuyingTagList.Add("HOUSEHOLD_GOOD");
+                client.SetBudget(240);
+                client.SetVariety();
+            }
             else
             {
                 client.clientBuyingTagList.Add("HOUSEHOLD_GOOD");
@@ -160,13 +178,18 @@ namespace EleanorRomance
                     StoreClientList.AddScavGeneralStock();
                 });
             }
+            else if (scene.Id == "v2_a3c1")
+            {
+                StoryEngine.OnDialogueFinished(main, SpawnA3C1Stock);
+            }
             client.mainDialogue = main;
             bool finished = false;
             Action finish = () =>
             {
                 if (finished) return;
                 finished = true;
-                EleanorStory.RecordDeal(tracker, noSaleIsVisit: true);
+                if (scene.Id != "v2_salon_buzz")
+                    EleanorStory.RecordDeal(tracker, noSaleIsVisit: true);
                 CompleteScene(scene);
             };
             StoryEngine.InterceptDismiss(client, () =>
@@ -205,6 +228,28 @@ namespace EleanorRomance
             }, finish);
             client.CompleteClientCreation();
             return client;
+        }
+
+        private static void SpawnA3C1Stock()
+        {
+            string[] ids = { "scrap_metal", "wire_cutter" };
+            for (int i = 0; i < ids.Length; i++)
+            {
+                string key = "v2.stock.a3c1." + i;
+                if (MaidState.Flag(key)) continue;
+                try
+                {
+                    GameItem item = ItemSpawner.Spawn(ids[i]);
+                    if (item == null) throw new InvalidOperationException("Missing item " + ids[i]);
+                    ItemFeatureHelper.SetSecondHand(item);
+                    PlayerStore.Instance.AddDirectSellingItemToTable(item, isOwend: false, isStolen: false);
+                    MaidState.Flag(key, true);
+                }
+                catch (Exception ex)
+                {
+                    ModEntry.LogError("Maid v2 a3c1 stock " + ids[i] + ": " + ex);
+                }
+            }
         }
 
         private static Dialogue CommonScavOutcome(StoryEngine.DealTracker tracker) => StoryEngine.Build(
@@ -438,6 +483,9 @@ namespace EleanorRomance
                     StoryEngine.GiveSelfRefillingPerfume();
                     StoryDirector.CompleteCore();
                     break;
+                case "v2_salon_buzz":
+                    MaidState.Flag("v2.salon_buzz_done", true);
+                    break;
                 case "v2_a4c1":
                     MaidV2State.Residency = true;
                     MaidState.Progress = 25;
@@ -456,11 +504,11 @@ namespace EleanorRomance
                     EndingPageUI.ShowMaidCompletion();
                     break;
             }
-            // These walk-ins can become eligible only after today's main visit actually finishes.
-            if (scene.Id == "v2_a2c1" || scene.Id == "v2_a4c1")
-                ChapterTradeQueuePatch.TryInsert(PlayerStore.Instance?.storeClientManager);
-            CompleteOptionalProjects();
-            CollectDividends();
+            if (scene.Id != "v2_salon_buzz")
+            {
+                CompleteOptionalProjects();
+                CollectDividends();
+            }
             // Mainline v2 scenes used to update the Wilde rows silently, so the
             // project that unblocks the next chapter was easy to miss.  The tip
             // itself is sent by the next daily refresh, when no dialogue is up.
@@ -501,6 +549,14 @@ namespace EleanorRomance
             else if (portrait == "er_portrait_mother_female_beauty")
                 client = EleanorStory.NewNpcClient("v2_" + id, L.Get("er_name_sophia"),
                     portrait, EleanorStory.FactionKind.Upper);
+            else if (portrait == "upper_salon_guest")
+            {
+                string sprite = "maleUpper1";
+                try { sprite = SpriteDict.GetRandomUpperMaleSpriteName(); } catch { }
+                if (string.IsNullOrEmpty(sprite)) sprite = "maleUpper1";
+                client = EleanorStory.NewNpcClient("v2_" + id, L.Get("er_name_upper_buyer"),
+                    sprite, EleanorStory.FactionKind.Upper);
+            }
             else
                 client = EleanorStory.NewEleanorClient("v2_" + id, portrait,
                     intent == "SELL" ? StoreClient.ClientIntent.SELL

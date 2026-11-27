@@ -798,8 +798,10 @@ namespace EleanorRomance
 
             if (client.spriteName == GalaKey)
             {
+                string id = client.identifier ?? "";
                 bool keepGala = IsOurEleanorClient(client)
-                    && (client.identifier ?? "").StartsWith("er_story_v2_", StringComparison.Ordinal);
+                    && (id.StartsWith("er_story_v2_", StringComparison.Ordinal)
+                        || id.StartsWith("er_story_post_daily_maid_", StringComparison.Ordinal));
                 client.spriteName = keepGala && EnsureLocalPortrait(GalaKey)
                     ? GalaKey : Resolve(ModConstants.EleanorPlainCasualPortrait);
             }

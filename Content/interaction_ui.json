@@ -1,48 +1,4 @@
 {
-  "er_gala_prompt": [
-    "她等着你的回答。",
-    "She waits for your answer."
-  ],
-  "er_gala_wait_answer": [
-    "想好了？我等你说。",
-    "Decided? I'm waiting."
-  ],
-  "er_gala_accept": [
-    "把我的名字填上。今晚陪你去。",
-    "Put my name down. I am coming with you tonight."
-  ],
-  "er_gala_free": [
-    "今晚陪她赴约，直接进入次日清晨；不额外收费，当日经营照常结算。",
-    "Join her tonight and continue to the next morning. No attendance fee; normal daily settlement applies."
-  ],
-  "er_gala_go": [
-    "走吧。今天的时间留给你。",
-    "Let's go. Today's time is yours."
-  ],
-  "er_gala_cancel": [
-    "这回还是走不开，你先去吧。",
-    "I still can't leave. Go ahead without me."
-  ],
-  "er_gala_decline_desc": [
-    "她这场自己去，你照常收店；不再主动邀约，不影响恋爱或分红。",
-    "She attends alone and you close as usual. She will not ask again; romance and dividends are unaffected."
-  ],
-  "er_gala_gown_beauty": [
-    "她站在窗口前，深酒红的礼服收出腰线，肩颈露在灯下，耳饰随着动作轻轻一晃。她没急着开口，等你先说话。",
-    "She stands at the window in a fitted wine-red gown, bare shoulders catching the light, her earrings swaying gently. She waits for you to speak."
-  ],
-  "er_gala_gown_vanilla": [
-    "她站在窗口前，换回了上层区的正装，头发仔细拢过，耳边的饰物随着动作轻轻一晃。她等你先开口。",
-    "She stands at the window in her Upper Level clothes, her hair carefully arranged and earrings swaying gently, waiting for you to speak."
-  ],
-  "er_gala_news_title": [
-    "名媛埃莉诺携神秘男伴亮相上层区晚会",
-    "Eleanor attends Upper Level party with mysterious companion"
-  ],
-  "er_gala_news_body": [
-    "近日以自己的生意重返上层区的埃莉诺，携一名少见于社交场合的男子出席晚会。面对旁人询问，她直言对方是在下层区经营当铺的恋人。据在场人士透露，曾要求她撤换合作方的某采购行管事，当晚亦主动上前致意。两人随后步入舞池，散场后一同离开。",
-    "Eleanor, recently returned to the Upper Level through her own business, attended a party with a man seldom seen in society. Asked who he was, she introduced him as her partner, a pawnshop owner from the Lower Levels. Guests report that a purchasing manager who had sought a change in her business partners also approached to offer his greetings. The couple later took to the dance floor and left together."
-  ],
   "er_gala_guest": [
     "来宾",
     "Guest"

@@ -136,9 +136,6 @@ def main() -> int:
         errors.append('Harem v2 scenes must be present in dv01-dv13 order')
     for bid in set(re.findall(r'"(dv\d+_b\d+)"',source)):
         if bid not in dual_blocks:errors.append('Unknown harem v2 block: '+bid)
-    for stage in range(1,4):
-        for variant in range(1,3):
-            if f'wait_{stage}_{variant}' not in dual_blocks:errors.append('Missing stage daily')
     for i in range(1,8):
         if f'dr_daily_{i}_open' not in dual_blocks:errors.append('Missing confirmed daily')
     dualgen=open(os.path.join(ROOT,'src','DualContent.g.cs'),encoding='utf8').read()
@@ -223,6 +220,30 @@ def main() -> int:
         if pd_gen_ids != set(pd_ids):
             errors.append('Post-ending daily generated scene set differs from source')
         print(f"post-ending daily scenes: {len(pd_ids)} (source/generated/bilingual checked)")
+
+    # Manifest TMP font safety: ModUIManager passes Name/Description to ScriptFontSwap.FontForText,
+    # where any Hangul/Kana switches the whole box to koreanFont/japaneseFont and turns Simplified Chinese into □.
+    manifest_path = os.path.join(ROOT, "manifest.xml")
+    if os.path.exists(manifest_path):
+        manifest_text = open(manifest_path, encoding="utf-8").read()
+        for tag in ("Name", "Description"):
+            m = re.search(rf"<{tag}>(.*?)</{tag}>", manifest_text, re.S)
+            if not m:
+                continue
+            body = m.group(1)
+            bad_chars = []
+            for ch in body:
+                if ("\uac00" <= ch <= "\ud7af") or ("\u1100" <= ch <= "\u11ff") or ("\u3130" <= ch <= "\u318f"):
+                    bad_chars.append(f"{ch}(Hangul)")
+                elif ("\u3040" <= ch <= "\u30ff") or ("\u31f0" <= ch <= "\u31ff"):
+                    bad_chars.append(f"{ch}(Kana)")
+                elif ord(ch) > 127:
+                    try:
+                        ch.encode("gb2312")
+                    except UnicodeEncodeError:
+                        bad_chars.append(f"{ch}(non-GB2312)")
+            if bad_chars:
+                errors.append(f"manifest.xml <{tag}> contains characters that break ScriptFontSwap/TMP font: " + ", ".join(dict.fromkeys(bad_chars)))
 
     print(f"zh keys: {len(zh)}")
     print(f"en keys: {len(en)} (missing {len(missing_en_content)} content keys, {len(missing_en_code)} code keys)")

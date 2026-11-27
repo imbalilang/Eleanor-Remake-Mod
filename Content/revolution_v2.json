@@ -943,7 +943,7 @@
             {
               "speaker": "Eleanor",
               "text": "今天上午，队里把前阵子没回来的那个人留下的东西拢了拢。",
-              "expr": "sad",
+              "expr": "hurt",
               "en": "This morning the unit gathered up what the one who didn't come back left behind."
             },
             {
@@ -1112,7 +1112,7 @@
             {
               "speaker": "Eleanor",
               "text": "但我手里留的这份，第七行还空着。",
-              "expr": "sad",
+              "expr": "hurt",
               "en": "But on the copy I kept, line seven is still blank."
             }
           ]
@@ -1193,7 +1193,7 @@
             {
               "speaker": "Eleanor",
               "text": "那也轮不到你来替我开脱！",
-              "expr": "angry",
+              "expr": "serious",
               "en": "That doesn't mean you get to make excuses for me!"
             },
             {
@@ -1360,8 +1360,8 @@
             {
               "speaker": "Eleanor",
               "text": "吵醒你了？我看里面还亮着灯。",
-              "expr": "tired",
-              "en": "Did I wake you? I saw the light was still on."
+              "en": "Did I wake you? I saw the light was still on.",
+              "expr": "soft"
             },
             {
               "speaker": "Player",
@@ -1381,8 +1381,8 @@
             {
               "speaker": "Eleanor",
               "text": "我杀了人。",
-              "expr": "serious",
-              "en": "I killed someone."
+              "en": "I killed someone.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
@@ -1392,7 +1392,8 @@
             {
               "speaker": "Eleanor",
               "text": "驻地那边一屋子都是人，这话我没法跟他们提。",
-              "en": "Back at base the room's full of people. I can't bring this up with them."
+              "en": "Back at base the room's full of people. I can't bring this up with them.",
+              "expr": "hurt"
             }
           ]
         },
@@ -1416,12 +1417,24 @@
             {
               "speaker": "Eleanor",
               "text": "那股味跟长在布料里一样，怎么都散不干净。",
-              "en": "The smell's like it grew into the fabric. It won't come out no matter what."
+              "en": "The smell's like it grew into the fabric. It won't come out no matter what.",
+              "expr": "tired"
             },
             {
               "speaker": "Player",
               "text": "先放这儿晾着吧。",
               "en": "Leave it here to dry for now."
+            },
+            {
+              "speaker": "Player",
+              "text": "以后打完回来，不管几点，先来这扇窗前喘口气。",
+              "en": "From now on, whenever you come back from a fight, no matter the hour—stop by this window and catch your breath first."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……你倒不怕惹祸上身。行，我记下了。",
+              "en": "...Aren't you afraid of bringing trouble on yourself? Fine. I'll remember.",
+              "expr": "soft"
             }
           ]
         },
@@ -1430,7 +1443,8 @@
             {
               "speaker": "Eleanor",
               "text": "领队这次让我带着队里年纪最小的那个一起走。",
-              "en": "This time the squad leader had me take the youngest in the unit with me."
+              "en": "This time the squad leader had me take the youngest in the unit with me.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
@@ -1455,8 +1469,8 @@
             {
               "speaker": "Eleanor",
               "text": "可笑吧，前阵子我还是个连子弹都会装反的人。",
-              "expr": "sad",
-              "en": "Funny, right? Not long ago I'd load bullets in backwards."
+              "en": "Funny, right? Not long ago I'd load bullets in backwards.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
@@ -1476,12 +1490,14 @@
             {
               "speaker": "Eleanor",
               "text": "所以我一点也不后悔开那一枪。",
-              "en": "So I don't regret that shot one bit."
+              "en": "So I don't regret that shot one bit.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
               "text": "可对面倒下不动的时候，枪口还笔直飘着一缕细烟。",
-              "en": "But when the other guy went down and stayed down, a thin wisp of smoke rose straight from the muzzle."
+              "en": "But when the other guy went down and stayed down, a thin wisp of smoke rose straight from the muzzle.",
+              "expr": "hurt"
             },
             {
               "speaker": "Eleanor",
@@ -1524,7 +1540,8 @@
             {
               "speaker": "Eleanor",
               "text": "谢了，我先把手指头贴杯壁上缓一下。",
-              "en": "Thanks. I'll warm my fingers on the cup first."
+              "en": "Thanks. I'll warm my fingers on the cup first.",
+              "expr": "soft"
             }
           ]
         }
@@ -2513,7 +2530,7 @@
             {
               "speaker": "Eleanor",
               "text": "口袋里那张名单，还是只有第七行空着。",
-              "expr": "sad",
+              "expr": "hurt",
               "en": "The list in her pocket still has only the seventh line blank."
             },
             {
@@ -2569,13 +2586,24 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "这扇窗一直留着。",
-              "en": "This window stays open."
+              "text": "你走这十来天，椅子没收，这扇窗也一直给你留着。",
+              "en": "All ten days you were gone, I left the chair out and kept this window open for you."
+            },
+            {
+              "speaker": "Player",
+              "text": "帮队伍是讲规矩，留这扇窗，是因为我想看你平安回来。",
+              "en": "Helping the unit is business and principle. Keeping this window open is because I wanted to see you make it back alive."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "……平时闷半天不憋一个字，挑我刚回来的时候说这种话干什么。",
+              "expr": "shy",
+              "en": "...Barely a word out of you most days, and you pick the moment I get back to say something like that."
             },
             {
               "speaker": "Eleanor",
               "text": "少说这种好听的话，我可没打算天天往你这儿跑。",
-              "expr": "shy",
+              "expr": "soft",
               "en": "Spare me the sweet talk. I'm not planning to come running here every day."
             }
           ]
@@ -2590,7 +2618,7 @@
             {
               "speaker": "Eleanor",
               "text": "肯定又是前哨那家伙多嘴，明明千叮万嘱让他别乱说的。",
-              "expr": "angry",
+              "expr": "serious",
               "en": "Bet that guy at the outpost ran his mouth again. I told him a hundred times to keep quiet."
             },
             {

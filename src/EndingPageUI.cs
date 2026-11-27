@@ -13,8 +13,10 @@ namespace EleanorRomance
     ///  - SetPage: legacy full-screen CG behind the native GameOver panel;
     ///  - Standalone pages for route endings and illustrated story scenes.
     /// </summary>
-    public static class EndingPageUI
+    public static partial class EndingPageUI
     {
+        private enum PageKind { StoryIllustration, EndingCard, Afterword }
+
         private const string ObjectName = "er_ending_page_cg";
         private const string RouteRootName = "er_route_ending_page";
         private static GameObject cgObject;
@@ -70,7 +72,7 @@ namespace EleanorRomance
             if (MaidState.Flag("ending_card_shown")) return;
             EndingPages.Page page = EndingPages.TryMaidCompletion();
             if (page == null) return;
-            if (ShowRoutePage(page, true, () => ShowRoutePage(EndingPages.MaidAfterword()), true))
+            if (ShowRoutePage(page, PageKind.EndingCard, () => ShowRoutePage(EndingPages.MaidAfterword(), PageKind.Afterword)))
                 MaidState.Flag("ending_card_shown", true);
         }
 
@@ -78,11 +80,11 @@ namespace EleanorRomance
         {
             if (DualState.Flag("ending_card_shown")) return false;
             EndingPages.Page page = EndingPages.TryDualCompletion();
-            return page != null && ShowRoutePage(page, true, () =>
+            return page != null && ShowRoutePage(page, PageKind.EndingCard, () =>
             {
                 DualState.Flag("ending_card_shown", true);
                 onContinue?.Invoke();
-            }, true);
+            });
         }
 
         public static void ShowRevolutionCompletion()
@@ -90,7 +92,7 @@ namespace EleanorRomance
             if (RomanceState.RevEndingShown) return;
             EndingPages.Page page = EndingPages.TryRevolutionCompletion();
             if (page == null) return;
-            ShowRoutePage(page, true, () => RomanceState.RevEndingShown = true, true);
+            ShowRoutePage(page, PageKind.EndingCard, () => RomanceState.RevEndingShown = true);
         }
 
         public static void ShowLoveCompletion()
@@ -98,7 +100,7 @@ namespace EleanorRomance
             if (LoveState.A3EndingShown) return;
             EndingPages.Page page = EndingPages.TryLoveCompletion();
             if (page == null) return;
-            if (ShowRoutePage(page, true, () => ShowRoutePage(EndingPages.LoveAfterword()), true))
+            if (ShowRoutePage(page, PageKind.EndingCard, () => ShowRoutePage(EndingPages.LoveAfterword(), PageKind.Afterword)))
                 LoveState.A3EndingShown = true;
         }
 
@@ -112,7 +114,7 @@ namespace EleanorRomance
         }
 
         internal static bool ShowStoryScene(string titleKey, string cgKey, string textKey, Action onContinue = null)
-            => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), true, onContinue, true);
+            => ShowRoutePage(new EndingPages.Page(titleKey, cgKey, textKey), PageKind.StoryIllustration, onContinue);
 
         // Chapters and existing illustrated visits use the same caption-only fallback.
         internal static bool ShowChapterPage(string titleKey, string cgKey, string textKey, Action onContinue = null)
@@ -132,18 +134,13 @@ namespace EleanorRomance
         }
 
         internal static bool ShowScript(string title, string cg, string text, Action next)
-            => ShowRoutePage(new EndingPages.Page(title, cg, text, true), true, next, true);
+            => ShowRoutePage(new EndingPages.Page(title, cg, text, true), PageKind.StoryIllustration, next);
 
-        private static bool ShowRoutePage(EndingPages.Page page, bool storyScene = false, Action onContinue = null, bool textFallback = false)
+        private static bool ShowRoutePage(EndingPages.Page page, PageKind kind, Action onContinue = null)
         {
             try
             {
                 Sprite cg = GetCgSprite(page.CgKey);
-                if (storyScene && cg == null && !textFallback)
-                {
-                    ModEntry.LogError("Story CG missing: " + page.CgKey);
-                    return false;
-                }
                 HideRoutePage();
 
                 GameObject root = new GameObject(RouteRootName,
@@ -162,13 +159,22 @@ namespace EleanorRomance
                 Stretch(background.rectTransform);
                 background.raycastTarget = true;
 
+                if (kind == PageKind.StoryIllustration && cg != null)
+                {
+                    scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
+                    BindContinue(BuildStoryOverlay(root.transform, cg, page), root, onContinue);
+                    return true;
+                }
+
+                // Missing illustrations retain the caption card and its normal continue action.
+                bool captionCard = kind != PageKind.Afterword;
                 if (cg != null)
                 {
                     Image image = NewImage(root.transform, "cg", Color.white);
                     // Keep the whole 16:9 CG above the text, including hands
                     // and gestures near the counter at the bottom of the art.
                     RectTransform imageRect = image.rectTransform;
-                    imageRect.anchorMin = new Vector2(0.03f, storyScene ? 0.265f : 0.44f);
+                    imageRect.anchorMin = new Vector2(0.03f, captionCard ? 0.265f : 0.44f);
                     imageRect.anchorMax = new Vector2(0.97f, 0.98f);
                     imageRect.offsetMin = Vector2.zero;
                     imageRect.offsetMax = Vector2.zero;
@@ -180,7 +186,7 @@ namespace EleanorRomance
                 Image panel = NewImage(root.transform, "panel", new Color(0.03f, 0.035f, 0.05f, 0.90f));
                 RectTransform panelRect = panel.rectTransform;
                 panelRect.anchorMin = new Vector2(0.055f, 0.035f);
-                panelRect.anchorMax = new Vector2(0.945f, cg == null ? 0.72f : storyScene ? 0.25f : 0.415f);
+                panelRect.anchorMax = new Vector2(0.945f, cg == null ? 0.72f : captionCard ? 0.25f : 0.415f);
                 panelRect.offsetMin = Vector2.zero;
                 panelRect.offsetMax = Vector2.zero;
 
@@ -195,17 +201,17 @@ namespace EleanorRomance
                 titleRect.sizeDelta = new Vector2(-40f, 48f);
 
                 TextMeshProUGUI body = NewText(panel.transform, "body", page.Text, font,
-                    20, storyScene ? TextAlignmentOptions.Center : TextAlignmentOptions.TopLeft, Color.white);
+                    20, captionCard ? TextAlignmentOptions.Center : TextAlignmentOptions.TopLeft, Color.white);
                 body.enableAutoSizing = true;
                 body.fontSizeMin = 16f;
-                body.fontSizeMax = storyScene ? 25f : 20f;
+                body.fontSizeMax = captionCard ? 25f : 20f;
                 RectTransform bodyRect = body.rectTransform;
                 bodyRect.anchorMin = Vector2.zero;
                 bodyRect.anchorMax = Vector2.one;
-                bodyRect.offsetMin = new Vector2(32f, storyScene ? 78f : 118f);
+                bodyRect.offsetMin = new Vector2(32f, captionCard ? 78f : 118f);
                 bodyRect.offsetMax = new Vector2(-32f, -76f);
 
-                if (!storyScene)
+                if (!captionCard)
                 {
                     TextMeshProUGUI note = NewText(panel.transform, "note", L.Get("er_ending_content_end"), font,
                         17, TextAlignmentOptions.Center, new Color(0.80f, 0.84f, 0.90f));
@@ -229,25 +235,30 @@ namespace EleanorRomance
                 Image buttonImage = buttonObject.GetComponent<Image>();
                 buttonImage.color = new Color(0.72f, 0.58f, 0.32f, 0.96f);
                 Button button = buttonObject.GetComponent<Button>();
-                button.onClick.AddListener(() =>
-                {
-                    if (!ReferenceEquals(routeRoot, root)) return;
-                    HideRoutePage();
-                    onContinue?.Invoke();
-                });
+                BindContinue(button, root, onContinue);
 
                 TextMeshProUGUI buttonText = NewText(buttonObject.transform, "label",
-                    L.Get(storyScene ? "er_story_cg_continue" : "er_ending_return_button"), font, 20, TextAlignmentOptions.Center,
+                    L.Get(captionCard ? "er_story_cg_continue" : "er_ending_return_button"), font, 20, TextAlignmentOptions.Center,
                     new Color(0.10f, 0.08f, 0.04f));
                 Stretch(buttonText.rectTransform);
                 return true;
             }
             catch (Exception ex)
             {
-                ModEntry.LogError((storyScene ? "Story CG failed: " : "Standalone ending page failed: ") + ex);
+                ModEntry.LogError("Could not show " + kind + ": " + ex);
                 HideRoutePage();
                 return false;
             }
+        }
+
+        private static void BindContinue(Button button, GameObject root, Action onContinue)
+        {
+            button.onClick.AddListener(() =>
+            {
+                if (!ReferenceEquals(routeRoot, root)) return;
+                HideRoutePage();
+                onContinue?.Invoke();
+            });
         }
 
         /// <summary>

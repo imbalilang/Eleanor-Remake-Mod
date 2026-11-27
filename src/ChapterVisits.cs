@@ -74,7 +74,7 @@ namespace EleanorRomance
             switch (id)
             {
                 case "love_night_book": return love && LoveState.T1Done && Window(54,56);
-                case "love_trade_wall": return love && LoveState.A2T2Done && Window(60,62);
+                case "love_trade_wall": return love && LoveState.A2T2Done && Window(59,62);
                 case "love_night_supper": return love && LoveState.Act1Done && Window(61,62);
                 case "love_day_promenade": return love && LoveState.A3T1Done && !LoveState.A3T2Done && Date == 62 && LoveState.NextVisitDay > Day;
                 case "love_night_stay": return love && LoveState.A3T2Done && LoveState.LastImportantDay == Day && !LoveState.A3T3Done;
@@ -83,15 +83,16 @@ namespace EleanorRomance
                 case "dual_trade_dice": return dual && DualState.Done("dv01") && !DualState.Done("dv04") && Window(54,56);
                 case "dual_night_bath": return pair && Window(68,69);
                 case "dual_trade_brooch": return pair && Window(70,72);
-                case "dual_night_fireworks": return pair && Window(70,71);
+                case "dual_night_fireworks": return pair && Window(70,71) && (Date == 71 || Get("trade") != Day);
                 case "dual_night_hotel": return pair && Date == 72;
                 case "maid_stage_soundcheck": return maid && MaidState.Progress >= 17 && MaidState.Progress < 20 && Window(46,50);
                 case "maid_trade_shopkeeper": return maid && MaidState.Progress >= 18 && Window(48,50);
                 case "maid_night_steps": return maid && MaidV2State.Act2Done && Window(51,53);
-                case "maid_trade_shutters": return maid && MaidV2State.Residency && Window(56,58);
-                case "maid_night_costume": return maid && MaidState.Progress >= 26 && Window(58,59);
-                case "maid_night_encore": return maid && MaidV2State.GalaInvited && MaidState.Progress == 27 && Window(61,62);
-                case "rev_trade_sill": case "rev_ride": return station && RevolutionV2State.Progress >= 281 && Window(49,51);
+                case "maid_trade_shutters": return maid && MaidV2State.Residency && Window(56,59);
+                case "maid_night_costume": return maid && MaidState.Progress >= 26 && Window(58,60) && (Date == 60 || MaidState.ProgressDay != Day);
+                case "maid_night_encore": return maid && MaidV2State.GalaInvited && MaidState.Progress == 27 && Window(61,63) && (Date == 63 || MaidState.ProgressDay != Day);
+                case "rev_trade_sill": return station && RevolutionV2State.Progress >= 281 && Window(49,51);
+                case "rev_ride": return station && RevolutionV2State.Progress >= 281 && Window(49,51) && (Date == 51 || Get("trade") != Day);
                 case "rev_trade_wrist": return station && RevolutionV2State.Progress >= 283 && Window(55,58);
                 case "rev_night_departure": return station && RevolutionV2State.Progress == 286 && Date == 62;
                 case "rev_night_jacket": return rev && RomanceState.RevComplete && Date == 73;
@@ -137,7 +138,7 @@ namespace EleanorRomance
         internal static bool WindowTalk(string id, string[] lines, Action finish)
         {
             var ui = DialogUIManager.Instance;
-            var first = DialogueFor(lines);
+            var first = DialogueFor(id, "intro", lines);
             if (Talking || ReferenceEquals(ui, null) || first == null) return false;
             var ticket = new object();
             windowTicket = ticket;
@@ -192,8 +193,24 @@ namespace EleanorRomance
             && StoryDirector.PendingChapterForDay(Day) == 0 && !LoveDirector.SerpicoStoryVisitDue(Day)
             && ChapterTradeQueuePatch.OnlyOrdinaryGuestsRemain(store.storeClientManager);
 
+        private static int TradeWindowEnd(string id) => id switch
+        {
+            "love_trade_wall" => 62,
+            "love_trade_kiss" => 68,
+            "dual_trade_dice" => 56,
+            "dual_trade_brooch" => 72,
+            "maid_trade_shopkeeper" => 50,
+            "maid_trade_shutters" => 59,
+            "rev_trade_sill" => 51,
+            "rev_trade_wrist" => 58,
+            _ => 0
+        };
+        // Avoid putting an optional trade CG in the same daytime queue as a main/daily mod visit,
+        // unless today is the final day of its window so a delayed schedule never misses the CG.
+        private static bool TradeSpacedToday(string id) => RomanceState.LastQueuedDay != Day || Date >= TradeWindowEnd(id);
+
         internal static CgChapter TradeDue() => Active && Get("trade") != Day
-            ? ChapterScripts.All.FirstOrDefault(c => c.Id.Contains("_trade_") && Eligible(c.Id)) : null;
+            ? ChapterScripts.All.FirstOrDefault(c => c.Id.Contains("_trade_") && Eligible(c.Id) && TradeSpacedToday(c.Id)) : null;
         internal static StoreClient Trade(CgChapter c)
         {
             bool seller = c.Id == "love_trade_wall" || c.Id == "maid_trade_shutters" || c.Id == "rev_trade_wrist";
@@ -205,9 +222,9 @@ namespace EleanorRomance
                 : EleanorStory.NewEleanorClient("cg_" + c.Id, lead, intent, !rev);
             string companionName = companion == null ? null : shopkeeper ? L.Eleanor : L.Get("er_name_lydia");
 
-            Dialogue TradeDialogue(string[] lines)
+            Dialogue TradeDialogue(string section, string[] lines)
             {
-                var dialogue = DialogueFor(lines, companionName);
+                var dialogue = DialogueFor(c.Id, section, lines, companionName);
                 if (dialogue != null && companion != null)
                     dialogue.SetStartAction(() => StoryPresentation.ShowBackups(companion, backup1Name: companionName));
                 return dialogue;
@@ -215,7 +232,7 @@ namespace EleanorRomance
 
             client.clientIntent = intent;
             client.dismissable = true; // Optional slot: preserve the original walk-in's early-close permission.
-            client.mainDialogue = TradeDialogue(c.Intro);
+            client.mainDialogue = TradeDialogue("intro", c.Intro);
             if (seller)
             {
                 client.SetWholesale(20);
@@ -232,7 +249,7 @@ namespace EleanorRomance
             bool sold = false;
             client.onItemSold += (item, price) => sold |= item != null && price > 0;
             client.onItemBought += (item, price) => sold |= item != null && price > 0;
-            StoryEngine.InterceptDismiss(client, () => TradeDialogue(sold ? c.Sold : c.Unsold), () =>
+            StoryEngine.InterceptDismiss(client, () => TradeDialogue(sold ? "sold" : "unsold", sold ? c.Sold : c.Unsold), () =>
             {
                 Set(c.Id, Day); Set("trade", Day);
                 if (sold) c.ShowStill(null);
@@ -253,17 +270,25 @@ namespace EleanorRomance
             return true;
         }
 
-        private static Dialogue DialogueFor(string[] lines, string companionName = null)
+        private static Dialogue DialogueFor(string id, string section, string[] lines, string companionName = null)
         {
             Dialogue root = null, tail = null;
+            int index = 0;
             foreach (string line in lines)
             {
+                index++;
                 int pos = line.IndexOf('　');
                 string who = line.Substring(0, pos);
-                string name = who == "店主" ? L.Player : who == "埃莉诺" ? L.Eleanor : who == "莉迪亚" ? L.Get("er_name_lydia") : who == "旁白" ? L.Get("er_name_narrator") : who;
+                string name = who == "店主" ? L.Player
+                    : who == "埃莉诺" ? L.Eleanor
+                    : who == "莉迪亚" ? L.Get("er_name_lydia")
+                    : who == "索菲娅" ? L.Get("er_name_sophia")
+                    : who == "旁白" ? L.Get("er_name_narrator")
+                    : who;
                 bool companion = name == companionName;
                 Dialogue node = StoryEngine.Text(companion ? DialogUIManager.SEC : name, line.Substring(pos + 1));
                 if (companion) StoryPresentation.MarkCompanion(node, name);
+                PortraitExpression.Apply(node, $"er_cg_{id}_{section}_{index:02d}", name);
                 if (root == null) root = node; else tail.SetNextDialogue(node);
                 tail = node;
             }

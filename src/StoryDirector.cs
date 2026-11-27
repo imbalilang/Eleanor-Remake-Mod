@@ -76,6 +76,7 @@ namespace EleanorRomance
             }
 
             RomanceState.InitializeForSave();
+            MigrateRewrittenDialogueCursors();
             RecoverStuckBellLock();
             PortraitCompat.SanitizeLoadedClients();
             // The vanilla keepsake is part of the ending, not a separate claim.
@@ -218,6 +219,34 @@ namespace EleanorRomance
             {
                 LogError("Queueing failed: " + ex);
             }
+        }
+
+        /// <summary>
+        /// One-time additive save migration for text rewrites whose block line
+        /// counts changed. Clears only uncommitted mid-visit dialogue playback
+        /// cursors (never chapter completion, choices, items or schedules) so
+        /// a save taken mid-conversation resumes cleanly from line 1 of the
+        /// rewritten block instead of falling through to a clipped resume stub.
+        /// </summary>
+        private static void MigrateRewrittenDialogueCursors()
+        {
+            const string key = "er.text_rewrite_rev";
+            const int currentRev = 1;
+            if (!RomanceState.StoryActive) return;
+            if (ModHelper.GetModDataInt(ModConstants.ModId, key, 0) >= currentRev) return;
+            int cleared = 0;
+            foreach (string k in new System.Collections.Generic.List<string>(ModHelper.GetModDataKeys(ModConstants.ModId)))
+            {
+                if (k.StartsWith("er.love.cursor.", StringComparison.Ordinal)
+                    || k.StartsWith("er.dual.cursor.", StringComparison.Ordinal))
+                {
+                    ModHelper.SetModData(ModConstants.ModId, k, "");
+                    cleared++;
+                }
+            }
+            ModHelper.SetModDataInt(ModConstants.ModId, key, currentRev);
+            if (cleared > 0)
+                Log("Cleared " + cleared + " stale mid-visit dialogue cursor(s) for text rewrite rev " + currentRev + ".");
         }
 
         /// <summary>

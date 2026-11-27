@@ -30,7 +30,8 @@
             {
               "speaker": "Sophia",
               "text": "你好，我常听埃莉诺提起这家店。",
-              "en": "Hello. Eleanor talks about this shop often."
+              "en": "Hello. Eleanor talks about this shop often.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -45,12 +46,14 @@
             {
               "speaker": "SEC",
               "text": "少胡说，我那叫按成色算清实账！",
-              "en": "Nonsense! I just price things fairly by their condition!"
+              "en": "Nonsense! I just price things fairly by their condition!",
+              "expr": "tsun"
             },
             {
               "speaker": "SEC",
               "text": "（探手隔窗理平你的衣领）你扛货把领口都压皱了。",
-              "en": "(Reaches through the window to smooth your collar) You've crushed your collar hauling goods."
+              "en": "(Reaches through the window to smooth your collar) You've crushed your collar hauling goods.",
+              "expr": "soft"
             },
             {
               "speaker": "Sophia",
@@ -60,7 +63,8 @@
             {
               "speaker": "SEC",
               "text": "我才没有，他哪能算别人。",
-              "en": "Of course not. He's hardly just anyone."
+              "en": "Of course not. He's hardly just anyone.",
+              "expr": "shy"
             },
             {
               "speaker": "Sophia",
@@ -70,7 +74,8 @@
             {
               "speaker": "Sophia",
               "text": "老板，这只容器要是侧着放，盖子漏不漏水？",
-              "en": "Shopkeeper, if this container is laid on its side, will the lid leak?"
+              "en": "Shopkeeper, if this container is laid on its side, will the lid leak?",
+              "expr": "serious"
             }
           ],
           "presentation": {
@@ -108,7 +113,8 @@
             {
               "speaker": "SEC",
               "text": "他一直这样，我头回来买杯子他也是先指缺口。",
-              "en": "He's always like this. The first time I bought a cup, he pointed out the chip first."
+              "en": "He's always like this. The first time I bought a cup, he pointed out the chip first.",
+              "expr": "smile"
             },
             {
               "speaker": "SEC",
@@ -148,7 +154,8 @@
             {
               "speaker": "Sophia",
               "text": "数目很实在，难怪埃莉诺总夸你做事公道。",
-              "en": "A very honest price. No wonder Eleanor keeps praising how fair you are."
+              "en": "A very honest price. No wonder Eleanor keeps praising how fair you are.",
+              "expr": "soft"
             },
             {
               "speaker": "SEC",
@@ -170,7 +177,8 @@
             {
               "speaker": "Sophia",
               "text": "这数目不对吧，你是看在埃莉诺的面子上让了价？",
-              "en": "This price isn't right. Did you knock it down for Eleanor's sake?"
+              "en": "This price isn't right. Did you knock it down for Eleanor's sake?",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -197,7 +205,8 @@
             {
               "speaker": "SEC",
               "text": "喂，你今天怎么给我母亲乱报高价？",
-              "en": "Hey, why are you overcharging my mother today?"
+              "en": "Hey, why are you overcharging my mother today?",
+              "expr": "angry"
             },
             {
               "speaker": "Sophia",
@@ -214,12 +223,14 @@
             {
               "speaker": "Sophia",
               "text": "没挑到合适的就算了，回去先拿旧毛巾顶几天。",
-              "en": "If nothing suits, never mind. We'll make do with old towels for a few days."
+              "en": "If nothing suits, never mind. We'll make do with old towels for a few days.",
+              "expr": "tired"
             },
             {
               "speaker": "SEC",
               "text": "下一批结实的日用品到了记得先给我们留着。",
-              "en": "When the next batch of sturdy goods comes in, save some for us first."
+              "en": "When the next batch of sturdy goods comes in, save some for us first.",
+              "expr": "serious"
             }
           ]
         }
@@ -264,7 +275,8 @@
             {
               "speaker": "Sophia",
               "text": "她从小就吃腻了这东西，我以前却成天对着它们做研究。",
-              "en": "She got sick of these as a child, while I spent my days researching them."
+              "en": "She got sick of these as a child, while I spent my days researching them.",
+              "expr": "soft"
             },
             {
               "speaker": "Sophia",
@@ -289,7 +301,8 @@
             {
               "speaker": "Sophia",
               "text": "那我考考你，埃莉诺跟花不完的钱你选哪个？",
-              "en": "Then here's a test: Eleanor, or endless money. Which do you choose?"
+              "en": "Then here's a test: Eleanor, or endless money. Which do you choose?",
+              "expr": "smile"
             }
           ],
           "cursor_revision": 2
@@ -305,9 +318,15 @@
               "en": "Eleanor."
             },
             {
+              "speaker": "Player",
+              "text": "钱可以慢慢挣，肯站在这扇窗前陪我算账的人只有一个。",
+              "en": "Money can always be earned slowly. There's only one person who'll stand at this window keeping accounts with me."
+            },
+            {
               "speaker": "Sophia",
-              "text": "答得倒快，先帮我挑几个果子吧。",
-              "en": "Quick answer. Now help me pick some fruit."
+              "text": "难得听你一口气说出这么长一句，先帮我挑几个果子吧。",
+              "en": "Rare to hear that many words from you in one breath. Now help me pick some fruit.",
+              "expr": "smile"
             }
           ],
           "cursor_revision": 2
@@ -353,7 +372,8 @@
             {
               "speaker": "Sophia",
               "text": "培育组已经把研究公开了，往后这果子兴许能重新结籽。",
-              "en": "The breeding team has made its research public. Someday this fruit might bear seeds again."
+              "en": "The breeding team has made its research public. Someday this fruit might bear seeds again.",
+              "expr": "soft"
             },
             {
               "speaker": "Sophia",
@@ -370,12 +390,14 @@
             {
               "speaker": "Sophia",
               "text": "反正项目已经交回去了，往后结不结籽都跟我无关。",
-              "en": "The project's been handed back anyway. Whether it ever seeds again is none of my concern."
+              "en": "The project's been handed back anyway. Whether it ever seeds again is none of my concern.",
+              "expr": "hurt"
             },
             {
               "speaker": "Sophia",
               "text": "先不想那些烦心事了，今天挑几个现成的拎回去。",
-              "en": "Enough of those worries. Today I'll pick a few ready ones to take home."
+              "en": "Enough of those worries. Today I'll pick a few ready ones to take home.",
+              "expr": "smile"
             }
           ]
         },
@@ -404,7 +426,8 @@
             {
               "speaker": "Sophia",
               "text": "我年轻时选过钱，后来全投进研究里也从没后悔。",
-              "en": "When I was young, I chose money. Then I poured it all into research and never regretted it."
+              "en": "When I was young, I chose money. Then I poured it all into research and never regretted it.",
+              "expr": "serious"
             }
           ],
           "cursor_revision": 2
@@ -422,7 +445,8 @@
             {
               "speaker": "Sophia",
               "text": "你这人说话真滑头，半天都不肯正面挑一个。",
-              "en": "You're a slippery one. All this time and you still won't pick one outright."
+              "en": "You're a slippery one. All this time and you still won't pick one outright.",
+              "expr": "smile"
             }
           ],
           "cursor_revision": 2
@@ -435,7 +459,8 @@
             {
               "speaker": "Sophia",
               "text": "好坏各算各的，你做买卖确实实在。",
-              "en": "Good and bad priced separately. You really are an honest dealer."
+              "en": "Good and bad priced separately. You really are an honest dealer.",
+              "expr": "smile"
             },
             {
               "speaker": "Sophia",
@@ -457,7 +482,8 @@
             {
               "speaker": "Sophia",
               "text": "往后我过来买东西，你照实算别看她的面子。",
-              "en": "From now on when I shop here, charge me fairly. Not for her sake."
+              "en": "From now on when I shop here, charge me fairly. Not for her sake.",
+              "expr": "serious"
             }
           ]
         },
@@ -469,7 +495,8 @@
             {
               "speaker": "Sophia",
               "text": "连带碰伤的次果，你也跟着好货一起要价？",
-              "en": "You're charging the same for bruised seconds as for the good ones?"
+              "en": "You're charging the same for bruised seconds as for the good ones?",
+              "expr": "serious"
             },
             {
               "speaker": "Sophia",
@@ -491,7 +518,8 @@
             {
               "speaker": "Sophia",
               "text": "要是埃莉诺问起来，我就说嫌这边的果子贵。",
-              "en": "If Eleanor asks, I'll say the fruit here was too pricey."
+              "en": "If Eleanor asks, I'll say the fruit here was too pricey.",
+              "expr": "smile"
             }
           ]
         }
@@ -499,10 +527,10 @@
       "choices": [
         {
           "id": "la1_c2_1",
-          "label_zh": "埃莉诺",
-          "label_en": "Eleanor",
-          "description_zh": "直接选她。",
-          "description_en": "Choose her."
+          "label_zh": "选埃莉诺，说实话",
+          "label_en": "Choose Eleanor honestly",
+          "description_zh": "直接选她，并把心里话说清楚。",
+          "description_en": "Choose her and speak plainly from the heart."
         },
         {
           "id": "la1_c2_2",
@@ -538,7 +566,8 @@
             {
               "speaker": "Eleanor",
               "text": "在配给站排了大半天队，站得我腿都发硬了。",
-              "en": "I stood in line at the ration station most of the day. My legs have gone stiff."
+              "en": "I stood in line at the ration station most of the day. My legs have gone stiff.",
+              "expr": "tired"
             },
             {
               "speaker": "Player",
@@ -548,12 +577,14 @@
             {
               "speaker": "Eleanor",
               "text": "用不着你提醒，我本来就是要坐的。",
-              "en": "No need to tell me. I was going to sit anyway."
+              "en": "No need to tell me. I was going to sit anyway.",
+              "expr": "tsun"
             },
             {
               "speaker": "Eleanor",
               "text": "对了，我母亲下午是不是又来买营养果了？",
-              "en": "Oh, right. Did my mother come buy Nutrifruit again this afternoon?"
+              "en": "Oh, right. Did my mother come buy Nutrifruit again this afternoon?",
+              "expr": "neutral"
             },
             {
               "speaker": "Eleanor",
@@ -573,7 +604,8 @@
             {
               "speaker": "Eleanor",
               "text": "我就知道她闲不住。",
-              "en": "I knew she couldn't sit still."
+              "en": "I knew she couldn't sit still.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
@@ -593,12 +625,14 @@
             {
               "speaker": "Eleanor",
               "text": "虽然钉歪了一点，我也没跟她提。",
-              "en": "It's a little crooked, but I didn't mention it."
+              "en": "It's a little crooked, but I didn't mention it.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
               "text": "说起来，上次我替你理领口，她在旁边盯着看了好久。",
-              "en": "Speaking of which, last time I fixed your collar, she watched us for a long time."
+              "en": "Speaking of which, last time I fixed your collar, she watched us for a long time.",
+              "expr": "shy"
             },
             {
               "speaker": "Player",
@@ -608,7 +642,8 @@
             {
               "speaker": "Eleanor",
               "text": "（她隔窗攥住你的领口往近处带了带）你少拿这招糊弄我。",
-              "en": "(She grabs your collar through the window and pulls you closer.) Don't try that trick on me."
+              "en": "(She grabs your collar through the window and pulls you closer.) Don't try that trick on me.",
+              "expr": "tsun"
             },
             {
               "speaker": "Eleanor",
@@ -623,7 +658,8 @@
             {
               "speaker": "Eleanor",
               "text": "……美得你，把你领子扯坏了我还得赔。",
-              "en": "...In your dreams. If I tear your collar, I'll have to pay for it."
+              "en": "...In your dreams. If I tear your collar, I'll have to pay for it.",
+              "expr": "smile"
             },
             {
               "speaker": "Eleanor",
@@ -648,7 +684,8 @@
             {
               "speaker": "Eleanor",
               "text": "（她隔着窗口把额头轻轻靠在你肩上）别乱动，我就靠一下。",
-              "en": "(Through the window, she gently rests her forehead on your shoulder.) Don't move. Just for a moment."
+              "en": "(Through the window, she gently rests her forehead on your shoulder.) Don't move. Just for a moment.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",

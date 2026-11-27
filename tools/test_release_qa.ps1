@@ -86,7 +86,7 @@ function Graph-Text($head){
 $qaPaths=0
 $qaChoicePaths=0
 $qaScenes=@{
-    maid=@(8,12,13,14,15,16,17,18,19,20,21,22,25,26,27,28)
+    maid=@(8,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28)
     rev=@(280..290)
     love=@(1..10)
     dual=@('dv01','dv02','dv03','dv04','dv05','dv06','dv07','dv08','dv09','dv10','dv11','dv12','dv13')
@@ -137,7 +137,7 @@ foreach($kind in @('maid','rev','love','dual')){
         }
     }
 }
-"PASS: $qaChoicePaths distinct authored choice paths, $qaPaths choice/trade replays across 50 scenes."
+"PASS: $qaChoicePaths distinct authored choice paths, $qaPaths choice/trade replays across 51 scenes."
 
 # The rewritten closing choices must lead to the chosen person's reaction;
 # hugging both goes straight to the shared ending, without a kiss reaction.
@@ -245,7 +245,15 @@ foreach($code in @(280,287,288,289)){
     Play-Path $client.mainDialogue
     Assert ([PlayerStore]::TestReleaseStock.Count -eq $expected) "Revolution $code duplicates stock"
 }
-'PASS: all four revolution sellers produce stock after dialogue exactly once.'
+foreach($pair in @(@('maid',20),@('dual','dv08'))){
+    Reset-Modern $pair[0] $pair[1]
+    $client=Modern-Client $pair[0] $pair[1];Use-Client $client
+    Play-Path $client.mainDialogue
+    Assert ([PlayerStore]::TestReleaseStock.Count -eq 2) "$($pair[0]) $($pair[1]) has no selling stock: $([PlayerStore]::TestReleaseStock -join ',')"
+    Play-Path $client.mainDialogue
+    Assert ([PlayerStore]::TestReleaseStock.Count -eq 2) "$($pair[0]) $($pair[1]) duplicates stock"
+}
+'PASS: all four revolution sellers plus maid a3c1 and harem dv08 produce stock after dialogue exactly once.'
 
 # Same-day harem follow-up must pass through the public scheduler.
 Reset-Modern dual 20

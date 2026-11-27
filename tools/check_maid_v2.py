@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-EXPECTED_CODES = [8, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 25, 26, 27, 28]
+EXPECTED_CODES = [8, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28]
 
 
 def main(root: Path) -> int:
@@ -15,8 +15,8 @@ def main(root: Path) -> int:
     data = json.loads(path.read_text(encoding="utf-8"))
     errors = []
     scenes = data.get("scenes", [])
-    if len(scenes) != 16:
-        errors.append(f"expected 16 scenes, got {len(scenes)}")
+    if len(scenes) != 17:
+        errors.append(f"expected 17 scenes, got {len(scenes)}")
     codes = [s.get("code") for s in scenes]
     if codes != EXPECTED_CODES:
         errors.append(f"scene code order mismatch: {codes}")
