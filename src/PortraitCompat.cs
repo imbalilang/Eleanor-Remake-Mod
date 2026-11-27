@@ -121,7 +121,9 @@ namespace EleanorRomance
         {
             return key == MaidKey || key == GalaKey
                 || key == ModConstants.EleanorVestPortrait
-                || key == ModConstants.EleanorIntimatePortrait;
+                || key == ModConstants.EleanorIntimatePortrait
+                || key == ModConstants.EleanorLeatherPortrait
+                || key == ModConstants.EleanorBlackMeshPortrait;
         }
 
         /// <summary>Native/base key used when the player chooses another portrait set.</summary>
@@ -146,7 +148,7 @@ namespace EleanorRomance
             }
             if (key == MaidKey) return "eleanor_scav";
             if (key == GalaKey) return "eleanor1";
-            if (key == ModConstants.EleanorVestPortrait) return "eleanor_rev";
+            if (key == ModConstants.EleanorVestPortrait || key == ModConstants.EleanorLeatherPortrait) return "eleanor_rev";
             if (key == ModConstants.EleanorIntimatePortrait) return "eleanor1";
             if (IsLocalEleanorOutfitKey(spriteName) || IsLocalEleanorOutfitKey(key))
                 return "eleanor1";
@@ -765,6 +767,7 @@ namespace EleanorRomance
         private static void SanitizeClient(StoreClient client)
         {
             if (client == null || string.IsNullOrEmpty(client.spriteName)) return;
+            if (ChapterVisits.RestoreTradePortrait(client)) return;
 
             if (IsEleanorClient(client) && IsOurEleanorClient(client))
             {
@@ -793,8 +796,10 @@ namespace EleanorRomance
             }
             else if (client.spriteName == MaidKey)
             {
+                string id = client.identifier ?? "";
                 bool keepMaid = IsOurEleanorClient(client)
-                    && (client.identifier ?? "").StartsWith("er_story_v2_", StringComparison.Ordinal);
+                    && (id.StartsWith("er_story_v2_", StringComparison.Ordinal)
+                        || id.StartsWith("er_story_post_daily_maid_", StringComparison.Ordinal));
                 client.spriteName = keepMaid && EnsureLocalPortrait(MaidKey)
                     ? MaidKey : Resolve("eleanor_scav");
             }

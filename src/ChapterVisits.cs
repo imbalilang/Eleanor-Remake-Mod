@@ -20,6 +20,7 @@ namespace EleanorRomance
     internal static class ChapterVisits
     {
         private const string P = "er.cg.";
+        private const string TradeClientPrefix = "er_story_cg_";
         private static int Day => DualState.Today;
         private static int Date => Day + StoryDirector.StoryOffset();
         private static int Get(string key) => ModHelper.GetModDataInt(ModConstants.ModId, P + key, -1);
@@ -40,6 +41,24 @@ namespace EleanorRomance
             {"rev_trade_sill", "er_event_revolution_sill_cg"}, {"rev_ride", "er_event_revolution_ride_cg"},
             {"rev_trade_wrist", "er_event_revolution_wrist_cg"}, {"rev_night_departure", "er_event_revolution_departure_cg"},
             {"rev_night_jacket", "er_event_revolution_jacket_cg"}, {"rev_night_barracks", "er_event_revolution_barracks_cg"}
+        };
+        private static (string Lead, string Companion) PortraitsFor(string id) => id switch
+        {
+            "love_night_book" or "love_trade_wall" or "love_night_supper" or "love_day_promenade"
+                or "love_night_stay" or "love_trade_kiss" => (ModConstants.EleanorIntimatePortrait, null),
+            "love_night_bathhouse" => (ModConstants.EleanorIntimatePortrait, ModConstants.MotherHomePortraitBeauty),
+            "dual_trade_dice" or "dual_night_hotel" or "dual_final_shop" => ("eleanor1", ModConstants.LydiaPortraitBeauty),
+            "dual_night_bath" => (ModConstants.LydiaPortraitBeauty, null),
+            "dual_trade_brooch" => (ModConstants.EleanorBlackMeshPortrait, ModConstants.LydiaWhiteMeshPortrait),
+            "dual_night_fireworks" => (PortraitCompat.GalaKey, PortraitCompat.LydiaDateBeautyKey),
+            "maid_stage_soundcheck" => ("eleanor_scav", null),
+            "maid_trade_shopkeeper" => ("maleBM5", PortraitCompat.MaidKey),
+            "maid_night_steps" or "maid_trade_shutters" or "maid_night_costume" => (PortraitCompat.MaidKey, null),
+            "maid_night_encore" => (PortraitCompat.GalaKey, null),
+            "rev_trade_sill" or "rev_trade_wrist" => ("eleanor_rev", null),
+            "rev_ride" or "rev_night_jacket" => (ModConstants.EleanorLeatherPortrait, null),
+            "rev_night_departure" or "rev_night_barracks" or "rev_final_second_knock" => (ModConstants.EleanorVestPortrait, null),
+            _ => ("eleanor1", null)
         };
         private static bool Window(int first, int last) => Date >= first && Date <= last;
         private static bool Eligible(string id)
@@ -88,7 +107,7 @@ namespace EleanorRomance
                 : ChapterScripts.All.FirstOrDefault(x => (x.Id.Contains("_night_") || x.Id == "rev_ride") && Eligible(x.Id));
             if (c == null) return false;
             int day = Day;
-            return WindowTalk(c.Intro, () =>
+            return WindowTalk(c.Id, c.Intro, () =>
             {
                 void Finish()
                 {
@@ -106,19 +125,31 @@ namespace EleanorRomance
         }
         // Ignore stale end actions from a dialogue belonging to another day or loaded slot.
         private static object windowTicket;
+        private static bool windowPortraitsShown;
         internal static bool Talking => windowTicket != null;
-        internal static void ResetWindow() => windowTicket = null;
-        internal static bool WindowTalk(string[] lines, Action finish)
+        internal static void ResetWindow()
+        {
+            windowTicket = null;
+            if (windowPortraitsShown) StoryPresentation.Clear();
+            windowPortraitsShown = false;
+        }
+        internal static bool WindowTalk(string id, string[] lines, Action finish)
         {
             var ui = DialogUIManager.Instance;
             var first = DialogueFor(lines);
             if (Talking || ReferenceEquals(ui, null) || first == null) return false;
             var ticket = new object();
             windowTicket = ticket;
+            var (lead, companion) = PortraitsFor(id);
+            first.SetStartAction(() =>
+            {
+                if (ReferenceEquals(windowTicket, ticket))
+                    windowPortraitsShown = StoryPresentation.ShowBackups(lead, companion);
+            });
             StoryEngine.OnDialogueFinished(first, () =>
             {
                 if (!ReferenceEquals(windowTicket, ticket)) return;
-                windowTicket = null;
+                ResetWindow();
                 finish();
             });
             try
@@ -126,7 +157,7 @@ namespace EleanorRomance
                 if (ui.StartDialogue(first)) return true;
             }
             catch (Exception ex) { ModEntry.LogError("CG window dialogue: " + ex); }
-            windowTicket = null;
+            if (ReferenceEquals(windowTicket, ticket)) ResetWindow();
             return false;
         }
         internal static void Morning()
@@ -145,7 +176,7 @@ namespace EleanorRomance
                 : DayOffAvailable(store) ? Find("love_day_promenade") : null;
             if (scene == null) return false;
             int day = Day;
-            return WindowTalk(scene.Intro, () =>
+            return WindowTalk(scene.Id, scene.Intro, () =>
             {
                 void Finish()
                 {
@@ -165,14 +196,25 @@ namespace EleanorRomance
         internal static StoreClient Trade(CgChapter c)
         {
             bool seller = c.Id == "love_trade_wall" || c.Id == "maid_trade_shutters" || c.Id == "rev_trade_wrist";
-            bool maid = c.Id.StartsWith("maid_");
             bool rev = c.Id.StartsWith("rev_");
+            bool shopkeeper = c.Id == "maid_trade_shopkeeper";
+            var (lead, companion) = PortraitsFor(c.Id);
             var intent = seller ? StoreClient.ClientIntent.SELL : StoreClient.ClientIntent.BUY;
-            var client = c.Id == "maid_trade_shopkeeper" ? EleanorStory.NewNpcClient("cg_" + c.Id, "客人", "maleBM5", EleanorStory.FactionKind.Lower)
-                : EleanorStory.NewEleanorClient("cg_" + c.Id, maid ? "er_portrait_eleanor_maid_female_beauty" : rev ? "eleanor_rev" : "eleanor1", intent, !rev);
+            var client = shopkeeper ? EleanorStory.NewNpcClient("cg_" + c.Id, "客人", lead, EleanorStory.FactionKind.Lower)
+                : EleanorStory.NewEleanorClient("cg_" + c.Id, lead, intent, !rev);
+            string companionName = companion == null ? null : shopkeeper ? L.Eleanor : L.Get("er_name_lydia");
+
+            Dialogue TradeDialogue(string[] lines)
+            {
+                var dialogue = DialogueFor(lines, companionName);
+                if (dialogue != null && companion != null)
+                    dialogue.SetStartAction(() => StoryPresentation.ShowBackups(companion, backup1Name: companionName));
+                return dialogue;
+            }
+
             client.clientIntent = intent;
             client.dismissable = true; // Optional slot: preserve the original walk-in's early-close permission.
-            client.mainDialogue = DialogueFor(c.Intro);
+            client.mainDialogue = TradeDialogue(c.Intro);
             if (seller)
             {
                 client.SetWholesale(20);
@@ -189,7 +231,7 @@ namespace EleanorRomance
             bool sold = false;
             client.onItemSold += (item, price) => sold |= item != null && price > 0;
             client.onItemBought += (item, price) => sold |= item != null && price > 0;
-            StoryEngine.InterceptDismiss(client, () => DialogueFor(sold ? c.Sold : c.Unsold), () =>
+            StoryEngine.InterceptDismiss(client, () => TradeDialogue(sold ? c.Sold : c.Unsold), () =>
             {
                 Set(c.Id, Day); Set("trade", Day);
                 if (sold) c.ShowStill(null);
@@ -199,8 +241,18 @@ namespace EleanorRomance
             return client;
         }
         internal static bool IsChapterClient(StoreClient client) =>
-            client?.identifier?.StartsWith("er_story_cg_", StringComparison.Ordinal) == true;
-        private static Dialogue DialogueFor(string[] lines)
+            client?.identifier?.StartsWith(TradeClientPrefix, StringComparison.Ordinal) == true;
+
+        internal static bool RestoreTradePortrait(StoreClient client)
+        {
+            if (!IsChapterClient(client)) return false;
+            var id = client.identifier.Substring(TradeClientPrefix.Length);
+            if (!Art.ContainsKey(id)) return false;
+            client.spriteName = PortraitCompat.Resolve(PortraitsFor(id).Lead);
+            return true;
+        }
+
+        private static Dialogue DialogueFor(string[] lines, string companionName = null)
         {
             Dialogue root = null, tail = null;
             foreach (string line in lines)
@@ -208,7 +260,9 @@ namespace EleanorRomance
                 int pos = line.IndexOf('　');
                 string who = line.Substring(0, pos);
                 string name = who == "店主" ? L.Player : who == "埃莉诺" ? L.Eleanor : who == "莉迪亚" ? L.Get("er_name_lydia") : who == "旁白" ? L.Get("er_name_narrator") : who;
-                Dialogue node = StoryEngine.Text(name, line.Substring(pos + 1));
+                bool companion = name == companionName;
+                Dialogue node = StoryEngine.Text(companion ? DialogUIManager.SEC : name, line.Substring(pos + 1));
+                if (companion) StoryPresentation.MarkCompanion(node, name);
                 if (root == null) root = node; else tail.SetNextDialogue(node);
                 tail = node;
             }

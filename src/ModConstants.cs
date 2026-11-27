@@ -22,5 +22,8 @@ namespace EleanorRomance
         public const string MotherHomePortraitBeauty = "er_portrait_mother_home_female_beauty";
         public const string EleanorVestPortrait = "er_portrait_eleanor_revolution_undersuit_female_beauty";
         public const string EleanorIntimatePortrait = "er_portrait_eleanor_love_intimate_female_beauty";
+        public const string EleanorLeatherPortrait = "er_portrait_eleanor_revolution_date_female_beauty";
+        public const string EleanorBlackMeshPortrait = "er_portrait_eleanor_black_mesh_halter_female_beauty";
+        public const string LydiaWhiteMeshPortrait = "er_portrait_lydia_white_mesh_halter_female_beauty";
     }
 }

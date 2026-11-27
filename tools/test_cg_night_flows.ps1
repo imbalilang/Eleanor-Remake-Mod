@@ -70,7 +70,7 @@ function FinishWindow {
     Assert (Hook ChapterVisits get_Talking) 'Expected dialogue at the window.'
     $node=[DialogUIManager]::TestInstance.currentDialog
     while ($node) {
-        Assert ($node.choices.Count -eq 0 -and $node.title -ne 'er_name_narrator') 'Unexpected choice or narrator.'
+        Assert ($node.choices.Count -eq 0) 'Unexpected choice in the linear CG dialogue.'
         if (!$node.nextDialogue) { [DialogUIManager]::TestInstance.currentDialog=$null; $node.ExecuteEndAction(); break }
         $node=$node.nextDialogue
     }
@@ -170,22 +170,50 @@ Fresh 66 OPEN;Dual;$paidDate=[EleanorRomance.DualStory]::CreateScene('dv10');$q=
 Hook ChapterServingOrderPatch Prefix @($store);Assert ([object]::ReferenceEquals($q[0],$delivery)) 'Paid date erased a reserved delivery.';$q.RemoveAt(0);Hook ChapterServingOrderPatch Prefix @($store);Assert ([object]::ReferenceEquals($q[0],$paidDate)) 'Ordinary walk-in displaced the paid date.'
 'PASS paid date yields to a reserved visit and keeps priority over walk-ins.'
 
-$trades = @('love_trade_wall','love_trade_kiss','dual_trade_dice','dual_trade_brooch',
-           'maid_trade_shopkeeper','maid_trade_shutters','rev_trade_sill','rev_trade_wrist')
-foreach ($id in $trades) {
+# The offline fixture leaves native sprite keys unresolved.
+$tradePortraits = @{
+    love_trade_wall = [EleanorRomance.ModConstants]::EleanorIntimatePortrait
+    love_trade_kiss = [EleanorRomance.ModConstants]::EleanorIntimatePortrait
+    dual_trade_dice = 'eleanor1'
+    dual_trade_brooch = [EleanorRomance.ModConstants]::EleanorBlackMeshPortrait
+    maid_trade_shopkeeper = 'maleBM5'
+    maid_trade_shutters = [EleanorRomance.PortraitCompat]::MaidKey
+    rev_trade_sill = 'eleanor_rev'
+    rev_trade_wrist = 'eleanor_rev'
+}
+$companions = @{ dual_trade_dice = '莉迪亚'; dual_trade_brooch = '莉迪亚'; maid_trade_shopkeeper = '埃莉诺' }
+function AssertTradeDialogue($node, [string[]]$expected, [string]$id, [string]$part) {
+    foreach ($spoken in $expected) {
+        $speaker, $text = $spoken.Split('　',2)
+        Assert ($node -and $node.plainText -ceq $text -and $node.choices.Count -eq 0) "Incorrect trade dialogue in $id ($part)."
+        if ($speaker -ceq $companions[$id]) {
+            Assert ($node.title -ceq [DialogUIManager]::SEC) "Companion used the main speaking slot in $id ($part)."
+        }
+        $last = $node; $node = $node.nextDialogue
+    }
+    Assert (!$node) "Extra trade dialogue in $id ($part)."
+    return $last
+}
+
+foreach ($id in $tradePortraits.Keys) {
     foreach ($paid in @($true,$false)) {
         Fresh 60 OPEN
         $chapter = Hook ChapterVisits Find @($id)
         $client = Hook ChapterVisits Trade @($chapter)
+        Assert ($client.spriteName -ceq $tradePortraits[$id]) "Incorrect portrait for $id."
+        if (!$paid) {
+            $client.spriteName = 'eleanor1'
+            Assert (Hook ChapterVisits RestoreTradePortrait @($client)) "Saved portrait was not restored for $id."
+            Assert ($client.spriteName -ceq $tradePortraits[$id]) "Saved $id client still uses its previous outfit."
+        }
         $instance = Blank ([StoreClientInstance]); $instance.storeClient = $client
         $store.currentClientInstance = $instance
         $ui = [DialogUIManager]::TestInstance; $ui.currentDialog = $null
         $fieldFlags = [Reflection.BindingFlags]'Instance,NonPublic'
         $field = if ($paid) { 'Sold' } else { 'Unsold' }
         $expected = $chapter.GetType().GetField($field,$fieldFlags).GetValue($chapter)
-        for ($node=$client.mainDialogue; $node; $node=$node.nextDialogue) {
-            Assert ($node.choices.Count -eq 0 -and $node.title -ne 'er_name_narrator') "Extra prompt or narration in $id."
-        }
+        $intro = $chapter.GetType().GetField('Intro',$fieldFlags).GetValue($chapter)
+        $null = AssertTradeDialogue $client.mainDialogue $intro $id 'Intro'
         if ($paid) {
             $item = [DirectoryMaster]::Item('scrap_metal',$true)
             if ($client.clientIntent -eq [StoreClient+ClientIntent]::SELL) {
@@ -197,12 +225,8 @@ foreach ($id in $trades) {
             }
             $client.TestOnDealAccepted($null)
         } else { $store.TryPlayerDismissCurrentClient($true) }
-        $node = $ui.currentDialog
-        foreach ($spoken in $expected) {
-            Assert ($node -and $node.plainText -ceq $spoken.Split('　',2)[1] -and $node.choices.Count -eq 0) "Incorrect trade wrap in $id ($field)."
-            $last = $node; $node = $node.nextDialogue
-        }
-        Assert (!$node -and ![EleanorRomance.EndingPageUI]::NightPage) "Premature picture or extra wrap in $id."
+        $last = AssertTradeDialogue $ui.currentDialog $expected $id $field
+        Assert (![EleanorRomance.EndingPageUI]::NightPage) "Premature picture in $id."
         $last.ExecuteEndAction()
         Assert ((Mark $id) -eq 60 -and (Mark trade) -eq 60 -and [EleanorRomance.EndingPageUI]::NightPage -eq $paid) "Incorrect trade outcome for $id ($field)."
         if ($paid) {
@@ -211,7 +235,7 @@ foreach ($id in $trades) {
         }
     }
 }
-'PASS eight CG transactions, bought or sold versus dismissed unpaid (16 outcomes), no extra prompts.'
+'PASS eight CG transaction portraits, companion dialogue, saved outfit restoration and 16 sale/no-sale outcomes.'
 
 $visits=@{
     'love_night_book'=54;'love_night_supper'=61;'love_night_bathhouse'=67;

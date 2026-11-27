@@ -23,7 +23,7 @@ namespace EleanorRomance
             if (!RomanceState.StoryActive || EndingPageUI.PageOpen || !DualState.Confirmed || !DualDirector.RouteStoryFinished
                 || DualState.Flag("ending_card_shown") || Today < Due(DualState.SceneDay("dv13"), 6)) return false;
             if (ShopFinished) { return EndingPageUI.ShowDualCompletion(resume); }
-            return ChapterVisits.WindowTalk(new[] {
+            return ChapterVisits.WindowTalk("dual_final_shop", new[] {
                 "莉迪亚　" + L.Get("er_cg_shop_inside"), "埃莉诺　" + L.Get("er_cg_shop_out")
             }, () =>
             {
@@ -42,7 +42,7 @@ namespace EleanorRomance
                 EndingPageUI.ShowRevolutionCompletion();
             };
             if (KnockFinished || ModHelper.GetModDataBool(ModConstants.ModId, "revv2.cg.knock_intro", false)) show();
-            else ChapterVisits.WindowTalk(new[] {
+            else ChapterVisits.WindowTalk("rev_final_second_knock", new[] {
                 "埃莉诺　" + L.Get("er_cg_knock_intro"), "店主　" + L.Get("er_cg_knock_rail"),
                 "埃莉诺　" + L.Get("er_cg_knock_farewell")
             }, show);

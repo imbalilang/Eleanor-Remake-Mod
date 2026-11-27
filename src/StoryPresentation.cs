@@ -48,6 +48,7 @@ namespace EleanorRomance
         private static string savedId2;
         private static Sprite savedSprite1;
         private static Sprite savedSprite2;
+        private static SpriteRenderer hiddenHostPortrait;
         private static bool usedFirst;
         private static bool usedSecond;
         private static int backupNameVersion;
@@ -134,6 +135,15 @@ namespace EleanorRomance
             slot.image.sprite = SpriteDict.Instance.ShowClientSprite(PortraitCompat.Resolve(sprite));
         }
 
+        internal static void HideHostPortrait()
+        {
+            if (host == null) return;
+            var image = StoreClientMono.Instance?.image;
+            if (image == null || !image.enabled) return;
+            hiddenHostPortrait = image;
+            image.enabled = false;
+        }
+
         internal static void OnCustomerLeaving(StoreClient client)
         {
             if (client != null && ReferenceEquals(host, client)) Clear();
@@ -145,6 +155,7 @@ namespace EleanorRomance
             try
             {
                 if (!shown) return;
+                if (hiddenHostPortrait != null) hiddenHostPortrait.enabled = true;
                 StoreUIManager ui = StoreUIManager.Instance;
                 if (ui != null)
                 {
@@ -163,6 +174,7 @@ namespace EleanorRomance
                 host = null;
                 backupName = null;
                 savedSprite1 = savedSprite2 = null;
+                hiddenHostPortrait = null;
                 usedFirst = usedSecond = false;
             }
         }

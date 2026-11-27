@@ -1,0 +1,158 @@
+{
+  "target_tier": "L3",
+  "channel": "codex_builtin_imagegen",
+  "transparent_background": true,
+  "reference_preparation": "Crop the base portrait to its >=128 alpha bounds with 7px side/top padding, use 6x nearest neighbour and composite over flat dark grey.",
+  "portraits": {
+    "eleanor": {
+      "runtime": "Textures/Items/er_portrait_eleanor_black_mesh_halter_female_beauty.png",
+      "runtime_sha256": "46a61bf20efb07ae4689adfcaae04c888277a80d79dbb032779baf0fb531c72d",
+      "master": "Art/eleanor-lydia-rivals-cg-2026-11-25/portraits/er_portrait_eleanor_black_mesh_halter_female_beauty_master.png",
+      "master_sha256": "9ec94fef2fbee856747ef8a1d04e1a1e00a920addaded48fbf4371928acf3066",
+      "expression_count": 0,
+      "references": [
+        {
+          "file": "Textures/Items/cp_portrait_eleanor1.png",
+          "sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0"
+        },
+        {
+          "file": "Textures/Items/er_event_harem_rivals_cg.png",
+          "sha256": "aca84161c5cd7726b11163c0c11b550bd821571f5c619e55745797a83f406904"
+        },
+        {
+          "file": "Art/eleanor-black-mesh-halter-2026-11-17/eleanor_black_mesh_halter_master_v1.png",
+          "sha256": "2ce2986daec4326a814f9b98d4a557fb34aa3a2c60209b96888eba9e9f283949"
+        }
+      ],
+      "prompt": "Create ONE transparent-background game portrait by faithfully editing Image 1, the existing neutral adult Eleanor in-game portrait, to wear the black outfit from the LEFT woman in Image 2, the final event CG. Image 3 is the wardrobe master for matching construction; it is wardrobe only. Image 1 dictates the actual face, body, pose and drawing style. Change only the costume and its own accessories. Keep the same exact lively green eyes and their direction, small neutral smile, face outline, sweeping long copper-orange hair and gold earrings, shoulder placement and frontal upper-body stance from Image 1. Match the approved CG black halter for the window scene: matte charcoal black fitted sleeveless cropped top with a dark mesh yoke running from high collar to black bodice, a slim center zipper, plain dark waist and top of a black tiered short skirt. Keep the garment visually coherent in a small portrait. No pin or brooch. Keep existing anatomy, scale, hairstyle, head location, original developing pixel clusters, restrained hair light, and warm peach pale skin. Treat the 6x nearest-neighbour enlarged pixel art in Image 1 as the real pixel reference: clean stair-step edges, connected color blocks, small crisply clustered eye highlights, zero noise or scatter on dark edges, no glow, no smoothing into painted anime. Use centered head-and-bust framing and let the torso exit FLAT along the bottom of the frame like Image 1, upper arms at sides, not a rounded avatar cutout. Complete hair crown and hair outline at the sides. One person, isolated on real transparent alpha, no scene, borders, text or props.",
+      "export": {
+        "source_size": [
+          1254,
+          1254
+        ],
+        "clean_bbox": [
+          67,
+          53,
+          1188,
+          1254
+        ],
+        "parameters": {
+          "visible_height": 150,
+          "centre_x": 144.5,
+          "bottom_exclusive": 211,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": false,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.12489592006661115,
+          "tx": 66.1278101582015,
+          "ty": 54.38051623646962
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 0,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          74,
+          62,
+          215,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 7112
+      }
+    },
+    "lydia": {
+      "runtime": "Textures/Items/er_portrait_lydia_white_mesh_halter_female_beauty.png",
+      "runtime_sha256": "81973f2953518ea31c947d06fbdaeb2d6f76c7568ffbfec8c6715ff1ff2eb64d",
+      "master": "Art/eleanor-lydia-rivals-cg-2026-11-25/portraits/er_portrait_lydia_white_mesh_halter_female_beauty_master.png",
+      "master_sha256": "e998976afcbb5d8381951668a829ae7d143660181bf1c439e207e61a839547f1",
+      "expression_count": 0,
+      "references": [
+        {
+          "file": "Textures/Items/er_portrait_lydia_female_beauty.png",
+          "sha256": "a01cae9be4796e5ff8c1f4a71dd155fdd226d029db4eda1e84b049f2caf1712f"
+        },
+        {
+          "file": "Textures/Items/er_event_harem_rivals_cg.png",
+          "sha256": "aca84161c5cd7726b11163c0c11b550bd821571f5c619e55745797a83f406904"
+        }
+      ],
+      "prompt": "Create ONE transparent-background game portrait by faithfully editing Image 1, the existing neutral adult Lydia in-game portrait, to wear the white outfit of the RIGHT woman from Image 2, the final event CG. Use Image 2 only for the outfit. Image 1 dictates head-and-bust framing, exact identity, proportions, neutral expression and pixel-art style. Keep Lydia's amber-gold eyes, facial proportions, ash-brown long slightly wavy hair, side-swept fringe, pink rose and ribbon on the viewer's right, and pearl drop earrings. Maintain her characteristic silhouette and gentle confident closed-mouth expression. Replace the pink off-shoulder blouse only with the event's white sleeveless fitted halter top: cool ivory fabric, a light mesh yoke, pearl-silver high collar detail, narrow silver-gray central zipper, no sleeves, and white tiered short skirt where visible at the crop. No chest brooch. Match the existing portrait's front-facing posture with shoulders relaxed, arms lowered and cropped out as in Image 1. One centered bust. Complete hair crown and crisp complete silhouette on both sides, torso extends all the way into the flat lower canvas edge without a curved cutout or a visible waist below the requested bust frame. Keep exact game pixel character rendering from the nearest-neighbour enlarged existing portrait: visible square-pixel contour steps, deliberate connected clusters, restrained color ramps in warm taupe hair, clean warm skin and ivory clothing, no grain, glow, gradients that wash out the pixel look or stray black dots. Real transparent alpha including between hair and arms. Single woman, no scene, no second character, no labels, no text.",
+      "export": {
+        "source_size": [
+          1191,
+          1321
+        ],
+        "clean_bbox": [
+          58,
+          56,
+          1135,
+          1321
+        ],
+        "parameters": {
+          "visible_height": 148,
+          "centre_x": 145.0,
+          "bottom_exclusive": 211,
+          "sampling_canvas": [
+            288,
+            211
+          ],
+          "add_top_row": true,
+          "coverage_threshold": 0.35,
+          "magenta_key": false,
+          "fringe": false,
+          "detail": false,
+          "bleed": true
+        },
+        "transform": {
+          "s": 0.11699604743083004,
+          "tx": 75.21185770750988,
+          "ty": 56.44822134387351
+        },
+        "keying_counts": {
+          "strong": 0,
+          "weak_near_strong": 0,
+          "residual_edge": 0
+        },
+        "source_fringe_pixels": 0,
+        "detail_pixels": 0,
+        "target_fringe_pixels": 0,
+        "output_size": [
+          288,
+          212
+        ],
+        "output_bbox": [
+          82,
+          64,
+          208,
+          212
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_colours": 6403
+      }
+    }
+  }
+}

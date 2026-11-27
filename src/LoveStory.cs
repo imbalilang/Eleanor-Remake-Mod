@@ -323,8 +323,11 @@ namespace EleanorRomance
                 ? (RomanceState.Route == 1 ? "la3_s4_small_e1" : "la3_s4_small")
                 : (RomanceState.Route == 1 ? "la3_s4_e1" : "la3_s4");
             Dialogue root = LoveText.BuildBackup(L.Get("er_name_sophia"), weddingBlock);
-            root.SetStartAction(() => StoryPresentation.ShowBackups(
-                PortraitCompat.ResolveMotherHome(), "", "immediate", L.Get("er_name_sophia")));
+            root.SetStartAction(() =>
+            {
+                if (StoryPresentation.ShowBackups(PortraitCompat.ResolveMotherHome(), backup1Name: L.Get("er_name_sophia")))
+                    StoryPresentation.HideHostPortrait();
+            });
             StoryEngine.Tail(root).SetEndAction(() =>
             {
                 LoveDirector.Complete(10);
