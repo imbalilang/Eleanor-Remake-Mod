@@ -1,0 +1,1826 @@
+{
+  "parent_commit": "b49c557483abf2ef04668f7506dc79f0ce399e16",
+  "canonical_reference": "Textures/Items/er_event_harem_fireworks_cg.png",
+  "design": "Gold stud, two hollow diamond links, and one teardrop pendant.",
+  "wardrobe_notes": [
+    "Common chapters 1 and 2 use the jeweled purple outfit.",
+    "Later ordinary purple-outfit appearances use a matching earring-free version with all ten expressions.",
+    "Maid, white casual dress, tactical undersuit, and leather date outfit are earring-free.",
+    "The gala outfit, romance wedding, and selected late harem scenes use the gold pendant design.",
+    "The harem script identifies the set in the late special events as newly chosen."
+  ],
+  "assets": [
+    {
+      "asset": "Textures/Items/cp_portrait_eleanor1.png",
+      "source": "Textures/Items/cp_portrait_eleanor1.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "final_sha256": "69aeb6b22993cf26634be30cba286480afe695eadd7afeb0301fb9fd29be4a19"
+    },
+    {
+      "asset": "Textures/Items/er_ending_harem_shop_cg.png",
+      "source": "Textures/Items/er_ending_harem_shop_cg.png",
+      "route": "E4",
+      "type": "cg",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          320,
+          150,
+          348,
+          205
+        ],
+        [
+          392,
+          140,
+          421,
+          196
+        ]
+      ],
+      "changed_pixels": 3141,
+      "source_sha256": "9637ad49cd8271b1d9e31b23de4038f5149bfb3de141dafead75fbf49bd2d25b",
+      "final_sha256": "f8bec148bac16093798d4a40fc37369b42971288a897431e98ef638b994332cb"
+    },
+    {
+      "asset": "Textures/Items/er_ending_love_wedding.png",
+      "source": "Textures/Items/er_ending_love_wedding.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          552,
+          194,
+          580,
+          252
+        ],
+        [
+          675,
+          171,
+          705,
+          235
+        ]
+      ],
+      "changed_pixels": 3506,
+      "source_sha256": "15ae17cd29a1dc4ac63af7542bb934780ceb16b2e5a5903792e83010e1ec0cb7",
+      "final_sha256": "82eedef60e3d1dc09d1f266a0c391fac244155564051be4c4313939b18f5db29"
+    },
+    {
+      "asset": "Textures/Items/er_ending_maid_cg.png",
+      "source": "Textures/Items/er_ending_maid_cg.png",
+      "route": "E3",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          584,
+          169,
+          613,
+          225
+        ],
+        [
+          686,
+          159,
+          716,
+          218
+        ]
+      ],
+      "changed_pixels": 3394,
+      "source_sha256": "017aa76d54bebb387dfb2d29876225930dedbbbae4d79abbb6cd0b460cbf39e2",
+      "final_sha256": "09705fc47b9ca6b996ae362a04e0a66eed009fb46241644f10c405220fc1b1dd"
+    },
+    {
+      "asset": "Textures/Items/er_ending_revolution_cg.png",
+      "source": "Textures/Items/er_ending_revolution_cg.png",
+      "route": "E9",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          657,
+          183,
+          695,
+          274
+        ],
+        [
+          797,
+          272,
+          830,
+          326
+        ]
+      ],
+      "changed_pixels": 5206,
+      "source_sha256": "388d5ba8a32db6d8b10a7b0129c1d928f3fea73e37f960509be20812080e062e",
+      "final_sha256": "90ac4cfdf6e31165df4fb644e415562574db761c09e180c3ed9336e9a78f4c3b"
+    },
+    {
+      "asset": "Textures/Items/er_ending_revolution_knock_cg.png",
+      "source": "Textures/Items/er_ending_revolution_knock_cg.png",
+      "route": "E9",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          621,
+          145,
+          656,
+          210
+        ]
+      ],
+      "changed_pixels": 2273,
+      "source_sha256": "ea7e737610b0def6707878a010467dbba0fa44b3cda474047b53e7e210086a8a",
+      "final_sha256": "c4c8eaf40e0eddb23240a907057909f78957c220f1ba6fd6fa54aa2106f0b604"
+    },
+    {
+      "asset": "Textures/Items/er_event_harem_dice_cg.png",
+      "source": "Textures/Items/er_event_harem_dice_cg.png",
+      "route": "E4",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          348,
+          211,
+          386,
+          269
+        ]
+      ],
+      "changed_pixels": 2172,
+      "source_sha256": "8834bbd9344567d03beae7939cfe995e91e2c88fcf7f66466e31971f7ffc91d1",
+      "final_sha256": "f5119f1d432777da041602975945a78db711e5889583144764d75425fb69ab40"
+    },
+    {
+      "asset": "Textures/Items/er_event_harem_first_kiss_cg.png",
+      "source": "Textures/Items/er_event_harem_first_kiss_cg.png",
+      "route": "E4",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          548,
+          224,
+          588,
+          322
+        ],
+        [
+          738,
+          201,
+          775,
+          310
+        ]
+      ],
+      "changed_pixels": 7914,
+      "source_sha256": "25335bfbf911d75cecee5258cc4ebfeac78f8d4d9947e2a65295e74f19ebcd05",
+      "final_sha256": "8d02e587aeded46a40d62969aa2c53a6384e5c50f5397f879982b407b827561b"
+    },
+    {
+      "asset": "Textures/Items/er_event_harem_hotel_cg.png",
+      "source": "Textures/Items/er_event_harem_hotel_cg.png",
+      "route": "E4",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          339,
+          127,
+          369,
+          173
+        ],
+        [
+          408,
+          108,
+          434,
+          148
+        ]
+      ],
+      "changed_pixels": 2386,
+      "source_sha256": "3dd4bf67e4948558548444239ec774f3dc11cc939a851844510fcc10ef8eee9d",
+      "final_sha256": "60a50246dfeb5b3bc6ab7f439cdce1aecc92a72b1830cab67285d5d84422584f"
+    },
+    {
+      "asset": "Textures/Items/er_event_harem_nod_cg.png",
+      "source": "Textures/Items/er_event_harem_nod_cg.png",
+      "route": "E4",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          302,
+          188,
+          341,
+          264
+        ],
+        [
+          431,
+          171,
+          458,
+          237
+        ]
+      ],
+      "changed_pixels": 4706,
+      "source_sha256": "3cecfbacb1c3424f3465ece575d3ae3377cdc11a6256278a697a6277df404aba",
+      "final_sha256": "f71cb761c3b961f9043f20dfc812cc6c1fd14195701d73457239471df4d01b2a"
+    },
+    {
+      "asset": "Textures/Items/er_event_harem_rivals_cg.png",
+      "source": "Textures/Items/er_event_harem_rivals_cg.png",
+      "route": "E4",
+      "type": "cg",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          372,
+          155,
+          399,
+          220
+        ],
+        [
+          459,
+          146,
+          483,
+          195
+        ]
+      ],
+      "changed_pixels": 2872,
+      "source_sha256": "aca84161c5cd7726b11163c0c11b550bd821571f5c619e55745797a83f406904",
+      "final_sha256": "0d2e50cd024abe4110c31e6213ccca7d818dffddea00890c2c336bd8dada50c1"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_bathhouse_cg.png",
+      "source": "Textures/Items/er_event_love_bathhouse_cg.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          350,
+          168,
+          383,
+          241
+        ],
+        [
+          431,
+          186,
+          466,
+          250
+        ]
+      ],
+      "changed_pixels": 4609,
+      "source_sha256": "8eade3d90499dec8386fbf867f26769bc37fbb21842b111d520d7fa1ec37bbd2",
+      "final_sha256": "190023f874f8c17e6ae8562c63d623749f0b640a54abfa61bd79e60edc99ddcd"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_book_cg.png",
+      "source": "Textures/Items/er_event_love_book_cg.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          636,
+          192,
+          663,
+          257
+        ]
+      ],
+      "changed_pixels": 1748,
+      "source_sha256": "7172e9dac33b5dbbca88d746bd0f2f4b9a434e19d6136fffeba71304e11cf574",
+      "final_sha256": "bdda9a7a6770a580c0c81c821a565ce6e5fa3d388963388b8511b28ff78f442a"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_heart_kiss_cg.png",
+      "source": "Textures/Items/er_event_love_heart_kiss_cg.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          297,
+          330,
+          354,
+          491
+        ],
+        [
+          717,
+          269,
+          775,
+          446
+        ]
+      ],
+      "changed_pixels": 19405,
+      "source_sha256": "f569eca0c99bb2b06150b75e665ad38ce1fcca2a0ded150791f8353eda3a9918",
+      "final_sha256": "98bbc649d0d8ed2535e7c1f9a8849e266cedffcbeda4923a14a870e91ce41c04"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_promenade_cg.png",
+      "source": "Textures/Items/er_event_love_promenade_cg.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          625,
+          211,
+          654,
+          279
+        ],
+        [
+          792,
+          141,
+          827,
+          230
+        ]
+      ],
+      "changed_pixels": 5078,
+      "source_sha256": "048d8b089af5ec83c2f432e7cba6993c18989c2f140c89a33a34c755a9e0d410",
+      "final_sha256": "a33105d6bab0fcf8557d638eb7fdc0b14a606f2f77bd4a2fc4f219e7237479f0"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_supper_cg.png",
+      "source": "Textures/Items/er_event_love_supper_cg.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          379,
+          200,
+          405,
+          284
+        ],
+        [
+          523,
+          183,
+          553,
+          253
+        ]
+      ],
+      "changed_pixels": 4273,
+      "source_sha256": "7aa67a2447d7f3386d830ad1613836ecc12edb09253e2a403cb9eff1304979b9",
+      "final_sha256": "a9bd9a1c244b4f9472d3f30f646fa1ceebc7d0428f6edcb2c16d2894f7c01a58"
+    },
+    {
+      "asset": "Textures/Items/er_event_love_wall_cg.png",
+      "source": "Textures/Items/er_event_love_wall_cg.png",
+      "route": "E1",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          412,
+          247,
+          448,
+          347
+        ],
+        [
+          650,
+          213,
+          690,
+          305
+        ]
+      ],
+      "changed_pixels": 7261,
+      "source_sha256": "c458c61c8917272389d11836c8bb9e37e4da20e23e6af3e984e65b7f1ced60db",
+      "final_sha256": "23704268a643d3bd21f53b37bdc0c71df8da3db0005b05bf8ecd03310da2ecc1"
+    },
+    {
+      "asset": "Textures/Items/er_event_maid_shopkeeper_cg.png",
+      "source": "Textures/Items/er_event_maid_shopkeeper_cg.png",
+      "route": "E3",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          510,
+          144,
+          541,
+          213
+        ],
+        [
+          594,
+          140,
+          620,
+          189
+        ]
+      ],
+      "changed_pixels": 3399,
+      "source_sha256": "99ea0154f5aa3da7ca714b982e2b47eeccdf1ad3a3592d7e48f625325c30c09c",
+      "final_sha256": "11dd4a50a87c3fcb878466f19585cf201499e66e0c101934c0263f762688274f"
+    },
+    {
+      "asset": "Textures/Items/er_event_maid_shutters_cg.png",
+      "source": "Textures/Items/er_event_maid_shutters_cg.png",
+      "route": "E3",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          393,
+          160,
+          418,
+          219
+        ]
+      ],
+      "changed_pixels": 1472,
+      "source_sha256": "725c5c9ea795133e5e87a9637778d189faf249bdff814ce90bbd6fb91a536ebf",
+      "final_sha256": "aec4da272d314370d053142d40a0a8a99ebf3b088e493fd9e2a5d381f77e33ed"
+    },
+    {
+      "asset": "Textures/Items/er_event_maid_steps_cg.png",
+      "source": "Textures/Items/er_event_maid_steps_cg.png",
+      "route": "E3",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          427,
+          137,
+          452,
+          190
+        ],
+        [
+          514,
+          113,
+          536,
+          180
+        ]
+      ],
+      "changed_pixels": 2791,
+      "source_sha256": "04a4de9d34927a5dae9bcb61401b56863041d55b135ae524d99f6402ba581a93",
+      "final_sha256": "eb8026ffe8a00df970db222e24b20740b07fc923b0a9c00380983d331be1b000"
+    },
+    {
+      "asset": "Textures/Items/er_event_revolution_barracks_cg.png",
+      "source": "Textures/Items/er_event_revolution_barracks_cg.png",
+      "route": "E9",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          666,
+          278,
+          696,
+          348
+        ]
+      ],
+      "changed_pixels": 2075,
+      "source_sha256": "bb023bd1985dbdeee8cf3a24017e7918714a19f9fdb5338c3da1050737bae6fc",
+      "final_sha256": "45d50052a25cea340c5903f8499f3ae4431ad90a3b6667e95c700ba33e68e9c7"
+    },
+    {
+      "asset": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "source": "Textures/Items/er_event_revolution_embrace_cg.png",
+      "route": "E9",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          485,
+          206,
+          522,
+          302
+        ]
+      ],
+      "changed_pixels": 3546,
+      "source_sha256": "31ccdfdb828b993c3d08468b4f4dd652ec6f62632c25a412182a136fc972e2ac",
+      "final_sha256": "71d990c9f70762e6e4dce1aa936eade159e5208dbee9337d5be3eb6162d679b6"
+    },
+    {
+      "asset": "Textures/Items/er_event_revolution_jacket_cg.png",
+      "source": "Textures/Items/er_event_revolution_jacket_cg.png",
+      "route": "E9",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          409,
+          146,
+          432,
+          192
+        ],
+        [
+          499,
+          118,
+          529,
+          178
+        ]
+      ],
+      "changed_pixels": 2847,
+      "source_sha256": "a8dde836821bbf792066a84b84ab4674cead07908226fccbc58b2962c43e59fd",
+      "final_sha256": "eead0bc6baab2ee998bbae05dafb60eaf281b78aed6163a12b5da8890a6e84f7"
+    },
+    {
+      "asset": "Textures/Items/er_event_revolution_ride_cg.png",
+      "source": "Textures/Items/er_event_revolution_ride_cg.png",
+      "route": "E9",
+      "type": "cg",
+      "edit": "remove",
+      "size": [
+        960,
+        540
+      ],
+      "retouch_bounds": [
+        [
+          412,
+          173,
+          442,
+          229
+        ],
+        [
+          542,
+          156,
+          574,
+          211
+        ]
+      ],
+      "changed_pixels": 3402,
+      "source_sha256": "fda0ff519114b9484a9640d619cc3f0097aee11b22be2cf46b49d29d43822ec3",
+      "final_sha256": "854fd39472098d51326aa5e090f1942651238d4c19978ddda15d938d866bb652"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_angry.png",
+      "source": "Textures/Items/er_expr_eleanor1_angry.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "660e1e9e2223f8f22756645023072d759fc651cdf443c297f13eb96fde0d491f",
+      "final_sha256": "2e452aeeaae9823d834c19c6f080dd70dc37acfce7478a120a0485d7261be201"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_determined.png",
+      "source": "Textures/Items/er_expr_eleanor1_determined.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "85c7accbde65d9740796d8ab4339db264b5b1a5446e568d98e97f2c748affb89",
+      "final_sha256": "e318eed71297120a021a61204f287a5706ccf61539c779d73321cd1f4ff22023"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_hurt.png",
+      "source": "Textures/Items/er_expr_eleanor1_hurt.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "3054f7564274430f6f95b838b148509c30da24798a686fcfc103b57bd1a1322a",
+      "final_sha256": "9c096f1c0327fa5f54b5b191936d90292d16767d92e524d07635cbfc8bb4c2f8"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_angry.png",
+      "source": "Textures/Items/er_expr_eleanor1_angry.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "660e1e9e2223f8f22756645023072d759fc651cdf443c297f13eb96fde0d491f",
+      "final_sha256": "5f20290d1dd2b73d11c269db30fea5b74728d1b832ceb810cec6c4aa41579f2c"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_determined.png",
+      "source": "Textures/Items/er_expr_eleanor1_determined.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "85c7accbde65d9740796d8ab4339db264b5b1a5446e568d98e97f2c748affb89",
+      "final_sha256": "abdc7e65d6c742cf9605fd28471d18883db41dc9b3a77fd55758c0ae05aa3f59"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_hurt.png",
+      "source": "Textures/Items/er_expr_eleanor1_hurt.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "3054f7564274430f6f95b838b148509c30da24798a686fcfc103b57bd1a1322a",
+      "final_sha256": "d9565d1c0d6a2c2d839566be8d9fb3d753ef0b049c1a1ac7a75b67b6bab04467"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_sad.png",
+      "source": "Textures/Items/er_expr_eleanor1_sad.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "f56f6bbf2b09d35b28d6191c2b8a49057dbeb9a1e31404f2905dcd66760635b9",
+      "final_sha256": "e3873768b162359b1166d503bca897088219e76d09530b9ea858be0b708c1b53"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_serious.png",
+      "source": "Textures/Items/er_expr_eleanor1_serious.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "d1b31c440ebd4e8c5cc81554858e09f891077e7a9d52273d057bf8bb64f74143",
+      "final_sha256": "3eddfd36c224780f7f5739c489c80763cbd0f3ddd15a468a8c62efe1f53f62b3"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_shy.png",
+      "source": "Textures/Items/er_expr_eleanor1_shy.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "e5988ffe1ba75c85a52348450d7fda4c29f2909693b95130d9705ef19ee32f4e",
+      "final_sha256": "301ab2effe924a7295cc8745e458c6456358b631514982e84d0f9cced9be33d2"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_smile.png",
+      "source": "Textures/Items/er_expr_eleanor1_smile.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "bc2697e52d8a201da6ef87aed4a1482faf83f398c344134d3175b52b33d88b3b",
+      "final_sha256": "0dfa2267055c311b8573c9befb5a5f545d06f3dbf1d27e13d4c1ebe85968e5e2"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_soft.png",
+      "source": "Textures/Items/er_expr_eleanor1_soft.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "922d5097959090a48bbebbff08d77cdf485584fcffa806a49d5f9dff97454211",
+      "final_sha256": "273eea34576d24af58045bab87c64d1bda25f25adc0e05046655c8730095edd0"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_tired.png",
+      "source": "Textures/Items/er_expr_eleanor1_tired.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "723f65d89d27f4cda56aec42a00dbd0648fc560a2e06dae7adc425835cc75ef6",
+      "final_sha256": "651c94aa71a1baf6910bb578302003db057b8c885ef7793cd7e55f51011993a5"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_no_earrings_tsun.png",
+      "source": "Textures/Items/er_expr_eleanor1_tsun.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "f1b8daa86f48dba05435bcdc3e4b115724a08c2b6e9a7b347283c629049dc672",
+      "final_sha256": "a9a674fa8649c8ae60fabd6ae618a052830cc8bc5adb3889846a174c37baefd5"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_sad.png",
+      "source": "Textures/Items/er_expr_eleanor1_sad.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "f56f6bbf2b09d35b28d6191c2b8a49057dbeb9a1e31404f2905dcd66760635b9",
+      "final_sha256": "606281693faeb17e031c81a6e453cf58c211879e72f324c002abe0e48a85d617"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_serious.png",
+      "source": "Textures/Items/er_expr_eleanor1_serious.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "d1b31c440ebd4e8c5cc81554858e09f891077e7a9d52273d057bf8bb64f74143",
+      "final_sha256": "dd55d099f7b31f1cefdc16536170584d0c7c5241a6871d3ca84bdf51ad46ca0b"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_shy.png",
+      "source": "Textures/Items/er_expr_eleanor1_shy.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "e5988ffe1ba75c85a52348450d7fda4c29f2909693b95130d9705ef19ee32f4e",
+      "final_sha256": "5d411a97fe5bd031fd32dc20f4b5695ed7f6d0cfeb2bbc0a69958b4a2cb44276"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_smile.png",
+      "source": "Textures/Items/er_expr_eleanor1_smile.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "bc2697e52d8a201da6ef87aed4a1482faf83f398c344134d3175b52b33d88b3b",
+      "final_sha256": "62c4bf4de3d27046249c210394649d09d98e283c677e639c46c0d045fa216897"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_soft.png",
+      "source": "Textures/Items/er_expr_eleanor1_soft.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "922d5097959090a48bbebbff08d77cdf485584fcffa806a49d5f9dff97454211",
+      "final_sha256": "b2739025c8388e5d3fe3c4dcb90ad2f8941b50c064b80ecff8632ac231cfc999"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_tired.png",
+      "source": "Textures/Items/er_expr_eleanor1_tired.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "723f65d89d27f4cda56aec42a00dbd0648fc560a2e06dae7adc425835cc75ef6",
+      "final_sha256": "cca83e88f70b6d39508c4f0c5e6f4b5890493e8705084e1ba9ba89f367ec8f8b"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor1_tsun.png",
+      "source": "Textures/Items/er_expr_eleanor1_tsun.png",
+      "route": null,
+      "type": "expression",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          122,
+          127,
+          149
+        ],
+        [
+          156,
+          121,
+          171,
+          147
+        ]
+      ],
+      "changed_pixels": 790,
+      "source_sha256": "f1b8daa86f48dba05435bcdc3e4b115724a08c2b6e9a7b347283c629049dc672",
+      "final_sha256": "93a085674e1a6480bb9a7e08806d1896e8ec0573fbf2c76071ebe145662593dc"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_angry.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_angry.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "1ee3805c03cbe77859bce090e219121967d0dcefa076dd8601596a4054350e76",
+      "final_sha256": "5d0afb080fc66a675bd9b1f95ee02df969572529a008d4003dbb1a074e132cf4"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_determined.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_determined.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "ce38c0d20c8a6481db67915c4d3fd8141ccda887f79a14f9b84ea9504081b671",
+      "final_sha256": "8799b9eb4fb53aaa31c1d31988061e6c114e30a4bfa7504d2d8432a53bca5364"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_hurt.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_hurt.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "f828654623d0ccfd1e0c049ed012d48fe8d8a7c9b41c0152e114b03d29fcfc73",
+      "final_sha256": "ac58bc15a1061c21e7049c85e44c77080e9c68adac2dcea397f8ce56a61820e6"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_sad.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_sad.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "e987197a0fe25e7d3dd493568fef985c9d2222423dd006b8438ea68be345e6fb",
+      "final_sha256": "94809de5b08bc334d4c13a3acd25bf4d6ff51af83d617f1f58d793e7fff352ee"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_serious.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_serious.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "bb934261318dc7f8f74891f39bb3085fc31fd9cd40ed0f2f70fcd9ba23b838a1",
+      "final_sha256": "0f7384fba3f8efb5a54a02d9d2dd21b311d39368c62bc0ca8616c8dd6924e2a6"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_shy.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_shy.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "b79558ab4cff80c0724434fbe8fcae80d68e392f7f593a863b8c27fecd33670c",
+      "final_sha256": "5a787ef28c1205d49572ee1c433602bd55233ff8ff90193ed7c96ec21418eb99"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_smile.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_smile.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "6097d737de5a0b0f460dcd5b73479de2106489c30a44a53e36dea874bfb816d2",
+      "final_sha256": "d5d454885c72c4c72bc43a23c8dc5931d2f5178ba1f7bb3c5a6c4b129e160119"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_soft.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_soft.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "c37ad85d4123c1058e0d8bf6ac0d8cd6c11fe487cd734d35f336cf4de2bdc876",
+      "final_sha256": "97be3645490ece63dccb94e8141f174ddbbb1d0d2c070661186d3ccaed023053"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_tired.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_tired.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "6c14b2ab9590c84e8e10de5d39987ae21f531b66cdc22908a85c6eefebdee002",
+      "final_sha256": "caa9f8dc8f3ab75a4584b550cf963f8ea12f7f11240f332a101f52482dabab7d"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_maid_tsun.png",
+      "source": "Textures/Items/er_expr_eleanor_maid_tsun.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "afc8cd0654e190b6ecafb1e9a9fd12e0b91b69829158775544eef08e1a3ba423",
+      "final_sha256": "7347a91966c9cca178c09b04804297e23eb387d6ff26e059182716a01eca90f3"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_hurt.png",
+      "source": "Textures/Items/er_expr_eleanor_revolution_undersuit_hurt.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "b8904a4090b8686f46ecba35cb2c97622d1618db967449176a53bdc8fb2a0374",
+      "final_sha256": "e598cbb2c48b19d053f599cf8ae4c94db942d047bcf83e222044f90e61c41b04"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_serious.png",
+      "source": "Textures/Items/er_expr_eleanor_revolution_undersuit_serious.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "a7121b376211a7379f7b79f0c4f2ec25abe446c5359b1c5103afa4059291b1f4",
+      "final_sha256": "a2b4719befa9a6cb9fe7cb111fab49d1e4a513095632314d1a1354e3cad60326"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_shy.png",
+      "source": "Textures/Items/er_expr_eleanor_revolution_undersuit_shy.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "439da8ef1b66a6155aca8a7a72df6409b1207af9f51050eeee7ffcdcea8234fc",
+      "final_sha256": "6d8880a5bf3b57a70026aef0e7a57ae76885db1654cb3c3be363f0610d3447af"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_smile.png",
+      "source": "Textures/Items/er_expr_eleanor_revolution_undersuit_smile.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "f824864ba436643bf444e9cfefd733991fc75b104328b2db7615b824e208b689",
+      "final_sha256": "f2818d97b1ed5be1a794c30ce380d25861ea03a40a8b2dea13cf5e22d39dbfce"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_soft.png",
+      "source": "Textures/Items/er_expr_eleanor_revolution_undersuit_soft.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "786758817d437bcb4ecfe25d89b29ab427092006c5585a63a4e03c7eecf9023f",
+      "final_sha256": "8055f1ac931329765b52132794a1379ed17358513a06685e79c7e9b2633cf376"
+    },
+    {
+      "asset": "Textures/Items/er_expr_eleanor_revolution_undersuit_tired.png",
+      "source": "Textures/Items/er_expr_eleanor_revolution_undersuit_tired.png",
+      "route": null,
+      "type": "expression",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "f672b4892032a86b3ef09cc31f329280abcd57edeb28c781415bcd9706c63686",
+      "final_sha256": "31c5e840063ab21736d2c52e926b3701119709dc11f48951b9a2711ce8f6ab60"
+    },
+    {
+      "asset": "Textures/Items/er_portrait_eleanor_black_mesh_halter_female_beauty.png",
+      "source": "Textures/Items/er_portrait_eleanor_black_mesh_halter_female_beauty.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "double_diamond_teardrop",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          143
+        ]
+      ],
+      "changed_pixels": 440,
+      "source_sha256": "46a61bf20efb07ae4689adfcaae04c888277a80d79dbb032779baf0fb531c72d",
+      "final_sha256": "387f8a4c4a3d096fe17542dc4a64199d90b06eb841f91febcddecdf249faf68a"
+    },
+    {
+      "asset": "Textures/Items/er_portrait_eleanor_casual_no_earrings_female_beauty.png",
+      "source": "Textures/Items/cp_portrait_eleanor1.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          114,
+          125,
+          125,
+          147
+        ],
+        [
+          158,
+          123,
+          168,
+          141
+        ]
+      ],
+      "changed_pixels": 422,
+      "source_sha256": "f87705341e1ed8cd097d3aed2de165ebe2650decfe71053261e33881e860c4c0",
+      "final_sha256": "efe428c0e679bcf43452caacba6e94badeb5bfebbc1bceff195951a544133fd2"
+    },
+    {
+      "asset": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+      "source": "Textures/Items/er_portrait_eleanor_love_intimate_female_beauty.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          115,
+          125,
+          127,
+          149
+        ],
+        [
+          159,
+          124,
+          172,
+          144
+        ]
+      ],
+      "changed_pixels": 548,
+      "source_sha256": "abd0ed1a19156ead1784ed7b83e60c1b860cb67023bd75916ebf838e72eb5955",
+      "final_sha256": "dc95b7118643b601fd36edcbc03d42b1fd811626f5a46effd478be756dcfe5d9"
+    },
+    {
+      "asset": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+      "source": "Textures/Items/er_portrait_eleanor_maid_female_beauty.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          113,
+          125,
+          127,
+          149
+        ],
+        [
+          161,
+          125,
+          172,
+          145
+        ]
+      ],
+      "changed_pixels": 556,
+      "source_sha256": "d4835816f3bc4def44640379fb7a92afc5dd6f054d91a4cdd93261802d9335c3",
+      "final_sha256": "34b3b75f9005f0d64535440d6c06649a87d9391614187e0c8d00bf8098c2fd05"
+    },
+    {
+      "asset": "Textures/Items/er_portrait_eleanor_revolution_date_female_beauty.png",
+      "source": "Textures/Items/er_portrait_eleanor_revolution_date_female_beauty.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          115,
+          125,
+          127,
+          147
+        ],
+        [
+          156,
+          123,
+          168,
+          144
+        ]
+      ],
+      "changed_pixels": 511,
+      "source_sha256": "9ed727378155bccaa6ca23106fddba9d5e53f7a411191d1c31f39b3683dae277",
+      "final_sha256": "51faf27b0450abe8cd0e1cc5bcc4029446f158aedd2a970dd47d3332bfb4e0af"
+    },
+    {
+      "asset": "Textures/Items/er_portrait_eleanor_revolution_undersuit_female_beauty.png",
+      "source": "Textures/Items/er_portrait_eleanor_revolution_undersuit_female_beauty.png",
+      "route": null,
+      "type": "portrait",
+      "edit": "remove",
+      "size": [
+        288,
+        212
+      ],
+      "retouch_bounds": [
+        [
+          112,
+          127,
+          122,
+          146
+        ],
+        [
+          155,
+          123,
+          165,
+          143
+        ]
+      ],
+      "changed_pixels": 389,
+      "source_sha256": "7fec3de588460008e1c41c8af95d6c014bd99add16cacdb6b3c2a48de7e7f280",
+      "final_sha256": "b07b34d8dcabe3c903020f5e28fa4f23dee2a09d0f9d117f9d19699285a9e8f9"
+    }
+  ]
+}

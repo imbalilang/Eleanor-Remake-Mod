@@ -47,7 +47,8 @@ namespace EleanorRomance
             "love_night_book" or "love_trade_wall" or "love_night_supper" or "love_day_promenade"
                 or "love_night_stay" or "love_trade_kiss" => (ModConstants.EleanorIntimatePortrait, null),
             "love_night_bathhouse" => (ModConstants.EleanorIntimatePortrait, ModConstants.MotherHomePortraitBeauty),
-            "dual_trade_dice" or "dual_night_hotel" or "dual_final_shop" => ("eleanor1", ModConstants.LydiaPortraitBeauty),
+            "dual_trade_dice" or "dual_night_hotel" => (ModConstants.EleanorPlainCasualPortrait, ModConstants.LydiaPortraitBeauty),
+            "dual_final_shop" => ("eleanor1", ModConstants.LydiaPortraitBeauty),
             "dual_night_bath" => (ModConstants.LydiaPortraitBeauty, null),
             "dual_trade_brooch" => (ModConstants.EleanorBlackMeshPortrait, ModConstants.LydiaWhiteMeshPortrait),
             "dual_night_fireworks" => (PortraitCompat.GalaKey, PortraitCompat.LydiaDateBeautyKey),
@@ -58,7 +59,7 @@ namespace EleanorRomance
             "rev_trade_sill" or "rev_trade_wrist" => ("eleanor_rev", null),
             "rev_ride" or "rev_night_jacket" => (ModConstants.EleanorLeatherPortrait, null),
             "rev_night_departure" or "rev_night_barracks" or "rev_final_second_knock" => (ModConstants.EleanorVestPortrait, null),
-            _ => ("eleanor1", null)
+            _ => (ModConstants.EleanorPlainCasualPortrait, null)
         };
         private static bool Window(int first, int last) => Date >= first && Date <= last;
         private static bool Eligible(string id)

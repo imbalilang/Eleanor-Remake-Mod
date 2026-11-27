@@ -1671,7 +1671,7 @@
       "title_zh": "交完班",
       "title_en": "After Her Shift",
       "client": "Eleanor",
-      "portrait": "eleanor1",
+      "portrait": "er_portrait_eleanor_casual_no_earrings_female_beauty",
       "intent": "DIALOGUE",
       "next_code": 20,
       "segments": [
@@ -1930,7 +1930,7 @@
       "title_zh": "想试一次",
       "title_en": "One Try",
       "client": "Eleanor",
-      "portrait": "eleanor1",
+      "portrait": "er_portrait_eleanor_casual_no_earrings_female_beauty",
       "intent": "DIALOGUE",
       "next_code": 21,
       "segments": [

@@ -133,6 +133,7 @@ namespace EleanorRomance
                 case "eleanor1": case "eleanor2": case "eleanor3":
                 case "eleanor_scav": case "eleanor_rev":
                     return spriteName;
+                case ModConstants.EleanorPlainCasualPortrait: return "eleanor1_no_earrings";
                 case PortraitCompat.MaidKey: return "eleanor_maid";
                 case PortraitCompat.GalaKey: return "eleanor_gala";
                 case ModConstants.EleanorVestPortrait: return "eleanor_revolution_undersuit";

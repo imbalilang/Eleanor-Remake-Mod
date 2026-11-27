@@ -120,6 +120,7 @@ namespace EleanorRomance
         private static bool IsLocalEleanorOutfitKey(string key)
         {
             return key == MaidKey || key == GalaKey
+                || key == ModConstants.EleanorPlainCasualPortrait
                 || key == ModConstants.EleanorVestPortrait
                 || key == ModConstants.EleanorIntimatePortrait
                 || key == ModConstants.EleanorLeatherPortrait
@@ -778,6 +779,14 @@ namespace EleanorRomance
                     client.spriteName = EleanorNativeFallback(client.spriteName);
                     return;
                 }
+                // Saves queued before the wardrobe split may carry the early portrait.
+                if ((client.spriteName == "eleanor1" || client.spriteName == DefaultEleanorKey
+                        || client.spriteName == DefaultEleanorKey + "_female")
+                    && client.identifier != "er_story_ch1" && client.identifier != "er_story_ch2")
+                {
+                    client.spriteName = ModConstants.EleanorPlainCasualPortrait;
+                    return;
+                }
                 // Otherwise our own clients move off native keys so a native-art
                 // replacement mod has no key to overwrite in our scenes.
                 if (IsNativeEleanorKey(client.spriteName))
@@ -792,7 +801,7 @@ namespace EleanorRomance
                 bool keepGala = IsOurEleanorClient(client)
                     && (client.identifier ?? "").StartsWith("er_story_v2_", StringComparison.Ordinal);
                 client.spriteName = keepGala && EnsureLocalPortrait(GalaKey)
-                    ? GalaKey : Resolve("eleanor1");
+                    ? GalaKey : Resolve(ModConstants.EleanorPlainCasualPortrait);
             }
             else if (client.spriteName == MaidKey)
             {

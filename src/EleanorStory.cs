@@ -66,7 +66,7 @@ namespace EleanorRomance
             {
                 identifier = Prefix + id,
                 displayName = L.Eleanor,
-                spriteName = PortraitCompat.Resolve(string.IsNullOrEmpty(sprite) ? "eleanor1" : sprite),
+                spriteName = PortraitCompat.Resolve(string.IsNullOrEmpty(sprite) ? ModConstants.EleanorPlainCasualPortrait : sprite),
                 clientIntent = intent,
                 nonShootable = true,
                 arrestable = false,
@@ -1782,7 +1782,7 @@ namespace EleanorRomance
         private static StoreClient CreateConclusionChapter()
         {
             bool lover = RomanceState.RomanceConfirmed;
-            StoreClient client = NewEleanorClient("ch24", lover ? "eleanor1" : "eleanor_scav",
+            StoreClient client = NewEleanorClient("ch24", lover ? ModConstants.EleanorPlainCasualPortrait : "eleanor_scav",
                 StoreClient.ClientIntent.DIALOGUE);
 
             Dialogue root = StoryEngine.Chain(StoryV06Content.B_C23_B001, StoryV06Content.B_C23_B002);
@@ -1840,7 +1840,7 @@ namespace EleanorRomance
 
                 bool friend = !RomanceState.RomanceConfirmed;
                 StoreClient client = NewEleanorClient("ep" + index,
-                    friend ? "eleanor_scav" : "eleanor1",
+                    friend ? "eleanor_scav" : ModConstants.EleanorPlainCasualPortrait,
                     friend ? StoreClient.ClientIntent.SELL : StoreClient.ClientIntent.DIALOGUE);
                 client.dismissable = true;
                 // The first friend visit is the written scene; later visits use

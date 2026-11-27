@@ -108,8 +108,8 @@ default: return "cursor." + id; } }
 private static readonly Dictionary<string,StoryPresentationSpec> Presentations = new Dictionary<string,StoryPresentationSpec> {
 {"la1_s1_pre",new StoryPresentationSpec("immediate", "eleanor1", "", "", "")},
 {"la2_s3_pre",new StoryPresentationSpec("immediate", "eleanor1", "", "", "")},
-{"la3_s1",new StoryPresentationSpec("immediate", "eleanor1", "", "", "")},
-{"la3_s3_pre",new StoryPresentationSpec("immediate", "eleanor1", "", "", "")},
+{"la3_s1",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "", "", "")},
+{"la3_s3_pre",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "", "", "")},
 };
 public static StoryPresentationSpec GetPresentation(string id) => Presentations.TryGetValue(id,out var spec) ? spec : null;
 }}

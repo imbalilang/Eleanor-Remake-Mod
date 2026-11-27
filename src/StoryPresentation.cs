@@ -101,7 +101,7 @@ namespace EleanorRomance
                 usedSecond = second != null && !string.IsNullOrEmpty(backup2Sprite);
                 if (!usedFirst && !usedSecond) return false;
                 host = PlayerStore.Instance?.currentClientInstance?.GetClientBlueprint();
-                backupName = backup1Sprite == "eleanor1" ? L.Eleanor
+                backupName = backup1Sprite is "eleanor1" or ModConstants.EleanorPlainCasualPortrait ? L.Eleanor
                     : usedFirst ? backup1Name : backup2Name;
                 // Prime the native SEC name label as soon as the presentation
                 // is staged, so the first SEC line cannot flash the default

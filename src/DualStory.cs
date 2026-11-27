@@ -123,7 +123,7 @@ namespace EleanorRomance
             return Ready(client, root);
         }
 
-        private static StoreClient Eleanor(string id, string sprite = "eleanor1")
+        private static StoreClient Eleanor(string id, string sprite = ModConstants.EleanorPlainCasualPortrait)
         {
             return EleanorStory.NewEleanorClient(id, sprite, StoreClient.ClientIntent.DIALOGUE);
         }
@@ -134,7 +134,7 @@ namespace EleanorRomance
             int index = rotation + 2;
             bool lydia = index == 2;
             StoreClient client = lydia ? Lydia("dual_daily_" + index)
-                : Eleanor("dual_daily_" + index, "eleanor1");
+                : Eleanor("dual_daily_" + index);
             Dialogue root = lydia
                 ? DualText.Build("dr_daily_" + index + "_open", "dr_daily_2_shop")
                 : DualText.Build("dr_daily_" + index + "_open");

@@ -146,7 +146,7 @@
           "presentation": {
             "mode": "immediate",
             "backup1": {
-              "sprite": "eleanor1",
+              "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
               "name": ""
             }
           },
@@ -673,7 +673,7 @@
           "presentation": {
             "mode": "immediate",
             "backup1": {
-              "sprite": "eleanor1",
+              "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
               "name": ""
             }
           },

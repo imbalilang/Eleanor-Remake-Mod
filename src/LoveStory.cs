@@ -252,7 +252,7 @@ namespace EleanorRomance
         private static StoreClient CreateAct3SecondTrade()
         {
             StoreClient client = EleanorStory.NewEleanorClient(
-                "love_a3_02", "eleanor1", StoreClient.ClientIntent.BUY);
+                "love_a3_02", ModConstants.EleanorPlainCasualPortrait, StoreClient.ClientIntent.BUY);
             client.clientBuyingTagList.Add("FOOD");
             client.SetBudget(150);
 
@@ -318,7 +318,7 @@ namespace EleanorRomance
         private static StoreClient CreateAct3Wedding()
         {
             StoreClient client = EleanorStory.NewEleanorClient(
-                "love_a3_04", "eleanor1", StoreClient.ClientIntent.DIALOGUE);
+                "love_a3_04", ModConstants.EleanorPlainCasualPortrait, StoreClient.ClientIntent.DIALOGUE);
             string weddingBlock = LoveState.A3SmallWedding
                 ? (RomanceState.Route == 1 ? "la3_s4_small_e1" : "la3_s4_small")
                 : (RomanceState.Route == 1 ? "la3_s4_e1" : "la3_s4");
@@ -344,7 +344,7 @@ namespace EleanorRomance
         private static StoreClient CreateClosing()
         {
             StoreClient client = EleanorStory.NewEleanorClient(
-                "love_a1_03", "eleanor1", StoreClient.ClientIntent.DIALOGUE);
+                "love_a1_03", ModConstants.EleanorPlainCasualPortrait, StoreClient.ClientIntent.DIALOGUE);
             Dialogue root = LoveText.Build("la1_s3");
             root.SetStartAction(StoryPresentation.Clear);
             StoryEngine.Tail(root).SetEndAction(() =>

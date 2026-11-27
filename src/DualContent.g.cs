@@ -223,14 +223,14 @@ case "dv12_b004": return "cursor.r2.dv12_b004";
 case "dv13_b004": return "cursor.r2.dv13_b004";
 default: return "cursor." + id; } }
 private static readonly Dictionary<string,StoryPresentationSpec> Presentations = new Dictionary<string,StoryPresentationSpec> {
-{"d01_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"d03_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"d09_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"dv01_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"dv02_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"dv03_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"dv05_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
-{"dv06_b001",new StoryPresentationSpec("immediate", "eleanor1", "埃莉诺", "", "")},
+{"d01_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"d03_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"d09_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"dv01_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"dv02_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"dv03_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"dv05_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
+{"dv06_b001",new StoryPresentationSpec("immediate", "er_portrait_eleanor_casual_no_earrings_female_beauty", "埃莉诺", "", "")},
 {"dv07_b001",new StoryPresentationSpec("immediate", "er_portrait_lydia_female_beauty", "莉迪亚", "", "")},
 {"dv13_b001",new StoryPresentationSpec("immediate", "er_portrait_lydia_female_beauty", "莉迪亚", "", "")},
 };

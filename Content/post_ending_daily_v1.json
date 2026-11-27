@@ -5,7 +5,7 @@
     {
       "id": "love_daily_1",
       "route": "love",
-      "sprite": "eleanor1",
+      "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
       "title_zh": "热汤与账本",
       "title_en": "Warm Soup and the Ledger",
       "lines": [
@@ -59,7 +59,7 @@
     {
       "id": "love_daily_2",
       "route": "love",
-      "sprite": "eleanor1",
+      "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
       "title_zh": "新裙子与小私心",
       "title_en": "New Dress, Secret Plan",
       "lines": [
@@ -123,7 +123,7 @@
     {
       "id": "love_daily_3",
       "route": "love",
-      "sprite": "eleanor1",
+      "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
       "title_zh": "母亲的话与她的话",
       "title_en": "Mother's Words and Hers",
       "lines": [
@@ -187,7 +187,7 @@
     {
       "id": "love_daily_4",
       "route": "love",
-      "sprite": "eleanor1",
+      "sprite": "er_portrait_eleanor_casual_no_earrings_female_beauty",
       "title_zh": "披着你的外套等打烊",
       "title_en": "Wearing Your Coat at Closing",
       "lines": [

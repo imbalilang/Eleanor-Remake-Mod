@@ -174,7 +174,7 @@ Hook ChapterServingOrderPatch Prefix @($store);Assert ([object]::ReferenceEquals
 $tradePortraits = @{
     love_trade_wall = [EleanorRomance.ModConstants]::EleanorIntimatePortrait
     love_trade_kiss = [EleanorRomance.ModConstants]::EleanorIntimatePortrait
-    dual_trade_dice = 'eleanor1'
+    dual_trade_dice = [EleanorRomance.ModConstants]::EleanorPlainCasualPortrait
     dual_trade_brooch = [EleanorRomance.ModConstants]::EleanorBlackMeshPortrait
     maid_trade_shopkeeper = 'maleBM5'
     maid_trade_shutters = [EleanorRomance.PortraitCompat]::MaidKey
@@ -236,6 +236,24 @@ foreach ($id in $tradePortraits.Keys) {
     }
 }
 'PASS eight CG transaction portraits, companion dialogue, saved outfit restoration and 16 sale/no-sale outcomes.'
+
+$earlyCasual = [EleanorRomance.PortraitCompat]::DefaultEleanorKey
+$plainCasual = [EleanorRomance.ModConstants]::EleanorPlainCasualPortrait
+$legacyCasualKeys = @('eleanor1', $earlyCasual, ($earlyCasual + '_female'))
+foreach ($key in $legacyCasualKeys) {
+    foreach ($id in @('er_story_ch1', 'er_story_ch2', 'er_story_dual_daily_3', 'other_mod_eleanor')) {
+        $client = Blank ([StoreClient])
+        $client.identifier = $id
+        $client.displayName = 'Eleanor'
+        $client.spriteName = $key
+        Hook PortraitCompat SanitizeClient @($client)
+        $expected = if ($id -eq 'er_story_dual_daily_3') { $plainCasual } else { $key }
+        Assert ($client.spriteName -ceq $expected) "Incorrect saved casual portrait for $id ($key)."
+    }
+}
+Assert ((Hook PortraitExpression BaseKey @($earlyCasual)) -ceq 'eleanor1') 'Early casual lost its expression family.'
+Assert ((Hook PortraitExpression BaseKey @($plainCasual)) -ceq 'eleanor1_no_earrings') 'Later casual fell back to the early expression family.'
+'PASS both casual expression families, legacy saves, and another mod portrait.'
 
 $visits=@{
     'love_night_book'=54;'love_night_supper'=61;'love_night_bathhouse'=67;

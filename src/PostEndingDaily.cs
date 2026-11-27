@@ -27,7 +27,7 @@ namespace EleanorRomance
         private static string ActiveCompletedRoute(out int baselineDay, out string sprite, out bool useLovePortrait)
         {
             baselineDay = -1;
-            sprite = "eleanor1";
+            sprite = ModConstants.EleanorPlainCasualPortrait;
             useLovePortrait = true;
 
             if (DualState.Active) return null;
@@ -43,7 +43,7 @@ namespace EleanorRomance
             if (LoveState.Started && LoveState.Act3Done && LoveState.A3EndingShown && !MaidState.Active)
             {
                 baselineDay = LoveState.LastImportantDay;
-                sprite = "eleanor1";
+                sprite = ModConstants.EleanorPlainCasualPortrait;
                 useLovePortrait = true;
                 return "love";
             }

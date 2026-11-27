@@ -59,7 +59,7 @@ namespace EleanorRomance
             id, L.Get("er_name_lydia"), PortraitCompat.ResolveLydiaDate(), EleanorStory.FactionKind.Upper);
 
         private static StoreClient Eleanor(string id) => EleanorStory.NewEleanorClient(
-            id, "eleanor1", StoreClient.ClientIntent.DIALOGUE);
+            id, ModConstants.EleanorPlainCasualPortrait, StoreClient.ClientIntent.DIALOGUE);
 
         private static StoreClient Thug(string id) => EleanorStory.NewNpcClient(
             id, L.Get("er_name_thug"), "maleBM5", EleanorStory.FactionKind.BlackMarket);

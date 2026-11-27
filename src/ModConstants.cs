@@ -20,6 +20,7 @@ namespace EleanorRomance
         public const string LydiaPortraitBeauty = "er_portrait_lydia_female_beauty";
         public const string MotherPortraitBeauty = "er_portrait_mother_female_beauty";
         public const string MotherHomePortraitBeauty = "er_portrait_mother_home_female_beauty";
+        public const string EleanorPlainCasualPortrait = "er_portrait_eleanor_casual_no_earrings_female_beauty";
         public const string EleanorVestPortrait = "er_portrait_eleanor_revolution_undersuit_female_beauty";
         public const string EleanorIntimatePortrait = "er_portrait_eleanor_love_intimate_female_beauty";
         public const string EleanorLeatherPortrait = "er_portrait_eleanor_revolution_date_female_beauty";
