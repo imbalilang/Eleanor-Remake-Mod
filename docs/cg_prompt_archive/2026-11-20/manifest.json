@@ -737,6 +737,102 @@
         "Art/场景参考/场景参考1.png",
         "Textures/Items/er_event_revolution_embrace_cg.png"
       ]
+    },
+    {
+      "id": "love_a3_04",
+      "approved_file": "Textures/Items/er_ending_love_wedding.png",
+      "approval_record": "Art/route-endings-ed-2026-11-27/E1/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/ed_e1_love_v1_prompt.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/route-endings-ed-2026-11-27/E1/selected_source_b9bbab24.png",
+        "Art/场景参考/CG参考1.png",
+        "Art/原图参考/QQ图片20261119200041.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/sophia_home_transparent_master.png",
+        "Art/场景参考/场景参考1.png"
+      ]
+    },
+    {
+      "id": "dual_final_shop",
+      "approved_file": "Textures/Items/er_ending_harem_shop_cg.png",
+      "approval_record": "Art/route-endings-ed-2026-11-27/E4/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/ed_e4_harem_v2_prompt.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/route-endings-ed-2026-11-27/E4/selected_source_6c771ebd.png",
+        "Art/场景参考/CG参考1.png",
+        "Art/原图参考/QQ图片20261119200041.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/lydia_daily_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/route-endings-ed-2026-11-27/E4/ed_e4_harem_v1_master.png"
+      ]
+    },
+    {
+      "id": "v2_a4c4",
+      "approved_file": "Textures/Items/er_ending_maid_cg.png",
+      "approval_record": "Art/route-endings-ed-2026-11-27/E3/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/ed_e3_maid_v2_prompt.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/route-endings-ed-2026-11-27/E3/selected_source_3a83f59e.png",
+        "Art/场景参考/CG参考1.png",
+        "Art/character-assets-2026-11-20/portrait_regeneration_2026-11-20/transparent_masters/eleanor_maid_transparent_master.png",
+        "Art/场景参考/场景参考1.png",
+        "Art/route-endings-ed-2026-11-27/E3/ed_e3_maid_v1_master.png"
+      ]
+    },
+    {
+      "id": "rev_final_second_knock",
+      "approved_file": "Textures/Items/er_ending_revolution_knock_cg.png",
+      "approval_record": "Art/route-endings-ed-2026-11-27/E9/APPROVED.json",
+      "prompt_file": "docs/cg_prompt_archive/2026-11-20/ed_e9_revolution_v1_prompt.txt",
+      "provider": "openai",
+      "channel": "codex_builtin_imagegen",
+      "model": null,
+      "parameters": {
+        "aspect_ratio": "16:9",
+        "returned_size": [
+          1672,
+          941
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        "Art/route-endings-ed-2026-11-27/E9/selected_source_67ff226d.png",
+        "Art/场景参考/CG参考1.png",
+        "Art/原图参考/QQ图片20261119200041.png",
+        "Textures/Items/er_event_harem_lydia_date_cg.png"
+      ]
     }
   ],
   "revoked_history": [
