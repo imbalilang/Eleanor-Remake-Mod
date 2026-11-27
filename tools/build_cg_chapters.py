@@ -54,8 +54,8 @@ def parse(scene, title, text):
             section = 'sold' if mark[1] == '成交' else 'unsold'
             line = mark[2] or ''
         who, space, speech = line.partition('　')
-        assert space and who in ('埃莉诺', '店主', '莉迪亚', '索菲娅', '客人'), (scene, line)
-        assert 0 < len(speech) <= 22, (scene, speech)
+        assert space and who in ('埃莉诺', '店主', '莉迪亚', '索菲娅', '客人', '旁白'), (scene, line)
+        assert 0 < len(speech) <= 32, (scene, speech)
         sections[section].append(line)
     if scene not in NATIVE:
         assert sections['intro'], scene

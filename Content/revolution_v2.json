@@ -391,159 +391,121 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "埃莉诺把改写过的手写单子按在窗口柜台上。",
-              "en": "Eleanor presses a rewritten handwritten list onto the window counter."
+              "text": "一张涂改过的手写补给单被按在窗口台面上。",
+              "en": "A handwritten supply list covered in corrections is pressed onto the counter."
             },
             {
               "speaker": "Eleanor",
-              "text": "上次卖工具换的信用点我都带过来了。",
-              "expr": "serious",
-              "en": "I brought all the credits from selling those tools last time."
+              "text": "前天卖旧工具换的信用点都在这儿了。",
+              "en": "All the credits from selling old tools the day before yesterday are here.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
-              "text": "你看单子最上面，我把退烧药和消毒剂圈出来了。",
-              "en": "Look at the top of the list. I circled the fever meds and antiseptic."
+              "text": "我刚把单子改了。今天先把圈在最上面的退烧药和消毒剂拿齐。",
+              "en": "I just revised the list. Today I'll get the fever medicine and disinfectant circled at the top first."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "队里年纪最小的那个队员三天前胳膊划了道口子。",
+              "en": "The youngest member of our team got a gash on his arm three days ago.",
+              "expr": "sad"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "谁知道昨晚突然烧得直说胡话。",
+              "en": "Then last night he spiked a fever and started raving."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "都怪我前天光顾着先来出手旧工具，白白耽误了两天。",
+              "en": "My fault. The day before yesterday I was set on selling the old tools first and wasted two whole days."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "领队本来把底下的枪弹也画了圈，可手头的钱只够买一半。",
+              "en": "The team leader had circled the guns and ammo below too, but the money on hand only covers half.",
+              "expr": "determined"
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "既然采买归我管，那就得先拿救命的药。枪弹留到下次再说。",
+              "en": "Since I'm in charge of supplies, lifesaving medicine comes first. Guns and ammo can wait till next time."
             },
             {
               "speaker": "Player",
-              "text": "前天还排在后头。",
-              "en": "The day before yesterday, they were near the bottom."
+              "text": "绷带受过潮。",
+              "en": "The bandages are damp."
             },
             {
               "speaker": "Eleanor",
-              "text": "队里年纪最小的那个队员胳膊划了一道口子。",
-              "en": "The youngest kid in our squad got a gash on his arm."
+              "text": "（叹气）泛黄就泛黄吧。拿回去用开水煮过照样能用。",
+              "en": "(sighs) Yellowed is yellowed. Boil them when I get back and they'll still work.",
+              "expr": "tired"
             },
             {
               "speaker": "Eleanor",
-              "text": "三天前看着还没事，结果昨晚突然发起高烧。",
-              "en": "Three days ago he seemed fine. Then last night he spiked a high fever."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "他烧得直说胡话，一直在喊一个队里没人听过的名字。",
-              "expr": "sad",
-              "en": "He's delirious, calling a name nobody in the squad has ever heard."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "都怪我前天忙着先来卖货，把买消毒药的事拖了两天。",
-              "en": "My fault. I was busy selling first and put off the antiseptic two days."
-            },
-            {
-              "speaker": "Player",
-              "text": "下面枪弹也画了圈。",
-              "en": "The guns and ammo below are circled too."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "那是领队画的，可手头的钱只够买单子的一半。",
-              "expr": "determined",
-              "en": "The squad leader did that. But we only have enough for half the list."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "既然现在单子归我管，就得先把救命的药拿回去。",
-              "en": "The list is mine to manage now, so the lifesaving meds come first."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "枪和子弹留到下次再说，你先把备好的药拿出来吧。",
-              "en": "Guns and bullets can wait. Bring out the meds you set aside."
-            },
-            {
-              "speaker": "Narrator",
-              "text": "几盒退烧药与几卷绷带摆在窗口柜台前。",
-              "en": "Several boxes of fever medicine and a few rolls of bandages sit on the window counter."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "这几卷绷带的边角怎么受潮泛黄了？",
-              "expr": "tired",
-              "en": "Why are the edges of these bandages damp and yellowed?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "算了，拿回去用开水煮过一样能包扎伤口。",
-              "en": "Whatever. Boil them and they'll still dress a wound."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "要是换作以前在上面，这种东西我当场就把杯子摔了。",
-              "en": "Back on the Upper Level, I'd have smashed a cup over junk like this."
+              "text": "要是搁在以前……算了，以前在上面我早把杯子摔了。",
+              "en": "If this were before... forget it. Back when I was up above, I'd have smashed a cup already.",
+              "expr": "soft"
             }
           ]
         },
         "v2_r1c2_s1": {
           "lines": [
             {
-              "speaker": "Player",
-              "text": "货在柜上，自己挑。",
-              "en": "Goods are on the counter. Pick."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "行，我自己过一遍手才放心。",
-              "expr": "serious",
-              "en": "Fine. I won't trust it until I've checked it myself."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "（她低头翻看血袋的封口）日期还行，没放坏。",
-              "en": "(She looks down at the blood bag seals.) Dates are fine. Not spoiled."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "退烧药和消毒剂我码在最上面，回去就能直接用。",
-              "en": "Fever meds and antiseptic on top, so they're ready to use when I get back."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "绷带我也一卷卷数清楚了，数目正好对得上单子。",
-              "en": "I counted the bandages roll by roll. Matches the list exactly."
+              "speaker": "Narrator",
+              "text": "几盒药剂、血袋和泛黄的绷带一字排开摆在窗口内侧。",
+              "en": "A row of medicine boxes, blood bags, and yellowed bandages is laid out inside the window."
             },
             {
               "speaker": "Player",
-              "text": "泛黄的算便宜点？",
-              "en": "Discount for the yellowed ones?"
+              "text": "都在这，自己挑。",
+              "en": "It's all here. Pick what you need."
             },
             {
               "speaker": "Eleanor",
-              "text": "免了，我今天花的是队里公家的钱。",
-              "en": "No. Today I'm spending the squad's money."
+              "text": "这袋血浆的日子还行。退烧药两盒，消毒剂三瓶，封口都没动过。",
+              "en": "The date on this blood bag is fine. Two boxes of fever medicine, three bottles of disinfectant. All seals unbroken.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
-              "text": "你按正常成色算账，不准私下少收或者当成白送。",
-              "en": "Charge standard rate. No quiet discounts, no freebies."
+              "text": "受潮的绷带我也一并带走。",
+              "en": "I'll take the damp bandages too."
+            },
+            {
+              "speaker": "Player",
+              "text": "绷带算你便宜点。",
+              "en": "I'll discount the bandages."
             },
             {
               "speaker": "Eleanor",
-              "text": "我不想欠你私情，队里的账目也必须一笔笔算清楚。",
-              "en": "I won't owe you favors, and the squad's books have to add up."
+              "text": "不用你让。该多少信用点就按多少算！",
+              "en": "No discount. Charge exactly what the credits should be!",
+              "expr": "angry"
             },
             {
               "speaker": "Eleanor",
-              "text": "以后队里采买补给，我还会固定来你这儿拿货。",
-              "expr": "soft",
-              "en": "From now on, I'll come here regularly for the squad's supplies."
+              "text": "我花的是队里的公账，没道理在这儿欠你一份私情。",
+              "en": "I'm spending the team's funds. No reason to owe you a personal favor.",
+              "expr": "determined"
             },
             {
               "speaker": "Eleanor",
-              "text": "你别多想，我可不是为了照顾你的生意。",
-              "en": "Don't read into it. I'm not doing your business any favors."
+              "text": "你也别想着给我抹零头，按实价开数就行。",
+              "en": "And don't round it down for me. Just charge the real price."
             },
             {
               "speaker": "Eleanor",
-              "text": "外面别的铺子账目太乱，那些掌柜我一个都信不过。",
-              "en": "The other shops keep messy books. I don't trust a single owner."
+              "text": "往后队里的补给还是固定来你这儿拿。",
+              "en": "The team's supplies will keep coming from you from now on.",
+              "expr": "soft"
             },
             {
               "speaker": "Eleanor",
-              "text": "挑出来的药都在这儿了，你直接报个实价吧。",
-              "expr": "serious",
-              "en": "These are the meds I picked. Just give me a real price."
+              "text": "别多想，我只是嫌别家掌柜的账目太乱，信不过他们。",
+              "en": "Don't get any ideas. I just find other shopkeepers' ledgers too messy to trust."
             }
           ]
         },
@@ -551,18 +513,19 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "照单子拢好了，直接结？",
-              "en": "Bundled per the list. Settle up?"
+              "text": "照单给你结。",
+              "en": "I'll settle it by the list."
             },
             {
               "speaker": "Eleanor",
-              "text": "等一下，数目和封口我得自己过一遍手。",
-              "en": "Wait. I need to check the count and seals myself."
+              "text": "先别急着算账。每样药我都得自己过手点一遍。",
+              "en": "Hold off on the bill. I need to handle and count every medicine myself.",
+              "expr": "serious"
             },
             {
               "speaker": "Eleanor",
-              "text": "队里的钱每一分都有数，我自己点清了才好交差。",
-              "en": "Every credit of the squad's is accounted for. I count it, I answer for it."
+              "text": "封口和数目对不上，我回去没法跟队里交差。",
+              "en": "If the seals and quantities don't match, I can't answer to the team."
             }
           ]
         },
@@ -570,18 +533,20 @@
           "lines": [
             {
               "speaker": "Player",
-              "text": "下半截什么时候来拿？",
-              "en": "When are you picking up the rest?"
+              "text": "下半截什么时候拿？",
+              "en": "When will you get the second half?"
             },
             {
               "speaker": "Eleanor",
-              "text": "等队里再凑够一批能出手的东西，我自然会过来。",
-              "en": "When the squad scrapes together another batch to sell, I'll come."
+              "text": "等队里再凑批旧货出手吧。今天把口袋翻烂也凑不够那个数。",
+              "en": "When the team gets another batch of old goods to sell. I can't scrape together that much today even if I turn my pockets inside out.",
+              "expr": "tired"
             },
             {
               "speaker": "Eleanor",
-              "text": "现在先别管下次的事了，让我把眼前的药挑完。",
-              "en": "Forget next time for now. Let me finish picking these meds."
+              "text": "先把眼前的药挑完要紧。",
+              "en": "The important thing is to finish picking the medicine here first.",
+              "expr": "serious"
             }
           ]
         },
@@ -589,14 +554,9 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "数目正好，这包药我先拎走了。",
-              "expr": "soft",
-              "en": "That's the right amount. I'm taking the medicine."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "队里那个人还在发烧，我得赶快回去给他把烧退下来。",
-              "en": "Someone in the unit still has a fever. I need to get back and bring it down."
+              "text": "数目正好。药我装走了，下次有货再过来。",
+              "en": "The amount's exact. I'll take the medicine. I'll come by next time you have stock.",
+              "expr": "soft"
             }
           ]
         },
@@ -604,14 +564,9 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "你这人怎么回事，刚才不是说了不准私下给我打折吗？",
-              "expr": "angry",
-              "en": "What's wrong with you? Didn't I just say no secret discounts?"
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "今天急着救人我先拿走，下次再少收我就去别家买。",
-              "en": "Someone needs saving, so I'll take it today. Charge me less again and I'll buy elsewhere."
+              "text": "不是让你按实价算吗？少收的那截我记着，下次连本补给你。",
+              "en": "I told you to charge the actual price. I'll remember what you undercharged and pay it back in full next time.",
+              "expr": "angry"
             }
           ]
         },
@@ -619,14 +574,9 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "趁着别人急用退烧药坐地起价，你这算盘打得够精啊。",
-              "expr": "angry",
-              "en": "Jacking up the price when someone needs fever medicine. Clever math."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "队里那个人等不起，今天这口闷气我先咽下了。",
-              "en": "He can't wait, so I'll swallow it today."
+              "text": "你趁火打劫的本事倒是一点没变。要不是队里急着救人……钱给你！",
+              "en": "You haven't lost your knack for price-gouging. If the team weren't in a hurry to save someone... here's your money!",
+              "expr": "tired"
             }
           ]
         },
@@ -634,14 +584,9 @@
           "lines": [
             {
               "speaker": "Eleanor",
-              "text": "（她沉下脸收起单子）这价钱我手头的钱根本拿不下。",
-              "expr": "sad",
-              "en": "(Her face darkens as she folds the list away) I can't afford that."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "人还在屋里烧着，我只能去隔街的铺子再碰碰运气了。",
-              "en": "He's still burning up. I'll have to try my luck at the shop across the street."
+              "text": "这个数我拿不下。我去隔街的铺子碰碰运气，不在这儿耗着了。",
+              "en": "I can't afford that. I'll try the shop across the street. No point wasting time here.",
+              "expr": "angry"
             }
           ]
         }
@@ -1749,133 +1694,113 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "军需官拎着沉甸甸的帆布袋走到营业窗口前。",
-              "en": "The Revolutionary Quartermaster walks up to the service window carrying a heavy canvas bag."
+              "text": "一只扎紧的帆布袋搁上窗口台面，里头金属碰撞发出闷响。",
+              "en": "A tied canvas sack lands on the counter, metal clanking dully inside."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "老板，埃莉诺临走前让我认准你这家店。",
-              "en": "Before she left, Eleanor told me to stick with your shop."
+              "text": "你就是这家当铺的掌柜吧？",
+              "en": "You're the shopkeeper here?"
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "她说你报价痛快，从不跟人绕弯子磨嘴皮。",
-              "en": "She said you quote fast and never waste time haggling."
+              "text": "埃莉诺两天前，天还没亮就跟着队伍出发了，这一趟少说得十天。",
+              "en": "Eleanor set out with the squad two days ago, before dawn. This run'll take at least ten days."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "我们仓库腾出点废铁和金属锭，想折价换点买口粮的钱。",
-              "en": "We cleared some scrap and metal ingots out of the warehouse. We'd like to sell them cheap for ration money."
+              "text": "她临走前特意交代我，仓库里多出来的材料只管往你这儿送。",
+              "en": "Before she left she told me to bring any surplus materials from the depot straight to you."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "说是你这儿给价痛快，不爱磨嘴皮子。",
+              "en": "Said you give a straight price and don't haggle."
             },
             {
               "speaker": "Player",
-              "text": "她人呢？",
-              "en": "Where is she?"
+              "text": "她走之前还顺利吗？",
+              "en": "Was everything smooth before she left?"
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "两天前天还没亮，她就跟着大队出发远征了。",
-              "en": "Two days ago, before dawn, she left with the main unit on an expedition."
+              "text": "那姑娘办事，比我们这帮老油条还较真。",
+              "en": "That girl takes things more seriously than us old hands."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "路途不近，来回算下来怎么也得十天左右。",
-              "en": "It's a long way. The round trip will take about ten days at least."
+              "text": "出发头一晚，她攥着张手写单子，挨个查全队的背包。",
+              "en": "The night before they left, she went through every pack in the squad with a handwritten list."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "有个老队员嫌烦不乐意，她也不吵，就抱起胳膊在旁边站着盯。",
+              "en": "One old-timer got annoyed. She didn't argue, just crossed her arms and stood there staring."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "盯到那老小子自己发毛，解开包一翻，还真漏了一卷绷带。",
+              "en": "Stared until he got nervous, opened his pack, and sure enough, a roll of bandages was missing."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "队里最年轻那毛头小子，鞋带松了她一眼就瞅见。",
+              "en": "The youngest kid's bootlace came loose and she spotted it right away."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "硬是站在跟前催了三遍，看着人打成死结才肯挪步。",
+              "en": "Stood there and made him retie it three times, wouldn't move until it was double-knotted."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "她自己那个包本来就塞得最沉。",
+              "en": "Her own pack was already the heaviest."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "临出发前，她愣是把全队大半的急救药全揽过去塞进了自己包里。",
+              "en": "Right before they set off, she took most of the squad's first-aid supplies and stuffed them in her own pack."
             },
             {
               "speaker": "Player",
-              "text": "走得这么急？",
-              "en": "In such a hurry?"
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "可不是嘛，出发前一晚她整宿都没怎么合眼。",
-              "en": "Tell me about it. She barely slept the night before."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "她攥着张手写单子，挨个检查每个人的背包。",
-              "en": "She had a handwritten list and checked everyone's pack, one by one."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "有个老队员嫌烦嘟囔了一句，她也没跟人吵。",
-              "en": "One of the veterans grumbled about it. She didn't argue with him."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "她就抱着单子站在原地，一声不吭地盯着人家看。",
-              "en": "She just stood there holding the list, staring at him without a word."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "最后那老队员自己扛不住，乖乖把包重新解开了。",
-              "en": "In the end he cracked and unpacked his bag again."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "结果你猜怎么着？里头还真少带了一卷绷带。",
-              "en": "And guess what? He really was missing a roll of bandages."
-            },
-            {
-              "speaker": "Player",
-              "text": "倒确实是她的脾气。",
+              "text": "很像她会干的事。",
               "en": "Sounds like her."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "还不止呢，队里最年轻那小子临出门被她拦了三次。",
-              "en": "That's not all. She stopped the youngest kid three times on his way out."
+              "text": "谁说不是呢，刚来那会儿我们还当是个娇生惯养的大小姐。",
+              "en": "Tell me about it. When she first came we figured she was some pampered rich girl."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "她非让人家把鞋带重系，放话不系死结就别跟着走。",
-              "en": "Made him retie his laces. Said no double knot, no coming along."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "全队大半的急救药，也全让她塞进自己包里了。",
-              "en": "She stuffed most of the unit's first-aid supplies into her own pack, too."
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "她原本那个包就最沉，嘴上还硬说是交给别人不放心。",
-              "en": "Her pack was already the heaviest. She insisted she didn't trust anyone else with it."
-            },
-            {
-              "speaker": "Player",
-              "text": "还交代别的了？",
-              "en": "Anything else?"
-            },
-            {
-              "speaker": "RevQuartermaster",
-              "text": "就让我把这批多余的材料提过来找你换粮钱。",
-              "en": "Just told me to bring you this surplus and trade it for ration money."
+              "text": "现在队里上下，没人敢拿她当外人看。",
+              "en": "Now nobody in the squad treats her as an outsider."
             },
             {
               "speaker": "Narrator",
-              "text": "军需官解开袋口，把捆扎整齐的废铁和金属锭推上柜台。",
-              "en": "The Quartermaster opens the sack and pushes neatly bundled scrap and metal ingots onto the counter."
+              "text": "军需官解开帆布袋口的麻绳，露出里头擦拭干燥的废金属与金属锭。",
+              "en": "The Quartermaster unties the sack, revealing scrap and ingots wiped dry."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "这些前阵子受了点潮，不过都已经彻底晾干了。",
-              "en": "They got a little damp a while back, but they're fully dried out now."
+              "text": "行了，不扯闲话了，说正事。",
+              "en": "All right, enough talk. Down to business."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "每一包都是她出发前亲手点过数封好的。",
-              "en": "She counted and sealed every bundle herself before she left."
-            },
-            {
-              "speaker": "Player",
-              "text": "成色我先看看。",
-              "en": "Let me check the quality."
+              "text": "这袋子废金属和金属锭都是提前晾干的，她走前亲自点过数、封好口。",
+              "en": "This scrap and these ingots were dried in advance. She counted and sealed them herself before leaving."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "留守的弟兄还等着买口粮，价钱上好商量。",
-              "en": "The guys back at base still need rations. We're flexible on price."
+              "text": "我们留守的人手头紧，急着折现买批口粮。",
+              "en": "Those of us left behind are short on funds and need to cash out for rations."
+            },
+            {
+              "speaker": "RevQuartermaster",
+              "text": "我按市面折个价出给你，你给掌掌眼，看看能出多少？",
+              "en": "I'll go by market rate. Take a look and tell me what you can offer."
             }
           ]
         },
@@ -1883,13 +1808,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "埃莉诺果然没推荐错人，跟你做买卖就是省心。",
-              "en": "Eleanor was right about you. Doing business with you is easy."
+              "text": "怪不得她认准你这儿，办事确实敞亮。",
+              "en": "No wonder she picked your shop—you're straightforward."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "谢了老板，我这就拿钱去给留守的弟兄买口粮。",
-              "en": "Thanks. I'll go buy rations for the guys at base right now."
+              "text": "这笔钱正好拿去换口粮，谢了。",
+              "en": "This money will go straight to rations. Thanks."
             }
           ]
         },
@@ -1897,13 +1822,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "没想到老板出手这么厚道，比我预想的还多出不少。",
-              "en": "Didn't expect you to be this generous. That's a lot more than I hoped for."
+              "text": "给得比我预想的还宽裕些，这下留守的弟兄们能多添点干粮了。",
+              "en": "More generous than I expected—now the men staying behind can get extra dry rations."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "这份人情我替留守的弟兄记下了，多谢。",
-              "en": "I'll remember this on behalf of the guys at base. Thank you."
+              "text": "这份情我记下了，等她回来我一定如实跟她说。",
+              "en": "I'll remember this. When she's back, I'll tell her exactly."
             }
           ]
         },
@@ -1911,13 +1836,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "（咂了下嘴）老板，你这价压得实在有点狠了。",
-              "en": "(Clicks tongue) That's a pretty brutal lowball."
+              "text": "你这手压得有点狠啊……不过眼下急着买口粮，也只能先换了。",
+              "en": "You drive a hard bargain... but with rations urgent, I'll take the deal."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "算了，驻地那边急着等米下锅，少点就少点吧。",
-              "en": "Fine. The base needs food on the table. Less is better than nothing."
+              "text": "钱我点清了，先走了。",
+              "en": "Money's counted. I'm off."
             }
           ]
         },
@@ -1925,13 +1850,13 @@
           "lines": [
             {
               "speaker": "RevQuartermaster",
-              "text": "（叹了口气）这价钱实在合不上，我没法跟队里交差。",
-              "en": "(Sighs) That price doesn't work. I can't take that back to the unit."
+              "text": "这数实在合不拢，低于仓库定好的底价我也没法向队里交差。",
+              "en": "The numbers just won't work. I can't go below the warehouse's fixed floor price and still answer to the crew."
             },
             {
               "speaker": "RevQuartermaster",
-              "text": "东西我先收回去，回仓库再另想办法吧。",
-              "en": "I'll take these back to the warehouse and figure something else out."
+              "text": "东西我先拎回去，改天再说吧。",
+              "en": "I'll take my goods back. We'll talk another day."
             }
           ]
         }

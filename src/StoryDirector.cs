@@ -183,7 +183,8 @@ namespace EleanorRomance
                 if (chapter <= 0)
                 {
                     if (MaidBusiness.TryQueue(manager,day)) return;
-                    if (TryQueueEpilogue(manager, day)) RomanceState.LastQueuedDay = day;
+                    if (TryQueueEpilogue(manager, day)) { RomanceState.LastQueuedDay = day; return; }
+                    if (PostEndingDaily.TryQueue(manager, day)) RomanceState.LastQueuedDay = day;
                     return;
                 }
 

@@ -1,0 +1,704 @@
+{
+  "version": "1.0",
+  "description": "Post-ending rotating daily window visits (every 4 days) for Love, Maid, and Revolution routes.",
+  "scenes": [
+    {
+      "id": "love_daily_1",
+      "route": "love",
+      "sprite": "eleanor1",
+      "title_zh": "热汤与账本",
+      "title_en": "Warm Soup and the Ledger",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她穿轻便居家裙停在窗前，掀开食盒盖，把热汤推到你手边。",
+          "en": "She's stopped by the window in a light house dress. She lifts the lid off the food box and slides the hot soup over to your hand."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我就猜到你一翻起这堆旧账本，连午饭钟点都能忘得一干二净。",
+          "en": "I knew it. The moment you start flipping through those old ledgers, you forget all about lunch."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "趁热喝，我盯着火候炖了半个钟头，凉了可没这香味。",
+          "en": "Drink it while it's hot. I watched the pot for a good half hour — it won't smell half as good once it's cold."
+        },
+        {
+          "speaker": "Player",
+          "text": "辛苦我们家夫人专门跑一趟。",
+          "en": "Thanks for making the trip all the way out here, my lady wife."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "少拿好听话糊弄我，跑腿送饭可不是白送的呀。",
+          "en": "Don't think sweet talk gets you out of this — running errands and delivering lunch isn't free, you know."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "街口安静下来，她顺势趴近窗沿，弯起眉眼用指尖勾了下你的尾指。",
+          "en": "The street quiets down. She leans in over the windowsill, eyes curving into crescents, and hooks her fingertip around your pinky."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今晚早点落锁回家……进门得先补我一个结结实实的拥抱。",
+          "en": "Lock up early and come home tonight... and the first thing through the door better be a proper, tight hug for me."
+        },
+        {
+          "speaker": "Player",
+          "text": "记下了，今晚早点打烊。",
+          "en": "Noted. I'll close up early tonight."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这还差不多，可不许再让我和晚饭一块儿干等你。",
+          "en": "That's more like it. And don't leave me and dinner waiting on you again."
+        }
+      ]
+    },
+    {
+      "id": "love_daily_2",
+      "route": "love",
+      "sprite": "eleanor1",
+      "title_zh": "新裙子与小私心",
+      "title_en": "New Dress, Secret Plan",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她拎着商街纸袋在窗前轻快转了半圈，浅色露肩裙衬得锁骨雪白。",
+          "en": "She whirls half a turn by the window with a paper bag from the shopping street, the pale off-shoulder dress making her collarbones look snow-white."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "喂，大忙人，把视线从账本上挪开两秒。",
+          "en": "Hey, busy man—lift your eyes off that ledger for two seconds."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "给你三次机会猜猜，我今天身上哪儿不一样了？",
+          "en": "I'll give you three guesses. What's different about me today?"
+        },
+        {
+          "speaker": "Player",
+          "text": "新裁的露肩裙，连发梢都梳亮了。",
+          "en": "A newly tailored off-shoulder dress—you even polished your hair ends."
+        },
+        {
+          "speaker": "Player",
+          "text": "站在窗前太晃眼，好看得过分。",
+          "en": "Standing there in the window, you're blinding. Ridiculously pretty."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……算你眼光还行，没白费我绕两条街过来。",
+          "en": "...So your taste isn't hopeless after all. Worth the two-street detour."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她耳尖微热，把纸袋往怀里一抱，突然俯身贴近你的窗沿。",
+          "en": "Her ears flush warm. She hugs the paper bag to her chest and suddenly leans in close over your windowsill."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "不过嘛，这袋子里还藏着另一件更薄的小东西呢。",
+          "en": "But there's something else hiding in this bag—something thinner."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那种料子可不能在街上穿……只留着今晚回屋给你一个人看。",
+          "en": "That kind of fabric can't be worn out on the street... it's saved for tonight, back in our room, for your eyes only."
+        },
+        {
+          "speaker": "Player",
+          "text": "故意来勾我的魂？",
+          "en": "So you came here just to tempt me?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "谁让你总守着破柜台呀，早点落锁回家亲自拆，我等你。",
+          "en": "Well, someone has to keep guarding that beat-up counter. Lock up early and come home to unwrap it yourself—I'll be waiting."
+        }
+      ]
+    },
+    {
+      "id": "love_daily_3",
+      "route": "love",
+      "sprite": "eleanor1",
+      "title_zh": "母亲的话与她的话",
+      "title_en": "Mother's Words and Hers",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "咳，我来替母亲带句话。",
+          "en": "Ahem. I'm here to pass along a message from Mother."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "她嫌你昨晚收摊太晚，今晚挑了水培农场刚摘的鲜蔬炖菜。",
+          "en": "She's cross that you closed up so late last night, so tonight she's stewing fresh greens just picked from the hydroponic farm."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "让你绝不许再误了饭点。",
+          "en": "And you are absolutely not to miss mealtime again."
+        },
+        {
+          "speaker": "Player",
+          "text": "替我谢过咱妈，今晚一定准时。",
+          "en": "Tell our mom thanks for me—I'll be there right on time tonight."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她耳根微红，指尖叩了叩窗台，忽然俯身凑近半步。",
+          "en": "Her ears flush faintly pink. She taps her fingertips on the windowsill, then suddenly leans in half a step closer."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "慢着，话还没传完呢。",
+          "en": "Hold on—the message isn't finished yet."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "准点回家吃饭是母亲叮嘱的……",
+          "en": "Coming home on time for dinner is Mother's instruction..."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "但把打烊时间再提前半个钟头，进门不许再翻半页账本——",
+          "en": "But closing up another half hour earlier, and not turning a single page of the ledger once you're through the door—"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这两条，可是我自己硬塞进去的新规矩。",
+          "en": "Those two? Those are new rules I wedged in myself."
+        },
+        {
+          "speaker": "Player",
+          "text": "遵命，都听夫人的。",
+          "en": "As you command, my lady. Whatever you say."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这还差不多，少一分钟我可就在窗前盯梢了。",
+          "en": "That's more like it. Be even a minute late and I'll be keeping watch from the window."
+        }
+      ]
+    },
+    {
+      "id": "love_daily_4",
+      "route": "love",
+      "sprite": "eleanor1",
+      "title_zh": "披着你的外套等打烊",
+      "title_en": "Wearing Your Coat at Closing",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她披着你宽大的旧外套趴在窗沿，长袖一直盖过半截手背。",
+          "en": "She leans on the windowsill in your big old coat, the sleeves hanging past half her hand."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "看什么呀，我可是专门来盯你准点收摊的。",
+          "en": "What are you looking at? I came all this way just to make sure you close up on time."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今天通道里风大，顺手把你这件旧外套穿出来了，暖和得很。",
+          "en": "It was windy in the walkway today, so I grabbed this old coat of yours on my way out. Keeps me nice and warm."
+        },
+        {
+          "speaker": "Player",
+          "text": "袖子都快盖住手了。",
+          "en": "The sleeves are practically swallowing your hands."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "大点才好呢……领口全是你的木头味，闻着就让人安心。",
+          "en": "The bigger the better... the collar smells all of your woodshop. Just breathing it in settles me."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "以前隔着这扇窗，我满脑子都在算计怎么跟你压价还债。",
+          "en": "Back when it was just this window between us, all I could think about was how to haggle you down and pay off my debt."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在倒好，每天数着钟点，最盼着听见卷帘咔哒落锁的声音。",
+          "en": "And now? I count the hours, and the sound I look forward to most is that shutter clicking down."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她把下巴埋进厚实的衣领里，隔着衣料轻轻蹭了蹭你的手背。",
+          "en": "She buries her chin in the thick collar and brushes your hand softly through the fabric."
+        },
+        {
+          "speaker": "Player",
+          "text": "再有两分钟就收摊。",
+          "en": "Two more minutes till closing."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那你快点呀……今晚脚凉，到家门口就得抱我回被窝，不许偷懒。",
+          "en": "Then hurry it up... my feet are cold tonight, so the moment we're at the door you're carrying me straight to bed. No slacking."
+        }
+      ]
+    },
+    {
+      "id": "maid_daily_1",
+      "route": "maid",
+      "sprite": "er_portrait_eleanor_maid_female_beauty",
+      "title_zh": "白围裙的报账与讨赏",
+      "title_en": "Ledger Report and Reward",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "早市进的那批日用品清点完了，账单在这儿。",
+          "en": "I've finished tallying the daily goods from the morning market. Here's the bill."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "送货的油滑贩子见我穿侍从裙，故意虚抬了两成报价。",
+          "en": "That slick-tongued peddler saw me in my attendant's dress and tried to pad his quote by twenty percent."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我当场挑明封口开胶，逼他乖乖按老底价结了账。",
+          "en": "I pointed out the seals were coming unglued, right to his face, and made him settle at the old base price."
+        },
+        {
+          "speaker": "Player",
+          "text": "干得漂亮，愈发像半个当家了。",
+          "en": "Nicely done. You're more than half a shopkeeper now."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "巷口脚步声彻底走远，她忽然倾身拢住窗沿，白荷叶围裙轻擦过台面。",
+          "en": "The footsteps at the mouth of the alley fade away entirely. She suddenly leans in against the windowsill, her white ruffled apron brushing lightly across the counter."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……主人。",
+          "en": "...Master."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "替店里省下这么大一笔信用点，光嘴上夸一句就想打发我呀？",
+          "en": "I saved the shop a good pile of credits, and you think a few kind words are enough to send me off?"
+        },
+        {
+          "speaker": "Player",
+          "text": "那我们功臣想要什么？",
+          "en": "So what does our heroine want, then?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在先记在账上……等今晚落了锁，主人再慢慢拿私房奖赏犒劳我。",
+          "en": "Put it on the ledger for now... Once the doors are locked tonight, Master can take his time paying me back with a little private reward."
+        }
+      ]
+    },
+    {
+      "id": "maid_daily_2",
+      "route": "maid",
+      "sprite": "er_portrait_eleanor_maid_female_beauty",
+      "title_zh": "新曲的私房试听",
+      "title_en": "Private Encore Preview",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "发间细碎的金饰还在晃，她微喘着趴上窗台。",
+          "en": "The little gold ornaments in her hair are still swaying as she leans, a touch breathless, onto the windowsill."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "刚从上层剧场排完新曲，花束都快把后台堆满了。",
+          "en": "Just came from rehearsing the new number up at the Upper Theater — the bouquets nearly buried the whole backstage."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "好几个体面人堵在廊下想邀我喝一杯，我连衣角都没让人碰。",
+          "en": "A few respectable gentlemen were blocking the corridor, angling to buy me a drink. I didn't even let them touch the hem of my dress."
+        },
+        {
+          "speaker": "Player",
+          "text": "大明星还急着往旧当铺跑？",
+          "en": "And the big star still comes rushing back to a shabby old pawnshop?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "台上风光是做给旁人看的，我下台自然得先回你这儿报到呀。",
+          "en": "The glamour on stage is for other people's eyes. Once I'm off it, naturally I have to report in here first."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她确认巷口无人，倾身凑近窗口，呼吸温热。",
+          "en": "She checks that the mouth of the alley is empty, then leans close to the window, her breath warm."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……主人。那首新歌里，我私藏了一段绝不登台的副歌。",
+          "en": "…Master. In that new song, I've stashed away a chorus that will never see a stage."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "连乐师都没听全呢，词写得太羞人，我才不唱给别人听。",
+          "en": "Even the musicians haven't heard all of it. The lyrics are far too scandalous — I won't sing them for anyone else."
+        },
+        {
+          "speaker": "Player",
+          "text": "留着今晚唱给我一个人验收？",
+          "en": "So you're saving it for tonight, when I get to be the only one who judges it?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嗯，回房只留一盏暖灯，我贴在你耳边慢慢唱给你听。",
+          "en": "Mm. Back in our room, just one warm lamp lit — I'll press against your ear and sing it to you, nice and slow."
+        }
+      ]
+    },
+    {
+      "id": "maid_daily_3",
+      "route": "maid",
+      "sprite": "er_portrait_eleanor_maid_female_beauty",
+      "title_zh": "磨脚的新鞋扣",
+      "title_en": "The Tight Heel Strap",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把采买的小包搁上窗台，扶着窗沿轻轻晃了晃脚踝。",
+          "en": "She sets the little shopping bag down on the windowsill and, steadying herself against the frame, gives her ankle a gentle roll."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "嘶……这双新鞋的金属搭扣太紧了，连着长袜勒得脚踝发烫。",
+          "en": "Hiss... the metal clasp on these new shoes is far too tight—pinching right through my stockings, and my ankle's burning."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "才走完两条街，脚后跟都磨得又酸又红。",
+          "en": "Two streets was all it took. My heels are rubbed raw and aching."
+        },
+        {
+          "speaker": "Player",
+          "text": "先回屋换双平底鞋歇着？",
+          "en": "Want to go inside first and change into flats, rest a while?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在回去，还不是得我自己弯腰解扣子？那多没意思呀。",
+          "en": "And if I go back now, I'd still have to bend down and undo them myself, wouldn't I? Where's the fun in that?"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她耳尖微红地贴近窗格，微凉的指尖轻搭上你的手背。",
+          "en": "Ear tips faintly flushed, she leans close to the window lattice and rests her cool fingertips lightly on the back of your hand."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "反正巷子里没人……主人，我今天可是替你跑腿才磨红了脚的。",
+          "en": "There's no one in the alley anyway... Master, I only wore my feet red today running errands for you."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今晚打烊回房，你肯不肯俯下身，亲手替我解开鞋扣好好揉揉？",
+          "en": "Tonight, after we close up and go to our room—would you be willing to bend down and undo my shoe clasps with your own hands, and rub them properly for me?"
+        },
+        {
+          "speaker": "Player",
+          "text": "行，今晚给你揉个够。",
+          "en": "Deal. Tonight I'll rub them as long as you like."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "这可是你亲口应下的……要是敢敷衍我，今晚就罚你多揉半个钟头。",
+          "en": "You said that out loud, so it counts... If you dare skimp on me, I'll sentence you to half an hour extra tonight."
+        }
+      ]
+    },
+    {
+      "id": "maid_daily_4",
+      "route": "maid",
+      "sprite": "er_portrait_eleanor_maid_female_beauty",
+      "title_zh": "作废的旧契约",
+      "title_en": "The Expired Contract",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "昏暖的灯光落在窗台，她指尖慢悠悠绕着白围裙半松的系带。",
+          "en": "The warm dusk light spills across the windowsill as her fingertips drift lazily around the half-loosened ties of her white apron."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "喂，我刚才擦完窗台，突然想起一件事。",
+          "en": "Hey—I just finished wiping down the sill, and something popped into my head."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "当年那张雇佣契约早撕了，我欠你的账也早清干净了吧？",
+          "en": "That employment contract got torn up ages ago, and I've long since paid off every debt I owed you, haven't I?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "现在没凭没据的，你凭什么笃定我每天还会乖乖来窗口报到呀？",
+          "en": "So with no papers and no proof, what makes you so sure I'll keep showing up at this window like a good girl every day?"
+        },
+        {
+          "speaker": "Player",
+          "text": "从来不是靠契约留你。",
+          "en": "It was never the contract that kept you here."
+        },
+        {
+          "speaker": "Player",
+          "text": "是我舍不得放人。",
+          "en": "It's that I couldn't bear to let you go."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "绕在指间的纯白丝带滑落，她红着耳根往前倾身，鼻尖几乎蹭过窗沿。",
+          "en": "The pure white ribbon slips loose from her fingers. Ears burning, she leans in closer, her nose almost brushing the edge of the sill."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……这还差不多，算你会说话。",
+          "en": "...That's more like it. I suppose you know how to talk."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "既然我的主人不肯放人，那这条围裙，今晚就留着回房再替我解吧。",
+          "en": "Well then—since my master won't let me go, I'll keep this apron on, and you can undo it for me back in my room tonight."
+        }
+      ]
+    },
+    {
+      "id": "rev_daily_1",
+      "route": "rev",
+      "sprite": "eleanor_rev",
+      "title_zh": "敲两下的暗号",
+      "title_en": "The Two-Knock Code",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "穿橄榄绿军装的她轻敲窗沿两下，见你默契回敲，眼角微红笑开。",
+          "en": "She raps twice on the windowsill, olive-green uniform and all — and when you knock back in perfect sync, her eyes go a little red and she breaks into a smile."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "头都没全抬就敲回来，算你反应快。",
+          "en": "Didn't even get your head all the way up before you knocked back. Sharp reflexes — I'll give you that."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "趁换班空档例行巡街，我顺道检查一下这片的防务。",
+          "en": "Shift change gave me a gap, so I'm doing the rounds. Figured I'd swing by and inspect the defenses in this sector."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她从胸前温热内袋摸出颗军用水果糖塞进你掌心，倾身贴近窗格。",
+          "en": "She fishes a military-issue fruit candy out of the warm inner pocket of her jacket and presses it into your palm, leaning in close to the window bars."
+        },
+        {
+          "speaker": "Player",
+          "text": "检查防务还带捂热的糖？",
+          "en": "Inspecting the defenses — with a pre-warmed candy?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "笑什么呀，配给站刚发的，揣兜里正好捂热了嘛。",
+          "en": "What's that laugh for? The ration station just handed them out. They warmed up nicely in my pocket, that's all."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……行啦，不拿巡街当幌子骗你了。",
+          "en": "…All right, fine. No more using patrol duty as my cover story."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "全站上下那么多巡逻点，只有这两下敲响是专门叫你抬头看我。",
+          "en": "There are patrol points all over this station, but these two knocks are the only ones that exist just to make you look up at me."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "全站也只有你听得懂，这两下是在想你。",
+          "en": "And you're the only one in the whole station who understands — these two knocks mean I'm thinking about you."
+        },
+        {
+          "speaker": "Player",
+          "text": "糖很甜，下班早点过来。",
+          "en": "The candy's sweet. Come by early after your shift."
+        }
+      ]
+    },
+    {
+      "id": "rev_daily_2",
+      "route": "rev",
+      "sprite": "eleanor_rev",
+      "title_zh": "偷来的半个钟头",
+      "title_en": "A Stolen Half Hour",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "她把腰间沉甸甸的武装带松开一格，额头懒洋洋抵上微凉的窗框。",
+          "en": "She loosens the heavy duty belt at her waist by a notch and lets her forehead rest lazily against the cool window frame."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "可算逃出来了……操练场的哨声吵得我太阳穴直跳。",
+          "en": "Finally, a clean escape... Those drill-yard whistles had my temples throbbing."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "两摞防务简报全被我甩给副手了，谁爱审谁审去。",
+          "en": "I dumped both stacks of defense briefs on my deputy. Whoever wants to review them can."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "还是你这扇窗前好，刚站过来，紧绷了一上午的筋骨就全散了。",
+          "en": "It's better here at your window. I'd barely been standing here a moment before all the tension knotted up in me from the morning melted away."
+        },
+        {
+          "speaker": "Player",
+          "text": "威风凛凛的长官也学会翘班了？",
+          "en": "So the fearsome commander has learned to play hooky too?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "在你面前装什么长官呀，腰都被这武装带勒酸了。",
+          "en": "What commander? Not in front of you. This belt's been digging into my waist all day."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "等今晚换了班，我把厚大衣扔营房，单穿里面那件黑打底过来。",
+          "en": "Once the shift changes tonight, I'll ditch the heavy coat in the barracks and come over in just that black undershirt."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "贴身轻便，省得你待会儿又嫌扣子多……记得留门，不许先睡。",
+          "en": "Snug and light—saves you from complaining about all the buttons later... Leave the door unlocked, and don't fall asleep on me."
+        },
+        {
+          "speaker": "Player",
+          "text": "好，热着茶等你。",
+          "en": "Alright. I'll keep the tea warm and wait for you."
+        }
+      ]
+    },
+    {
+      "id": "rev_daily_3",
+      "route": "rev",
+      "sprite": "eleanor_rev",
+      "title_zh": "藏不住的擦伤",
+      "title_en": "The Scrape Under the Cuff",
+      "lines": [
+        {
+          "speaker": "Eleanor",
+          "text": "顺路过来歇口气，今天巡防那片街区还算太平。",
+          "en": "I was passing by, thought I'd catch my breath. That patrol district was quiet enough today."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她说话时指尖微蜷，不动声色地把军装袖口往下扯了半寸。",
+          "en": "As she speaks, her fingertips curl ever so slightly, and she casually tugs her uniform cuff down half an inch."
+        },
+        {
+          "speaker": "Player",
+          "text": "手伸出来，药棉拿好了。",
+          "en": "Hand out. Got the cotton swab ready."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "……你这双眼睛到底是用来看货还是专盯我的呀？",
+          "en": "…Are those eyes of yours for appraising merchandise, or just for staring at me?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "就搬物资时蹭破点皮，在队里连伤口都算不上呢。",
+          "en": "It's just a scrape from hauling supplies. Back with the squad, it wouldn't even count as a wound."
+        },
+        {
+          "speaker": "Player",
+          "text": "在我这儿算，别乱动。",
+          "en": "It counts here. Hold still."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "她耳尖微热地乖乖摊平手背，趁药水擦过时反勾住你的尾指。",
+          "en": "Her ears go warm as she obediently lays her hand flat, then hooks her pinky around yours while the antiseptic passes over."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "轻点嘛……也就只有在你这扇窗前，我才这么听话。",
+          "en": "Easy now… Only in front of your window am I ever this well-behaved."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "放心吧，知道有人拿药棉在这儿等着查岗。",
+          "en": "Relax, I know someone's waiting here with a cotton swab, ready to inspect me."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "往后每次出任务，我都记着全须全尾、准点回来向你报到。",
+          "en": "From now on, every mission, I'll remember to come back in one piece, right on time, and report to you."
+        }
+      ]
+    },
+    {
+      "id": "rev_daily_4",
+      "route": "rev",
+      "sprite": "eleanor_rev",
+      "title_zh": "隧道里的风还在等",
+      "title_en": "Wind in the Neon Tunnel",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "银色机车钥匙在她食指尖转着圈，金属环扣在窗沿磕出脆响。",
+          "en": "The silver motorcycle key spins in circles on her fingertip, the metal ring clicking sharp against the windowsill."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "喂，算算日子，你有多久没听过重机车的引擎声了？",
+          "en": "Hey—count the days. How long has it been since you heard a heavy bike's engine roar?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "我把整晚的轮休假都空出来了，车就停在巷口。",
+          "en": "I cleared my whole night's rotation leave. Bike's parked at the mouth of the alley."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "那件亮紫皮衣还有你的备用头盔，全给你备在车座上了。",
+          "en": "That bright purple leather jacket and your spare helmet—all laid out for you on the seat."
+        },
+        {
+          "speaker": "Player",
+          "text": "今晚过弯还压那么低？",
+          "en": "Still leaning that low through the corners tonight?"
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "怕啦？某人站在柜台后面倒是沉得住气。",
+          "en": "Scared? Says the one who stands behind the counter looking so calm and collected."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "结果每次一上后座，两条手臂恨不得嵌进我腰里。",
+          "en": "And yet every time you climb on the back, those arms of yours practically try to weld themselves into my waist."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "抓那么紧，连你贴着我后背的呼吸都发烫呢。",
+          "en": "Holding on that tight—even your breath against my back feels scorching."
+        },
+        {
+          "speaker": "Player",
+          "text": "是你油门拧太狠。",
+          "en": "It's because you twist the throttle too hard."
+        },
+        {
+          "speaker": "Eleanor",
+          "text": "今晚只会更狠。给你十分钟落卷帘，去把隧道的风全抢回来！",
+          "en": "Tonight it'll be even harder. You've got ten minutes to pull the shutter down—let's go steal back all the wind in that tunnel!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Translate Content/maid_v2.json into English with the existing OpenRouter writer key.
+"""Translate Content/maid_v2.json into English via DeepSeek official API (QA key, deepseek-flash).
 
 The script is resumable: it only translates lines whose `en` still equals the
 Chinese source (or is missing), and writes after every batch.
@@ -34,13 +34,15 @@ SYSTEM = (
 
 
 def api_key() -> str:
-    key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
     if key:
         return key
     text = ENGINE.read_text(encoding="utf-8")
-    m = re.search(r'api_key="(sk-or-[^"]+)"', text)
+    m = re.search(r'api\.deepseek\.com/v1",\s*api_key="(sk-[^"]+)"', text)
     if not m:
-        raise SystemExit("OPENROUTER_API_KEY not set and no OpenRouter key found in Novel_Engine_V7.py")
+        m = re.search(r'api_key="(sk-[0-9a-f]{32})"', text)
+    if not m:
+        raise SystemExit("DEEPSEEK_API_KEY not set and no DeepSeek QA key found in Novel_Engine_V7.py")
     return m.group(1)
 
 
@@ -99,7 +101,7 @@ def apply(data: dict, task: dict, value: str):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch", type=int, default=40)
-    ap.add_argument("--model", default="anthropic/claude-opus-5.5")
+    ap.add_argument("--model", default="deepseek-flash")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
@@ -111,8 +113,8 @@ def main():
         print("Nothing to translate.")
         return
 
-    client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_key())
-    print(f"Translating {len(tasks)} items in batches of {args.batch} with {args.model}")
+    client = OpenAI(base_url="https://api.deepseek.com/v1", api_key=api_key(), timeout=240)
+    print(f"Translating {len(tasks)} items in batches of {args.batch} with {args.model} (DeepSeek official API)")
     done = 0
     for start in range(0, len(tasks), args.batch):
         batch = tasks[start:start + args.batch]
@@ -130,7 +132,8 @@ def main():
                         {"role": "system", "content": SYSTEM},
                         {"role": "user", "content": prompt},
                     ],
-                    max_tokens=8000,
+                    temperature=0.1,
+                    max_tokens=16000,
                 )
                 obj = parse_json(res.choices[0].message.content or "")
                 missing = [t["id"] for t in batch if t["id"] not in obj]

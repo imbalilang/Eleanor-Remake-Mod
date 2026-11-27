@@ -201,6 +201,7 @@ def main() -> int:
     from build_dual_content import build as build_dual
     from build_revolution_v2_content import build as build_revolution_v2
     from build_love_content import build as build_love
+    from build_post_ending_daily import build as build_post_daily
     maid_zh, maid_en = build_maid(root)
     all_zh.update(maid_zh)
     all_en.update(maid_en)
@@ -216,6 +217,9 @@ def main() -> int:
     love_zh, love_en = build_love(root)
     all_zh.update(love_zh)
     all_en.update(love_en)
+    post_daily_zh, post_daily_en = build_post_daily(root)
+    all_zh.update(post_daily_zh)
+    all_en.update(post_daily_en)
 
     missing_en = sorted(set(all_zh) - set(all_en))
     os.makedirs(os.path.join(root, "Localization"), exist_ok=True)

@@ -929,98 +929,78 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "穿好婚服的埃莉诺站在你面前，指尖还搭在颈间的吊坠上。",
-              "en": "Eleanor stands before you in her wedding dress, fingertips resting on the locket at her neck."
+              "text": "索菲娅替埃莉诺拨正颈后的吊坠扣子，指尖轻轻抖了一下。",
+              "en": "Sophia adjusts the locket clasp at the back of Eleanor's neck. Her fingertips tremble slightly."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "母亲，你的手在抖。",
+              "en": "Mother, your hand is shaking."
             },
             {
               "speaker": "SEC",
-              "text": "别乱动，我替你把后颈的搭扣拨正。",
-              "en": "Hold still. Let me straighten the clasp at the back of your neck."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "母亲，你的手指怎么在发抖？",
-              "en": "Mother, why are your fingers shaking?"
+              "text": "胡说，我那是今早起来对名单起太早了。",
+              "en": "Nonsense—I got up too early going over the name list."
             },
             {
               "speaker": "SEC",
-              "text": "今天起得太早了，可不是因为舍不得你。",
-              "en": "I got up too early today. It's not because I'll miss you."
+              "text": "对了，早上农场刚递来信，那批营养果结出活籽了。",
+              "en": "By the way, word came from the farm this morning—the Nutrifruit batch has viable seeds now."
             },
             {
               "speaker": "SEC",
-              "text": "刚好农场那边早上托人捎了信过来。",
-              "en": "Oh, and the farm sent word this morning."
+              "text": "往后这下层区自己就能留种，不用只嚼那些干巴果子。",
+              "en": "Now the Lower Level can keep its own seed instead of just chewing dried-out fruit."
             },
             {
               "speaker": "SEC",
-              "text": "之前那批营养果结出活籽了，下层区往后也能留种。",
-              "en": "That batch of Nutrifruit grew viable seeds. The Lower Level can keep its own seed stock now."
+              "text": "行了，扣子拨正了，我退开半步，省得挡着你们。",
+              "en": "All right, clasp's fixed. I'll step back so I'm not in your way."
             },
             {
               "speaker": "Eleanor",
-              "text": "您非得挑我穿婚服的时候讲种子的事吗？",
-              "en": "Must you talk about seeds while I'm in my wedding dress?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "（退开半步）行了，今天剩下的时间都留给你们两个。",
-              "en": "(Steps back half a pace) All right. The rest of today belongs to you two."
+              "text": "你听听后排，莉迪亚从刚才进门就一直在擤鼻子。",
+              "en": "Listen to the back row—Lydia's been sniffling since she walked in."
             },
             {
               "speaker": "Eleanor",
-              "text": "后排的莉迪亚从刚才起就一直在抹眼泪。",
-              "en": "Lydia's been wiping her tears in the back row this whole time."
+              "text": "明明是我结婚，她哭得倒比谁都响。",
+              "en": "It's my wedding, yet she's crying louder than anyone."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺转过身站到你面前，抬手替你按平微翘的衣领。",
+              "en": "Eleanor turns and stands before you, reaching up to smooth your slightly askew collar."
             },
             {
               "speaker": "Eleanor",
-              "text": "她哭出来的动静比过道那位老太太还要响。",
-              "en": "She's crying louder than the old lady from the corridor."
+              "text": "喂，看清楚了，这身婚服我可只穿这一回。",
+              "en": "Hey, look closely—I'm only wearing this wedding dress once."
             },
             {
               "speaker": "Eleanor",
-              "text": "旁边小孩手里的喜糖都快捂化半块了。",
-              "en": "The wedding candy in that kid's hand is half melted already."
+              "text": "我头一回进你那间破铺子骂的难听话，先给你记在账上。",
+              "en": "The first time I walked into that rundown shop of yours, I said some ugly things. I'll mark them on the ledger for now."
             },
             {
               "speaker": "Eleanor",
-              "text": "别管他们了，你现在只准看着我。",
-              "en": "Forget about them. Right now, you look only at me."
-            },
-            {
-              "speaker": "Player",
-              "text": "一直在看。",
-              "en": "I have been."
+              "text": "留着往后哪天吵架了，我们再一笔一笔慢慢翻。",
+              "en": "Save them for the next time we fight, and we'll go through them line by line."
             },
             {
               "speaker": "Eleanor",
-              "text": "（按平你的衣领）当着母亲和街坊的面，我先问你一件事。",
-              "en": "(Smoothing your collar) In front of Mother and the neighbors, I'll ask you something first."
+              "text": "以后的日子我们搭伙过，两边的账并作一本算。",
+              "en": "We'll live the days ahead together—two ledgers kept as one."
             },
             {
               "speaker": "Eleanor",
-              "text": "我头一次去店里骂的那些难听话，你还没忘吧？",
-              "en": "All the nasty things I said the first time I came to the shop—you haven't forgotten, have you?"
-            },
-            {
-              "speaker": "Player",
-              "text": "没忘。",
-              "en": "I haven't."
+              "text": "就算哪天还得吃难吃的营养果，也一人一句轮流骂。",
+              "en": "Even if we're stuck eating awful Nutrifruit someday, we'll take turns cursing it."
             },
             {
               "speaker": "Eleanor",
-              "text": "本来想叫你全扔了，还是留着等吵架时翻旧账吧。",
-              "en": "I meant to tell you to throw them all out. Keep them instead, to dredge up when we fight."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "往后的日子咱们搭伙过，店里的账也并着算。",
-              "en": "From now on, we make a life together, and the shop's ledger is shared too."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就算餐餐吃难吃的营养果，我们也一人一句轮流骂。",
-              "en": "Even if every meal is awful Nutrifruit, we'll take turns cursing it."
+              "text": "这笔不退不换的长久买卖，你认不认？",
+              "en": "This long-term deal—no returns, no exchanges—do you accept?"
             },
             {
               "speaker": "Player",
@@ -1029,13 +1009,18 @@
             },
             {
               "speaker": "SEC",
-              "text": "后头一屋子人还等着开席呢，你们俩打算站到什么时候？",
-              "en": "There's a whole room waiting for the feast. How long are you two going to stand there?"
+              "text": "说定了就快着点，过道的老太太和小孩攥着的喜糖都快捂化了。",
+              "en": "If we're agreed, hurry—the old woman and kids in the aisle are clutching wedding candy that's about to melt."
             },
             {
               "speaker": "Eleanor",
-              "text": "让他们多坐一会儿，我还没把身边这个人看够呢。",
-              "en": "Let them sit a while longer. I haven't had my fill of looking at the one beside me."
+              "text": "化了就再发一把，今天谁也别想催我。",
+              "en": "If it melts, hand out more. No one's rushing me today."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "让他们多等一会儿……我还没看够呢。",
+              "en": "Let them wait a little longer... I haven't had my fill of looking."
             }
           ],
           "cursor_revision": 2
@@ -1047,98 +1032,78 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "穿好婚服的埃莉诺站在你面前，指尖还搭在颈间的吊坠上。",
-              "en": "Eleanor stands before you in her wedding dress, fingertips still resting on the locket at her throat."
+              "text": "索菲娅替埃莉诺拨正颈后的吊坠扣子，指尖轻轻抖了一下。",
+              "en": "Sophia adjusts the locket clasp at the back of Eleanor's neck. Her fingertips tremble slightly."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "母亲，你的手在抖。",
+              "en": "Mother, your hand is shaking."
             },
             {
               "speaker": "SEC",
-              "text": "别乱动，我替你把后颈的搭扣拨正。",
-              "en": "Hold still. Let me straighten the clasp at the back of your neck."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "母亲，你的手指怎么在发抖？",
-              "en": "Mother, why are your fingers shaking?"
+              "text": "胡说，我那是今早起来核对桌椅起太早了。",
+              "en": "Nonsense—I got up too early checking the tables and chairs."
             },
             {
               "speaker": "SEC",
-              "text": "今天起得太早了，可不是因为舍不得你。",
-              "en": "I got up too early today. It's not because I can't bear to let you go."
+              "text": "对了，早上农场刚递来信，那批营养果结出活籽了。",
+              "en": "By the way, word came from the farm this morning—the Nutrifruit batch has viable seeds now."
             },
             {
               "speaker": "SEC",
-              "text": "刚好农场那边早上托人捎了信过来。",
-              "en": "As it happens, the farm sent word this morning."
+              "text": "往后这下层区自己就能留种，不用只嚼那些干巴果子。",
+              "en": "Now the Lower Level can keep its own seed instead of just chewing dried-out fruit."
             },
             {
               "speaker": "SEC",
-              "text": "之前那批营养果结出活籽了，下层区往后也能留种。",
-              "en": "That last batch of Nutrifruit grew viable seeds. The Lower Level can save its own seed from now on."
+              "text": "行了，扣子拨正了，我退开半步，把场子留给你们。",
+              "en": "All right, clasp's fixed. I'll step back half a pace and leave the floor to you two."
             },
             {
               "speaker": "Eleanor",
-              "text": "您非得挑我穿婚服的时候讲种子的事吗？",
-              "en": "Must you talk about seeds while I'm in my wedding dress?"
-            },
-            {
-              "speaker": "SEC",
-              "text": "（退开半步）过道那几户的回礼甜食，我明天再装袋送去。",
-              "en": "(Stepping back half a pace) I'll bag the thank-you sweets for the families down the hall tomorrow."
+              "text": "总共就请了自家人，莉迪亚怎么在后排哭得比十个人还响。",
+              "en": "We only invited family—how is Lydia in the back row crying louder than ten people?"
             },
             {
               "speaker": "Eleanor",
-              "text": "后排的莉迪亚从刚才起就一直在抹眼泪。",
-              "en": "Lydia, in the back row, has been wiping her eyes this whole time."
+              "text": "早知道刚才多给她塞两块手帕了。",
+              "en": "I should've given her a couple more handkerchiefs earlier."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺转过身站到你面前，抬手替你按平微翘的衣领。",
+              "en": "Eleanor turns and stands before you, reaching up to smooth your slightly askew collar."
             },
             {
               "speaker": "Eleanor",
-              "text": "明明屋里就请了她一个客人，哭得比谁都大声。",
-              "en": "She's the only guest we invited, yet she's crying louder than anyone."
+              "text": "喂，看清楚了，这身婚服我可只穿这一回。",
+              "en": "Hey, look closely—I'm only wearing this wedding dress once."
             },
             {
               "speaker": "Eleanor",
-              "text": "连她手里的手帕都快拧出水来了。",
-              "en": "Her handkerchief is nearly soaked enough to wring out."
+              "text": "我头一回进你那间破铺子骂的难听话，先给你记在账上。",
+              "en": "The first time I walked into that rundown shop of yours, I said some ugly things. I'll mark them on the ledger for now."
             },
             {
               "speaker": "Eleanor",
-              "text": "别管她了，你现在只准看着我。",
-              "en": "Ignore her. Right now, you look only at me."
-            },
-            {
-              "speaker": "Player",
-              "text": "一直在看。",
-              "en": "I have been."
+              "text": "留着往后哪天吵架了，我们再一笔一笔慢慢翻。",
+              "en": "Save them for the next time we fight, and we'll go through them line by line."
             },
             {
               "speaker": "Eleanor",
-              "text": "（按平你的衣领）当着母亲和莉迪亚的面，我先问你一件事。",
-              "en": "(Smoothing your collar) In front of Mother and Lydia, I'll ask you something first."
+              "text": "以后的日子我们搭伙过，两边的账并作一本算。",
+              "en": "We'll live the days ahead together—two ledgers kept as one."
             },
             {
               "speaker": "Eleanor",
-              "text": "我头一次去店里骂的那些难听话，你还没忘吧？",
-              "en": "All the nasty things I said the first time I came to the shop—you haven't forgotten, have you?"
-            },
-            {
-              "speaker": "Player",
-              "text": "没忘。",
-              "en": "I haven't."
+              "text": "就算哪天还得吃难吃的营养果，也一人一句轮流骂。",
+              "en": "Even if we still have to eat awful Nutrifruit someday, we'll take turns griping about it."
             },
             {
               "speaker": "Eleanor",
-              "text": "本来想叫你全扔了，还是留着等吵架时翻旧账吧。",
-              "en": "I meant to tell you to throw them all out. Keep them instead, to dredge up when we fight."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "往后的日子咱们搭伙过，店里的账也并着算。",
-              "en": "From now on, we make a life together, and the shop's ledger is shared too."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就算餐餐吃难吃的营养果，我们也一人一句轮流骂。",
-              "en": "Even if every meal is awful Nutrifruit, we'll take turns cursing it."
+              "text": "这笔不退不换的长久买卖，你认不认？",
+              "en": "A long-term deal, no returns, no exchanges. Do you accept?"
             },
             {
               "speaker": "Player",
@@ -1147,13 +1112,18 @@
             },
             {
               "speaker": "SEC",
-              "text": "桌上的菜都摆好了，你们俩还打算站到什么时候？",
-              "en": "The food's all on the table. How long are you two going to stand there?"
+              "text": "说定了就准备开席吧，过道那几户的回礼甜食我明天装袋送去。",
+              "en": "Once it's settled, let's start the feast. Tomorrow I'll bag the thank-you sweets for the households down the corridor and deliver them."
             },
             {
               "speaker": "Eleanor",
-              "text": "让莉迪亚再等一会儿，我还没把身边这个人看够呢。",
-              "en": "Let Lydia wait a bit longer. I haven't had my fill of looking at the one beside me."
+              "text": "急什么，反正屋里就我们几个，谁也不许催我。",
+              "en": "What's the rush? It's just us in here. No one gets to rush me."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "再让我多站一会儿……我还没看够呢。",
+              "en": "Let me stand here a little longer... I'm not done looking."
             }
           ],
           "cursor_revision": 2
@@ -1165,83 +1135,68 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "穿好婚服的埃莉诺站在你面前，指尖还搭在颈间的吊坠上。",
-              "en": "Eleanor stands before you in her wedding dress, fingertips still resting on the locket at her throat."
+              "text": "索菲娅替埃莉诺拨正颈后的吊坠扣子，指尖轻轻抖了一下。",
+              "en": "Sophia adjusts the locket clasp at the back of Eleanor's neck, her fingertips trembling slightly."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "母亲，你的手在抖。",
+              "en": "Mother, your hands are shaking."
             },
             {
               "speaker": "SEC",
-              "text": "别乱动，我替你把后颈的搭扣拨正。",
-              "en": "Hold still. Let me straighten the clasp at the back of your neck."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "母亲，你的手指怎么在发抖？",
-              "en": "Mother, why are your fingers shaking?"
+              "text": "胡说，我那是今早起来对名单起太早了。",
+              "en": "Nonsense. I just got up too early this morning to go over the list."
             },
             {
               "speaker": "SEC",
-              "text": "今天起得太早了，可不是因为舍不得你。",
-              "en": "I got up too early today. It's not because I can't bear to let you go."
-            },
-            {
-              "speaker": "SEC",
-              "text": "（退开半步）行了，今天剩下的时间都留给你们两个。",
-              "en": "(Stepping back half a pace) There. The rest of today belongs to you two."
+              "text": "行了，扣子拨正了，我退开半步，省得挡着你们。",
+              "en": "All right, the clasp is fixed. I'll step back half a pace so I'm not in your way."
             },
             {
               "speaker": "Eleanor",
-              "text": "后排的莉迪亚从刚才起就一直在抹眼泪。",
-              "en": "Lydia, in the back row, has been wiping her eyes this whole time."
+              "text": "你听听后排，莉迪亚从刚才进门就一直在擤鼻子。",
+              "en": "Listen to the back row—Lydia has been blowing her nose since she walked in."
             },
             {
               "speaker": "Eleanor",
-              "text": "她哭出来的动静比过道那位老太太还要响。",
-              "en": "She's crying louder than the old lady in the aisle."
+              "text": "明明是我结婚，她哭得倒比谁都响。",
+              "en": "It's my wedding, and she's crying louder than anyone."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺转过身站到你面前，抬手替你按平微翘的衣领。",
+              "en": "Eleanor turns and stands before you, reaching up to smooth your slightly upturned collar."
             },
             {
               "speaker": "Eleanor",
-              "text": "旁边小孩手里的喜糖都快捂化半块了。",
-              "en": "The kid beside her has half-melted the wedding candy in his fist."
+              "text": "喂，看清楚了，这身婚服我可只穿这一回。",
+              "en": "Hey, look closely. I'm only wearing this wedding dress once."
             },
             {
               "speaker": "Eleanor",
-              "text": "别管他们了，你现在只准看着我。",
-              "en": "Ignore them. Right now, you look only at me."
-            },
-            {
-              "speaker": "Player",
-              "text": "一直在看。",
-              "en": "I have been."
+              "text": "我头一回进你那间破铺子骂的难听话，先给你记在账上。",
+              "en": "The ugly words I said the first time I walked into your run-down shop—I'll put them on the ledger for now."
             },
             {
               "speaker": "Eleanor",
-              "text": "（按平你的衣领）当着母亲和街坊的面，我先问你一件事。",
-              "en": "(Smoothing your collar) In front of Mother and the neighbors, I'll ask you something first."
+              "text": "留着往后哪天吵架了，我们再一笔一笔慢慢翻。",
+              "en": "Keep them for a future quarrel, and we'll go through them entry by entry."
             },
             {
               "speaker": "Eleanor",
-              "text": "我头一次去店里骂的那些难听话，你还没忘吧？",
-              "en": "All the nasty things I said the first time I came to the shop—you haven't forgotten, have you?"
-            },
-            {
-              "speaker": "Player",
-              "text": "没忘。",
-              "en": "I haven't."
+              "text": "以后的日子我们搭伙过，两边的账并作一本算。",
+              "en": "From now on we live together, and our two ledgers become one."
             },
             {
               "speaker": "Eleanor",
-              "text": "本来想叫你全扔了，还是留着等吵架时翻旧账吧。",
-              "en": "I was going to tell you to forget them all. But keep them. Ammo for when we fight."
+              "text": "就算往后还得吃那些难吃的营养果，也一人一句轮流骂。",
+              "en": "Even if we have to keep eating awful Nutrifruit, we'll take turns cursing it."
             },
             {
               "speaker": "Eleanor",
-              "text": "往后的日子咱们搭伙过，店里的账也并着算。",
-              "en": "From now on, we share a life, and the shop's ledger too."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就算餐餐吃难吃的营养果，我们也一人一句轮流骂。",
-              "en": "Even if every meal is awful Nutrifruit, we'll take turns cursing it."
+              "text": "这笔不退不换的长久买卖，你认不认？",
+              "en": "A long-term deal, no returns, no exchanges. Do you accept?"
             },
             {
               "speaker": "Player",
@@ -1250,13 +1205,23 @@
             },
             {
               "speaker": "SEC",
-              "text": "后头一屋子人还等着开席呢，你们俩打算站到什么时候？",
-              "en": "A whole room is waiting for the feast. How long are you two going to stand there?"
+              "text": "说定了就快着点，过道的老太太和小孩攥着的喜糖都快捂化了。",
+              "en": "Once it's settled, hurry up. The old women and children in the corridor are clutching their wedding candy, and it's about to melt."
             },
             {
               "speaker": "Eleanor",
-              "text": "让他们多坐一会儿，我还没把身边这个人看够呢。",
-              "en": "Let them sit a little longer. I haven't had my fill of looking at this one yet."
+              "text": "化了就再发一把，今天谁也别想催我。",
+              "en": "If it melts, hand out another handful. No one's rushing me today."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "手给我伸出来。",
+              "en": "Hold out your hand."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "让他们多等一会儿……我还没看够呢。",
+              "en": "Let them wait a little longer... I'm not done looking."
             }
           ],
           "cursor_revision": 2
@@ -1268,83 +1233,68 @@
           "lines": [
             {
               "speaker": "Narrator",
-              "text": "穿好婚服的埃莉诺站在你面前，指尖还搭在颈间的吊坠上。",
-              "en": "Eleanor stands before you in her wedding dress, fingertips still resting on the locket at her throat."
+              "text": "索菲娅替埃莉诺拨正颈后的吊坠扣子，指尖轻轻抖了一下。",
+              "en": "Sophia adjusts the locket clasp at the back of Eleanor's neck, her fingertips trembling slightly."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "母亲，你的手在抖。",
+              "en": "Mother, your hands are shaking."
             },
             {
               "speaker": "SEC",
-              "text": "别乱动，我替你把后颈的搭扣拨正。",
-              "en": "Hold still. Let me straighten the clasp at the back of your neck."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "母亲，你的手指怎么在发抖？",
-              "en": "Mother, why are your fingers shaking?"
+              "text": "胡说，我那是今早起来核对桌椅起太早了。",
+              "en": "Nonsense. I just got up too early this morning checking the tables and chairs."
             },
             {
               "speaker": "SEC",
-              "text": "今天起得太早了，可不是因为舍不得你。",
-              "en": "I got up too early today. It's not because I can't bear to let you go."
-            },
-            {
-              "speaker": "SEC",
-              "text": "（退开半步）过道那几户的回礼甜食，我明天再装袋送去。",
-              "en": "(Steps back half a pace) I'll bag the thank-you sweets for the neighbors down the corridor tomorrow."
+              "text": "行了，扣子拨正了，我退开半步，把场子留给你们。",
+              "en": "All right, the clasp is fixed. I'll step back half a pace and leave the floor to you two."
             },
             {
               "speaker": "Eleanor",
-              "text": "后排的莉迪亚从刚才起就一直在抹眼泪。",
-              "en": "In the back row, Lydia has been wiping away tears this whole time."
+              "text": "总共就请了自家人，莉迪亚怎么在后排哭得比十个人还响。",
+              "en": "We only invited family—how is Lydia crying louder than ten people from the back row?"
             },
             {
               "speaker": "Eleanor",
-              "text": "明明屋里就请了她一个客人，哭得比谁都大声。",
-              "en": "She's the only guest in the room, yet she's crying louder than anyone."
+              "text": "早知道刚才多给她塞两块手帕了。",
+              "en": "I should have given her a couple more handkerchiefs earlier."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "埃莉诺转过身站到你面前，抬手替你按平微翘的衣领。",
+              "en": "Eleanor turns and stands before you, reaching up to smooth your slightly upturned collar."
             },
             {
               "speaker": "Eleanor",
-              "text": "连她手里的手帕都快拧出水来了。",
-              "en": "You could practically wring water out of her handkerchief."
+              "text": "喂，看清楚了，这身婚服我可只穿这一回。",
+              "en": "Hey, look closely. I'm only wearing this wedding dress once."
             },
             {
               "speaker": "Eleanor",
-              "text": "别管她了，你现在只准看着我。",
-              "en": "Never mind her. Right now, you look only at me."
-            },
-            {
-              "speaker": "Player",
-              "text": "一直在看。",
-              "en": "I have been."
+              "text": "我头一回进你那间破铺子骂的难听话，先给你记在账上。",
+              "en": "The ugly words I said the first time I walked into your run-down shop—I'll put them on the ledger for now."
             },
             {
               "speaker": "Eleanor",
-              "text": "（按平你的衣领）当着母亲和莉迪亚的面，我先问你一件事。",
-              "en": "(Smooths your collar) In front of Mother and Lydia, I have a question first."
+              "text": "留着往后哪天吵架了，我们再一笔一笔慢慢翻。",
+              "en": "Keep them for a future quarrel, and we'll go through them entry by entry."
             },
             {
               "speaker": "Eleanor",
-              "text": "我头一次去店里骂的那些难听话，你还没忘吧？",
-              "en": "All the nasty things I said the first time I came to the shop—you haven't forgotten, have you?"
-            },
-            {
-              "speaker": "Player",
-              "text": "没忘。",
-              "en": "I haven't."
+              "text": "以后的日子我们搭伙过，两边的账并作一本算。",
+              "en": "From now on we live together, and our two ledgers become one."
             },
             {
               "speaker": "Eleanor",
-              "text": "本来想叫你全扔了，还是留着等吵架时翻旧账吧。",
-              "en": "I was going to tell you to forget them all. But keep them. Ammo for when we fight."
+              "text": "就算往后还得吃那些难吃的营养果，也一人一句轮流骂。",
+              "en": "Even if we have to keep eating awful Nutrifruit, we'll take turns cursing it."
             },
             {
               "speaker": "Eleanor",
-              "text": "往后的日子咱们搭伙过，店里的账也并着算。",
-              "en": "From now on, we share a life, and the shop's ledger too."
-            },
-            {
-              "speaker": "Eleanor",
-              "text": "就算餐餐吃难吃的营养果，我们也一人一句轮流骂。",
-              "en": "Even if every meal is awful Nutrifruit, we'll take turns cursing it."
+              "text": "这笔不退不换的长久买卖，你认不认？",
+              "en": "A long-term deal, no returns, no exchanges. Do you accept?"
             },
             {
               "speaker": "Player",
@@ -1353,13 +1303,23 @@
             },
             {
               "speaker": "SEC",
-              "text": "桌上的菜都摆好了，你们俩还打算站到什么时候？",
-              "en": "The food's all on the table. How long are you two going to stand there?"
+              "text": "说定了就准备开席吧，过道那几户的回礼甜食我明天装袋送去。",
+              "en": "Once it's settled, let's start the feast. Tomorrow I'll bag the thank-you sweets for the households down the corridor and deliver them."
             },
             {
               "speaker": "Eleanor",
-              "text": "让莉迪亚再等一会儿，我还没把身边这个人看够呢。",
-              "en": "Let Lydia wait a little longer. I haven't had my fill of looking at this one yet."
+              "text": "急什么，反正屋里就我们几个，谁也不许催我。",
+              "en": "What's the rush? It's just us in here. No one gets to rush me."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "手给我伸出来。",
+              "en": "Hold out your hand."
+            },
+            {
+              "speaker": "Eleanor",
+              "text": "再让我多站一会儿……我还没看够呢。",
+              "en": "Let me stay here a little longer... I'm not done looking."
             }
           ],
           "cursor_revision": 2

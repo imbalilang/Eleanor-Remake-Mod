@@ -207,7 +207,7 @@ namespace EleanorRomance
             {
                 int pos = line.IndexOf('　');
                 string who = line.Substring(0, pos);
-                string name = who == "店主" ? L.Player : who == "埃莉诺" ? L.Eleanor : who == "莉迪亚" ? L.Get("er_name_lydia") : who;
+                string name = who == "店主" ? L.Player : who == "埃莉诺" ? L.Eleanor : who == "莉迪亚" ? L.Get("er_name_lydia") : who == "旁白" ? L.Get("er_name_narrator") : who;
                 Dialogue node = StoryEngine.Text(name, line.Substring(pos + 1));
                 if (root == null) root = node; else tail.SetNextDialogue(node);
                 tail = node;

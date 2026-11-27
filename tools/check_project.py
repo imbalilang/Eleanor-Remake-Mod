@@ -200,6 +200,30 @@ def main() -> int:
                 errors.append('Stale love UI: ' + k)
         print(f"love blocks: {len(love_blocks)}, choices: {len(love_choices)} (source/generated/bilingual checked)")
 
+    post_daily_path = os.path.join(ROOT, 'Content', 'post_ending_daily_v1.json')
+    if os.path.exists(post_daily_path):
+        pd = json.load(open(post_daily_path, encoding='utf-8'))
+        pd_ids = []
+        pd_speakers = {'Player', 'Eleanor', 'Narrator'}
+        for sc in pd.get('scenes', []):
+            sid = sc['id']
+            pd_ids.append(sid)
+            for i, line in enumerate(sc.get('lines', []), 1):
+                key = f"er_postdaily_{sid}_{i:02d}"
+                if line.get('speaker') not in pd_speakers:
+                    errors.append('Unknown post-daily speaker: ' + key)
+                if not line.get('text') or not line.get('en'):
+                    errors.append('Incomplete post-daily translation: ' + key)
+                if zh.get(key) != line.get('text') or en.get(key) != line.get('en'):
+                    errors.append('Stale post-daily generation: ' + key)
+                if re.search(r'[\u4e00-\u9fff]', line.get('en', '')):
+                    errors.append('Untranslated post-daily English: ' + key)
+        pdgen = open(os.path.join(ROOT, 'src', 'PostEndingDailyContent.g.cs'), encoding='utf-8').read()
+        pd_gen_ids = set(re.findall(r'\{"([^"\n]+)", new\[\] \{new Line', pdgen))
+        if pd_gen_ids != set(pd_ids):
+            errors.append('Post-ending daily generated scene set differs from source')
+        print(f"post-ending daily scenes: {len(pd_ids)} (source/generated/bilingual checked)")
+
     print(f"zh keys: {len(zh)}")
     print(f"en keys: {len(en)} (missing {len(missing_en_content)} content keys, {len(missing_en_code)} code keys)")
     print(f"content blocks: {len(content_blocks)}")
