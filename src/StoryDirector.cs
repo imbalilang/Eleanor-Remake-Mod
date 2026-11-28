@@ -20,6 +20,7 @@ namespace EleanorRomance
             LoveA2Closing.Reset();
             EndingPageUI.HideRoutePage();
             StoryPresentation.Clear();
+            NarrationBox.Hide();
             VersionGate.Refresh();
             DualShowcaseEffects.OnLoaded();
             PortraitCompat.Refresh();
@@ -95,6 +96,7 @@ namespace EleanorRomance
             LoveA2Closing.Reset();
             EndingPageUI.HideRoutePage();
             StoryPresentation.Clear();
+            NarrationBox.Hide();
             VersionGate.Refresh();
 
             if (!RomanceState.Initialized)

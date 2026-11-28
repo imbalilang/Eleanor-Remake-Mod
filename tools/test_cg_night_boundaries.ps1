@@ -92,3 +92,37 @@ foreach($p in @(@('PlayerStore','EndNight'),@('StoreEventManager','OnDayEnd'),@(
 }
 $morningType=GetCType $game 'StartOfDayUIManager'
 AuditGetter $game $morningType.FullName 'get_Instance' (AuditField $game $morningType 'NightInstance' $morningType)
+# Keep real DialogUIManager.ContinueConversation() (including its !isSecMonologuePlaying &&
+# currentClientInstance == null abort gate) while stubbing only Unity UI bubble rendering.
+foreach($mName in @('DisplayClientText','DisplayerPlayerText','DisplaySecText','HideBubbles','HideChoiceBubble')) {
+    Ret $game 'DialogUIManager' $mName
+}
+# Apply ChapterWindowDialogue* Harmony hooks onto DialogUIManager so tests execute the real patched loop.
+$contMethod = Method $game 'DialogUIManager' 'ContinueConversation'
+$contPrefixType = GetCType $mod 'EleanorRomance.ChapterWindowDialogueContinuePatch'
+$contPrefixType.IsNotPublic = $false; $contPrefixType.IsPublic = $true
+$contPrefix = Method $mod $contPrefixType.FullName 'Prefix'
+$contPrefix.IsPrivate = $false; $contPrefix.IsPublic = $true
+$il = $contMethod.Body.GetILProcessor(); $firstOp = $contMethod.Body.Instructions[0]
+$il.InsertBefore($firstOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ldarg_0))
+$il.InsertBefore($firstOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $game.MainModule $contPrefix)))
+$il.InsertBefore($firstOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Brtrue,$firstOp))
+$il.InsertBefore($firstOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ret))
+
+$remMethod = Method $game 'DialogUIManager' 'RemoveCurrentDialog'
+$remPostType = GetCType $mod 'EleanorRomance.ChapterWindowDialogueRemovePatch'
+$remPostType.IsNotPublic = $false; $remPostType.IsPublic = $true
+$remPost = Method $mod $remPostType.FullName 'Postfix'
+$remPost.IsPrivate = $false; $remPost.IsPublic = $true
+$il = $remMethod.Body.GetILProcessor(); $lastOp = $remMethod.Body.Instructions[$remMethod.Body.Instructions.Count - 1]
+$il.InsertBefore($lastOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ldarg_0))
+$il.InsertBefore($lastOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $game.MainModule $remPost)))
+
+$endMethod = Method $game 'DialogUIManager' 'EndConversation'
+$endPreType = GetCType $mod 'EleanorRomance.ChapterWindowDialogueEndPatch'
+$endPreType.IsNotPublic = $false; $endPreType.IsPublic = $true
+$endPre = Method $mod $endPreType.FullName 'Prefix'
+$endPre.IsPrivate = $false; $endPre.IsPublic = $true
+$il = $endMethod.Body.GetILProcessor(); $firstEndOp = $endMethod.Body.Instructions[0]
+$il.InsertBefore($firstEndOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Ldarg_0))
+$il.InsertBefore($firstEndOp,[Mono.Cecil.Cil.Instruction]::Create([Mono.Cecil.Cil.OpCodes]::Call,(Import-Reference $game.MainModule $endPre)))

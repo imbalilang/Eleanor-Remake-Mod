@@ -1,18 +1,20 @@
 using System;
+using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using HarmonyLib;
+using UnityEngine;
 using UnityEngine.Localization.Settings;
 
 namespace EleanorRomance
 {
     internal sealed class CgChapter
     {
-        internal readonly string Id, Title, Caption;
+        internal readonly string Id, Title, Caption, BedtimeCue;
         internal readonly string[] Intro, Sold, Unsold;
-        internal CgChapter(string id, string title, string[] intro, string[] sold, string[] unsold, string caption)
+        internal CgChapter(string id, string title, string[] intro, string[] sold, string[] unsold, string caption, string bedtimeCue = null)
         {
-            Id = id; Title = title; Intro = intro; Sold = sold; Unsold = unsold; Caption = caption;
+            Id = id; Title = title; Intro = intro; Sold = sold; Unsold = unsold; Caption = caption; BedtimeCue = bedtimeCue;
         }
         internal bool ShowStill(Action next) => EndingPageUI.ShowScript(Title, ChapterVisits.Art[Id], Caption, next);
     }
@@ -101,12 +103,13 @@ namespace EleanorRomance
             }
         }
         private static CgChapter Find(string id) => ChapterScripts.All.First(c => c.Id == id);
+
         internal static bool Bedtime(Action sleep)
         {
             if (!Active || Get("night") == Day) return false;
             // A proposal invitation expires tonight. Flexible visits can use their remaining nights.
             var c = Eligible("love_night_stay") ? Find("love_night_stay")
-                : ChapterScripts.All.FirstOrDefault(x => (x.Id.Contains("_night_") || x.Id == "rev_ride") && Eligible(x.Id));
+                : ChapterScripts.All.FirstOrDefault(x => x.BedtimeCue != null && Eligible(x.Id));
             if (c == null) return false;
             int day = Day;
             return WindowTalk(c.Id, c.Intro, () =>
@@ -123,30 +126,203 @@ namespace EleanorRomance
                     Finish();
                 }
                 else if (!c.ShowStill(Finish)) Finish();
-            });
+            }, c.BedtimeCue);
         }
         // Ignore stale end actions from a dialogue belonging to another day or loaded slot.
         private static object windowTicket;
         private static bool windowPortraitsShown;
+        private static bool windowMonologueOwned;
+        private static Dialogue closedWindowCue;
+        private static StoreShutterButton raisedShutter;
+        private static GameObject hiddenShutterBlocker;
+        private static HashSet<Dialogue> windowNodes;
         internal static bool Talking => windowTicket != null;
+        internal static bool IsOwningDialogue(Dialogue dialogue) => Talking && dialogue != null && windowNodes != null && windowNodes.Contains(dialogue);
         internal static void ResetWindow()
         {
             windowTicket = null;
+            windowNodes = null;
+            closedWindowCue = null;
+            if (windowMonologueOwned)
+            {
+                windowMonologueOwned = false;
+                var ui = DialogUIManager.Instance;
+                if (!ReferenceEquals(ui, null)) ui.isSecMonologuePlaying = false;
+            }
             if (windowPortraitsShown) StoryPresentation.Clear();
             windowPortraitsShown = false;
+            RestoreWindowShutter();
         }
-        internal static bool WindowTalk(string id, string[] lines, Action finish)
+        internal static bool CanAdvance(DialogUIManager ui)
+        {
+            if (ReferenceEquals(ui, null) || !IsOwningDialogue(ui.currentDialog)) return true;
+            if (!ui.isSecMonologuePlaying)
+            {
+                ui.isSecMonologuePlaying = true;
+                windowMonologueOwned = true;
+            }
+            if (ui.currentDialog != closedWindowCue) return true;
+            if (!ReferenceEquals(raisedShutter, null)) return false;
+            var shutter = StoreShutterButton.Instance;
+            try
+            {
+                if (ReferenceEquals(shutter, null) || ReferenceEquals(shutter.blockerGameObject, null)
+                    || shutter.shutterGameObject == null || !shutter.isActiveAndEnabled) return true;
+                // The player can click sleep while the shutter is still descending. Use
+                // only the native motion and sound. OpenShutter would start a trading day.
+                raisedShutter = shutter;
+                shutter.ForceImmediateClose();
+                shutter.ToggleShutterDoor();
+                if (EmporiumEntry.Instance != null) EmporiumEntry.Instance.ShowFrontArea();
+                ui.HideBubbles();
+                if (ModHelper.StartCoroutine(ModConstants.ModId, WaitForShutter(ui, shutter, windowTicket)) != null)
+                    return false;
+            }
+            catch (Exception ex) { ModEntry.LogError("Bedtime shutter: " + ex); }
+            return true;
+        }
+
+        private static IEnumerator WaitForShutter(DialogUIManager ui, StoreShutterButton shutter, object ticket)
+        {
+            // LerpShutter normally reaches the endpoint in 2.75 game seconds. Resume
+            // even if another presentation stops or replaces the shutter mid-animation.
+            float elapsed = 0f;
+            while (true)
+            {
+                yield return null;
+                if (!ReferenceEquals(ticket, windowTicket) || ui.currentDialog != closedWindowCue) yield break;
+                if (shutter == null || !shutter.isActiveAndEnabled || shutter.blockerGameObject == null
+                    || shutter.blockerGameObject.transform.localPosition == shutter.blockerEndPosition) break;
+                elapsed += Time.deltaTime;
+                if (elapsed >= 4f) break;
+            }
+            closedWindowCue = null;
+            ui.ContinueConversation();
+        }
+
+        internal static void OnDialogueAborted(DialogUIManager ui)
+        {
+            if (!Talking) return;
+            ResetWindow();
+            if (ReferenceEquals(ui, null) || ReferenceEquals(ui.clientBubble, null)) return;
+            try
+            {
+                ui.HideBubbles();
+                ui.HideChoiceBubble();
+            }
+            catch (Exception ex) { ModEntry.LogError("CG window dialogue cleanup: " + ex); }
+        }
+        internal static void OnExternalDialogueStarted(Dialogue current)
+        {
+            if (Talking && !IsOwningDialogue(current)) ResetWindow();
+        }
+        internal static void OnConversationEnded(DialogUIManager ui)
+        {
+            // Normal completion calls EndConversation on the final node right before ExecuteEndAction.
+            // Only treat an early EndConversation on a non-final node as an external abort.
+            if (!Talking || ReferenceEquals(ui, null)) return;
+            if (IsOwningDialogue(ui.currentDialog) && ui.currentDialog.nextDialogue != null)
+                ResetWindow();
+        }
+        internal static void OnLeaveStore()
+        {
+            if (Talking)
+            {
+                var ui = DialogUIManager.Instance;
+                if (!ReferenceEquals(ui, null) && !ReferenceEquals(ui.clientBubble, null))
+                {
+                    try { ui.InterruptDialog(); }
+                    catch (Exception ex) { ModEntry.LogError("CG window leave-store interrupt: " + ex); }
+                }
+                ResetWindow();
+            }
+            if (StoryPresentation.IsShown) StoryPresentation.Clear();
+            NarrationBox.Hide();
+        }
+        private static void RevealWindowForTalk()
+        {
+            if (PlayerStore.Instance?.storeState == PlayerStore.StoreState.OPEN) return;
+            try
+            {
+                var shutter = StoreShutterButton.Instance;
+                if (ReferenceEquals(shutter, null) || ReferenceEquals(shutter.blockerGameObject, null)) return;
+                var parent = shutter.blockerGameObject.transform?.parent;
+                if (ReferenceEquals(parent, null)) return;
+                var host = parent.gameObject;
+                if (!ReferenceEquals(host, null) && host.activeSelf)
+                {
+                    host.SetActive(false);
+                    hiddenShutterBlocker = host;
+                }
+            }
+            catch (Exception ex) { ModEntry.LogError("CG window shutter reveal: " + ex); }
+        }
+        private static void RestoreWindowShutter()
+        {
+            var shutter = raisedShutter;
+            raisedShutter = null;
+            if (!ReferenceEquals(shutter, null))
+            {
+                try
+                {
+                    if (shutter != null && PlayerStore.Instance?.storeState != PlayerStore.StoreState.OPEN)
+                    {
+                        shutter.ForceImmediateClose();
+                        if (EmporiumEntry.Instance != null) EmporiumEntry.Instance.HideFrontArea();
+                    }
+                }
+                catch (Exception ex) { ModEntry.LogError("CG window shutter restore animation: " + ex); }
+            }
+            var host = hiddenShutterBlocker;
+            hiddenShutterBlocker = null;
+            if (ReferenceEquals(host, null)) return;
+            try
+            {
+                if (host != null && PlayerStore.Instance?.storeState != PlayerStore.StoreState.OPEN)
+                    host.SetActive(true);
+            }
+            catch (Exception ex) { ModEntry.LogError("CG window shutter restore: " + ex); }
+        }
+        internal static bool WindowTalk(string id, string[] lines, Action finish, string bedtimeCue = null)
         {
             var ui = DialogUIManager.Instance;
+            var store = PlayerStore.Instance;
+            if (!ReferenceEquals(store, null) && (store.isClientBeingArrested || store.isHandlingShootout)) return false;
             var first = DialogueFor(id, "intro", lines);
             if (Talking || ReferenceEquals(ui, null) || first == null) return false;
+            if (!ReferenceEquals(store, null) && store.storeState == PlayerStore.StoreState.CLOSED && store.currentClientInstance != null)
+            {
+                // If the player closed the shutter on a customer and clicked sleep within 4 seconds,
+                // dismiss that departing customer now so EndAndClose's delayed coroutine cannot abort WindowTalk.
+                try
+                {
+                    var storeUi = StoreUIManager.Instance;
+                    if (!ReferenceEquals(storeUi, null) && !ReferenceEquals(storeUi.clientGameObject, null))
+                        storeUi.HideClient();
+                    store.DismissCurrentClient(callNextWhenPossible: false, right: true, interruptDialog: true);
+                }
+                catch (Exception ex) { ModEntry.LogError("CG window closing-client dismiss: " + ex); }
+            }
+            closedWindowCue = bedtimeCue == null ? null : DialogueFor(id, "bedtime", new[] { bedtimeCue });
+            var start = closedWindowCue?.SetNextDialogue(first) ?? first;
+            var nodes = new HashSet<Dialogue>();
+            for (var n = start; n != null && nodes.Add(n); n = n.nextDialogue) n.SetPriority(7);
             var ticket = new object();
             windowTicket = ticket;
+            windowNodes = nodes;
+            if (!ui.isSecMonologuePlaying)
+            {
+                // Native ContinueConversation aborts whenever currentClientInstance is null
+                // unless monologue mode is active. Own and clear this flag with the window ticket.
+                ui.isSecMonologuePlaying = true;
+                windowMonologueOwned = true;
+            }
             var (lead, companion) = PortraitsFor(id);
             first.SetStartAction(() =>
             {
-                if (ReferenceEquals(windowTicket, ticket))
-                    windowPortraitsShown = StoryPresentation.ShowBackups(lead, companion);
+                if (!ReferenceEquals(windowTicket, ticket)) return;
+                windowPortraitsShown = StoryPresentation.ShowBackups(lead, companion);
+                if (windowPortraitsShown) RevealWindowForTalk();
             });
             StoryEngine.OnDialogueFinished(first, () =>
             {
@@ -156,7 +332,7 @@ namespace EleanorRomance
             });
             try
             {
-                if (ui.StartDialogue(first)) return true;
+                if (ui.StartDialogue(start, forcedStart: true)) return true;
             }
             catch (Exception ex) { ModEntry.LogError("CG window dialogue: " + ex); }
             if (ReferenceEquals(windowTicket, ticket)) ResetWindow();

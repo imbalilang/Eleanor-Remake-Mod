@@ -35,8 +35,69 @@ namespace EleanorRomance
             if (!LoveA2Closing.Enabled || !RomanceState.StoryActive) return true;
             if (ChapterVisits.Talking || EndingPageUI.PageOpen || PlayerStore.Instance?.storeState != PlayerStore.StoreState.OPEN) return false;
             if (LoveA2Closing.OwnsTonight) return true;
-            return !ChapterVisits.AtClosing(__instance.EndAndClose);
+            if (!ChapterVisits.AtClosing(__instance.EndAndClose)) return true;
+            var storeUi = StoreUIManager.Instance;
+            if (!ReferenceEquals(storeUi, null))
+            {
+                var panel = storeUi.closeShutterConfirmationPanel;
+                if (!ReferenceEquals(panel, null) && panel != null) panel.SetActive(false);
+            }
+            return false;
         }
+    }
+
+    [HarmonyPatch(typeof(StoreDoor), nameof(StoreDoor.OnClick))]
+    internal static class ChapterWindowDoorPatch
+    {
+        private static bool Prefix()
+            => !LoveA2Closing.Enabled || !RomanceState.StoryActive || (!ChapterVisits.Talking && !EndingPageUI.PageOpen);
+    }
+
+    [HarmonyPatch(typeof(StoreBedroll), nameof(StoreBedroll.OnClick))]
+    internal static class ChapterWindowBedrollPatch
+    {
+        private static bool Prefix()
+            => !LoveA2Closing.Enabled || !RomanceState.StoryActive || (!ChapterVisits.Talking && !EndingPageUI.PageOpen);
+    }
+
+    [HarmonyPatch(typeof(MapUIManager), nameof(MapUIManager.OpenUI))]
+    internal static class ChapterWindowMapPatch
+    {
+        private static bool Prefix()
+            => !LoveA2Closing.Enabled || !RomanceState.StoryActive || (!ChapterVisits.Talking && !EndingPageUI.PageOpen);
+    }
+
+    [HarmonyPatch(typeof(EmporiumEntry), nameof(EmporiumEntry.OnLeaveStore))]
+    internal static class ChapterWindowLeaveStorePatch
+    {
+        private static void Prefix() => ChapterVisits.OnLeaveStore();
+    }
+
+    [HarmonyPatch(typeof(DialogUIManager), nameof(DialogUIManager.ContinueConversation))]
+    internal static class ChapterWindowDialogueContinuePatch
+    {
+        private static bool Prefix(DialogUIManager __instance) => ChapterVisits.CanAdvance(__instance);
+    }
+
+    [HarmonyPatch(typeof(DialogUIManager), nameof(DialogUIManager.RemoveCurrentDialog))]
+    internal static class ChapterWindowDialogueRemovePatch
+    {
+        private static void Postfix(DialogUIManager __instance) => ChapterVisits.OnDialogueAborted(__instance);
+    }
+
+    [HarmonyPatch(typeof(DialogUIManager), nameof(DialogUIManager.StartDialogue))]
+    internal static class ChapterWindowDialogueStartPatch
+    {
+        private static void Postfix(DialogUIManager __instance, bool __result)
+        {
+            if (__result) ChapterVisits.OnExternalDialogueStarted(__instance.currentDialog);
+        }
+    }
+
+    [HarmonyPatch(typeof(DialogUIManager), nameof(DialogUIManager.EndConversation))]
+    internal static class ChapterWindowDialogueEndPatch
+    {
+        private static void Prefix(DialogUIManager __instance) => ChapterVisits.OnConversationEnded(__instance);
     }
 
     // The game adds late, future and mod customers after the ordinary list. Recheck at service

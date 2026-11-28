@@ -29,7 +29,7 @@ namespace EleanorRomance
             {
                 DualState.Flag("cg.shop.finished", true);
                 if (!EndingPageUI.ShowDualCompletion(resume)) resume();
-            });
+            }, "店主　" + L.Get("er_cg_shop_sign"));
         }
 
         internal static void AtMorning()
@@ -65,9 +65,19 @@ namespace EleanorRomance
                 if (__instance.IsOpen) __instance.CloseUI(false);
                 return false;
             }
+            return true;
+        }
+
+        // Only latch sleepStarting when native OnEndDayButtonClick actually ran.
+        // If another mod's Prefix returned false (e.g. a Day-7 background prompt or
+        // post-closing story/room confirmation), leaving sleepStarting false lets
+        // the subsequent sleep call proceed normally.
+        [HarmonyPriority(Priority.First)]
+        private static void Postfix(bool __runOriginal)
+        {
+            if (!__runOriginal || !LoveA2Closing.Enabled || !RomanceState.StoryActive) return;
             sleepStarting = true;
             LoveA2Closing.CancelTimer();
-            return true;
         }
 
         private static void Finalizer(Exception __exception)
@@ -99,6 +109,7 @@ namespace EleanorRomance
         internal static void CheckMorning(bool atShutter = false)
         {
             if (!LoveA2Closing.Enabled || PlayerStore.Instance?.storeState != PlayerStore.StoreState.MORNING) return;
+            ChapterBedtimePatch.Reset();
             if (atShutter) ChapterFinales.AtMorning();
             ChapterVisits.Morning();
         }

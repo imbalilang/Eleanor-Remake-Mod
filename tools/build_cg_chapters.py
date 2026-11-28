@@ -45,10 +45,18 @@ def parse(scene, title, text):
     assert marker, scene
     sections = {'intro': [], 'sold': [], 'unsold': []}
     section = 'intro'
+    bedtime = None
     for line in body.splitlines():
         if not line.strip() or line.startswith('>'):
             continue
         mark = MARK.fullmatch(line)
+        if mark and mark[1] == '睡前':
+            bedtime_line = mark[2] or ''
+            who, _, speech = bedtime_line.partition('　')
+            assert not sections['intro'] and bedtime is None, scene
+            assert who in ('旁白', '店主') and 0 < len(speech) <= 32, (scene, line)
+            bedtime = bedtime_line
+            continue
         if mark:
             assert '_trade_' in scene and mark[1] in ('成交', '未成交'), (scene, line)
             section = 'sold' if mark[1] == '成交' else 'unsold'
@@ -61,7 +69,8 @@ def parse(scene, title, text):
         assert sections['intro'], scene
     if '_trade_' in scene:
         assert sections['sold'] and sections['unsold'], scene
-    return dict(id=scene, title=title, caption=caption(text), **sections)
+    assert bool(bedtime) == ('_night_' in scene or scene in ('rev_ride', 'dual_final_shop')), scene
+    return dict(id=scene, title=title, caption=caption(text), bedtime=bedtime, **sections)
 
 
 def check():
@@ -100,7 +109,10 @@ def check():
         assert zh[key].replace(r'\n', '\n') == master[scene][1], (scene, key)
     for scene, title, text in source:
         if scene in WINDOW_KEYS:
-            intro = parse(scene, title, text)['intro']
+            chapter = parse(scene, title, text)
+            if scene == 'dual_final_shop':
+                assert chapter['bedtime'] == '店主　' + zh['er_cg_shop_sign'], scene
+            intro = chapter['intro']
             assert [line.split('　', 1)[1] for line in intro] == [zh[k] for k in WINDOW_KEYS[scene]], scene
     sophia = next(text for scene, _, text in source if scene == 'love_a2_01')
     assert '勺' in sophia
@@ -130,7 +142,8 @@ def build():
     arr = lambda v: 'new string[] { ' + ', '.join(quote(x) for x in v) + ' }'
     body = ['// Generated from Content/CG章节 by tools/build_cg_chapters.py.', 'namespace EleanorRomance', '{', '    internal static class ChapterScripts', '    {', '        internal static readonly CgChapter[] All =', '        {']
     for v in items:
-        body.extend(['            new CgChapter(' + quote(v['id']) + ', ' + quote(v['title']) + ',', '                ' + ',\n                '.join(arr(v[k]) for k in ('intro', 'sold', 'unsold')) + ',', '                ' + quote(v['caption']) + '),'])
+        ending = quote(v['caption']) + (', ' + quote(v['bedtime']) if v['bedtime'] else '')
+        body.extend(['            new CgChapter(' + quote(v['id']) + ', ' + quote(v['title']) + ',', '                ' + ',\n                '.join(arr(v[k]) for k in ('intro', 'sold', 'unsold')) + ',', '                ' + ending + '),'])
     body.extend(['        };', '    }', '}', ''])
     (ROOT / 'src/ChapterScripts.g.cs').write_text('\n'.join(body), encoding='utf-8')
 

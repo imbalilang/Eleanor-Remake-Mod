@@ -63,7 +63,18 @@ namespace EleanorRomance
         {
             try
             {
-                if(Enabled && line!=null && ReferenceEquals(displaying,line))ApplyCaption(ui,line.title);
+                if(Enabled && line!=null && ReferenceEquals(displaying,line))
+                {
+                    if(NarrationBox.ConsumeHandled(ui,line))
+                    {
+                        if(!ReferenceEquals(ui.clientNameBubble,null) && ui.clientNameBubble!=null)
+                            ui.clientNameBubble.SetActive(false);
+                    }
+                    else
+                    {
+                        ApplyCaption(ui,line.title);
+                    }
+                }
             }
             catch(Exception ex){ModEntry.LogError("Dialogue caption update failed; native conversation continues: "+ex);}
             finally{displaying=previous;}

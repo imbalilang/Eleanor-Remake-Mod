@@ -1,4 +1,4 @@
-Eleanor Story Expand 1.14 — Nexus package
+Eleanor Story Expand 1.44 — Nexus package
 ==========================================
 
 中文
@@ -32,7 +32,7 @@ Eleanor Story Expand 1.14 — Nexus package
 23 章核心剧情，含多条分支、后日谈与结局页。
 6 万字以上剧情文本；正常单路线体验约经营到第 70 天。
 2 位新角色，13 套服装形象，每套约 10 个表情差分。
-简体中文 / English。
+简体中文 / English / 日本語 / 한국어。
 复用原版交易、检视、举报、拘捕、新闻和经营流程，不新建后间或独立案卷 UI。
 旧存档默认受保护，可选择重置。
 
@@ -58,7 +58,7 @@ Eleanor Story Expand 1.14 — Nexus package
 另有朋友结局：不发展恋爱关系，但保留彼此的信任与来往。
 
 实用信息
-版本 1.14；兼容游戏 1.0.0.15 / 1.0.0.14 / 1.0.0.13 / 0.46D（build 26525552 或更新）。游戏版本号不再作为停用剧情的前置条件。
+版本 1.44；兼容游戏 1.0.0.15 / 1.0.0.14 / 1.0.0.13 / 0.46D（build 26525552 或更新）。游戏版本号不再作为停用剧情的前置条件。
 解压 EleanorRomance 文件夹到 Probably Stolen/Mods/EleanorRomance，在模组菜单启用并重启游戏。
 不需要其他 MOD。手动版与 Steam 工坊版只保留一个，不要同时使用；也不要同时安装两个 Nexus 副本。
 
@@ -97,7 +97,7 @@ What you get
 A 23-chapter core story with multiple branches, epilogues and ending pages.
 More than 60,000 Chinese characters of story text; a normal single-route playthrough runs to around in-game day 70.
 Two new characters, 13 outfits in total, with about 10 expression variants per outfit.
-Simplified Chinese and English.
+Simplified Chinese, English, Japanese and Korean.
 Native trade, inspection, reporting, arrest, news and shop systems; no separate backroom or case-file UI.
 Old saves are protected by default; an optional reset is available.
 
@@ -123,7 +123,7 @@ Revolution route: join the revolution with Eleanor as comrades-in-arms and face 
 There is also a friends ending: no romance, but the trust and visits remain.
 
 Practical notes
-Version 1.14; compatible with Probably Stolen 1.0.0.15 / 1.0.0.14 / 1.0.0.13 / 0.46D (build 26525552 or later). Game version strings no longer gate the story.
+Version 1.44; compatible with Probably Stolen 1.0.0.15 / 1.0.0.14 / 1.0.0.13 / 0.46D (build 26525552 or later). Game version strings no longer gate the story.
 Extract the EleanorRomance folder into Mods\EleanorRomance, enable it in the Mods menu and restart.
 No other mods are required. Use either the manual copy or the Steam Workshop copy — not both. Do not install two Nexus copies at the same time.
 

@@ -3,8 +3,8 @@
   <ID>eleanor_romance</ID>
   <Name>Eleanor Story Expand / 上层区的富家千金爱上在下层区开当铺的我：埃莉诺剧情扩展</Name>
   <Author>EleanorRomance Team</Author>
-  <ModVersion>1.40</ModVersion>
-  <Description>1.40 adds expression-driven CG window dialogue and scene portrait pairing; fixes optional trade-CG scheduling so it no longer collides with main or daily visits and connects to the correct shop/trade wrap-up; adds the attendant-route salon-buzz visit and smooths post-story visit pacing; and clears stale mid-visit dialogue cursors after text rewrites. Simplified Chinese and English are regenerated, and Japanese and Korean align at 3,157 keys. The 1.39 route rewrite, post-ending dailies, CG and portrait update, and the 1.38 compatibility fixes remain. 1.40 为 CG 窗口对白接入表情与场景立绘；修复可选交易 CG 与主线/日常来访的同日排队冲突，并接回正确的店内/交易收尾；侍从线新增《楼上的风声》并调整结局后来访节奏；读档时清理重写文本的未完成对话游标。简中/英文重新生成，日文/韩文与简中 3,157 键对齐；保留 1.39 四路线文本、结局后日常、CG/立绘更新及 1.38 修复。简体中文 / English / 日语 / 韩语 (ZH / EN / JA / KO)。</Description>
+  <ModVersion>1.44</ModVersion>
+  <Description>1.44 stages the E1, E3, E4 and E9 CG chapters with bedtime/next-morning window narration, so their visits open at the actual sleep, closing or morning moment instead of reusing a “just closed / still unlocked” line. CG chapter and finale window dialogue now hand off cleanly, including external-dialogue interruption cleanup, while all narration uses the dedicated banner from 1.43. All 1.43/1.42/1.41/1.40/1.39/1.38 fixes and content remain. 1.44 为 E1《回家》、E3《侍从柜台》、E4《两位老板娘》、E9《第二下》的 CG 章节加入睡前/次晨窗口旁白串场，让夜访和晨图按实际睡前、关门后或开门前的时机进入，不再沿用“刚收摊/还没锁窗”的旧状态。CG 章节与终章窗口对白统一收尾并处理外部对话抢占，旁白继续使用 1.43 的独立横幅。保留 1.43/1.42/1.41/1.40/1.39/1.38 全部内容与修复。简体中文 / English / 日语 / 韩语 (ZH / EN / JA / KO)。</Description>
   <!-- Empty on purpose: the mod does not gate on the game version string,
        and a listed version that does not cover the running build is shown as
        a red warning in the mod menu. -->

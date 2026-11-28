@@ -459,6 +459,8 @@ def _cg_meta(out, chapter, native):
 
 def _cg_blocks(out, chapter, native):
     scene = chapter["id"]
+    if chapter["bedtime"]:
+        out.extend(["- 睡前（卷帘关闭）", "  " + _cg_line(chapter["bedtime"]), ""])
     if chapter["intro"]:
         out.append(f"- `{scene}.s0`（{'本次接图开场' if native else 'CG开场'}）")
         for line in chapter["intro"]:

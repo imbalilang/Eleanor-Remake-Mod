@@ -22,6 +22,7 @@ namespace EleanorRomance
         public void OnEnable()
         {
             DialogueSpeakers.Enabled=true;
+            NarrationBox.Enabled=true;
             DualClosingDay.Enabled=true;
             LoveA2Closing.Enabled=true;
             LoveWaterShortage.Enabled=true;
@@ -51,6 +52,8 @@ namespace EleanorRomance
         public void OnDisable()
         {
             DialogueSpeakers.Enabled=false;
+            NarrationBox.Enabled=false;
+            NarrationBox.Clear();
             DualClosingDay.Enabled=false;
             LoveA2Closing.Enabled=false;
             LoveA2Closing.Reset();

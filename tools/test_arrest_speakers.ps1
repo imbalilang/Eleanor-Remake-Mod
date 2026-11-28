@@ -1,4 +1,4 @@
-# Execute the installed native dispatcher and native recorder, not a model of
+﻿# Execute the installed native dispatcher and native recorder, not a model of
 # what Dialogue.title is supposed to mean. No real UI or player saves are used.
 $displayLine=[DialogUIManager].GetMethod('DisplayLine',[Reflection.BindingFlags]'NonPublic,Instance')
 [StoreUIManager]::TestInstance=Blank ([StoreUIManager])
@@ -62,3 +62,21 @@ foreach($name in @('埃莉诺','Eleanor')){
 Assert ([EleanorRomance.StoryEngine]::SpeakerName([EleanorRomance.StorySpeaker]::Player) -eq 'PLAYER' -and
     [EleanorRomance.StoryEngine]::SpeakerName([EleanorRomance.StorySpeaker]::Officer) -eq 'SEC') 'Native speaker control tokens changed with names/localization.'
 'PASS: shared crate-arrest dialogue keeps officer/Eleanor attribution in the native recorder, with PLAYER and SEC independent of localized names.'
+
+# Verify dedicated NarrationBox routing matches only our own narrator lines and safely falls back when UI is absent.
+[EleanorRomance.NarrationBox]::Enabled = $true
+$narLine = [EleanorRomance.StoryEngine]::Text([EleanorRomance.L]::Get('er_name_narrator'), 'narration line')
+$npcLine = [EleanorRomance.StoryEngine]::Text([EleanorRomance.L]::Eleanor, 'eleanor line')
+$playerLine = [EleanorRomance.StoryEngine]::Text([EleanorRomance.L]::Player, 'player line')
+$secLine = [EleanorRomance.StoryEngine]::Text([DialogUIManager]::SEC, 'sec line')
+$foreignNar = [Dialogue]::new().SetText([EleanorRomance.L]::Get('er_name_narrator'), 'unmarked foreign narration')
+$foreignClient = [StoreClient]::new(); $foreignClient.identifier = 'other_mod_npc'; $foreignClient.sourceModId = 'other_mod'; Use-Client $foreignClient
+Assert ([EleanorRomance.NarrationBox]::IsNarration($narLine)) 'NarrationBox failed to recognize mod narrator line.'
+Assert (![EleanorRomance.NarrationBox]::IsNarration($npcLine)) 'NarrationBox misclassified Eleanor speech as narration.'
+Assert (![EleanorRomance.NarrationBox]::IsNarration($playerLine)) 'NarrationBox misclassified PLAYER speech as narration.'
+Assert (![EleanorRomance.NarrationBox]::IsNarration($secLine)) 'NarrationBox misclassified SEC speech as narration.'
+Assert (![EleanorRomance.NarrationBox]::IsNarration($foreignNar)) 'NarrationBox intercepted an unmarked foreign mod line.'
+[EleanorRomance.NarrationBox]::Enabled = $false
+Assert (![EleanorRomance.NarrationBox]::IsNarration($narLine)) 'NarrationBox stayed active while disabled.'
+[EleanorRomance.NarrationBox]::Enabled = $true
+'PASS: NarrationBox matches only mod narrator lines, ignores NPC/PLAYER/SEC/foreign lines, and respects Enabled toggle.'
